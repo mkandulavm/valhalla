@@ -192,8 +192,14 @@ public:
     };
 
     tag_handlers_["layer"] = [this]() {
-      auto layer = static_cast<int8_t>(std::stoi(tag_.second));
-      way_.set_layer(layer);
+      try {
+        auto layer = static_cast<int8_t>(std::stoi(tag_.second));
+        way_.set_layer(layer);
+      } catch (const std::invalid_argument& ia) {
+        // The string is not a number, so handle the error here.
+        // For example, you might want to log a warning or set a default value:
+        way_.set_layer(0);  // Use the default value you want here
+      }
     };
 
     tag_handlers_["road_class"] = [this]() {
