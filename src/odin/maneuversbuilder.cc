@@ -1100,6 +1100,45 @@ void ManeuversBuilder::CreateStartManeuver(Maneuver& maneuver) {
   FinalizeManeuver(maneuver, node_index);
 }
 
+std::vector<uint32_t> ManeuversBuilder::GetSpeedLimits(std::list<Maneuver> &maneuvers) {    
+  std::vector<uint32_t> speed_limits;
+
+  std::cout << "node_size " << trip_path_->node_size() << std::endl;
+  for(auto maneuver = maneuvers.begin(); maneuver != maneuvers.end(); ++maneuver) {
+    auto a = maneuver->begin_node_index();
+    auto b = maneuver->end_node_index();
+
+    //std::cout << std::endl<< "a: " << a << " b: " << b << std::endl;
+
+    while(a !=b)  {
+      auto node = trip_path_->node(a);
+      
+      if (node.has_edge()) {
+        const auto& trip_edge = node.edge();      
+        speed_limits.push_back(node.mutable_edge()->begin_shape_index());
+        speed_limits.push_back(node.mutable_edge()->end_shape_index());
+        speed_limits.push_back(trip_edge.speed_limit());      
+      }
+      
+      //std::cout << node.mutable_edge()->begin_shape_index() << " " << node.mutable_edge()->end_shape_index() << " sl=" << speed_limits.back() << " ";      
+      a++;
+    }  
+  }
+
+  // for (int i = 0; i < trip_path_->node_size(); ++i) {
+  //   const auto& node = trip_path_->node(i);
+  //   if (node.has_edge()) {
+  //     const auto& trip_edge = node.edge();      
+  //     speed_limits.push_back(trip_edge.speed_limit());      
+  //   }
+  //   else {
+  //     speed_limits.push_back(0);      
+  //   }
+  // }
+  
+  return speed_limits;  
+}
+
 void ManeuversBuilder::InitializeManeuver(Maneuver& maneuver, int node_index) {
 
   auto prev_edge = trip_path_->GetPrevEdge(node_index);
@@ -1272,9 +1311,20 @@ void ManeuversBuilder::UpdateManeuver(Maneuver& maneuver, int node_index) {
 
   // Basic time (len/speed on each edge with no stop impact) in seconds
   // TODO: update GetTime and GetSpeed to double precision
+  auto speed = GetSpeed(maneuver.travel_mode(), prev_edge->default_speed());
   maneuver.set_basic_time(
       maneuver.basic_time() +
-      GetTime(prev_edge->length_km(), GetSpeed(maneuver.travel_mode(), prev_edge->default_speed())));
+      GetTime(prev_edge->length_km(), speed));
+  // { 
+  //   //iterate through the maneuver edges
+  //   for (int i = 0; i < trip_leg.node_size(); ++i) {
+  //     const auto& node = trip_leg.node(i);
+
+  //   auto curr_edge = trip_path_->GetCurrEdge(node_index);    
+    
+  //   std::cout << "speed = " << speed << " speed_limit " << prev_edge->speed_limit()<< std::endl;
+  //   maneuver.set_speed_limit((uint32_t) (prev_edge->speed_limit()) );
+  // }
 
   // Portions Toll
   if (prev_edge->toll()) {

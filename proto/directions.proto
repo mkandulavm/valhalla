@@ -149,6 +149,7 @@ message DirectionsLeg {
   Summary summary = 5;
   repeated Maneuver maneuver = 6;
   string shape = 7;
+  repeated uint32 speed_limits= 8;
 }
 
 message DirectionsRoute {

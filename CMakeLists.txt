@@ -26,16 +26,45 @@ option(ENABLE_PYTHON_BINDINGS "Enable Python bindings" OFF)
 option(ENABLE_CCACHE "Speed up incremental rebuilds via ccache" ON)
 option(ENABLE_COVERAGE "Build with coverage instrumentalisation" OFF)
 option(ENABLE_COMPILER_WARNINGS "Build with compiler warnings" OFF)
-option(ENABLE_SANITIZERS "Use all the integrated sanitizers for Debug build" OFF)
-option(ENABLE_ADDRESS_SANITIZER "Use memory sanitizer for Debug build" OFF)
-option(ENABLE_UNDEFINED_SANITIZER "Use UB sanitizer for Debug build" OFF)
+option(ENABLE_SANITIZERS "Use all the integrated sanitizers for Debug build" ON)
+option(ENABLE_ADDRESS_SANITIZER "Use memory sanitizer for Debug build" ON)
+option(ENABLE_UNDEFINED_SANITIZER "Use UB sanitizer for Debug build" ON)
 option(ENABLE_TESTS "Enable Valhalla tests" OFF)
 option(ENABLE_WERROR "Convert compiler warnings to errors. Requires ENABLE_COMPILER_WARNINGS=ON to take effect" OFF)
-option(ENABLE_BENCHMARKS "Enable microbenchmarking" ON)
-option(ENABLE_THREAD_SAFE_TILE_REF_COUNT "If ON uses shared_ptr as tile reference(i.e. it is thread safe)" OFF)
-option(ENABLE_SINGLE_FILES_WERROR "Convert compiler warnings to errors for single files" ON)
+option(ENABLE_BENCHMARKS "Enable microbenchmarking" OFF)
+option(ENABLE_THREAD_SAFE_TILE_REF_COUNT "If ON uses shared_ptr as tile reference(i.e. it is thread safe)" ON)
+option(ENABLE_SINGLE_FILES_WERROR "Convert compiler warnings to errors for single files" OFF)
 # useful to workaround issues likes this https://stackoverflow.com/questions/24078873/cmake-generated-xcode-project-wont-compile
 option(ENABLE_STATIC_LIBRARY_MODULES "If ON builds Valhalla modules as STATIC library targets" OFF)
+
+#print all above
+message(STATUS "Valhalla booleans")
+message(STATUS "CMAKE_CXX_STANDARD: ${CMAKE_CXX_STANDARD}")
+message(STATUS "ENABLE_TOOLS: ${ENABLE_TOOLS}")
+message(STATUS "ENABLE_DATA_TOOLS: ${ENABLE_DATA_TOOLS}")
+message(STATUS "ENABLE_SERVICES: ${ENABLE_SERVICES}")
+message(STATUS "ENABLE_HTTP: ${ENABLE_HTTP}")
+message(STATUS "ENABLE_PYTHON_BINDINGS: ${ENABLE_PYTHON_BINDINGS}")
+message(STATUS "ENABLE_CCACHE: ${ENABLE_CCACHE}")
+message(STATUS "ENABLE_COVERAGE: ${ENABLE_COVERAGE}")
+message(STATUS "ENABLE_COMPILER_WARNINGS: ${ENABLE_COMPILER_WARNINGS}")
+message(STATUS "ENABLE_SANITIZERS: ${ENABLE_SANITIZERS}")
+message(STATUS "ENABLE_ADDRESS_SANITIZER: ${ENABLE_ADDRESS_SANITIZER}")
+message(STATUS "ENABLE_UNDEFINED_SANITIZER: ${ENABLE_UNDEFINED_SANITIZER}")
+message(STATUS "ENABLE_TESTS: ${ENABLE_TESTS}")
+message(STATUS "ENABLE_WERROR: ${ENABLE_WERROR}")
+message(STATUS "ENABLE_BENCHMARKS: ${ENABLE_BENCHMARKS}")
+message(STATUS "ENABLE_THREAD_SAFE_TILE_REF_COUNT: ${ENABLE_THREAD_SAFE_TILE_REF_COUNT}")
+message(STATUS "ENABLE_SINGLE_FILES_WERROR: ${ENABLE_SINGLE_FILES_WERROR}")
+message(STATUS "ENABLE_STATIC_LIBRARY_MODULES: ${ENABLE_STATIC_LIBRARY_MODULES}")
+
+#-D var cannot carry ";" ..so we send as ":" and seperate it back for including
+string(REPLACE ":" ";" minizIncludePath "${minizIncludePath}")
+
+set(NEINCLUDES 
+      ${minizIncludePath})
+message(STATUS "minizIncludePath: ${minizIncludePath}")
+message(STATUS "NEINCLUDES: ${NEINCLUDES}")
 
 set(LOGGING_LEVEL "" CACHE STRING "Logging level, default is INFO")
 set_property(CACHE LOGGING_LEVEL PROPERTY STRINGS "NONE;ALL;ERROR;WARN;INFO;DEBUG;TRACE")
@@ -46,6 +75,9 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(THREADS_PREFER_PTHREAD_FLAG ON)
+
+
+message(STATUS "ENABLE_TESTS ${ENABLE_TESTS}")
 
 # colorize output
 include(CheckCXXCompilerFlag)
@@ -61,6 +93,8 @@ elseif(CMAKE_CXX_COMPILER_ID MATCHES "GNU")
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${COLOR_FLAG}")
 endif()
 
+#set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g")
+message("CMAKE_CXX_FLAGS in valhalla : ${CMAKE_CXX_FLAGS}")
 # Explicitly set the build type to Release if no other type is specified
 # on the command line.  Without this, cmake defaults to an unoptimized,
 # non-debug build, which almost nobody wants.
@@ -133,9 +167,32 @@ endif()
 find_package(Threads REQUIRED)
 find_package(ZLIB REQUIRED)
 
+
+if(MOBILE)
+  set(ENABLE_DATA_TOOLS OFF)
+  set(ENABLE_TOOLS OFF)
+  message("SETTING DATA_TOOLS to be OFF")
+else()
+  # I think this is needed for PC build.. check
+  #set(Boost_INCLUDE_DIR /usr/include)  # Replace with the actual path to Boost headers
+  #set(Boost_LIBRARY_DIR /usr/lib)  # Replace with the actual path to Boost libraries
+endif()
+
+if(ENABLE_DATA_TOOLS)
+  include_directories(${NEINCLUDES})
+  link_libraries(${minizLibPath}/lib/liblzma.so)
+endif()
+#include(${CMAKE_BINARY_DIR}/conan_deps.cmake)
+
 # try to find an installed boost or install locally with conan
-set(boost_VERSION "1.71")
-find_package(Boost ${boost_VERSION} QUIET)
+set(boost_VERSION "1.74")
+find_package(Boost ${boost_VERSION} REQUIRED)
+if(Boost_FOUND)
+  message(STATUS "Boost_FOUND: ${Boost_FOUND}")
+  message(STATUS "Boost_INCLUDE_DIRS: ${Boost_INCLUDE_DIRS}")
+  message(STATUS "Boost_LIBRARY_DIRS: ${Boost_LIBRARY_DIRS}")
+  message(STATUS "Boost_LIBRARIES: ${Boost_LIBRARIES}")
+endif()
 if (NOT Boost_FOUND)
   # bail if there's no conan installed
   message(STATUS "No compatible boost version detected, using conan...")
@@ -155,10 +212,15 @@ if (NOT Boost_FOUND)
                       SETTINGS ${settings}
                       OUTPUT_QUIET)
 endif()
-find_package(Boost ${boost_VERSION} REQUIRED)
+
+
+#find_package(Boost ${boost_VERSION} REQUIRED)
 add_definitions(-DBOOST_NO_CXX11_SCOPED_ENUMS)
 add_definitions(-DBOOST_ALLOW_DEPRECATED_HEADERS)
 add_definitions(-DBOOST_BIND_GLOBAL_PLACEHOLDERS)
+
+message(STATUS "Boost include dir: ${Boost_INCLUDE_DIR}")
+message(STATUS "Boost library dir: ${Boost_LIBRARY_DIR}")
 
 if(NOT TARGET CURL::CURL)
   add_library(CURL::CURL INTERFACE IMPORTED)
@@ -179,42 +241,41 @@ else()
   message(STATUS "Using curl from the outside")
 endif()
 
+
+
+message(STATUS "from valhalla cmake Using pbf headers from ${PROTOBUF_INCLUDE_DIR}")
+
 if(NOT Protobuf_FOUND)
-  find_package(Protobuf REQUIRED)
+  add_definitions(-Wno-dev)
 
-  # orchestrated effort of both protobuf & cmake are responsible for the next lines..
+  #message(STATUS "setting hint for protobuf path  ${PROTOBUF_INCLUDE_DIR}/../lib/cmake/protobuf")
+  set(protobuf_find_path "${PROTOBUF_INCLUDE_DIR}/../lib/cmake/protobuf")
+  set(Protobuf_DIR "${protobuf_find_path}")
+  message(STATUS "finding package Protobuf in ${protobuf_find_path}  PROTOBUF_INCLUDE_DIR = ${PROTOBUF_INCLUDE_DIR}")
+  
+  message(STATUS "before find_package Protobuf_PROTOC_EXECUTABLE = ${Protobuf_PROTOC_EXECUTABLE}")
+  #set(Protobuf_PROTOC_EXECUTABLE "${Protobuf_PROTOC_EXECUTABLE}" CACHE STRING "Path to protoc executable")
+  
+  configure_file(${Protobuf_PROTOC_EXECUTABLE} ${PROTOBUF_INCLUDE_DIR}/../bin/protoc COPYONLY)
+  configure_file(${Protobuf_PROTOC_EXECUTABLE} ${PROTOBUF_INCLUDE_DIR}/../bin/protoc-3.12.3.0 COPYONLY)
 
-  # TODO: monitor how protobuf Linux packages evolve. Eventually everyone should use
-  # the Apple configuration, but e.g. apt does not install CMake config with protobuf
-  if(Protobuf_VERSION VERSION_GREATER_EQUAL 4.22.0)
-    # this might be needed for some Apple/Linux protobuf versions
-    # add_definitions(-DPROTOBUF_USE_DLLS)
-    if(APPLE OR WIN32)
-      # CONFIG mode is ideal for new abseil protobuf builds, which uses the protobuf-provided
-      # CMake configuration instead of CMake internal one, as that's not looking for abseil:
-      # https://github.com/valhalla/valhalla/issues/4173#issuecomment-1638067950
-      # Newer protobuf versions require a protobuf_MODULE_COMPATIBLE to be able 
-      # to see the protobuf_generate_cpp() CMake function
-      set(protobuf_MODULE_COMPATIBLE ON CACHE BOOL "")
-      find_package(Protobuf REQUIRED CONFIG)
-    else()
-      # linux might not have CMake config installed (e.g. Debian derivatives)
-      # need to link protobuf to abseil manually
-      find_package(Protobuf REQUIRED)
-      find_package(absl REQUIRED)
-      if(TARGET protobuf::libprotobuf-lite)
-        target_link_libraries(protobuf::libprotobuf-lite INTERFACE "absl::absl_log")
-      elseif(TARGET protobuf::libprotobuf)
-        target_link_libraries(protobuf::libprotobuf INTERFACE "absl::absl_log")
-      endif()
-    endif()
-  endif()
+  # Enable debug mode for find_package
+  set(CMAKE_FIND_DEBUG_MODE ON)
+  find_package(Protobuf REQUIRED PATHS ${protobuf_find_path})
+  
+  message(STATUS "Protobuf_FOUND = ${Protobuf_FOUND}")
+  message(STATUS "Protobuf include path: ${Protobuf_INCLUDE_DIRS}")
+  message(STATUS "Protobuf libraries: ${Protobuf_LIBRARIES}")
+  message(STATUS "Protobuf version : ${Protobuf_VERSION}")
+  message(STATUS "Protobuf include path : ${Protobuf_INCLUDE_DIRS}")
+  message(STATUS "Protobuf libraries : ${Protobuf_LIBRARIES}")
+  message(STATUS "Protobuf compiler libraries : ${Protobuf_PROTOC_LIBRARIES}")
+  message(STATUS "Protobuf lite libraries : ${Protobuf_LITE_LIBRARIES}")
+  message(STATUS "Protobuf_PROTOC_EXECUTABLE = ${Protobuf_PROTOC_EXECUTABLE}")
+  #message(SEND_ERROR "Protobuf_PROTOC_EXECUTABLE = ${Protobuf_PROTOC_EXECUTABLE}")
 endif()
-
-message(STATUS "Using pbf headers from ${PROTOBUF_INCLUDE_DIR}")
 message(STATUS "Using pbf libs from ${PROTOBUF_LIBRARY}")
-message(STATUS "Using pbf release libs from ${PROTOBUF_LIBRARY_RELEASE}")
-message(STATUS "Using pbf debug libs from ${PROTOBUF_LIBRARY_DEBUG}")
+
 if(TARGET protobuf::libprotobuf-lite)
   message(STATUS "Using pbf-lite")
 endif()
@@ -223,10 +284,16 @@ endif()
 # TODO: After switching to CMake 3.12+, replace with
 #       $<TARGET_EXISTS:protobuf::libprotobuf
 #       $<TARGET_EXISTS:protobuf::libprotobuf-lite
+
+
 if(TARGET protobuf::libprotobuf-lite)
-  set(valhalla_protobuf_targets protobuf::libprotobuf-lite)
+  set(valhalla_protobuf_targets protobuf::libprotobuf-lite)    
+  message(STATUS "trying to set valhalla_protobuf_targets protobuf::libprotobuf-lite")
+elseif(TARGET protobuf::libprotobuf-lited)
+  set(valhalla_protobuf_targets protobuf::libprotobuf-lited)  
+  message(STATUS "trying to set valhalla_protobuf_targets protobuf::libprotobuf-lited")
 elseif(TARGET protobuf::libprotobuf)
-  set(valhalla_protobuf_targets protobuf::libprotobuf)
+  set(valhalla_protobuf_targets protobuf::libprotobuf)  
 else()
   message(FATAL_ERROR "Required target protobuf::libprotobuf-lite or protobuf::libprotobuf is not defined")
 endif()
@@ -248,7 +315,7 @@ endif()
 if(ENABLE_DATA_TOOLS)
   add_compile_definitions(DATA_TOOLS)
   find_package(SQLite3 REQUIRED)
-  find_package(SpatiaLite REQUIRED)
+  find_package(SpatiaLite REQUIRED) #since we need data tools only for debian, we will install using apt-get
   find_package(LuaJIT)
   add_library(Lua::Lua INTERFACE IMPORTED)
   set_target_properties(Lua::Lua PROPERTIES
@@ -300,7 +367,7 @@ set(valhalla_programs valhalla_run_map_match valhalla_benchmark_loki valhalla_be
 set(valhalla_data_tools valhalla_build_statistics valhalla_ways_to_edges valhalla_validate_transit
   valhalla_benchmark_admins valhalla_build_connectivity	valhalla_build_tiles valhalla_build_admins
   valhalla_convert_transit valhalla_ingest_transit valhalla_query_transit valhalla_add_predicted_traffic
-  valhalla_assign_speeds valhalla_add_elevation valhalla_build_landmarks valhalla_add_landmarks)
+  valhalla_assign_speeds valhalla_add_elevation)
 
 ## Valhalla services
 set(valhalla_services valhalla_loki_worker valhalla_odin_worker valhalla_thor_worker)
@@ -312,7 +379,7 @@ if(ENABLE_TOOLS)
     set_target_properties(${program} PROPERTIES FOLDER "Tools")
     create_source_groups("Source Files" ${path})
     target_link_libraries(${program} valhalla)
-    target_include_directories(${program} PUBLIC ${VALHALLA_SOURCE_DIR}/third_party/cxxopts/include)
+    target_include_directories(${program} PUBLIC ${VALHALLA_SOURCE_DIR}/third_party/cxxopts/include ${Boost_INCLUDE_DIRS})
     if(MSVC)
       target_link_libraries(${program} ${CURL_LIBRARIES})
     endif()
@@ -320,13 +387,15 @@ if(ENABLE_TOOLS)
   endforeach()
 endif()
 
+message("Includes at valhalla root level: ${includes}")
+
 if(ENABLE_DATA_TOOLS)
   foreach(program ${valhalla_data_tools})
     get_source_path(path ${program})
     add_executable(${program} ${path})
     create_source_groups("Source Files" ${path})
     set_target_properties(${program} PROPERTIES FOLDER "Data Tools")
-    target_include_directories(${program} PUBLIC ${VALHALLA_SOURCE_DIR}/third_party/cxxopts/include)
+    target_include_directories(${program} PUBLIC ${VALHALLA_SOURCE_DIR}/third_party/cxxopts/include ${Boost_INCLUDE_DIRS})
     target_link_libraries(${program} valhalla)
     if (LUAJIT_FOUND AND APPLE AND CMAKE_HOST_SYSTEM_PROCESSOR STREQUAL "x86_64")
       # Using LuaJIT on macOS on Intel processors requires a couple of extra linker flags
@@ -353,7 +422,7 @@ if(ENABLE_SERVICES)
     create_source_groups("Source Files" src/${program}.cc)
     set_target_properties(${program} PROPERTIES FOLDER "Services")
     target_link_libraries(${program} valhalla)
-    target_include_directories(${program} PUBLIC ${VALHALLA_SOURCE_DIR}/third_party/cxxopts/include)
+    target_include_directories(${program} PUBLIC ${VALHALLA_SOURCE_DIR}/third_party/cxxopts/include ${Boost_INCLUDE_DIRS})
     install(TARGETS ${program} DESTINATION "${CMAKE_INSTALL_BINDIR}" COMPONENT runtime)
   endforeach()
 endif()
@@ -401,7 +470,7 @@ set(CPACK_RESOURCE_FILE_LICENSE "${VALHALLA_SOURCE_DIR}/LICENSE.md")
 set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "OpenStreetMap Routing API
  A set of routing APIs designed around OSM map data using
  dynamic costing and a tiled data structure")
-  set(CPACK_COMPONENT_PYTHON_DESCRIPTION "OpenStreetMap Routing Python Bindings
+  set(CPACK_COMPONENT_PYHON_DESCRIPTION "OpenStreetMap Routing Python Bindings
  A set routing APIs designed around OSM map data using
  dynamic costing and a tiled data structure and
  accompanying tools and services used to analyse and
