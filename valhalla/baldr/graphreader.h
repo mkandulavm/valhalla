@@ -22,6 +22,7 @@
 
 #include <valhalla/proto/incidents.pb.h>
 
+#include <util/zipArchive.h>
 namespace valhalla {
 namespace baldr {
 
