@@ -62,7 +62,9 @@ message(STATUS "ENABLE_STATIC_LIBRARY_MODULES: ${ENABLE_STATIC_LIBRARY_MODULES}"
 string(REPLACE ":" ";" minizIncludePath "${minizIncludePath}")
 
 set(NEINCLUDES 
-      ${minizIncludePath})
+      ${minizIncludePath}
+      src
+   )
 message(STATUS "minizIncludePath: ${minizIncludePath}")
 message(STATUS "NEINCLUDES: ${NEINCLUDES}")
 
@@ -180,7 +182,7 @@ endif()
 
 if(ENABLE_DATA_TOOLS)
   include_directories(${NEINCLUDES})
-  link_libraries(${minizLibPath}/lib/liblzma.so)
+  link_libraries(${minizLibPath})  #/lib/liblzma.so)
 endif()
 #include(${CMAKE_BINARY_DIR}/conan_deps.cmake)
 
