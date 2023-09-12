@@ -23,6 +23,7 @@
 #include <valhalla/proto/incidents.pb.h>
 
 #include <util/zipArchive.h>
+
 namespace valhalla {
 namespace baldr {
 
@@ -953,6 +954,12 @@ protected:
     std::shared_ptr<midgard::tar> archive;
     std::shared_ptr<midgard::tar> traffic_archive;
     uint64_t checksum;
+
+    //zip related : ne madan///////
+    bool isZip = false;
+    std::unique_ptr<NENative::ZipArchive> zipArchive;    
+    std::unordered_map<uint64_t, std::string> zipTileIDToPathMap;
+    /////////////
   };
   std::shared_ptr<const tile_extract_t> tile_extract_;
   static std::shared_ptr<const GraphReader::tile_extract_t>
