@@ -140,7 +140,8 @@ message DirectionsLeg {
   repeated Location location = 4;
   Summary summary = 5;
   repeated Maneuver maneuver = 6;
-  string shape = 7;
+  string shape = 7;  
+  repeated uint32 speed_limits= 8;  //nevh
 }
 
 message DirectionsRoute {
