@@ -28,7 +28,8 @@ public:
   ManeuversBuilder(const Options& options, EnhancedTripLeg* trip_path);
 
   std::list<Maneuver> Build();
-
+  //nevh
+  std::vector<uint32_t> GetSpeedLimits(std::list<Maneuver> &maneuvers);
 protected:
   std::list<Maneuver> Produce();
 
