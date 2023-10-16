@@ -49,6 +49,15 @@ void DirectionsBuilder::Build(Api& api, const MarkupFormatter& markup_formatter)
 
         ManeuversBuilder maneuversBuilder(options, &etp);
         maneuvers = maneuversBuilder.Build();
+        //nevh
+        auto speedLimits = maneuversBuilder.GetSpeedLimits(maneuvers);
+
+        //add speed limits as an array into trip directions
+        
+        for (const auto& speed_limit : speedLimits) {          
+          trip_directions.add_speed_limits(speed_limit);
+        }
+        //nevh
 
         // Create the instructions if desired
         if (options.directions_type() == DirectionsType::instructions) {
