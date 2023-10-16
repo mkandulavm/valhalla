@@ -63,7 +63,9 @@ set(sources
   validatetransit.cc)
 
 # treat date library as system
-set(system_includes ${VALHALLA_SOURCE_DIR}/third_party/date/include)
+set(system_includes 
+  ${VALHALLA_SOURCE_DIR}/third_party/date/include
+  ${NEINCLUDES})
 if(APPLE)
   list(APPEND system_includes ${VALHALLA_SOURCE_DIR}/third_party/date/include/date)
 endif()
@@ -75,7 +77,7 @@ valhalla_module(NAME mjolnir
     PUBLIC
       ${VALHALLA_SOURCE_DIR}
       ${VALHALLA_SOURCE_DIR}/valhalla
-      ${VALHALLA_SOURCE_DIR}/third_party/rapidjson/include
+      ${VALHALLA_SOURCE_DIR}/../tangram-es/core/deps
       $<$<BOOL:${WIN32}>:${VALHALLA_SOURCE_DIR}/third_party/dirent/include>
       ${PROTOBUF_INCLUDE_DIR}
    PRIVATE
