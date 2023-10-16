@@ -1,0 +1,2221 @@
+{
+    "posix_locale": "ms_MS.UTF-8",
+    "aliases": [
+        "ms"
+    ],
+    "instructions": {
+        "arrive": {
+            "phrases": {
+                "0": "Sampai: <TIME>.",
+                "1": "Sampai: <TIME> di <TRANSIT_STOP>."
+            },
+            "example_phrases": {
+                "0": [
+                    "Sampai: 8:02 AM."
+                ],
+                "1": [
+                    "Sampai: 8:02 AM di 8 St - NYU."
+                ]
+            }
+        },
+        "arrive_verbal": {
+            "phrases": {
+                "0": "Sampai pada <TIME>.",
+                "1": "Sampai pada <TIME> di <TRANSIT_STOP>."
+            },
+            "example_phrases": {
+                "0": [
+                    "Sampai pada 8:02 AM."
+                ],
+                "1": [
+                    "Sampai pada 8:02 AM di 8 St - NYU."
+                ]
+            }
+        },
+        "bear": {
+            "phrases": {
+                "0": "Pilih <RELATIVE_DIRECTION>.",
+                "1": "Pilih <RELATIVE_DIRECTION> ke <STREET_NAMES>.",
+                "2": "Pilih <RELATIVE_DIRECTION> ke <BEGIN_STREET_NAMES>. Teruskan ke <STREET_NAMES>.",
+                "3": "Pilih <RELATIVE_DIRECTION> untuk kekal di <STREET_NAMES>.",
+                "4": "Pilih <RELATIVE_DIRECTION> di <JUNCTION_NAME>.",
+                "5": "Pilih <RELATIVE_DIRECTION> menuju <TOWARD_SIGN>."
+            },
+            "empty_street_name_labels": [
+                "lorong pejalan kaki",
+                "lorong basikal",
+                "lorong basikal gunung",
+                "lintasan pejalan kaki"
+            ],
+            "relative_directions": [
+                "kiri",
+                "kanan"
+            ],
+            "example_phrases": {
+                "0": [
+                    "Pilih ke kanan."
+                ],
+                "1": [
+                    "Pilih kiri ke Arlen Road."
+                ],
+                "2": [
+                    "Pilih ke kanan ke Belair Road/US 1 Business. Teruskan ke US 1 Business."
+                ],
+                "3": [
+                    "Pilih kiri untuk kekal di US 15 South."
+                ],
+                "4": [
+                    "Pilih ke kanan di Mannenbashi East."
+                ],
+                "5": [
+                    "Pilih kiri menuju Baltimore."
+                ]
+            }
+        },
+        "bear_verbal": {
+            "phrases": {
+                "0": "Pilih <RELATIVE_DIRECTION>.",
+                "1": "Pilih <RELATIVE_DIRECTION> ke <STREET_NAMES>.",
+                "2": "Pilih <RELATIVE_DIRECTION> ke <BEGIN_STREET_NAMES>.",
+                "3": "Pilih <RELATIVE_DIRECTION> untuk kekal di <STREET_NAMES>.",
+                "4": "Pilih <RELATIVE_DIRECTION> di <JUNCTION_NAME>.",
+                "5": "Pilih <RELATIVE_DIRECTION> menuju <TOWARD_SIGN>."
+            },
+            "empty_street_name_labels": [
+                "lorong pejalan kaki",
+                "lorong basikal",
+                "lorong basikal gunung",
+                "lintasan pejalan kaki"
+            ],
+            "relative_directions": [
+                "kiri",
+                "kanan"
+            ],
+            "example_phrases": {
+                "0": [
+                    "Pilih ke kanan."
+                ],
+                "1": [
+                    "Pilih kiri ke Arlen Road."
+                ],
+                "2": [
+                    "Pilih ke kanan ke Belair Road, U.S. 1 Business."
+                ],
+                "3": [
+                    "Pilih kiri untuk kekal di U.S. 15 South."
+                ],
+                "4": [
+                    "Pilih ke kanan di Mannenbashi East."
+                ],
+                "5": [
+                    "Pilih kiri menuju Baltimore."
+                ]
+            }
+        },
+        "becomes": {
+            "phrases": {
+                "0": "<PREVIOUS_STREET_NAMES> menjadi <STREET_NAMES>."
+            },
+            "example_phrases": {
+                "0": [
+                    "Vine Street menjadi Middletown Road."
+                ]
+            }
+        },
+        "becomes_verbal": {
+            "phrases": {
+                "0": "<PREVIOUS_STREET_NAMES> menjadi <STREET_NAMES>."
+            },
+            "example_phrases": {
+                "0": [
+                    "Vine Street menjadi Middletown Road."
+                ]
+            }
+        },
+        "continue": {
+            "phrases": {
+                "0": "Teruskan.",
+                "1": "Teruskan di <STREET_NAMES>.",
+                "2": "Teruskan di <JUNCTION_NAME>.",
+                "3": "Teruskan menuju <TOWARD_SIGN>."
+            },
+            "empty_street_name_labels": [
+                "lorong pejalan kaki",
+                "lorong basikal",
+                "lorong basikal gunung",
+                "lintasan pejalan kaki"
+            ],
+            "example_phrases": {
+                "0": [
+                    "Teruskan."
+                ],
+                "1": [
+                    "Teruskan di 10th Avenue."
+                ],
+                "2": [
+                    "Teruskan di Mannenbashi East."
+                ],
+                "3": [
+                    "Teruskan menuju Baltimore."
+                ]
+            }
+        },
+        "continue_verbal": {
+            "phrases": {
+                "0": "Teruskan.",
+                "1": "Teruskan selama <LENGTH>.",
+                "2": "Teruskan di <STREET_NAMES>.",
+                "3": "Teruskan di <STREET_NAMES> selama <LENGTH>.",
+                "4": "Teruskan di <JUNCTION_NAME>.",
+                "5": "Teruskan di <JUNCTION_NAME> selama <LENGTH>.",
+                "6": "Teruskan menuju <TOWARD_SIGN>.",
+                "7": "Teruskan menuju <TOWARD_SIGN> selama <LENGTH>."
+            },
+            "empty_street_name_labels": [
+                "lorong pejalan kaki",
+                "lorong basikal",
+                "lorong basikal gunung",
+                "lintasan pejalan kaki"
+            ],
+            "metric_lengths": [
+                "<KILOMETERS> kilometer",
+                "1 kilometer",
+                "<METERS> meter",
+                "kurang dari 10 meter"
+            ],
+            "us_customary_lengths": [
+                "<MILES> batu",
+                "1 batu",
+                "setengah batu",
+                "suku batu",
+                "<FEET> kaki",
+                "kurang dari 10 kaki"
+            ],
+            "example_phrases": {
+                "0": [
+                    "Teruskan."
+                ],
+                "1": [
+                    "Teruskan selama 300 kaki."
+                ],
+                "2": [
+                    "Teruskan di 10th Avenue."
+                ],
+                "3": [
+                    "Teruskan di 10th Avenue selama 3 batu."
+                ],
+                "4": [
+                    "Teruskan di Mannenbashi East."
+                ],
+                "5": [
+                    "Teruskan di Mannenbashi East selama 2 batu."
+                ],
+                "6": [
+                    "Teruskan menuju Baltimore."
+                ],
+                "7": [
+                    "Teruskan menuju Baltimore selama 5 batu."
+                ]
+            }
+        },
+        "continue_verbal_alert": {
+            "phrases": {
+                "0": "Teruskan.",
+                "1": "Teruskan di <STREET_NAMES>.",
+                "2": "Teruskan di <JUNCTION_NAME>.",
+                "3": "Teruskan menuju <TOWARD_SIGN>."
+            },
+            "empty_street_name_labels": [
+                "lorong pejalan kaki",
+                "lorong basikal",
+                "lorong basikal gunung",
+                "lintasan pejalan kaki"
+            ],
+            "example_phrases": {
+                "0": [
+                    "Teruskan."
+                ],
+                "1": [
+                    "Teruskan di 10th Avenue."
+                ],
+                "2": [
+                    "Teruskan di Mannenbashi East."
+                ],
+                "3": [
+                    "Teruskan menuju Baltimore."
+                ]
+            }
+        },
+        "depart": {
+            "phrases": {
+                "0": "Bertolak: <TIME>.",
+                "1": "Bertolak: <TIME> dari <TRANSIT_STOP>."
+            },
+            "example_phrases": {
+                "0": [
+                    "Bertolak: 8:02 AM."
+                ],
+                "1": [
+                    "Bertolak: 8:02 AM dari 8 St - NYU."
+                ]
+            }
+        },
+        "depart_verbal": {
+            "phrases": {
+                "0": "Bertolak pada <TIME>.",
+                "1": "Bertolak pada <TIME> dari <TRANSIT_STOP>."
+            },
+            "example_phrases": {
+                "0": [
+                    "Bertolak pada 8:02 AM."
+                ],
+                "1": [
+                    "Bertolak pada 8:02 AM dari 8 St - NYU."
+                ]
+            }
+        },
+        "destination": {
+            "phrases": {
+                "0": "Awak telah sampai di destinasi anda.",
+                "1": "Awak telah sampai di <DESTINATION>.",
+                "2": "Destinasi anda berada di <RELATIVE_DIRECTION>.",
+                "3": "<DESTINATION> berada di <RELATIVE_DIRECTION>."
+            },
+            "relative_directions": [
+                "kiri",
+                "kanan"
+            ],
+            "example_phrases": {
+                "0": [
+                    "Awak telah sampai di destinasi anda."
+                ],
+                "1": [
+                    "Awak telah sampai di 3206 Powelton Avenue."
+                ],
+                "2": [
+                    "Destinasi anda berada di kiri.",
+                    "Destinasi anda berada di kanan."
+                ],
+                "3": [
+                    "Lancaster Brewing Company berada di kiri."
+                ]
+            }
+        },
+        "destination_verbal": {
+            "phrases": {
+                "0": "Awak telah sampai di destinasi anda.",
+                "1": "Awak telah sampai di <DESTINATION>.",
+                "2": "Destinasi anda berada di <RELATIVE_DIRECTION>.",
+                "3": "<DESTINATION> berada di <RELATIVE_DIRECTION>."
+            },
+            "relative_directions": [
+                "kiri",
+                "kanan"
+            ],
+            "example_phrases": {
+                "0": [
+                    "Anda telah tiba di destinasi anda."
+                ],
+                "1": [
+                    "Anda telah tiba di 32 o6 Powelton Avenue."
+                ],
+                "2": [
+                    "Destinasi anda berada di kiri.",
+                    "Destinasi anda berada di kanan."
+                ],
+                "3": [
+                    "Lancaster Brewing Company berada di kiri."
+                ]
+            }
+        },
+        "destination_verbal_alert": {
+            "phrases": {
+                "0": "Anda akan tiba di destinasi anda.",
+                "1": "\"Anda akan tiba di <DESTINATION>.\"]",
+                "2": "\"Destinasi anda akan berada di <RELATIVE_DIRECTION>.\"]",
+                "3": "\"<DESTINATION> akan berada di <RELATIVE_DIRECTION>.\"]"
+            },
+            "relative_directions": [
+                "kiri",
+                "kanan"
+            ],
+            "example_phrases": {
+                "0": [
+                    "Anda akan tiba di destinasi anda."
+                ],
+                "1": [
+                    "Anda akan tiba di 32 o6 Powelton Avenue."
+                ],
+                "2": [
+                    "Destinasi anda akan berada di kiri.",
+                    "Destinasi anda akan berada di kanan."
+                ],
+                "3": [
+                    "Lancaster Brewing Company akan berada di kiri."
+                ]
+            }
+        },
+        "enter_ferry": {
+            "phrases": {
+                "0": "Ambil feri itu.",
+                "1": "\"Ambil <STREET_NAMES>.\"]",
+                "2": "\"Ambil <STREET_NAMES> <FERRY_LABEL>.\"]",
+                "3": "\"Ambil feri ke arah <TOWARD_SIGN>.\"]"
+            },
+            "empty_street_name_labels": [
+                "lorong pejalan kaki",
+                "lorong basikal",
+                "lorong basikal gunung",
+                "lintasan pejalan kaki"
+            ],
+            "ferry_label": "Feri",
+            "example_phrases": {
+                "0": [
+                    "Ambil Feri."
+                ],
+                "1": [
+                    "Ambil Feri Millersburg."
+                ],
+                "2": [
+                    "Ambil Feri Bridgeport - Port Jefferson."
+                ],
+                "3": [
+                    "Ambil feri ke arah Cape May."
+                ]
+            }
+        },
+        "enter_ferry_verbal": {
+            "phrases": {
+                "0": "Ambil Feri.",
+                "1": "\"Ambil <STREET_NAMES>.\"]",
+                "2": "\"Ambil <STREET_NAMES> <FERRY_LABEL>.\"]",
+                "3": "\"Ambil feri ke arah <TOWARD_SIGN>.\"]"
+            },
+            "empty_street_name_labels": [
+                "lorong pejalan kaki",
+                "lorong basikal",
+                "lorong basikal gunung",
+                "lintasan pejalan kaki"
+            ],
+            "ferry_label": "Feri",
+            "example_phrases": {
+                "0": [
+                    "Ambil Feri."
+                ],
+                "1": [
+                    "Ambil Feri Millersburg."
+                ],
+                "2": [
+                    "Ambil Feri Bridgeport - Port Jefferson."
+                ],
+                "3": [
+                    "Ambil feri ke arah Cape May."
+                ]
+            }
+        },
+        "enter_roundabout": {
+            "phrases": {
+                "0": "Masuk ke bulatan.",
+                "1": "\"Masuk ke bulatan dan ambil keluaran <ORDINAL_VALUE>.\"]",
+                "2": "\"Masuk ke bulatan dan ambil keluaran <ORDINAL_VALUE> ke <ROUNDABOUT_EXIT_STREET_NAMES>.\"]",
+                "3": "\"Masuk ke bulatan dan ambil keluaran <ORDINAL_VALUE> ke <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>. Teruskan di <ROUNDABOUT_EXIT_STREET_NAMES>.\"]",
+                "4": "\"Masuk ke bulatan dan ambil keluaran <ORDINAL_VALUE> ke arah <TOWARD_SIGN>.\"]",
+                "5": "\"Masuk ke bulatan dan ambil keluaran ke <ROUNDABOUT_EXIT_STREET_NAMES>.\"]",
+                "6": "\"Masuk ke bulatan dan ambil keluaran ke <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>. Teruskan di <ROUNDABOUT_EXIT_STREET_NAMES>.\"]",
+                "7": "\"Masuk ke bulatan dan ambil keluaran ke arah <TOWARD_SIGN>.\"]",
+                "8": "Masuk <STREET_NAMES>.",
+                "9": "\"Masuk <STREET_NAMES> dan ambil keluaran <ORDINAL_VALUE>.\"]",
+                "10": "\"Masuk <STREET_NAMES> dan ambil keluaran <ORDINAL_VALUE> ke <ROUNDABOUT_EXIT_STREET_NAMES>.\"]",
+                "11": "Masuk <STREET_NAMES> dan ambil keluaran <ORDINAL_VALUE> ke <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>. Teruskan di <ROUNDABOUT_EXIT_STREET_NAMES>.",
+                "12": "Masuk <STREET_NAMES> dan ambil keluaran <ORDINAL_VALUE> ke arah <TOWARD_SIGN>.",
+                "13": "Masuk <STREET_NAMES> dan ambil keluaran ke <ROUNDABOUT_EXIT_STREET_NAMES>.",
+                "14": "Masuk <STREET_NAMES> dan ambil keluaran ke <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>. Teruskan di <ROUNDABOUT_EXIT_STREET_NAMES>.",
+                "15": "Masuk <STREET_NAMES> dan ambil keluaran ke arah <TOWARD_SIGN>."
+            },
+            "ordinal_values": [
+                "pertama",
+                "kedua",
+                "ketiga",
+                "keempat",
+                "kelima",
+                "keenam",
+                "ketujuh",
+                "kelapan",
+                "kesembilan",
+                "kesepuluh"
+            ],
+            "empty_street_name_labels": [
+                "lorong pejalan kaki",
+                "lorong basikal",
+                "lorong basikal gunung",
+                "lintasan pejalan kaki"
+            ],
+            "example_phrases": {
+                "0": [
+                    "Masuk ke bulatan."
+                ],
+                "1": [
+                    "Masuk ke bulatan dan ambil keluaran pertama.",
+                    "Masuk ke bulatan dan ambil keluaran kedua.",
+                    "Masuk ke bulatan dan ambil keluaran ketiga.",
+                    "Masuk ke bulatan dan ambil keluaran keempat.",
+                    "Masuk ke bulatan dan ambil keluaran kelima.",
+                    "Masuk ke bulatan dan ambil keluaran keenam.",
+                    "Masuk ke bulatan dan ambil keluaran ketujuh.",
+                    "Masuk ke bulatan dan ambil keluaran kelapan.",
+                    "Masuk ke bulatan dan ambil keluaran kesembilan.",
+                    "Masuk ke bulatan dan ambil keluaran kesepuluh."
+                ],
+                "2": [
+                    "Masuk ke bulatan dan ambil keluaran ketiga ke Jalan Utama."
+                ],
+                "3": [
+                    "Masuk ke bulatan dan ambil keluaran ketiga ke US 322/Jalan Utama. Teruskan di US 322."
+                ],
+                "4": [
+                    "Masuk ke bulatan dan ambil keluaran ketiga ke arah Baltimore."
+                ],
+                "5": [
+                    "Masuk ke bulatan dan ambil keluaran ke Jalan Utama."
+                ],
+                "6": [
+                    "Masuk ke bulatan dan ambil keluaran ke US 322/Jalan Utama. Teruskan di US 322."
+                ],
+                "7": [
+                    "Masuk ke bulatan dan ambil keluaran ke arah Baltimore."
+                ],
+                "8": [
+                    "Masuk ke Dupont Circle."
+                ],
+                "9": [
+                    "Masuk ke Dupont Circle dan ambil keluaran pertama."
+                ],
+                "10": [
+                    "Masuk ke Dupont Circle dan ambil keluaran ketiga ke Jalan Utama."
+                ],
+                "11": [
+                    "Masuk ke Dupont Circle dan ambil keluaran ketiga ke US 322/Jalan Utama. Teruskan di US 322."
+                ],
+                "12": [
+                    "Masuk ke Dupont Circle dan ambil keluaran ketiga ke arah Baltimore."
+                ],
+                "13": [
+                    "Masuk ke Dupont Circle dan ambil keluaran ke Jalan Utama."
+                ],
+                "14": [
+                    "Masuk ke Dupont Circle dan ambil keluaran ke US 322/Jalan Utama. Teruskan di US 322."
+                ],
+                "15": [
+                    "Masuk ke Dupont Circle dan ambil keluaran ke arah Baltimore."
+                ]
+            }
+        },
+        "enter_roundabout_verbal": {
+            "phrases": {
+                "0": "Masuk bulatan.",
+                "1": "Masuk bulatan dan ambil keluaran <ORDINAL_VALUE>.",
+                "2": "Masuk bulatan dan ambil keluaran <ORDINAL_VALUE> ke <ROUNDABOUT_EXIT_STREET_NAMES>.",
+                "3": "Masuk bulatan dan ambil keluaran <ORDINAL_VALUE> ke <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>.",
+                "4": "Masuk bulatan dan ambil keluaran <ORDINAL_VALUE> ke arah <TOWARD_SIGN>.",
+                "5": "Masuk bulatan dan ambil keluaran ke <ROUNDABOUT_EXIT_STREET_NAMES>.",
+                "6": "Masuk bulatan dan ambil keluaran ke <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>.",
+                "7": "Masuk bulatan dan ambil keluaran ke arah <TOWARD_SIGN>.",
+                "8": "Masuk <STREET_NAMES>",
+                "9": "Masuk <STREET_NAMES> dan ambil keluaran <ORDINAL_VALUE>.",
+                "10": "Masuk <STREET_NAMES> dan ambil keluaran <ORDINAL_VALUE> ke <ROUNDABOUT_EXIT_STREET_NAMES>.",
+                "11": "Masuk <STREET_NAMES> dan ambil keluaran <ORDINAL_VALUE> ke <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>.",
+                "12": "Masuk <STREET_NAMES> dan ambil keluaran <ORDINAL_VALUE> ke arah <TOWARD_SIGN>.",
+                "13": "Masuk <STREET_NAMES> dan ambil keluaran ke <ROUNDABOUT_EXIT_STREET_NAMES>.",
+                "14": "Masuk <STREET_NAMES> dan ambil keluaran ke <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>.",
+                "15": "Masuk <STREET_NAMES> dan ambil keluaran ke arah <TOWARD_SIGN>."
+            },
+            "ordinal_values": [
+                "pertama",
+                "kedua",
+                "ketiga",
+                "keempat",
+                "kelima",
+                "keenam",
+                "ketujuh",
+                "kelapan",
+                "kesembilan",
+                "kesepuluh"
+            ],
+            "empty_street_name_labels": [
+                "lorong pejalan kaki",
+                "lorong basikal",
+                "lorong basikal gunung",
+                "lintasan pejalan kaki"
+            ],
+            "example_phrases": {
+                "0": [
+                    "Masuk bulatan."
+                ],
+                "1": [
+                    "Masuk bulatan dan ambil keluaran pertama.",
+                    "Masuk bulatan dan ambil keluaran kedua.",
+                    "Masuk bulatan dan ambil keluaran ketiga.",
+                    "Masuk bulatan dan ambil keluaran keempat.",
+                    "Masuk bulatan dan ambil keluaran kelima.",
+                    "Masuk bulatan dan ambil keluaran keenam.",
+                    "Masuk bulatan dan ambil keluaran ketujuh.",
+                    "Masuk bulatan dan ambil keluaran kelapan.",
+                    "Masuk bulatan dan ambil keluaran kesembilan.",
+                    "Masuk bulatan dan ambil keluaran kesepuluh."
+                ],
+                "2": [
+                    "Masuk bulatan dan ambil keluaran ketiga ke Jalan Utama."
+                ],
+                "3": [
+                    "Masuk bulatan dan ambil keluaran ketiga ke U.S. 3 22/Jalan Utama."
+                ],
+                "4": [
+                    "Masuk bulatan dan ambil keluaran ketiga ke arah Baltimore."
+                ],
+                "5": [
+                    "Masuk bulatan dan ambil keluaran ke Jalan Utama."
+                ],
+                "6": [
+                    "Masuk bulatan dan ambil keluaran ke U.S. 3 22/Jalan Utama."
+                ],
+                "7": [
+                    "Masuk bulatan dan ambil keluaran ke arah Baltimore."
+                ],
+                "8": [
+                    "Masuk Dupont Circle."
+                ],
+                "9": [
+                    "Masuk Dupont Circle dan ambil keluaran pertama."
+                ],
+                "10": [
+                    "Masuk Dupont Circle dan ambil keluaran ketiga ke Jalan Utama."
+                ],
+                "11": [
+                    "Masuk Dupont Circle dan ambil keluaran ketiga ke U.S. 3 22/Jalan Utama."
+                ],
+                "12": [
+                    "Masuk Dupont Circle dan ambil keluaran ketiga ke arah Baltimore."
+                ],
+                "13": [
+                    "Masuk Dupont Circle dan ambil keluaran ke Jalan Utama."
+                ],
+                "14": [
+                    "Masuk Dupont Circle dan keluar ke U.S. 3 22/Jalan Utama."
+                ],
+                "15": [
+                    "Masuk Dupont Circle dan keluar ke arah Baltimore."
+                ]
+            }
+        },
+        "exit": {
+            "phrases": {
+                "0": "\"Ambil keluaran di sebelah <RELATIVE_DIRECTION>.\"]",
+                "1": "\"Ambil keluaran <NUMBER_SIGN> di sebelah <RELATIVE_DIRECTION>.\"]",
+                "2": "\"Ambil keluaran ke <BRANCH_SIGN> di sebelah <RELATIVE_DIRECTION>.\"]",
+                "3": "\"Ambil keluaran <NUMBER_SIGN> di sebelah <RELATIVE_DIRECTION> ke <BRANCH_SIGN>.\"]",
+                "4": "\"Ambil keluaran di sebelah <RELATIVE_DIRECTION> ke arah <TOWARD_SIGN>.\"]",
+                "5": "\"Ambil keluaran <NUMBER_SIGN> di sebelah <RELATIVE_DIRECTION> ke arah <TOWARD_SIGN>.\"]",
+                "6": "\"Ambil keluaran ke <BRANCH_SIGN> di sebelah <RELATIVE_DIRECTION> ke arah <TOWARD_SIGN>.\"]",
+                "7": "\"Ambil keluaran <NUMBER_SIGN> di sebelah <RELATIVE_DIRECTION> ke <BRANCH_SIGN> ke arah <TOWARD_SIGN>.\"]",
+                "8": "\"Ambil keluaran ke <NAME_SIGN> di sebelah <RELATIVE_DIRECTION>.\"]",
+                "10": "\"Ambil keluaran ke <NAME_SIGN> di sebelah <RELATIVE_DIRECTION> ke <BRANCH_SIGN>.\"]",
+                "12": "\"Ambil keluaran ke <NAME_SIGN> di sebelah <RELATIVE_DIRECTION> ke arah <TOWARD_SIGN>.\"]",
+                "14": "\"Ambil keluaran ke <NAME_SIGN> di sebelah <RELATIVE_DIRECTION> ke <BRANCH_SIGN> ke arah <TOWARD_SIGN>.\"]",
+                "15": "\"Ambil keluaran.\"]",
+                "16": "\"Ambil keluaran <NUMBER_SIGN>.\"]",
+                "17": "\"Ambil keluaran ke <BRANCH_SIGN>.\"]",
+                "18": "\"Ambil keluaran <NUMBER_SIGN> ke <BRANCH_SIGN>.\"]",
+                "19": "\"Ambil keluaran ke arah <TOWARD_SIGN>.\"]",
+                "20": "\"Ambil keluaran <NUMBER_SIGN> ke arah <TOWARD_SIGN>.\"]",
+                "21": "\"Ambil keluaran ke <BRANCH_SIGN> ke arah <TOWARD_SIGN>.\"]",
+                "22": "\"Ambil keluaran <NUMBER_SIGN> ke <BRANCH_SIGN> ke arah <TOWARD_SIGN>.\"]",
+                "23": "\"Ambil keluaran ke <NAME_SIGN>.\"]",
+                "25": "\"Ambil keluaran ke <NAME_SIGN> ke <BRANCH_SIGN>.\"]",
+                "27": "\"Ambil keluaran ke <NAME_SIGN> ke arah <TOWARD_SIGN>.\"]",
+                "29": "\"Ambil keluaran ke <NAME_SIGN> ke <BRANCH_SIGN> ke arah <TOWARD_SIGN>.\"]"
+            },
+            "relative_directions": [
+                "kiri",
+                "kanan"
+            ],
+            "example_phrases": {
+                "0": [
+                    "Ambil keluaran di sebelah kiri.",
+                    "Ambil keluaran di sebelah kanan."
+                ],
+                "1": [
+                    "Ambil keluaran 67 B-A di sebelah kanan."
+                ],
+                "2": [
+                    "Ambil keluaran US 322 Barat di sebelah kanan."
+                ],
+                "3": [
+                    "Ambil keluaran 67 B-A di sebelah kanan ke US 322 Barat."
+                ],
+                "4": [
+                    "Ambil keluaran di sebelah kanan ke arah Lewistown."
+                ],
+                "5": [
+                    "Ambil keluaran 67 B-A di sebelah kanan ke arah Lewistown."
+                ],
+                "6": [
+                    "Ambil keluaran US 322 Barat di sebelah kanan ke arah Lewistown."
+                ],
+                "7": [
+                    "Ambil keluaran 67 B-A di sebelah kanan ke US 322 Barat ke arah Lewistown/State College."
+                ],
+                "8": [
+                    "Ambil keluaran White Marsh Boulevard di sebelah kiri."
+                ],
+                "10": [
+                    "Ambil keluaran White Marsh Boulevard di sebelah kiri ke MD 43 Timur."
+                ],
+                "12": [
+                    "Ambil keluaran White Marsh Boulevard di sebelah kiri ke arah White Marsh."
+                ],
+                "14": [
+                    "Ambil keluaran White Marsh Boulevard di sebelah kiri ke MD 43 Timur ke arah White Marsh."
+                ],
+                "15": [
+                    "Ambil keluaran."
+                ],
+                "16": [
+                    "Ambil keluaran 67 B-A."
+                ],
+                "17": [
+                    "Ambil keluaran US 322 Barat."
+                ],
+                "18": [
+                    "Ambil keluaran 67 B-A ke US 322 Barat."
+                ],
+                "19": [
+                    "Ambil keluaran ke arah Lewistown."
+                ],
+                "20": [
+                    "Ambil keluaran 67 B-A ke arah Lewistown."
+                ],
+                "21": [
+                    "Ambil keluaran US 322 Barat ke arah Lewistown."
+                ],
+                "22": [
+                    "Ambil keluaran 67 B-A ke US 322 Barat ke arah Lewistown/State College."
+                ],
+                "23": [
+                    "Ambil keluaran White Marsh Boulevard."
+                ],
+                "25": [
+                    "Ambil keluaran White Marsh Boulevard ke MD 43 Timur."
+                ],
+                "27": [
+                    "Ambil keluaran White Marsh Boulevard ke arah White Marsh."
+                ],
+                "29": [
+                    "Ambil keluaran White Marsh Boulevard ke MD 43 Timur ke arah White Marsh."
+                ]
+            }
+        },
+        "exit_roundabout": {
+            "phrases": {
+                "0": "\"Keluar dari bulatan.\"]",
+                "1": "\"Keluar dari bulatan ke <STREET_NAMES>.\"]",
+                "2": "\"Keluar dari bulatan ke <BEGIN_STREET_NAMES>. Teruskan di <STREET_NAMES>.\"]",
+                "3": "\"Keluar dari bulatan ke arah <TOWARD_SIGN>.\"]"
+            },
+            "empty_street_name_labels": [
+                "lorong pejalan kaki",
+                "lorong basikal",
+                "lorong basikal gunung",
+                "lintasan pejalan kaki"
+            ],
+            "example_phrases": {
+                "0": [
+                    "Keluar dari bulatan."
+                ],
+                "1": [
+                    "Keluar dari bulatan ke Jalan Philadelphia/MD 7."
+                ],
+                "2": [
+                    "Keluar dari bulatan ke Jalan Gunung Catoctin/US 15. Teruskan di US 15."
+                ],
+                "3": [
+                    "Keluar dari bulatan ke arah Baltimore."
+                ]
+            }
+        },
+        "exit_roundabout_verbal": {
+            "phrases": {
+                "0": "Keluar dari bulatan.",
+                "1": "Keluar dari bulatan ke <STREET_NAMES>.",
+                "2": "Keluar dari bulatan ke <BEGIN_STREET_NAMES>.",
+                "3": "Keluar dari bulatan ke arah <TOWARD_SIGN>."
+            },
+            "empty_street_name_labels": [
+                "lorong jalan kaki",
+                "lorong basikal",
+                "lorong basikal gunung",
+                "lintasan jalan kaki"
+            ],
+            "example_phrases": {
+                "0": [
+                    "Keluar dari bulatan."
+                ],
+                "1": [
+                    "Keluar dari bulatan ke Jalan Philadelphia, Maryland 7."
+                ],
+                "2": [
+                    "Keluar dari bulatan ke Lebuh Raya Gunung Catoctin, U.S. 15."
+                ],
+                "3": [
+                    "Keluar dari bulatan ke arah Baltimore."
+                ]
+            }
+        },
+        "exit_verbal": {
+            "phrases": {
+                "0": "Ambil keluaran di sebelah <RELATIVE_DIRECTION>.",
+                "1": "Ambil keluaran <NUMBER_SIGN> di sebelah <RELATIVE_DIRECTION>.",
+                "2": "Ambil keluaran <BRANCH_SIGN> di sebelah <RELATIVE_DIRECTION>.",
+                "3": "Ambil keluaran <NUMBER_SIGN> di sebelah <RELATIVE_DIRECTION> ke <BRANCH_SIGN>.",
+                "4": "Ambil keluaran di sebelah <RELATIVE_DIRECTION> ke arah <TOWARD_SIGN>.",
+                "5": "Ambil keluaran <NUMBER_SIGN> di sebelah <RELATIVE_DIRECTION> ke arah <TOWARD_SIGN>.",
+                "6": "Ambil keluaran <BRANCH_SIGN> di sebelah <RELATIVE_DIRECTION> ke arah <TOWARD_SIGN>.",
+                "7": "Ambil keluaran <NUMBER_SIGN> di sebelah <RELATIVE_DIRECTION> ke <BRANCH_SIGN> ke arah <TOWARD_SIGN>.",
+                "8": "Ambil keluaran <NAME_SIGN> di sebelah <RELATIVE_DIRECTION>.",
+                "10": "Ambil keluaran <NAME_SIGN> di sebelah <RELATIVE_DIRECTION> ke <BRANCH_SIGN>.",
+                "12": "Ambil keluaran <NAME_SIGN> di sebelah <RELATIVE_DIRECTION> ke arah <TOWARD_SIGN>.",
+                "14": "Ambil keluaran <NAME_SIGN> di sebelah <RELATIVE_DIRECTION> ke <BRANCH_SIGN> ke arah <TOWARD_SIGN>.",
+                "15": "Ambil keluaran.",
+                "16": "Ambil keluaran <NUMBER_SIGN>.",
+                "17": "Ambil keluaran <BRANCH_SIGN>.",
+                "18": "Ambil keluaran <NUMBER_SIGN> ke <BRANCH_SIGN>.",
+                "19": "Ambil keluaran ke arah <TOWARD_SIGN>.",
+                "20": "Ambil keluaran <NUMBER_SIGN> ke arah <TOWARD_SIGN>.",
+                "21": "Ambil keluaran <BRANCH_SIGN> ke arah <TOWARD_SIGN>.",
+                "22": "Ambil keluaran <NUMBER_SIGN> ke <BRANCH_SIGN> ke arah <TOWARD_SIGN>.",
+                "23": "Ambil keluaran <NAME_SIGN>.",
+                "25": "Ambil keluaran <NAME_SIGN> ke <BRANCH_SIGN>.",
+                "27": "Ambil keluaran <NAME_SIGN> ke arah <TOWARD_SIGN>.",
+                "29": "Ambil keluaran <NAME_SIGN> ke <BRANCH_SIGN> ke arah <TOWARD_SIGN>."
+            },
+            "relative_directions": [
+                "kiri",
+                "kanan"
+            ],
+            "example_phrases": {
+                "0": [
+                    "Ambil keluaran di sebelah kiri.",
+                    "Ambil keluaran di sebelah kanan."
+                ],
+                "1": [
+                    "Ambil keluaran 67 B-A di sebelah kanan."
+                ],
+                "2": [
+                    "Ambil keluaran U.S. 3 22 Barat di sebelah kanan."
+                ],
+                "3": [
+                    "Ambil keluaran 67 B-A di sebelah kanan ke U.S. 3 22 Barat."
+                ],
+                "4": [
+                    "Ambil keluaran di sebelah kanan ke arah Lewistown."
+                ],
+                "5": [
+                    "Ambil keluaran 67 B-A di sebelah kanan ke arah Lewistown."
+                ],
+                "6": [
+                    "Ambil keluaran U.S. 3 22 Barat di sebelah kanan ke arah Lewistown."
+                ],
+                "7": [
+                    "Ambil keluaran 67 B-A di sebelah kanan ke U.S. 3 22 Barat ke arah Lewistown, State College."
+                ],
+                "8": [
+                    "Ambil keluaran White Marsh Boulevard di sebelah kiri."
+                ],
+                "10": [
+                    "Ambil keluaran White Marsh Boulevard di sebelah kiri ke Maryland 43 Timur."
+                ],
+                "12": [
+                    "Ambil keluaran White Marsh Boulevard di sebelah kiri ke arah White Marsh."
+                ],
+                "14": [
+                    "Ambil keluaran White Marsh Boulevard di sebelah kiri ke Maryland 43 Timur ke arah White Marsh."
+                ],
+                "15": [
+                    "Ambil keluaran."
+                ],
+                "16": [
+                    "Ambil keluaran 67 B-A."
+                ],
+                "17": [
+                    "Ambil keluaran US 322 Barat."
+                ],
+                "18": [
+                    "Ambil keluaran 67 B-A ke US 322 Barat."
+                ],
+                "19": [
+                    "Ambil keluaran ke arah Lewistown."
+                ],
+                "20": [
+                    "Ambil keluaran 67 B-A ke arah Lewistown."
+                ],
+                "21": [
+                    "Ambil keluaran US 322 Barat ke arah Lewistown."
+                ],
+                "22": [
+                    "Ambil keluaran 67 B-A ke US 322 Barat ke arah Lewistown/State College."
+                ],
+                "23": [
+                    "Ambil keluaran White Marsh Boulevard."
+                ],
+                "25": [
+                    "Ambil keluaran White Marsh Boulevard ke MD 43 Timur."
+                ],
+                "27": [
+                    "Ambil keluaran White Marsh Boulevard ke arah White Marsh."
+                ],
+                "29": [
+                    "Ambil keluaran White Marsh Boulevard ke MD 43 Timur ke arah White Marsh."
+                ]
+            }
+        },
+        "exit_visual": {
+            "phrases": {
+                "0": "Keluar <EXIT_NUMBERS>"
+            },
+            "example_phrases": {
+                "0": [
+                    "Keluar 1A"
+                ]
+            }
+        },
+        "keep": {
+            "phrases": {
+                "0": "Kekal <RELATIVE_DIRECTION> di persimpangan.",
+                "1": "Kekal <RELATIVE_DIRECTION> untuk mengambil keluaran <NUMBER_SIGN>.",
+                "2": "Kekal <RELATIVE_DIRECTION> untuk mengambil <STREET_NAMES>.",
+                "3": "Kekal <RELATIVE_DIRECTION> untuk mengambil keluaran <NUMBER_SIGN> ke <STREET_NAMES>.",
+                "4": "Kekal <RELATIVE_DIRECTION> ke arah <TOWARD_SIGN>.",
+                "5": "Kekal <RELATIVE_DIRECTION> untuk mengambil keluaran <NUMBER_SIGN> ke arah <TOWARD_SIGN>.",
+                "6": "Kekal <RELATIVE_DIRECTION> untuk mengambil <STREET_NAMES> ke arah <TOWARD_SIGN>.",
+                "7": "Kekal <RELATIVE_DIRECTION> untuk mengambil keluaran <NUMBER_SIGN> ke <STREET_NAMES> ke arah <TOWARD_SIGN>."
+            },
+            "empty_street_name_labels": [
+                "lorong pejalan kaki",
+                "lorong basikal",
+                "lorong basikal gunung",
+                "lintasan pejalan kaki"
+            ],
+            "relative_directions": [
+                "kiri",
+                "terus",
+                "kanan"
+            ],
+            "example_phrases": {
+                "0": [
+                    "Kekal kiri di persimpangan.",
+                    "Kekal terus di persimpangan.",
+                    "Kekal kanan di persimpangan."
+                ],
+                "1": [
+                    "Kekal kanan untuk mengambil keluaran 62."
+                ],
+                "2": [
+                    "Kekal kanan untuk mengambil I 895 Selatan."
+                ],
+                "3": [
+                    "Kekal kanan untuk mengambil keluaran 62 ke I 895 Selatan."
+                ],
+                "4": [
+                    "Kekal kanan ke arah Annapolis."
+                ],
+                "5": [
+                    "Kekal kanan untuk mengambil keluaran 62 ke arah Annapolis."
+                ],
+                "6": [
+                    "Kekal kanan untuk mengambil I 895 Selatan ke arah Annapolis."
+                ],
+                "7": [
+                    "Kekal kanan untuk mengambil keluaran 62 ke I 895 Selatan ke arah Annapolis."
+                ]
+            }
+        },
+        "keep_to_stay_on": {
+            "phrases": {
+                "0": "Kekal <RELATIVE_DIRECTION> untuk kekal di <STREET_NAMES>.",
+                "1": "Kekal <RELATIVE_DIRECTION> untuk mengambil keluaran <NUMBER_SIGN> untuk kekal di <STREET_NAMES>.",
+                "2": "Kekal <RELATIVE_DIRECTION> untuk kekal di <STREET_NAMES> ke arah <TOWARD_SIGN>.",
+                "3": "Kekal <RELATIVE_DIRECTION> untuk mengambil keluaran <NUMBER_SIGN> untuk kekal di <STREET_NAMES> ke arah <TOWARD_SIGN>."
+            },
+            "empty_street_name_labels": [
+                "lorong pejalan kaki",
+                "lorong basikal",
+                "lorong basikal gunung",
+                "lintasan pejalan kaki"
+            ],
+            "relative_directions": [
+                "kiri",
+                "terus",
+                "kanan"
+            ],
+            "example_phrases": {
+                "0": [
+                    "Kekal kiri untuk kekal di I 95 Selatan.",
+                    "Kekal terus untuk kekal di I 95 Selatan.",
+                    "Kekal kanan untuk kekal di I 95 Selatan."
+                ],
+                "1": [
+                    "Kekal kiri untuk mengambil keluaran 62 untuk kekal di I 95 Selatan."
+                ],
+                "2": [
+                    "Kekal kiri untuk kekal di I 95 Selatan ke arah Baltimore."
+                ],
+                "3": [
+                    "Kekal kiri untuk mengambil keluaran 62 untuk kekal di I 95 Selatan ke arah Baltimore."
+                ]
+            }
+        },
+        "keep_to_stay_on_verbal": {
+            "phrases": {
+                "0": "Kekal <RELATIVE_DIRECTION> untuk kekal di <STREET_NAMES>.",
+                "1": "Kekal <RELATIVE_DIRECTION> untuk mengambil keluaran <NUMBER_SIGN> untuk kekal di <STREET_NAMES>.",
+                "2": "Kekal <RELATIVE_DIRECTION> untuk kekal di <STREET_NAMES> ke arah <TOWARD_SIGN>.",
+                "3": "Kekal <RELATIVE_DIRECTION> untuk mengambil keluaran <NUMBER_SIGN> untuk kekal di <STREET_NAMES> ke arah <TOWARD_SIGN>."
+            },
+            "empty_street_name_labels": [
+                "lorong pejalan kaki",
+                "lorong basikal",
+                "lorong basikal gunung",
+                "lintasan pejalan kaki"
+            ],
+            "relative_directions": [
+                "kiri",
+                "terus",
+                "kanan"
+            ],
+            "example_phrases": {
+                "0": [
+                    "Kekal kiri untuk kekal di Lebuhraya Antarabangsa 95 Selatan.",
+                    "Kekal terus untuk kekal di Lebuhraya Antarabangsa 95 Selatan.",
+                    "Kekal kanan untuk kekal di Lebuhraya Antarabangsa 95 Selatan."
+                ],
+                "1": [
+                    "Kekal kiri untuk mengambil keluaran 62 untuk kekal di Lebuhraya Antarabangsa 95 Selatan."
+                ],
+                "2": [
+                    "Kekal kiri untuk kekal di I 95 Selatan ke arah Baltimore."
+                ],
+                "3": [
+                    "Kekal kiri untuk mengambil keluaran 62 untuk kekal di Lebuhraya Antarabangsa 95 Selatan ke arah Baltimore."
+                ]
+            }
+        },
+        "keep_verbal": {
+            "phrases": {
+                "0": "Kekal <RELATIVE_DIRECTION> di persimpangan.",
+                "1": "Kekal <RELATIVE_DIRECTION> untuk mengambil keluaran <NUMBER_SIGN>.",
+                "2": "Kekal <RELATIVE_DIRECTION> untuk mengambil <STREET_NAMES>.",
+                "3": "Kekal <RELATIVE_DIRECTION> untuk mengambil keluaran <NUMBER_SIGN> ke <STREET_NAMES>.",
+                "4": "Kekal <RELATIVE_DIRECTION> ke arah <TOWARD_SIGN>.",
+                "5": "Kekal <RELATIVE_DIRECTION> untuk mengambil keluaran <NUMBER_SIGN> ke arah <TOWARD_SIGN>.",
+                "6": "Kekal <RELATIVE_DIRECTION> untuk mengambil <STREET_NAMES> ke arah <TOWARD_SIGN>.",
+                "7": "Kekal <RELATIVE_DIRECTION> untuk mengambil keluaran <NUMBER_SIGN> ke <STREET_NAMES> ke arah <TOWARD_SIGN>."
+            },
+            "empty_street_name_labels": [
+                "lorong pejalan kaki",
+                "lorong basikal",
+                "lorong basikal gunung",
+                "lintasan pejalan kaki"
+            ],
+            "relative_directions": [
+                "kiri",
+                "terus",
+                "kanan"
+            ],
+            "example_phrases": {
+                "0": [
+                    "Kekal kiri di persimpangan.",
+                    "Kekal terus di persimpangan.",
+                    "Kekal kanan di persimpangan."
+                ],
+                "1": [
+                    "Kekal kanan untuk mengambil keluaran 62."
+                ],
+                "2": [
+                    "Kekal kanan untuk mengambil Lebuhraya Antarabangsa 8 95 Selatan."
+                ],
+                "3": [
+                    "Kekal kanan untuk mengambil keluaran 62 ke Lebuhraya Antarabangsa 8 95 Selatan."
+                ],
+                "4": [
+                    "Kekal kanan ke arah Annapolis."
+                ],
+                "5": [
+                    "Kekal kanan untuk mengambil keluaran 62 ke arah Annapolis."
+                ],
+                "6": [
+                    "Kekal kanan untuk mengambil Lebuhraya Antarabangsa 8 95 Selatan ke arah Annapolis."
+                ],
+                "7": [
+                    "Kekal kanan untuk mengambil keluaran 62 ke Lebuhraya Antarabangsa 8 95 Selatan ke arah Annapolis."
+                ]
+            }
+        },
+        "merge": {
+            "phrases": {
+                "0": "Menyatu.",
+                "1": "Menyatu <RELATIVE_DIRECTION>.",
+                "2": "Menyatu ke <STREET_NAMES>.",
+                "3": "Menyatu <RELATIVE_DIRECTION> ke <STREET_NAMES>.",
+                "4": "Menyatu ke arah <TOWARD_SIGN>.",
+                "5": "Menyatu <RELATIVE_DIRECTION> ke arah <TOWARD_SIGN>."
+            },
+            "relative_directions": [
+                "kiri",
+                "kanan"
+            ],
+            "empty_street_name_labels": [
+                "lorong pejalan kaki",
+                "lorong basikal",
+                "lorong basikal gunung",
+                "lintasan pejalan kaki"
+            ],
+            "example_phrases": {
+                "0": [
+                    "Menyatu."
+                ],
+                "1": [
+                    "Menyatu kiri."
+                ],
+                "2": [
+                    "Menyatu ke I 76 Barat/Lebuhraya Pennsylvania."
+                ],
+                "3": [
+                    "Menyatu kanan ke I 83 Selatan."
+                ],
+                "4": [
+                    "Menyatu ke arah Baltimore."
+                ],
+                "5": [
+                    "Menyatu kanan ke arah Baltimore."
+                ]
+            }
+        },
+        "merge_verbal": {
+            "phrases": {
+                "0": "Menyatu.",
+                "1": "Menyatu <RELATIVE_DIRECTION>.",
+                "2": "Menyatu ke <STREET_NAMES>.",
+                "3": "Menyatu <RELATIVE_DIRECTION> ke <STREET_NAMES>.",
+                "4": "Menyatu ke arah <TOWARD_SIGN>.",
+                "5": "Menyatu <RELATIVE_DIRECTION> ke arah <TOWARD_SIGN>."
+            },
+            "relative_directions": [
+                "kiri",
+                "kanan"
+            ],
+            "empty_street_name_labels": [
+                "lorong pejalan kaki",
+                "lorong basikal",
+                "lorong basikal gunung",
+                "lintasan pejalan kaki"
+            ],
+            "example_phrases": {
+                "0": [
+                    "Menyatu."
+                ],
+                "1": [
+                    "Menyatu kiri."
+                ],
+                "2": [
+                    "Menyatu ke I 76 Barat/Lebuhraya Pennsylvania."
+                ],
+                "3": [
+                    "Menyatu kanan ke I 83 Selatan."
+                ],
+                "4": [
+                    "Menyatu ke arah Baltimore."
+                ],
+                "5": [
+                    "Menyatu kanan ke arah Baltimore."
+                ]
+            }
+        },
+        "post_transition_transit_verbal": {
+            "phrases": {
+                "0": "Melalui <TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>."
+            },
+            "transit_stop_count_labels": {
+                "one": "hentian",
+                "other": "hentian-hentian"
+            },
+            "example_phrases": {
+                "0": [
+                    "Melalui 1 hentian.",
+                    "Melalui 3 hentian-hentian."
+                ]
+            }
+        },
+        "post_transition_verbal": {
+            "phrases": {
+                "0": "Terus selama <LENGTH>.",
+                "1": "Terus di <STREET_NAMES> selama <LENGTH>."
+            },
+            "empty_street_name_labels": [
+                "lorong pejalan kaki",
+                "lorong basikal",
+                "lorong basikal gunung",
+                "lintasan pejalan kaki"
+            ],
+            "metric_lengths": [
+                "<KILOMETERS> kilometer",
+                "1 kilometer",
+                "<METERS> meter",
+                "kurang dari 10 meter"
+            ],
+            "us_customary_lengths": [
+                "<MILES> batu",
+                "1 batu",
+                "setengah batu",
+                "suku batu",
+                "<FEET> kaki",
+                "kurang dari 10 kaki"
+            ],
+            "example_phrases": {
+                "0": [
+                    "Terus selama 300 kaki.",
+                    "Terus selama 9 batu."
+                ],
+                "1": [
+                    "Terus di Pennsylvania 7 43 selama 6.2 batu.",
+                    "Terus di Main Street, Vermont 30 selama 1 persepuluh batu."
+                ]
+            }
+        },
+        "ramp": {
+            "phrases": {
+                "0": "Ambil ramp ke <RELATIVE_DIRECTION>.",
+                "1": "Ambil ramp <BRANCH_SIGN> ke <RELATIVE_DIRECTION>.",
+                "2": "Ambil ramp ke <RELATIVE_DIRECTION> ke arah <TOWARD_SIGN>.",
+                "3": "Ambil ramp <BRANCH_SIGN> ke <RELATIVE_DIRECTION> ke arah <TOWARD_SIGN>.",
+                "4": "Ambil ramp <NAME_SIGN> ke <RELATIVE_DIRECTION>.",
+                "5": "Belok <RELATIVE_DIRECTION> untuk ambil ramp.",
+                "6": "Belok <RELATIVE_DIRECTION> untuk ambil ramp <BRANCH_SIGN>.",
+                "7": "Belok <RELATIVE_DIRECTION> untuk ambil ramp ke arah <TOWARD_SIGN>.",
+                "8": "Belok <RELATIVE_DIRECTION> untuk ambil ramp <BRANCH_SIGN> ke arah <TOWARD_SIGN>.",
+                "9": "Belok <RELATIVE_DIRECTION> untuk ambil ramp <NAME_SIGN>.",
+                "10": "Ambil ramp.",
+                "11": "Ambil ramp <BRANCH_SIGN>.",
+                "12": "Ambil ramp ke arah <TOWARD_SIGN>.",
+                "13": "Ambil ramp <BRANCH_SIGN> ke arah <TOWARD_SIGN>.",
+                "14": "Ambil ramp <NAME_SIGN>."
+            },
+            "relative_directions": [
+                "kiri",
+                "kanan"
+            ],
+            "example_phrases": {
+                "0": [
+                    "Ambil ramp di sebelah kiri.",
+                    "Ambil ramp di sebelah kanan."
+                ],
+                "1": [
+                    "Ambil ramp I 95 di sebelah kanan."
+                ],
+                "2": [
+                    "Ambil ramp di sebelah kiri ke arah JFK."
+                ],
+                "3": [
+                    "Ambil ramp South Conduit Avenue di sebelah kiri ke arah JFK."
+                ],
+                "4": [
+                    "Ambil ramp Gettysburg Pike di sebelah kanan."
+                ],
+                "5": [
+                    "Belok kiri untuk ambil ramp.",
+                    "Belok kanan untuk ambil ramp."
+                ],
+                "6": [
+                    "Belok kiri untuk ambil ramp PA 283 Barat."
+                ],
+                "7": [
+                    "Belok kiri untuk ambil ramp ke arah Harrisburg/Lapangan Terbang Antarabangsa Harrisburg."
+                ],
+                "8": [
+                    "Belok kiri untuk ambil ramp PA 283 Barat ke arah Harrisburg/Lapangan Terbang Antarabangsa Harrisburg."
+                ],
+                "9": [
+                    "Belok kanan untuk ambil ramp Gettysburg Pike."
+                ],
+                "10": [
+                    "Ambil ramp."
+                ],
+                "11": [
+                    "Ambil ramp I 95."
+                ],
+                "12": [
+                    "Ambil ramp ke arah JFK."
+                ],
+                "13": [
+                    "Ambil ramp Soutch Conduit Avenue ke arah JFK."
+                ],
+                "14": [
+                    "Ambil ramp Gettysburg."
+                ]
+            }
+        },
+        "ramp_straight": {
+            "phrases": {
+                "0": "Terus lurus untuk ambil ramp.",
+                "1": "Terus lurus untuk ambil ramp <BRANCH_SIGN>.",
+                "2": "Terus lurus untuk ambil ramp ke arah <TOWARD_SIGN>.",
+                "3": "Terus lurus untuk ambil ramp <BRANCH_SIGN> ke arah <TOWARD_SIGN>.",
+                "4": "Terus lurus untuk ambil ramp <NAME_SIGN>."
+            },
+            "example_phrases": {
+                "0": [
+                    "Terus lurus untuk ambil ramp."
+                ],
+                "1": [
+                    "Terus lurus untuk ambil ramp US 322 Timur."
+                ],
+                "2": [
+                    "Terus lurus untuk ambil ramp ke arah Hershey."
+                ],
+                "3": [
+                    "Terus lurus untuk ambil ramp US 322 Timur/US 422 Timur/US 522 Timur/US 622 Timur ke arah Hershey/Palmdale/Palmyra/Campbelltown."
+                ],
+                "4": [
+                    "Terus lurus untuk ambil ramp Gettysburg Pike."
+                ]
+            }
+        },
+        "ramp_straight_verbal": {
+            "phrases": {
+                "0": "Terus lurus untuk ambil ramp.",
+                "1": "Terus lurus untuk ambil ramp <BRANCH_SIGN>.",
+                "2": "Terus lurus untuk ambil ramp ke arah <TOWARD_SIGN>.",
+                "3": "Terus lurus untuk ambil ramp <BRANCH_SIGN> ke arah <TOWARD_SIGN>.",
+                "4": "Terus lurus untuk ambil ramp <NAME_SIGN>."
+            },
+            "example_phrases": {
+                "0": [
+                    "Terus lurus untuk ambil ramp."
+                ],
+                "1": [
+                    "Terus lurus untuk ambil ramp U.S. 3 22 Timur."
+                ],
+                "2": [
+                    "Terus lurus untuk ambil ramp ke arah Hershey."
+                ],
+                "3": [
+                    "Terus lurus untuk ambil ramp U.S. 3 22 Timur, U.S. 4 22 Timur ke arah Hershey, Palmdale."
+                ],
+                "4": [
+                    "Terus lurus untuk ambil ramp Gettysburg Pike."
+                ]
+            }
+        },
+        "ramp_verbal": {
+            "phrases": {
+                "0": "Ambil ramp di sebelah <RELATIVE_DIRECTION>.",
+                "1": "Ambil ramp <BRANCH_SIGN> di sebelah <RELATIVE_DIRECTION>.",
+                "2": "Ambil ramp di sebelah <RELATIVE_DIRECTION> ke arah <TOWARD_SIGN>.",
+                "3": "Ambil ramp <BRANCH_SIGN> di sebelah <RELATIVE_DIRECTION> ke arah <TOWARD_SIGN>.",
+                "4": "Ambil ramp <NAME_SIGN> di sebelah <RELATIVE_DIRECTION>.",
+                "5": "Belok <RELATIVE_DIRECTION> untuk ambil ramp.",
+                "6": "Belok <RELATIVE_DIRECTION> untuk ambil ramp <BRANCH_SIGN>.",
+                "7": "Belok <RELATIVE_DIRECTION> untuk ambil ramp ke arah <TOWARD_SIGN>.",
+                "8": "Belok <RELATIVE_DIRECTION> untuk ambil ramp <BRANCH_SIGN> ke arah <TOWARD_SIGN>.",
+                "9": "Belok <RELATIVE_DIRECTION> untuk ambil ramp <NAME_SIGN>.",
+                "10": "Ambil ramp.",
+                "11": "Ambil ramp <BRANCH_SIGN>.",
+                "12": "Ambil ramp ke arah <TOWARD_SIGN>.",
+                "13": "Ambil ramp <BRANCH_SIGN> ke arah <TOWARD_SIGN>.",
+                "14": "Ambil ramp <NAME_SIGN>."
+            },
+            "relative_directions": [
+                "kiri",
+                "kanan"
+            ],
+            "example_phrases": {
+                "0": [
+                    "Ambil ramp di sebelah kiri.",
+                    "Ambil ramp di sebelah kanan."
+                ],
+                "1": [
+                    "Ambil ramp Interstate 95 di sebelah kanan."
+                ],
+                "2": [
+                    "Ambil ramp di sebelah kiri ke arah JFK."
+                ],
+                "3": [
+                    "Ambil ramp South Conduit Avenue di sebelah kiri ke arah JFK."
+                ],
+                "4": [
+                    "Ambil ramp Gettysburg Pike di sebelah kanan."
+                ],
+                "5": [
+                    "Belok kiri untuk ambil ramp.",
+                    "Belok kanan untuk ambil ramp."
+                ],
+                "6": [
+                    "Belok kiri untuk ambil ramp Pennsylvania 2 83 Barat."
+                ],
+                "7": [
+                    "Belok kiri untuk ambil ramp ke arah Harrisburg/Lapangan Terbang Antarabangsa Harrisburg."
+                ],
+                "8": [
+                    "Belok kiri untuk ambil ramp Pennsylvania 2 83 Barat ke arah Harrisburg, Lapangan Terbang Antarabangsa Harrisburg."
+                ],
+                "9": [
+                    "Belok kanan untuk ambil ramp Gettysburg Pike."
+                ],
+                "10": [
+                    "Ambil ramp."
+                ],
+                "11": [
+                    "Ambil ramp Interstate 95."
+                ],
+                "12": [
+                    "Ambil ramp ke arah JFK."
+                ],
+                "13": [
+                    "Ambil ramp South Conduit Avenue ke arah JFK."
+                ],
+                "14": [
+                    "Ambil ramp Gettysburg Pike."
+                ]
+            }
+        },
+        "sharp": {
+            "phrases": {
+                "0": "Buah belokan tajam ke <RELATIVE_DIRECTION>.",
+                "1": "Buah belokan tajam ke <RELATIVE_DIRECTION> ke <STREET_NAMES>.",
+                "2": "Belok tajam ke <RELATIVE_DIRECTION> ke <BEGIN_STREET_NAMES>. Teruskan di <STREET_NAMES>.",
+                "3": "Belok tajam ke <RELATIVE_DIRECTION> untuk kekal di <STREET_NAMES>.",
+                "4": "Belok tajam ke <RELATIVE_DIRECTION> di <JUNCTION_NAME>.",
+                "5": "Belok tajam ke <RELATIVE_DIRECTION> ke arah <TOWARD_SIGN>."
+            },
+            "empty_street_name_labels": [
+                "lorong pejalan kaki",
+                "lorong basikal",
+                "lorong basikal gunung",
+                "lintasan pejalan kaki"
+            ],
+            "relative_directions": [
+                "kiri",
+                "kanan"
+            ],
+            "example_phrases": {
+                "0": [
+                    "Belok tajam ke kiri."
+                ],
+                "1": [
+                    "Belok tajam ke kanan ke Flatbush Avenue."
+                ],
+                "2": [
+                    "Belok tajam ke kiri ke North Bond Street/US 1 Business/MD 924. Teruskan di MD 924."
+                ],
+                "3": [
+                    "Belok tajam ke kanan untuk kekal di Sunstone Drive."
+                ],
+                "4": [
+                    "Belok tajam ke kanan di Mannenbashi East."
+                ],
+                "5": [
+                    "Belok tajam ke kiri ke arah Baltimore."
+                ]
+            }
+        },
+        "sharp_verbal": {
+            "phrases": {
+                "0": "Belok tajam ke <RELATIVE_DIRECTION>.",
+                "1": "Belok tajam ke <RELATIVE_DIRECTION> ke <STREET_NAMES>.",
+                "2": "Belok tajam ke <RELATIVE_DIRECTION> ke <BEGIN_STREET_NAMES>.",
+                "3": "Belok tajam ke <RELATIVE_DIRECTION> untuk kekal di <STREET_NAMES>.",
+                "4": "Belok tajam ke <RELATIVE_DIRECTION> di <JUNCTION_NAME>.",
+                "5": "Belok tajam ke <RELATIVE_DIRECTION> ke arah <TOWARD_SIGN>."
+            },
+            "empty_street_name_labels": [
+                "lorong pejalan kaki",
+                "lorong basikal",
+                "lorong basikal gunung",
+                "lintasan pejalan kaki"
+            ],
+            "relative_directions": [
+                "kiri",
+                "kanan"
+            ],
+            "example_phrases": {
+                "0": [
+                    "Belok tajam ke kiri."
+                ],
+                "1": [
+                    "Belok tajam ke kanan ke Flatbush Avenue."
+                ],
+                "2": [
+                    "Belok tajam ke kiri ke North Bond Street, U.S. 1 Business."
+                ],
+                "3": [
+                    "Belok tajam ke kanan untuk kekal di Sunstone Drive."
+                ],
+                "4": [
+                    "Belok tajam ke kanan di Mannenbashi East."
+                ],
+                "5": [
+                    "Belok tajam ke kiri ke arah Baltimore."
+                ]
+            }
+        },
+        "start": {
+            "phrases": {
+                "0": "Arahkan ke <CARDINAL_DIRECTION>.",
+                "1": "Arahkan ke <CARDINAL_DIRECTION> di <STREET_NAMES>.",
+                "2": "Arahkan ke <CARDINAL_DIRECTION> di <BEGIN_STREET_NAMES>. Teruskan di <STREET_NAMES>.",
+                "4": "Pandu ke <CARDINAL_DIRECTION>.",
+                "5": "Pandu ke <CARDINAL_DIRECTION> di <STREET_NAMES>.",
+                "6": "Pandu ke <CARDINAL_DIRECTION> di <BEGIN_STREET_NAMES>. Teruskan di <STREET_NAMES>.",
+                "8": "Berjalan ke <CARDINAL_DIRECTION>.",
+                "9": "Berjalan ke <CARDINAL_DIRECTION> di <STREET_NAMES>.",
+                "10": "Berjalan ke <CARDINAL_DIRECTION> di <BEGIN_STREET_NAMES>. Teruskan di <STREET_NAMES>.",
+                "16": "Kayuh ke <CARDINAL_DIRECTION>.",
+                "17": "Kayuh ke <CARDINAL_DIRECTION> di <STREET_NAMES>.",
+                "18": "Kayuh ke <CARDINAL_DIRECTION> di <BEGIN_STREET_NAMES>. Teruskan di <STREET_NAMES>."
+            },
+            "cardinal_directions": [
+                "utara",
+                "timur laut",
+                "timur",
+                "tenggara",
+                "selatan",
+                "barat daya",
+                "barat",
+                "barat laut"
+            ],
+            "empty_street_name_labels": [
+                "lorong pejalan kaki",
+                "lorong basikal",
+                "lorong basikal gunung",
+                "lintasan pejalan kaki"
+            ],
+            "example_phrases": {
+                "0": [
+                    "Arahkan ke timur.",
+                    "Arahkan ke utara."
+                ],
+                "1": [
+                    "Arahkan ke barat daya di 5th Avenue.",
+                    "Arahkan ke barat di lorong pejalan kaki",
+                    "Arahkan ke timur di lorong basikal",
+                    "Arahkan ke utara di lorong basikal gunung"
+                ],
+                "2": [
+                    "Arahkan ke selatan di North Prince Street/US 222/PA 272. Teruskan di US 222/PA 272."
+                ],
+                "4": [
+                    "Pandu ke timur.",
+                    "Pandu ke utara."
+                ],
+                "5": [
+                    "Pandu ke barat daya di 5th Avenue."
+                ],
+                "6": [
+                    "Pandu ke selatan di North Prince Street/US 222/PA 272. Teruskan di US 222/PA 272."
+                ],
+                "8": [
+                    "Berjalan ke timur.",
+                    "Berjalan ke utara."
+                ],
+                "9": [
+                    "Berjalan ke barat daya di 5th Avenue.",
+                    "Berjalan ke barat di lorong pejalan kaki"
+                ],
+                "10": [
+                    "Berjalan ke selatan di North Prince Street/US 222/PA 272. Teruskan di US 222/PA 272."
+                ],
+                "16": [
+                    "Kayuh ke timur.",
+                    "Kayuh ke utara."
+                ],
+                "17": [
+                    "Kayuh ke barat daya di 5th Avenue.",
+                    "Kayuh ke timur di lorong basikal",
+                    "Kayuh ke utara di lorong basikal gunung"
+                ],
+                "18": [
+                    "Kayuh ke selatan di North Prince Street/US 222/PA 272. Teruskan di US 222/PA 272."
+                ]
+            }
+        },
+        "start_verbal": {
+            "phrases": {
+                "0": "Arahkan ke <CARDINAL_DIRECTION>.",
+                "1": "Arahkan ke <CARDINAL_DIRECTION> sejauh <LENGTH>.",
+                "2": "Arahkan ke <CARDINAL_DIRECTION> di <STREET_NAMES>.",
+                "3": "Arahkan ke <CARDINAL_DIRECTION> di <STREET_NAMES> sejauh <LENGTH>.",
+                "4": "Arahkan ke <CARDINAL_DIRECTION> di <BEGIN_STREET_NAMES>.",
+                "5": "Pandu ke <CARDINAL_DIRECTION>.",
+                "6": "Pandu ke <CARDINAL_DIRECTION> sejauh <LENGTH>.",
+                "7": "Pandu ke <CARDINAL_DIRECTION> di <STREET_NAMES>.",
+                "8": "Pandu ke <CARDINAL_DIRECTION> di <STREET_NAMES> sejauh <LENGTH>.",
+                "9": "Pandu ke <CARDINAL_DIRECTION> di <BEGIN_STREET_NAMES>.",
+                "10": "Berjalan ke <CARDINAL_DIRECTION>.",
+                "11": "Berjalan ke <CARDINAL_DIRECTION> sejauh <LENGTH>.",
+                "12": "Berjalan ke <CARDINAL_DIRECTION> di <STREET_NAMES>.",
+                "13": "Berjalan ke <CARDINAL_DIRECTION> di <STREET_NAMES> sejauh <LENGTH>.",
+                "14": "Berjalan ke <CARDINAL_DIRECTION> di <BEGIN_STREET_NAMES>.",
+                "15": "Kayuh ke <CARDINAL_DIRECTION>.",
+                "16": "Kayuh ke <CARDINAL_DIRECTION> sejauh <LENGTH>.",
+                "17": "Kayuh ke <CARDINAL_DIRECTION> di <STREET_NAMES>.",
+                "18": "Kayuh ke <CARDINAL_DIRECTION> di <STREET_NAMES> sejauh <LENGTH>.",
+                "19": "Kayuh ke <CARDINAL_DIRECTION> di <BEGIN_STREET_NAMES>."
+            },
+            "cardinal_directions": [
+                "utara",
+                "timur laut",
+                "timur",
+                "tenggara",
+                "selatan",
+                "barat daya",
+                "barat",
+                "barat laut"
+            ],
+            "empty_street_name_labels": [
+                "laluan pejalan kaki",
+                "laluan basikal",
+                "laluan basikal gunung",
+                "lintasan jalan kaki"
+            ],
+            "metric_lengths": [
+                "<KILOMETERS> kilometer",
+                "1 kilometer",
+                "<METERS> meter",
+                "kurang dari 10 meter"
+            ],
+            "us_customary_lengths": [
+                "<MILES> batu",
+                "1 batu",
+                "separuh batu",
+                "suku batu",
+                "<FEET> kaki",
+                "kurang dari 10 kaki"
+            ],
+            "example_phrases": {
+                "0": "Arahkan ke timur.\", \"Arahkan ke utara.",
+                "1": "Arahkan ke timur sejauh separuh batu.\", \"Arahkan ke utara sejauh 1 kilometer.",
+                "2": "Arahkan ke barat daya di 5th Avenue.",
+                "3": "Arahkan ke barat daya di 5th Avenue sejauh 1 persepuluh batu.",
+                "4": "Arahkan ke selatan di North Prince Street, U.S. 2 22.",
+                "5": "Pandu ke timur.\", \"Pandu ke utara.",
+                "6": "Pandu ke timur sejauh separuh batu.\", \"Pandu ke utara sejauh 1 kilometer.",
+                "7": "Pandu ke barat daya di 5th Avenue.",
+                "8": "Pandu ke barat daya di 5th Avenue sejauh 1 persepuluh batu.",
+                "9": "Pandu ke selatan di North Prince Street, U.S. 2 22.",
+                "10": [
+                    "Jalan ke timur.",
+                    "Jalan ke utara."
+                ],
+                "11": [
+                    "Jalan ke timur sejauh separuh batu.",
+                    "Jalan ke utara sejauh 1 kilometer."
+                ],
+                "12": [
+                    "Jalan ke barat daya di 5th Avenue."
+                ],
+                "13": [
+                    "Jalan ke barat daya di 5th Avenue sejauh 1 persepuluh batu."
+                ],
+                "14": [
+                    "Jalan ke selatan di North Prince Street, U.S. 2 22."
+                ],
+                "15": [
+                    "Kayuh ke timur.",
+                    "Kayuh ke utara."
+                ],
+                "16": [
+                    "Kayuh ke timur sejauh separuh batu.",
+                    "Kayuh ke utara sejauh 1 kilometer."
+                ],
+                "17": [
+                    "Kayuh ke barat daya di 5th Avenue."
+                ],
+                "18": [
+                    "Kayuh ke barat daya di 5th Avenue sejauh 1 persepuluh batu."
+                ],
+                "19": [
+                    "Kayuh ke selatan di North Prince Street, U.S. 2 22."
+                ]
+            }
+        },
+        "transit": {
+            "phrases": {
+                "0": "Ambil <TRANSIT_NAME>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)",
+                "1": "Ambil <TRANSIT_NAME> ke arah <TRANSIT_HEADSIGN>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)"
+            },
+            "empty_transit_name_labels": [
+                "trem",
+                "metro",
+                "keretapi",
+                "bas",
+                "feri",
+                "kereta kabel",
+                "gondola",
+                "funicular"
+            ],
+            "transit_stop_count_labels": {
+                "one": "hentian",
+                "other": "hentian-hentian"
+            },
+            "example_phrases": {
+                "0": [
+                    "Ambil New Haven. (1 hentian)",
+                    "Ambil metro. (2 hentian-hentian)",
+                    "Ambil bas. (12 hentian-hentian)"
+                ],
+                "1": [
+                    "Ambil F ke arah JAMAICA - 179 ST. (10 hentian-hentian)",
+                    "Ambil feri ke arah Staten Island. (1 hentian)"
+                ]
+            }
+        },
+        "transit_connection_destination": {
+            "phrases": {
+                "0": "Keluar dari stesen.",
+                "1": "Keluar dari <TRANSIT_STOP>.",
+                "2": "Keluar dari <TRANSIT_STOP> <STATION_LABEL>."
+            },
+            "station_label": "Stesen",
+            "example_phrases": {
+                "0": [
+                    "Keluar dari stesen."
+                ],
+                "1": [
+                    "Keluar dari Stesen Embarcadero."
+                ],
+                "2": [
+                    "Keluar dari Stesen 8 St - NYU."
+                ]
+            }
+        },
+        "transit_connection_destination_verbal": {
+            "phrases": {
+                "0": "Keluar dari stesen.",
+                "1": "Keluar dari <TRANSIT_STOP>.",
+                "2": "Keluar dari <TRANSIT_STOP> Stesen."
+            },
+            "station_label": "Stesen",
+            "example_phrases": {
+                "0": [
+                    "Keluar dari stesen."
+                ],
+                "1": [
+                    "Keluar dari Stesen Embarcadero."
+                ],
+                "2": [
+                    "Keluar dari Stesen 8 St - NYU."
+                ]
+            }
+        },
+        "transit_connection_start": {
+            "phrases": {
+                "0": "Masuk ke stesen.",
+                "1": "Masuk ke <TRANSIT_STOP>.",
+                "2": "Masuk ke <TRANSIT_STOP> Stesen."
+            },
+            "station_label": "Stesen",
+            "example_phrases": {
+                "0": [
+                    "Masuk ke stesen."
+                ],
+                "1": [
+                    "Masuk ke Stesen Embarcadero."
+                ],
+                "2": [
+                    "Masuk ke Stesen 8 St - NYU."
+                ]
+            }
+        },
+        "transit_connection_start_verbal": {
+            "phrases": {
+                "0": "Masuk ke stesen.",
+                "1": "Masuk ke <TRANSIT_STOP>.",
+                "2": "Masuk ke <TRANSIT_STOP> Stesen."
+            },
+            "station_label": "Stesen",
+            "example_phrases": {
+                "0": [
+                    "Masuk ke stesen."
+                ],
+                "1": [
+                    "Masuk ke Stesen Embarcadero."
+                ],
+                "2": [
+                    "Masuk ke Stesen 8 St - NYU."
+                ]
+            }
+        },
+        "transit_connection_transfer": {
+            "phrases": {
+                "0": "Tukar di stesen.",
+                "1": "Tukar di <TRANSIT_STOP>.",
+                "2": "Tukar di <TRANSIT_STOP> Stesen."
+            },
+            "station_label": "Stesen",
+            "example_phrases": {
+                "0": [
+                    "Tukar di stesen."
+                ],
+                "1": [
+                    "Tukar di Stesen Embarcadero."
+                ],
+                "2": [
+                    "Tukar di Stesen 8 St - NYU."
+                ]
+            }
+        },
+        "transit_connection_transfer_verbal": {
+            "phrases": {
+                "0": "Tukar di stesen.",
+                "1": "Tukar di <TRANSIT_STOP>.",
+                "2": "Tukar di <TRANSIT_STOP> Stesen."
+            },
+            "station_label": "Stesen",
+            "example_phrases": {
+                "0": [
+                    "Tukar di stesen."
+                ],
+                "1": [
+                    "Tukar di Stesen Embarcadero."
+                ],
+                "2": [
+                    "Tukar di Stesen 8 St - NYU."
+                ]
+            }
+        },
+        "transit_remain_on": {
+            "phrases": {
+                "0": "Kekal di <TRANSIT_NAME>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)",
+                "1": "Kekal di <TRANSIT_NAME> menuju <TRANSIT_HEADSIGN>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)"
+            },
+            "empty_transit_name_labels": [
+                "tram",
+                "metro",
+                "keretapi",
+                "bas",
+                "feri",
+                "kereta kabel",
+                "gondola",
+                "funicular"
+            ],
+            "transit_stop_count_labels": {
+                "one": "hentian",
+                "other": "hentian-hentian"
+            },
+            "example_phrases": {
+                "0": [
+                    "Kekal di New Haven. (1 hentian), Kekal di keretapi. (3 hentian-hentian)"
+                ],
+                "1": [
+                    "Kekal di F menuju JAMAICA - 179 ST. (10 hentian-hentian)"
+                ]
+            }
+        },
+        "transit_remain_on_verbal": {
+            "phrases": {
+                "0": "Kekal di <TRANSIT_NAME>.",
+                "1": "Kekal di <TRANSIT_NAME> menuju <TRANSIT_HEADSIGN>."
+            },
+            "empty_transit_name_labels": [
+                "tram",
+                "metro",
+                "keretapi",
+                "bas",
+                "feri",
+                "kereta kabel",
+                "gondola",
+                "funicular"
+            ],
+            "example_phrases": {
+                "0": [
+                    "Kekal di New Haven."
+                ],
+                "1": [
+                    "Kekal di F menuju JAMAICA - 179 ST."
+                ]
+            }
+        },
+        "transit_transfer": {
+            "phrases": {
+                "0": "Tukar untuk menaiki <TRANSIT_NAME>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)",
+                "1": "Tukar untuk menaiki <TRANSIT_NAME> menuju <TRANSIT_HEADSIGN>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)"
+            },
+            "empty_transit_name_labels": [
+                "tram",
+                "metro",
+                "keretapi",
+                "bas",
+                "feri",
+                "kereta kabel",
+                "gondola",
+                "funicular"
+            ],
+            "transit_stop_count_labels": {
+                "one": "hentian",
+                "other": "hentian-hentian"
+            },
+            "example_phrases": {
+                "0": [
+                    "Tukar untuk menaiki New Haven. (1 hentian), Tukar untuk menaiki tram. (4 hentian-hentian)"
+                ],
+                "1": [
+                    "Tukar untuk menaiki F menuju JAMAICA - 179 ST. (10 hentian-hentian)"
+                ]
+            }
+        },
+        "transit_transfer_verbal": {
+            "phrases": {
+                "0": "Tukar untuk menaiki <TRANSIT_NAME>.",
+                "1": "Tukar untuk menaiki <TRANSIT_NAME> menuju <TRANSIT_HEADSIGN>."
+            },
+            "empty_transit_name_labels": [
+                "tram",
+                "metro",
+                "keretapi",
+                "bas",
+                "feri",
+                "kereta kabel",
+                "gondola",
+                "funicular"
+            ],
+            "example_phrases": {
+                "0": [
+                    "Tukar untuk menaiki New Haven."
+                ],
+                "1": [
+                    "Tukar untuk menaiki F menuju JAMAICA - 179 ST."
+                ]
+            }
+        },
+        "transit_verbal": {
+            "phrases": {
+                "0": "Naik <TRANSIT_NAME>.",
+                "1": "Naik <TRANSIT_NAME> menuju <TRANSIT_HEADSIGN>."
+            },
+            "empty_transit_name_labels": [
+                "tram",
+                "metro",
+                "keretapi",
+                "bas",
+                "feri",
+                "kereta kabel",
+                "gondola",
+                "funicular"
+            ],
+            "example_phrases": {
+                "0": [
+                    "Naik New Haven."
+                ],
+                "1": [
+                    "Naik F menuju JAMAICA - 179 ST."
+                ]
+            }
+        },
+        "turn": {
+            "phrases": {
+                "0": "Belok <RELATIVE_DIRECTION>.",
+                "1": "Belok <RELATIVE_DIRECTION> ke <STREET_NAMES>.",
+                "2": "Belok <RELATIVE_DIRECTION> ke <BEGIN_STREET_NAMES>. Teruskan di <STREET_NAMES>.",
+                "3": "Belok <RELATIVE_DIRECTION> untuk kekal di <STREET_NAMES>.",
+                "4": "Belok <RELATIVE_DIRECTION> di <JUNCTION_NAME>.",
+                "5": "Belok <RELATIVE_DIRECTION> menuju <TOWARD_SIGN>."
+            },
+            "empty_street_name_labels": [
+                "laluan pejalan kaki",
+                "laluan basikal",
+                "laluan basikal gunung",
+                "lintasan pejalan kaki"
+            ],
+            "relative_directions": [
+                "kiri",
+                "kanan"
+            ],
+            "example_phrases": {
+                "0": [
+                    "Belok kiri."
+                ],
+                "1": [
+                    "Belok kanan ke Flatbush Avenue."
+                ],
+                "2": [
+                    "Belok kiri ke North Bond Street/US 1 Business/MD 924. Teruskan di MD 924."
+                ],
+                "3": [
+                    "Belok kanan untuk kekal di Sunstone Drive."
+                ],
+                "4": [
+                    "Belok kanan di Mannenbashi Timur."
+                ],
+                "5": [
+                    "Belok kiri menuju Baltimore."
+                ]
+            }
+        },
+        "turn_verbal": {
+            "phrases": {
+                "0": "Belok <RELATIVE_DIRECTION>.",
+                "1": "Belok <RELATIVE_DIRECTION> ke <STREET_NAMES>.",
+                "2": "Belok <RELATIVE_DIRECTION> ke <BEGIN_STREET_NAMES>. Teruskan di <STREET_NAMES>.",
+                "3": "Belok <RELATIVE_DIRECTION> untuk kekal di <STREET_NAMES>.",
+                "4": "Belok <RELATIVE_DIRECTION> di <JUNCTION_NAME>.",
+                "5": "Belok <RELATIVE_DIRECTION> menuju <TOWARD_SIGN>."
+            },
+            "empty_street_name_labels": [
+                "laluan pejalan kaki",
+                "laluan basikal",
+                "laluan basikal gunung",
+                "lintasan pejalan kaki"
+            ],
+            "relative_directions": [
+                "kiri",
+                "kanan"
+            ],
+            "example_phrases": {
+                "0": [
+                    "Belok kiri."
+                ],
+                "1": [
+                    "Belok kanan ke Flatbush Avenue."
+                ],
+                "2": [
+                    "Belok kiri ke North Bond Street, U.S. 1 Business."
+                ],
+                "3": [
+                    "Belok kanan untuk kekal di Sunstone Drive."
+                ],
+                "4": [
+                    "Belok kanan di Mannenbashi Timur."
+                ],
+                "5": [
+                    "Belok kiri menuju Baltimore."
+                ]
+            }
+        },
+        "uturn": {
+            "phrases": {
+                "0": "Buat pusingan U <RELATIVE_DIRECTION>.",
+                "1": "Buat pusingan U <RELATIVE_DIRECTION> ke <STREET_NAMES>.",
+                "2": "Buat pusingan U <RELATIVE_DIRECTION> untuk kekal di <STREET_NAMES>.",
+                "3": "Buat pusingan U <RELATIVE_DIRECTION> di <CROSS_STREET_NAMES>.",
+                "4": "Buat pusingan U <RELATIVE_DIRECTION> di <CROSS_STREET_NAMES> ke <STREET_NAMES>.",
+                "5": "Buat pusingan U <RELATIVE_DIRECTION> di <CROSS_STREET_NAMES> untuk kekal di <STREET_NAMES>.",
+                "6": "Buat pusingan U <RELATIVE_DIRECTION> di <JUNCTION_NAME>.",
+                "7": "Buat pusingan U <RELATIVE_DIRECTION> menuju <TOWARD_SIGN>."
+            },
+            "empty_street_name_labels": [
+                "laluan pejalan kaki",
+                "laluan basikal",
+                "laluan basikal gunung",
+                "lintasan pejalan kaki"
+            ],
+            "relative_directions": [
+                "kiri",
+                "kanan"
+            ],
+            "example_phrases": {
+                "0": [
+                    "Buat pusingan U ke kiri."
+                ],
+                "1": [
+                    "Buat pusingan U ke kanan ke Bunker Hill Road."
+                ],
+                "2": [
+                    "Buat pusingan U ke kiri untuk kekal di Bunker Hill Road."
+                ],
+                "3": [
+                    "Buat pusingan U ke kiri di Devonshire Road."
+                ],
+                "4": [
+                    "Buat pusingan U ke kiri di Devonshire Road ke Jonestown Road/US 22."
+                ],
+                "5": [
+                    "Buat pusingan U ke kiri di Devonshire Road untuk kekal di Jonestown Road/US 22."
+                ],
+                "6": [
+                    "Buat pusingan U ke kanan di Mannenbashi Timur."
+                ],
+                "7": [
+                    "Buat pusingan U ke kiri menuju Baltimore."
+                ]
+            }
+        },
+        "uturn_verbal": {
+            "phrases": {
+                "0": "Buat pusingan U ke <RELATIVE_DIRECTION>.",
+                "1": "Buat pusingan U ke <RELATIVE_DIRECTION> ke <STREET_NAMES>.",
+                "2": "Buat pusingan U ke <RELATIVE_DIRECTION> untuk kekal di <STREET_NAMES>.",
+                "3": "Buat pusingan U ke <RELATIVE_DIRECTION> di <CROSS_STREET_NAMES>.",
+                "4": "Buat pusingan U ke <RELATIVE_DIRECTION> di <CROSS_STREET_NAMES> ke <STREET_NAMES>.",
+                "5": "Buat pusingan U ke <RELATIVE_DIRECTION> di <CROSS_STREET_NAMES> untuk kekal di <STREET_NAMES>.",
+                "6": "Buat pusingan U ke <RELATIVE_DIRECTION> di <JUNCTION_NAME>.",
+                "7": "Buat pusingan U ke <RELATIVE_DIRECTION> menuju <TOWARD_SIGN>."
+            },
+            "empty_street_name_labels": [
+                "laluan pejalan kaki",
+                "laluan basikal",
+                "laluan basikal gunung",
+                "lintasan pejalan kaki"
+            ],
+            "relative_directions": [
+                "kiri",
+                "kanan"
+            ],
+            "example_phrases": {
+                "0": [
+                    "Buat pusingan U ke kiri."
+                ],
+                "1": [
+                    "Buat pusingan U ke kanan ke Bunker Hill Road."
+                ],
+                "2": [
+                    "Buat pusingan U ke kiri untuk kekal di Bunker Hill Road."
+                ],
+                "3": [
+                    "Buat pusingan U ke kiri di Devonshire Road."
+                ],
+                "4": [
+                    "Buat pusingan U ke kiri di Devonshire Road ke Jonestown Road, U.S. 22."
+                ],
+                "5": [
+                    "Buat pusingan U ke kiri di Devonshire Road untuk kekal di Jonestown Road, U.S. 22."
+                ],
+                "6": [
+                    "Buat pusingan U ke kanan di Mannenbashi Timur."
+                ],
+                "7": [
+                    "Buat pusingan U ke kiri menuju Baltimore."
+                ]
+            }
+        },
+        "verbal_multi_cue": {
+            "phrases": {
+                "0": "<CURRENT_VERBAL_CUE> Kemudian <NEXT_VERBAL_CUE>",
+                "1": "<CURRENT_VERBAL_CUE> Kemudian, dalam <LENGTH>, <NEXT_VERBAL_CUE>"
+            },
+            "metric_lengths": [
+                "<KILOMETERS> kilometer",
+                "1 kilometer",
+                "<METERS> meter",
+                "kurang dari 10 meter"
+            ],
+            "us_customary_lengths": [
+                "<MILES> batu",
+                "1 batu",
+                "setengah batu",
+                "suku batu",
+                "<FEET> kaki",
+                "kurang dari 10 kaki"
+            ],
+            "example_phrases": {
+                "0": [
+                    "Belok kanan ke East Fayette Street. Kemudian Belok kanan ke North Gay Street."
+                ],
+                "1": [
+                    "Belok kanan ke Jalan East Fayette. Kemudian, dalam 500 kaki, Belok kanan ke Jalan North Gay."
+                ]
+            }
+        },
+        "approach_verbal_alert": {
+            "phrases": {
+                "0": "Dalam <LENGTH>, <CURRENT_VERBAL_CUE>"
+            },
+            "metric_lengths": [
+                "<KILOMETER> kilometer",
+                "1 kilometer",
+                "<METER> meter",
+                "kurang dari 10 meter"
+            ],
+            "us_customary_lengths": [
+                "<MILE> batu",
+                "1 batu",
+                "setengah batu",
+                "seperempat batu",
+                "<FEET> kaki",
+                "kurang dari 10 kaki"
+            ],
+            "example_phrases": {
+                "0": [
+                    "Dalam seperempat batu, Belok kanan ke Jalan North Gay."
+                ]
+            }
+        },
+        "elevator": {
+            "phrases": {
+                "0": "Naik lif.",
+                "1": "Naik lif ke <LEVEL>."
+            },
+            "example_phrases": {
+                "0": [
+                    "Naik lif."
+                ],
+                "1": [
+                    "Naik lif ke Aras 1."
+                ]
+            }
+        },
+        "steps": {
+            "phrases": {
+                "0": "Naik tangga.",
+                "1": "Naik tangga ke <LEVEL>."
+            },
+            "example_phrases": {
+                "0": [
+                    "Naik tangga."
+                ],
+                "1": [
+                    "Naik tangga ke Aras 2."
+                ]
+            }
+        },
+        "escalator": {
+            "phrases": {
+                "0": "Naik eskalator.",
+                "1": "Naik eskalator ke <LEVEL>."
+            },
+            "example_phrases": {
+                "0": "Ambil eskalator.",
+                "1": "Ambil eskalator ke Aras 3."
+            }
+        },
+        "enter_building": {
+            "phrases": {
+                "0": "Masuk ke bangunan.",
+                "1": "Masuk ke bangunan, dan teruskan di <STREET_NAMES>."
+            },
+            "empty_street_name_labels": [
+                "the walkway",
+                "the cycleway",
+                "the mountain bike trail",
+                "the crosswalk"
+            ],
+            "example_phrases": {
+                "0": "Masuk ke bangunan.",
+                "1": "Masuk ke bangunan, dan teruskan di walkway."
+            }
+        },
+        "exit_building": {
+            "phrases": {
+                "0": "Keluar dari bangunan.",
+                "1": "Keluar dari bangunan, dan teruskan di <STREET_NAMES>."
+            },
+            "empty_street_name_labels": [
+                "the walkway",
+                "the cycleway",
+                "the mountain bike trail",
+                "the crosswalk"
+            ],
+            "example_phrases": {
+                "0": "Keluar dari bangunan.",
+                "1": "Keluar dari bangunan, dan teruskan di walkway."
+            }
+        }
+    }
+}
