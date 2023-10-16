@@ -34,11 +34,6 @@ using namespace valhalla::thor;
 
 namespace {
 
-using LinguisticMap = std::unordered_map<uint8_t, std::tuple<uint8_t, uint8_t, std::string>>;
-
-constexpr uint8_t kNotTagged = 0;
-constexpr uint8_t kTunnelTag = static_cast<uint8_t>(baldr::TaggedValue::kTunnel);
-
 uint32_t
 GetAdminIndex(const AdminInfo& admin_info,
               std::unordered_map<AdminInfo, uint32_t, AdminInfo::AdminInfoHasher>& admin_info_map,
@@ -547,32 +542,22 @@ void AddLandmarks(const EdgeInfo& edgeinfo,
 
 // Populate the specified sign element with the specified sign attributes including pronunciation
 // attributes if they exist
-void PopulateSignElement(uint32_t sign_index,
-                         const SignInfo& sign,
-                         const LinguisticMap& linguistics,
-                         valhalla::TripSignElement* sign_element) {
+void PopulateSignElement(
+    uint32_t sign_index,
+    const SignInfo& sign,
+    const std::unordered_map<uint32_t, std::pair<uint8_t, std::string>>& pronunciations,
+    valhalla::TripSignElement* sign_element) {
   sign_element->set_text(sign.text());
   sign_element->set_is_route_number(sign.is_route_num());
 
   // Assign pronunciation alphabet and value if they exist
-  const auto iter = linguistics.find(sign_index);
-  if (iter != linguistics.end()) {
-
-    // Lang saved with pronunciation
-    auto lang = static_cast<Language>(std::get<kLinguisticMapTupleLanguageIndex>(iter->second));
-    if (lang != Language::kNone) {
-      sign_element->set_language_tag(GetTripLanguageTag(lang));
-    }
-
-    auto alphabet = static_cast<valhalla::baldr::PronunciationAlphabet>(
-        std::get<kLinguisticMapTuplePhoneticAlphabetIndex>(iter->second));
-
-    if (alphabet != PronunciationAlphabet::kNone) {
-
-      auto* pronunciation = sign_element->mutable_pronunciation();
-      pronunciation->set_alphabet(GetTripPronunciationAlphabet(alphabet));
-      pronunciation->set_value(std::get<kLinguisticMapTuplePronunciationIndex>(iter->second));
-    }
+  std::unordered_map<uint32_t, std::pair<uint8_t, std::string>>::const_iterator iter =
+      pronunciations.find(sign_index);
+  if (iter != pronunciations.end()) {
+    auto* pronunciation = sign_element->mutable_pronunciation();
+    pronunciation->set_alphabet(GetTripPronunciationAlphabet(
+        static_cast<valhalla::baldr::PronunciationAlphabet>((iter->second).first)));
+    pronunciation->set_value((iter->second).second);
   }
 }
 
@@ -580,7 +565,7 @@ void PopulateSignElement(uint32_t sign_index,
 // add per the attributes-controller.
 void AddSignInfo(const AttributesController& controller,
                  const std::vector<SignInfo>& edge_signs,
-                 const LinguisticMap& linguistics,
+                 const std::unordered_map<uint32_t, std::pair<uint8_t, std::string>>& pronunciations,
                  valhalla::TripSign* trip_sign) {
 
   if (!edge_signs.empty()) {
@@ -588,57 +573,57 @@ void AddSignInfo(const AttributesController& controller,
     for (const auto& sign : edge_signs) {
       switch (sign.type()) {
         case valhalla::baldr::Sign::Type::kExitNumber: {
-          if (controller.attributes.at(kEdgeSignExitNumber)) {
-            PopulateSignElement(sign_index, sign, linguistics,
+          if (controller(kEdgeSignExitNumber)) {
+            PopulateSignElement(sign_index, sign, pronunciations,
                                 trip_sign->mutable_exit_numbers()->Add());
           }
           break;
         }
         case valhalla::baldr::Sign::Type::kExitBranch: {
-          if (controller.attributes.at(kEdgeSignExitBranch)) {
-            PopulateSignElement(sign_index, sign, linguistics,
+          if (controller(kEdgeSignExitBranch)) {
+            PopulateSignElement(sign_index, sign, pronunciations,
                                 trip_sign->mutable_exit_onto_streets()->Add());
           }
           break;
         }
         case valhalla::baldr::Sign::Type::kExitToward: {
-          if (controller.attributes.at(kEdgeSignExitToward)) {
-            PopulateSignElement(sign_index, sign, linguistics,
+          if (controller(kEdgeSignExitToward)) {
+            PopulateSignElement(sign_index, sign, pronunciations,
                                 trip_sign->mutable_exit_toward_locations()->Add());
           }
           break;
         }
         case valhalla::baldr::Sign::Type::kExitName: {
-          if (controller.attributes.at(kEdgeSignExitName)) {
-            PopulateSignElement(sign_index, sign, linguistics,
+          if (controller(kEdgeSignExitName)) {
+            PopulateSignElement(sign_index, sign, pronunciations,
                                 trip_sign->mutable_exit_names()->Add());
           }
           break;
         }
         case valhalla::baldr::Sign::Type::kGuideBranch: {
-          if (controller.attributes.at(kEdgeSignGuideBranch)) {
-            PopulateSignElement(sign_index, sign, linguistics,
+          if (controller(kEdgeSignGuideBranch)) {
+            PopulateSignElement(sign_index, sign, pronunciations,
                                 trip_sign->mutable_guide_onto_streets()->Add());
           }
           break;
         }
         case valhalla::baldr::Sign::Type::kGuideToward: {
-          if (controller.attributes.at(kEdgeSignGuideToward)) {
-            PopulateSignElement(sign_index, sign, linguistics,
+          if (controller(kEdgeSignGuideToward)) {
+            PopulateSignElement(sign_index, sign, pronunciations,
                                 trip_sign->mutable_guide_toward_locations()->Add());
           }
           break;
         }
         case valhalla::baldr::Sign::Type::kGuidanceViewJunction: {
-          if (controller.attributes.at(kEdgeSignGuidanceViewJunction)) {
-            PopulateSignElement(sign_index, sign, linguistics,
+          if (controller(kEdgeSignGuidanceViewJunction)) {
+            PopulateSignElement(sign_index, sign, pronunciations,
                                 trip_sign->mutable_guidance_view_junctions()->Add());
           }
           break;
         }
         case valhalla::baldr::Sign::Type::kGuidanceViewSignboard: {
-          if (controller.attributes.at(kEdgeSignGuidanceViewSignboard)) {
-            PopulateSignElement(sign_index, sign, linguistics,
+          if (controller(kEdgeSignGuidanceViewSignboard)) {
+            PopulateSignElement(sign_index, sign, pronunciations,
                                 trip_sign->mutable_guidance_view_signboards()->Add());
           }
           break;
@@ -744,12 +729,12 @@ void AddTripIntersectingEdge(const AttributesController& controller,
   // Set the sign info for the intersecting edge if requested
   if (controller(kNodeIntersectingEdgeSignInfo)) {
     if (intersecting_de->sign()) {
-      LinguisticMap linguistics;
+      std::unordered_map<uint32_t, std::pair<uint8_t, std::string>> pronunciations;
       std::vector<SignInfo> edge_signs =
-          graphtile->GetSigns(intersecting_de - graphtile->directededge(0), linguistics);
+          graphtile->GetSigns(intersecting_de - graphtile->directededge(0), pronunciations);
       if (!edge_signs.empty()) {
         valhalla::TripSign* sign = intersecting_edge->mutable_sign();
-        AddSignInfo(controller, edge_signs, linguistics, sign);
+        AddSignInfo(controller, edge_signs, pronunciations, sign);
       }
     }
   }
@@ -849,67 +834,6 @@ void AddIntersectingEdges(const AttributesController& controller,
   }
 }
 
-void ProcessNonTaggedValue(valhalla::StreetName* trip_edge_name,
-                           const LinguisticMap& linguistics,
-                           const std::tuple<std::string, bool, uint8_t>& name_and_type,
-                           const uint8_t name_index) {
-  // Assign name and type
-  trip_edge_name->set_value(std::get<0>(name_and_type));
-  trip_edge_name->set_is_route_number(std::get<1>(name_and_type));
-
-  const auto iter = linguistics.find(name_index);
-
-  if (iter != linguistics.end()) {
-
-    auto lang = static_cast<Language>(std::get<kLinguisticMapTupleLanguageIndex>(iter->second));
-    if (lang != Language::kNone) {
-      trip_edge_name->set_language_tag(GetTripLanguageTag(lang));
-    }
-
-    auto alphabet = static_cast<valhalla::baldr::PronunciationAlphabet>(
-        std::get<kLinguisticMapTuplePhoneticAlphabetIndex>(iter->second));
-
-    if (alphabet != PronunciationAlphabet::kNone) {
-
-      auto* pronunciation = trip_edge_name->mutable_pronunciation();
-      pronunciation->set_alphabet(
-          GetTripPronunciationAlphabet(static_cast<valhalla::baldr::PronunciationAlphabet>(
-              std::get<kLinguisticMapTuplePhoneticAlphabetIndex>(iter->second))));
-      pronunciation->set_value(std::get<kLinguisticMapTuplePronunciationIndex>(iter->second));
-    }
-  }
-}
-
-void ProcessTunnelTaggedValue(valhalla::StreetName* trip_edge_tunnel_name,
-                              const LinguisticMap& linguistics,
-                              const std::tuple<std::string, bool, uint8_t>& name_and_type,
-                              const uint8_t name_index) {
-
-  trip_edge_tunnel_name->set_value(std::get<0>(name_and_type));
-  trip_edge_tunnel_name->set_is_route_number(std::get<1>(name_and_type));
-
-  const auto iter = linguistics.find(name_index);
-  if (iter != linguistics.end()) {
-
-    auto lang = static_cast<Language>(std::get<kLinguisticMapTupleLanguageIndex>(iter->second));
-    if (lang != Language::kNone) {
-      trip_edge_tunnel_name->set_language_tag(GetTripLanguageTag(lang));
-    }
-
-    auto alphabet = static_cast<valhalla::baldr::PronunciationAlphabet>(
-        std::get<kLinguisticMapTuplePhoneticAlphabetIndex>(iter->second));
-
-    if (alphabet != PronunciationAlphabet::kNone) {
-
-      auto* pronunciation = trip_edge_tunnel_name->mutable_pronunciation();
-      pronunciation->set_alphabet(
-          GetTripPronunciationAlphabet(static_cast<valhalla::baldr::PronunciationAlphabet>(
-              std::get<kLinguisticMapTuplePhoneticAlphabetIndex>(iter->second))));
-      pronunciation->set_value(std::get<kLinguisticMapTuplePronunciationIndex>(iter->second));
-    }
-  }
-}
-
 /**
  * Add trip edge. (TODO more comments)
  * @param  controller         Controller to determine which attributes to set.
@@ -948,6 +872,7 @@ TripLeg_Edge* AddTripEdge(const AttributesController& controller,
 
   // Index of the directed edge within the tile
   uint32_t idx = edge.id();
+
   TripLeg_Edge* trip_edge = trip_node->mutable_edge();
 
   // Get the edgeinfo
@@ -955,30 +880,33 @@ TripLeg_Edge* AddTripEdge(const AttributesController& controller,
 
   // Add names to edge if requested
   if (controller(kEdgeNames)) {
-    const auto names_and_types = edgeinfo.GetNamesAndTypes(true);
+    auto names_and_types = edgeinfo.GetNamesAndTypes(true);
     trip_edge->mutable_name()->Reserve(names_and_types.size());
-    const auto linguistics = edgeinfo.GetLinguisticMap();
-
+    std::unordered_map<uint8_t, std::pair<uint8_t, std::string>> pronunciations =
+        edgeinfo.GetPronunciationsMap();
     uint8_t name_index = 0;
     for (const auto& name_and_type : names_and_types) {
-      switch (std::get<2>(name_and_type)) {
-        case kNotTagged: {
-          ProcessNonTaggedValue(trip_edge->mutable_name()->Add(), linguistics, name_and_type,
-                                name_index);
-          break;
-        }
-        case kTunnelTag: {
-          ProcessTunnelTaggedValue(trip_edge->mutable_tunnel_name()->Add(), linguistics,
-                                   name_and_type, name_index);
-          break;
-        }
-        default:
-          // Skip the rest tagged names
-          LOG_TRACE(std::string("skipped tagged value= ") +
-                    std::to_string(std::get<2>(name_and_type)));
-          break;
+      if (std::get<2>(name_and_type) != 0) {
+        // Skip the tagged names
+        continue;
       }
-      ++name_index;
+
+      auto* trip_edge_name = trip_edge->mutable_name()->Add();
+      // Assign name and type
+      trip_edge_name->set_value(std::get<0>(name_and_type));
+      trip_edge_name->set_is_route_number(std::get<1>(name_and_type));
+      std::unordered_map<uint8_t, std::pair<uint8_t, std::string>>::const_iterator iter =
+          pronunciations.find(name_index);
+
+      // Assign pronunciation alphabet and value if one exists
+      if (iter != pronunciations.end()) {
+        auto* pronunciation = trip_edge_name->mutable_pronunciation();
+        pronunciation->set_alphabet(GetTripPronunciationAlphabet(
+            static_cast<valhalla::baldr::PronunciationAlphabet>((iter->second).first)));
+        pronunciation->set_value((iter->second).second);
+      }
+
+      name_index++;
     }
   }
 
@@ -1001,27 +929,27 @@ TripLeg_Edge* AddTripEdge(const AttributesController& controller,
   // Set the signs (if the directed edge has sign information) and if requested
   if (directededge->sign()) {
     // Add the edge signs
-    LinguisticMap linguistics;
-    std::vector<SignInfo> edge_signs = graphtile->GetSigns(idx, linguistics);
+    std::unordered_map<uint32_t, std::pair<uint8_t, std::string>> pronunciations;
+    std::vector<SignInfo> edge_signs = graphtile->GetSigns(idx, pronunciations);
     if (!edge_signs.empty()) {
       valhalla::TripSign* sign = trip_edge->mutable_sign();
-      AddSignInfo(controller, edge_signs, linguistics, sign);
+      AddSignInfo(controller, edge_signs, pronunciations, sign);
     }
   }
 
   // Process the named junctions at nodes
   if (has_junction_name && start_tile) {
     // Add the node signs
-    LinguisticMap linguistics;
-    std::vector<SignInfo> node_signs = start_tile->GetSigns(start_node_idx, linguistics, true);
+    std::unordered_map<uint32_t, std::pair<uint8_t, std::string>> pronunciations;
+    std::vector<SignInfo> node_signs = start_tile->GetSigns(start_node_idx, pronunciations, true);
     if (!node_signs.empty()) {
       valhalla::TripSign* trip_sign = trip_edge->mutable_sign();
       uint32_t sign_index = 0;
       for (const auto& sign : node_signs) {
         switch (sign.type()) {
           case valhalla::baldr::Sign::Type::kJunctionName: {
-            if (controller.attributes.at(kEdgeSignJunctionName)) {
-              PopulateSignElement(sign_index, sign, linguistics,
+            if (controller(kEdgeSignJunctionName)) {
+              PopulateSignElement(sign_index, sign, pronunciations,
                                   trip_sign->mutable_junction_names()->Add());
             }
             break;

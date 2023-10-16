@@ -1315,20 +1315,9 @@ void ManeuversBuilder::UpdateManeuver(Maneuver& maneuver, int node_index) {
 
   // Basic time (len/speed on each edge with no stop impact) in seconds
   // TODO: update GetTime and GetSpeed to double precision
-  auto speed = GetSpeed(maneuver.travel_mode(), prev_edge->default_speed());
   maneuver.set_basic_time(
       maneuver.basic_time() +
-      GetTime(prev_edge->length_km(), speed));
-  // { 
-  //   //iterate through the maneuver edges
-  //   for (int i = 0; i < trip_leg.node_size(); ++i) {
-  //     const auto& node = trip_leg.node(i);
-
-  //   auto curr_edge = trip_path_->GetCurrEdge(node_index);    
-    
-  //   std::cout << "speed = " << speed << " speed_limit " << prev_edge->speed_limit()<< std::endl;
-  //   maneuver.set_speed_limit((uint32_t) (prev_edge->speed_limit()) );
-  // }
+      GetTime(prev_edge->length_km(), GetSpeed(maneuver.travel_mode(), prev_edge->default_speed())));
 
   // Portions Toll
   if (prev_edge->toll()) {
