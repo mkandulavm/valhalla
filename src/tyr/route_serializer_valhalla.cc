@@ -554,12 +554,12 @@ void legs(const valhalla::Api& api, int route_index, rapidjson::writer_wrapper_t
     //write speed_limits as a int array
 
     if(directions_leg.speed_limits_size() > 0) {
-      writer.start_array("speed_limits");
+      writer.start_array("speed_limits_lanes");
       for(int s = 0; s < directions_leg.speed_limits_size(); ++s){
         writer(static_cast<uint64_t>(directions_leg.speed_limits(s)));
       }
       writer.end_array();
-    }
+    }    
     //nevh//////
 
     writer.end_object(); // leg
