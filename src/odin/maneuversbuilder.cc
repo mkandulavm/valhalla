@@ -1163,6 +1163,7 @@ std::vector<uint32_t> ManeuversBuilder::GetSpeedLimits(std::list<Maneuver> &mane
         speed_limits.push_back(node.mutable_edge()->begin_shape_index());
         speed_limits.push_back(node.mutable_edge()->end_shape_index());
         speed_limits.push_back(trip_edge.speed_limit());      
+        speed_limits.push_back(trip_edge.lane_count());      
       }
       
       //std::cout << node.mutable_edge()->begin_shape_index() << " " << node.mutable_edge()->end_shape_index() << " sl=" << speed_limits.back() << " ";      
@@ -1183,6 +1184,7 @@ std::vector<uint32_t> ManeuversBuilder::GetSpeedLimits(std::list<Maneuver> &mane
   
   return speed_limits;  
 }
+//nevh
 
 void ManeuversBuilder::InitializeManeuver(Maneuver& maneuver, int node_index) {
 
