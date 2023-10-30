@@ -43,6 +43,9 @@ tile_gone_error_t::tile_gone_error_t(std::string prefix, baldr::GraphId edgeid)
                          std::to_string(edgeid.Tile_Base())) {
 }
 
+//function to load all the graph tiles into memory
+
+
 GraphReader::tile_extract_t::tile_extract_t(const boost::property_tree::ptree& pt,
                                             bool traffic_readonly) {
   // A lambda for loading the contents of a graph tile tar from an index file
@@ -77,7 +80,7 @@ GraphReader::tile_extract_t::tile_extract_t(const boost::property_tree::ptree& p
     return contents;
   };
 
-  bool scan_tar = pt.get<bool>("data_processing.scan_tar", false);
+  bool scan_tar = pt.get<bool>("data_processing.scan_tar", false);  
   //nevh
   // if you really meant to load it
   if (pt.get_optional<std::string>("root")) 
@@ -115,7 +118,7 @@ GraphReader::tile_extract_t::tile_extract_t(const boost::property_tree::ptree& p
           zipTileIDToPathMap.insert(std::make_pair(id, path));
           //std::cout << id << " : " << path << std::endl;
 
-        }
+        }        
       }
       else {
         std::cout << te << " file does not exist" << std::endl;
@@ -557,6 +560,19 @@ GraphReader::GraphReader(const boost::property_tree::ptree& pt,
   if (pt.get<bool>("shortcut_caching", false)) {
     shortcut_recovery_t::get_instance(this);
   }
+  std::string preloadForServerStr = pt.get<std::string>("preloadForServer", "no");
+  bool preloadForServer = (preloadForServerStr == "yes");
+
+  if(preloadForServer) {
+    auto &z = tile_extract_->zipTileIDToPathMap;
+    for(auto &e : z) {
+      auto path = e.second;
+      auto id = GraphTile::GetTileId(path);
+      //std::cout << id << " : preloading.." << std::endl;
+      GetGraphTile(id);         
+    }
+  }
+
 }
 
 // Method to test if tile exists
