@@ -248,6 +248,17 @@ endif()
 message(STATUS "from valhalla cmake Using pbf headers from ${PROTOBUF_INCLUDE_DIR}")
 
 if(NOT Protobuf_FOUND)
+  # prefer CONFIG mode over MODULE mode, there were a few CMake/protobuf fuckups
+  # NOTE: this is only supported for cmake >= 3.15, but shouldn't be a problem in real life
+  ## set(CMAKE_FIND_PACKAGE_PREFER_CONFIG ON)
+
+  # newer protobuf versions require a compat bool
+  ## set(protobuf_MODULE_COMPATIBLE ON CACHE BOOL "")
+  ## find_package(Protobuf REQUIRED)
+
+  # and turn it off again
+  ## set(CMAKE_FIND_PACKAGE_PREFER_CONFIG OFF)
+##endif()
   add_definitions(-Wno-dev)
 
   #message(STATUS "setting hint for protobuf path  ${PROTOBUF_INCLUDE_DIR}/../lib/cmake/protobuf")
