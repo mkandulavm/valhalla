@@ -2,6 +2,8 @@ include(GNUInstallDirs)
 
 list(APPEND CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake")
 
+include_directories(${NEINCLUDES})
+
 ## Set relative to the current source and binary paths
 set(VALHALLA_BINARY_DIR ${CMAKE_CURRENT_BINARY_DIR})
 if(NOT VALHALLA_SOURCE_DIR)
@@ -90,7 +92,7 @@ function(valhalla_module)
   endif()
   add_library(valhalla::${MODULE_NAME} ALIAS ${library})
   set_target_properties(${library} PROPERTIES FOLDER "Modules")
-
+  set_target_properties(${library} PROPERTIES CXX_STANDARD 17)
   # Generate source groups so the files are properly sorted in IDEs like Xcode.
   create_source_groups("Header Files" ${MODULE_HEADERS})
   create_source_groups("Source Files" ${MODULE_SOURCES})
@@ -111,6 +113,16 @@ function(valhalla_module)
     target_include_directories(${library} SYSTEM ${MODULE_SYSTEM_INCLUDE_DIRECTORIES})
   endif()
 
+  ###############debugging the boost include problem
+  #set(CMAKE_VERBOSE_MAKEFILE ON)
+  #message(STATUS "valhalla-lib: Boost_INCLUDE_DIR: ${Boost_INCLUDE_DIR}")
+  #message(STATUS "valhalla-lib: Boost_INCLUDE_DIRS: ${Boost_INCLUDE_DIRS}")
+  #message(STATUS "valhalla-lib: external_include_directories: ${external_include_directories}")
+  
+  #target_include_directories(${library} PUBLIC ${Boost_INCLUDE_DIRS})
+  #get_target_property(library_includes ${library} INCLUDE_DIRECTORIES)
+  #message(STATUS "Include directories for ${library}: ${library_includes}")
+  ###############
   target_link_libraries(${library} Boost::boost)
 
   if(ENABLE_COVERAGE)
@@ -228,17 +240,19 @@ endif()
 
 target_include_directories(valhalla
   PUBLIC
-    ${VALHALLA_SOURCE_DIR}
+    ${VALHALLA_SOURCE_DIR}    
     ${VALHALLA_SOURCE_DIR}/src      # For private headers in /src
     ${VALHALLA_SOURCE_DIR}/valhalla # TODO: this path must be removed and changed to #include <valhalla/...> in headers
     ${VALHALLA_BINARY_DIR}
     ${VALHALLA_BINARY_DIR}/valhalla  # TODO: this path must be removed and changed to #include <valhalla/...> in headers
-    ${VALHALLA_SOURCE_DIR}/third_party/rapidjson/include
+    ${VALHALLA_SOURCE_DIR}/../tangram-es/core/deps
     ${VALHALLA_SOURCE_DIR}/third_party/date/include
     ${VALHALLA_SOURCE_DIR}/third_party/cpp-statsd-client/include
-    $<$<BOOL:${WIN32}>:${VALHALLA_SOURCE_DIR}/third_party/dirent/include>
+    $<$<BOOL:${WIN32}>:${VALHALLA_SOURCE_DIR}/third_party/dirent/include>    
   PRIVATE
     ${libvalhalla_include_directories})
+
+
 
 target_link_libraries(valhalla
   PUBLIC

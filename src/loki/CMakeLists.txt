@@ -37,7 +37,7 @@ valhalla_module(NAME loki
       ${VALHALLA_SOURCE_DIR}/valhalla
       $<$<BOOL:${WIN32}>:${VALHALLA_SOURCE_DIR}/third_party/dirent/include>
     PRIVATE
-      ${VALHALLA_SOURCE_DIR}/third_party/rapidjson/include
+      ${VALHALLA_SOURCE_DIR}/../tangram-es/core/deps
       ${CMAKE_BINARY_DIR}
   SYSTEM_INCLUDE_DIRECTORIES
     PUBLIC

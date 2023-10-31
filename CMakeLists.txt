@@ -20,22 +20,53 @@ list(INSERT CMAKE_MODULE_PATH 0 ${VALHALLA_SOURCE_DIR}/cmake)
 set(CMAKE_CXX_STANDARD 17 CACHE STRING "C++ language version to use (default is 17)")
 option(ENABLE_TOOLS "Enable Valhalla tools" ON)
 option(ENABLE_DATA_TOOLS "Enable Valhalla data tools" ON)
-option(ENABLE_SERVICES "Enable Valhalla services" ON)
-option(ENABLE_HTTP "Enable the use of CURL" ON)
-option(ENABLE_PYTHON_BINDINGS "Enable Python bindings" ON)
+option(ENABLE_SERVICES "Enable Valhalla services" OFF)
+option(ENABLE_HTTP "Enable the use of CURL" OFF)
+option(ENABLE_PYTHON_BINDINGS "Enable Python bindings" OFF)
 option(ENABLE_CCACHE "Speed up incremental rebuilds via ccache" ON)
 option(ENABLE_COVERAGE "Build with coverage instrumentalisation" OFF)
 option(ENABLE_COMPILER_WARNINGS "Build with compiler warnings" OFF)
-option(ENABLE_SANITIZERS "Use all the integrated sanitizers for Debug build" OFF)
-option(ENABLE_ADDRESS_SANITIZER "Use memory sanitizer for Debug build" OFF)
-option(ENABLE_UNDEFINED_SANITIZER "Use UB sanitizer for Debug build" OFF)
-option(ENABLE_TESTS "Enable Valhalla tests" ON)
+option(ENABLE_SANITIZERS "Use all the integrated sanitizers for Debug build" ON)
+option(ENABLE_ADDRESS_SANITIZER "Use memory sanitizer for Debug build" ON)
+option(ENABLE_UNDEFINED_SANITIZER "Use UB sanitizer for Debug build" ON)
+option(ENABLE_TESTS "Enable Valhalla tests" OFF)
 option(ENABLE_WERROR "Convert compiler warnings to errors. Requires ENABLE_COMPILER_WARNINGS=ON to take effect" OFF)
-option(ENABLE_BENCHMARKS "Enable microbenchmarking" ON)
-option(ENABLE_THREAD_SAFE_TILE_REF_COUNT "If ON uses shared_ptr as tile reference(i.e. it is thread safe)" OFF)
-option(ENABLE_SINGLE_FILES_WERROR "Convert compiler warnings to errors for single files" ON)
+option(ENABLE_BENCHMARKS "Enable microbenchmarking" OFF)
+option(ENABLE_THREAD_SAFE_TILE_REF_COUNT "If ON uses shared_ptr as tile reference(i.e. it is thread safe)" ON)
+option(ENABLE_SINGLE_FILES_WERROR "Convert compiler warnings to errors for single files" OFF)
 # useful to workaround issues likes this https://stackoverflow.com/questions/24078873/cmake-generated-xcode-project-wont-compile
 option(ENABLE_STATIC_LIBRARY_MODULES "If ON builds Valhalla modules as STATIC library targets" OFF)
+
+#print all above
+message(STATUS "Valhalla booleans")
+message(STATUS "CMAKE_CXX_STANDARD: ${CMAKE_CXX_STANDARD}")
+message(STATUS "ENABLE_TOOLS: ${ENABLE_TOOLS}")
+message(STATUS "ENABLE_DATA_TOOLS: ${ENABLE_DATA_TOOLS}")
+message(STATUS "ENABLE_SERVICES: ${ENABLE_SERVICES}")
+message(STATUS "ENABLE_HTTP: ${ENABLE_HTTP}")
+message(STATUS "ENABLE_PYTHON_BINDINGS: ${ENABLE_PYTHON_BINDINGS}")
+message(STATUS "ENABLE_CCACHE: ${ENABLE_CCACHE}")
+message(STATUS "ENABLE_COVERAGE: ${ENABLE_COVERAGE}")
+message(STATUS "ENABLE_COMPILER_WARNINGS: ${ENABLE_COMPILER_WARNINGS}")
+message(STATUS "ENABLE_SANITIZERS: ${ENABLE_SANITIZERS}")
+message(STATUS "ENABLE_ADDRESS_SANITIZER: ${ENABLE_ADDRESS_SANITIZER}")
+message(STATUS "ENABLE_UNDEFINED_SANITIZER: ${ENABLE_UNDEFINED_SANITIZER}")
+message(STATUS "ENABLE_TESTS: ${ENABLE_TESTS}")
+message(STATUS "ENABLE_WERROR: ${ENABLE_WERROR}")
+message(STATUS "ENABLE_BENCHMARKS: ${ENABLE_BENCHMARKS}")
+message(STATUS "ENABLE_THREAD_SAFE_TILE_REF_COUNT: ${ENABLE_THREAD_SAFE_TILE_REF_COUNT}")
+message(STATUS "ENABLE_SINGLE_FILES_WERROR: ${ENABLE_SINGLE_FILES_WERROR}")
+message(STATUS "ENABLE_STATIC_LIBRARY_MODULES: ${ENABLE_STATIC_LIBRARY_MODULES}")
+
+#-D var cannot carry ";" ..so we send as ":" and seperate it back for including
+string(REPLACE ":" ";" minizIncludePath "${minizIncludePath}")
+
+set(NEINCLUDES 
+      ${minizIncludePath}
+      src
+   )
+message(STATUS "minizIncludePath: ${minizIncludePath}")
+message(STATUS "NEINCLUDES: ${NEINCLUDES}")
 
 set(LOGGING_LEVEL "" CACHE STRING "Logging level, default is INFO")
 set_property(CACHE LOGGING_LEVEL PROPERTY STRINGS "NONE;ALL;ERROR;WARN;INFO;DEBUG;TRACE")
@@ -46,6 +77,9 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(THREADS_PREFER_PTHREAD_FLAG ON)
+
+
+message(STATUS "ENABLE_TESTS ${ENABLE_TESTS}")
 
 # colorize output
 include(CheckCXXCompilerFlag)
@@ -61,6 +95,8 @@ elseif(CMAKE_CXX_COMPILER_ID MATCHES "GNU")
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${COLOR_FLAG}")
 endif()
 
+#set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g")
+message("CMAKE_CXX_FLAGS in valhalla : ${CMAKE_CXX_FLAGS}")
 # Explicitly set the build type to Release if no other type is specified
 # on the command line.  Without this, cmake defaults to an unoptimized,
 # non-debug build, which almost nobody wants.
@@ -133,9 +169,32 @@ endif()
 find_package(Threads REQUIRED)
 find_package(ZLIB REQUIRED)
 
+
+if(MOBILE)
+  set(ENABLE_DATA_TOOLS OFF)
+  set(ENABLE_TOOLS OFF)
+  message("SETTING DATA_TOOLS to be OFF")
+else()
+  # I think this is needed for PC build.. check
+  #set(Boost_INCLUDE_DIR /usr/include)  # Replace with the actual path to Boost headers
+  #set(Boost_LIBRARY_DIR /usr/lib)  # Replace with the actual path to Boost libraries
+endif()
+
+if(ENABLE_DATA_TOOLS)
+  include_directories(${NEINCLUDES})
+  link_libraries(${minizLibPath})  #/lib/liblzma.so)
+endif()
+#include(${CMAKE_BINARY_DIR}/conan_deps.cmake)
+
 # try to find an installed boost or install locally with conan
-set(boost_VERSION "1.71")
-find_package(Boost ${boost_VERSION} QUIET)
+set(boost_VERSION "1.74")
+find_package(Boost ${boost_VERSION} REQUIRED)
+if(Boost_FOUND)
+  message(STATUS "Boost_FOUND: ${Boost_FOUND}")
+  message(STATUS "Boost_INCLUDE_DIRS: ${Boost_INCLUDE_DIRS}")
+  message(STATUS "Boost_LIBRARY_DIRS: ${Boost_LIBRARY_DIRS}")
+  message(STATUS "Boost_LIBRARIES: ${Boost_LIBRARIES}")
+endif()
 if (NOT Boost_FOUND)
   # bail if there's no conan installed
   message(STATUS "No compatible boost version detected, using conan...")
@@ -155,10 +214,15 @@ if (NOT Boost_FOUND)
                       SETTINGS ${settings}
                       OUTPUT_QUIET)
 endif()
-find_package(Boost ${boost_VERSION} REQUIRED)
+
+
+#find_package(Boost ${boost_VERSION} REQUIRED)
 add_definitions(-DBOOST_NO_CXX11_SCOPED_ENUMS)
 add_definitions(-DBOOST_ALLOW_DEPRECATED_HEADERS)
 add_definitions(-DBOOST_BIND_GLOBAL_PLACEHOLDERS)
+
+message(STATUS "Boost include dir: ${Boost_INCLUDE_DIR}")
+message(STATUS "Boost library dir: ${Boost_LIBRARY_DIR}")
 
 if(NOT TARGET CURL::CURL)
   add_library(CURL::CURL INTERFACE IMPORTED)
@@ -179,20 +243,50 @@ else()
   message(STATUS "Using curl from the outside")
 endif()
 
+
+
+message(STATUS "from valhalla cmake Using pbf headers from ${PROTOBUF_INCLUDE_DIR}")
+
 if(NOT Protobuf_FOUND)
   # prefer CONFIG mode over MODULE mode, there were a few CMake/protobuf fuckups
   # NOTE: this is only supported for cmake >= 3.15, but shouldn't be a problem in real life
-  set(CMAKE_FIND_PACKAGE_PREFER_CONFIG ON)
+  ## set(CMAKE_FIND_PACKAGE_PREFER_CONFIG ON)
 
   # newer protobuf versions require a compat bool
-  set(protobuf_MODULE_COMPATIBLE ON CACHE BOOL "")
-  find_package(Protobuf REQUIRED)
+  ## set(protobuf_MODULE_COMPATIBLE ON CACHE BOOL "")
+  ## find_package(Protobuf REQUIRED)
 
   # and turn it off again
-  set(CMAKE_FIND_PACKAGE_PREFER_CONFIG OFF)
-endif()
+  ## set(CMAKE_FIND_PACKAGE_PREFER_CONFIG OFF)
+##endif()
+  add_definitions(-Wno-dev)
 
-message(STATUS "Using pbf headers from ${PROTOBUF_INCLUDE_DIR}")
+  #message(STATUS "setting hint for protobuf path  ${PROTOBUF_INCLUDE_DIR}/../lib/cmake/protobuf")
+  set(protobuf_find_path "${PROTOBUF_INCLUDE_DIR}/../lib/cmake/protobuf")
+  set(Protobuf_DIR "${protobuf_find_path}")
+  message(STATUS "finding package Protobuf in ${protobuf_find_path}  PROTOBUF_INCLUDE_DIR = ${PROTOBUF_INCLUDE_DIR}")
+  
+  message(STATUS "before find_package Protobuf_PROTOC_EXECUTABLE = ${Protobuf_PROTOC_EXECUTABLE}")
+  #set(Protobuf_PROTOC_EXECUTABLE "${Protobuf_PROTOC_EXECUTABLE}" CACHE STRING "Path to protoc executable")
+  
+  configure_file(${Protobuf_PROTOC_EXECUTABLE} ${PROTOBUF_INCLUDE_DIR}/../bin/protoc COPYONLY)
+  configure_file(${Protobuf_PROTOC_EXECUTABLE} ${PROTOBUF_INCLUDE_DIR}/../bin/protoc-3.12.3.0 COPYONLY)
+
+  # Enable debug mode for find_package
+  set(CMAKE_FIND_DEBUG_MODE ON)
+  find_package(Protobuf REQUIRED PATHS ${protobuf_find_path})
+  
+  message(STATUS "Protobuf_FOUND = ${Protobuf_FOUND}")
+  message(STATUS "Protobuf include path: ${Protobuf_INCLUDE_DIRS}")
+  message(STATUS "Protobuf libraries: ${Protobuf_LIBRARIES}")
+  message(STATUS "Protobuf version : ${Protobuf_VERSION}")
+  message(STATUS "Protobuf include path : ${Protobuf_INCLUDE_DIRS}")
+  message(STATUS "Protobuf libraries : ${Protobuf_LIBRARIES}")
+  message(STATUS "Protobuf compiler libraries : ${Protobuf_PROTOC_LIBRARIES}")
+  message(STATUS "Protobuf lite libraries : ${Protobuf_LITE_LIBRARIES}")
+  message(STATUS "Protobuf_PROTOC_EXECUTABLE = ${Protobuf_PROTOC_EXECUTABLE}")
+  #message(SEND_ERROR "Protobuf_PROTOC_EXECUTABLE = ${Protobuf_PROTOC_EXECUTABLE}")
+endif()
 message(STATUS "Using pbf libs from ${PROTOBUF_LIBRARY}")
 message(STATUS "Using pbf release libs from ${PROTOBUF_LIBRARY_RELEASE}")
 message(STATUS "Using pbf debug libs from ${PROTOBUF_LIBRARY_DEBUG}")
@@ -204,10 +298,16 @@ endif()
 # TODO: After switching to CMake 3.12+, replace with
 #       $<TARGET_EXISTS:protobuf::libprotobuf
 #       $<TARGET_EXISTS:protobuf::libprotobuf-lite
+
+
 if(TARGET protobuf::libprotobuf-lite)
-  set(valhalla_protobuf_targets protobuf::libprotobuf-lite)
+  set(valhalla_protobuf_targets protobuf::libprotobuf-lite)    
+  message(STATUS "trying to set valhalla_protobuf_targets protobuf::libprotobuf-lite")
+elseif(TARGET protobuf::libprotobuf-lited)
+  set(valhalla_protobuf_targets protobuf::libprotobuf-lited)  
+  message(STATUS "trying to set valhalla_protobuf_targets protobuf::libprotobuf-lited")
 elseif(TARGET protobuf::libprotobuf)
-  set(valhalla_protobuf_targets protobuf::libprotobuf)
+  set(valhalla_protobuf_targets protobuf::libprotobuf)  
 else()
   message(FATAL_ERROR "Required target protobuf::libprotobuf-lite or protobuf::libprotobuf is not defined")
 endif()
@@ -229,7 +329,7 @@ endif()
 if(ENABLE_DATA_TOOLS)
   add_compile_definitions(DATA_TOOLS)
   find_package(SQLite3 REQUIRED)
-  find_package(SpatiaLite REQUIRED)
+  find_package(SpatiaLite REQUIRED) #since we need data tools only for debian, we will install using apt-get
   find_package(LuaJIT)
   add_library(Lua::Lua INTERFACE IMPORTED)
   set_target_properties(Lua::Lua PROPERTIES
@@ -293,7 +393,7 @@ if(ENABLE_TOOLS)
     set_target_properties(${program} PROPERTIES FOLDER "Tools")
     create_source_groups("Source Files" ${path})
     target_link_libraries(${program} valhalla)
-    target_include_directories(${program} PUBLIC ${VALHALLA_SOURCE_DIR}/third_party/cxxopts/include)
+    target_include_directories(${program} PUBLIC ${VALHALLA_SOURCE_DIR}/third_party/cxxopts/include ${Boost_INCLUDE_DIRS})
     if(MSVC)
       target_link_libraries(${program} ${CURL_LIBRARIES})
     endif()
@@ -301,13 +401,15 @@ if(ENABLE_TOOLS)
   endforeach()
 endif()
 
+message("Includes at valhalla root level: ${includes}")
+
 if(ENABLE_DATA_TOOLS)
   foreach(program ${valhalla_data_tools})
     get_source_path(path ${program})
     add_executable(${program} ${path})
     create_source_groups("Source Files" ${path})
     set_target_properties(${program} PROPERTIES FOLDER "Data Tools")
-    target_include_directories(${program} PUBLIC ${VALHALLA_SOURCE_DIR}/third_party/cxxopts/include)
+    target_include_directories(${program} PUBLIC ${VALHALLA_SOURCE_DIR}/third_party/cxxopts/include ${Boost_INCLUDE_DIRS})
     target_link_libraries(${program} valhalla)
     if (LUAJIT_FOUND AND APPLE AND CMAKE_HOST_SYSTEM_PROCESSOR STREQUAL "x86_64")
       # Using LuaJIT on macOS on Intel processors requires a couple of extra linker flags
@@ -334,7 +436,7 @@ if(ENABLE_SERVICES)
     create_source_groups("Source Files" src/${program}.cc)
     set_target_properties(${program} PROPERTIES FOLDER "Services")
     target_link_libraries(${program} valhalla)
-    target_include_directories(${program} PUBLIC ${VALHALLA_SOURCE_DIR}/third_party/cxxopts/include)
+    target_include_directories(${program} PUBLIC ${VALHALLA_SOURCE_DIR}/third_party/cxxopts/include ${Boost_INCLUDE_DIRS})
     install(TARGETS ${program} DESTINATION "${CMAKE_INSTALL_BINDIR}" COMPONENT runtime)
   endforeach()
 endif()
