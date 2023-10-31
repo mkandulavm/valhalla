@@ -173,6 +173,23 @@ if(ENABLE_DATA_TOOLS)
 endif()
 #include(${CMAKE_BINARY_DIR}/conan_deps.cmake)
 
+
+if(MOBILE)
+  set(ENABLE_DATA_TOOLS OFF)
+  set(ENABLE_TOOLS OFF)
+  message("SETTING DATA_TOOLS to be OFF")
+else()
+  # I think this is needed for PC build.. check
+  #set(Boost_INCLUDE_DIR /usr/include)  # Replace with the actual path to Boost headers
+  #set(Boost_LIBRARY_DIR /usr/lib)  # Replace with the actual path to Boost libraries
+endif()
+
+if(ENABLE_DATA_TOOLS)
+  include_directories(${NEINCLUDES})
+  link_libraries(${minizLibPath})  #/lib/liblzma.so)
+endif()
+#include(${CMAKE_BINARY_DIR}/conan_deps.cmake)
+
 # try to find an installed boost or install locally with conan
 set(boost_VERSION "1.74")
 find_package(Boost ${boost_VERSION} REQUIRED)
