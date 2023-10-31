@@ -51,6 +51,9 @@ void actor_t::cleanup() {
   pimpl->cleanup();
 }
 
+std::shared_ptr<baldr::GraphReader> actor_t::get_reader() {
+  return pimpl->reader;
+}
 std::string actor_t::act(Api& api, const std::function<void()>* interrupt) {
   if (api.options().action() == Options::no_action)
     throw valhalla_exception_t{106};
