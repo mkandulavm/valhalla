@@ -213,6 +213,7 @@ public:
                      const std::function<void()>* interrupt = nullptr,
                      Api* api = nullptr);
 
+  std::shared_ptr<baldr::GraphReader> get_reader();
 protected:
   struct pimpl_t;
   std::shared_ptr<pimpl_t> pimpl;
