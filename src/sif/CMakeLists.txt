@@ -25,6 +25,9 @@ valhalla_module(NAME sif
     PUBLIC
       ${VALHALLA_SOURCE_DIR}
       ${VALHALLA_SOURCE_DIR}/valhalla
+      $<$<BOOL:${WIN32}>:${VALHALLA_SOURCE_DIR}/third_party/dirent/include>
+    PRIVATE
+      ${VALHALLA_SOURCE_DIR}/../tangram-es/core/deps
   SYSTEM_INCLUDE_DIRECTORIES
     PUBLIC
       ${system_includes}
