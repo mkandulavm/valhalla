@@ -67,6 +67,7 @@ set(system_includes
   ${rapidjson_include_dir}
   $<$<BOOL:${WIN32}>:${dirent_include_dir}>
   ${PROTOBUF_INCLUDE_DIR})
+  ${NEINCLUDES})
 if(APPLE)
   list(APPEND system_includes ${VALHALLA_SOURCE_DIR}/third_party/date/include/date)
 endif()
@@ -78,6 +79,9 @@ valhalla_module(NAME mjolnir
     PUBLIC
       ${VALHALLA_SOURCE_DIR}
       ${VALHALLA_SOURCE_DIR}/valhalla
+      ${VALHALLA_SOURCE_DIR}/../tangram-es/core/deps
+      $<$<BOOL:${WIN32}>:${VALHALLA_SOURCE_DIR}/third_party/dirent/include>
+      ${PROTOBUF_INCLUDE_DIR}
    PRIVATE
       ${CMAKE_CURRENT_BINARY_DIR}
       ${CMAKE_CURRENT_BINARY_DIR}/valhalla

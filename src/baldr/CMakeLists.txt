@@ -35,7 +35,10 @@ file(GLOB headers ${VALHALLA_SOURCE_DIR}/valhalla/baldr/*.h)
 set(includes
     ${VALHALLA_SOURCE_DIR}
      ${VALHALLA_SOURCE_DIR}/valhalla
+     $<$<BOOL:${WIN32}>:${VALHALLA_SOURCE_DIR}/third_party/dirent/include>
+     ${VALHALLA_SOURCE_DIR}/../tangram-es/core/deps
      ${CMAKE_CURRENT_BINARY_DIR}/src/baldr
+     ${NEINCLUDES}
      )
 
 set(system_includes 
@@ -43,6 +46,7 @@ set(system_includes
   $<$<BOOL:${WIN32}>:${dirent_include_dir}>
   ${rapidjson_include_dir})
 
+#message("Includes at baldr: ${includes} neincludes : ${NEINCLUDES}" )
 set(sources
     accessrestriction.cc
     admin.cc
