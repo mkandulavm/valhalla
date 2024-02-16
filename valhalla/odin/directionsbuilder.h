@@ -50,7 +50,7 @@ protected:
   static void PopulateDirectionsLeg(const Options& options,
                                     EnhancedTripLeg* etp,
                                     std::list<Maneuver>& maneuvers,
-                                    DirectionsLeg& trip_directions);
+                                    DirectionsLeg& trip_directions,std::vector<std::string> &turn_lanes);
 };
 
 } // namespace odin

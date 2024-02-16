@@ -496,6 +496,10 @@ void legs(const valhalla::Api& api, int route_index, rapidjson::writer_wrapper_t
         writer("verbal_multi_cue", maneuver.verbal_multi_cue());
       }
 
+      //nevh//////      
+      writer("turn_lanes", maneuver.turn_lanes());              
+      //nevh//////
+
       // Travel mode
       auto mode_type = travel_mode_type(maneuver);
       writer("travel_mode", mode_type.first);
