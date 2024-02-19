@@ -2253,18 +2253,18 @@
     },
     "pass": {
       "phrases": {
-        "0": "Pass <OBJECT_LABEL>.",
-        "1": "Pass traffic signals on <OBJECT_LABEL>."
+          "0": "Möödu <OBJECT_LABEL>.",
+          "1": "Möödu liiklusmärkidest <OBJECT_LABEL> juures."
       },
       "object_labels": [
-        "the gate",
-        "the bollards",
-        "ways intersection"
+          "väravast",
+          "piirdepostidest",
+          "teede ristmikust"
       ],
       "example_phrases": {
-        "0": [
-          "Pass the gate."
-        ]
+          "0": [
+              "Möödu väravast."
+          ]
       }
     },
     "elevator": {

@@ -2253,18 +2253,18 @@
     },
     "pass": {
       "phrases": {
-        "0": "Przejdź <OBJECT_LABEL>.",
-        "1": "Przejdź na światłach <OBJECT_LABEL>."
+          "0": "Przejdź przez <OBJECT_LABEL>.",
+          "1": "Przejdź przez sygnalizację świetlną na <OBJECT_LABEL>."
       },
       "object_labels": [
-        "bramę",
-        "słupki",
-        "skrzyżowanie dróg"
+          "bramę",
+          "słupki",
+          "skrzyżowanie dróg"
       ],
       "example_phrases": {
-        "0": [
-          "Pass the gate."
-        ]
+          "0": [
+              "Przejdź przez bramę."
+          ]
       }
     },
     "elevator": {

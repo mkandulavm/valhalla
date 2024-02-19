@@ -67,7 +67,6 @@ set(system_includes
   ${rapidjson_include_dir}
   $<$<BOOL:${WIN32}>:${dirent_include_dir}>
   ${PROTOBUF_INCLUDE_DIR})
-  ${NEINCLUDES})
 if(APPLE)
   list(APPEND system_includes ${VALHALLA_SOURCE_DIR}/third_party/date/include/date)
 endif()

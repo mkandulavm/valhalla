@@ -1935,6 +1935,22 @@
                 ]
             }
         },
+        "pass": {
+            "phrases": {
+                "0": "Lumusot sa <OBJECT_LABEL>.",
+                "1": "Lumusot sa mga traffic signal sa <OBJECT_LABEL>."
+            },
+            "object_labels": [
+                "gate",
+                "mga bollards",
+                "interseksyon ng mga daan"
+            ],
+            "example_phrases": {
+                "0": [
+                    "Lumusot sa gate."
+                ]
+            }
+        },
         "elevator": {
             "phrases": {
                 "0": "Sumakay sa elevator.",

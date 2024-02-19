@@ -1209,15 +1209,14 @@ std::vector<std::string> ManeuversBuilder::GetTurnLanes(std::list<Maneuver> &man
         if(active_turn_lanes != "") {
           active_turn_lanes.pop_back(); //remove the last ';'          
           std::cout << manID++ << ": " << maneuver_turn_lanes << "#" << active_turn_lanes  << std::endl;
-
         }
       }
-      turn_lanes.push_back(maneuver_turn_lanes + "#" + active_turn_lanes);
-      prev_man = curr_man;
-      curr_man = next_man;
-      if (next_man != maneuvers.end()) {
-        ++next_man;
-      }
+    }
+    turn_lanes.push_back(maneuver_turn_lanes + "#" + active_turn_lanes);
+    prev_man = curr_man;
+    curr_man = next_man;
+    if (next_man != maneuvers.end()) {
+      ++next_man;
     }
   }
 

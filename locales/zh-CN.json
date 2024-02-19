@@ -2067,6 +2067,22 @@
                 "0": "在四分之一英里处，向右转进入 North Gay 大街。"
             }
         },
+        "pass": {
+            "phrases": {
+                "0": "通过<OBJECT_LABEL>。",
+                "1": "通过<OBJECT_LABEL>上的交通信号。"
+            },
+            "object_labels": [
+                "大门",
+                "路障",
+                "道路交叉口"
+            ],
+            "example_phrases": {
+                "0": [
+                    "通过大门。"
+                ]
+            }
+        },
         "elevator": {
             "phrases": {
                 "0": "搭乘电梯。",
