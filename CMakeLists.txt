@@ -139,6 +139,15 @@ endif()
 include(ValhallaSanitizerOptions)
 include(ValhallaSourceGroups)
 
+set(ENV{PKG_CONFIG_PATH} "${CMAKE_BINARY_DIR}/../lz4:$ENV{PKG_CONFIG_PATH}")
+message (STATUS "PKG_CONFIG_PATH = $ENV{PKG_CONFIG_PATH}")
+#message(FATAL_ERROR "PKG_CONFIG_PATH = $ENV{PKG_CONFIG_PATH}")
+
+set(lz4_include_dir "${VALHALLA_SOURCE_DIR}/third_party/lz4/lib")
+#set lz4_include_dir as a system include directory
+include_directories(SYSTEM ${lz4_include_dir})
+
+
 # We use pkg-config for (almost) all dependencies:
 # - CMake Find* modules are versioned with CMake, not the packages, see protobuf > 21.12
 # - it's more trivial to use custom installations via PKG_CONFIG_PATH env var
@@ -170,6 +179,7 @@ endif()
 if(ENABLE_DATA_TOOLS)
   include_directories(${NEINCLUDES})
   link_libraries(${minizLibPath})  #/lib/liblzma.so)
+  link_libraries(${LZ4_LIBRARIES})
 endif()
 #include(${CMAKE_BINARY_DIR}/conan_deps.cmake)
 
@@ -187,6 +197,7 @@ endif()
 if(ENABLE_DATA_TOOLS)
   include_directories(${NEINCLUDES})
   link_libraries(${minizLibPath})  #/lib/liblzma.so)
+  link_directories("${CMAKE_BINARY_DIR}/../lz4")
 endif()
 #include(${CMAKE_BINARY_DIR}/conan_deps.cmake)
 
