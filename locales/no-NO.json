@@ -2112,6 +2112,22 @@
                 ]
             }
         },
+        "pass": {
+            "phrases": {
+                "0": "Passer <OBJECT_LABEL>.",
+                "1": "Passer trafikklysene på <OBJECT_LABEL>."
+            },
+            "object_labels": [
+                "porten",
+                "søylene",
+                "veikryss"
+            ],
+            "example_phrases": {
+                "0": [
+                    "Passer porten."
+                ]
+            }
+        },
         "elevator": {
             "phrases": {
                 "0": "Ta heisen.",

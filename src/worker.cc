@@ -22,7 +22,7 @@
 #include <cpp-statsd-client/StatsdClient.hpp>
 
 using namespace valhalla;
-#ifdef HAVE_HTTP
+#ifdef ENABLE_SERVICES
 using namespace prime_server;
 #endif
 
@@ -156,9 +156,12 @@ const std::unordered_map<int, std::string> warning_codes = {
   {204, R"("exclude_polygons" received invalid input, ignoring exclude_polygons)"},
   {205, R"("disable_hierarchy_pruning" exceeded the max distance, ignoring disable_hierarchy_pruning)"},
   {206, R"(CostMatrix does not consider "targets" with "date_time" set, ignoring date_time)"},
+  {207, R"(TimeDistanceMatrix does not consider "shape_format", ignoring shape_format)"},
   // 3xx is used when costing options were specified but we had to change them internally for some reason
   {300, R"(Many:Many CostMatrix was requested, but server only allows 1:Many TimeDistanceMatrix)"},
   {301, R"(1:Many TimeDistanceMatrix was requested, but server only allows Many:Many CostMatrix)"},
+  // 4xx is used when we do sneaky important things the user should be aware of
+  {400, R"(CostMatrix turned off destination-only on a second pass for connections: )"}
 };
 // clang-format on
 
@@ -806,10 +809,17 @@ void from_json(rapidjson::Document& doc, Options::Action action, Api& api) {
       options.set_shape_format(polyline5);
     } else if (*shape_format == "geojson") {
       options.set_shape_format(geojson);
+    } else if (*shape_format == "no_shape") {
+      if (action == Options::height) {
+        throw valhalla_exception_t{164};
+      }
+      options.set_shape_format(no_shape);
     } else {
       // Throw an error if shape format is invalid
       throw valhalla_exception_t{164};
     }
+  } else if (action == Options::sources_to_targets) {
+    options.set_shape_format(options.has_shape_format_case() ? options.shape_format() : no_shape);
   }
 
   // whether or not to output b64 encoded openlr
@@ -1186,6 +1196,10 @@ void from_json(rapidjson::Document& doc, Options::Action action, Api& api) {
   options.set_banner_instructions(
       rapidjson::get<bool>(doc, "/banner_instructions", options.banner_instructions()));
 
+  // whether to return voiceInstructions in OSRM serializer, default false
+  options.set_voice_instructions(
+      rapidjson::get<bool>(doc, "/voice_instructions", options.voice_instructions()));
+
   // whether to include roundabout_exit maneuvers, default true
   auto roundabout_exits =
       rapidjson::get<bool>(doc, "/roundabout_exits",
@@ -1213,12 +1227,12 @@ valhalla_exception_t::valhalla_exception_t(unsigned code, const std::string& ext
 }
 
 // function to add warnings to proto info object
-void add_warning(valhalla::Api& api, unsigned code) {
-  auto message = warning_codes.find(code);
-  if (message != warning_codes.end()) {
-    auto* warning = api.mutable_info()->mutable_warnings()->Add();
-    warning->set_description(message->second);
-    warning->set_code(message->first);
+void add_warning(valhalla::Api& api, unsigned code, const std::string& extra) {
+  auto warning = warning_codes.find(code);
+  if (warning != warning_codes.end()) {
+    auto* warning_pbf = api.mutable_info()->mutable_warnings()->Add();
+    warning_pbf->set_description(warning->second + extra);
+    warning_pbf->set_code(warning->first);
   }
 }
 
@@ -1283,7 +1297,7 @@ void ParseApi(const std::string& request, Options::Action action, valhalla::Api&
   from_json(document, action, api);
 }
 
-#ifdef HAVE_HTTP
+#ifdef ENABLE_SERVICES
 void ParseApi(const http_request_t& request, valhalla::Api& api) {
   // block all but get and post
   if (request.method != method_t::POST && request.method != method_t::GET) {

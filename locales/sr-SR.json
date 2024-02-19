@@ -2147,6 +2147,22 @@
                 ]
             }
         },
+        "pass": {
+            "phrases": {
+                "0": "Prođite kroz <OBJECT_LABEL>.",
+                "1": "Prođite pored saobraćajnih znakova na <OBJECT_LABEL>."
+            },
+            "object_labels": [
+                "kapiju",
+                "stubove",
+                "raskrsnicu puteva"
+            ],
+            "example_phrases": {
+                "0": [
+                    "Prođite kroz kapiju."
+                ]
+            }
+        },
         "elevator": {
             "phrases": {
                 "0": "Uzmite lift.",

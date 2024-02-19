@@ -43,6 +43,7 @@ void DirectionsBuilder::Build(Api& api, const MarkupFormatter& markup_formatter)
 
       // Produce maneuvers if desired
       std::list<Maneuver> maneuvers;
+      std::vector<std::string> turn_lanes;
       if (options.directions_type() != DirectionsType::none) {
         // Update the heading of ~0 length edges
         UpdateHeading(&etp);
@@ -51,6 +52,7 @@ void DirectionsBuilder::Build(Api& api, const MarkupFormatter& markup_formatter)
         maneuvers = maneuversBuilder.Build();
         //nevh
         auto speedLimits = maneuversBuilder.GetSpeedLimits(maneuvers);
+        //turn_lanes = maneuversBuilder.GetTurnLanes(maneuvers);
 
         //add speed limits as an array into trip directions
         
@@ -68,7 +70,7 @@ void DirectionsBuilder::Build(Api& api, const MarkupFormatter& markup_formatter)
       }
 
       // Return trip directions
-      PopulateDirectionsLeg(options, &etp, maneuvers, trip_directions);
+      PopulateDirectionsLeg(options, &etp, maneuvers, trip_directions, turn_lanes);
     }
   }
 }
@@ -103,7 +105,7 @@ void DirectionsBuilder::UpdateHeading(EnhancedTripLeg* etp) {
 void DirectionsBuilder::PopulateDirectionsLeg(const Options& options,
                                               EnhancedTripLeg* etp,
                                               std::list<Maneuver>& maneuvers,
-                                              DirectionsLeg& trip_directions) {
+                                              DirectionsLeg& trip_directions, std::vector<std::string> &turn_lanes) {
   bool has_toll = false;
   bool has_highway = false;
   bool has_ferry = false;
@@ -116,6 +118,7 @@ void DirectionsBuilder::PopulateDirectionsLeg(const Options& options,
   trip_directions.mutable_location()->CopyFrom(etp->location());
 
   // Populate maneuvers
+  int manueverID = 0;
   for (const auto& maneuver : maneuvers) {
     auto* trip_maneuver = trip_directions.add_maneuver();
     trip_maneuver->set_type(maneuver.type());
@@ -425,6 +428,23 @@ void DirectionsBuilder::PopulateDirectionsLeg(const Options& options,
         break;
       }
     }
+
+    //nevh
+    if(turn_lanes.size() != 0) {
+      
+      //LOG_INFO("turn_lanes is not empty..pending fix--madan");      
+      // //add turn lanes into trip_manuever    
+      // assert(turn_lanes.size() == maneuvers.size());
+      // auto &maneuver_turn_lanes = turn_lanes[manueverID];
+      // if(maneuver_turn_lanes != "" && maneuver_turn_lanes != "#" ) {
+      //   trip_maneuver->set_turn_lanes(maneuver_turn_lanes);
+      // }
+    }
+    else {
+      //LOG_INFO("turn_lanes is empty..pending fix--madan");
+    }      
+    //nevh
+    manueverID++;
   }
 
   // Populate summary

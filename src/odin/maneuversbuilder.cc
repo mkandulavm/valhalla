@@ -240,6 +240,7 @@ std::list<Maneuver> ManeuversBuilder::Produce() {
   // Step through nodes in reverse order to produce maneuvers
   // excluding the last and first nodes
   for (int i = (trip_path_->GetLastNodeIndex() - 1); i > 0; --i) {
+    auto node = trip_path_->GetEnhancedNode(i);
 
 #ifdef LOGGING_LEVEL_TRACE
     auto prev_edge = trip_path_->GetPrevEdge(i);
@@ -253,7 +254,6 @@ std::list<Maneuver> ManeuversBuilder::Produce() {
     LOG_TRACE(std::string("  curr_edge=") + (curr_edge ? curr_edge->ToString() : "NONE"));
     LOG_TRACE(std::string("  prev2curr_turn_degree=") + std::to_string(prev2curr_turn_degree) +
               " is a " + Turn::GetTypeString(Turn::GetType(prev2curr_turn_degree)));
-    auto node = trip_path_->GetEnhancedNode(i);
     for (size_t z = 0; z < node->intersecting_edge_size(); ++z) {
       auto intersecting_edge = node->GetIntersectingEdge(z);
       auto xturn_degree = GetTurnDegree(prev_edge->end_heading(), intersecting_edge->begin_heading());
@@ -278,7 +278,34 @@ std::list<Maneuver> ManeuversBuilder::Produce() {
               std::string(" | left_similar_traversable_outbound =") +
               std::to_string(xedge_counts.left_similar_traversable_outbound));
 #endif
-
+    if (trip_path_->GetCurrEdge(i)->pedestrian_type() == PedestrianType::kBlind) {
+      switch (node->type()) {
+        case TripLeg_Node_Type_kStreetIntersection: {
+          std::vector<std::pair<std::string, bool>> name_list;
+          for (size_t z = 0; z < node->intersecting_edge_size(); ++z) {
+            auto intersecting_edge = node->GetIntersectingEdge(z);
+            for (const auto& name : intersecting_edge->name()) {
+              std::pair<std::string, bool> cur_street = {name.value(), name.is_route_number()};
+              if (std::find(name_list.begin(), name_list.end(), cur_street) == name_list.end())
+                name_list.push_back(cur_street);
+            }
+          }
+          if (!name_list.empty()) {
+            maneuvers.front().set_cross_street_names(name_list);
+            maneuvers.front().set_node_type(node->type());
+            if (node->traffic_signal())
+              maneuvers.front().set_traffic_signal(true);
+          }
+          break;
+        }
+        case TripLeg_Node_Type_kGate:
+        case TripLeg_Node_Type_kBollard:
+          maneuvers.front().set_node_type(node->type());
+          break;
+        default:
+          break;
+      }
+    }
     if (CanManeuverIncludePrevEdge(maneuvers.front(), i)) {
       UpdateManeuver(maneuvers.front(), i);
     } else {
@@ -507,6 +534,19 @@ void ManeuversBuilder::Combine(std::list<Maneuver>& maneuvers) {
       // if next maneuver has an intersecting forward link
       else if (next_man->intersecting_forward_edge()) {
         LOG_TRACE("+++ Do Not Combine: if next maneuver has an intersecting forward link +++");
+        // Update with no combine
+        prev_man = curr_man;
+        curr_man = next_man;
+        ++next_man;
+      }
+      // Do not combine
+      // if has node_type
+      else if ((curr_man->pedestrian_type() == PedestrianType::kBlind &&
+                next_man->pedestrian_type() == PedestrianType::kBlind) &&
+               (curr_man->has_node_type() || next_man->has_node_type() || curr_man->is_steps() ||
+                next_man->is_steps() || curr_man->is_bridge() || next_man->is_bridge() ||
+                curr_man->is_tunnel() || next_man->is_tunnel())) {
+        LOG_TRACE("+++ Do Not Combine: if has node type+++");
         // Update with no combine
         prev_man = curr_man;
         curr_man = next_man;
@@ -1105,10 +1145,88 @@ void ManeuversBuilder::CreateStartManeuver(Maneuver& maneuver) {
 }
 
 //nevh
+std::vector<std::string> ManeuversBuilder::GetTurnLanes(std::list<Maneuver> &maneuvers) {    
+  std::vector<std::string> turn_lanes;
+
+  int manID = 0;
+  auto prev_man = maneuvers.begin();
+  auto curr_man = maneuvers.begin();
+  auto next_man = maneuvers.begin();
+
+  // Set current maneuver
+  if (next_man != maneuvers.end()) {
+    ++next_man;
+    curr_man = next_man;
+  }
+
+  // Set next maneuver
+  if (next_man != maneuvers.end()) {
+    ++next_man;
+  }
+  
+  // Walk the maneuvers to activate turn lanes
+  while (curr_man != maneuvers.end()) {
+    std::string maneuver_turn_lanes = "";
+    std::string active_turn_lanes = "";
+
+    // Only process driving maneuvers
+    if (curr_man->travel_mode() == TravelMode::kDrive) {
+
+      // Walk maneuvers by node (prev_edge of node has the turn lane info)
+      // Assign turn lane at transition point
+      auto prev_edge = trip_path_->GetPrevEdge(curr_man->begin_node_index());
+      if (prev_edge && (prev_edge->turn_lanes_size() > 0)) {
+        //auto &node = trip_path_->node ( prev_edge->begin_shape_index() );
+        //get GPS coord of node
+        //deduce and print type of node object
+        
+        const auto &turn_lanes = prev_edge->turn_lanes();
+        for (auto turn_lane : turn_lanes) {
+          int active_direction = turn_lane.active_direction();
+          int dir_mask = turn_lane.directions_mask();
+          for(auto &ttype: kTurnLaneNames) {
+            if(dir_mask & ttype.first) {
+              //get the turn lane direction string from Turn::Type using the active_direction
+              maneuver_turn_lanes += kTurnLaneNames.find(ttype.first)->second + /*":" + std::to_string(ttype.first) +*/ "|";
+            }
+          }
+          maneuver_turn_lanes.pop_back(); //remove the last '|'
+          maneuver_turn_lanes += ";";
+          
+          if(kTurnLaneNames.find(active_direction) != kTurnLaneNames.end()) {
+            //get the turn lane direction string from Turn::Type using the active_direction
+            active_turn_lanes += kTurnLaneNames.find(active_direction)->second + /*":" + std::to_string(active_direction) +*/ ";";
+          }
+          else {
+            //get the turn lane direction string from Turn::Type using the active_direction
+            active_turn_lanes += std::string("*") + ":" + std::to_string(active_direction) + ";";
+          }          
+        }
+        if(maneuver_turn_lanes != "") {
+          maneuver_turn_lanes.pop_back(); //remove the last ';'
+        }
+
+        if(active_turn_lanes != "") {
+          active_turn_lanes.pop_back(); //remove the last ';'          
+          std::cout << manID++ << ": " << maneuver_turn_lanes << "#" << active_turn_lanes  << std::endl;
+        }
+      }
+    }
+    turn_lanes.push_back(maneuver_turn_lanes + "#" + active_turn_lanes);
+    prev_man = curr_man;
+    curr_man = next_man;
+    if (next_man != maneuvers.end()) {
+      ++next_man;
+    }
+  }
+
+  return turn_lanes;  
+}
+
 std::vector<uint32_t> ManeuversBuilder::GetSpeedLimits(std::list<Maneuver> &maneuvers) {    
   std::vector<uint32_t> speed_limits;
 
-  std::cout << "node_size " << trip_path_->node_size() << std::endl;
+  //std::cout << "node_size " << trip_path_->node_size() << std::endl;
   for(auto maneuver = maneuvers.begin(); maneuver != maneuvers.end(); ++maneuver) {
     auto a = maneuver->begin_node_index();
     auto b = maneuver->end_node_index();
@@ -1293,6 +1411,14 @@ void ManeuversBuilder::InitializeManeuver(Maneuver& maneuver, int node_index) {
     }
   }
 
+  if (maneuver.pedestrian_type() == PedestrianType::kBlind) {
+    if (prev_edge->use() == TripLeg_Use_kStepsUse)
+      maneuver.set_steps(true);
+    if (prev_edge->bridge())
+      maneuver.set_bridge(true);
+    if (prev_edge->tunnel())
+      maneuver.set_tunnel(true);
+  }
   // TODO - what about street names; maybe check name flag
   UpdateManeuver(maneuver, node_index);
 }
@@ -1423,7 +1549,6 @@ void ManeuversBuilder::UpdateManeuver(Maneuver& maneuver, int node_index) {
 }
 
 void ManeuversBuilder::FinalizeManeuver(Maneuver& maneuver, int node_index) {
-
   auto prev_edge = trip_path_->GetPrevEdge(node_index);
   auto curr_edge = trip_path_->GetCurrEdge(node_index);
   auto node = trip_path_->GetEnhancedNode(node_index);
@@ -1524,7 +1649,6 @@ void ManeuversBuilder::FinalizeManeuver(Maneuver& maneuver, int node_index) {
       maneuver.set_begin_street_names(std::move(curr_edge_names));
     }
   }
-
   if (node->type() == TripLeg_Node_Type::TripLeg_Node_Type_kBikeShare && prev_edge &&
       (prev_edge->travel_mode() == TravelMode::kBicycle) &&
       maneuver.travel_mode() == TravelMode::kPedestrian) {
@@ -2105,6 +2229,9 @@ bool ManeuversBuilder::CanManeuverIncludePrevEdge(Maneuver& maneuver, int node_i
   auto node = trip_path_->GetEnhancedNode(node_index);
   auto turn_degree = GetTurnDegree(prev_edge->end_heading(), curr_edge->begin_heading());
 
+  if (curr_edge->pedestrian_type() == PedestrianType::kBlind && maneuver.has_node_type()) {
+    return false;
+  }
   if (node->type() == TripLeg_Node_Type::TripLeg_Node_Type_kBikeShare) {
     return false;
   }

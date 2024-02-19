@@ -15,8 +15,8 @@
 #include <valhalla/baldr/rapidjson_utils.h>
 #include <valhalla/meili/match_result.h>
 #include <valhalla/midgard/gridded_data.h>
+#include <valhalla/midgard/pointll.h>
 #include <valhalla/proto/api.pb.h>
-#include <valhalla/thor/matrix_common.h>
 #include <valhalla/tyr/actor.h>
 
 namespace valhalla {
@@ -122,6 +122,14 @@ std::string serializePbf(Api& request);
  */
 void serializeWarnings(const valhalla::Api& api, rapidjson::writer_wrapper_t& writer);
 baldr::json::ArrayPtr serializeWarnings(const valhalla::Api& api);
+
+/**
+ * Turns a line into a GeoJSON LineString geometry.
+ *
+ * @param shape  The points making up the line.
+ * @returns The GeoJSON geometry of the LineString
+ */
+baldr::json::MapPtr geojson_shape(const std::vector<midgard::PointLL> shape);
 
 // Elevation serialization support
 

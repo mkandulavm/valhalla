@@ -2167,6 +2167,22 @@
                 ]
             }
         },
+        "pass": {
+            "phrases": {
+                "0": "Vượt qua <OBJECT_LABEL>.",
+                "1": "Vượt qua đèn giao thông tại <OBJECT_LABEL>."
+            },
+            "object_labels": [
+                "cổng",
+                "cọc chắn",
+                "ngã ba đường"
+            ],
+            "example_phrases": {
+                "0": [
+                    "Vượt qua cổng."
+                ]
+            }
+        },
         "elevator": {
             "phrases": {
                 "0": "Đi thang máy.",

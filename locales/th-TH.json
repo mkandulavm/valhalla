@@ -2104,6 +2104,22 @@
                 ]
             }
         },
+        "pass": {
+            "phrases": {
+                "0": "ผ่าน <OBJECT_LABEL>.",
+                "1": "ผ่านสัญญาณไฟจราจรที่ <OBJECT_LABEL>."
+            },
+            "object_labels": [
+                "ประตู",
+                "คู่มือเสา",
+                "สี่แยก"
+            ],
+            "example_phrases": {
+                "0": [
+                    "ผ่านประตู."
+                ]
+            }
+        },
         "elevator": {
             "phrases": {
                 "0": [

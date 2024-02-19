@@ -193,6 +193,14 @@ void locations(const valhalla::Api& api, int route_index, rapidjson::writer_wrap
         writer("date_time", location->date_time());
       }
 
+      if (!location->time_zone_offset().empty()) {
+        writer("time_zone_offset", location->time_zone_offset());
+      }
+
+      if (!location->time_zone_name().empty()) {
+        writer("time_zone_name", location->time_zone_name());
+      }
+
       if (location->waiting_secs()) {
         writer("waiting", static_cast<uint64_t>(location->waiting_secs()));
       }
@@ -488,6 +496,10 @@ void legs(const valhalla::Api& api, int route_index, rapidjson::writer_wrapper_t
         writer("verbal_multi_cue", maneuver.verbal_multi_cue());
       }
 
+      //nevh//////      
+      //writer("turn_lanes", maneuver.turn_lanes());              
+      //nevh//////
+
       // Travel mode
       auto mode_type = travel_mode_type(maneuver);
       writer("travel_mode", mode_type.first);
@@ -497,10 +509,10 @@ void legs(const valhalla::Api& api, int route_index, rapidjson::writer_wrapper_t
 
       //  man->emplace("hasGate", maneuver.);
       //  man->emplace("hasFerry", maneuver.);
-      //“portionsTollNote” : “<portionsTollNote>”,
-      //“portionsUnpavedNote” : “<portionsUnpavedNote>”,
-      //“gateAccessRequiredNote” : “<gateAccessRequiredNote>”,
-      //“checkFerryInfoNote” : “<checkFerryInfoNote>”
+      // “portionsTollNote” : “<portionsTollNote>”,
+      // “portionsUnpavedNote” : “<portionsUnpavedNote>”,
+      // “gateAccessRequiredNote” : “<gateAccessRequiredNote>”,
+      // “checkFerryInfoNote” : “<checkFerryInfoNote>”
 
       writer.end_object(); // maneuver
     }
