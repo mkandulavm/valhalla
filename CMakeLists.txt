@@ -32,7 +32,7 @@ option(ENABLE_UNDEFINED_SANITIZER "Use UB sanitizer for Debug build" ON)
 option(ENABLE_TESTS "Enable Valhalla tests" OFF)
 option(ENABLE_WERROR "Convert compiler warnings to errors. Requires ENABLE_COMPILER_WARNINGS=ON to take effect" OFF)
 option(ENABLE_THREAD_SAFE_TILE_REF_COUNT "If ON uses shared_ptr as tile reference(i.e. it is thread safe)" OFF)
-option(ENABLE_SINGLE_FILES_WERROR "Convert compiler warnings to errors for single files" ON)
+option(ENABLE_SINGLE_FILES_WERROR "Convert compiler warnings to errors for single files" OFF)
 option(PREFER_EXTERNAL_DEPS "Whether to use internally vendored headers or find the equivalent external package" OFF)
 # useful to workaround issues likes this https://stackoverflow.com/questions/24078873/cmake-generated-xcode-project-wont-compile
 option(ENABLE_STATIC_LIBRARY_MODULES "If ON builds Valhalla modules as STATIC library targets" OFF)
@@ -78,6 +78,15 @@ set(THREADS_PREFER_PTHREAD_FLAG ON)
 
 
 message(STATUS "ENABLE_TESTS ${ENABLE_TESTS}")
+
+option(ENABLE_ASAN "Enable AddressSanitizer" OFF) #useful for catching SIGSEGV / memory leaks in release builds..must be enabled in the self generated build cmakelists also
+if(ENABLE_ASAN)
+  set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -g -fsanitize=address")
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -fsanitize=address")
+  set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -g -fsanitize=address")
+  set(CMAKE_MODULE_LINKER_FLAGS "${CMAKE_MODULE_LINKER_FLAGS} -g -fsanitize=address")
+  set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -g -fsanitize=address")
+endif()
 
 # colorize output
 include(CheckCXXCompilerFlag)
@@ -137,6 +146,17 @@ find_package(Threads REQUIRED)
 pkg_check_modules(ZLIB REQUIRED IMPORTED_TARGET zlib)
 pkg_check_modules(LZ4 REQUIRED IMPORTED_TARGET liblz4)
 
+# cURL
+set(curl_targets "")
+if (ENABLE_HTTP OR ENABLE_DATA_TOOLS)
+  pkg_check_modules(CURL REQUIRED IMPORTED_TARGET libcurl)
+  if (CURL_FOUND)
+    set(curl_targets PkgConfig::CURL)
+    target_compile_definitions(PkgConfig::CURL INTERFACE ENABLE_HTTP)
+  else()
+    message(FATAL_ERROR "ENABLE_HTTP=ON, but cURL not found...")
+  endif()
+endif()
 
 if(MOBILE)
   set(ENABLE_DATA_TOOLS OFF)
@@ -177,6 +197,53 @@ endif()
 add_definitions(-DBOOST_NO_CXX11_SCOPED_ENUMS)
 add_definitions(-DBOOST_ALLOW_DEPRECATED_HEADERS)
 add_definitions(-DBOOST_BIND_GLOBAL_PLACEHOLDERS)
+
+# resolve vendored libraries
+set(date_include_dir ${VALHALLA_SOURCE_DIR}/third_party/date/include)
+set(rapidjson_include_dir ${CMAKE_SOURCE_DIR}/third_party/rapidjson/include)
+set(robinhoodhashing_include_dir ${CMAKE_SOURCE_DIR}/third_party/robin-hood-hashing/src/include)
+set(cxxopts_include_dir ${VALHALLA_SOURCE_DIR}/third_party/cxxopts/include)
+set(dirent_include_dir ${CMAKE_SOURCE_DIR}/third_party/dirent/include)
+if (PREFER_EXTERNAL_DEPS)
+  # date
+  find_package(date QUIET)
+  if (date_FOUND)
+    get_target_property(date_include_dir date::date INTERFACE_INCLUDE_DIRECTORIES)
+  else()
+    message(WARNING "No date found in system libraries, using vendored date...")
+  endif()
+  # rapidjson
+  find_package(RapidJSON QUIET)
+  if (RapidJSON_FOUND)
+    get_target_property(rapidjson_include_dir rapidjson INTERFACE_INCLUDE_DIRECTORIES)
+  else()
+    message(WARNING "No RapidJSON found in system libraries, using vendored RapidJSON...")
+  endif()
+  # robin-hood-hashing
+  find_package(robin_hood QUIET)
+  if (robin_hood_FOUND)
+    get_target_property(robinhoodhashing_include_dir robin_hood::robin_hood INTERFACE_INCLUDE_DIRECTORIES)
+  else()
+    message(WARNING "No robin_hood found in system libraries, using vendored robin_hood...")
+  endif()
+  # cxxopts
+  if (ENABLE_DATA_TOOLS OR ENABLE_TOOLS)
+    find_package(cxxopts QUIET)
+    if (cxxopts_FOUND)
+      get_target_property(cxxopts_include_dir cxxopts::cxxopts INTERFACE_INCLUDE_DIRECTORIES)
+    else()
+      message(WARNING "No cxxopts found in system libraries, using vendored cxxopts...")
+    endif()
+  endif()
+  # dirent
+  if (WIN32)
+    find_path(dirent_include_dir dirent.h REQUIRED)
+    if (dirent_include_dir-NOTFOUND)
+      message(WARNING "No dirent.h found in system headers, using vendored dirent.h...")
+    endif()
+  endif()
+endif()
+
 
 message(STATUS "Boost include dir: ${Boost_INCLUDE_DIR}")
 message(STATUS "Boost library dir: ${Boost_LIBRARY_DIR}")
@@ -294,8 +361,10 @@ if(ENABLE_DATA_TOOLS)
   # keep sqlite3 with cmake find_package(), as OSX needs our own FindSqlite3.cmake
   # otherwise the system sqlite3 is found which doesn't allow for spatialite
   find_package(SQLite3 REQUIRED)
-  find_package(SpatiaLite REQUIRED) #since we need data tools only for debian, we will install using apt-get
-  find_package(LuaJIT)
+  pkg_check_modules(SpatiaLite REQUIRED IMPORTED_TARGET spatialite)
+  pkg_check_modules(LuaJIT REQUIRED IMPORTED_TARGET luajit)
+  #find_package(SpatiaLite REQUIRED) #since we need data tools only for debian, we will install using apt-get
+  #find_package(LuaJIT)
   add_library(Lua::Lua INTERFACE IMPORTED)
   set_target_properties(Lua::Lua PROPERTIES
     INTERFACE_LINK_LIBRARIES "${LUA_LIBRARIES}"

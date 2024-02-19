@@ -2205,6 +2205,22 @@
                 ]
             }
         },
+        "pass": {
+            "phrases": {
+                "0": "Prođi kroz <OBJECT_LABEL>.",
+                "1": "Prođi prometne signale na <OBJECT_LABEL>."
+            },
+            "object_labels": [
+                "vrata",
+                "stupovi",
+                "križanje puteva"
+            ],
+            "example_phrases": {
+                "0": [
+                    "Prođi kroz vrata."
+                ]
+            }
+        },
         "elevator": {
             "phrases": {
                 "0": "Uzmite dizalo.",

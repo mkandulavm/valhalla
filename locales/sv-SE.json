@@ -2253,18 +2253,18 @@
     },
     "pass": {
       "phrases": {
-        "0": "Pass <OBJECT_LABEL>.",
-        "1": "Pass traffic signals on <OBJECT_LABEL>."
+          "0": "Passera <OBJECT_LABEL>.",
+          "1": "Passera trafikljusen på <OBJECT_LABEL>."
       },
       "object_labels": [
-        "the gate",
-        "the bollards",
-        "ways intersection"
+          "porten",
+          "bollarna",
+          "vägkorsningen"
       ],
       "example_phrases": {
-        "0": [
-          "Pass the gate."
-        ]
+          "0": [
+              "Passera porten."
+          ]
       }
     },
     "elevator": {

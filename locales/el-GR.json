@@ -2253,18 +2253,18 @@
     },
     "pass": {
       "phrases": {
-        "0": "Pass <OBJECT_LABEL>.",
-        "1": "Pass traffic signals on <OBJECT_LABEL>."
+          "0": "Περάστε από την <OBJECT_LABEL>.",
+          "1": "Περάστε από τα φανάρια κυκλοφορίας στην <OBJECT_LABEL>."
       },
       "object_labels": [
-        "the gate",
-        "the bollards",
-        "ways intersection"
+          "η πύλη",
+          "οι κολόνες",
+          "το διασταύρωση των δρόμων"
       ],
       "example_phrases": {
-        "0": [
-          "Pass the gate."
-        ]
+          "0": [
+              "Περάστε από την πύλη."
+          ]
       }
     },
     "elevator": {

@@ -2051,6 +2051,22 @@
                 ]
             }
         },
+        "pass": {
+            "phrases": {
+                "0": "通過<OBJECT_LABEL>。",
+                "1": "通過<OBJECT_LABEL>上的交通號誌。"
+            },
+            "object_labels": [
+                "大門",
+                "路障",
+                "道路交叉口"
+            ],
+            "example_phrases": {
+                "0": [
+                    "通過大門。"
+                ]
+            }
+        },
         "elevator": {
             "phrases": {
                 "0": "搭乘電梯。",

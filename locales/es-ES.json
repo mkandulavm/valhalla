@@ -2253,18 +2253,18 @@
     },
     "pass": {
       "phrases": {
-        "0": "Pass <OBJECT_LABEL>.",
-        "1": "Pass traffic signals on <OBJECT_LABEL>."
+          "0": "Pasar por <OBJECT_LABEL>.",
+          "1": "Pasar por los semáforos en <OBJECT_LABEL>."
       },
       "object_labels": [
-        "the gate",
-        "the bollards",
-        "ways intersection"
+          "la puerta",
+          "los bolardos",
+          "la intersección de caminos"
       ],
       "example_phrases": {
-        "0": [
-          "Pass the gate."
-        ]
+          "0": [
+              "Pasar por la puerta."
+          ]
       }
     },
     "elevator": {
