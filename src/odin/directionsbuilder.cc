@@ -52,7 +52,7 @@ void DirectionsBuilder::Build(Api& api, const MarkupFormatter& markup_formatter)
         maneuvers = maneuversBuilder.Build();
         //nevh
         auto speedLimits = maneuversBuilder.GetSpeedLimits(maneuvers);
-        turn_lanes = maneuversBuilder.GetTurnLanes(maneuvers);
+        //turn_lanes = maneuversBuilder.GetTurnLanes(maneuvers);
 
         //add speed limits as an array into trip directions
         
@@ -432,7 +432,7 @@ void DirectionsBuilder::PopulateDirectionsLeg(const Options& options,
     //nevh
     if(turn_lanes.size() != 0) {
       
-      LOG_INFO("turn_lanes is not empty..pending fix--madan");      
+      //LOG_INFO("turn_lanes is not empty..pending fix--madan");      
       // //add turn lanes into trip_manuever    
       // assert(turn_lanes.size() == maneuvers.size());
       // auto &maneuver_turn_lanes = turn_lanes[manueverID];
@@ -441,7 +441,7 @@ void DirectionsBuilder::PopulateDirectionsLeg(const Options& options,
       // }
     }
     else {
-      LOG_INFO("turn_lanes is empty..pending fix--madan");
+      //LOG_INFO("turn_lanes is empty..pending fix--madan");
     }      
     //nevh
     manueverID++;

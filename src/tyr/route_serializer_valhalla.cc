@@ -497,7 +497,7 @@ void legs(const valhalla::Api& api, int route_index, rapidjson::writer_wrapper_t
       }
 
       //nevh//////      
-      writer("turn_lanes", maneuver.turn_lanes());              
+      //writer("turn_lanes", maneuver.turn_lanes());              
       //nevh//////
 
       // Travel mode

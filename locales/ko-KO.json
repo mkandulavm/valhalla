@@ -1685,6 +1685,22 @@
                 ]
             }
         },
+        "pass": {
+            "phrases": {
+                "0": "<OBJECT_LABEL>을(를) 통과하세요.",
+                "1": "<OBJECT_LABEL>의 교통 신호를 지나세요."
+            },
+            "object_labels": [
+                "게이트",
+                "볼라드",
+                "도로 교차로"
+            ],
+            "example_phrases": {
+                "0": [
+                    "게이트을(를) 통과하세요."
+                ]
+            }
+        },
         "elevator": {
             "phrases": {
                 "0": "엘리베이터를 이용하세요.",

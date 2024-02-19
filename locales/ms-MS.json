@@ -2147,6 +2147,22 @@
                 ]
             }
         },
+        "pass": {
+            "phrases": {
+                "0": "Lalu <OBJECT_LABEL>.",
+                "1": "Lalu isyarat trafik di <OBJECT_LABEL>."
+            },
+            "object_labels": [
+                "pintu pagar",
+                "bollards",
+                "persimpangan jalan"
+            ],
+            "example_phrases": {
+                "0": [
+                    "Lalu pintu pagar."
+                ]
+            }
+        },
         "elevator": {
             "phrases": {
                 "0": "Naik lif.",

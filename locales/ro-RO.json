@@ -2253,18 +2253,18 @@
     },
     "pass": {
       "phrases": {
-        "0": "Pass <OBJECT_LABEL>.",
-        "1": "Pass traffic signals on <OBJECT_LABEL>."
+          "0": "Treceți prin <OBJECT_LABEL>.",
+          "1": "Treceți pe lângă semafoarele de la <OBJECT_LABEL>."
       },
       "object_labels": [
-        "the gate",
-        "the bollards",
-        "ways intersection"
+          "poartă",
+          "bolțari",
+          "intersecția drumurilor"
       ],
       "example_phrases": {
-        "0": [
-          "Pass the gate."
-        ]
+          "0": [
+              "Treceți prin poartă."
+          ]
       }
     },
     "elevator": {
