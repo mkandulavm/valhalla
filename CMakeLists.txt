@@ -142,7 +142,7 @@ set(ENV{PKG_CONFIG_PATH} "${CMAKE_BINARY_DIR}/../lz4:$ENV{PKG_CONFIG_PATH}")
 message (STATUS "PKG_CONFIG_PATH = $ENV{PKG_CONFIG_PATH}")
 #message(FATAL_ERROR "PKG_CONFIG_PATH = $ENV{PKG_CONFIG_PATH}")
 
-set(lz4_include_dir "${VALHALLA_SOURCE_DIR}/third_party/lz4/lib")
+set(lz4_include_dir "${VALHALLA_SOURCE_DIR}/../external/lz4/lib")
 #set lz4_include_dir as a system include directory
 include_directories(SYSTEM ${lz4_include_dir})
 
