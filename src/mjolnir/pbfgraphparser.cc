@@ -893,6 +893,32 @@ public:
         LOG_INFO("out_of_range thrown for way id: " + std::to_string(osmid_));
       }
     };
+    tag_handlers_["speed_camera"] = [this]() {
+      try {                
+        float val = 0.5f;
+        if(tag_.second == "yes") {}
+        else {
+          //is tag_.second a number?
+          val = std::stof(tag_.second);
+          if(val >= 0.0f && val <= 1.0f) {            
+          }
+          else {
+            LOG_INFO("speed_camera value out of range: " + tag_.second);            
+            val = -1.0f;
+          }
+        }
+        if(val >= 0.0f && val <= 1.0f) {                                
+          static constexpr float MAX16BIT = 65535.0f;
+          uint16_t pos = static_cast<uint16_t>(val * MAX16BIT );
+          if(pos == 0)  pos = 1;  //just add a little bit of distance as zero can then be used for no speed camera
+          //LOG_INFO("speed_camera @ way_id = " + std::to_string(way_.way_id()) + " val = " + std::to_string(val));
+          //way_.set_speed_camera(pos);
+          way_.set_speed_camera(true);
+        }
+      } catch (const std::out_of_range& oor) {
+        LOG_INFO("speed_cam loading.. out_of_range thrown for way id: " + std::to_string(osmid_));
+      }
+    };
     tag_handlers_["average_speed"] = [this]() {
       try {
         average_speed_ = std::stof(tag_.second);
