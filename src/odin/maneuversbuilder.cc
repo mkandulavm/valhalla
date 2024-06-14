@@ -1145,86 +1145,133 @@ void ManeuversBuilder::CreateStartManeuver(Maneuver& maneuver) {
 }
 
 //nevh
-std::vector<std::string> ManeuversBuilder::GetTurnLanes(std::list<Maneuver> &maneuvers) {    
-  std::vector<std::string> turn_lanes;
+void ManeuversBuilder::GetTurnLanes(std::list<Maneuver> &maneuvers) {  
+  auto curr_man = maneuvers.begin();   
 
-  int manID = 0;
-  auto prev_man = maneuvers.begin();
-  auto curr_man = maneuvers.begin();
-  auto next_man = maneuvers.begin();
-
-  // Set current maneuver
-  if (next_man != maneuvers.end()) {
-    ++next_man;
-    curr_man = next_man;
-  }
-
-  // Set next maneuver
-  if (next_man != maneuvers.end()) {
-    ++next_man;
-  }
-  
-  // Walk the maneuvers to activate turn lanes
   while (curr_man != maneuvers.end()) {
-    std::string maneuver_turn_lanes = "";
-    std::string active_turn_lanes = "";
+    std::string &tl = curr_man->turnLanes;
+    if (curr_man->travel_mode() == TravelMode::kDrive) {          
 
-    // Only process driving maneuvers
-    if (curr_man->travel_mode() == TravelMode::kDrive) {
+      auto addTLStr = [&](uint32_t idx) {        
+        auto edge = trip_path_->GetCurrEdge(idx);
+        if(edge && (edge->turn_lanes_size() > 0)) {}
+        else  return;        
+        auto tlStr = edge->TurnLanesToString();
+        //if tlStr has "none" or "empty" then do not add it
+        if(tlStr.find("none") != std::string::npos || tlStr.find("empty") != std::string::npos) {
+          return;
+        }
+        //replace "VALID" to "ACTIVE" in tlStr
+        std::string::size_type pos = 0;
+        while ((pos = tlStr.find("VALID", pos)) != std::string::npos) {
+          tlStr.replace(pos, 5, "ACTIVE");
+          pos += 6;
+        }
+        //if "ACTIVE" is not there then don't add it
+        if(tlStr.find("ACTIVE") == std::string::npos) {
+          return;
+        }
+        if(tl.size() > 0) {
+          tl += "#";
+        }
+        tl += std::to_string(idx) + ":" + tlStr;
+        std::string wayidlink = "https://www.openstreetmap.org/way/" + std::to_string(edge->way_id());
+        std::cout << idx << " -> " <<  wayidlink + " : " + tlStr << std::endl;
+      };
 
-      // Walk maneuvers by node (prev_edge of node has the turn lane info)
-      // Assign turn lane at transition point
-      auto prev_edge = trip_path_->GetPrevEdge(curr_man->begin_node_index());
-      if (prev_edge && (prev_edge->turn_lanes_size() > 0)) {
-        //auto &node = trip_path_->node ( prev_edge->begin_shape_index() );
-        //get GPS coord of node
-        //deduce and print type of node object
-        
-        const auto &turn_lanes = prev_edge->turn_lanes();
-        for (auto turn_lane : turn_lanes) {
-          int active_direction = turn_lane.active_direction();
-          int dir_mask = turn_lane.directions_mask();
-          for(auto &ttype: kTurnLaneNames) {
-            if(dir_mask & ttype.first) {
-              //get the turn lane direction string from Turn::Type using the active_direction
-              maneuver_turn_lanes += kTurnLaneNames.find(ttype.first)->second + /*":" + std::to_string(ttype.first) +*/ "|";
-            }
-          }
-          maneuver_turn_lanes.pop_back(); //remove the last '|'
-          maneuver_turn_lanes += ";";
-          
-          if(kTurnLaneNames.find(active_direction) != kTurnLaneNames.end()) {
-            //get the turn lane direction string from Turn::Type using the active_direction
-            active_turn_lanes += kTurnLaneNames.find(active_direction)->second + /*":" + std::to_string(active_direction) +*/ ";";
-          }
-          else {
-            //get the turn lane direction string from Turn::Type using the active_direction
-            active_turn_lanes += std::string("*") + ":" + std::to_string(active_direction) + ";";
-          }          
-        }
-        if(maneuver_turn_lanes != "") {
-          maneuver_turn_lanes.pop_back(); //remove the last ';'
-        }
-
-        if(active_turn_lanes != "") {
-          active_turn_lanes.pop_back(); //remove the last ';'          
-          std::cout << manID++ << ": " << maneuver_turn_lanes << "#" << active_turn_lanes  << std::endl;
-        }
+      for(uint32_t nidx = curr_man->begin_shape_index(); nidx < curr_man->end_shape_index(); nidx++)  {
+        addTLStr(nidx);
       }
-    }
-    turn_lanes.push_back(maneuver_turn_lanes + "#" + active_turn_lanes);
-    prev_man = curr_man;
-    curr_man = next_man;
-    if (next_man != maneuvers.end()) {
-      ++next_man;
-    }
-  }
+      // std::cout << "curr_man: "<< curr_man->begin_shape_index() << " " << curr_man->end_shape_index()-1 << std::endl;
+      // for(uint32_t nidx = curr_man->begin_shape_index(); nidx < curr_man->end_shape_index(); nidx++) 
+      // {
+      //   //std::cout << nidx << " " << curr_man->end_shape_index() << " " << curr_man->begin_shape_index() << std::endl;
+      
+      //   int endidx = curr_man->end_shape_index()-1;
+        
+      //   //int nidx = curr_man->end_shape_index();
+      //   auto edge = trip_path_->GetCurrEdge(nidx);
+      //   std::string type = "";
+      //   if(edge) {
+      //     if(edge->roundabout()) {
+      //       type += "|roundabout";
+      //     }
+      //     if(edge->bridge()) {
+      //       type += "|bridge";
+      //     }
+      //     if(edge->tunnel()) {
+      //       type += "|tunnel";
+      //     }         
 
-  return turn_lanes;  
+      //   }
+      //   std::string wayidlink = "https://www.openstreetmap.org/way/" + std::to_string(edge ? edge->way_id(): 0);
+      //   if (edge && (edge->turn_lanes_size() > 0)) {// && wayid == edge->way_id() ) {           
+      //     // const auto &turn_lanes = edge->turn_lanes();
+      //     // //get lane masks
+      //     // std::vector<uint16_t> masks;
+      //     // for (const auto &turn_lane : turn_lanes) {
+      //     //     masks.push_back(turn_lane.directions_mask());
+      //     // }          
+      //     //maneuver_turn_lanes += TurnLanes::turnlane_string(masks);  //edge->TurnLanesToString();              
+                    
+      //     //tl = edge->TurnLanesToString();
+      //     std::cout << nidx << "/" << endidx << " " << wayidlink << " " << type << " " << edge->TurnLanesToString() << std::endl;          
+      //   } 
+      //   else if(edge) {
+      //     std::cout << nidx << "/" << endidx << " " << edge->way_id() << " " << type << std::endl;
+      //   }
+      //   else {
+      //     std::cout << nidx << "/" << endidx << " " << "edge is null" << std::endl;
+      //   }        
+      // }
+    }   
+    curr_man++;
+  }  
 }
 
-std::vector<uint32_t> ManeuversBuilder::GetSpeedLimits(std::list<Maneuver> &maneuvers) {    
-  std::vector<uint32_t> speed_limits;
+std::vector<uint32_t> ManeuversBuilder::GetSpeedLimits(std::list<Maneuver> &maneuvers) {
+    std::vector<uint32_t> speed_limits;
+
+    for(auto maneuver = maneuvers.begin(); maneuver != maneuvers.end(); ++maneuver) {
+        auto a = maneuver->begin_node_index();
+        auto b = maneuver->end_node_index();
+
+        while(a != b) {
+            auto node = trip_path_->node(a);
+
+            if (node.has_edge()) {
+                const auto& trip_edge = node.edge();
+
+                uint32_t begin_shape_index = node.mutable_edge()->begin_shape_index();
+                uint32_t end_shape_index = node.mutable_edge()->end_shape_index();
+                uint32_t speed_limit = trip_edge.speed_limit();
+                uint32_t lane_count = trip_edge.lane_count();
+                
+                if (!speed_limits.empty() &&                    
+                    speed_limits[speed_limits.size() - 1] == lane_count &&
+                    speed_limits[speed_limits.size() - 2] == speed_limit &&
+                    speed_limits[speed_limits.size() - 3] == begin_shape_index
+                    ) {
+                    // Adjust the end shape index of the previous segment
+                    speed_limits[speed_limits.size() - 3] = end_shape_index;
+                } else {
+                    // Add new segment
+                    speed_limits.push_back(begin_shape_index);
+                    speed_limits.push_back(end_shape_index);
+                    speed_limits.push_back(speed_limit);
+                    speed_limits.push_back(lane_count);
+                }
+                
+            }
+            a++;
+        }
+    }
+    return speed_limits;
+}
+
+
+std::vector<uint32_t> ManeuversBuilder::GetSpeedCams(std::list<Maneuver> &maneuvers) {    
+  std::vector<uint32_t> speed_cam;
 
   //std::cout << "node_size " << trip_path_->node_size() << std::endl;
   for(auto maneuver = maneuvers.begin(); maneuver != maneuvers.end(); ++maneuver) {
@@ -1234,14 +1281,14 @@ std::vector<uint32_t> ManeuversBuilder::GetSpeedLimits(std::list<Maneuver> &mane
     //std::cout << std::endl<< "a: " << a << " b: " << b << std::endl;
 
     while(a !=b)  {
-      auto node = trip_path_->node(a);
+      const auto& trip_edge = trip_path_->GetCurrEdge(a);      
+      if (trip_edge) {
+        //const auto& trip_edge = node.edge();      
       
-      if (node.has_edge()) {
-        const auto& trip_edge = node.edge();      
-        speed_limits.push_back(node.mutable_edge()->begin_shape_index());
-        speed_limits.push_back(node.mutable_edge()->end_shape_index());
-        speed_limits.push_back(trip_edge.speed_limit());      
-        speed_limits.push_back(trip_edge.lane_count());      
+        bool edgeHasSpeedCam = trip_edge->speed_camera();
+        if(edgeHasSpeedCam) {
+          speed_cam.push_back(a);          
+        }
       }
       
       //std::cout << node.mutable_edge()->begin_shape_index() << " " << node.mutable_edge()->end_shape_index() << " sl=" << speed_limits.back() << " ";      
@@ -1260,7 +1307,7 @@ std::vector<uint32_t> ManeuversBuilder::GetSpeedLimits(std::list<Maneuver> &mane
   //   }
   // }
   
-  return speed_limits;  
+  return speed_cam;  
 }
 //nevh
 

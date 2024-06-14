@@ -141,7 +141,8 @@ message DirectionsLeg {
     bool portions_highway = 39;                           // has portions highway
     bool portions_ferry = 40;                             // has portions ferry
     repeated RouteLandmark landmarks = 41;                // landmarks correlated with the maneuver
-    //string turn_lanes = 42;  //nevh
+    string turn_lanes = 42;           //nevh    
+    string jv_string = 43;            //nevh
   }
 
   uint64 trip_id = 1;
@@ -151,7 +152,8 @@ message DirectionsLeg {
   Summary summary = 5;
   repeated Maneuver maneuver = 6;
   string shape = 7;  
-  repeated uint32 speed_limits= 8;  //nevh
+  repeated uint32 speed_limits= 8;      //nevh
+  repeated uint32 speed_cameras = 9;       //nevh    
 }
 
 message DirectionsRoute {

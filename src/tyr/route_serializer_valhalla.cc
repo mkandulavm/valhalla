@@ -497,7 +497,7 @@ void legs(const valhalla::Api& api, int route_index, rapidjson::writer_wrapper_t
       }
 
       //nevh//////      
-      //writer("turn_lanes", maneuver.turn_lanes());              
+      writer("turn_lanes", maneuver.turn_lanes());              
       //nevh//////
 
       // Travel mode
@@ -572,6 +572,13 @@ void legs(const valhalla::Api& api, int route_index, rapidjson::writer_wrapper_t
       }
       writer.end_array();
     }    
+    if(directions_leg.speed_cameras_size() > 0) {
+      writer.start_array("speed_cameras");
+      for(int s = 0; s < directions_leg.speed_cameras_size(); ++s){
+        writer(static_cast<uint64_t>(directions_leg.speed_cameras(s)));
+      }
+      writer.end_array();
+    }
     //nevh//////
 
     writer.end_object(); // leg
