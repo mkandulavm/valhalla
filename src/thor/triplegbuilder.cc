@@ -1436,6 +1436,13 @@ TripLeg_Edge* AddTripEdge(const AttributesController& controller,
     trip_edge->set_speed_limit(edgeinfo.speed_limit());
   }
 
+  if(directededge->speed_camera()) {
+    //print
+    LOG_ERROR("found speed camera");
+  }
+  
+  trip_edge->set_speed_camera(directededge->speed_camera());  
+
   if (controller(kEdgeDefaultSpeed)) {
     trip_edge->set_default_speed(directededge->speed());
   }
@@ -1762,7 +1769,18 @@ void TripLegBuilder::Build(
     if (graphtile == nullptr) {
       throw tile_gone_error_t("TripLegBuilder::Build failed", edge);
     }
-    const DirectedEdge* directededge = graphtile->directededge(edge);
+    const DirectedEdge* directededge = graphtile->directededge(edge);   
+
+    //std::cout << "checking tripleleg at de = " <<  std::to_string(edge) << " deendnode = " << std::to_string(directededge->endnode()) <<  std::endl;
+
+    auto des = graphtile->GetDirectedEdges(directededge->endnode());
+    for(auto &de : des) {      
+      if(de.speed_camera()) {
+        //print
+        LOG_ERROR("found speed camera for de having endnode = " + std::to_string(de.endnode()));
+      }
+    }
+    
     const sif::TravelMode mode = edge_itr->mode;
     const uint8_t travel_type = travel_types[static_cast<uint32_t>(mode)];
     const auto& costing = mode_costing[static_cast<uint32_t>(mode)];
