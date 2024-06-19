@@ -6,40 +6,40 @@
     "instructions": {
         "arrive": {
             "phrases": {
-                "0": "到达：<TIME>。",
-                "1": "在<TRANSIT_STOP>到达：<TIME>。"
+                "0": "到达：<TIME>.",
+                "1": "在<TRANSIT_STOP>到达：<TIME>."
             },
             "example_phrases": {
                 "0": [
-                    "到达：8:02 AM。"
+                    "到达：8:02 AM."
                 ],
                 "1": [
-                    "在8 St - NYU到达：8:02 AM。"
+                    "在8 St - NYU到达：8:02 AM."
                 ]
             }
         },
         "arrive_verbal": {
             "phrases": {
-                "0": "在<TIME>到达。",
-                "1": "在<TRANSIT_STOP>的<TIME>到达。"
+                "0": "在<TIME>到达.",
+                "1": "在<TRANSIT_STOP>的<TIME>到达."
             },
             "example_phrases": {
                 "0": [
-                    "在8:02 AM到达。"
+                    "在8:02 AM到达."
                 ],
                 "1": [
-                    "在8 St - NYU的8:02 AM到达。"
+                    "在8 St - NYU的8:02 AM到达."
                 ]
             }
         },
         "bear": {
             "phrases": {
-                "0": "向<RELATIVE_DIRECTION>转。",
-                "1": "向<RELATIVE_DIRECTION>转入<STREET_NAMES>。",
-                "2": "向<RELATIVE_DIRECTION>转入<BEGIN_STREET_NAMES>。继续走<STREET_NAMES>。",
-                "3": "向<RELATIVE_DIRECTION>保持在<STREET_NAMES>上。",
-                "4": "在<JUNCTION_NAME>向<RELATIVE_DIRECTION>转。",
-                "5": "朝<TOWARD_SIGN>向<RELATIVE_DIRECTION>转。"
+                "0": "向<RELATIVE_DIRECTION>转.",
+                "1": "向<RELATIVE_DIRECTION>转入<STREET_NAMES>.",
+                "2": "向<RELATIVE_DIRECTION>转入<BEGIN_STREET_NAMES>.继续走<STREET_NAMES>.",
+                "3": "向<RELATIVE_DIRECTION>保持在<STREET_NAMES>上.",
+                "4": "在<JUNCTION_NAME>向<RELATIVE_DIRECTION>转.",
+                "5": "朝<TOWARD_SIGN>向<RELATIVE_DIRECTION>转."
             },
             "empty_street_name_labels": [
                 "人行道",
@@ -53,33 +53,33 @@
             ],
             "example_phrases": {
                 "0": [
-                    "向右转。"
+                    "向右转."
                 ],
                 "1": [
-                    "向左转入Arlen Road。"
+                    "向左转入Arlen Road."
                 ],
                 "2": [
-                    "向右转入Belair Road/US 1 Business。继续走US 1 Business。"
+                    "向右转入Belair Road/US 1 Business.继续走US 1 Business."
                 ],
                 "3": [
-                    "保持向左走，继续走US 15 South。"
+                    "保持向左走，继续走US 15 South."
                 ],
                 "4": [
-                    "在Mannenbashi East向右转。"
+                    "在Mannenbashi East向右转."
                 ],
                 "5": [
-                    "朝Baltimore左转。"
+                    "朝Baltimore左转."
                 ]
             }
         },
         "bear_verbal": {
             "phrases": {
-                "0": "向<RELATIVE_DIRECTION>转。",
-                "1": "向<RELATIVE_DIRECTION>转入<STREET_NAMES>。",
-                "2": "向<RELATIVE_DIRECTION>转入<BEGIN_STREET_NAMES>。",
-                "3": "向<RELATIVE_DIRECTION>保持在<STREET_NAMES>上。",
-                "4": "在<JUNCTION_NAME>向<RELATIVE_DIRECTION>转。",
-                "5": "朝<TOWARD_SIGN>向<RELATIVE_DIRECTION>转。"
+                "0": "向<RELATIVE_DIRECTION>转.",
+                "1": "向<RELATIVE_DIRECTION>转入<STREET_NAMES>.",
+                "2": "向<RELATIVE_DIRECTION>转入<BEGIN_STREET_NAMES>.",
+                "3": "向<RELATIVE_DIRECTION>保持在<STREET_NAMES>上.",
+                "4": "在<JUNCTION_NAME>向<RELATIVE_DIRECTION>转.",
+                "5": "朝<TOWARD_SIGN>向<RELATIVE_DIRECTION>转."
             },
             "empty_street_name_labels": [
                 "人行道",
@@ -93,51 +93,51 @@
             ],
             "example_phrases": {
                 "0": [
-                    "向右转。"
+                    "向右转."
                 ],
                 "1": [
-                    "向左转入Arlen Road。"
+                    "向左转入Arlen Road."
                 ],
                 "2": [
-                    "向右转入Belair Road, U.S. 1 Business。"
+                    "向右转入Belair Road, U.S. 1 Business."
                 ],
                 "3": [
-                    "保持向左走，继续走U.S. 15 South。"
+                    "保持向左走，继续走U.S. 15 South."
                 ],
                 "4": [
-                    "在Mannenbashi East向右转。"
+                    "在Mannenbashi East向右转."
                 ],
                 "5": [
-                    "朝Baltimore左转。"
+                    "朝Baltimore左转."
                 ]
             }
         },
         "becomes": {
             "phrases": {
-                "0": "<PREVIOUS_STREET_NAMES>变成<STREET_NAMES>。"
+                "0": "<PREVIOUS_STREET_NAMES>变成<STREET_NAMES>."
             },
             "example_phrases": {
                 "0": [
-                    "Vine Street变成Middletown Road。"
+                    "Vine Street变成Middletown Road."
                 ]
             }
         },
         "becomes_verbal": {
             "phrases": {
-                "0": "<PREVIOUS_STREET_NAMES>变成<STREET_NAMES>。"
+                "0": "<PREVIOUS_STREET_NAMES>变成<STREET_NAMES>."
             },
             "example_phrases": {
                 "0": [
-                    "Vine Street变成Middletown Road。"
+                    "Vine Street变成Middletown Road."
                 ]
             }
         },
         "continue": {
             "phrases": {
-                "0": "继续。",
-                "1": "继续走<STREET_NAMES>。",
-                "2": "在<JUNCTION_NAME>继续。",
-                "3": "朝<TOWARD_SIGN>继续。"
+                "0": "继续.",
+                "1": "继续走<STREET_NAMES>.",
+                "2": "在<JUNCTION_NAME>继续.",
+                "3": "朝<TOWARD_SIGN>继续."
             },
             "empty_street_name_labels": [
                 "人行道",
@@ -147,29 +147,29 @@
             ],
             "example_phrases": {
                 "0": [
-                    "继续。"
+                    "继续."
                 ],
                 "1": [
-                    "继续走10th Avenue。"
+                    "继续走10th Avenue."
                 ],
                 "2": [
-                    "在Mannenbashi East继续。"
+                    "在Mannenbashi East继续."
                 ],
                 "3": [
-                    "朝Baltimore继续。"
+                    "朝Baltimore继续."
                 ]
             }
         },
         "continue_verbal": {
             "phrases": {
-                "0": "继续。",
-                "1": "继续<LENGTH>。",
-                "2": "继续走<STREET_NAMES>。",
-                "3": "继续走<STREET_NAMES>，共<LENGTH>。",
-                "4": "在<JUNCTION_NAME>继续。",
-                "5": "在<JUNCTION_NAME>继续，共<LENGTH>。",
-                "6": "朝<TOWARD_SIGN>继续。",
-                "7": "朝<TOWARD_SIGN>继续，共<LENGTH>。"
+                "0": "继续.",
+                "1": "继续<LENGTH>.",
+                "2": "继续走<STREET_NAMES>.",
+                "3": "继续走<STREET_NAMES>，共<LENGTH>.",
+                "4": "在<JUNCTION_NAME>继续.",
+                "5": "在<JUNCTION_NAME>继续，共<LENGTH>.",
+                "6": "朝<TOWARD_SIGN>继续.",
+                "7": "朝<TOWARD_SIGN>继续，共<LENGTH>."
             },
             "empty_street_name_labels": [
                 "人行道",
@@ -193,37 +193,37 @@
             ],
             "example_phrases": {
                 "0": [
-                    "继续。"
+                    "继续."
                 ],
                 "1": [
-                    "继续走300英尺。"
+                    "继续走300英尺."
                 ],
                 "2": [
-                    "继续走10th Avenue。"
+                    "继续走10th Avenue."
                 ],
                 "3": [
-                    "在10th Avenue继续走3英里。"
+                    "在10th Avenue继续走3英里."
                 ],
                 "4": [
-                    "在Mannenbashi East继续。"
+                    "在Mannenbashi East继续."
                 ],
                 "5": [
-                    "在Mannenbashi East继续走2英里。"
+                    "在Mannenbashi East继续走2英里."
                 ],
                 "6": [
-                    "朝Baltimore继续。"
+                    "朝Baltimore继续."
                 ],
                 "7": [
-                    "朝Baltimore继续走5英里。"
+                    "朝Baltimore继续走5英里."
                 ]
             }
         },
         "continue_verbal_alert": {
             "phrases": {
-                "0": "继续。",
-                "1": "继续走<STREET_NAMES>。",
-                "2": "在<JUNCTION_NAME>继续。",
-                "3": "朝<TOWARD_SIGN>继续。"
+                "0": "继续.",
+                "1": "继续走<STREET_NAMES>.",
+                "2": "在<JUNCTION_NAME>继续.",
+                "3": "朝<TOWARD_SIGN>继续."
             },
             "empty_street_name_labels": [
                 "人行道",
@@ -233,53 +233,53 @@
             ],
             "example_phrases": {
                 "0": [
-                    "继续。"
+                    "继续."
                 ],
                 "1": [
-                    "继续走10th Avenue。"
+                    "继续走10th Avenue."
                 ],
                 "2": [
-                    "在Mannenbashi East继续。"
+                    "在Mannenbashi East继续."
                 ],
                 "3": [
-                    "朝Baltimore前进。"
+                    "朝Baltimore前进."
                 ]
             }
         },
         "depart": {
             "phrases": {
-                "0": "出发：<TIME>。",
-                "1": "从<TRANSIT_STOP>出发：<TIME>。"
+                "0": "出发：<TIME>.",
+                "1": "从<TRANSIT_STOP>出发：<TIME>."
             },
             "example_phrases": {
                 "0": [
-                    "出发：8:02 AM。"
+                    "出发：8:02 AM."
                 ],
                 "1": [
-                    "从8 St - NYU出发：8:02 AM。"
+                    "从8 St - NYU出发：8:02 AM."
                 ]
             }
         },
         "depart_verbal": {
             "phrases": {
-                "0": "在<TIME>出发。",
-                "1": "从<TRANSIT_STOP>出发：<TIME>。"
+                "0": "在<TIME>出发.",
+                "1": "从<TRANSIT_STOP>出发：<TIME>."
             },
             "example_phrases": {
                 "0": [
-                    "在8:02 AM出发。"
+                    "在8:02 AM出发."
                 ],
                 "1": [
-                    "从8 St - NYU出发：8:02 AM。"
+                    "从8 St - NYU出发：8:02 AM."
                 ]
             }
         },
         "destination": {
             "phrases": {
-                "0": "您已到达目的地。",
-                "1": "您已到达<DESTINATION>。",
-                "2": "您的目的地在<RELATIVE_DIRECTION>。",
-                "3": "<DESTINATION>在<RELATIVE_DIRECTION>。"
+                "0": "您已到达目的地.",
+                "1": "您已到达<DESTINATION>.",
+                "2": "您的目的地在<RELATIVE_DIRECTION>.",
+                "3": "<DESTINATION>在<RELATIVE_DIRECTION>."
             },
             "relative_directions": [
                 "左",
@@ -287,26 +287,26 @@
             ],
             "example_phrases": {
                 "0": [
-                    "您已到达目的地。"
+                    "您已到达目的地."
                 ],
                 "1": [
-                    "您已到达3206 Powelton Avenue。"
+                    "您已到达3206 Powelton Avenue."
                 ],
                 "2": [
-                    "您的目的地在左边。",
-                    "您的目的地在右边。"
+                    "您的目的地在左边.",
+                    "您的目的地在右边."
                 ],
                 "3": [
-                    "Lancaster Brewing Company在左边。"
+                    "Lancaster Brewing Company在左边."
                 ]
             }
         },
         "destination_verbal": {
             "phrases": {
-                "0": "您已到达目的地。",
-                "1": "您已到达<DESTINATION>。",
-                "2": "您的目的地在<RELATIVE_DIRECTION>。",
-                "3": "<DESTINATION>在<RELATIVE_DIRECTION>。"
+                "0": "您已到达目的地.",
+                "1": "您已到达<DESTINATION>.",
+                "2": "您的目的地在<RELATIVE_DIRECTION>.",
+                "3": "<DESTINATION>在<RELATIVE_DIRECTION>."
             },
             "relative_directions": [
                 "左",
@@ -314,26 +314,26 @@
             ],
             "example_phrases": {
                 "0": [
-                    "您已到达目的地。"
+                    "您已到达目的地."
                 ],
                 "1": [
-                    "您已到达3206 Powelton Avenue。"
+                    "您已到达3206 Powelton Avenue."
                 ],
                 "2": [
-                    "您的目的地在左边。",
-                    "您的目的地在右边。"
+                    "您的目的地在左边.",
+                    "您的目的地在右边."
                 ],
                 "3": [
-                    "Lancaster Brewing Company在左边。"
+                    "Lancaster Brewing Company在左边."
                 ]
             }
         },
         "destination_verbal_alert": {
             "phrases": {
-                "0": "您将抵达目的地。",
-                "1": "您将抵达<DESTINATION>。",
-                "2": "您的目的地将位于<RELATIVE_DIRECTION>。",
-                "3": "<DESTINATION>将位于<RELATIVE_DIRECTION>。"
+                "0": "您将抵达目的地.",
+                "1": "您将抵达<DESTINATION>.",
+                "2": "您的目的地将位于<RELATIVE_DIRECTION>.",
+                "3": "<DESTINATION>将位于<RELATIVE_DIRECTION>."
             },
             "relative_directions": [
                 "左",
@@ -341,26 +341,26 @@
             ],
             "example_phrases": {
                 "0": [
-                    "您将抵达目的地。"
+                    "您将抵达目的地."
                 ],
                 "1": [
-                    "您将抵达3206 Powelton Avenue。"
+                    "您将抵达3206 Powelton Avenue."
                 ],
                 "2": [
-                    "您的目的地将位于左边。",
-                    "您的目的地将位于右边。"
+                    "您的目的地将位于左边.",
+                    "您的目的地将位于右边."
                 ],
                 "3": [
-                    "Lancaster Brewing Company将位于左边。"
+                    "Lancaster Brewing Company将位于左边."
                 ]
             }
         },
         "enter_ferry": {
             "phrases": {
-                "0": "搭乘渡轮。",
-                "1": "搭乘<STREET_NAMES>。",
-                "2": "搭乘<STREET_NAMES><FERRY_LABEL>。",
-                "3": "搭乘渡轮前往<TOWARD_SIGN>。"
+                "0": "搭乘渡轮.",
+                "1": "搭乘<STREET_NAMES>.",
+                "2": "搭乘<STREET_NAMES><FERRY_LABEL>.",
+                "3": "搭乘渡轮前往<TOWARD_SIGN>."
             },
             "empty_street_name_labels": [
                 "人行道",
@@ -371,25 +371,25 @@
             "ferry_label": "渡轮",
             "example_phrases": {
                 "0": [
-                    "搭乘渡轮。"
+                    "搭乘渡轮."
                 ],
                 "1": [
-                    "搭乘Millersburg渡轮。"
+                    "搭乘Millersburg渡轮."
                 ],
                 "2": [
-                    "搭乘Bridgeport - Port Jefferson渡轮。"
+                    "搭乘Bridgeport - Port Jefferson渡轮."
                 ],
                 "3": [
-                    "搭乘渡轮前往Cape May。"
+                    "搭乘渡轮前往Cape May."
                 ]
             }
         },
         "enter_ferry_verbal": {
             "phrases": {
-                "0": "搭乘渡轮。",
-                "1": "进入<STREET_NAMES>。",
-                "2": "搭乘<STREET_NAMES><FERRY_LABEL>。",
-                "3": "搭乘渡轮前往<TOWARD_SIGN>。"
+                "0": "搭乘渡轮.",
+                "1": "进入<STREET_NAMES>.",
+                "2": "搭乘<STREET_NAMES><FERRY_LABEL>.",
+                "3": "搭乘渡轮前往<TOWARD_SIGN>."
             },
             "empty_street_name_labels": [
                 "人行道",
@@ -400,37 +400,37 @@
             "ferry_label": "渡轮",
             "example_phrases": {
                 "0": [
-                    "搭乘渡轮。"
+                    "搭乘渡轮."
                 ],
                 "1": [
-                    "搭乘Millersburg渡轮。"
+                    "搭乘Millersburg渡轮."
                 ],
                 "2": [
-                    "搭乘Bridgeport - Port Jefferson渡轮。"
+                    "搭乘Bridgeport - Port Jefferson渡轮."
                 ],
                 "3": [
-                    "搭乘渡轮前往Cape May。"
+                    "搭乘渡轮前往Cape May."
                 ]
             }
         },
         "enter_roundabout": {
             "phrases": {
-                "0": "进入环形交叉路口。",
-                "1": "进入环形交叉路口，然后选择第<ORDINAL_VALUE>个出口。",
-                "2": "进入环形交叉路口，然后选择第<ORDINAL_VALUE>个出口，进入<ROUNDABOUT_EXIT_STREET_NAMES>。继续行驶在<ROUNDABOUT_EXIT_STREET_NAMES>上。",
-                "3": "进入环形交叉路口，然后选择第<ORDINAL_VALUE>个出口，进入<ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>。继续行驶在<ROUNDABOUT_EXIT_STREET_NAMES>上。",
-                "4": "进入环形交叉路口，然后选择第<ORDINAL_VALUE>个出口，朝<TOWARD_SIGN>驶去。",
-                "5": "进入环形交叉路口，然后选择出口进入<ROUNDABOUT_EXIT_STREET_NAMES>。",
-                "6": "进入环形交叉路口，然后选择出口进入<ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>。继续行驶在<ROUNDABOUT_EXIT_STREET_NAMES>上。",
-                "7": "进入环形交叉路口，然后选择出口朝<TOWARD_SIGN>驶去。",
-                "8": "进入<STREET_NAMES>。",
-                "9": "进入<STREET_NAMES>，然后选择第<ORDINAL_VALUE>个出口。",
-                "10": "进入<STREET_NAMES>，然后选择第<ORDINAL_VALUE>个出口，进入<ROUNDABOUT_EXIT_STREET_NAMES>。",
-                "11": "进入<STREET_NAMES>，然后选择第<ORDINAL_VALUE>个出口进入<ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>。继续行驶在<ROUNDABOUT_EXIT_STREET_NAMES>上。",
-                "12": "进入<STREET_NAMES>，然后选择第<ORDINAL_VALUE>个出口朝<TOWARD_SIGN>驶去。",
-                "13": "进入<STREET_NAMES>，然后选择出口进入<ROUNDABOUT_EXIT_STREET_NAMES>。",
-                "14": "进入<STREET_NAMES>，然后选择出口进入<ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>。继续行驶在<ROUNDABOUT_EXIT_STREET_NAMES>上。",
-                "15": "进入<STREET_NAMES>，然后选择出口朝<TOWARD_SIGN>驶去。"
+                "0": "进入环形交叉路口.",
+                "1": "进入环形交叉路口，然后选择第<ORDINAL_VALUE>个出口.",
+                "2": "进入环形交叉路口，然后选择第<ORDINAL_VALUE>个出口，进入<ROUNDABOUT_EXIT_STREET_NAMES>.继续行驶在<ROUNDABOUT_EXIT_STREET_NAMES>上.",
+                "3": "进入环形交叉路口，然后选择第<ORDINAL_VALUE>个出口，进入<ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>.继续行驶在<ROUNDABOUT_EXIT_STREET_NAMES>上.",
+                "4": "进入环形交叉路口，然后选择第<ORDINAL_VALUE>个出口，朝<TOWARD_SIGN>驶去.",
+                "5": "进入环形交叉路口，然后选择出口进入<ROUNDABOUT_EXIT_STREET_NAMES>.",
+                "6": "进入环形交叉路口，然后选择出口进入<ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>.继续行驶在<ROUNDABOUT_EXIT_STREET_NAMES>上.",
+                "7": "进入环形交叉路口，然后选择出口朝<TOWARD_SIGN>驶去.",
+                "8": "进入<STREET_NAMES>.",
+                "9": "进入<STREET_NAMES>，然后选择第<ORDINAL_VALUE>个出口.",
+                "10": "进入<STREET_NAMES>，然后选择第<ORDINAL_VALUE>个出口，进入<ROUNDABOUT_EXIT_STREET_NAMES>.",
+                "11": "进入<STREET_NAMES>，然后选择第<ORDINAL_VALUE>个出口进入<ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>.继续行驶在<ROUNDABOUT_EXIT_STREET_NAMES>上.",
+                "12": "进入<STREET_NAMES>，然后选择第<ORDINAL_VALUE>个出口朝<TOWARD_SIGN>驶去.",
+                "13": "进入<STREET_NAMES>，然后选择出口进入<ROUNDABOUT_EXIT_STREET_NAMES>.",
+                "14": "进入<STREET_NAMES>，然后选择出口进入<ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>.继续行驶在<ROUNDABOUT_EXIT_STREET_NAMES>上.",
+                "15": "进入<STREET_NAMES>，然后选择出口朝<TOWARD_SIGN>驶去."
             },
             "ordinal_values": [
                 "第1个",
@@ -452,82 +452,82 @@
             ],
             "example_phrases": {
                 "0": [
-                    "进入环形交叉路口。"
+                    "进入环形交叉路口."
                 ],
                 "1": [
-                    "进入环形交叉路口，然后选择第1个出口。",
-                    "进入环形交叉路口，然后选择第2个出口。",
-                    "进入环形交叉路口，然后选择第3个出口。",
-                    "进入环形交叉路口，然后选择第4个出口。",
-                    "进入环形交叉路口，然后选择第5个出口。",
-                    "进入环形交叉路口，然后选择第6个出口。",
-                    "进入环形交叉路口，然后选择第7个出口。",
-                    "进入环形交叉路口，然后选择第8个出口。",
-                    "进入环形交叉路口，然后选择第9个出口。",
-                    "进入环形交叉路口，然后选择第10个出口。"
+                    "进入环形交叉路口，然后选择第1个出口.",
+                    "进入环形交叉路口，然后选择第2个出口.",
+                    "进入环形交叉路口，然后选择第3个出口.",
+                    "进入环形交叉路口，然后选择第4个出口.",
+                    "进入环形交叉路口，然后选择第5个出口.",
+                    "进入环形交叉路口，然后选择第6个出口.",
+                    "进入环形交叉路口，然后选择第7个出口.",
+                    "进入环形交叉路口，然后选择第8个出口.",
+                    "进入环形交叉路口，然后选择第9个出口.",
+                    "进入环形交叉路口，然后选择第10个出口."
                 ],
                 "2": [
-                    "进入环形交叉路口，然后选择第3个出口进入Main Street。"
+                    "进入环形交叉路口，然后选择第3个出口进入Main Street."
                 ],
                 "3": [
-                    "进入环形交叉路口，然后选择第3个出口进入US 322/Main Street。继续行驶在US 322上。"
+                    "进入环形交叉路口，然后选择第3个出口进入US 322/Main Street.继续行驶在US 322上."
                 ],
                 "4": [
-                    "进入环形交叉路口，然后选择第3个出口朝Baltimore驶去。"
+                    "进入环形交叉路口，然后选择第3个出口朝Baltimore驶去."
                 ],
                 "5": [
-                    "进入环形交叉路口，然后选择出口进入Main Street。"
+                    "进入环形交叉路口，然后选择出口进入Main Street."
                 ],
                 "6": [
-                    "进入环形交叉路口，然后选择出口进入US 322/Main Street。继续行驶在US 322上。"
+                    "进入环形交叉路口，然后选择出口进入US 322/Main Street.继续行驶在US 322上."
                 ],
                 "7": [
-                    "进入环形交叉路口，然后选择出口朝Baltimore驶去。"
+                    "进入环形交叉路口，然后选择出口朝Baltimore驶去."
                 ],
                 "8": [
-                    "进入Dupont Circle。"
+                    "进入Dupont Circle."
                 ],
                 "9": [
-                    "进入Dupont Circle，然后选择第1个出口。"
+                    "进入Dupont Circle，然后选择第1个出口."
                 ],
                 "10": [
-                    "进入Dupont Circle，然后选择第3个出口进入Main Street。"
+                    "进入Dupont Circle，然后选择第3个出口进入Main Street."
                 ],
                 "11": [
-                    "进入Dupont Circle，然后选择第3个出口进入US 322/Main Street。继续行驶在US 322上。"
+                    "进入Dupont Circle，然后选择第3个出口进入US 322/Main Street.继续行驶在US 322上."
                 ],
                 "12": [
-                    "进入Dupont Circle，然后选择第3个出口朝Baltimore驶去。"
+                    "进入Dupont Circle，然后选择第3个出口朝Baltimore驶去."
                 ],
                 "13": [
-                    "进入Dupont Circle，然后选择出口进入Main Street。"
+                    "进入Dupont Circle，然后选择出口进入Main Street."
                 ],
                 "14": [
-                    "进入Dupont Circle，然后选择出口进入US 322/Main Street。继续行驶在US 322上。"
+                    "进入Dupont Circle，然后选择出口进入US 322/Main Street.继续行驶在US 322上."
                 ],
                 "15": [
-                    "进入Dupont Circle，然后选择出口朝Baltimore驶去。"
+                    "进入Dupont Circle，然后选择出口朝Baltimore驶去."
                 ]
             }
         },
         "enter_roundabout_verbal": {
             "phrases": {
-                "0": "进入环形交叉路口。",
-                "1": "进入环形交叉路口并选择第<ORDINAL_VALUE>个出口。",
-                "2": "进入环形交叉路口并选择第<ORDINAL_VALUE>个出口进入<ROUNDABOUT_EXIT_STREET_NAMES>。",
-                "3": "进入环形交叉路口并选择第<ORDINAL_VALUE>个出口进入<ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>。",
-                "4": "进入环形交叉路口并选择第<ORDINAL_VALUE>个出口朝<TOWARD_SIGN>驶去。",
-                "5": "进入环形交叉路口并选择出口进入<ROUNDABOUT_EXIT_STREET_NAMES>。",
-                "6": "进入环形交叉路口并选择出口进入<ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>。",
-                "7": "进入环形交叉路口并选择出口朝<TOWARD_SIGN>驶去。",
-                "8": "进入<STREET_NAMES>。",
-                "9": "进入<STREET_NAMES>并选择第<ORDINAL_VALUE>个出口。",
-                "10": "进入<STREET_NAMES>并选择第<ORDINAL_VALUE>个出口进入<ROUNDABOUT_EXIT_STREET_NAMES>。",
-                "11": "进入<STREET_NAMES>并选择第<ORDINAL_VALUE>个出口进入<ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>。",
-                "12": "进入<STREET_NAMES>并选择第<ORDINAL_VALUE>个出口朝<TOWARD_SIGN>驶去。",
-                "13": "进入<STREET_NAMES>并选择出口进入<ROUNDABOUT_EXIT_STREET_NAMES>。",
-                "14": "进入<STREET_NAMES>并选择出口进入<ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>。",
-                "15": "进入<STREET_NAMES>并选择出口朝<TOWARD_SIGN>驶去。"
+                "0": "进入环形交叉路口.",
+                "1": "进入环形交叉路口并选择第<ORDINAL_VALUE>个出口.",
+                "2": "进入环形交叉路口并选择第<ORDINAL_VALUE>个出口进入<ROUNDABOUT_EXIT_STREET_NAMES>.",
+                "3": "进入环形交叉路口并选择第<ORDINAL_VALUE>个出口进入<ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>.",
+                "4": "进入环形交叉路口并选择第<ORDINAL_VALUE>个出口朝<TOWARD_SIGN>驶去.",
+                "5": "进入环形交叉路口并选择出口进入<ROUNDABOUT_EXIT_STREET_NAMES>.",
+                "6": "进入环形交叉路口并选择出口进入<ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>.",
+                "7": "进入环形交叉路口并选择出口朝<TOWARD_SIGN>驶去.",
+                "8": "进入<STREET_NAMES>.",
+                "9": "进入<STREET_NAMES>并选择第<ORDINAL_VALUE>个出口.",
+                "10": "进入<STREET_NAMES>并选择第<ORDINAL_VALUE>个出口进入<ROUNDABOUT_EXIT_STREET_NAMES>.",
+                "11": "进入<STREET_NAMES>并选择第<ORDINAL_VALUE>个出口进入<ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>.",
+                "12": "进入<STREET_NAMES>并选择第<ORDINAL_VALUE>个出口朝<TOWARD_SIGN>驶去.",
+                "13": "进入<STREET_NAMES>并选择出口进入<ROUNDABOUT_EXIT_STREET_NAMES>.",
+                "14": "进入<STREET_NAMES>并选择出口进入<ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>.",
+                "15": "进入<STREET_NAMES>并选择出口朝<TOWARD_SIGN>驶去."
             },
             "ordinal_values": [
                 "第1个",
@@ -549,62 +549,62 @@
             ],
             "example_phrases": {
                 "0": [
-                    "进入环形交叉路口。"
+                    "进入环形交叉路口."
                 ],
                 "1": [
-                    "进入环形交叉路口并选择第1个出口。",
-                    "进入环形交叉路口并选择第2个出口。",
-                    "进入环形交叉路口并选择第3个出口。",
-                    "进入环形交叉路口并选择第4个出口。",
-                    "进入环形交叉路口并选择第5个出口。",
-                    "进入环形交叉路口并选择第6个出口。",
-                    "进入环形交叉路口并选择第7个出口。",
-                    "进入环形交叉路口并选择第8个出口。",
-                    "进入环形交叉路口并选择第9个出口。",
-                    "进入环形交叉路口并选择第10个出口。"
+                    "进入环形交叉路口并选择第1个出口.",
+                    "进入环形交叉路口并选择第2个出口.",
+                    "进入环形交叉路口并选择第3个出口.",
+                    "进入环形交叉路口并选择第4个出口.",
+                    "进入环形交叉路口并选择第5个出口.",
+                    "进入环形交叉路口并选择第6个出口.",
+                    "进入环形交叉路口并选择第7个出口.",
+                    "进入环形交叉路口并选择第8个出口.",
+                    "进入环形交叉路口并选择第9个出口.",
+                    "进入环形交叉路口并选择第10个出口."
                 ],
-                "2": "进入环形交叉路口并选择第3个出口进入Main Street。",
-                "3": "进入环形交叉路口并选择第3个出口进入U.S. 3 22/Main Street。",
-                "4": "进入环形交叉路口并选择第3个出口朝Baltimore驶去。",
-                "5": "进入环形交叉路口并选择出口进入Main Street。",
-                "6": "进入环形交叉路口并选择出口进入U.S. 3 22/Main Street。",
-                "7": "进入环形交叉路口并选择出口朝Baltimore驶去。",
-                "8": "进入Dupont Circle。",
-                "9": "进入Dupont Circle并选择第1个出口。",
-                "10": "进入Dupont Circle并选择第3个出口进入Main Street。",
-                "11": "进入Dupont Circle并选择第3个出口进入U.S. 3 22/Main Street。",
-                "12": "进入Dupont Circle并选择第3个出口朝Baltimore驶去。",
-                "13": "进入Dupont Circle并选择出口进入Main Street。",
-                "14": "进入Dupont Circle并选择出口进入U.S. 3 22/Main Street。",
-                "15": "进入Dupont Circle并选择出口朝Baltimore驶去。"
+                "2": "进入环形交叉路口并选择第3个出口进入Main Street.",
+                "3": "进入环形交叉路口并选择第3个出口进入U.S. 3 22/Main Street.",
+                "4": "进入环形交叉路口并选择第3个出口朝Baltimore驶去.",
+                "5": "进入环形交叉路口并选择出口进入Main Street.",
+                "6": "进入环形交叉路口并选择出口进入U.S. 3 22/Main Street.",
+                "7": "进入环形交叉路口并选择出口朝Baltimore驶去.",
+                "8": "进入Dupont Circle.",
+                "9": "进入Dupont Circle并选择第1个出口.",
+                "10": "进入Dupont Circle并选择第3个出口进入Main Street.",
+                "11": "进入Dupont Circle并选择第3个出口进入U.S. 3 22/Main Street.",
+                "12": "进入Dupont Circle并选择第3个出口朝Baltimore驶去.",
+                "13": "进入Dupont Circle并选择出口进入Main Street.",
+                "14": "进入Dupont Circle并选择出口进入U.S. 3 22/Main Street.",
+                "15": "进入Dupont Circle并选择出口朝Baltimore驶去."
             }
         },
         "exit": {
             "phrases": {
-                "0": "选择<RELATIVE_DIRECTION>出口。",
-                "1": "选择<NUMBER_SIGN>号出口<RELATIVE_DIRECTION>。",
-                "2": "选择<BRANCH_SIGN>出口<RELATIVE_DIRECTION>。",
-                "3": "选择<NUMBER_SIGN>号出口<RELATIVE_DIRECTION>，进入<BRANCH_SIGN>。",
-                "4": "选择<RELATIVE_DIRECTION>出口朝<TOWARD_SIGN>驶去。",
-                "5": "选择<NUMBER_SIGN>号出口<RELATIVE_DIRECTION>朝<TOWARD_SIGN>驶去。",
-                "6": "选择<BRANCH_SIGN>出口<RELATIVE_DIRECTION>朝<TOWARD_SIGN>驶去。",
-                "7": "选择<NUMBER_SIGN>号出口<RELATIVE_DIRECTION>，进入<BRANCH_SIGN>朝<TOWARD_SIGN>驶去。",
-                "8": "选择<NAME_SIGN>出口<RELATIVE_DIRECTION>。",
-                "10": "选择<NAME_SIGN>出口<RELATIVE_DIRECTION>，进入<BRANCH_SIGN>。",
-                "12": "选择<NAME_SIGN>出口<RELATIVE_DIRECTION>朝<TOWARD_SIGN>驶去。",
-                "14": "选择<NAME_SIGN>出口<RELATIVE_DIRECTION>，进入<BRANCH_SIGN>朝<TOWARD_SIGN>驶去。",
-                "15": "选择出口。",
-                "16": "选择<NUMBER_SIGN>号出口。",
-                "17": "选择<BRANCH_SIGN>出口。",
-                "18": "选择<NUMBER_SIGN>号出口，进入<BRANCH_SIGN>。",
-                "19": "选择出口朝<TOWARD_SIGN>驶去。",
-                "20": "选择<NUMBER_SIGN>号出口朝<TOWARD_SIGN>驶去。",
-                "21": "选择<BRANCH_SIGN>出口朝<TOWARD_SIGN>驶去。",
-                "22": "选择<NUMBER_SIGN>号出口，进入<BRANCH_SIGN>朝<TOWARD_SIGN>驶去。",
-                "23": "选择<NAME_SIGN>出口。",
-                "25": "选择<NAME_SIGN>出口，进入<BRANCH_SIGN>。",
-                "27": "选择<NAME_SIGN>出口朝<TOWARD_SIGN>驶去。",
-                "29": "选择<NAME_SIGN>出口，进入<BRANCH_SIGN>朝<TOWARD_SIGN>驶去。"
+                "0": "选择<RELATIVE_DIRECTION>出口.",
+                "1": "选择<NUMBER_SIGN>号出口<RELATIVE_DIRECTION>.",
+                "2": "选择<BRANCH_SIGN>出口<RELATIVE_DIRECTION>.",
+                "3": "选择<NUMBER_SIGN>号出口<RELATIVE_DIRECTION>，进入<BRANCH_SIGN>.",
+                "4": "选择<RELATIVE_DIRECTION>出口朝<TOWARD_SIGN>驶去.",
+                "5": "选择<NUMBER_SIGN>号出口<RELATIVE_DIRECTION>朝<TOWARD_SIGN>驶去.",
+                "6": "选择<BRANCH_SIGN>出口<RELATIVE_DIRECTION>朝<TOWARD_SIGN>驶去.",
+                "7": "选择<NUMBER_SIGN>号出口<RELATIVE_DIRECTION>，进入<BRANCH_SIGN>朝<TOWARD_SIGN>驶去.",
+                "8": "选择<NAME_SIGN>出口<RELATIVE_DIRECTION>.",
+                "10": "选择<NAME_SIGN>出口<RELATIVE_DIRECTION>，进入<BRANCH_SIGN>.",
+                "12": "选择<NAME_SIGN>出口<RELATIVE_DIRECTION>朝<TOWARD_SIGN>驶去.",
+                "14": "选择<NAME_SIGN>出口<RELATIVE_DIRECTION>，进入<BRANCH_SIGN>朝<TOWARD_SIGN>驶去.",
+                "15": "选择出口.",
+                "16": "选择<NUMBER_SIGN>号出口.",
+                "17": "选择<BRANCH_SIGN>出口.",
+                "18": "选择<NUMBER_SIGN>号出口，进入<BRANCH_SIGN>.",
+                "19": "选择出口朝<TOWARD_SIGN>驶去.",
+                "20": "选择<NUMBER_SIGN>号出口朝<TOWARD_SIGN>驶去.",
+                "21": "选择<BRANCH_SIGN>出口朝<TOWARD_SIGN>驶去.",
+                "22": "选择<NUMBER_SIGN>号出口，进入<BRANCH_SIGN>朝<TOWARD_SIGN>驶去.",
+                "23": "选择<NAME_SIGN>出口.",
+                "25": "选择<NAME_SIGN>出口，进入<BRANCH_SIGN>.",
+                "27": "选择<NAME_SIGN>出口朝<TOWARD_SIGN>驶去.",
+                "29": "选择<NAME_SIGN>出口，进入<BRANCH_SIGN>朝<TOWARD_SIGN>驶去."
             },
             "relative_directions": [
                 "左转",
@@ -612,86 +612,86 @@
             ],
             "example_phrases": {
                 "0": [
-                    "选择左侧出口。",
-                    "选择右侧出口。"
+                    "选择左侧出口.",
+                    "选择右侧出口."
                 ],
                 "1": [
-                    "选择右侧出口67 B-A。"
+                    "选择右侧出口67 B-A."
                 ],
                 "2": [
-                    "选择右侧US 322 West出口。"
+                    "选择右侧US 322 West出口."
                 ],
                 "3": [
-                    "选择右侧出口67 B-A，进入US 322 West。"
+                    "选择右侧出口67 B-A，进入US 322 West."
                 ],
                 "4": [
-                    "选择右侧出口朝Lewistown驶去。"
+                    "选择右侧出口朝Lewistown驶去."
                 ],
                 "5": [
-                    "选择右侧出口67 B-A朝Lewistown驶去。"
+                    "选择右侧出口67 B-A朝Lewistown驶去."
                 ],
                 "6": [
-                    "选择右侧US 322 West出口朝Lewistown驶去。"
+                    "选择右侧US 322 West出口朝Lewistown驶去."
                 ],
                 "7": [
-                    "选择右侧出口67 B-A，进入US 322 West朝Lewistown/State College驶去。"
+                    "选择右侧出口67 B-A，进入US 322 West朝Lewistown/State College驶去."
                 ],
                 "8": [
-                    "选择左侧White Marsh Boulevard出口。"
+                    "选择左侧White Marsh Boulevard出口."
                 ],
                 "10": [
-                    "选择左侧MD 43 East出口。"
+                    "选择左侧MD 43 East出口."
                 ],
                 "12": [
-                    "选择左侧White Marsh Boulevard出口朝White Marsh驶去。"
+                    "选择左侧White Marsh Boulevard出口朝White Marsh驶去."
                 ],
                 "14": [
-                    "选择左侧MD 43 East出口朝White Marsh驶去。"
+                    "选择左侧MD 43 East出口朝White Marsh驶去."
                 ],
                 "15": [
-                    "选择出口。"
+                    "选择出口."
                 ],
                 "16": [
-                    "选择出口67 B-A。"
+                    "选择出口67 B-A."
                 ],
                 "17": [
-                    "选择US 322 West出口。"
+                    "选择US 322 West出口."
                 ],
                 "18": [
-                    "选择出口67 B-A进入US 322 West。"
+                    "选择出口67 B-A进入US 322 West."
                 ],
                 "19": [
-                    "选择出口朝Lewistown驶去。"
+                    "选择出口朝Lewistown驶去."
                 ],
                 "20": [
-                    "选择出口67 B-A朝Lewistown驶去。"
+                    "选择出口67 B-A朝Lewistown驶去."
                 ],
                 "21": [
-                    "选择US 322 West出口朝Lewistown驶去。"
+                    "选择US 322 West出口朝Lewistown驶去."
                 ],
                 "22": [
-                    "选择出口67 B-A进入US 322 West朝Lewistown/State College驶去。"
+                    "选择出口67 B-A进入US 322 West朝Lewistown/State College驶去."
                 ],
                 "23": [
-                    "选择White Marsh Boulevard出口。"
+                    "选择White Marsh Boulevard出口."
                 ],
                 "25": [
-                    "选择MD 43 East出口进入White Marsh Boulevard朝White Marsh驶去。"
+                    "选择MD 43 East出口进入White Marsh Boulevard朝White Marsh驶去."
                 ],
                 "27": [
-                    "选择White Marsh Boulevard出口朝White Marsh驶去。"
+                    "选择White Marsh Boulevard出口朝White Marsh驶去."
                 ],
                 "29": [
-                    "选择MD 43 East出口进入White Marsh Boulevard朝White Marsh驶去。"
+                    "选择MD 43 East出口进入White Marsh Boulevard朝White Marsh驶去."
                 ]
             }
         },
         "exit_roundabout": {
             "phrases": {
-                "0": "退出环形交叉路口。",
-                "1": "从环形交叉路口退出到<STREET_NAMES>。",
-                "2": "从环形交叉路口退出到<BEGIN_STREET_NAMES>，继续行驶在<STREET_NAMES>上。",
-                "3": "从环形交叉路口退出朝<TOWARD_SIGN>驶去。"
+                "0": "退出环形交叉路口.",
+                "1": "从环形交叉路口退出到<STREET_NAMES>.",
+                "2": "从环形交叉路口退出到<BEGIN_STREET_NAMES>，继续行驶在<STREET_NAMES>上.",
+                "3": "从环形交叉路口退出朝<TOWARD_SIGN>驶去."
             },
             "empty_street_name_labels": [
                 "人行道",
@@ -701,25 +701,25 @@
             ],
             "example_phrases": {
                 "0": [
-                    "退出环形交叉路口。"
+                    "退出环形交叉路口."
                 ],
                 "1": [
-                    "从环形交叉路口退出到Philadelphia Road/MD 7。"
+                    "从环形交叉路口退出到Philadelphia Road/MD 7."
                 ],
                 "2": [
-                    "从环形交叉路口退出到Catoctin Mountain Highway/US 15。继续行驶在US 15上。"
+                    "从环形交叉路口退出到Catoctin Mountain Highway/US 15.继续行驶在US 15上."
                 ],
                 "3": [
-                    "从环形交叉路口退出朝Baltimore驶去。"
+                    "从环形交叉路口退出朝Baltimore驶去."
                 ]
             }
         },
         "exit_roundabout_verbal": {
             "phrases": {
-                "0": "退出环形交叉路口。",
-                "1": "从环形交叉路口退出到<STREET_NAMES>。",
-                "2": "从环形交叉路口退出到<BEGIN_STREET_NAMES>。",
-                "3": "从环形交叉路口退出朝<TOWARD_SIGN>驶去。"
+                "0": "退出环形交叉路口.",
+                "1": "从环形交叉路口退出到<STREET_NAMES>.",
+                "2": "从环形交叉路口退出到<BEGIN_STREET_NAMES>.",
+                "3": "从环形交叉路口退出朝<TOWARD_SIGN>驶去."
             },
             "empty_street_name_labels": [
                 "人行道",
@@ -729,45 +729,45 @@
             ],
             "example_phrases": {
                 "0": [
-                    "退出环形交叉路口。"
+                    "退出环形交叉路口."
                 ],
                 "1": [
-                    "从环形交叉路口退出到Philadelphia Road, Maryland 7。"
+                    "从环形交叉路口退出到Philadelphia Road, Maryland 7."
                 ],
                 "2": [
-                    "从环形交叉路口退出到Catoctin Mountain Highway, U.S. 15。"
+                    "从环形交叉路口退出到Catoctin Mountain Highway, U.S. 15."
                 ],
                 "3": [
-                    "从环形交叉路口退出朝Baltimore驶去。"
+                    "从环形交叉路口退出朝Baltimore驶去."
                 ]
             }
         },
         "exit_verbal": {
             "phrases": {
-                "0": "选择<RELATIVE_DIRECTION>出口。",
-                "1": "选择<NUMBER_SIGN>号出口<RELATIVE_DIRECTION>。",
-                "2": "选择<BRANCH_SIGN>出口<RELATIVE_DIRECTION>。",
-                "3": "选择<NUMBER_SIGN>号出口<RELATIVE_DIRECTION>，进入<BRANCH_SIGN>。",
-                "4": "选择<RELATIVE_DIRECTION>出口朝<TOWARD_SIGN>驶去。",
-                "5": "选择<NUMBER_SIGN>号出口<RELATIVE_DIRECTION>朝<TOWARD_SIGN>驶去。",
-                "6": "选择<BRANCH_SIGN>出口<RELATIVE_DIRECTION>朝<TOWARD_SIGN>驶去。",
-                "7": "选择<NUMBER_SIGN>号出口<RELATIVE_DIRECTION>，进入<BRANCH_SIGN>朝<TOWARD_SIGN>驶去。",
-                "8": "选择<NAME_SIGN>出口<RELATIVE_DIRECTION>。",
-                "10": "选择<NAME_SIGN>出口<RELATIVE_DIRECTION>，进入<BRANCH_SIGN>。",
-                "12": "选择<NAME_SIGN>出口<RELATIVE_DIRECTION>朝<TOWARD_SIGN>驶去。",
-                "14": "选择<NAME_SIGN>出口<RELATIVE_DIRECTION>，进入<BRANCH_SIGN>朝<TOWARD_SIGN>驶去。",
-                "15": "选择出口。",
-                "16": "选择<NUMBER_SIGN>号出口。",
-                "17": "选择<BRANCH_SIGN>出口。",
-                "18": "选择<NUMBER_SIGN>号出口，进入<BRANCH_SIGN>。",
-                "19": "选择出口朝<TOWARD_SIGN>驶去。",
-                "20": "选择<NUMBER_SIGN>号出口朝<TOWARD_SIGN>驶去。",
-                "21": "选择<BRANCH_SIGN>出口朝<TOWARD_SIGN>驶去。",
-                "22": "选择<NUMBER_SIGN>号出口进入<BRANCH_SIGN>朝<TOWARD_SIGN>驶去。",
-                "23": "选择<NAME_SIGN>出口。",
-                "25": "选择<NAME_SIGN>出口进入<BRANCH_SIGN>。",
-                "27": "选择<NAME_SIGN>出口朝<TOWARD_SIGN>驶去。",
-                "29": "选择<NAME_SIGN>出口进入<BRANCH_SIGN>朝<TOWARD_SIGN>驶去。"
+                "0": "选择<RELATIVE_DIRECTION>出口.",
+                "1": "选择<NUMBER_SIGN>号出口<RELATIVE_DIRECTION>.",
+                "2": "选择<BRANCH_SIGN>出口<RELATIVE_DIRECTION>.",
+                "3": "选择<NUMBER_SIGN>号出口<RELATIVE_DIRECTION>，进入<BRANCH_SIGN>.",
+                "4": "选择<RELATIVE_DIRECTION>出口朝<TOWARD_SIGN>驶去.",
+                "5": "选择<NUMBER_SIGN>号出口<RELATIVE_DIRECTION>朝<TOWARD_SIGN>驶去.",
+                "6": "选择<BRANCH_SIGN>出口<RELATIVE_DIRECTION>朝<TOWARD_SIGN>驶去.",
+                "7": "选择<NUMBER_SIGN>号出口<RELATIVE_DIRECTION>，进入<BRANCH_SIGN>朝<TOWARD_SIGN>驶去.",
+                "8": "选择<NAME_SIGN>出口<RELATIVE_DIRECTION>.",
+                "10": "选择<NAME_SIGN>出口<RELATIVE_DIRECTION>，进入<BRANCH_SIGN>.",
+                "12": "选择<NAME_SIGN>出口<RELATIVE_DIRECTION>朝<TOWARD_SIGN>驶去.",
+                "14": "选择<NAME_SIGN>出口<RELATIVE_DIRECTION>，进入<BRANCH_SIGN>朝<TOWARD_SIGN>驶去.",
+                "15": "选择出口.",
+                "16": "选择<NUMBER_SIGN>号出口.",
+                "17": "选择<BRANCH_SIGN>出口.",
+                "18": "选择<NUMBER_SIGN>号出口，进入<BRANCH_SIGN>.",
+                "19": "选择出口朝<TOWARD_SIGN>驶去.",
+                "20": "选择<NUMBER_SIGN>号出口朝<TOWARD_SIGN>驶去.",
+                "21": "选择<BRANCH_SIGN>出口朝<TOWARD_SIGN>驶去.",
+                "22": "选择<NUMBER_SIGN>号出口进入<BRANCH_SIGN>朝<TOWARD_SIGN>驶去.",
+                "23": "选择<NAME_SIGN>出口.",
+                "25": "选择<NAME_SIGN>出口进入<BRANCH_SIGN>.",
+                "27": "选择<NAME_SIGN>出口朝<TOWARD_SIGN>驶去.",
+                "29": "选择<NAME_SIGN>出口进入<BRANCH_SIGN>朝<TOWARD_SIGN>驶去."
             },
             "relative_directions": [
                 "左转",
@@ -775,77 +775,77 @@
             ],
             "example_phrases": {
                 "0": [
-                    "选择左侧出口。",
-                    "选择右侧出口。"
+                    "选择左侧出口.",
+                    "选择右侧出口."
                 ],
                 "1": [
-                    "选择右侧出口67 B-A。"
+                    "选择右侧出口67 B-A."
                 ],
                 "2": [
-                    "选择右侧U.S. 3 22 West出口。"
+                    "选择右侧U.S. 3 22 West出口."
                 ],
                 "3": [
-                    "选择右侧出口67 B-A，进入U.S. 3 22 West。"
+                    "选择右侧出口67 B-A，进入U.S. 3 22 West."
                 ],
                 "4": [
-                    "选择右侧出口朝Lewistown驶去。"
+                    "选择右侧出口朝Lewistown驶去."
                 ],
                 "5": [
-                    "选择右侧出口67 B-A朝Lewistown驶去。"
+                    "选择右侧出口67 B-A朝Lewistown驶去."
                 ],
                 "6": [
-                    "选择右侧出口U.S. 3 22 West朝Lewistown驶去。"
+                    "选择右侧出口U.S. 3 22 West朝Lewistown驶去."
                 ],
                 "7": [
-                    "选择右侧出口67 B-A进入U.S. 3 22 West朝Lewistown/State College驶去。"
+                    "选择右侧出口67 B-A进入U.S. 3 22 West朝Lewistown/State College驶去."
                 ],
                 "8": [
-                    "选择左侧White Marsh Boulevard出口。"
+                    "选择左侧White Marsh Boulevard出口."
                 ],
                 "10": [
-                    "选择左侧Maryland 43 East出口进入White Marsh Boulevard朝White Marsh驶去。"
+                    "选择左侧Maryland 43 East出口进入White Marsh Boulevard朝White Marsh驶去."
                 ],
                 "12": [
-                    "选择左侧White Marsh Boulevard出口朝White Marsh驶去。"
+                    "选择左侧White Marsh Boulevard出口朝White Marsh驶去."
                 ],
                 "14": [
-                    "选择左侧Maryland 43 East出口进入White Marsh Boulevard朝White Marsh驶去。"
+                    "选择左侧Maryland 43 East出口进入White Marsh Boulevard朝White Marsh驶去."
                 ],
                 "15": [
-                    "选择出口。"
+                    "选择出口."
                 ],
                 "16": [
-                    "选择出口67 B-A。"
+                    "选择出口67 B-A."
                 ],
                 "17": [
-                    "选择US 322 West出口。"
+                    "选择US 322 West出口."
                 ],
                 "18": [
-                    "选择出口67 B-A进入US 322 West。"
+                    "选择出口67 B-A进入US 322 West."
                 ],
                 "19": [
-                    "选择出口朝Lewistown驶去。"
+                    "选择出口朝Lewistown驶去."
                 ],
                 "20": [
-                    "选择出口67 B-A朝Lewistown驶去。"
+                    "选择出口67 B-A朝Lewistown驶去."
                 ],
                 "21": [
-                    "选择US 322 West出口朝Lewistown驶去。"
+                    "选择US 322 West出口朝Lewistown驶去."
                 ],
                 "22": [
-                    "选择出口67 B-A进入US 322 West朝Lewistown/State College驶去。"
+                    "选择出口67 B-A进入US 322 West朝Lewistown/State College驶去."
                 ],
                 "23": [
-                    "选择左侧White Marsh Boulevard出口。"
+                    "选择左侧White Marsh Boulevard出口."
                 ],
                 "25": [
-                    "选择左侧MD 43 East出口进入White Marsh Boulevard朝White Marsh驶去。"
+                    "选择左侧MD 43 East出口进入White Marsh Boulevard朝White Marsh驶去."
                 ],
                 "27": [
-                    "选择左侧White Marsh Boulevard出口朝White Marsh驶去。"
+                    "选择左侧White Marsh Boulevard出口朝White Marsh驶去."
                 ],
                 "29": [
-                    "选择左侧MD 43 East出口进入White Marsh Boulevard朝White Marsh驶去。"
+                    "选择左侧MD 43 East出口进入White Marsh Boulevard朝White Marsh驶去."
                 ]
             }
         },
@@ -861,14 +861,14 @@
         },
         "keep": {
             "phrases": {
-                "0": "在分叉路口保持<RELATIVE_DIRECTION>。",
-                "1": "保持<RELATIVE_DIRECTION>以走出口<NUMBER_SIGN>。",
-                "2": "保持<RELATIVE_DIRECTION>以走<STREET_NAMES>。",
-                "3": "保持<RELATIVE_DIRECTION>以走出口<NUMBER_SIGN>，进入<STREET_NAMES>。",
-                "4": "保持<RELATIVE_DIRECTION>朝<TOWARD_SIGN>。",
-                "5": "保持<RELATIVE_DIRECTION>以走出口<NUMBER_SIGN>朝<TOWARD_SIGN>。",
-                "6": "保持<RELATIVE_DIRECTION>以走<STREET_NAMES>朝<TOWARD_SIGN>。",
-                "7": "保持<RELATIVE_DIRECTION>以走出口<NUMBER_SIGN>，进入<STREET_NAMES>朝<TOWARD_SIGN>。"
+                "0": "在分叉路口保持<RELATIVE_DIRECTION>.",
+                "1": "保持<RELATIVE_DIRECTION>以走出口<NUMBER_SIGN>.",
+                "2": "保持<RELATIVE_DIRECTION>以走<STREET_NAMES>.",
+                "3": "保持<RELATIVE_DIRECTION>以走出口<NUMBER_SIGN>，进入<STREET_NAMES>.",
+                "4": "保持<RELATIVE_DIRECTION>朝<TOWARD_SIGN>.",
+                "5": "保持<RELATIVE_DIRECTION>以走出口<NUMBER_SIGN>朝<TOWARD_SIGN>.",
+                "6": "保持<RELATIVE_DIRECTION>以走<STREET_NAMES>朝<TOWARD_SIGN>.",
+                "7": "保持<RELATIVE_DIRECTION>以走出口<NUMBER_SIGN>，进入<STREET_NAMES>朝<TOWARD_SIGN>."
             },
             "empty_street_name_labels": [
                 "人行道",
@@ -883,39 +883,39 @@
             ],
             "example_phrases": {
                 "0": [
-                    "在分叉路口保持左侧。",
-                    "在分叉路口保持直行。",
-                    "在分叉路口保持右侧。"
+                    "在分叉路口保持左侧.",
+                    "在分叉路口保持直行.",
+                    "在分叉路口保持右侧."
                 ],
                 "1": [
-                    "保持右侧以走出口62。"
+                    "保持右侧以走出口62."
                 ],
                 "2": [
-                    "保持右侧以走I 895 South。"
+                    "保持右侧以走I 895 South."
                 ],
                 "3": [
-                    "保持右侧以走出口62，进入I 895 South。"
+                    "保持右侧以走出口62，进入I 895 South."
                 ],
                 "4": [
-                    "保持右侧朝Annapolis。"
+                    "保持右侧朝Annapolis."
                 ],
                 "5": [
-                    "保持右侧以走出口62朝Annapolis。"
+                    "保持右侧以走出口62朝Annapolis."
                 ],
                 "6": [
-                    "保持右侧以走I 895 South朝Annapolis。"
+                    "保持右侧以走I 895 South朝Annapolis."
                 ],
                 "7": [
-                    "保持右侧以走出口62，进入I 895 South朝Annapolis。"
+                    "保持右侧以走出口62，进入I 895 South朝Annapolis."
                 ]
             }
         },
         "keep_to_stay_on": {
             "phrases": {
-                "0": "保持<RELATIVE_DIRECTION>以继续沿着<STREET_NAMES>。",
-                "1": "保持<RELATIVE_DIRECTION>以走出口<NUMBER_SIGN>以继续沿着<STREET_NAMES>。",
-                "2": "保持<RELATIVE_DIRECTION>以继续沿着<STREET_NAMES>朝<TOWARD_SIGN>。",
-                "3": "保持<RELATIVE_DIRECTION>以走出口<NUMBER_SIGN>以继续沿着<STREET_NAMES>朝<TOWARD_SIGN>。"
+                "0": "保持<RELATIVE_DIRECTION>以继续沿着<STREET_NAMES>.",
+                "1": "保持<RELATIVE_DIRECTION>以走出口<NUMBER_SIGN>以继续沿着<STREET_NAMES>.",
+                "2": "保持<RELATIVE_DIRECTION>以继续沿着<STREET_NAMES>朝<TOWARD_SIGN>.",
+                "3": "保持<RELATIVE_DIRECTION>以走出口<NUMBER_SIGN>以继续沿着<STREET_NAMES>朝<TOWARD_SIGN>."
             },
             "empty_street_name_labels": [
                 "人行道",
@@ -930,27 +930,27 @@
             ],
             "example_phrases": {
                 "0": [
-                    "保持左侧以继续沿着I 95 South。",
-                    "保持直行以继续沿着I 95 South。",
-                    "保持右侧以继续沿着I 95 South。"
+                    "保持左侧以继续沿着I 95 South.",
+                    "保持直行以继续沿着I 95 South.",
+                    "保持右侧以继续沿着I 95 South."
                 ],
                 "1": [
-                    "保持左侧以走出口62以继续沿着I 95 South。"
+                    "保持左侧以走出口62以继续沿着I 95 South."
                 ],
                 "2": [
-                    "保持左侧以继续沿着I 95 South朝Baltimore。"
+                    "保持左侧以继续沿着I 95 South朝Baltimore."
                 ],
                 "3": [
-                    "保持左侧以走出口62以继续沿着I 95 South朝Baltimore。"
+                    "保持左侧以走出口62以继续沿着I 95 South朝Baltimore."
                 ]
             }
         },
         "keep_to_stay_on_verbal": {
             "phrases": {
-                "0": "保持<RELATIVE_DIRECTION>以继续沿着<STREET_NAMES>。",
-                "1": "保持<RELATIVE_DIRECTION>以走出口<NUMBER_SIGN>以继续沿着<STREET_NAMES>。",
-                "2": "保持<RELATIVE_DIRECTION>以继续沿着<STREET_NAMES>朝<TOWARD_SIGN>。",
-                "3": "保持<RELATIVE_DIRECTION>以走出口<NUMBER_SIGN>以继续沿着<STREET_NAMES>朝<TOWARD_SIGN>。"
+                "0": "保持<RELATIVE_DIRECTION>以继续沿着<STREET_NAMES>.",
+                "1": "保持<RELATIVE_DIRECTION>以走出口<NUMBER_SIGN>以继续沿着<STREET_NAMES>.",
+                "2": "保持<RELATIVE_DIRECTION>以继续沿着<STREET_NAMES>朝<TOWARD_SIGN>.",
+                "3": "保持<RELATIVE_DIRECTION>以走出口<NUMBER_SIGN>以继续沿着<STREET_NAMES>朝<TOWARD_SIGN>."
             },
             "empty_street_name_labels": [
                 "人行道",
@@ -965,31 +965,31 @@
             ],
             "example_phrases": {
                 "0": [
-                    "保持左侧以继续沿着Interstate 95 South。",
-                    "保持直行以继续沿着Interstate 95 South。",
-                    "保持右侧以继续沿着Interstate 95 South。"
+                    "保持左侧以继续沿着Interstate 95 South.",
+                    "保持直行以继续沿着Interstate 95 South.",
+                    "保持右侧以继续沿着Interstate 95 South."
                 ],
                 "1": [
-                    "保持左侧以走出口62以继续沿着Interstate 95 South。"
+                    "保持左侧以走出口62以继续沿着Interstate 95 South."
                 ],
                 "2": [
-                    "保持左侧以继续沿着I 95 South朝Baltimore。"
+                    "保持左侧以继续沿着I 95 South朝Baltimore."
                 ],
                 "3": [
-                    "保持左侧以走出口62以继续沿着Interstate 95 South朝Baltimore。"
+                    "保持左侧以走出口62以继续沿着Interstate 95 South朝Baltimore."
                 ]
             }
         },
         "keep_verbal": {
             "phrases": {
-                "0": "在分叉路口保持<RELATIVE_DIRECTION>。",
-                "1": "保持<RELATIVE_DIRECTION>以走出口<NUMBER_SIGN>。",
-                "2": "保持<RELATIVE_DIRECTION>以走<STREET_NAMES>。",
-                "3": "保持<RELATIVE_DIRECTION>以走出口<NUMBER_SIGN>进入<STREET_NAMES>。",
-                "4": "保持<RELATIVE_DIRECTION>朝<TOWARD_SIGN>。",
-                "5": "保持<RELATIVE_DIRECTION>以走出口<NUMBER_SIGN>朝<TOWARD_SIGN>。",
-                "6": "保持<RELATIVE_DIRECTION>以走<STREET_NAMES>朝<TOWARD_SIGN>。",
-                "7": "保持<RELATIVE_DIRECTION>以走出口<NUMBER_SIGN>进入<STREET_NAMES>朝<TOWARD_SIGN>。"
+                "0": "在分叉路口保持<RELATIVE_DIRECTION>.",
+                "1": "保持<RELATIVE_DIRECTION>以走出口<NUMBER_SIGN>.",
+                "2": "保持<RELATIVE_DIRECTION>以走<STREET_NAMES>.",
+                "3": "保持<RELATIVE_DIRECTION>以走出口<NUMBER_SIGN>进入<STREET_NAMES>.",
+                "4": "保持<RELATIVE_DIRECTION>朝<TOWARD_SIGN>.",
+                "5": "保持<RELATIVE_DIRECTION>以走出口<NUMBER_SIGN>朝<TOWARD_SIGN>.",
+                "6": "保持<RELATIVE_DIRECTION>以走<STREET_NAMES>朝<TOWARD_SIGN>.",
+                "7": "保持<RELATIVE_DIRECTION>以走出口<NUMBER_SIGN>进入<STREET_NAMES>朝<TOWARD_SIGN>."
             },
             "empty_street_name_labels": [
                 "人行道",
@@ -1004,29 +1004,29 @@
             ],
             "example_phrases": {
                 "0": [
-                    "在分叉路口保持左侧。",
-                    "在分叉路口保持直行。",
-                    "在分叉路口保持右侧。"
+                    "在分叉路口保持左侧.",
+                    "在分叉路口保持直行.",
+                    "在分叉路口保持右侧."
                 ],
                 "1": [
-                    "保持右侧以走出口62。"
+                    "保持右侧以走出口62."
                 ],
-                "2": "保持右侧以进入Interstate 8 95 South。",
-                "3": "保持右侧以进入exit 62，前往Interstate 8 95 South。",
-                "4": "保持右侧，前往Annapolis。",
-                "5": "保持右侧以进入exit 62，前往Annapolis。",
-                "6": "保持右侧，前往Interstate 8 95 South，Annapolis。",
-                "7": "保持右侧以进入exit 62，前往Interstate 8 95 South，Annapolis。"
+                "2": "保持右侧以进入Interstate 8 95 South.",
+                "3": "保持右侧以进入exit 62，前往Interstate 8 95 South.",
+                "4": "保持右侧，前往Annapolis.",
+                "5": "保持右侧以进入exit 62，前往Annapolis.",
+                "6": "保持右侧，前往Interstate 8 95 South，Annapolis.",
+                "7": "保持右侧以进入exit 62，前往Interstate 8 95 South，Annapolis."
             }
         },
         "merge": {
             "phrases": {
-                "0": "合并。",
-                "1": "合并<RELATIVE_DIRECTION>。",
-                "2": "合并到<STREET_NAMES>。",
-                "3": "合并<RELATIVE_DIRECTION>到<STREET_NAMES>。",
-                "4": "合并朝<TOWARD_SIGN>。",
-                "5": "合并<RELATIVE_DIRECTION>朝<TOWARD_SIGN>。"
+                "0": "合并.",
+                "1": "合并<RELATIVE_DIRECTION>.",
+                "2": "合并到<STREET_NAMES>.",
+                "3": "合并<RELATIVE_DIRECTION>到<STREET_NAMES>.",
+                "4": "合并朝<TOWARD_SIGN>.",
+                "5": "合并<RELATIVE_DIRECTION>朝<TOWARD_SIGN>."
             },
             "relative_directions": [
                 "左侧",
@@ -1040,33 +1040,33 @@
             ],
             "example_phrases": {
                 "0": [
-                    "合并。"
+                    "合并."
                 ],
                 "1": [
-                    "合并左侧。"
+                    "合并左侧."
                 ],
                 "2": [
-                    "合并到I 76 West/Pennsylvania Turnpike。"
+                    "合并到I 76 West/Pennsylvania Turnpike."
                 ],
                 "3": [
-                    "合并到I 83 South右侧。"
+                    "合并到I 83 South右侧."
                 ],
                 "4": [
-                    "合并朝Baltimore。"
+                    "合并朝Baltimore."
                 ],
                 "5": [
-                    "合并朝Baltimore右侧。"
+                    "合并朝Baltimore右侧."
                 ]
             }
         },
         "merge_verbal": {
             "phrases": {
-                "0": "合并。",
-                "1": "合并<RELATIVE_DIRECTION>。",
-                "2": "合并到<STREET_NAMES>。",
-                "3": "合并<RELATIVE_DIRECTION>到<STREET_NAMES>。",
-                "4": "合并朝<TOWARD_SIGN>。",
-                "5": "合并<RELATIVE_DIRECTION>朝<TOWARD_SIGN>。"
+                "0": "合并.",
+                "1": "合并<RELATIVE_DIRECTION>.",
+                "2": "合并到<STREET_NAMES>.",
+                "3": "合并<RELATIVE_DIRECTION>到<STREET_NAMES>.",
+                "4": "合并朝<TOWARD_SIGN>.",
+                "5": "合并<RELATIVE_DIRECTION>朝<TOWARD_SIGN>."
             },
             "relative_directions": [
                 "左侧",
@@ -1080,28 +1080,28 @@
             ],
             "example_phrases": {
                 "0": [
-                    "合并。"
+                    "合并."
                 ],
                 "1": [
-                    "合并左侧。"
+                    "合并左侧."
                 ],
                 "2": [
-                    "合并到I 76 West/Pennsylvania Turnpike。"
+                    "合并到I 76 West/Pennsylvania Turnpike."
                 ],
                 "3": [
-                    "合并到I 83 South右侧。"
+                    "合并到I 83 South右侧."
                 ],
                 "4": [
-                    "合并朝Baltimore。"
+                    "合并朝Baltimore."
                 ],
                 "5": [
-                    "合并朝Baltimore右侧。"
+                    "合并朝Baltimore右侧."
                 ]
             }
         },
         "post_transition_transit_verbal": {
             "phrases": {
-                "0": "前往<TRANSIT_STOP_COUNT>个<TRANSIT_STOP_COUNT_LABEL>。"
+                "0": "前往<TRANSIT_STOP_COUNT>个<TRANSIT_STOP_COUNT_LABEL>."
             },
             "transit_stop_count_labels": {
                 "one": "停车",
@@ -1109,15 +1109,15 @@
             },
             "example_phrases": {
                 "0": [
-                    "前往1个站。",
-                    "前往3个站。"
+                    "前往1个站.",
+                    "前往3个站."
                 ]
             }
         },
         "post_transition_verbal": {
             "phrases": {
-                "0": "继续<LENGTH>。",
-                "1": "在<STREET_NAMES>上继续<LENGTH>。"
+                "0": "继续<LENGTH>.",
+                "1": "在<STREET_NAMES>上继续<LENGTH>."
             },
             "empty_street_name_labels": [
                 "人行道",
@@ -1141,32 +1141,32 @@
             ],
             "example_phrases": {
                 "0": [
-                    "继续300英尺。",
-                    "继续行驶9英里。"
+                    "继续300英尺.",
+                    "继续行驶9英里."
                 ],
                 "1": [
-                    "在宾夕法尼亚7号43号上继续行驶6.2英里。",
-                    "在Main Street，佛蒙特30号上继续行驶0.1英里。"
+                    "在宾夕法尼亚7号43号上继续行驶6.2英里.",
+                    "在Main Street，佛蒙特30号上继续行驶0.1英里."
                 ]
             }
         },
         "ramp": {
             "phrases": {
-                "0": "沿着<RELATIVE_DIRECTION>上坡。",
-                "1": "在<RELATIVE_DIRECTION>上坡取<BRANCH_SIGN>上坡。",
-                "2": "在<RELATIVE_DIRECTION>上坡取上坡朝<TOWARD_SIGN>。",
-                "3": "在<RELATIVE_DIRECTION>上坡取<BRANCH_SIGN>上坡朝<TOWARD_SIGN>。",
-                "4": "在<RELATIVE_DIRECTION>上坡取<NAME_SIGN>上坡。",
-                "5": "转弯<RELATIVE_DIRECTION>以取上坡。",
-                "6": "转弯<RELATIVE_DIRECTION>以取<BRANCH_SIGN>上坡。",
-                "7": "转弯<RELATIVE_DIRECTION>以取上坡朝<TOWARD_SIGN>。",
-                "8": "转弯<RELATIVE_DIRECTION>以取<BRANCH_SIGN>上坡朝<TOWARD_SIGN>。",
-                "9": "转弯<RELATIVE_DIRECTION>以取<NAME_SIGN>上坡。",
-                "10": "取上坡。",
-                "11": "取<BRANCH_SIGN>上坡。",
-                "12": "取上坡朝<TOWARD_SIGN>。",
-                "13": "取<BRANCH_SIGN>上坡朝<TOWARD_SIGN>。",
-                "14": "取<NAME_SIGN>上坡。"
+                "0": "沿着<RELATIVE_DIRECTION>上坡.",
+                "1": "在<RELATIVE_DIRECTION>上坡取<BRANCH_SIGN>上坡.",
+                "2": "在<RELATIVE_DIRECTION>上坡取上坡朝<TOWARD_SIGN>.",
+                "3": "在<RELATIVE_DIRECTION>上坡取<BRANCH_SIGN>上坡朝<TOWARD_SIGN>.",
+                "4": "在<RELATIVE_DIRECTION>上坡取<NAME_SIGN>上坡.",
+                "5": "转弯<RELATIVE_DIRECTION>以取上坡.",
+                "6": "转弯<RELATIVE_DIRECTION>以取<BRANCH_SIGN>上坡.",
+                "7": "转弯<RELATIVE_DIRECTION>以取上坡朝<TOWARD_SIGN>.",
+                "8": "转弯<RELATIVE_DIRECTION>以取<BRANCH_SIGN>上坡朝<TOWARD_SIGN>.",
+                "9": "转弯<RELATIVE_DIRECTION>以取<NAME_SIGN>上坡.",
+                "10": "取上坡.",
+                "11": "取<BRANCH_SIGN>上坡.",
+                "12": "取上坡朝<TOWARD_SIGN>.",
+                "13": "取<BRANCH_SIGN>上坡朝<TOWARD_SIGN>.",
+                "14": "取<NAME_SIGN>上坡."
             },
             "relative_directions": [
                 "左侧",
@@ -1174,148 +1174,148 @@
             ],
             "example_phrases": {
                 "0": [
-                    "取左侧上坡。",
-                    "取右侧上坡。"
+                    "取左侧上坡.",
+                    "取右侧上坡."
                 ],
                 "1": [
-                    "取I 95右侧上坡。"
+                    "取I 95右侧上坡."
                 ],
                 "2": [
-                    "取左侧上坡朝JFK。"
+                    "取左侧上坡朝JFK."
                 ],
                 "3": [
-                    "取左侧上坡朝JFK的South Conduit Avenue上坡。"
+                    "取左侧上坡朝JFK的South Conduit Avenue上坡."
                 ],
                 "4": [
-                    "取右侧上坡朝Gettysburg Pike。"
+                    "取右侧上坡朝Gettysburg Pike."
                 ],
                 "5": [
-                    "转弯左侧以取上坡。",
-                    "转弯右侧以取上坡。"
+                    "转弯左侧以取上坡.",
+                    "转弯右侧以取上坡."
                 ],
                 "6": [
-                    "转弯左侧以取PA 283 West上坡。"
+                    "转弯左侧以取PA 283 West上坡."
                 ],
                 "7": [
-                    "转弯左侧以取上坡朝Harrisburg/Harrisburg International Airport。"
+                    "转弯左侧以取上坡朝Harrisburg/Harrisburg International Airport."
                 ],
                 "8": [
-                    "转弯左侧以取PA 283 West上坡朝Harrisburg/Harrisburg International Airport。"
+                    "转弯左侧以取PA 283 West上坡朝Harrisburg/Harrisburg International Airport."
                 ],
                 "9": [
-                    "转弯右侧以取Gettysburg Pike上坡。"
+                    "转弯右侧以取Gettysburg Pike上坡."
                 ],
                 "10": [
-                    "取上坡。"
+                    "取上坡."
                 ],
                 "11": [
-                    "取I 95上坡。"
+                    "取I 95上坡."
                 ],
-                "12": "取上坡朝JFK。",
-                "13": "取上坡朝JFK的South Conduit Avenue。",
-                "14": "取Gettysburg上坡。"
+                "12": "取上坡朝JFK.",
+                "13": "取上坡朝JFK的South Conduit Avenue.",
+                "14": "取Gettysburg上坡."
             }
         },
         "ramp_straight": {
             "phrases": {
-                "0": "直行取上坡。",
-                "1": "直行取<BRANCH_SIGN>上坡。",
-                "2": "直行取上坡朝<TOWARD_SIGN>。",
-                "3": "直行取<BRANCH_SIGN>上坡朝<TOWARD_SIGN>。",
-                "4": "直行取<NAME_SIGN>上坡。"
+                "0": "直行取上坡.",
+                "1": "直行取<BRANCH_SIGN>上坡.",
+                "2": "直行取上坡朝<TOWARD_SIGN>.",
+                "3": "直行取<BRANCH_SIGN>上坡朝<TOWARD_SIGN>.",
+                "4": "直行取<NAME_SIGN>上坡."
             },
             "example_phrases": {
                 "0": [
-                    "直行取上坡。"
+                    "直行取上坡."
                 ],
                 "1": [
-                    "直行取US 322 East上坡。"
+                    "直行取US 322 East上坡."
                 ],
                 "2": [
-                    "直行取上坡朝Hershey。"
+                    "直行取上坡朝Hershey."
                 ],
                 "3": [
-                    "直行取US 322 East/US 422 East/US 522 East/US 622 East上坡朝Hershey/Palmdale/Palmyra/Campbelltown。"
+                    "直行取US 322 East/US 422 East/US 522 East/US 622 East上坡朝Hershey/Palmdale/Palmyra/Campbelltown."
                 ],
                 "4": [
-                    "直行取Gettysburg Pike上坡。"
+                    "直行取Gettysburg Pike上坡."
                 ]
             }
         },
         "ramp_straight_verbal": {
             "phrases": {
-                "0": "直行取上坡。",
-                "1": "直行取<BRANCH_SIGN>上坡。",
-                "2": "直行取上坡朝<TOWARD_SIGN>。",
-                "3": "直行取<BRANCH_SIGN>上坡朝<TOWARD_SIGN>。",
-                "4": "直行取<NAME_SIGN>上坡。"
+                "0": "直行取上坡.",
+                "1": "直行取<BRANCH_SIGN>上坡.",
+                "2": "直行取上坡朝<TOWARD_SIGN>.",
+                "3": "直行取<BRANCH_SIGN>上坡朝<TOWARD_SIGN>.",
+                "4": "直行取<NAME_SIGN>上坡."
             },
             "example_phrases": {
                 "0": [
-                    "直行取上坡。"
+                    "直行取上坡."
                 ],
                 "1": [
-                    "直行取U.S. 3 22 East上坡。"
+                    "直行取U.S. 3 22 East上坡."
                 ],
                 "2": [
-                    "直行取上坡朝Hershey。"
+                    "直行取上坡朝Hershey."
                 ],
                 "3": [
-                    "直行取U.S. 3 22 East, U.S. 4 22 East上坡朝Hershey, Palmdale。"
+                    "直行取U.S. 3 22 East, U.S. 4 22 East上坡朝Hershey, Palmdale."
                 ],
                 "4": [
-                    "直行取Gettysburg Pike上坡。"
+                    "直行取Gettysburg Pike上坡."
                 ]
             }
         },
         "ramp_verbal": {
             "phrases": {
-                "0": "取<RELATIVE_DIRECTION>上坡。",
-                "1": "取<BRANCH_SIGN><RELATIVE_DIRECTION>上坡。",
-                "2": "取<RELATIVE_DIRECTION>上坡朝<TOWARD_SIGN>。",
-                "3": "取<BRANCH_SIGN><RELATIVE_DIRECTION>上坡朝<TOWARD_SIGN>。",
-                "4": "取<NAME_SIGN><RELATIVE_DIRECTION>上坡。",
-                "5": "<RELATIVE_DIRECTION>转弯取上坡。",
-                "6": "<RELATIVE_DIRECTION>转弯取<BRANCH_SIGN>上坡。",
-                "7": "<RELATIVE_DIRECTION>转弯取上坡朝<TOWARD_SIGN>。",
-                "8": "<RELATIVE_DIRECTION>转弯取<BRANCH_SIGN>上坡朝<TOWARD_SIGN>。",
-                "9": "<RELATIVE_DIRECTION>转弯取<NAME_SIGN>上坡。",
-                "10": "取上坡。",
-                "11": "取<BRANCH_SIGN>上坡。",
-                "12": "取上坡朝<TOWARD_SIGN>。",
-                "13": "取<BRANCH_SIGN>上坡朝<TOWARD_SIGN>。",
-                "14": "取<NAME_SIGN>上坡。"
+                "0": "取<RELATIVE_DIRECTION>上坡.",
+                "1": "取<BRANCH_SIGN><RELATIVE_DIRECTION>上坡.",
+                "2": "取<RELATIVE_DIRECTION>上坡朝<TOWARD_SIGN>.",
+                "3": "取<BRANCH_SIGN><RELATIVE_DIRECTION>上坡朝<TOWARD_SIGN>.",
+                "4": "取<NAME_SIGN><RELATIVE_DIRECTION>上坡.",
+                "5": "<RELATIVE_DIRECTION>转弯取上坡.",
+                "6": "<RELATIVE_DIRECTION>转弯取<BRANCH_SIGN>上坡.",
+                "7": "<RELATIVE_DIRECTION>转弯取上坡朝<TOWARD_SIGN>.",
+                "8": "<RELATIVE_DIRECTION>转弯取<BRANCH_SIGN>上坡朝<TOWARD_SIGN>.",
+                "9": "<RELATIVE_DIRECTION>转弯取<NAME_SIGN>上坡.",
+                "10": "取上坡.",
+                "11": "取<BRANCH_SIGN>上坡.",
+                "12": "取上坡朝<TOWARD_SIGN>.",
+                "13": "取<BRANCH_SIGN>上坡朝<TOWARD_SIGN>.",
+                "14": "取<NAME_SIGN>上坡."
             },
             "relative_directions": [
                 "左转",
                 "右转"
             ],
             "example_phrases": {
-                "0": "取左边的上坡。\", \"取右边的上坡。",
-                "1": "取Interstate 95上坡。",
-                "2": "取左边的上坡朝JFK。\", \"取右边的上坡朝JFK。",
-                "3": "取South Conduit Avenue上坡朝JFK。",
-                "4": "取右边的上坡朝Gettysburg Pike。",
-                "5": "左转取上坡。\", \"右转取上坡。",
-                "6": "左转取Pennsylvania 2 83 West上坡。",
-                "7": "左转取上坡朝Harrisburg/Harrisburg International Airport。",
-                "8": "左转取Pennsylvania 2 83 West上坡朝Harrisburg, Harrisburg International Airport。",
-                "9": "右转取Gettysburg Pike上坡。",
-                "10": "取上坡。",
-                "11": "取Interstate 95上坡。",
-                "12": "取上坡朝JFK。",
-                "13": "取South Conduit Avenue上坡朝JFK。",
-                "14": "取Gettysburg Pike上坡。"
+                "0": "取左边的上坡.\", \"取右边的上坡.",
+                "1": "取Interstate 95上坡.",
+                "2": "取左边的上坡朝JFK.\", \"取右边的上坡朝JFK.",
+                "3": "取South Conduit Avenue上坡朝JFK.",
+                "4": "取右边的上坡朝Gettysburg Pike.",
+                "5": "左转取上坡.\", \"右转取上坡.",
+                "6": "左转取Pennsylvania 2 83 West上坡.",
+                "7": "左转取上坡朝Harrisburg/Harrisburg International Airport.",
+                "8": "左转取Pennsylvania 2 83 West上坡朝Harrisburg, Harrisburg International Airport.",
+                "9": "右转取Gettysburg Pike上坡.",
+                "10": "取上坡.",
+                "11": "取Interstate 95上坡.",
+                "12": "取上坡朝JFK.",
+                "13": "取South Conduit Avenue上坡朝JFK.",
+                "14": "取Gettysburg Pike上坡."
             }
         },
         "sharp": {
             "phrases": {
-                "0": "进行急转<RELATIVE_DIRECTION>。",
-                "1": "进行急转<RELATIVE_DIRECTION>到<STREET_NAMES>。",
-                "2": "进行急转<RELATIVE_DIRECTION>，进入<BEGIN_STREET_NAMES>。继续前行<STREET_NAMES>。",
-                "3": "进行急转<RELATIVE_DIRECTION>，保持在<STREET_NAMES>上。",
-                "4": "在<JUNCTION_NAME>处进行急转<RELATIVE_DIRECTION>。",
-                "5": "进行急转<RELATIVE_DIRECTION>，朝<TOWARD_SIGN>方向前行。"
+                "0": "进行急转<RELATIVE_DIRECTION>.",
+                "1": "进行急转<RELATIVE_DIRECTION>到<STREET_NAMES>.",
+                "2": "进行急转<RELATIVE_DIRECTION>，进入<BEGIN_STREET_NAMES>.继续前行<STREET_NAMES>.",
+                "3": "进行急转<RELATIVE_DIRECTION>，保持在<STREET_NAMES>上.",
+                "4": "在<JUNCTION_NAME>处进行急转<RELATIVE_DIRECTION>.",
+                "5": "进行急转<RELATIVE_DIRECTION>，朝<TOWARD_SIGN>方向前行."
             },
             "empty_street_name_labels": [
                 "the walkway",
@@ -1328,22 +1328,22 @@
                 "right"
             ],
             "example_phrases": {
-                "0": "进行急左转。",
-                "1": "进行急右转，进入Flatbush大道。",
-                "2": "进行急左转，进入North Bond Street/US 1 Business/MD 924。继续前行MD 924。",
-                "3": "进行急右转，保持在Sunstone Drive上。",
-                "4": "在Mannenbashi East处进行急右转。",
-                "5": "进行急左转，朝巴尔的摩方向前行。"
+                "0": "进行急左转.",
+                "1": "进行急右转，进入Flatbush大道.",
+                "2": "进行急左转，进入North Bond Street/US 1 Business/MD 924.继续前行MD 924.",
+                "3": "进行急右转，保持在Sunstone Drive上.",
+                "4": "在Mannenbashi East处进行急右转.",
+                "5": "向Baltimore急转."
             }
         },
         "sharp_verbal": {
             "phrases": {
-                "0": "进行急转<RELATIVE_DIRECTION>。",
-                "1": "进行急转<RELATIVE_DIRECTION>，进入<STREET_NAMES>。",
-                "2": "进行急转<RELATIVE_DIRECTION>，进入<BEGIN_STREET_NAMES>。",
-                "3": "进行急转<RELATIVE_DIRECTION>，保持在<STREET_NAMES>上。",
-                "4": "在<JUNCTION_NAME>处进行急转<RELATIVE_DIRECTION>。",
-                "5": "进行急转<RELATIVE_DIRECTION>，朝<TOWARD_SIGN>方向前行。"
+                "0": "进行急转<RELATIVE_DIRECTION>.",
+                "1": "进行急转<RELATIVE_DIRECTION>，进入<STREET_NAMES>.",
+                "2": "进行急转<RELATIVE_DIRECTION>，进入<BEGIN_STREET_NAMES>.",
+                "3": "进行急转<RELATIVE_DIRECTION>，保持在<STREET_NAMES>上.",
+                "4": "在<JUNCTION_NAME>处进行急转<RELATIVE_DIRECTION>.",
+                "5": "进行急转<RELATIVE_DIRECTION>，朝<TOWARD_SIGN>方向前行."
             },
             "empty_street_name_labels": [
                 "步行道",
@@ -1356,28 +1356,28 @@
                 "右转"
             ],
             "example_phrases": {
-                "0": "进行急左转。",
-                "1": "进行急右转，进入Flatbush大道。",
-                "2": "进行急左转，进入North Bond Street，美国1号营业/MD 924。继续前行MD 924。",
-                "3": "进行急右转，保持在Sunstone Drive上。",
-                "4": "在Mannenbashi East处进行急右转。",
-                "5": "进行急左转，朝巴尔的摩方向前行。"
+                "0": "进行急左转.",
+                "1": "急剧地往右转上Flatbush Avenue.",
+                "2": "进行急左转，进入North Bond Street，美国1号营业/MD 924.继续前行MD 924.",
+                "3": "进行急右转，保持在Sunstone Drive上.",
+                "4": "在Mannenbashi East处进行急右转.",
+                "5": "急剧地往左朝向Baltimore转."
             }
         },
         "start": {
             "phrases": {
-                "0": "朝<CARDINAL_DIRECTION>前进。",
-                "1": "朝<CARDINAL_DIRECTION>，沿<STREET_NAMES>前进。",
-                "2": "朝<CARDINAL_DIRECTION>，沿<BEGIN_STREET_NAMES>前进。继续前行<STREET_NAMES>。",
-                "4": "驾驶朝<CARDINAL_DIRECTION>。",
-                "5": "驾驶朝<CARDINAL_DIRECTION>，沿<STREET_NAMES>前进。",
-                "6": "驾驶朝<CARDINAL_DIRECTION>，沿<BEGIN_STREET_NAMES>前进。继续前行<STREET_NAMES>。",
-                "8": "步行朝<CARDINAL_DIRECTION>。",
-                "9": "步行朝<CARDINAL_DIRECTION>，沿<STREET_NAMES>前进。",
-                "10": "步行朝<CARDINAL_DIRECTION>，沿<BEGIN_STREET_NAMES>前进。继续前行<STREET_NAMES>。",
-                "16": "骑自行车朝<CARDINAL_DIRECTION>。",
-                "17": "骑自行车朝<CARDINAL_DIRECTION>，沿<STREET_NAMES>前进。",
-                "18": "骑自行车朝<CARDINAL_DIRECTION>，沿<BEGIN_STREET_NAMES>前进。继续前行<STREET_NAMES>。"
+                "0": "朝<CARDINAL_DIRECTION>前进.",
+                "1": "朝<CARDINAL_DIRECTION>，沿<STREET_NAMES>前进.",
+                "2": "朝<CARDINAL_DIRECTION>，沿<BEGIN_STREET_NAMES>前进.继续前行<STREET_NAMES>.",
+                "4": "驾驶朝<CARDINAL_DIRECTION>.",
+                "5": "驾驶朝<CARDINAL_DIRECTION>，沿<STREET_NAMES>前进.",
+                "6": "驾驶朝<CARDINAL_DIRECTION>，沿<BEGIN_STREET_NAMES>前进.继续前行<STREET_NAMES>.",
+                "8": "步行朝<CARDINAL_DIRECTION>.",
+                "9": "步行朝<CARDINAL_DIRECTION>，沿<STREET_NAMES>前进.",
+                "10": "步行朝<CARDINAL_DIRECTION>，沿<BEGIN_STREET_NAMES>前进.继续前行<STREET_NAMES>.",
+                "16": "骑自行车朝<CARDINAL_DIRECTION>.",
+                "17": "骑自行车朝<CARDINAL_DIRECTION>，沿<STREET_NAMES>前进.",
+                "18": "骑自行车朝<CARDINAL_DIRECTION>，沿<BEGIN_STREET_NAMES>前进.继续前行<STREET_NAMES>."
             },
             "cardinal_directions": [
                 "北",
@@ -1397,73 +1397,73 @@
             ],
             "example_phrases": {
                 "0": [
-                    "向东前进。",
-                    "向北前进。"
+                    "向东前进.",
+                    "向北前进."
                 ],
                 "1": [
-                    "沿第五大道向西南前进。",
-                    "沿人行道向西前进。",
-                    "沿自行车道向东前进。",
-                    "沿山地自行车道向北前进。"
+                    "沿第五大道向西南前进.",
+                    "沿人行道向西前进.",
+                    "沿自行车道向东前进.",
+                    "沿山地自行车道向北前进."
                 ],
                 "2": [
-                    "沿北王子街/美国222号/宾夕法尼亚272号向南前进。继续前进至美国222号/宾夕法尼亚272号。"
+                    "沿北王子街/美国222号/宾夕法尼亚272号向南前进.继续前进至美国222号/宾夕法尼亚272号."
                 ],
                 "4": [
-                    "驾驶向东。",
-                    "驾驶向北。"
+                    "驾驶向东.",
+                    "驾驶向北."
                 ],
                 "5": [
-                    "驾驶沿第五大道向西南。"
+                    "驾驶沿第五大道向西南."
                 ],
                 "6": [
-                    "驾驶沿北王子街/美国222号/宾夕法尼亚272号向南前进。继续前进至美国222号/宾夕法尼亚272号。"
+                    "驾驶沿北王子街/美国222号/宾夕法尼亚272号向南前进.继续前进至美国222号/宾夕法尼亚272号."
                 ],
                 "8": [
-                    "步行向东。",
-                    "步行向北。"
+                    "步行向东.",
+                    "步行向北."
                 ],
                 "9": [
-                    "步行沿第五大道向西南。",
-                    "步行沿人行道向西。"
+                    "步行沿第五大道向西南.",
+                    "步行沿人行道向西."
                 ],
                 "10": [
-                    "步行沿北王子街/美国222号/宾夕法尼亚272号向南前进。继续前进至美国222号/宾夕法尼亚272号。"
+                    "步行沿北王子街/美国222号/宾夕法尼亚272号向南前进.继续前进至美国222号/宾夕法尼亚272号."
                 ],
                 "16": [
-                    "骑自行车向东。",
-                    "骑自行车向北。"
+                    "骑自行车向东.",
+                    "骑自行车向北."
                 ],
                 "17": [
-                    "骑自行车沿第五大道向西南。",
-                    "骑自行车沿自行车道向东。",
-                    "骑自行车沿山地自行车道向北。"
+                    "骑自行车沿第五大道向西南.",
+                    "骑自行车沿自行车道向东.",
+                    "骑自行车沿山地自行车道向北."
                 ],
-                "18": "骑自行车沿北王子街/美国222号/宾夕法尼亚272号向南前进。继续前进至美国222号/宾夕法尼亚272号。"
+                "18": "骑自行车沿北王子街/美国222号/宾夕法尼亚272号向南前进.继续前进至美国222号/宾夕法尼亚272号."
             }
         },
         "start_verbal": {
             "phrases": {
                 "0": "前进 <CARDINAL_DIRECTION>.",
-                "1": "前进 <CARDINAL_DIRECTION> 进行 <LENGTH>。",
-                "2": "前进 <CARDINAL_DIRECTION> 在 <STREET_NAMES> 上。",
-                "3": "前进 <CARDINAL_DIRECTION> 在 <STREET_NAMES> 上进行 <LENGTH>。",
-                "4": "前进 <CARDINAL_DIRECTION> 在 <BEGIN_STREET_NAMES> 上。",
+                "1": "前进 <CARDINAL_DIRECTION> 进行 <LENGTH>.",
+                "2": "前进 <CARDINAL_DIRECTION> 在 <STREET_NAMES> 上.",
+                "3": "前进 <CARDINAL_DIRECTION> 在 <STREET_NAMES> 上进行 <LENGTH>.",
+                "4": "前进 <CARDINAL_DIRECTION> 在 <BEGIN_STREET_NAMES> 上.",
                 "5": "驾驶 <CARDINAL_DIRECTION>.",
-                "6": "驾驶 <CARDINAL_DIRECTION> 进行 <LENGTH>。",
-                "7": "驾驶 <CARDINAL_DIRECTION> 在 <STREET_NAMES> 上。",
-                "8": "驾驶 <CARDINAL_DIRECTION> 在 <STREET_NAMES> 上进行 <LENGTH>。",
-                "9": "驾驶 <CARDINAL_DIRECTION> 在 <BEGIN_STREET_NAMES> 上。",
+                "6": "驾驶 <CARDINAL_DIRECTION> 进行 <LENGTH>.",
+                "7": "驾驶 <CARDINAL_DIRECTION> 在 <STREET_NAMES> 上.",
+                "8": "驾驶 <CARDINAL_DIRECTION> 在 <STREET_NAMES> 上进行 <LENGTH>.",
+                "9": "驾驶 <CARDINAL_DIRECTION> 在 <BEGIN_STREET_NAMES> 上.",
                 "10": "步行 <CARDINAL_DIRECTION>.",
-                "11": "步行 <CARDINAL_DIRECTION> 进行 <LENGTH>。",
-                "12": "步行 <CARDINAL_DIRECTION> 在 <STREET_NAMES> 上。",
-                "13": "步行 <CARDINAL_DIRECTION> 在 <STREET_NAMES> 上进行 <LENGTH>。",
-                "14": "步行 <CARDINAL_DIRECTION> 在 <BEGIN_STREET_NAMES> 上。",
-                "15": "骑自行车 <CARDINAL_DIRECTION>。",
-                "16": "骑自行车 <CARDINAL_DIRECTION> 进行 <LENGTH>。",
-                "17": "骑自行车 <CARDINAL_DIRECTION> 在 <STREET_NAMES> 上。",
-                "18": "骑自行车 <CARDINAL_DIRECTION> 在 <STREET_NAMES> 上进行 <LENGTH>。",
-                "19": "骑自行车 <CARDINAL_DIRECTION> 在 <BEGIN_STREET_NAMES> 上。"
+                "11": "步行 <CARDINAL_DIRECTION> 进行 <LENGTH>.",
+                "12": "步行 <CARDINAL_DIRECTION> 在 <STREET_NAMES> 上.",
+                "13": "步行 <CARDINAL_DIRECTION> 在 <STREET_NAMES> 上进行 <LENGTH>.",
+                "14": "步行 <CARDINAL_DIRECTION> 在 <BEGIN_STREET_NAMES> 上.",
+                "15": "骑自行车 <CARDINAL_DIRECTION>.",
+                "16": "骑自行车 <CARDINAL_DIRECTION> 进行 <LENGTH>.",
+                "17": "骑自行车 <CARDINAL_DIRECTION> 在 <STREET_NAMES> 上.",
+                "18": "骑自行车 <CARDINAL_DIRECTION> 在 <STREET_NAMES> 上进行 <LENGTH>.",
+                "19": "骑自行车 <CARDINAL_DIRECTION> 在 <BEGIN_STREET_NAMES> 上."
             },
             "cardinal_directions": [
                 "北",
@@ -1497,79 +1497,79 @@
             ],
             "example_phrases": {
                 "0": [
-                    "向东前进。",
-                    "向北前进。"
+                    "向东前进.",
+                    "向北前进."
                 ],
                 "1": [
-                    "向东前进半英里。",
-                    "向北前进1公里。"
+                    "向东前进半英里.",
+                    "向北前进1公里."
                 ],
                 "2": [
-                    "沿第五大道向西南前进。"
+                    "沿第五大道向西南前进."
                 ],
                 "3": [
-                    "沿第五大道向西南前进1/10英里。"
+                    "沿第五大道向西南前进1/10英里."
                 ],
                 "4": [
-                    "沿北王子街，美国2号22号向南前进。"
+                    "沿北王子街，美国2号22号向南前进."
                 ],
                 "5": [
-                    "驾驶向东。",
-                    "驾驶向北。"
+                    "驾驶向东.",
+                    "驾驶向北."
                 ],
                 "6": [
-                    "驾驶向东驶过半英里。",
-                    "驾驶向北驶过1公里。"
+                    "驾驶向东驶过半英里.",
+                    "驾驶向北驶过1公里."
                 ],
                 "7": [
-                    "驾驶沿第五大道向西南前进。"
+                    "驾驶沿第五大道向西南前进."
                 ],
                 "8": [
-                    "驾驶沿第五大道向西南前进1/10英里。"
+                    "驾驶沿第五大道向西南前进1/10英里."
                 ],
                 "9": [
-                    "驾驶沿北王子街，美国2号22号向南前进。"
+                    "驾驶沿北王子街，美国2号22号向南前进."
                 ],
                 "10": [
-                    "步行向东。",
-                    "步行向北。"
+                    "步行向东.",
+                    "步行向北."
                 ],
                 "11": [
-                    "步行向东走半英里。",
-                    "步行向北走1公里。"
+                    "步行向东走半英里.",
+                    "步行向北走1公里."
                 ],
                 "12": [
-                    "步行沿第五大道向西南前进。"
+                    "步行沿第五大道向西南前进."
                 ],
                 "13": [
-                    "步行沿第五大道向西南前进1/10英里。"
+                    "步行沿第五大道向西南前进1/10英里."
                 ],
                 "14": [
-                    "步行沿北王子街，美国2号22号向南前进。"
+                    "步行沿北王子街，美国2号22号向南前进."
                 ],
                 "15": [
-                    "骑自行车向东。",
-                    "骑自行车向北。"
+                    "骑自行车向东.",
+                    "骑自行车向北."
                 ],
                 "16": [
-                    "骑自行车向东半英里。",
-                    "骑自行车向北1公里。"
+                    "骑自行车向东半英里.",
+                    "骑自行车向北1公里."
                 ],
                 "17": [
-                    "骑自行车沿第五大道向西南。"
+                    "骑自行车沿第五大道向西南."
                 ],
                 "18": [
-                    "骑自行车沿第五大道向西南前进1/10英里。"
+                    "骑自行车沿第五大道向西南前进1/10英里."
                 ],
                 "19": [
-                    "骑自行车沿北王子街，美国2号22号向南前进。"
+                    "骑自行车沿北王子街，美国2号22号向南前进."
                 ]
             }
         },
         "transit": {
             "phrases": {
                 "0": "搭乘 <TRANSIT_NAME>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)",
-                "1": "搭乘 <TRANSIT_NAME> 前往 <TRANSIT_HEADSIGN>。 (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)"
+                "1": "搭乘 <TRANSIT_NAME> 前往 <TRANSIT_HEADSIGN>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)"
             },
             "empty_transit_name_labels": [
                 "有轨电车",
@@ -1587,134 +1587,134 @@
             },
             "example_phrases": {
                 "0": [
-                    "搭乘 New Haven。 (1 站)",
-                    "搭乘地铁。 (2 站)",
-                    "搭乘公共汽车。 (12 站)"
+                    "搭乘 New Haven. (1 站)",
+                    "搭乘地铁. (2 站)",
+                    "搭乘公共汽车. (12 站)"
                 ],
                 "1": [
-                    "搭乘 F 线前往 JAMAICA - 179 ST。 (10 站)",
-                    "搭乘渡轮前往史泰登岛。 (1 站)"
+                    "搭乘 F 线前往 JAMAICA - 179 ST. (10 站)",
+                    "搭乘渡轮前往史泰登岛. (1 站)"
                 ]
             }
         },
         "transit_connection_destination": {
             "phrases": {
-                "0": "离开车站。",
-                "1": "离开 <TRANSIT_STOP>。",
-                "2": "离开 <TRANSIT_STOP> <STATION_LABEL>。"
+                "0": "离开车站.",
+                "1": "离开 <TRANSIT_STOP>.",
+                "2": "离开 <TRANSIT_STOP> <STATION_LABEL>."
             },
             "station_label": "车站",
             "example_phrases": {
                 "0": [
-                    "离开车站。"
+                    "离开车站."
                 ],
                 "1": [
-                    "离开 Embarcadero 车站。"
+                    "离开 Embarcadero 车站."
                 ],
                 "2": [
-                    "离开 8 St - NYU 车站。"
+                    "离开 8 St - NYU 车站."
                 ]
             }
         },
         "transit_connection_destination_verbal": {
             "phrases": {
-                "0": "离开车站。",
-                "1": "离开 <TRANSIT_STOP>。",
-                "2": "离开 <TRANSIT_STOP> <STATION_LABEL>。"
+                "0": "离开车站.",
+                "1": "离开 <TRANSIT_STOP>.",
+                "2": "离开 <TRANSIT_STOP> <STATION_LABEL>."
             },
             "station_label": "车站",
             "example_phrases": {
                 "0": [
-                    "离开车站。"
+                    "离开车站."
                 ],
                 "1": [
-                    "离开 Embarcadero 车站。"
+                    "离开 Embarcadero 车站."
                 ],
                 "2": [
-                    "离开 8 St - NYU 车站。"
+                    "离开 8 St - NYU 车站."
                 ]
             }
         },
         "transit_connection_start": {
             "phrases": {
-                "0": "进入车站。",
-                "1": "进入 <TRANSIT_STOP>。",
-                "2": "进入 <TRANSIT_STOP> <STATION_LABEL>。"
+                "0": "进入车站.",
+                "1": "进入 <TRANSIT_STOP>.",
+                "2": "进入 <TRANSIT_STOP> <STATION_LABEL>."
             },
             "station_label": "车站",
             "example_phrases": {
                 "0": [
-                    "进入车站。"
+                    "进入车站."
                 ],
                 "1": [
-                    "进入 Embarcadero 车站。"
+                    "进入 Embarcadero 车站."
                 ],
                 "2": [
-                    "进入 8 St - NYU 车站。"
+                    "进入 8 St - NYU 车站."
                 ]
             }
         },
         "transit_connection_start_verbal": {
             "phrases": {
-                "0": "进入车站。",
-                "1": "进入 <TRANSIT_STOP>。",
-                "2": "进入 <TRANSIT_STOP> <STATION_LABEL>。"
+                "0": "进入车站.",
+                "1": "进入 <TRANSIT_STOP>.",
+                "2": "进入 <TRANSIT_STOP> <STATION_LABEL>."
             },
             "station_label": "车站",
             "example_phrases": {
                 "0": [
-                    "进入车站。"
+                    "进入车站."
                 ],
                 "1": [
-                    "进入 Embarcadero 车站。"
+                    "进入 Embarcadero 车站."
                 ],
                 "2": [
-                    "进入 8 St - NYU 车站。"
+                    "进入 8 St - NYU 车站."
                 ]
             }
         },
         "transit_connection_transfer": {
             "phrases": {
-                "0": "在车站转乘。",
-                "1": "在 <TRANSIT_STOP> 转乘。",
-                "2": "在 <TRANSIT_STOP> <STATION_LABEL> 转乘。"
+                "0": "在车站转乘.",
+                "1": "在 <TRANSIT_STOP> 转乘.",
+                "2": "在 <TRANSIT_STOP> <STATION_LABEL> 转乘."
             },
             "station_label": "车站",
             "example_phrases": {
                 "0": [
-                    "在车站转乘。"
+                    "在车站转乘."
                 ],
                 "1": [
-                    "在 Embarcadero 车站转乘。"
+                    "在 Embarcadero 车站转乘."
                 ],
                 "2": [
-                    "在 8 St - NYU 车站转乘。"
+                    "在 8 St - NYU 车站转乘."
                 ]
             }
         },
         "transit_connection_transfer_verbal": {
             "phrases": {
-                "0": "在车站转乘。",
-                "1": "在 <TRANSIT_STOP> 转乘。",
-                "2": "在 <TRANSIT_STOP> <STATION_LABEL> 转乘。"
+                "0": "在车站转乘.",
+                "1": "在 <TRANSIT_STOP> 转乘.",
+                "2": "在 <TRANSIT_STOP> <STATION_LABEL> 转乘."
             },
             "station_label": "车站",
             "example_phrases": {
                 "0": [
-                    "在车站转乘。"
+                    "在车站转乘."
                 ],
                 "1": [
-                    "在 Embarcadero 车站转乘。"
+                    "在 Embarcadero 车站转乘."
                 ],
                 "2": [
-                    "在 8 St - NYU 车站转乘。"
+                    "在 8 St - NYU 车站转乘."
                 ]
             }
         },
         "transit_remain_on": {
             "phrases": {
-                "0": "保持在 <TRANSIT_NAME> 上。 (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)",
-                "1": "保持在 <TRANSIT_NAME> 前往 <TRANSIT_HEADSIGN>。 (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)"
+                "0": "保持在 <TRANSIT_NAME> 上. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)",
+                "1": "保持在 <TRANSIT_NAME> 前往 <TRANSIT_HEADSIGN>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)"
             },
             "empty_transit_name_labels": [
                 "有轨电车",
@@ -1732,18 +1732,18 @@
             },
             "example_phrases": {
                 "0": [
-                    "保持在 New Haven 上。 (1 站)",
-                    "保持在火车上。 (3 站)"
+                    "保持在 New Haven 上. (1 站)",
+                    "保持在火车上. (3 站)"
                 ],
                 "1": [
-                    "保持在 F 线前往 JAMAICA - 179 ST 上。 (10 站)"
+                    "保持在 F 线前往 JAMAICA - 179 ST 上. (10 站)"
                 ]
             }
         },
         "transit_remain_on_verbal": {
             "phrases": {
-                "0": "保持在 <TRANSIT_NAME> 上。",
-                "1": "保持在 <TRANSIT_NAME> 前往 <TRANSIT_HEADSIGN> 上。"
+                "0": "保持在 <TRANSIT_NAME> 上.",
+                "1": "保持在 <TRANSIT_NAME> 前往 <TRANSIT_HEADSIGN> 上."
             },
             "empty_transit_name_labels": [
                 "有轨电车",
@@ -1757,17 +1757,17 @@
             ],
             "example_phrases": {
                 "0": [
-                    "保持在 New Haven 上。"
+                    "保持在 New Haven 上."
                 ],
                 "1": [
-                    "保持在 F 线前往 JAMAICA - 179 ST 上。"
+                    "保持在 F 线前往 JAMAICA - 179 ST 上."
                 ]
             }
         },
         "transit_transfer": {
             "phrases": {
-                "0": "转乘以搭乘 <TRANSIT_NAME>。 (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)",
-                "1": "转乘以搭乘 <TRANSIT_NAME> 前往 <TRANSIT_HEADSIGN>。 (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)"
+                "0": "转乘以搭乘 <TRANSIT_NAME>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)",
+                "1": "转乘以搭乘 <TRANSIT_NAME> 前往 <TRANSIT_HEADSIGN>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)"
             },
             "empty_transit_name_labels": [
                 "有轨电车",
@@ -1785,18 +1785,18 @@
             },
             "example_phrases": {
                 "0": [
-                    "转乘以搭乘 New Haven。 (1 站)",
-                    "转乘以搭乘有轨电车。 (4 站)"
+                    "转乘以搭乘 New Haven. (1 站)",
+                    "转乘以搭乘有轨电车. (4 站)"
                 ],
                 "1": [
-                    "转乘以搭乘 F 线前往 JAMAICA - 179 ST。 (10 站)"
+                    "转乘以搭乘 F 线前往 JAMAICA - 179 ST. (10 站)"
                 ]
             }
         },
         "transit_transfer_verbal": {
             "phrases": {
-                "0": "转乘以搭乘 <TRANSIT_NAME>。",
-                "1": "转乘以搭乘 <TRANSIT_NAME> 前往 <TRANSIT_HEADSIGN>。"
+                "0": "转乘以搭乘 <TRANSIT_NAME>.",
+                "1": "转乘以搭乘 <TRANSIT_NAME> 前往 <TRANSIT_HEADSIGN>."
             },
             "empty_transit_name_labels": [
                 "有轨电车",
@@ -1810,17 +1810,17 @@
             ],
             "example_phrases": {
                 "0": [
-                    "转乘以搭乘 New Haven。"
+                    "转乘以搭乘 New Haven."
                 ],
                 "1": [
-                    "转乘以搭乘 F 线前往 JAMAICA - 179 ST。"
+                    "转乘以搭乘 F 线前往 JAMAICA - 179 ST."
                 ]
             }
         },
         "transit_verbal": {
             "phrases": {
-                "0": "搭乘 <TRANSIT_NAME>。",
-                "1": "搭乘 <TRANSIT_NAME> 前往 <TRANSIT_HEADSIGN>。"
+                "0": "搭乘 <TRANSIT_NAME>.",
+                "1": "搭乘 <TRANSIT_NAME> 前往 <TRANSIT_HEADSIGN>."
             },
             "empty_transit_name_labels": [
                 "有轨电车",
@@ -1834,21 +1834,21 @@
             ],
             "example_phrases": {
                 "0": [
-                    "搭乘 New Haven。"
+                    "搭乘 New Haven."
                 ],
                 "1": [
-                    "搭乘 F 线前往 JAMAICA - 179 ST。"
+                    "搭乘 F 线前往 JAMAICA - 179 ST."
                 ]
             }
         },
         "turn": {
             "phrases": {
-                "0": "转向 <RELATIVE_DIRECTION>。",
-                "1": "转向 <RELATIVE_DIRECTION> 到达 <STREET_NAMES>。",
-                "2": "转向 <RELATIVE_DIRECTION> 到达 <BEGIN_STREET_NAMES>。继续行驶到 <STREET_NAMES>。",
-                "3": "转向 <RELATIVE_DIRECTION> 保持在 <STREET_NAMES> 上。",
-                "4": "在 <JUNCTION_NAME> 处转向 <RELATIVE_DIRECTION>。",
-                "5": "朝向 <TOWARD_SIGN> 转向 <RELATIVE_DIRECTION>。"
+                "0": "转向 <RELATIVE_DIRECTION>.",
+                "1": "转向 <RELATIVE_DIRECTION> 到达 <STREET_NAMES>.",
+                "2": "转向 <RELATIVE_DIRECTION> 到达 <BEGIN_STREET_NAMES>.继续行驶到 <STREET_NAMES>.",
+                "3": "转向 <RELATIVE_DIRECTION> 保持在 <STREET_NAMES> 上.",
+                "4": "在 <JUNCTION_NAME> 处转向 <RELATIVE_DIRECTION>.",
+                "5": "朝向 <TOWARD_SIGN> 转向 <RELATIVE_DIRECTION>."
             },
             "empty_street_name_labels": [
                 "人行道",
@@ -1862,33 +1862,33 @@
             ],
             "example_phrases": {
                 "0": [
-                    "向左转。"
+                    "向左转."
                 ],
                 "1": [
-                    "右转进入 Flatbush 大道。"
+                    "右转进入 Flatbush 大道."
                 ],
                 "2": [
-                    "左转进入 North Bond Street/US 1 Business/MD 924。继续前行 MD 924。"
+                    "左转进入 North Bond Street/US 1 Business/MD 924.继续前行 MD 924."
                 ],
                 "3": [
-                    "右转保持在 Sunstone Drive 上。"
+                    "右转保持在 Sunstone Drive 上."
                 ],
                 "4": [
-                    "在 Mannenbashi East 处右转。"
+                    "在 Mannenbashi East 处右转."
                 ],
                 "5": [
-                    "朝向巴尔的摩左转。"
+                    "朝向巴尔的摩左转."
                 ]
             }
         },
         "turn_verbal": {
             "phrases": {
-                "0": "转向 <RELATIVE_DIRECTION>。",
-                "1": "转向 <RELATIVE_DIRECTION> 到达 <STREET_NAMES>。",
-                "2": "转向 <RELATIVE_DIRECTION> 到达 <BEGIN_STREET_NAMES>。",
-                "3": "转向 <RELATIVE_DIRECTION> 保持在 <STREET_NAMES> 上。",
-                "4": "在 <JUNCTION_NAME> 处转向 <RELATIVE_DIRECTION>。",
-                "5": "朝向 <TOWARD_SIGN> 转向 <RELATIVE_DIRECTION>。"
+                "0": "转向 <RELATIVE_DIRECTION>.",
+                "1": "转向 <RELATIVE_DIRECTION> 到达 <STREET_NAMES>.",
+                "2": "转向 <RELATIVE_DIRECTION> 到达 <BEGIN_STREET_NAMES>.",
+                "3": "转向 <RELATIVE_DIRECTION> 保持在 <STREET_NAMES> 上.",
+                "4": "在 <JUNCTION_NAME> 处转向 <RELATIVE_DIRECTION>.",
+                "5": "朝向 <TOWARD_SIGN> 转向 <RELATIVE_DIRECTION>."
             },
             "empty_street_name_labels": [
                 "人行道",
@@ -1902,35 +1902,35 @@
             ],
             "example_phrases": {
                 "0": [
-                    "向左转。"
+                    "向左转."
                 ],
                 "1": [
-                    "右转进入 Flatbush 大道。"
+                    "右转进入 Flatbush 大道."
                 ],
                 "2": [
-                    "左转进入 North Bond Street, U.S. 1 Business。"
+                    "左转进入 North Bond Street, U.S. 1 Business."
                 ],
                 "3": [
-                    "右转保持在 Sunstone Drive 上。"
+                    "右转保持在 Sunstone Drive 上."
                 ],
                 "4": [
-                    "在 Mannenbashi East 处右转。"
+                    "在 Mannenbashi East 处右转."
                 ],
                 "5": [
-                    "朝向巴尔的摩左转。"
+                    "朝向巴尔的摩左转."
                 ]
             }
         },
         "uturn": {
             "phrases": {
-                "0": "进行一次 <RELATIVE_DIRECTION> 掉头。",
-                "1": "进行一次 <RELATIVE_DIRECTION> 掉头，进入 <STREET_NAMES>。",
-                "2": "进行一次 <RELATIVE_DIRECTION> 掉头，保持在 <STREET_NAMES> 上。",
-                "3": "在 <CROSS_STREET_NAMES> 处进行一次 <RELATIVE_DIRECTION> 掉头。",
-                "4": "在 <CROSS_STREET_NAMES> 处进行一次 <RELATIVE_DIRECTION> 掉头，进入 <STREET_NAMES>。",
-                "5": "在 <CROSS_STREET_NAMES> 处进行一次 <RELATIVE_DIRECTION> 掉头，保持在 <STREET_NAMES> 上。",
-                "6": "在 <JUNCTION_NAME> 处进行一次 <RELATIVE_DIRECTION> 掉头。",
-                "7": "朝向 <TOWARD_SIGN> 进行一次 <RELATIVE_DIRECTION> 掉头。"
+                "0": "进行一次 <RELATIVE_DIRECTION> 掉头.",
+                "1": "进行一次 <RELATIVE_DIRECTION> 掉头，进入 <STREET_NAMES>.",
+                "2": "进行一次 <RELATIVE_DIRECTION> 掉头，保持在 <STREET_NAMES> 上.",
+                "3": "在 <CROSS_STREET_NAMES> 处进行一次 <RELATIVE_DIRECTION> 掉头.",
+                "4": "在 <CROSS_STREET_NAMES> 处进行一次 <RELATIVE_DIRECTION> 掉头，进入 <STREET_NAMES>.",
+                "5": "在 <CROSS_STREET_NAMES> 处进行一次 <RELATIVE_DIRECTION> 掉头，保持在 <STREET_NAMES> 上.",
+                "6": "在 <JUNCTION_NAME> 处进行一次 <RELATIVE_DIRECTION> 掉头.",
+                "7": "朝向 <TOWARD_SIGN> 进行一次 <RELATIVE_DIRECTION> 掉头."
             },
             "empty_street_name_labels": [
                 "人行道",
@@ -1944,41 +1944,41 @@
             ],
             "example_phrases": {
                 "0": [
-                    "进行一次左掉头。"
+                    "进行一次左掉头."
                 ],
                 "1": [
-                    "进行一次右掉头，进入 Bunker Hill Road。"
+                    "进行一次右掉头，进入 Bunker Hill Road."
                 ],
                 "2": [
-                    "进行一次左掉头，保持在 Bunker Hill Road 上。"
+                    "进行一次左掉头，保持在 Bunker Hill Road 上."
                 ],
                 "3": [
-                    "在 Devonshire Road 处进行一次左掉头。"
+                    "在 Devonshire Road 处进行一次左掉头."
                 ],
                 "4": [
-                    "在 Devonshire Road 处进行一次左掉头，进入 Jonestown Road/US 22。"
+                    "在 Devonshire Road 处进行一次左掉头，进入 Jonestown Road/US 22."
                 ],
                 "5": [
-                    "在 Devonshire Road 处进行一次左掉头，保持在 Jonestown Road/US 22 上。"
+                    "在 Devonshire Road 处进行一次左掉头，保持在 Jonestown Road/US 22 上."
                 ],
                 "6": [
-                    "在 Mannenbashi East 处进行一次右掉头。"
+                    "在 Mannenbashi East 处进行一次右掉头."
                 ],
                 "7": [
-                    "进行一次左掉头，朝向巴尔的摩。"
+                    "进行一次左掉头，朝向巴尔的摩."
                 ]
             }
         },
         "uturn_verbal": {
             "phrases": {
-                "0": "进行一次 <RELATIVE_DIRECTION> 掉头。",
-                "1": "进行一次 <RELATIVE_DIRECTION> 掉头，进入 <STREET_NAMES>。",
-                "2": "进行一次 <RELATIVE_DIRECTION> 掉头，保持在 <STREET_NAMES> 上。",
-                "3": "在 <CROSS_STREET_NAMES> 处进行一次 <RELATIVE_DIRECTION> 掉头。",
-                "4": "在 <CROSS_STREET_NAMES> 处进行一次 <RELATIVE_DIRECTION> 掉头，进入 <STREET_NAMES>。",
-                "5": "在 <CROSS_STREET_NAMES> 处进行一次 <RELATIVE_DIRECTION> 掉头，保持在 <STREET_NAMES> 上。",
-                "6": "在 <JUNCTION_NAME> 处进行一次 <RELATIVE_DIRECTION> 掉头。",
-                "7": "朝向 <TOWARD_SIGN> 进行一次 <RELATIVE_DIRECTION> 掉头。"
+                "0": "进行一次 <RELATIVE_DIRECTION> 掉头.",
+                "1": "进行一次 <RELATIVE_DIRECTION> 掉头，进入 <STREET_NAMES>.",
+                "2": "进行一次 <RELATIVE_DIRECTION> 掉头，保持在 <STREET_NAMES> 上.",
+                "3": "在 <CROSS_STREET_NAMES> 处进行一次 <RELATIVE_DIRECTION> 掉头.",
+                "4": "在 <CROSS_STREET_NAMES> 处进行一次 <RELATIVE_DIRECTION> 掉头，进入 <STREET_NAMES>.",
+                "5": "在 <CROSS_STREET_NAMES> 处进行一次 <RELATIVE_DIRECTION> 掉头，保持在 <STREET_NAMES> 上.",
+                "6": "在 <JUNCTION_NAME> 处进行一次 <RELATIVE_DIRECTION> 掉头.",
+                "7": "朝向 <TOWARD_SIGN> 进行一次 <RELATIVE_DIRECTION> 掉头."
             },
             "empty_street_name_labels": [
                 "人行道",
@@ -1992,28 +1992,28 @@
             ],
             "example_phrases": {
                 "0": [
-                    "进行一次左掉头。"
+                    "进行一次左掉头."
                 ],
                 "1": [
-                    "进行一次右掉头，进入 Bunker Hill Road。"
+                    "进行一次右掉头，进入 Bunker Hill Road."
                 ],
                 "2": [
-                    "进行一次左掉头，保持在 Bunker Hill Road 上。"
+                    "进行一次左掉头，保持在 Bunker Hill Road 上."
                 ],
                 "3": [
-                    "在 Devonshire Road 处进行一次左掉头。"
+                    "在 Devonshire Road 处进行一次左掉头."
                 ],
                 "4": [
-                    "在 Devonshire Road 处进行一次左掉头，进入 Jonestown Road, U.S. 22。"
+                    "在 Devonshire Road 处进行一次左掉头，进入 Jonestown Road, U.S. 22."
                 ],
                 "5": [
-                    "在 Devonshire Road 处进行一次左掉头，保持在 Jonestown Road, U.S. 22 上。"
+                    "在 Devonshire Road 处进行一次左掉头，保持在 Jonestown Road, U.S. 22 上."
                 ],
                 "6": [
-                    "进行一次右掉头，朝向 Mannenbashi East。"
+                    "进行一次右掉头，朝向 Mannenbashi East."
                 ],
                 "7": [
-                    "进行一次左掉头，朝向巴尔的摩。"
+                    "进行一次左掉头，朝向巴尔的摩."
                 ]
             }
         },
@@ -2038,10 +2038,10 @@
             ],
             "example_phrases": {
                 "0": [
-                    "向右转进入 East Fayette 大街。然后向右转进入 North Gay 大街。"
+                    "向右转进入 East Fayette Street. 然后向右转进入 North Gay Street."
                 ],
                 "1": [
-                    "向右转进入 East Fayette 大街。然后，在 500 英尺处，向右转进入 North Gay 大街。"
+                    "向右转进入 East Fayette Street. 然后，在 500 英尺处，向右转进入 North Gay Street."
                 ]
             }
         },
@@ -2064,13 +2064,13 @@
                 "不到 10 英尺"
             ],
             "example_phrases": {
-                "0": "在四分之一英里处，向右转进入 North Gay 大街。"
+                "0": "在四分之一英里处，向右转进入 North Gay 大街."
             }
         },
         "pass": {
             "phrases": {
-                "0": "通过<OBJECT_LABEL>。",
-                "1": "通过<OBJECT_LABEL>上的交通信号。"
+                "0": "通过<OBJECT_LABEL>.",
+                "1": "通过<OBJECT_LABEL>上的交通信号."
             },
             "object_labels": [
                 "大门",
@@ -2079,56 +2079,56 @@
             ],
             "example_phrases": {
                 "0": [
-                    "通过大门。"
+                    "通过大门."
                 ]
             }
         },
         "elevator": {
             "phrases": {
-                "0": "搭乘电梯。",
-                "1": "搭乘电梯到 <LEVEL>。"
+                "0": "搭乘电梯.",
+                "1": "搭乘电梯到 <LEVEL>."
             },
             "example_phrases": {
                 "0": [
-                    "搭乘电梯。"
+                    "搭乘电梯."
                 ],
                 "1": [
-                    "搭乘电梯到 1 层。"
+                    "搭乘电梯到 1 层."
                 ]
             }
         },
         "steps": {
             "phrases": {
-                "0": "走楼梯。",
-                "1": "走楼梯到 <LEVEL>。"
+                "0": "走楼梯.",
+                "1": "走楼梯到 <LEVEL>."
             },
             "example_phrases": {
                 "0": [
-                    "走楼梯。"
+                    "走楼梯."
                 ],
                 "1": [
-                    "走楼梯到 2 层。"
+                    "走楼梯到 2 层."
                 ]
             }
         },
         "escalator": {
             "phrases": {
-                "0": "搭乘自动扶梯。",
-                "1": "搭乘自动扶梯到 <LEVEL>。"
+                "0": "搭乘自动扶梯.",
+                "1": "搭乘自动扶梯到 <LEVEL>."
             },
             "example_phrases": {
                 "0": [
-                    "搭乘自动扶梯。"
+                    "搭乘自动扶梯."
                 ],
                 "1": [
-                    "搭乘自动扶梯到 3 层。"
+                    "搭乘自动扶梯到 3 层."
                 ]
             }
         },
         "enter_building": {
             "phrases": {
-                "0": "进入建筑物。",
-                "1": "进入建筑物，继续前行到 <STREET_NAMES>。"
+                "0": "进入建筑物.",
+                "1": "进入建筑物，继续前行到 <STREET_NAMES>."
             },
             "empty_street_name_labels": [
                 "人行道",
@@ -2138,17 +2138,17 @@
             ],
             "example_phrases": {
                 "0": [
-                    "进入建筑物。"
+                    "进入建筑物."
                 ],
                 "1": [
-                    "进入建筑物，继续前行到人行道。"
+                    "进入建筑物，继续前行到人行道."
                 ]
             }
         },
         "exit_building": {
             "phrases": {
-                "0": "离开建筑物。",
-                "1": "离开建筑物，继续前行到 <STREET_NAMES>。"
+                "0": "离开建筑物.",
+                "1": "离开建筑物，继续前行到 <STREET_NAMES>."
             },
             "empty_street_name_labels": [
                 "人行道",
@@ -2158,10 +2158,10 @@
             ],
             "example_phrases": {
                 "0": [
-                    "离开建筑物。"
+                    "离开建筑物."
                 ],
                 "1": [
-                    "离开建筑物，继续前行到人行道。"
+                    "离开建筑物，继续前行到人行道."
                 ]
             }
         }
