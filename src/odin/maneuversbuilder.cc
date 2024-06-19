@@ -1148,7 +1148,9 @@ void ManeuversBuilder::CreateStartManeuver(Maneuver& maneuver) {
 void ManeuversBuilder::GetTurnLanes(std::list<Maneuver> &maneuvers) {  
   auto curr_man = maneuvers.begin();   
 
+  //int currmanID = 0;
   while (curr_man != maneuvers.end()) {
+    //currmanID++;
     std::string &tl = curr_man->turnLanes;
     if (curr_man->travel_mode() == TravelMode::kDrive) {          
 
@@ -1174,14 +1176,20 @@ void ManeuversBuilder::GetTurnLanes(std::list<Maneuver> &maneuvers) {
         if(tl.size() > 0) {
           tl += "#";
         }
-        tl += std::to_string(idx) + ":" + tlStr;
+        tl += std::to_string(curr_man->end_shape_index()) + ":" + tlStr;
         std::string wayidlink = "https://www.openstreetmap.org/way/" + std::to_string(edge->way_id());
         std::cout << idx << " -> " <<  wayidlink + " : " + tlStr << std::endl;
       };
 
-      for(uint32_t nidx = curr_man->begin_shape_index(); nidx < curr_man->end_shape_index(); nidx++)  {
-        addTLStr(nidx);
-      }
+      //std::cout << "currman : " << curr_man->begin_node_index() << " " << curr_man->end_node_index() << " " <<
+      //  curr_man->begin_shape_index() << " " << curr_man->end_shape_index() << std::endl;
+      //for(uint32_t nidx = curr_man->begin_node_index(); nidx < curr_man->end_node_index(); nidx++)  {
+      addTLStr(curr_man->end_node_index() - 1);
+      //}
+      //print curr_man pointer      
+      //for(uint32_t nidx = curr_man->begin_shape_index(); nidx < curr_man->end_shape_index(); nidx++)  {
+      //addTLStr(currmanID);
+      //}
       // std::cout << "curr_man: "<< curr_man->begin_shape_index() << " " << curr_man->end_shape_index()-1 << std::endl;
       // for(uint32_t nidx = curr_man->begin_shape_index(); nidx < curr_man->end_shape_index(); nidx++) 
       // {
