@@ -27,6 +27,7 @@ valhalla_module(NAME meili
       ${VALHALLA_SOURCE_DIR}
       ${VALHALLA_SOURCE_DIR}/valhalla
     PRIVATE
+      ${VALHALLA_SOURCE_DIR}/../tangram-es/core/deps
       ${CMAKE_BINARY_DIR}
   SYSTEM_INCLUDE_DIRECTORIES
     PUBLIC
