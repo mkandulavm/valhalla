@@ -1773,13 +1773,15 @@ void TripLegBuilder::Build(
 
     //std::cout << "checking tripleleg at de = " <<  std::to_string(edge) << " deendnode = " << std::to_string(directededge->endnode()) <<  std::endl;
 
-    auto des = graphtile->GetDirectedEdges(directededge->endnode());
-    for(auto &de : des) {      
-      if(de.speed_camera()) {
-        //print
-        LOG_ERROR("found speed camera for de having endnode = " + std::to_string(de.endnode()));
-      }
-    }
+    // //TODO FIX : this is causing a exception to be thrown and stopping the routing itself.. implement the speed cam very carefully
+    // // the berlindbg test has a location to catch the same when ran with berlin
+    // auto des = graphtile->GetDirectedEdges(directededge->endnode());
+    // for(auto &de : des) {      
+    //   if(de.speed_camera()) {
+    //     //print
+    //     LOG_ERROR("found speed camera for de having endnode = " + std::to_string(de.endnode()));
+    //   }
+    // }
     
     const sif::TravelMode mode = edge_itr->mode;
     const uint8_t travel_type = travel_types[static_cast<uint32_t>(mode)];
