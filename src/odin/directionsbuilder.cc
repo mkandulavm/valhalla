@@ -51,7 +51,7 @@ void DirectionsBuilder::Build(Api& api, const MarkupFormatter& markup_formatter)
         maneuvers = maneuversBuilder.Build();
         //nevh
         auto speedLimits = maneuversBuilder.GetSpeedLimits(maneuvers);
-        auto speedCams = maneuversBuilder.GetSpeedCams(maneuvers);
+        //auto speedCams = maneuversBuilder.GetSpeedCams(maneuvers);
         maneuversBuilder.GetTurnLanes(maneuvers);
         
         //add speed limits as an array into trip directions
@@ -60,9 +60,9 @@ void DirectionsBuilder::Build(Api& api, const MarkupFormatter& markup_formatter)
           trip_directions.add_speed_limits(speed_limit);
         }
 
-        for(const auto& speed_cam : speedCams) {
-          trip_directions.add_speed_cameras(speed_cam);
-        }
+        // for(const auto& speed_cam : speedCams) {
+        //   trip_directions.add_speed_cameras(speed_cam);
+        // }
 
         //nevh
 

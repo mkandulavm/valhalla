@@ -581,8 +581,7 @@ BidirectionalAStar::GetBestPath(valhalla::Location& origin,
         // result in other connections. Handle special edge case when we encountered the
         // destination edge that wasn't still pulled out of the queue.
         const auto opp_status = edgestatus_reverse_.Get(fwd_pred.opp_edgeid());
-        if (opp_status.index() < edgelabels_reverse_.size() &&
-            (opp_status.set() == EdgeSet::kPermanent ||
+        if ((opp_status.set() == EdgeSet::kPermanent ||
             (opp_status.set() == EdgeSet::kTemporary &&
              edgelabels_reverse_[opp_status.index()].predecessor() == kInvalidLabel))) {
           if (SetForwardConnection(graphreader, fwd_pred)) {
