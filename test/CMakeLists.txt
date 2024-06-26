@@ -17,15 +17,23 @@ add_library(valhalla_test
   )
 target_include_directories(valhalla_test PUBLIC
   ${VALHALLA_SOURCE_DIR}/test
-  ${VALHALLA_SOURCE_DIR}/test/gurka)
-target_include_directories(valhalla_test SYSTEM PUBLIC
+  ${VALHALLA_SOURCE_DIR}/test/gurka
+  ${VALHALLA_SOURCE_DIR}/third_party/protozero/include
+  ${VALHALLA_SOURCE_DIR}/third_party/just_gtfs/include
+  ${VALHALLA_SOURCE_DIR}/third_party/libosmium/include
+  ${VALHALLA_SOURCE_DIR}/../tangram-es/core/deps
+  ${VALHALLA_SOURCE_DIR}/../tangram-es/core/deps/miniz
+  ${VALHALLA_SOURCE_DIR}/../tangram-es/core/src
   ${robinhoodhashing_include_dir}
   ${VALHALLA_SOURCE_DIR}/third_party/just_gtfs/include
   ${VALHALLA_SOURCE_DIR}/third_party/protozero/include
   ${VALHALLA_SOURCE_DIR}/third_party/libosmium/include
   ${VALHALLA_SOURCE_DIR}/third_party/microtar/src)
-target_link_libraries(valhalla_test valhalla gtest gtest_main gmock pthread PkgConfig::LZ4)
+target_link_libraries(valhalla_test valhalla gtest gtest_main gmock pthread miniz PkgConfig::LZ4)
 
+#add target linking directories
+target_link_directories(valhalla_test PUBLIC ${CMAKE_BINARY_DIR}/../lz4 ${CMAKE_BINARY_DIR}/../core/deps)
+#message(FATAL_ERROR "lz4: ${CMAKE_BINARY_DIR}/../lz4")
 if(ENABLE_DATA_TOOLS)
   target_link_libraries(valhalla_test PkgConfig::GEOS)
 endif()

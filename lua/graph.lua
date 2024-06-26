@@ -1676,6 +1676,13 @@ function filter_tags_generic(kv)
     kv["max_speed"] = normalize_speed(kv["maxspeed"])
   end
 
+  --nevh
+  -- if kv["speed_camera"] == "yes" then
+  --   kv["speed_camera"] = "yes"
+  -- else
+  --   kv["speed_camera"] = "no"
+  -- end
+  --nevh
   kv["advisory_speed"] = normalize_speed(kv["maxspeed:advisory"])
   kv["average_speed"] = normalize_speed(kv["maxspeed:practical"])
   kv["backward_speed"] = normalize_speed(kv["maxspeed:backward"])

@@ -29,8 +29,9 @@ public:
 
   std::list<Maneuver> Build();
   //nevh
-  std::vector<std::string> GetTurnLanes(std::list<Maneuver> &maneuvers);
+  void GetTurnLanes(std::list<Maneuver> &maneuvers);
   std::vector<uint32_t> GetSpeedLimits(std::list<Maneuver> &maneuvers);  
+  std::vector<uint32_t> GetSpeedCams(std::list<Maneuver> &maneuvers);
   //nevh
 
 protected:

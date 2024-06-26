@@ -316,6 +316,9 @@ void DirectedEdge::set_speed_type(const SpeedType speed_type) {
   speed_type_ = static_cast<uint32_t>(speed_type);
 }
 
+void DirectedEdge::set_speed_camera(const bool speed_camera) {
+  speed_camera_ = speed_camera;
+}
 // Set the country crossing flag.
 void DirectedEdge::set_ctry_crossing(const bool crossing) {
   ctry_crossing_ = crossing;
