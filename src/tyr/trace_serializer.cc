@@ -71,6 +71,9 @@ void serialize_edges(const AttributesController& controller,
           writer("speed_limit", static_cast<uint64_t>(std::round(edge.speed_limit() * scale)));
         }
       }
+      
+      writer("speed_camera", static_cast<bool>(edge.speed_camera()));
+      
       if (controller(kEdgeDensity)) {
         writer("density", static_cast<uint64_t>(edge.density()));
       }

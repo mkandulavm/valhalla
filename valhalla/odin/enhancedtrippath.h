@@ -323,6 +323,11 @@ public:
   uint32_t speed_limit() const {
     return mutable_edge_->speed_limit();
   }
+  //nevh
+  bool speed_camera() const {
+    return mutable_edge_->speed_camera();
+  }
+  //nevh
 
   float default_speed() const {
     return mutable_edge_->default_speed();

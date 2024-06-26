@@ -2229,7 +2229,14 @@ struct OSMWay {
   bool tagged_speed() const {
     return tagged_speed_;
   }
-
+  //nevh
+  void set_speed_camera(const bool speed_camera) {
+    speed_camera_ = speed_camera;
+  }
+  bool speed_camera() const {
+    return speed_camera_;
+  }
+  //nevh
   /**
    * Sets the forward tagged_speed flag.
    * @param  forward_tagged_speed  User specified speed?
@@ -2650,6 +2657,7 @@ struct OSMWay {
   uint32_t bike_network_ : 4;
   uint32_t exit_ : 1;
   uint32_t tagged_speed_ : 1;
+  uint32_t speed_camera_ : 1; //nevh
   uint32_t forward_tagged_speed_ : 1;
   uint32_t backward_tagged_speed_ : 1;
   uint32_t tagged_lanes_ : 1;
@@ -2709,7 +2717,7 @@ struct OSMWay {
   uint16_t bike_backward_ : 1;
   uint16_t lit_ : 1;
   uint16_t destination_only_hgv_ : 1;
-  uint16_t spare2_ : 2;
+  uint16_t spare2_ : 1; //nevh
 
   uint16_t nodecount_;
 
