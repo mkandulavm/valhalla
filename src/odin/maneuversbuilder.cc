@@ -1145,10 +1145,89 @@ void ManeuversBuilder::CreateStartManeuver(Maneuver& maneuver) {
 }
 
 //nevh
+std::vector<std::string> ManeuversBuilder::GetTurnLanes(std::list<Maneuver> &maneuvers) {    
+  std::vector<std::string> turn_lanes;
+
+  int manID = 0;
+  auto prev_man = maneuvers.begin();
+  auto curr_man = maneuvers.begin();
+  auto next_man = maneuvers.begin();
+
+  // Set current maneuver
+  if (next_man != maneuvers.end()) {
+    ++next_man;
+    curr_man = next_man;
+  }
+
+  // Set next maneuver
+  if (next_man != maneuvers.end()) {
+    ++next_man;
+  }
+  
+  // Walk the maneuvers to activate turn lanes
+  while (curr_man != maneuvers.end()) {
+    std::string maneuver_turn_lanes = "";
+    std::string active_turn_lanes = "";
+
+    // Only process driving maneuvers
+    if (curr_man->travel_mode() == TravelMode::kDrive) {
+
+      // Walk maneuvers by node (prev_edge of node has the turn lane info)
+      // Assign turn lane at transition point
+      auto prev_edge = trip_path_->GetPrevEdge(curr_man->begin_node_index());
+      if (prev_edge && (prev_edge->turn_lanes_size() > 0)) {
+        //auto &node = trip_path_->node ( prev_edge->begin_shape_index() );
+        //get GPS coord of node
+        //deduce and print type of node object
+        
+        const auto &turn_lanes = prev_edge->turn_lanes();
+        for (auto turn_lane : turn_lanes) {
+          int active_direction = turn_lane.active_direction();
+          int dir_mask = turn_lane.directions_mask();
+          for(auto &ttype: kTurnLaneNames) {
+            if(dir_mask & ttype.first) {
+              //get the turn lane direction string from Turn::Type using the active_direction
+              maneuver_turn_lanes += kTurnLaneNames.find(ttype.first)->second + /*":" + std::to_string(ttype.first) +*/ "|";
+            }
+          }
+          maneuver_turn_lanes.pop_back(); //remove the last '|'
+          maneuver_turn_lanes += ";";
+          
+          if(kTurnLaneNames.find(active_direction) != kTurnLaneNames.end()) {
+            //get the turn lane direction string from Turn::Type using the active_direction
+            active_turn_lanes += kTurnLaneNames.find(active_direction)->second + /*":" + std::to_string(active_direction) +*/ ";";
+          }
+          else {
+            //get the turn lane direction string from Turn::Type using the active_direction
+            active_turn_lanes += std::string("*") + ":" + std::to_string(active_direction) + ";";
+          }          
+        }
+        if(maneuver_turn_lanes != "") {
+          maneuver_turn_lanes.pop_back(); //remove the last ';'
+        }
+
+        if(active_turn_lanes != "") {
+          active_turn_lanes.pop_back(); //remove the last ';'          
+          std::cout << manID++ << ": " << maneuver_turn_lanes << "#" << active_turn_lanes  << std::endl;
+
+        }
+      }
+      turn_lanes.push_back(maneuver_turn_lanes + "#" + active_turn_lanes);
+      prev_man = curr_man;
+      curr_man = next_man;
+      if (next_man != maneuvers.end()) {
+        ++next_man;
+      }
+    }
+  }
+
+  return turn_lanes;  
+}
+
 std::vector<uint32_t> ManeuversBuilder::GetSpeedLimits(std::list<Maneuver> &maneuvers) {    
   std::vector<uint32_t> speed_limits;
 
-  std::cout << "node_size " << trip_path_->node_size() << std::endl;
+  //std::cout << "node_size " << trip_path_->node_size() << std::endl;
   for(auto maneuver = maneuvers.begin(); maneuver != maneuvers.end(); ++maneuver) {
     auto a = maneuver->begin_node_index();
     auto b = maneuver->end_node_index();
