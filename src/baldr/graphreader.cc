@@ -671,14 +671,14 @@ graph_tile_ptr GraphReader::GetGraphTile(const GraphId& graphid) {
       LOG_ERROR("Couldn't load graph tile from zip " + GraphTile::FileSuffix(base));
       return nullptr;
     }
-    //run thru the tile directedEdges
-      for(uint32_t i = 0; i < tile->header()->directededgecount(); i++) {
-        const DirectedEdge* de = tile->directededge(i);
-        auto einfo = tile->edgeinfo(de);
-        if(de->speed_camera()) {
-          //std::cout << "speed camera found in tile " << GraphTile::FileSuffix(base) << " at edge " << i << " osmid = " << einfo.wayid() << std::endl;
-        }
-      }
+    // //run thru the tile directedEdges
+    //   for(uint32_t i = 0; i < tile->header()->directededgecount(); i++) {
+    //     const DirectedEdge* de = tile->directededge(i);
+    //     auto einfo = tile->edgeinfo(de);
+    //     if(de->speed_camera()) {
+    //       //std::cout << "speed camera found in tile " << GraphTile::FileSuffix(base) << " at edge " << i << " osmid = " << einfo.wayid() << std::endl;
+    //     }
+    //   }
     // Keep a copy in the cache and return it    
     return cache_->Put(base, std::move(tile), sz);   
   }

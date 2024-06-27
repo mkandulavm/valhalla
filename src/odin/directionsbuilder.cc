@@ -51,7 +51,7 @@ void DirectionsBuilder::Build(Api& api, const MarkupFormatter& markup_formatter)
         maneuvers = maneuversBuilder.Build();
         //nevh
         auto speedLimits = maneuversBuilder.GetSpeedLimits(maneuvers);
-        auto speedCams = maneuversBuilder.GetSpeedCams(maneuvers);
+        //auto speedCams = maneuversBuilder.GetSpeedCams(maneuvers);
         maneuversBuilder.GetTurnLanes(maneuvers);
         
         //add speed limits as an array into trip directions
@@ -60,9 +60,9 @@ void DirectionsBuilder::Build(Api& api, const MarkupFormatter& markup_formatter)
           trip_directions.add_speed_limits(speed_limit);
         }
 
-        for(const auto& speed_cam : speedCams) {
-          trip_directions.add_speed_cameras(speed_cam);
-        }
+        // for(const auto& speed_cam : speedCams) {
+        //   trip_directions.add_speed_cameras(speed_cam);
+        // }
 
         //nevh
 
@@ -163,15 +163,12 @@ void DirectionsBuilder::PopulateDirectionsLeg(const Options& options,
     trip_maneuver->set_end_shape_index(maneuver.end_shape_index());
     if (maneuver.portions_toll()) {
       trip_maneuver->set_portions_toll(maneuver.portions_toll());
-      has_toll = true;
     }
     if (maneuver.portions_highway()) {
       trip_maneuver->set_portions_highway(maneuver.portions_highway());
-      has_highway = true;
     }
     if (maneuver.ferry()) {
       trip_maneuver->set_portions_ferry(maneuver.ferry());
-      has_ferry = true;
     }
 
     trip_maneuver->set_has_time_restrictions(maneuver.has_time_restrictions());
@@ -462,9 +459,9 @@ void DirectionsBuilder::PopulateDirectionsLeg(const Options& options,
   trip_directions.mutable_summary()->set_has_time_restrictions(has_time_restrictions);
 
   // Populate toll, highway, ferry tags
-  trip_directions.mutable_summary()->set_has_toll(has_toll);
-  trip_directions.mutable_summary()->set_has_highway(has_highway);
-  trip_directions.mutable_summary()->set_has_ferry(has_ferry);
+  trip_directions.mutable_summary()->set_has_toll(etp->summary().has_toll());
+  trip_directions.mutable_summary()->set_has_highway(etp->summary().has_highway());
+  trip_directions.mutable_summary()->set_has_ferry(etp->summary().has_ferry());
 }
 
 } // namespace odin

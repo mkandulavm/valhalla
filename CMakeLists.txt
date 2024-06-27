@@ -7,7 +7,7 @@
 # This is secondary build configuration provided for convenient development
 # on Windows and using CMake-enabled IDEs.
 #
-cmake_minimum_required(VERSION 3.12 FATAL_ERROR)
+cmake_minimum_required(VERSION 3.14 FATAL_ERROR)
 project(valhalla LANGUAGES CXX C)
 
 include(FindPkgConfig)
@@ -36,6 +36,38 @@ option(ENABLE_SINGLE_FILES_WERROR "Convert compiler warnings to errors for singl
 option(PREFER_EXTERNAL_DEPS "Whether to use internally vendored headers or find the equivalent external package" OFF)
 # useful to workaround issues likes this https://stackoverflow.com/questions/24078873/cmake-generated-xcode-project-wont-compile
 option(ENABLE_STATIC_LIBRARY_MODULES "If ON builds Valhalla modules as STATIC library targets" OFF)
+option(ENABLE_GDAL "Whether to include GDAL; currently only used for raster serialization of isotile grid" ON)
+
+#print all above
+message(STATUS "Valhalla booleans")
+message(STATUS "CMAKE_CXX_STANDARD: ${CMAKE_CXX_STANDARD}")
+message(STATUS "ENABLE_TOOLS: ${ENABLE_TOOLS}")
+message(STATUS "ENABLE_DATA_TOOLS: ${ENABLE_DATA_TOOLS}")
+message(STATUS "ENABLE_SERVICES: ${ENABLE_SERVICES}")
+message(STATUS "ENABLE_HTTP: ${ENABLE_HTTP}")
+message(STATUS "ENABLE_PYTHON_BINDINGS: ${ENABLE_PYTHON_BINDINGS}")
+message(STATUS "ENABLE_CCACHE: ${ENABLE_CCACHE}")
+message(STATUS "ENABLE_COVERAGE: ${ENABLE_COVERAGE}")
+message(STATUS "ENABLE_COMPILER_WARNINGS: ${ENABLE_COMPILER_WARNINGS}")
+message(STATUS "ENABLE_SANITIZERS: ${ENABLE_SANITIZERS}")
+message(STATUS "ENABLE_ADDRESS_SANITIZER: ${ENABLE_ADDRESS_SANITIZER}")
+message(STATUS "ENABLE_UNDEFINED_SANITIZER: ${ENABLE_UNDEFINED_SANITIZER}")
+message(STATUS "ENABLE_TESTS: ${ENABLE_TESTS}")
+message(STATUS "ENABLE_WERROR: ${ENABLE_WERROR}")
+message(STATUS "ENABLE_BENCHMARKS: ${ENABLE_BENCHMARKS}")
+message(STATUS "ENABLE_THREAD_SAFE_TILE_REF_COUNT: ${ENABLE_THREAD_SAFE_TILE_REF_COUNT}")
+message(STATUS "ENABLE_SINGLE_FILES_WERROR: ${ENABLE_SINGLE_FILES_WERROR}")
+message(STATUS "ENABLE_STATIC_LIBRARY_MODULES: ${ENABLE_STATIC_LIBRARY_MODULES}")
+
+#-D var cannot carry ";" ..so we send as ":" and seperate it back for including
+string(REPLACE ":" ";" minizIncludePath "${minizIncludePath}")
+
+set(NEINCLUDES 
+      ${minizIncludePath}
+      src
+   )
+message(STATUS "minizIncludePath: ${minizIncludePath}")
+message(STATUS "NEINCLUDES: ${NEINCLUDES}")
 
 #print all above
 message(STATUS "Valhalla booleans")
@@ -150,8 +182,6 @@ include_directories(SYSTEM ${lz4_include_dir})
 # We use pkg-config for (almost) all dependencies:
 # - CMake Find* modules are versioned with CMake, not the packages, see protobuf > 21.12
 # - it's more trivial to use custom installations via PKG_CONFIG_PATH env var
-find_package(PkgConfig REQUIRED)
-find_package(Threads REQUIRED)
 pkg_check_modules(ZLIB REQUIRED IMPORTED_TARGET zlib)
 pkg_check_modules(LZ4 REQUIRED IMPORTED_TARGET liblz4)
 
@@ -369,6 +399,22 @@ else()
   message(FATAL_ERROR "Required target protobuf::libprotobuf-lite or protobuf::libprotobuf is not defined")
 endif()
 
+# unless you said you didnt want gdal we try to turn it on, if we cant we tell you
+# we don't need it to build tiles (yet)
+set(GDAL_TARGET "")
+if (ENABLE_GDAL AND (ENABLE_SERVICES OR ENABLE_TOOLS OR ENABLE_PYTHON_BINDINGS))
+  find_package(GDAL QUIET)
+  if (GDAL_FOUND)
+    set(GDAL_TARGET GDAL::GDAL)
+    add_compile_definitions(ENABLE_GDAL)
+    message(STATUS "Gdal support is enabled")
+  else()
+    message(WARNING "Unable to enable gdal support")
+  endif()
+endif()
+
+set(CMAKE_FIND_PACKAGE_PREFER_CONFIG OFF)
+
 # libprime_server
 # see https://gitlab.kitware.com/cmake/cmake/-/issues/19467
 set(libprime_server_targets "")
@@ -382,6 +428,7 @@ if(ENABLE_SERVICES)
     message(FATAL_ERROR "ENABLE_SERVICES=ON but prime_server not found...")
   endif()
 endif()
+
 
 ## Mjolnir and associated executables
 if(ENABLE_DATA_TOOLS)
