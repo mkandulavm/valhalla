@@ -69,6 +69,37 @@ set(NEINCLUDES
 message(STATUS "minizIncludePath: ${minizIncludePath}")
 message(STATUS "NEINCLUDES: ${NEINCLUDES}")
 
+#print all above
+message(STATUS "Valhalla booleans")
+message(STATUS "CMAKE_CXX_STANDARD: ${CMAKE_CXX_STANDARD}")
+message(STATUS "ENABLE_TOOLS: ${ENABLE_TOOLS}")
+message(STATUS "ENABLE_DATA_TOOLS: ${ENABLE_DATA_TOOLS}")
+message(STATUS "ENABLE_SERVICES: ${ENABLE_SERVICES}")
+message(STATUS "ENABLE_HTTP: ${ENABLE_HTTP}")
+message(STATUS "ENABLE_PYTHON_BINDINGS: ${ENABLE_PYTHON_BINDINGS}")
+message(STATUS "ENABLE_CCACHE: ${ENABLE_CCACHE}")
+message(STATUS "ENABLE_COVERAGE: ${ENABLE_COVERAGE}")
+message(STATUS "ENABLE_COMPILER_WARNINGS: ${ENABLE_COMPILER_WARNINGS}")
+message(STATUS "ENABLE_SANITIZERS: ${ENABLE_SANITIZERS}")
+message(STATUS "ENABLE_ADDRESS_SANITIZER: ${ENABLE_ADDRESS_SANITIZER}")
+message(STATUS "ENABLE_UNDEFINED_SANITIZER: ${ENABLE_UNDEFINED_SANITIZER}")
+message(STATUS "ENABLE_TESTS: ${ENABLE_TESTS}")
+message(STATUS "ENABLE_WERROR: ${ENABLE_WERROR}")
+message(STATUS "ENABLE_BENCHMARKS: ${ENABLE_BENCHMARKS}")
+message(STATUS "ENABLE_THREAD_SAFE_TILE_REF_COUNT: ${ENABLE_THREAD_SAFE_TILE_REF_COUNT}")
+message(STATUS "ENABLE_SINGLE_FILES_WERROR: ${ENABLE_SINGLE_FILES_WERROR}")
+message(STATUS "ENABLE_STATIC_LIBRARY_MODULES: ${ENABLE_STATIC_LIBRARY_MODULES}")
+
+#-D var cannot carry ";" ..so we send as ":" and seperate it back for including
+string(REPLACE ":" ";" minizIncludePath "${minizIncludePath}")
+
+set(NEINCLUDES 
+      ${minizIncludePath}
+      src
+   )
+message(STATUS "minizIncludePath: ${minizIncludePath}")
+message(STATUS "NEINCLUDES: ${NEINCLUDES}")
+
 set(LOGGING_LEVEL "" CACHE STRING "Logging level, default is INFO")
 set_property(CACHE LOGGING_LEVEL PROPERTY STRINGS "NONE;ALL;ERROR;WARN;INFO;DEBUG;TRACE")
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
@@ -449,7 +480,7 @@ set(valhalla_programs valhalla_run_map_match valhalla_benchmark_loki valhalla_be
 set(valhalla_data_tools valhalla_build_statistics valhalla_ways_to_edges valhalla_validate_transit
   valhalla_benchmark_admins valhalla_build_connectivity	valhalla_build_tiles valhalla_build_admins
   valhalla_convert_transit valhalla_ingest_transit valhalla_query_transit valhalla_add_predicted_traffic
-  valhalla_assign_speeds valhalla_add_elevation valhalla_build_landmarks valhalla_add_landmarks)
+  valhalla_assign_speeds valhalla_add_elevation)
 
 ## Valhalla services
 set(valhalla_services valhalla_loki_worker valhalla_odin_worker valhalla_thor_worker)
@@ -574,7 +605,7 @@ set(CPACK_RESOURCE_FILE_LICENSE "${VALHALLA_SOURCE_DIR}/LICENSE.md")
 set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "OpenStreetMap Routing API
  A set of routing APIs designed around OSM map data using
  dynamic costing and a tiled data structure")
-  set(CPACK_COMPONENT_PYTHON_DESCRIPTION "OpenStreetMap Routing Python Bindings
+  set(CPACK_COMPONENT_PYHON_DESCRIPTION "OpenStreetMap Routing Python Bindings
  A set routing APIs designed around OSM map data using
  dynamic costing and a tiled data structure and
  accompanying tools and services used to analyse and
