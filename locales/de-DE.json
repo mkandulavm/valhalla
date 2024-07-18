@@ -42,13 +42,13 @@
         "5": "Leicht nach <RELATIVE_DIRECTION> in Richtung <TOWARD_SIGN> abbiegen."
       },
       "empty_street_name_labels": [
-        "Fußweg",
-        "Radweg",
-        "Mountainbike Strecke",
-        "Fußgängerübergang",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "der Gehweg",
+        "der Radweg",
+        "der Mountainbike-Trail",
+        "der Zebrastreifen",
+        "die Treppe",
+        "die Brücke",
+        "der Tunnel"
       ],
       "relative_directions": [
         "links",
@@ -85,13 +85,13 @@
         "5": "Leicht nach <RELATIVE_DIRECTION> in Richtung <TOWARD_SIGN> abbiegen."
       },
       "empty_street_name_labels": [
-        "Fußweg",
-        "Radweg",
-        "Mountainbike Strecke",
-        "Fußgängerübergang",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "der Gehweg",
+        "der Radweg",
+        "der Mountainbike-Trail",
+        "der Zebrastreifen",
+        "die Treppe",
+        "die Brücke",
+        "der Tunnel"
       ],
       "relative_directions": [
         "links",
@@ -146,13 +146,13 @@
         "3": "Weiter in Richtung <TOWARD_SIGN>."
       },
       "empty_street_name_labels": [
-        "Fußweg",
-        "Radweg",
-        "Mountainbike Strecke",
-        "Fußgängerübergang",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "der Gehweg",
+        "der Radweg",
+        "der Mountainbike-Trail",
+        "der Zebrastreifen",
+        "die Treppe",
+        "die Brücke",
+        "der Tunnel"
       ],
       "example_phrases": {
         "0": [
@@ -171,23 +171,23 @@
     },
     "continue_verbal": {
       "phrases": {
-        "0": "Weiter.",
-        "1": "<LENGTH> weiter.",
-        "2": "Weiter auf <STREET_NAMES>.",
-        "3": "<LENGTH> weiter auf <STREET_NAMES>.",
-        "4": "Weiter an <JUNCTION_NAME>.",
-        "5": "An <JUNCTION_NAME> <LENGTH> weiter.",
-        "6": "Weiter in Richtung <TOWARD_SIGN>.",
-        "7": "<LENGTH> weiter in Richtung <TOWARD_SIGN>."
+        "0": "Weiterfahren.",
+        "1": "Weiterfahren für <LÄNGE>.",
+        "2": "Weiterfahren auf <STRASSENNAMEN>.",
+        "3": "Weiterfahren auf <STRASSENNAMEN> für <LÄNGE>.",
+        "4": "Weiterfahren an <KREUZUNGSNAME>.",
+        "5": "Weiterfahren an <KREUZUNGSNAME> für <LÄNGE>.",
+        "6": "Weiterfahren in Richtung <WEG_SCHILD>.",
+        "7": "Weiterfahren in Richtung <WEG_SCHILD> für <LÄNGE>."
       },
       "empty_street_name_labels": [
-        "Fußweg",
-        "Radweg",
-        "Mountainbike Strecke",
-        "Fußgängerübergang",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "der Gehweg",
+        "der Radweg",
+        "der Mountainbike-Trail",
+        "der Zebrastreifen",
+        "die Treppe",
+        "die Brücke",
+        "der Tunnel"
       ],
       "metric_lengths": [
         "<KILOMETERS> Kilometer",
@@ -238,13 +238,13 @@
         "3": "Weiter in Richtung <TOWARD_SIGN>."
       },
       "empty_street_name_labels": [
-        "Fußweg",
-        "Radweg",
-        "Mountainbike Strecke",
-        "Fußgängerübergang",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "der Gehweg",
+        "der Radweg",
+        "der Mountainbike-Trail",
+        "der Zebrastreifen",
+        "die Treppe",
+        "die Brücke",
+        "der Tunnel"
       ],
       "example_phrases": {
         "0": [
@@ -291,10 +291,10 @@
     },
     "destination": {
       "phrases": {
-        "0": "Ziel erreicht.",
-        "1": "<DESTINATION> erreicht.",
-        "2": "Ziel befindet sich auf der <RELATIVE_DIRECTION> Seite.",
-        "3": "<DESTINATION> befindet sich auf der <RELATIVE_DIRECTION> Seite."
+        "0": "Sie sind an Ihrem Ziel angekommen.",
+        "1": "Sie sind in <DESTINATION> angekommen.",
+        "2": "Ihr Ziel liegt in der <RELATIVE_DIRECTION>.",
+        "3": "<DESTINATION> liegt in der <RELATIVE_DIRECTION>."
       },
       "relative_directions": [
         "linken",
@@ -318,10 +318,10 @@
     },
     "destination_verbal": {
       "phrases": {
-        "0": "Ziel erreicht.",
-        "1": "<DESTINATION> erreicht.",
-        "2": "Ziel befindet sich auf der <RELATIVE_DIRECTION> Seite.",
-        "3": "<DESTINATION> befindet sich auf der <RELATIVE_DIRECTION> Seite."
+        "0": "Sie sind an Ihrem Ziel angekommen.",
+        "1": "Sie sind in <DESTINATION> angekommen.",
+        "2": "Ihr Ziel liegt in der <RELATIVE_DIRECTION>.",
+        "3": "<DESTINATION> liegt in der <RELATIVE_DIRECTION>."
       },
       "relative_directions": [
         "linken",
@@ -378,13 +378,13 @@
         "3": "Die Fähre in Richtung <TOWARD_SIGN> nehmen."
       },
       "empty_street_name_labels": [
-        "Fußweg",
-        "Radweg",
-        "Mountainbike Strecke",
-        "Fußgängerübergang",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "der Gehweg",
+        "der Radweg",
+        "der Mountainbike-Trail",
+        "der Zebrastreifen",
+        "die Treppe",
+        "die Brücke",
+        "der Tunnel"
       ],
       "ferry_label": "Fähre",
       "example_phrases": {
@@ -404,19 +404,19 @@
     },
     "enter_ferry_verbal": {
       "phrases": {
-        "0": "Die Fähre nehmen.",
-        "1": "Die <STREET_NAMES> nehmen.",
-        "2": "Die <FERRY_LABEL> <STREET_NAMES> nehmen.",
-        "3": "Die Fähre in Richtung <TOWARD_SIGN> nehmen."
+        "0": "Nehmen Sie die Fähre.",
+        "1": "Nehmen Sie die <STREET_NAMES>.",
+        "2": "Nehmen Sie die <STREET_NAMES> <FERRY_LABEL>.",
+        "3": "Nehmen Sie die Fähre in Richtung <TOWARD_SIGN>."
       },
       "empty_street_name_labels": [
-        "Fußweg",
-        "Radweg",
-        "Mountainbike Strecke",
-        "Fußgängerübergang",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "der Gehweg",
+        "der Radweg",
+        "der Mountainbike-Trail",
+        "der Zebrastreifen",
+        "die Treppe",
+        "die Brücke",
+        "der Tunnel"
       ],
       "ferry_label": "Fähre",
       "example_phrases": {
@@ -466,13 +466,13 @@
         "10."
       ],
       "empty_street_name_labels": [
-        "Fußweg",
-        "Radweg",
-        "Mountainbike Strecke",
-        "Fußgängerübergang",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "der Gehweg",
+        "der Radweg",
+        "der Mountainbike-Trail",
+        "der Zebrastreifen",
+        "die Treppe",
+        "die Brücke",
+        "der Tunnel"
       ],
       "example_phrases": {
         "0": [
@@ -566,13 +566,13 @@
         "zehnte"
       ],
       "empty_street_name_labels": [
-        "Fußweg",
-        "Radweg",
-        "Mountainbike Strecke",
-        "Fußgängerübergang",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "der Gehweg",
+        "der Radweg",
+        "der Mountainbike-Trail",
+        "der Zebrastreifen",
+        "die Treppe",
+        "die Brücke",
+        "der Tunnel"
       ],
       "example_phrases": {
         "0": [
@@ -749,13 +749,13 @@
         "3": "Aus dem Kreisverkehr in Richtung <TOWARD_SIGN> ausfahren."
       },
       "empty_street_name_labels": [
-        "Fußweg",
-        "Radweg",
-        "Mountainbike Strecke",
-        "Fußgängerübergang",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "der Gehweg",
+        "der Radweg",
+        "der Mountainbike-Trail",
+        "der Zebrastreifen",
+        "die Treppe",
+        "die Brücke",
+        "der Tunnel"
       ],
       "example_phrases": {
         "0": [
@@ -780,13 +780,13 @@
         "3": "Aus dem Kreisverkehr in Richtung <TOWARD_SIGN> ausfahren."
       },
       "empty_street_name_labels": [
-        "Fußweg",
-        "Radweg",
-        "Mountainbike Strecke",
-        "Fußgängerübergang",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "der Gehweg",
+        "der Radweg",
+        "der Mountainbike-Trail",
+        "der Zebrastreifen",
+        "die Treppe",
+        "die Brücke",
+        "der Tunnel"
       ],
       "example_phrases": {
         "0": [
@@ -932,13 +932,13 @@
         "7": "<RELATIVE_DIRECTION> halten um die Ausfahrt <NUMBER_SIGN> auf <STREET_NAMES> Richtung <TOWARD_SIGN> zu nehmen."
       },
       "empty_street_name_labels": [
-        "Fußweg",
-        "Radweg",
-        "Mountainbike Strecke",
-        "Fußgängerübergang",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "der Gehweg",
+        "der Radweg",
+        "der Mountainbike-Trail",
+        "der Zebrastreifen",
+        "die Treppe",
+        "die Brücke",
+        "der Tunnel"
       ],
       "relative_directions": [
         "Links",
@@ -982,13 +982,13 @@
         "3": "Auf <STREET_NAMES> über die Ausfahrt <NUMBER_SIGN> <RELATIVE_DIRECTION> halten Richtung <TOWARD_SIGN>."
       },
       "empty_street_name_labels": [
-        "Fußweg",
-        "Radweg",
-        "Mountainbike Strecke",
-        "Fußgängerübergang",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "der Gehweg",
+        "der Radweg",
+        "der Mountainbike-Trail",
+        "der Zebrastreifen",
+        "die Treppe",
+        "die Brücke",
+        "der Tunnel"
       ],
       "relative_directions": [
         "links",
@@ -1020,13 +1020,13 @@
         "3": "Auf <STREET_NAMES> über die Ausfahrt <NUMBER_SIGN> <RELATIVE_DIRECTION> halten Richtung <TOWARD_SIGN>."
       },
       "empty_street_name_labels": [
-        "Fußweg",
-        "Radweg",
-        "Mountainbike Strecke",
-        "Fußgängerübergang",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "der Gehweg",
+        "der Radweg",
+        "der Mountainbike-Trail",
+        "der Zebrastreifen",
+        "die Treppe",
+        "die Brücke",
+        "der Tunnel"
       ],
       "relative_directions": [
         "links",
@@ -1062,13 +1062,13 @@
         "7": "<RELATIVE_DIRECTION> halten um die Ausfahrt <NUMBER_SIGN> auf <STREET_NAMES> Richtung <TOWARD_SIGN> zu nehmen."
       },
       "empty_street_name_labels": [
-        "Fußweg",
-        "Radweg",
-        "Mountainbike Strecke",
-        "Fußgängerübergang",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "der Gehweg",
+        "der Radweg",
+        "der Mountainbike-Trail",
+        "der Zebrastreifen",
+        "die Treppe",
+        "die Brücke",
+        "der Tunnel"
       ],
       "relative_directions": [
         "Links",
@@ -1118,13 +1118,13 @@
         "Rechts"
       ],
       "empty_street_name_labels": [
-        "Fußweg",
-        "Radweg",
-        "Mountainbike Strecke",
-        "Fußgängerübergang",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "der Gehweg",
+        "der Radweg",
+        "der Mountainbike-Trail",
+        "der Zebrastreifen",
+        "die Treppe",
+        "die Brücke",
+        "der Tunnel"
       ],
       "example_phrases": {
         "0": [
@@ -1161,13 +1161,13 @@
         "Rechts"
       ],
       "empty_street_name_labels": [
-        "Fußweg",
-        "Radweg",
-        "Mountainbike Strecke",
-        "Fußgängerübergang",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "der Gehweg",
+        "der Radweg",
+        "der Mountainbike-Trail",
+        "der Zebrastreifen",
+        "die Treppe",
+        "die Brücke",
+        "der Tunnel"
       ],
       "example_phrases": {
         "0": [
@@ -1211,13 +1211,13 @@
         "1": "<LENGTH> weiter auf <STREET_NAMES>."
       },
       "empty_street_name_labels": [
-        "Fußweg",
-        "Radweg",
-        "Mountainbike Strecke",
-        "Fußgängerübergang",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "der Gehweg",
+        "der Radweg",
+        "der Mountainbike-Trail",
+        "der Zebrastreifen",
+        "die Treppe",
+        "die Brücke",
+        "der Tunnel"
       ],
       "metric_lengths": [
         "<KILOMETERS> Kilometer",
@@ -1450,13 +1450,13 @@
         "5": "Scharf nach <RELATIVE_DIRECTION> in Richtung <TOWARD_SIGN> abbiegen."
       },
       "empty_street_name_labels": [
-        "Fußweg",
-        "Radweg",
-        "Mountainbike Strecke",
-        "Fußgängerübergang",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "der Gehweg",
+        "der Radweg",
+        "der Mountainbike-Trail",
+        "der Zebrastreifen",
+        "die Treppe",
+        "die Brücke",
+        "der Tunnel"
       ],
       "relative_directions": [
         "links",
@@ -1493,13 +1493,13 @@
         "5": "Scharf nach <RELATIVE_DIRECTION> in Richtung <TOWARD_SIGN> abbiegen."
       },
       "empty_street_name_labels": [
-        "Fußweg",
-        "Radweg",
-        "Mountainbike Strecke",
-        "Fußgängerübergang",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "der Gehweg",
+        "der Radweg",
+        "der Mountainbike-Trail",
+        "der Zebrastreifen",
+        "die Treppe",
+        "die Brücke",
+        "der Tunnel"
       ],
       "relative_directions": [
         "links",
@@ -1552,13 +1552,13 @@
         "Nordwesten"
       ],
       "empty_street_name_labels": [
-        "Fußweg",
-        "Radweg",
-        "Mountainbike Strecke",
-        "Fußgängerübergang",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "der Gehweg",
+        "der Radweg",
+        "der Mountainbike-Trail",
+        "der Zebrastreifen",
+        "die Treppe",
+        "die Brücke",
+        "der Tunnel"
       ],
       "example_phrases": {
         "0": [
@@ -1643,13 +1643,13 @@
         "Nordwesten"
       ],
       "empty_street_name_labels": [
-        "Fußweg",
-        "Radweg",
-        "Mountainbike Strecke",
-        "Fußgängerübergang",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "der Gehweg",
+        "der Radweg",
+        "der Mountainbike-Trail",
+        "der Zebrastreifen",
+        "die Treppe",
+        "die Brücke",
+        "der Tunnel"
       ],
       "metric_lengths": [
         "<KILOMETERS> Kilometer",
@@ -1738,21 +1738,21 @@
     },
     "transit": {
       "phrases": {
-        "0": "Mit <TRANSIT_NAME> fahren. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)",
-        "1": "Mit <TRANSIT_NAME> Richtung <TRANSIT_HEADSIGN> fahren. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)"
+        "0": "Nehmen Sie den <TRANSIT_NAME>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)",
+        "1": "Nehmen Sie den <TRANSIT_NAME> in Richtung <TRANSIT_HEADSIGN>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)"
       },
       "empty_transit_name_labels": [
         "Straßenbahn",
-        "U-Bahn",
+        "Metro",
         "Zug",
         "Bus",
         "Fähre",
-        "Kabelbahn",
-        "Luftseilbahn",
-        "Standseilbahn"
+        "Seilbahn",
+        "Gondel",
+        "Seilbahn"
       ],
       "transit_stop_count_labels": {
-        "one": "Haltestelle",
+        "one": "stoppen",
         "other": "Haltestellen"
       },
       "example_phrases": {
@@ -1769,9 +1769,9 @@
     },
     "transit_connection_destination": {
       "phrases": {
-        "0": "Bahnhof verlassen.",
-        "1": "<TRANSIT_STOP> verlassen.",
-        "2": "<STATION_LABEL> <TRANSIT_STOP> verlassen."
+        "0": "Verlassen Sie den Bahnhof.",
+        "1": "Verlassen Sie die Haltestelle <TRANSIT_STOP>.",
+        "2": "Verlassen Sie die Haltestelle <STATION_LABEL>."
       },
       "station_label": "Bahnhof",
       "example_phrases": {
@@ -1788,9 +1788,9 @@
     },
     "transit_connection_destination_verbal": {
       "phrases": {
-        "0": "Bahnhof verlassen.",
-        "1": "<TRANSIT_STOP> verlassen.",
-        "2": "<STATION_LABEL> <TRANSIT_STOP> verlassen."
+        "0": "Verlassen Sie den Bahnhof.",
+        "1": "Verlassen Sie die Haltestelle <TRANSIT_STOP>.",
+        "2": "Verlassen Sie die Haltestelle <STATION_LABEL>."
       },
       "station_label": "Bahnhof",
       "example_phrases": {
@@ -1807,9 +1807,9 @@
     },
     "transit_connection_start": {
       "phrases": {
-        "0": "Bahnhof betreten.",
-        "1": "<TRANSIT_STOP> betreten.",
-        "2": "<STATION_LABEL> <TRANSIT_STOP> betreten."
+        "0": "Betreten Sie den Bahnhof.",
+        "1": "Geben Sie die <Haltestelle(n) im Transitbereich> ein.",
+        "2": "Geben Sie die <Haltestelle> <Haltestellenbezeichnung> ein."
       },
       "station_label": "Bahnhof",
       "example_phrases": {
@@ -1826,9 +1826,9 @@
     },
     "transit_connection_start_verbal": {
       "phrases": {
-        "0": "Bahnhof betreten.",
-        "1": "<TRANSIT_STOP> betreten.",
-        "2": "<STATION_LABEL> <TRANSIT_STOP> betreten."
+        "0": "Betreten Sie den Bahnhof.",
+        "1": "Geben Sie die <Haltestelle(n) im Transitbereich> ein.",
+        "2": "Geben Sie die <Haltestelle> <Haltestellenbezeichnung> ein."
       },
       "station_label": "Bahnhof",
       "example_phrases": {
@@ -1845,9 +1845,9 @@
     },
     "transit_connection_transfer": {
       "phrases": {
-        "0": "Am Bahnhof umsteigen.",
-        "1": "Am <TRANSIT_STOP> umsteigen.",
-        "2": "Am <STATION_LABEL> <TRANSIT_STOP> umsteigen."
+        "0": "Umsteigen am Bahnhof.",
+        "1": "Umsteigen an der <TRANSIT_STOP>.",
+        "2": "Umsteigen an der <TRANSIT_STOP> <STATION_LABEL>."
       },
       "station_label": "Bahnhof",
       "example_phrases": {
@@ -1864,9 +1864,9 @@
     },
     "transit_connection_transfer_verbal": {
       "phrases": {
-        "0": "Am Bahnhof umsteigen.",
-        "1": "Am <TRANSIT_STOP> umsteigen.",
-        "2": "Am <STATION_LABEL> <TRANSIT_STOP> umsteigen."
+        "0": "Umsteigen am Bahnhof.",
+        "1": "Umsteigen an der <TRANSIT_STOP>.",
+        "2": "Umsteigen an der <TRANSIT_STOP> <STATION_LABEL>."
       },
       "station_label": "Bahnhof",
       "example_phrases": {
@@ -1883,21 +1883,21 @@
     },
     "transit_remain_on": {
       "phrases": {
-        "0": "Mit <TRANSIT_NAME> weiter. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)",
-        "1": "Mit <TRANSIT_NAME> Richtung <TRANSIT_HEADSIGN> weiter. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)"
+        "0": "Bleiben Sie auf <TRANSIT_NAME>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)",
+        "1": "Bleiben Sie auf <TRANSIT_NAME> in Richtung <TRANSIT_HEADSIGN>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)"
       },
       "empty_transit_name_labels": [
         "Straßenbahn",
-        "U-Bahn",
+        "Metro",
         "Zug",
         "Bus",
         "Fähre",
-        "Kabelbahn",
-        "Luftseilbahn",
-        "Standseilbahn"
+        "Seilbahn",
+        "Gondel",
+        "Seilbahn"
       ],
       "transit_stop_count_labels": {
-        "one": "Haltestelle",
+        "one": "stoppen",
         "other": "Haltestellen"
       },
       "example_phrases": {
@@ -1917,13 +1917,13 @@
       },
       "empty_transit_name_labels": [
         "Straßenbahn",
-        "U-Bahn",
+        "Metro",
         "Zug",
         "Bus",
         "Fähre",
-        "Kabelbahn",
-        "Luftseilbahn",
-        "Standseilbahn"
+        "Seilbahn",
+        "Gondel",
+        "Seilbahn"
       ],
       "example_phrases": {
         "0": [
@@ -1936,21 +1936,21 @@
     },
     "transit_transfer": {
       "phrases": {
-        "0": "Zu <TRANSIT_NAME> umsteigen. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)",
-        "1": "Zu <TRANSIT_NAME> Richtung <TRANSIT_HEADSIGN> umsteigen. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)"
+        "0": "Umsteigen, um <TRANSIT_NAME> zu nehmen. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)",
+        "1": "Steigen Sie um und nehmen Sie den <TRANSIT_NAME> in Richtung <TRANSIT_HEADSIGN>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)"
       },
       "empty_transit_name_labels": [
         "Straßenbahn",
-        "U-Bahn",
+        "Metro",
         "Zug",
         "Bus",
         "Fähre",
-        "Kabelbahn",
-        "Luftseilbahn",
-        "Standseilbahn"
+        "Seilbahn",
+        "Gondel",
+        "Seilbahn"
       ],
       "transit_stop_count_labels": {
-        "one": "Haltestelle",
+        "one": "stoppen",
         "other": "Haltestellen"
       },
       "example_phrases": {
@@ -1965,18 +1965,18 @@
     },
     "transit_transfer_verbal": {
       "phrases": {
-        "0": "Zu <TRANSIT_NAME> umsteigen.",
-        "1": "Zu <TRANSIT_NAME> Richtung <TRANSIT_HEADSIGN> umsteigen."
+        "0": "Steigen Sie um, um den <TRANSIT_NAME> zu nehmen.",
+        "1": "Steigen Sie um und nehmen Sie den <TRANSIT_NAME> in Richtung <TRANSIT_HEADSIGN>."
       },
       "empty_transit_name_labels": [
         "Straßenbahn",
-        "U-Bahn",
+        "Metro",
         "Zug",
         "Bus",
         "Fähre",
-        "Kabelbahn",
-        "Luftseilbahn",
-        "Standseilbahn"
+        "Seilbahn",
+        "Gondel",
+        "Seilbahn"
       ],
       "example_phrases": {
         "0": [
@@ -1989,45 +1989,45 @@
     },
     "transit_verbal": {
       "phrases": {
-        "0": "Mit <TRANSIT_NAME> fahren.",
-        "1": "Mit <TRANSIT_NAME> Richtung <TRANSIT_HEADSIGN> fahren."
+        "0": "Nehmen Sie den <TRANSIT_NAME>.",
+        "1": "Nehmen Sie den <TRANSIT_NAME> in Richtung <TRANSIT_HEADSIGN>."
       },
       "empty_transit_name_labels": [
         "Straßenbahn",
-        "U-Bahn",
+        "Metro",
         "Zug",
         "Bus",
         "Fähre",
-        "Kabelbahn",
-        "Luftseilbahn",
-        "Standseilbahn"
+        "Seilbahn",
+        "Gondel",
+        "Seilbahn"
       ],
       "example_phrases": {
         "0": [
-          "Take the New Haven."
+          "Nehmen Sie New Haven."
         ],
         "1": [
-          "Take the F toward JAMAICA - 179 ST."
+          "Nehmen Sie die F Richtung JAMAICA – 179 ST."
         ]
       }
     },
     "turn": {
       "phrases": {
-        "0": "<RELATIVE_DIRECTION> abbiegen.",
-        "1": "<RELATIVE_DIRECTION> auf <STREET_NAMES> abbiegen.",
-        "2": "<RELATIVE_DIRECTION> auf <BEGIN_STREET_NAMES> abbiegen. Dann weiter auf <STREET_NAMES>.",
-        "3": "<RELATIVE_DIRECTION> abbiegen um auf <STREET_NAMES> zu bleiben.",
-        "4": "An <JUNCTION_NAME> nach <RELATIVE_DIRECTION> abbiegen.",
-        "5": "In Richtung <TOWARD_SIGN> nach <RELATIVE_DIRECTION> abbiegen."
+        "0": "Drehen Sie sich <RELATIVE_DIRECTION>.",
+        "1": "Biegen Sie in <RELATIVE_DIRECTION> auf <STREET_NAMES> ab.",
+        "2": "Biegen Sie in <RELATIVE_DIRECTION> auf <BEGIN_STREET_NAMES> ab. Fahren Sie weiter auf <STREET_NAMES>.",
+        "3": "Biegen Sie in die <RELATIVE_DIRECTION> ab, um auf <STREET_NAMES> zu bleiben.",
+        "4": "Biegen Sie an der Kreuzung <JUNCTION_NAME> in die Position <RELATIVE_DIRECTION> ab.",
+        "5": "Biegen Sie in <RELATIVE_DIRECTION> in Richtung <TOWARD_SIGN> ab."
       },
       "empty_street_name_labels": [
-        "Fußweg",
-        "Radweg",
-        "Mountainbike Strecke",
-        "Fußgängerübergang",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "der Gehweg",
+        "der Radweg",
+        "der Mountainbike-Trail",
+        "der Zebrastreifen",
+        "die Treppe",
+        "die Brücke",
+        "Der Tunnel"
       ],
       "relative_directions": [
         "Links",
@@ -2056,21 +2056,21 @@
     },
     "turn_verbal": {
       "phrases": {
-        "0": "<RELATIVE_DIRECTION> abbiegen.",
-        "1": "<RELATIVE_DIRECTION> auf <STREET_NAMES> abbiegen.",
-        "2": "<RELATIVE_DIRECTION> auf <BEGIN_STREET_NAMES> abbiegen. Dann weiter auf <STREET_NAMES>.",
-        "3": "<RELATIVE_DIRECTION> abbiegen um auf <STREET_NAMES> zu bleiben.",
-        "4": "An <JUNCTION_NAME> nach <RELATIVE_DIRECTION> abbiegen.",
-        "5": "In Richtung <TOWARD_SIGN> nach <RELATIVE_DIRECTION> abbiegen."
+        "0": "Drehen Sie sich <RELATIVE_DIRECTION>.",
+        "1": "Biegen Sie in <RELATIVE_DIRECTION> auf <STREET_NAMES> ab.",
+        "2": "Biegen Sie bei <RELATIVE_DIRECTION> auf <BEGIN_STREET_NAMES> ab.",
+        "3": "Biegen Sie in die <RELATIVE_DIRECTION> ab, um auf <STREET_NAMES> zu bleiben.",
+        "4": "Biegen Sie an der Kreuzung <JUNCTION_NAME> in die Position <RELATIVE_DIRECTION> ab.",
+        "5": "Biegen Sie in <RELATIVE_DIRECTION> in Richtung <TOWARD_SIGN> ab."
       },
       "empty_street_name_labels": [
-        "Fußweg",
-        "Radweg",
-        "Mountainbike Strecke",
-        "Fußgängerübergang",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "der Gehweg",
+        "der Radweg",
+        "der Mountainbike-Trail",
+        "der Zebrastreifen",
+        "die Treppe",
+        "die Brücke",
+        "Der Tunnel"
       ],
       "relative_directions": [
         "Links",
@@ -2099,27 +2099,27 @@
     },
     "uturn": {
       "phrases": {
-        "0": "Nach <RELATIVE_DIRECTION> eine Kehrtwende machen.",
-        "1": "Nach <RELATIVE_DIRECTION> eine Kehrtwende auf <STREET_NAMES> machen.",
-        "2": "Nach <RELATIVE_DIRECTION> eine Kehrtwende machen um auf <STREET_NAMES> zu bleiben.",
-        "3": "Nach <RELATIVE_DIRECTION> eine Kehrtwende bei <CROSS_STREET_NAMES> machen.",
-        "4": "Nach <RELATIVE_DIRECTION> eine Kehrtwende bei <CROSS_STREET_NAMES> auf <STREET_NAMES> machen.",
-        "5": "Nach <RELATIVE_DIRECTION> eine Kehrtwende bei <CROSS_STREET_NAMES> machen um auf <STREET_NAMES> zu bleiben.",
-        "6": "An <JUNCTION_NAME> eine Kehrtwende nach <RELATIVE_DIRECTION> machen.",
-        "7": "In Richtung <TOWARD_SIGN> eine Kehrtwende nach <RELATIVE_DIRECTION> machen."
+        "0": "Machen Sie eine Kehrtwende in <RELATIVE_DIRECTION>.",
+        "1": "Machen Sie eine Kehrtwende in <RELATIVE_DIRECTION> auf <STREET_NAMES>.",
+        "2": "Machen Sie eine Kehrtwende in <RELATIVE_DIRECTION>, um auf <STREET_NAMES> zu bleiben.",
+        "3": "Machen Sie an der Stelle <CROSS_STREET_NAMES> eine Kehrtwende in <RELATIVE_DIRECTION>.",
+        "4": "Machen Sie an der Stelle <CROSS_STREET_NAMES> eine Kehrtwende in <RELATIVE_DIRECTION> auf <STREET_NAMES>.",
+        "5": "Machen Sie an der Stelle <CROSS_STREET_NAMES> eine Kehrtwende in <RELATIVE_DIRECTION>, um auf <STREET_NAMES> zu bleiben.",
+        "6": "Machen Sie an der Kreuzung <JUNCTION_NAME> eine Kehrtwende in <RELATIVE_DIRECTION>.",
+        "7": "Machen Sie eine Kehrtwende in <RELATIVE_DIRECTION> Richtung <TOWARD_SIGN>."
       },
       "empty_street_name_labels": [
-        "Fußweg",
-        "Radweg",
-        "Mountainbike Strecke",
-        "Fußgängerübergang",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "der Gehweg",
+        "der Radweg",
+        "der Mountainbike-Trail",
+        "der Zebrastreifen",
+        "die Treppe",
+        "die Brücke",
+        "Der Tunnel"
       ],
       "relative_directions": [
-        "links",
-        "rechts"
+        "Links",
+        "Rechts"
       ],
       "example_phrases": {
         "0": [
@@ -2150,23 +2150,23 @@
     },
     "uturn_verbal": {
       "phrases": {
-        "0": "Nach <RELATIVE_DIRECTION> eine Kehrtwende machen.",
-        "1": "Nach <RELATIVE_DIRECTION> eine Kehrtwende auf <STREET_NAMES> machen.",
-        "2": "Nach <RELATIVE_DIRECTION> eine Kehrtwende machen um auf <STREET_NAMES> zu bleiben.",
-        "3": "Nach <RELATIVE_DIRECTION> eine Kehrtwende bei <CROSS_STREET_NAMES> machen.",
-        "4": "Nach <RELATIVE_DIRECTION> eine Kehrtwende bei <CROSS_STREET_NAMES> auf <STREET_NAMES> machen.",
-        "5": "Nach <RELATIVE_DIRECTION> eine Kehrtwende bei <CROSS_STREET_NAMES> machen um auf <STREET_NAMES> zu bleiben.",
-        "6": "An <JUNCTION_NAME> eine Kehrtwende nach <RELATIVE_DIRECTION> machen.",
-        "7": "In Richtung <TOWARD_SIGN> eine Kehrtwende nach <RELATIVE_DIRECTION> machen."
+        "0": "Machen Sie eine Kehrtwende in <RELATIVE_DIRECTION>.",
+        "1": "Machen Sie eine Kehrtwende in <RELATIVE_DIRECTION> auf <STREET_NAMES>.",
+        "2": "Machen Sie eine Kehrtwende in <RELATIVE_DIRECTION>, um auf <STREET_NAMES> zu bleiben.",
+        "3": "Machen Sie an der Stelle <CROSS_STREET_NAMES> eine Kehrtwende in <RELATIVE_DIRECTION>.",
+        "4": "Machen Sie an der Stelle <CROSS_STREET_NAMES> eine Kehrtwende in <RELATIVE_DIRECTION> auf <STREET_NAMES>.",
+        "5": "Machen Sie an der Stelle <CROSS_STREET_NAMES> eine Kehrtwende in <RELATIVE_DIRECTION>, um auf <STREET_NAMES> zu bleiben.",
+        "6": "Machen Sie an der Kreuzung <JUNCTION_NAME> eine Kehrtwende in <RELATIVE_DIRECTION>.",
+        "7": "Machen Sie eine Kehrtwende in <RELATIVE_DIRECTION> Richtung <TOWARD_SIGN>."
       },
       "empty_street_name_labels": [
-        "Fußweg",
-        "Radweg",
-        "Mountainbike Strecke",
-        "Fußgängerübergang",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "der Gehweg",
+        "der Radweg",
+        "der Mountainbike-Trail",
+        "der Zebrastreifen",
+        "die Treppe",
+        "die Brücke",
+        "Der Tunnel"
       ],
       "relative_directions": [
         "links",
@@ -2202,19 +2202,19 @@
     "verbal_multi_cue": {
       "phrases": {
         "0": "<CURRENT_VERBAL_CUE> Dann <NEXT_VERBAL_CUE>",
-        "1": "<CURRENT_VERBAL_CUE> Dann, in <LENGTH>, <NEXT_VERBAL_CUE>"
+        "1": "<CURRENT_VERBAL_CUE> Dann in <LENGTH> <NEXT_VERBAL_CUE>"
       },
       "metric_lengths": [
-        "<KILOMETERS> Kilometern",
-        "einen Kilometer",
-        "<METERS> Metern",
-        "weniger als 10 Metern"
+        "<KILOMETERS> Kilometer",
+        "1 Kilometer",
+        "<METERS> Meter",
+        "weniger als 10 Meter"
       ],
       "us_customary_lengths": [
         "<MILES> Meilen",
-        "eine Meile",
+        "1 Meile",
         "eine halbe Meile",
-        "eine viertel Meile",
+        "eine Viertelmeile",
         "<FEET> Fuß",
         "weniger als 10 Fuß"
       ],
@@ -2229,83 +2229,83 @@
     },
     "approach_verbal_alert": {
       "phrases": {
-        "0": "In <LENGTH>, <CURRENT_VERBAL_CUE>"
+        "0": "In <LÄNGE>, <AKTUELLER_VERBAL_CUE>"
       },
       "metric_lengths": [
-        "<KILOMETERS> Kilometern",
-        "einen Kilometer",
-        "<METERS> Metern",
-        "weniger als 10 Metern"
+        "<KILOMETERS> Kilometer",
+        "1 Kilometer",
+        "<METERS> Meter",
+        "weniger als 10 Meter"
       ],
       "us_customary_lengths": [
         "<MILES> Meilen",
-        "eine Meile",
+        "1 Meile",
         "eine halbe Meile",
-        "eine viertel Meile",
+        "eine Viertelmeile",
         "<FEET> Fuß",
         "weniger als 10 Fuß"
       ],
       "example_phrases": {
         "0": [
-          "In a quarter mile, Turn right onto North Gay Street."
+          "Biegen Sie nach einer Viertelmeile rechts in die North Gay Street ein."
         ]
       }
     },
     "pass": {
       "phrases": {
-          "0": "Passiere <OBJECT_LABEL>.",
-          "1": "Passiere die Verkehrssignale an <OBJECT_LABEL>."
+        "0": "Übergeben Sie <OBJECT_LABEL>.",
+        "1": "Passieren Sie Ampeln auf <OBJECT_LABEL>."
       },
       "object_labels": [
-          "das Tor",
-          "die Poller",
-          "die Wegkreuzung"
+        "das Tor",
+        "die Poller",
+        "Wegekreuzung"
       ],
       "example_phrases": {
-          "0": [
-              "Passiere das Tor."
-          ]
+        "0": [
+          "Gehen Sie durch das Tor."
+        ]
       }
     },
     "elevator": {
       "phrases": {
-        "0": "Den Aufzug nehmen.",
-        "1": "Aufzug nehmen nach <LEVEL>."
+        "0": "Nimm den Aufzug.",
+        "1": "Nehmen Sie den Aufzug zur <EBENE>."
       },
       "example_phrases": {
         "0": [
-          "Take the elevator."
+          "Nimm den Aufzug."
         ],
         "1": [
-          "Take the elevator to Level 1."
+          "Fahren Sie mit dem Aufzug in die Ebene 1."
         ]
       }
     },
     "steps": {
       "phrases": {
-        "0": "Die Treppen nehmen.",
-        "1": "Die Treppen nehmen nach <LEVEL>."
+        "0": "Nimm die Treppe.",
+        "1": "Nehmen Sie die Treppe zu <LEVEL>."
       },
       "example_phrases": {
         "0": [
-          "Take the stairs."
+          "Nimm die Treppe."
         ],
         "1": [
-          "Take the stairs to Level 2."
+          "Nehmen Sie die Treppe zur Ebene 2."
         ]
       }
     },
     "escalator": {
       "phrases": {
-        "0": "Die Rolltreppe nehmen.",
-        "1": "Die Rolltreppe nehmen nach <LEVEL>."
+        "0": "Nehmen Sie die Rolltreppe.",
+        "1": "Nehmen Sie die Rolltreppe zur <EBENE>."
       },
       "example_phrases": {
         "0": [
-          "Take the escalator."
+          "Nehmen Sie die Rolltreppe."
         ],
         "1": [
-          "Take the escalator to Level 3."
+          "Nehmen Sie die Rolltreppe zur Ebene 3."
         ]
       }
     },
@@ -2322,23 +2322,23 @@
       ],
       "example_phrases": {
         "0": [
-          "Enter the building."
+          "Betreten Sie das Gebäude."
         ],
         "1": [
-          "Enter the building, and continue on the walkway."
+          "Betreten Sie das Gebäude und folgen Sie dem Gehweg."
         ]
       }
     },
     "exit_building": {
       "phrases": {
-        "0": "Das Gebäude verlassen.",
-        "1": "Das Gebäude verlassen und weitergehen auf <STREET_NAMES>."
+        "0": "Verlassen Sie das Gebäude.",
+        "1": "Verlassen Sie das Gebäude und gehen Sie weiter auf <STREET_NAMES>."
       },
       "empty_street_name_labels": [
-        "Fußweg",
-        "Radweg",
-        "Mountainbike Strecke",
-        "Fußgängerübergang"
+        "der Gehweg",
+        "der Radweg",
+        "der Mountainbike-Trail",
+        "der Zebrastreifen"
       ],
       "example_phrases": {
         "0": [

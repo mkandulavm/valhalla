@@ -1,2307 +1,2353 @@
 {
-    "posix_locale": "hr_HR.UTF-8.",
-    "aliases": [
-        "hr"
-    ],
-    "instructions": {
-        "arrive": {
-            "phrases": {
-                "0": "Dolazak: <TIME>.",
-                "1": "Dolazak: <TIME> na <TRANSIT_STOP>."
-            },
-            "example_phrases": {
-                "0": [
-                    "Dolazak: 8:02 AM."
-                ],
-                "1": [
-                    "Dolazak: 8:02 AM na 8 St - NYU."
-                ]
-            }
-        },
-        "arrive_verbal": {
-            "phrases": {
-                "0": "Dolazite u <TIME>.",
-                "1": "Dolazite u <TIME> na <TRANSIT_STOP>."
-            },
-            "example_phrases": {
-                "0": [
-                    "Dolazite u 8:02 AM."
-                ],
-                "1": [
-                    "Dolazite u 8:02 AM na 8 St - NYU."
-                ]
-            }
-        },
-        "bear": {
-            "phrases": {
-                "0": "Držite se <RELATIVE_DIRECTION>.",
-                "1": "Držite se <RELATIVE_DIRECTION> prema <STREET_NAMES>.",
-                "2": "Držite se <RELATIVE_DIRECTION> prema <BEGIN_STREET_NAMES>. Nastavite na <STREET_NAMES>.",
-                "3": "Držite se <RELATIVE_DIRECTION> da ostanete na <STREET_NAMES>.",
-                "4": "Držite se <RELATIVE_DIRECTION> kod <JUNCTION_NAME>.",
-                "5": "Držite se <RELATIVE_DIRECTION> prema <TOWARD_SIGN>."
-            },
-            "empty_street_name_labels": [
-                "pješački put",
-                "biciklistička staza",
-                "staza za planinsko bicikliranje",
-                "pješački prijelaz"
-            ],
-            "relative_directions": [
-                "lijevo",
-                "desno"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Držite desno."
-                ],
-                "1": [
-                    "Držite lijevo prema Arlen Road."
-                ],
-                "2": [
-                    "Držite desno prema Belair Road/US 1 Business. Nastavite na US 1 Business."
-                ],
-                "3": [
-                    "Držite lijevo da ostanete na US 15 South."
-                ],
-                "4": [
-                    "Držite desno kod Mannenbashi East."
-                ],
-                "5": [
-                    "Držite lijevo prema Baltimore."
-                ]
-            }
-        },
-        "bear_verbal": {
-            "phrases": {
-                "0": "Držite se <RELATIVE_DIRECTION>.",
-                "1": "Držite se <RELATIVE_DIRECTION> prema <STREET_NAMES>.",
-                "2": "Držite se <RELATIVE_DIRECTION> prema <BEGIN_STREET_NAMES>.",
-                "3": "Držite se <RELATIVE_DIRECTION> da ostanete na <STREET_NAMES>.",
-                "4": "Držite se <RELATIVE_DIRECTION> kod <JUNCTION_NAME>.",
-                "5": "Držite se <RELATIVE_DIRECTION> prema <TOWARD_SIGN>."
-            },
-            "empty_street_name_labels": [
-                "pješački put",
-                "biciklistička staza",
-                "staza za planinsko bicikliranje",
-                "pješački prijelaz"
-            ],
-            "relative_directions": [
-                "lijevo",
-                "desno"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Držite desno."
-                ],
-                "1": [
-                    "Držite lijevo prema Arlen Road."
-                ],
-                "2": [
-                    "Držite desno prema Belair Road, U.S. 1 Business."
-                ],
-                "3": [
-                    "Držite lijevo da ostanete na U.S. 15 South."
-                ],
-                "4": [
-                    "Držite desno kod Mannenbashi East."
-                ],
-                "5": [
-                    "Držite lijevo prema Baltimore."
-                ]
-            }
-        },
-        "becomes": {
-            "phrases": {
-                "0": "<PREVIOUS_STREET_NAMES> postaje <STREET_NAMES>."
-            },
-            "example_phrases": {
-                "0": [
-                    "Vine Street postaje Middletown Road."
-                ]
-            }
-        },
-        "becomes_verbal": {
-            "phrases": {
-                "0": "<PREVIOUS_STREET_NAMES> postaje <STREET_NAMES>."
-            },
-            "example_phrases": {
-                "0": [
-                    "Vine Street postaje Middletown Road."
-                ]
-            }
-        },
-        "continue": {
-            "phrases": {
-                "0": "Nastavite.",
-                "1": "Nastavite na <STREET_NAMES>.",
-                "2": "Nastavite kod <JUNCTION_NAME>.",
-                "3": "Nastavite prema <TOWARD_SIGN>."
-            },
-            "empty_street_name_labels": [
-                "pješački put",
-                "biciklistička staza",
-                "staza za planinsko bicikliranje",
-                "pješački prijelaz"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Nastavite."
-                ],
-                "1": [
-                    "Nastavite na 10th Avenue."
-                ],
-                "2": [
-                    "Nastavite kod Mannenbashi East."
-                ],
-                "3": [
-                    "Nastavite prema Baltimore."
-                ]
-            }
-        },
-        "continue_verbal": {
-            "phrases": {
-                "0": "Nastavite.",
-                "1": "Nastavite <LENGTH>.",
-                "2": "Nastavite na <STREET_NAMES>.",
-                "3": "Nastavite na <STREET_NAMES> <LENGTH>.",
-                "4": "Nastavite kod <JUNCTION_NAME>.",
-                "5": "Nastavite kod <JUNCTION_NAME> <LENGTH>.",
-                "6": "Nastavite prema <TOWARD_SIGN>.",
-                "7": "Nastavite prema <TOWARD_SIGN> <LENGTH>."
-            },
-            "empty_street_name_labels": [
-                "pješački put",
-                "biciklistička staza",
-                "staza za planinsko bicikliranje",
-                "pješački prijelaz"
-            ],
-            "metric_lengths": [
-                "<KILOMETERS> kilometara",
-                "1 kilometar",
-                "<METERS> metara",
-                "manje od 10 metara"
-            ],
-            "us_customary_lengths": [
-                "<MILES> milja",
-                "1 milja",
-                "pola milje",
-                "četvrt milje",
-                "<FEET> stopa",
-                "manje od 10 stopa"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Nastavite."
-                ],
-                "1": [
-                    "Nastavite 300 stopa."
-                ],
-                "2": [
-                    "Nastavite na 10th Avenue."
-                ],
-                "3": [
-                    "Nastavite na 10th Avenue 3 milje."
-                ],
-                "4": [
-                    "Nastavite kod Mannenbashi East."
-                ],
-                "5": [
-                    "Nastavite kod Mannenbashi East 2 milje."
-                ],
-                "6": [
-                    "Nastavite prema Baltimore."
-                ],
-                "7": [
-                    "Nastavite prema Baltimore 5 milja."
-                ]
-            }
-        },
-        "continue_verbal_alert": {
-            "phrases": {
-                "0": "Nastavite.",
-                "1": "Nastavite na <STREET_NAMES>.",
-                "2": "Nastavite kod <JUNCTION_NAME>.",
-                "3": "Nastavite prema <TOWARD_SIGN>."
-            },
-            "empty_street_name_labels": [
-                "pješački put",
-                "biciklistička staza",
-                "staza za planinsko bicikliranje",
-                "pješački prijelaz"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Nastavite."
-                ],
-                "1": [
-                    "Nastavite na 10th Avenue."
-                ],
-                "2": [
-                    "Nastavite kod Mannenbashi East."
-                ],
-                "3": [
-                    "Nastavite prema Baltimore."
-                ]
-            }
-        },
-        "depart": {
-            "phrases": {
-                "0": "Polazak: <TIME>.",
-                "1": "Polazak: <TIME> s <TRANSIT_STOP>."
-            },
-            "example_phrases": {
-                "0": [
-                    "Polazak: 8:02 AM."
-                ],
-                "1": [
-                    "Polazak: 8:02 AM s 8 St - NYU."
-                ]
-            }
-        },
-        "depart_verbal": {
-            "phrases": {
-                "0": "Polazak u <TIME>.",
-                "1": "Polazak u <TIME> s <TRANSIT_STOP>."
-            },
-            "example_phrases": {
-                "0": [
-                    "Polazak u 8:02 AM."
-                ],
-                "1": [
-                    "Polazak u 8:02 AM s 8 St - NYU."
-                ]
-            }
-        },
-        "destination": {
-            "phrases": {
-                "0": "Stigli ste na odredište.",
-                "1": "Stigli ste na <DESTINATION>.",
-                "2": "Vaše odredište je s <RELATIVE_DIRECTION>.",
-                "3": "<DESTINATION> je s <RELATIVE_DIRECTION>."
-            },
-            "relative_directions": [
-                "lijevo",
-                "desno"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Stigli ste na odredište."
-                ],
-                "1": [
-                    "Stigli ste na 3206 Powelton Avenue."
-                ],
-                "2": [
-                    "Vaše odredište je s lijeva.",
-                    "Vaše odredište je s desna."
-                ],
-                "3": [
-                    "Lancaster Brewing Company je s lijeva."
-                ]
-            }
-        },
-        "destination_verbal": {
-            "phrases": {
-                "0": "Stigli ste na odredište.",
-                "1": "Stigli ste na <DESTINATION>.",
-                "2": "Vaše odredište je s <RELATIVE_DIRECTION>.",
-                "3": "<DESTINATION> je s <RELATIVE_DIRECTION>."
-            },
-            "relative_directions": [
-                "lijevo",
-                "desno"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Stigli ste na odredište."
-                ],
-                "1": [
-                    "Stigli ste na 32 o6 Powelton Avenue."
-                ],
-                "2": [
-                    "Vaše odredište je s lijeva.",
-                    "Vaše odredište je s desna."
-                ],
-                "3": [
-                    "Lancaster Brewing Company je s lijeva."
-                ]
-            }
-        },
-        "destination_verbal_alert": {
-            "phrases": {
-                "0": "Doći ćete na odredište.",
-                "1": "Doći ćete na <DESTINATION>.",
-                "2": "Vaše odredište će biti s <RELATIVE_DIRECTION>.",
-                "3": "<DESTINATION> će biti s <RELATIVE_DIRECTION>."
-            },
-            "relative_directions": [
-                "lijevo",
-                "desno"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Doći ćete na odredište."
-                ],
-                "1": [
-                    "Doći ćete na 32 o6 Powelton Avenue."
-                ],
-                "2": [
-                    "Vaše odredište će biti s lijeva.",
-                    "Vaše odredište će biti s desna."
-                ],
-                "3": [
-                    "Lancaster Brewing Company će biti s lijeva."
-                ]
-            }
-        },
-        "enter_ferry": {
-            "phrases": {
-                "0": "Uzmite trajekt.",
-                "1": "Uzmite <STREET_NAMES>.",
-                "2": "Uzmite <STREET_NAMES> <FERRY_LABEL>.",
-                "3": "Uzmite trajekt prema <TOWARD_SIGN>."
-            },
-            "empty_street_name_labels": [
-                "pješački put",
-                "biciklistička staza",
-                "staza za planinsko bicikliranje",
-                "pješački prijelaz"
-            ],
-            "ferry_label": "Trajekt",
-            "example_phrases": {
-                "0": [
-                    "Uzmite trajekt."
-                ],
-                "1": [
-                    "Uzmite Millersburg trajekt."
-                ],
-                "2": [
-                    "Uzmite trajekt Bridgeport - Port Jefferson."
-                ],
-                "3": [
-                    "Uzmite trajekt prema Cape May."
-                ]
-            }
-        },
-        "enter_ferry_verbal": {
-            "phrases": {
-                "0": "Uzmite trajekt.",
-                "1": "Uzmite <STREET_NAMES>.",
-                "2": "Uzmite <STREET_NAMES> <FERRY_LABEL>.",
-                "3": "Uzmite trajekt prema <TOWARD_SIGN>."
-            },
-            "empty_street_name_labels": [
-                "pješački put",
-                "biciklistička staza",
-                "staza za planinsko bicikliranje",
-                "pješački prijelaz"
-            ],
-            "ferry_label": "Trajekt",
-            "example_phrases": {
-                "0": [
-                    "Uzmite trajekt."
-                ],
-                "1": [
-                    "Uzmite Millersburg trajekt."
-                ],
-                "2": [
-                    "Uzmite trajekt Bridgeport - Port Jefferson."
-                ],
-                "3": [
-                    "Uzmite trajekt prema Cape May."
-                ]
-            }
-        },
-        "enter_roundabout": {
-            "phrases": {
-                "0": "Uđite u kružni tok.",
-                "1": "Uđite u kružni tok i izađite na <ORDINAL_VALUE> izlazu.",
-                "2": "Uđite u kružni tok i izađite na <ORDINAL_VALUE> izlazu na <ROUNDABOUT_EXIT_STREET_NAMES>.",
-                "3": "Uđite u kružni tok i izađite na <ORDINAL_VALUE> izlazu na <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>. Nastavite na <ROUNDABOUT_EXIT_STREET_NAMES>.",
-                "4": "Uđite u kružni tok i izađite prema <TOWARD_SIGN>.",
-                "5": "Uđite u kružni tok i izađite na <ROUNDABOUT_EXIT_STREET_NAMES>.",
-                "6": "Uđite u kružni tok i izađite na <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>. Nastavite na <ROUNDABOUT_EXIT_STREET_NAMES>.",
-                "7": "Uđite u kružni tok i izađite prema <TOWARD_SIGN>.",
-                "8": "Uđite u <STREET_NAMES>",
-                "9": "Uđite u <STREET_NAMES> i izađite na <ORDINAL_VALUE> izlazu.",
-                "10": "Uđite u <STREET_NAMES> i izađite na <ORDINAL_VALUE> izlazu na <ROUNDABOUT_EXIT_STREET_NAMES>.",
-                "11": "Uđite u <STREET_NAMES> i izađite na <ORDINAL_VALUE> izlazu prema <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>. Nastavite na <ROUNDABOUT_EXIT_STREET_NAMES>.",
-                "12": "Uđite u <STREET_NAMES> i izađite na <ORDINAL_VALUE> izlazu prema <TOWARD_SIGN>.",
-                "13": "Uđite u <STREET_NAMES> i izađite na izlazu prema <ROUNDABOUT_EXIT_STREET_NAMES>.",
-                "14": "Uđite u <STREET_NAMES> i izađite na izlazu prema <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>. Nastavite na <ROUNDABOUT_EXIT_STREET_NAMES>.",
-                "15": "Uđite u <STREET_NAMES> i izađite prema <TOWARD_SIGN>."
-            },
-            "ordinal_values": [
-                "1.",
-                "2.",
-                "3.",
-                "4.",
-                "5.",
-                "6.",
-                "7.",
-                "8.",
-                "9.",
-                "10."
-            ],
-            "empty_street_name_labels": [
-                "pješački put",
-                "biciklistička staza",
-                "staza za planinsko bicikliranje",
-                "pješački prijelaz"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Uđite u kružni tok."
-                ],
-                "1": [
-                    "Uđite u kružni tok i izađite na 1. izlazu.",
-                    "Uđite u kružni tok i izađite na 2. izlazu.",
-                    "Uđite u kružni tok i izađite na 3. izlazu.",
-                    "Uđite u kružni tok i izađite na 4. izlazu.",
-                    "Uđite u kružni tok i izađite na 5. izlazu.",
-                    "Uđite u kružni tok i izađite na 6. izlazu.",
-                    "Uđite u kružni tok i izađite na 7. izlazu.",
-                    "Uđite u kružni tok i izađite na 8. izlazu.",
-                    "Uđite u kružni tok i izađite na 9. izlazu.",
-                    "Uđite u kružni tok i izađite na 10. izlazu."
-                ],
-                "2": [
-                    "Uđite u kružni tok i izađite na 3. izlazu prema Main Street."
-                ],
-                "3": [
-                    "Uđite u kružni tok i izađite na 3. izlazu prema US 322/Main Street. Nastavite na US 322."
-                ],
-                "4": [
-                    "Uđite u kružni tok i izađite na 3. izlazu prema Baltimore."
-                ],
-                "5": [
-                    "Uđite u kružni tok i izađite na izlazu prema Main Street."
-                ],
-                "6": [
-                    "Uđite u kružni tok i izađite na izlazu prema US 322/Main Street. Nastavite na US 322."
-                ],
-                "7": [
-                    "Uđite u kružni tok i izađite prema Baltimore."
-                ],
-                "8": [
-                    "Uđite u Dupont Circle."
-                ],
-                "9": [
-                    "Uđite u Dupont Circle i izađite na 1. izlazu."
-                ],
-                "10": [
-                    "Uđite u Dupont Circle i izađite na 3. izlazu prema Main Street."
-                ],
-                "11": [
-                    "Uđite u Dupont Circle i izađite na 3. izlazu prema US 322/Main Street. Nastavite na US 322."
-                ],
-                "12": [
-                    "Uđite u Dupont Circle i izađite prema Baltimore."
-                ],
-                "13": [
-                    "Uđite u Dupont Circle i izađite na izlazu prema Main Street."
-                ],
-                "14": [
-                    "Uđite u Dupont Circle i izađite na izlazu prema US 322/Main Street. Nastavite na US 322."
-                ],
-                "15": [
-                    "Uđite u Dupont Circle i izađite prema Baltimore."
-                ]
-            }
-        },
-        "enter_roundabout_verbal": {
-            "phrases": {
-                "0": [
-                    "Uđite u kružni tok."
-                ],
-                "1": [
-                    "Uđite u kružni tok i izađite na <ORDINAL_VALUE> izlazu."
-                ],
-                "2": [
-                    "Uđite u kružni tok i izađite na <ORDINAL_VALUE> izlazu prema <ROUNDABOUT_EXIT_STREET_NAMES>."
-                ],
-                "3": [
-                    "Uđite u kružni tok i izađite na <ORDINAL_VALUE> izlazu prema <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>."
-                ],
-                "4": [
-                    "Uđite u kružni tok i izađite na <ORDINAL_VALUE> izlazu prema <TOWARD_SIGN>."
-                ],
-                "5": [
-                    "Uđite u kružni tok i izađite na izlazu prema <ROUNDABOUT_EXIT_STREET_NAMES>."
-                ],
-                "6": [
-                    "Uđite u kružni tok i izađite na izlazu prema <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>."
-                ],
-                "7": [
-                    "Uđite u kružni tok i izađite prema <TOWARD_SIGN>."
-                ],
-                "8": [
-                    "Uđite u <STREET_NAMES>"
-                ],
-                "9": [
-                    "Uđite u <STREET_NAMES> i izađite na <ORDINAL_VALUE> izlazu."
-                ],
-                "10": [
-                    "Uđite u <STREET_NAMES> i izađite na <ORDINAL_VALUE> izlazu prema <ROUNDABOUT_EXIT_STREET_NAMES>."
-                ],
-                "11": [
-                    "Uđite u <STREET_NAMES> i izađite na <ORDINAL_VALUE> izlazu prema <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>."
-                ],
-                "12": [
-                    "Uđite u <STREET_NAMES> i izađite na <ORDINAL_VALUE> izlazu prema <TOWARD_SIGN>."
-                ],
-                "13": [
-                    "Uđite u <STREET_NAMES> i izađite na izlazu prema <ROUNDABOUT_EXIT_STREET_NAMES>."
-                ],
-                "14": [
-                    "Uđite u <STREET_NAMES> i izađite na izlazu prema <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>."
-                ],
-                "15": [
-                    "Uđite u <STREET_NAMES> i izađite prema <TOWARD_SIGN>."
-                ]
-            },
-            "ordinal_values": [
-                "1.",
-                "2.",
-                "3.",
-                "4.",
-                "5.",
-                "6.",
-                "7.",
-                "8.",
-                "9.",
-                "10."
-            ],
-            "empty_street_name_labels": [
-                "pješački put",
-                "biciklistička staza",
-                "staza za planinsko bicikliranje",
-                "pješački prijelaz"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Uđite u kružni tok."
-                ],
-                "1": [
-                    "Uđite u kružni tok i izađite na 1. izlazu.",
-                    "Uđite u kružni tok i izađite na 2. izlazu.",
-                    "Uđite u kružni tok i izađite na 3. izlazu.",
-                    "Uđite u kružni tok i izađite na 4. izlazu.",
-                    "Uđite u kružni tok i izađite na 5. izlazu.",
-                    "Uđite u kružni tok i izađite na 6. izlazu.",
-                    "Uđite u kružni tok i izađite na 7. izlazu.",
-                    "Uđite u kružni tok i izađite na 8. izlazu.",
-                    "Uđite u kružni tok i izađite na 9. izlazu.",
-                    "Uđite u kružni tok i izađite na 10. izlazu."
-                ],
-                "2": [
-                    "Uđite u kružni tok i izađite na 3. izlazu prema Main Street."
-                ],
-                "3": [
-                    "Uđite u kružni tok i izađite na 3. izlazu prema U.S. 3 22/Main Street."
-                ],
-                "4": [
-                    "Uđite u kružni tok i izađite na 3. izlazu prema Baltimore."
-                ],
-                "5": [
-                    "Uđite u kružni tok i izađite na izlazu prema Main Street."
-                ],
-                "6": [
-                    "Uđite u kružni tok i izađite na izlazu prema U.S. 3 22/Main Street."
-                ],
-                "7": [
-                    "Uđite u kružni tok i izađite prema Baltimore."
-                ],
-                "8": [
-                    "Uđite u Dupont Circle."
-                ],
-                "9": [
-                    "Uđite u Dupont Circle i izađite na 1. izlazu."
-                ],
-                "10": [
-                    "Uđite u Dupont Circle i izađite na 3. izlazu prema Main Street."
-                ],
-                "11": [
-                    "Uđite u Dupont Circle i izađite na 3. izlazu prema U.S. 3 22/Main Street."
-                ],
-                "12": [
-                    "Uđite u Dupont Circle i izađite na 3. izlazu prema Baltimore."
-                ],
-                "13": [
-                    "Uđite u Dupont Circle i izađite na izlazu prema Main Street."
-                ],
-                "14": [
-                    "Uđite u Dupont Circle i izađite na izlazu prema U.S. 3 22/Main Street."
-                ],
-                "15": [
-                    "Uđite u Dupont Circle i izađite prema Baltimore."
-                ]
-            }
-        },
-        "exit": {
-            "phrases": {
-                "0": "Uzmite izlaz s <RELATIVE_DIRECTION>.",
-                "1": "Uzmite izlaz <NUMBER_SIGN> s <RELATIVE_DIRECTION>.",
-                "2": "Uzmite izlaz <BRANCH_SIGN> s <RELATIVE_DIRECTION>.",
-                "3": "Uzmite izlaz <NUMBER_SIGN> s <RELATIVE_DIRECTION> prema <BRANCH_SIGN>.",
-                "4": "Uzmite izlaz s <RELATIVE_DIRECTION> prema <TOWARD_SIGN>.",
-                "5": "Uzmite izlaz <NUMBER_SIGN> s <RELATIVE_DIRECTION> prema <TOWARD_SIGN>.",
-                "6": "Uzmite izlaz <BRANCH_SIGN> s <RELATIVE_DIRECTION> prema <TOWARD_SIGN>.",
-                "7": "Uzmite izlaz <NUMBER_SIGN> s <RELATIVE_DIRECTION> prema <BRANCH_SIGN> u smjeru <TOWARD_SIGN>.",
-                "8": "Uzmite izlaz <NAME_SIGN> s <RELATIVE_DIRECTION>.",
-                "10": "Uzmite izlaz <NAME_SIGN> s <RELATIVE_DIRECTION> prema <BRANCH_SIGN>.",
-                "12": "Uzmite izlaz <NAME_SIGN> s <RELATIVE_DIRECTION> u smjeru <TOWARD_SIGN>.",
-                "14": "Uzmite izlaz <NAME_SIGN> s <RELATIVE_DIRECTION> prema <BRANCH_SIGN> u smjeru <TOWARD_SIGN>.",
-                "15": "Uzmite izlaz.",
-                "16": "Uzmite izlaz <NUMBER_SIGN>.",
-                "17": "Uzmite izlaz <BRANCH_SIGN>.",
-                "18": "Uzmite izlaz <NUMBER_SIGN> prema <BRANCH_SIGN>.",
-                "19": "Uzmite izlaz u smjeru <TOWARD_SIGN>.",
-                "20": "Uzmite izlaz <NUMBER_SIGN> u smjeru <TOWARD_SIGN>.",
-                "21": "Uzmite izlaz <BRANCH_SIGN> u smjeru <TOWARD_SIGN>.",
-                "22": "Uzmite izlaz <NUMBER_SIGN> prema <BRANCH_SIGN> u smjeru <TOWARD_SIGN>.",
-                "23": "Uzmite izlaz <NAME_SIGN>.",
-                "25": "Uzmite izlaz <NAME_SIGN> prema <BRANCH_SIGN>.",
-                "27": "Uzmite izlaz <NAME_SIGN> u smjeru <TOWARD_SIGN>.",
-                "29": "Uzmite izlaz <NAME_SIGN> prema <BRANCH_SIGN> u smjeru <TOWARD_SIGN>."
-            },
-            "relative_directions": [
-                "lijevo",
-                "desno"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Uzmite izlaz s lijeva.",
-                    "Uzmite izlaz s desna."
-                ],
-                "1": [
-                    "Uzmite izlaz 67 B-A s desna."
-                ],
-                "2": [
-                    "Uzmite izlaz za US 322 West s desna."
-                ],
-                "3": [
-                    "Uzmite izlaz 67 B-A s desna prema US 322 West."
-                ],
-                "4": [
-                    "Uzmite izlaz s desna prema Lewistown."
-                ],
-                "5": [
-                    "Uzmite izlaz 67 B-A s desna prema Lewistown."
-                ],
-                "6": [
-                    "Uzmite izlaz za US 322 West s desna prema Lewistown."
-                ],
-                "7": [
-                    "Uzmite izlaz 67 B-A s desna prema US 322 West u smjeru Lewistown/State College."
-                ],
-                "8": [
-                    "Uzmite izlaz za White Marsh Boulevard s lijeva."
-                ],
-                "10": [
-                    "Uzmite izlaz za White Marsh Boulevard s lijeva prema MD 43 East."
-                ],
-                "12": [
-                    "Uzmite izlaz za White Marsh Boulevard s lijeva u smjeru White Marsh."
-                ],
-                "14": [
-                    "Uzmite izlaz za White Marsh Boulevard s lijeva prema MD 43 East u smjeru White Marsh."
-                ],
-                "15": [
-                    "Uzmite izlaz."
-                ],
-                "16": [
-                    "Uzmite izlaz 67 B-A."
-                ],
-                "17": [
-                    "Uzmite izlaz za US 322 West."
-                ],
-                "18": [
-                    "Uzmite izlaz 67 B-A prema US 322 West."
-                ],
-                "19": [
-                    "Uzmite izlaz u smjeru Lewistown."
-                ],
-                "20": [
-                    "Uzmite izlaz 67 B-A u smjeru Lewistown."
-                ],
-                "21": [
-                    "Uzmite izlaz za US 322 West prema Lewistown."
-                ],
-                "22": [
-                    "Uzmite izlaz 67 B-A prema US 322 West u smjeru Lewistown/State College."
-                ],
-                "23": [
-                    "Uzmite izlaz za White Marsh Boulevard."
-                ],
-                "25": [
-                    "Uzmite izlaz za White Marsh Boulevard prema MD 43 East."
-                ],
-                "27": [
-                    "Uzmite izlaz za White Marsh Boulevard u smjeru White Marsh."
-                ],
-                "29": [
-                    "Uzmite izlaz za White Marsh Boulevard prema MD 43 East u smjeru White Marsh."
-                ]
-            }
-        },
-        "exit_roundabout": {
-            "phrases": {
-                "0": "Izađite iz kružnog toka.",
-                "1": "Izađite iz kružnog toka prema <STREET_NAMES>.",
-                "2": "Izađite iz kružnog toka prema <BEGIN_STREET_NAMES>. Nastavite na <STREET_NAMES>.",
-                "3": "Izađite iz kružnog toka prema <TOWARD_SIGN>."
-            },
-            "empty_street_name_labels": [
-                "pješačka staza",
-                "biciklistička staza",
-                "staza za planinsko biciklizam",
-                "pješački prijelaz"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Izađite iz kružnog toka."
-                ],
-                "1": [
-                    "Izađite iz kružnog toka prema Philadelphia Road/MD 7."
-                ],
-                "2": [
-                    "Izađite iz kružnog toka prema Catoctin Mountain Highway/US 15. Nastavite na US 15."
-                ],
-                "3": [
-                    "Izađite iz kružnog toka prema Baltimore."
-                ]
-            }
-        },
-        "exit_roundabout_verbal": {
-            "phrases": {
-                "0": "Izađite iz kružnog toka.",
-                "1": "Izađite iz kružnog toka na <STREET_NAMES>.",
-                "2": "Izađite iz kružnog toka na <BEGIN_STREET_NAMES>.",
-                "3": "Izađite iz kružnog toka prema <TOWARD_SIGN>."
-            },
-            "empty_street_name_labels": [
-                "pješačka staza",
-                "biciklistička staza",
-                "staza za planinski biciklizam",
-                "pješački prijelaz"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Izađite iz kružnog toka."
-                ],
-                "1": [
-                    "Izađite iz kružnog toka na Philadelphia Road, Maryland 7."
-                ],
-                "2": [
-                    "Izađite iz kružnog toka na Catoctin Mountain Highway, U.S. 15."
-                ],
-                "3": [
-                    "Izađite iz kružnog toka prema Baltimore."
-                ]
-            }
-        },
-        "exit_verbal": {
-            "phrases": {
-                "0": "Uzmite izlaz s <RELATIVE_DIRECTION>.",
-                "1": "Uzmite izlaz <NUMBER_SIGN> s <RELATIVE_DIRECTION>.",
-                "2": "Uzmite izlaz za <BRANCH_SIGN> s <RELATIVE_DIRECTION>.",
-                "3": "Uzmite izlaz <NUMBER_SIGN> s <RELATIVE_DIRECTION> na <BRANCH_SIGN>.",
-                "4": "Uzmite izlaz s <RELATIVE_DIRECTION> prema <TOWARD_SIGN>.",
-                "5": "Uzmite izlaz <NUMBER_SIGN> s <RELATIVE_DIRECTION> prema <TOWARD_SIGN>.",
-                "6": "Uzmite izlaz za <BRANCH_SIGN> s <RELATIVE_DIRECTION> prema <TOWARD_SIGN>.",
-                "7": "Uzmite izlaz <NUMBER_SIGN> s <RELATIVE_DIRECTION> na <BRANCH_SIGN> prema <TOWARD_SIGN>.",
-                "8": "Uzmite izlaz <NAME_SIGN> s <RELATIVE_DIRECTION>.",
-                "10": "Uzmite izlaz <NAME_SIGN> s <RELATIVE_DIRECTION> na <BRANCH_SIGN>.",
-                "12": "Uzmite izlaz <NAME_SIGN> s <RELATIVE_DIRECTION> prema <TOWARD_SIGN>.",
-                "14": "Uzmite izlaz <NAME_SIGN> s <RELATIVE_DIRECTION> na <BRANCH_SIGN> prema <TOWARD_SIGN>.",
-                "15": "Uzmite izlaz.",
-                "16": "Uzmite izlaz <NUMBER_SIGN>.",
-                "17": "Uzmite izlaz za <BRANCH_SIGN>.",
-                "18": "Uzmite izlaz <NUMBER_SIGN> na <BRANCH_SIGN>.",
-                "19": "Uzmite izlaz prema <TOWARD_SIGN>.",
-                "20": "Uzmite izlaz <NUMBER_SIGN> prema <TOWARD_SIGN>.",
-                "21": "Uzmite izlaz za <BRANCH_SIGN> prema <TOWARD_SIGN>.",
-                "22": "Uzmite izlaz <NUMBER_SIGN> na <BRANCH_SIGN> prema <TOWARD_SIGN>.",
-                "23": "Uzmite izlaz <NAME_SIGN>.",
-                "25": "Uzmite izlaz <NAME_SIGN> na <BRANCH_SIGN>.",
-                "27": "Uzmite izlaz <NAME_SIGN> prema <TOWARD_SIGN>.",
-                "29": "Uzmite izlaz <NAME_SIGN> na <BRANCH_SIGN> prema <TOWARD_SIGN>."
-            },
-            "relative_directions": [
-                "lijevo",
-                "desno"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Uzmite izlaz s lijeva.",
-                    "Uzmite izlaz s desna."
-                ],
-                "1": [
-                    "Uzmite izlaz 67 B-A s desna."
-                ],
-                "2": [
-                    "Uzmite izlaz za U.S. 3 22 West s desna."
-                ],
-                "3": [
-                    "Uzmite izlaz 67 B-A s desna na U.S. 3 22 West."
-                ],
-                "4": [
-                    "Uzmite izlaz s desna prema Lewistown."
-                ],
-                "5": [
-                    "Uzmite izlaz 67 B-A s desna prema Lewistown."
-                ],
-                "6": [
-                    "Uzmite izlaz za U.S. 3 22 West s desna prema Lewistown."
-                ],
-                "7": [
-                    "Uzmite izlaz 67 B-A s desna na U.S. 3 22 West prema Lewistown, State College."
-                ],
-                "8": [
-                    "Uzmite izlaz za White Marsh Boulevard s lijeva."
-                ],
-                "10": [
-                    "Uzmite izlaz za White Marsh Boulevard s lijeva na Maryland 43 East."
-                ],
-                "12": [
-                    "Uzmite izlaz za White Marsh Boulevard s lijeva prema White Marsh."
-                ],
-                "14": [
-                    "Uzmite izlaz za White Marsh Boulevard s lijeva na Maryland 43 East prema White Marsh."
-                ],
-                "15": [
-                    "Uzmite izlaz."
-                ],
-                "16": [
-                    "Uzmite izlaz 67 B-A."
-                ],
-                "17": [
-                    "Uzmite izlaz za US 322 West."
-                ],
-                "18": [
-                    "Uzmite izlaz 67 B-A na US 322 West."
-                ],
-                "19": [
-                    "Uzmite izlaz prema Lewistown."
-                ],
-                "20": [
-                    "Uzmite izlaz 67 B-A prema Lewistown."
-                ],
-                "21": [
-                    "Uzmite izlaz za US 322 West prema Lewistown."
-                ],
-                "22": [
-                    "Uzmite izlaz 67 B-A na US 322 West prema Lewistown/State College."
-                ],
-                "23": [
-                    "Uzmite izlaz za White Marsh Boulevard."
-                ],
-                "25": [
-                    "Uzmite izlaz za White Marsh Boulevard na MD 43 East."
-                ],
-                "27": [
-                    "Uzmite izlaz za White Marsh Boulevard prema White Marsh."
-                ],
-                "29": [
-                    "Uzmite izlaz za White Marsh Boulevard na MD 43 East prema White Marsh."
-                ]
-            }
-        },
-        "exit_visual": {
-            "phrases": {
-                "0": "Izlaz <EXIT_NUMBERS>"
-            },
-            "example_phrases": {
-                "0": [
-                    "Izlaz 1A"
-                ]
-            }
-        },
-        "keep": {
-            "phrases": {
-                "0": "Držite se <RELATIVE_DIRECTION> na raskrižju.",
-                "1": "Držite se <RELATIVE_DIRECTION> da uzmete izlaz <NUMBER_SIGN>.",
-                "2": "Držite se <RELATIVE_DIRECTION> da uzmete <STREET_NAMES>.",
-                "3": "Držite se <RELATIVE_DIRECTION> da uzmete izlaz <NUMBER_SIGN> na <STREET_NAMES>.",
-                "4": "Držite se <RELATIVE_DIRECTION> prema <TOWARD_SIGN>.",
-                "5": "Držite se <RELATIVE_DIRECTION> da uzmete izlaz <NUMBER_SIGN> prema <TOWARD_SIGN>.",
-                "6": "Držite se <RELATIVE_DIRECTION> da uzmete <STREET_NAMES> prema <TOWARD_SIGN>.",
-                "7": "Držite se <RELATIVE_DIRECTION> da uzmete izlaz <NUMBER_SIGN> na <STREET_NAMES> prema <TOWARD_SIGN>."
-            },
-            "empty_street_name_labels": [
-                "pješačka staza",
-                "biciklistička staza",
-                "staza za planinski biciklizam",
-                "pješački prijelaz"
-            ],
-            "relative_directions": [
-                "lijevo",
-                "ravno",
-                "desno"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Držite se lijevo na raskrižju.",
-                    "Držite se ravno na raskrižju.",
-                    "Držite se desno na raskrižju."
-                ],
-                "1": [
-                    "Držite se desno da uzmete izlaz 62."
-                ],
-                "2": [
-                    "Držite se desno da uzmete I 895 South."
-                ],
-                "3": [
-                    "Držite se desno da uzmete izlaz 62 na I 895 South."
-                ],
-                "4": [
-                    "Držite se desno prema Annapolis."
-                ],
-                "5": [
-                    "Držite se desno da uzmete izlaz 62 prema Annapolis."
-                ],
-                "6": [
-                    "Držite se desno da uzmete I 895 South prema Annapolis."
-                ],
-                "7": [
-                    "Držite se desno da uzmete izlaz 62 na I 895 South prema Annapolis."
-                ]
-            }
-        },
-        "keep_to_stay_on": {
-            "phrases": {
-                "0": "Držite se <RELATIVE_DIRECTION> da ostanete na <STREET_NAMES>.",
-                "1": "Držite se <RELATIVE_DIRECTION> da uzmete izlaz <NUMBER_SIGN> da ostanete na <STREET_NAMES>.",
-                "2": "Držite se <RELATIVE_DIRECTION> da ostanete na <STREET_NAMES> prema <TOWARD_SIGN>.",
-                "3": "Držite se <RELATIVE_DIRECTION> da uzmete izlaz <NUMBER_SIGN> da ostanete na <STREET_NAMES> prema <TOWARD_SIGN>."
-            },
-            "empty_street_name_labels": [
-                "pješačka staza",
-                "biciklistička staza",
-                "staza za planinski biciklizam",
-                "pješački prijelaz"
-            ],
-            "relative_directions": [
-                "lijevo",
-                "ravno",
-                "desno"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Držite se lijevo da ostanete na I 95 South.",
-                    "Držite se ravno da ostanete na I 95 South.",
-                    "Držite se desno da ostanete na I 95 South."
-                ],
-                "1": [
-                    "Držite se lijevo da uzmete izlaz 62 da ostanete na I 95 South."
-                ],
-                "2": [
-                    "Držite se lijevo da ostanete na I 95 South prema Baltimore."
-                ],
-                "3": [
-                    "Držite se lijevo da uzmete izlaz 62 da ostanete na I 95 South prema Baltimore."
-                ]
-            }
-        },
-        "keep_to_stay_on_verbal": {
-            "phrases": {
-                "0": "Držite se <RELATIVE_DIRECTION> da ostanete na <STREET_NAMES>.",
-                "1": "Držite se <RELATIVE_DIRECTION> da uzmete izlaz <NUMBER_SIGN> da ostanete na <STREET_NAMES>.",
-                "2": "Držite se <RELATIVE_DIRECTION> da ostanete na <STREET_NAMES> prema <TOWARD_SIGN>.",
-                "3": "Držite se <RELATIVE_DIRECTION> da uzmete izlaz <NUMBER_SIGN> da ostanete na <STREET_NAMES> prema <TOWARD_SIGN>."
-            },
-            "empty_street_name_labels": [
-                "pješačka staza",
-                "biciklistička staza",
-                "staza za planinski biciklizam",
-                "pješački prijelaz"
-            ],
-            "relative_directions": [
-                "lijevo",
-                "ravno",
-                "desno"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Držite se lijevo da ostanete na Interstate 95 South.",
-                    "Držite se ravno da ostanete na Interstate 95 South.",
-                    "Držite se desno da ostanete na Interstate 95 South."
-                ],
-                "1": [
-                    "Držite se lijevo da uzmete izlaz 62 da ostanete na Interstate 95 South."
-                ],
-                "2": [
-                    "Držite se lijevo da ostanete na I 95 South prema Baltimore."
-                ],
-                "3": [
-                    "Držite se lijevo da uzmete izlaz 62 da ostanete na Interstate 95 South prema Baltimore."
-                ]
-            }
-        },
-        "keep_verbal": {
-            "phrases": {
-                "0": "Držite se <RELATIVE_DIRECTION> na raskrižju.",
-                "1": "Držite se <RELATIVE_DIRECTION> da uzmete izlaz <NUMBER_SIGN>.",
-                "2": "Držite se <RELATIVE_DIRECTION> da uzmete <STREET_NAMES>.",
-                "3": "Držite se <RELATIVE_DIRECTION> da uzmete izlaz <NUMBER_SIGN> na <STREET_NAMES>.",
-                "4": "Držite se <RELATIVE_DIRECTION> prema <TOWARD_SIGN>.",
-                "5": "Držite se <RELATIVE_DIRECTION> da uzmete izlaz <NUMBER_SIGN> prema <TOWARD_SIGN>.",
-                "6": "Držite se <RELATIVE_DIRECTION> da uzmete <STREET_NAMES> prema <TOWARD_SIGN>.",
-                "7": "Držite se <RELATIVE_DIRECTION> da uzmete izlaz <NUMBER_SIGN> na <STREET_NAMES> prema <TOWARD_SIGN>."
-            },
-            "empty_street_name_labels": [
-                "pješačka staza",
-                "biciklistička staza",
-                "staza za planinski biciklizam",
-                "pješački prijelaz"
-            ],
-            "relative_directions": [
-                "lijevo",
-                "ravno",
-                "desno"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Držite se lijevo na raskrižju.",
-                    "Držite se ravno na raskrižju.",
-                    "Držite se desno na raskrižju."
-                ],
-                "1": [
-                    "Držite se desno da uzmete izlaz 62."
-                ],
-                "2": [
-                    "Držite se desno da uzmete Interstate 8 95 South."
-                ],
-                "3": [
-                    "Držite se desno da uzmete izlaz 62 na Interstate 8 95 South."
-                ],
-                "4": [
-                    "Držite se desno prema Annapolis."
-                ],
-                "5": [
-                    "Držite se desno da uzmete izlaz 62 prema Annapolis."
-                ],
-                "6": [
-                    "Držite se desno da uzmete Interstate 8 95 South prema Annapolis."
-                ],
-                "7": [
-                    "Držite se desno da uzmete izlaz 62 na Interstate 8 95 South prema Annapolis."
-                ]
-            }
-        },
-        "merge": {
-            "phrases": {
-                "0": "Uključite se.",
-                "1": "Uključite se <RELATIVE_DIRECTION>.",
-                "2": "Uključite se na <STREET_NAMES>.",
-                "3": "Uključite se <RELATIVE_DIRECTION> na <STREET_NAMES>.",
-                "4": "Uključite se prema <TOWARD_SIGN>.",
-                "5": "Uključite se <RELATIVE_DIRECTION> prema <TOWARD_SIGN>."
-            },
-            "relative_directions": [
-                "lijevo",
-                "desno"
-            ],
-            "empty_street_name_labels": [
-                "pješačka staza",
-                "biciklistička staza",
-                "staza za planinski biciklizam",
-                "pješački prijelaz"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Uključite se."
-                ],
-                "1": [
-                    "Uključite se lijevo."
-                ],
-                "2": [
-                    "Uključite se na I 76 West/Pennsylvania Turnpike."
-                ],
-                "3": [
-                    "Uključite se desno na I 83 South."
-                ],
-                "4": [
-                    "Uključite se prema Baltimore."
-                ],
-                "5": [
-                    "Uključite se desno prema Baltimore."
-                ]
-            }
-        },
-        "merge_verbal": {
-            "phrases": {
-                "0": "Uključite se.",
-                "1": "Uključite se <RELATIVE_DIRECTION>.",
-                "2": "Uključite se na <STREET_NAMES>.",
-                "3": "Uključite se <RELATIVE_DIRECTION> na <STREET_NAMES>.",
-                "4": "Uključite se prema <TOWARD_SIGN>.",
-                "5": "Uključite se <RELATIVE_DIRECTION> prema <TOWARD_SIGN>."
-            },
-            "relative_directions": [
-                "lijevo",
-                "desno"
-            ],
-            "empty_street_name_labels": [
-                "pješačka staza",
-                "biciklistička staza",
-                "staza za planinski biciklizam",
-                "pješački prijelaz"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Uključite se."
-                ],
-                "1": [
-                    "Uključite se lijevo."
-                ],
-                "2": [
-                    "Uključite se na I 76 West/Pennsylvania Turnpike."
-                ],
-                "3": [
-                    "Uključite se desno na I 83 South."
-                ],
-                "4": [
-                    "Uključite se prema Baltimore."
-                ],
-                "5": [
-                    "Uključite se desno prema Baltimore."
-                ]
-            }
-        },
-        "post_transition_transit_verbal": {
-            "phrases": {
-                "0": "Putujte <TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>."
-            },
-            "transit_stop_count_labels": {
-                "one": "stanica",
-                "other": "stanice"
-            },
-            "example_phrases": {
-                "0": [
-                    "Putujte 1 stanica.",
-                    "Putujte 3 stanice."
-                ]
-            }
-        },
-        "post_transition_verbal": {
-            "phrases": {
-                "0": "Nastavite <LENGTH>.",
-                "1": "Nastavite na <STREET_NAMES> <LENGTH>."
-            },
-            "empty_street_name_labels": [
-                "pješačka staza",
-                "biciklistička staza",
-                "staza za planinski biciklizam",
-                "pješački prijelaz"
-            ],
-            "metric_lengths": [
-                "<KILOMETERS> kilometara",
-                "1 kilometar",
-                "<METERS> metara",
-                "manje od 10 metara"
-            ],
-            "us_customary_lengths": [
-                "<MILES> milje",
-                "1 milja",
-                "pola milje",
-                "četvrt milje",
-                "<FEET> stopa",
-                "manje od 10 stopa"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Nastavite 300 stopa.",
-                    "Nastavite 9 milja."
-                ],
-                "1": [
-                    "Nastavite na Pennsylvania 7 43 za 6.2 milje.",
-                    "Nastavite na Main Street, Vermont 30 za 1 desetinu milje."
-                ]
-            }
-        },
-        "ramp": {
-            "phrases": {
-                "0": "Uzmite rampu s <RELATIVE_DIRECTION>.",
-                "1": "Uzmite rampu <BRANCH_SIGN> s <RELATIVE_DIRECTION>.",
-                "2": "Uzmite rampu s <RELATIVE_DIRECTION> prema <TOWARD_SIGN>.",
-                "3": "Uzmite rampu <BRANCH_SIGN> s <RELATIVE_DIRECTION> prema <TOWARD_SIGN>.",
-                "4": "Uzmite rampu <NAME_SIGN> s <RELATIVE_DIRECTION>.",
-                "5": "Sklonite <RELATIVE_DIRECTION> da uzmite rampu.",
-                "6": "Sklonite <RELATIVE_DIRECTION> da uzmite rampu <BRANCH_SIGN>.",
-                "7": "Sklonite <RELATIVE_DIRECTION> da uzmite rampu prema <TOWARD_SIGN>.",
-                "8": "Sklonite <RELATIVE_DIRECTION> da uzmite rampu <BRANCH_SIGN> prema <TOWARD_SIGN>.",
-                "9": "Sklonite <RELATIVE_DIRECTION> da uzmite rampu <NAME_SIGN>.",
-                "10": "Uzmite rampu.",
-                "11": "Uzmite rampu <BRANCH_SIGN>.",
-                "12": "Uzmite rampu prema <TOWARD_SIGN>.",
-                "13": "Uzmite rampu <BRANCH_SIGN> prema <TOWARD_SIGN>.",
-                "14": "Uzmite rampu <NAME_SIGN>."
-            },
-            "relative_directions": [
-                "lijevo",
-                "desno"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Uzmite rampu s lijeve strane.",
-                    "Uzmite rampu s desne strane."
-                ],
-                "1": [
-                    "Uzmite rampu I 95 s desne strane."
-                ],
-                "2": [
-                    "Uzmite rampu s lijeve strane prema JFK."
-                ],
-                "3": [
-                    "Uzmite rampu South Conduit Avenue s lijeve strane prema JFK."
-                ],
-                "4": [
-                    "Uzmite rampu Gettysburg Pike s desne strane."
-                ],
-                "5": [
-                    "Sklonite lijevo da uzmite rampu.",
-                    "Sklonite desno da uzmite rampu."
-                ],
-                "6": [
-                    "Sklonite lijevo da uzmite rampu PA 283 West."
-                ],
-                "7": [
-                    "Sklonite lijevo da uzmite rampu prema Harrisburg/Harrisburg International Airport."
-                ],
-                "8": [
-                    "Sklonite lijevo da uzmite rampu PA 283 West prema Harrisburg/Harrisburg International Airport."
-                ],
-                "9": [
-                    "Sklonite desno da uzmite rampu Gettysburg Pike."
-                ],
-                "10": [
-                    "Uzmite rampu."
-                ],
-                "11": [
-                    "Uzmite rampu I 95."
-                ],
-                "12": [
-                    "Uzmite rampu prema JFK."
-                ],
-                "13": [
-                    "Uzmite rampu South Conduit Avenue prema JFK."
-                ],
-                "14": [
-                    "Uzmite rampu Gettysburg."
-                ]
-            }
-        },
-        "ramp_straight": {
-            "phrases": {
-                "0": "Idite ravno da uzmite rampu.",
-                "1": "Idite ravno da uzmite rampu <BRANCH_SIGN>.",
-                "2": "Idite ravno da uzmite rampu prema <TOWARD_SIGN>.",
-                "3": "Idite ravno da uzmite rampu <BRANCH_SIGN> prema <TOWARD_SIGN>.",
-                "4": "Idite ravno da uzmite rampu <NAME_SIGN>."
-            },
-            "example_phrases": {
-                "0": [
-                    "Idite ravno da uzmite rampu."
-                ],
-                "1": [
-                    "Idite ravno da uzmite rampu US 322 East."
-                ],
-                "2": [
-                    "Idite ravno da uzmite rampu prema Hershey."
-                ],
-                "3": [
-                    "Idite ravno da uzmite rampu US 322 East/US 422 East/US 522 East/US 622 East prema Hershey/Palmdale/Palmyra/Campbelltown."
-                ],
-                "4": [
-                    "Idite ravno da uzmite rampu Gettysburg Pike."
-                ]
-            }
-        },
-        "ramp_straight_verbal": {
-            "phrases": {
-                "0": "Idite ravno da uzmite rampu.",
-                "1": "Idite ravno da uzmite rampu <BRANCH_SIGN>.",
-                "2": "Idite ravno da uzmite rampu prema <TOWARD_SIGN>.",
-                "3": "Idite ravno da uzmite rampu <BRANCH_SIGN> prema <TOWARD_SIGN>.",
-                "4": "Idite ravno da uzmite rampu <NAME_SIGN>."
-            },
-            "example_phrases": {
-                "0": [
-                    "Idite ravno da uzmite rampu."
-                ],
-                "1": [
-                    "Idite ravno da uzmite rampu U.S. 3 22 East."
-                ],
-                "2": [
-                    "Idite ravno da uzmite rampu prema Hershey."
-                ],
-                "3": [
-                    "Idite ravno da uzmite rampu U.S. 3 22 East, U.S. 4 22 East prema Hershey, Palmdale."
-                ],
-                "4": [
-                    "Idite ravno da uzmite rampu Gettysburg Pike."
-                ]
-            }
-        },
-        "ramp_verbal": {
-            "phrases": {
-                "0": "Uzmite rampu s <RELATIVE_DIRECTION>.",
-                "1": "Uzmite rampu <BRANCH_SIGN> s <RELATIVE_DIRECTION>.",
-                "2": "Uzmite rampu s <RELATIVE_DIRECTION> prema <TOWARD_SIGN>.",
-                "3": "Uzmite rampu <BRANCH_SIGN> s <RELATIVE_DIRECTION> prema <TOWARD_SIGN>.",
-                "4": "Uzmite rampu <NAME_SIGN> s <RELATIVE_DIRECTION>.",
-                "5": "Sklonite <RELATIVE_DIRECTION> da uzmite rampu.",
-                "6": "Sklonite <RELATIVE_DIRECTION> da uzmite rampu <BRANCH_SIGN>.",
-                "7": "Sklonite <RELATIVE_DIRECTION> da uzmite rampu prema <TOWARD_SIGN>.",
-                "8": "Sklonite <RELATIVE_DIRECTION> da uzmite rampu <BRANCH_SIGN> prema <TOWARD_SIGN>.",
-                "9": "Sklonite <RELATIVE_DIRECTION> da uzmite rampu <NAME_SIGN>.",
-                "10": "Uzmite rampu.",
-                "11": "Uzmite rampu <BRANCH_SIGN>.",
-                "12": "Uzmite rampu prema <TOWARD_SIGN>.",
-                "13": "Uzmite rampu <BRANCH_SIGN> prema <TOWARD_SIGN>.",
-                "14": "Uzmite rampu <NAME_SIGN>."
-            },
-            "relative_directions": [
-                "lijevo",
-                "desno"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Uzmite rampu s lijeve strane.",
-                    "Uzmite rampu s desne strane."
-                ],
-                "1": [
-                    "Uzmite rampu Interstate 95 s desne strane."
-                ],
-                "2": [
-                    "Uzmite rampu s lijeve strane prema JFK."
-                ],
-                "3": [
-                    "Uzmite rampu South Conduit Avenue s lijeve strane prema JFK."
-                ],
-                "4": [
-                    "Uzmite rampu Gettysburg Pike s desne strane."
-                ],
-                "5": [
-                    "Sklonite lijevo da uzmite rampu.",
-                    "Sklonite desno da uzmite rampu."
-                ],
-                "6": [
-                    "Sklonite lijevo da uzmite rampu Pennsylvania 2 83 West."
-                ],
-                "7": [
-                    "Sklonite lijevo da uzmite rampu prema Harrisburg/Harrisburg International Airport."
-                ],
-                "8": [
-                    "Sklonite lijevo da uzmite rampu Pennsylvania 2 83 West prema Harrisburg, Harrisburg International Airport."
-                ],
-                "9": [
-                    "Sklonite desno da uzmite rampu Gettysburg Pike."
-                ],
-                "10": [
-                    "Uzmite rampu."
-                ],
-                "11": [
-                    "Uzmite rampu Interstate 95."
-                ],
-                "12": [
-                    "Uzmite rampu prema JFK."
-                ],
-                "13": [
-                    "Uzmite rampu South Conduit Avenue prema JFK."
-                ],
-                "14": [
-                    "Uzmite rampu Gettysburg Pike."
-                ]
-            }
-        },
-        "sharp": {
-            "phrases": {
-                "0": "Napravite oštar <RELATIVE_DIRECTION>.",
-                "1": "Napravite oštar <RELATIVE_DIRECTION> na <STREET_NAMES>.",
-                "2": "Napravite oštar <RELATIVE_DIRECTION> zavoj na ulicu <BEGIN_STREET_NAMES>. Nastavite na ulici <STREET_NAMES>.",
-                "3": "Napravite oštar <RELATIVE_DIRECTION> zavoj kako biste ostali na ulici <STREET_NAMES>.",
-                "4": "Napravite oštar <RELATIVE_DIRECTION> zavoj na raskršću <JUNCTION_NAME>.",
-                "5": "Napravite oštar <RELATIVE_DIRECTION> zavoj prema <TOWARD_SIGN>."
-            },
-            "empty_street_name_labels": [
-                "pješačka staza",
-                "staza za bicikliste",
-                "staza za brdski biciklizam",
-                "pješački prijelaz"
-            ],
-            "relative_directions": [
-                "lijevo",
-                "desno"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Napravite oštar skretanje ulijevo."
-                ],
-                "1": [
-                    "Napravite oštar skretanje udesno na Flatbush Avenue."
-                ],
-                "2": [
-                    "Napravite oštar skretanje ulijevo na North Bond Street/US 1 Business/MD 924. Nastavite na MD 924."
-                ],
-                "3": [
-                    "Napravite oštar skretanje udesno kako biste ostali na Sunstone Drive."
-                ],
-                "4": [
-                    "Napravite oštar skretanje udesno kod Mannenbashi East."
-                ],
-                "5": [
-                    "Napravite oštar skretanje ulijevo prema Baltimoreu."
-                ]
-            }
-        },
-        "sharp_verbal": {
-            "phrases": {
-                "0": "Napravite oštar <RELATIVE_DIRECTION>.",
-                "1": "Napravite oštar <RELATIVE_DIRECTION> na <STREET_NAMES>.",
-                "2": "Napravite oštar <RELATIVE_DIRECTION> na <BEGIN_STREET_NAMES>.",
-                "3": "Napravite oštar <RELATIVE_DIRECTION> da ostanete na <STREET_NAMES>.",
-                "4": "Napravite oštar <RELATIVE_DIRECTION> kod <JUNCTION_NAME>.",
-                "5": "Napravite oštar <RELATIVE_DIRECTION> prema <TOWARD_SIGN>."
-            },
-            "empty_street_name_labels": [
-                "pješačka staza",
-                "biciklistička staza",
-                "staza za brdski biciklizam",
-                "pješački prijelaz"
-            ],
-            "relative_directions": [
-                "lijevo",
-                "desno"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Napravite oštar skretanje ulijevo."
-                ],
-                "1": [
-                    "Napravite oštar skretanje udesno na Flatbush Avenue."
-                ],
-                "2": [
-                    "Napravite oštar skretanje ulijevo na North Bond Street, U.S. 1 Business."
-                ],
-                "3": [
-                    "Napravite oštar skretanje udesno kako biste ostali na Sunstone Drive."
-                ],
-                "4": [
-                    "Napravite oštar skretanje udesno kod Mannenbashi East."
-                ],
-                "5": [
-                    "Napravite oštar skretanje ulijevo prema Baltimoreu."
-                ]
-            }
-        },
-        "start": {
-            "phrases": {
-                "0": "Krenite <CARDINAL_DIRECTION>.",
-                "1": "Krenite <CARDINAL_DIRECTION> na <STREET_NAMES>.",
-                "2": "Krenite <CARDINAL_DIRECTION> na <BEGIN_STREET_NAMES>. Nastavite na <STREET_NAMES>.",
-                "4": "Vozite <CARDINAL_DIRECTION>.",
-                "5": "Vozite <CARDINAL_DIRECTION> na <STREET_NAMES>.",
-                "6": "Vozite <CARDINAL_DIRECTION> na <BEGIN_STREET_NAMES>. Nastavite na <STREET_NAMES>.",
-                "8": "Idite <CARDINAL_DIRECTION>.",
-                "9": "Idite <CARDINAL_DIRECTION> na <STREET_NAMES>.",
-                "10": "Idite <CARDINAL_DIRECTION> na <BEGIN_STREET_NAMES>. Nastavite na <STREET_NAMES>.",
-                "16": "Vozite biciklom <CARDINAL_DIRECTION>.",
-                "17": "Vozite biciklom <CARDINAL_DIRECTION> na <STREET_NAMES>.",
-                "18": "Vozite biciklom <CARDINAL_DIRECTION> na <BEGIN_STREET_NAMES>. Nastavite na <STREET_NAMES>."
-            },
-            "cardinal_directions": [
-                "sjever",
-                "sjeveroistok",
-                "istok",
-                "jugoistok",
-                "jug",
-                "jugozapad",
-                "zapad",
-                "sjeverozapad"
-            ],
-            "empty_street_name_labels": [
-                "pješačka staza",
-                "biciklistička staza",
-                "staza za brdski biciklizam",
-                "pješački prijelaz"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Krenite prema istoku.",
-                    "Krenite prema sjeveru."
-                ],
-                "1": [
-                    "Krenite jugozapadno na 5th Avenue.",
-                    "Krenite prema zapadu na pješačkoj stazi",
-                    "Krenite prema istoku na biciklističkoj stazi",
-                    "Krenite prema sjeveru na stazi za brdski biciklizam"
-                ],
-                "2": [
-                    "Krenite jugom na North Prince Street/US 222/PA 272. Nastavite na US 222/PA 272."
-                ],
-                "4": [
-                    "Vozite prema istoku.",
-                    "Vozite prema sjeveru."
-                ],
-                "5": [
-                    "Vozite jugozapadno na 5th Avenue."
-                ],
-                "6": [
-                    "Vozite jugom na North Prince Street/US 222/PA 272. Nastavite na US 222/PA 272."
-                ],
-                "8": [
-                    "Idite prema istoku.",
-                    "Idite prema sjeveru."
-                ],
-                "9": [
-                    "Idite jugozapadno na 5th Avenue.",
-                    "Idite prema zapadu na pješačkoj stazi"
-                ],
-                "10": [
-                    "Idite jugom na North Prince Street/US 222/PA 272. Nastavite na US 222/PA 272."
-                ],
-                "16": [
-                    "Vozite biciklom prema istoku.",
-                    "Vozite biciklom prema sjeveru."
-                ],
-                "17": [
-                    "Vozite biciklom jugozapadno na 5th Avenue.",
-                    "Vozite biciklom prema istoku na biciklističkoj stazi",
-                    "Vozite biciklom prema sjeveru na stazi za brdski biciklizam"
-                ],
-                "18": [
-                    "Vozite biciklom jugom na North Prince Street/US 222/PA 272. Nastavite na US 222/PA 272."
-                ]
-            }
-        },
-        "start_verbal": {
-            "phrases": {
-                "0": "Krenite <CARDINAL_DIRECTION>.",
-                "1": "Krenite <CARDINAL_DIRECTION> za <LENGTH>.",
-                "2": "Krenite <CARDINAL_DIRECTION> na <STREET_NAMES>.",
-                "3": "Krenite <CARDINAL_DIRECTION> na <STREET_NAMES> za <LENGTH>.",
-                "4": "Krenite <CARDINAL_DIRECTION> na <BEGIN_STREET_NAMES>.",
-                "5": "Vozite <CARDINAL_DIRECTION>.",
-                "6": "Vozite <CARDINAL_DIRECTION> za <LENGTH>.",
-                "7": "Vozite <CARDINAL_DIRECTION> na <STREET_NAMES>.",
-                "8": "Vozite <CARDINAL_DIRECTION> na <STREET_NAMES> za <LENGTH>.",
-                "9": "Vozite <CARDINAL_DIRECTION> na <BEGIN_STREET_NAMES>.",
-                "10": "Idite <CARDINAL_DIRECTION>.",
-                "11": "Idite <CARDINAL_DIRECTION> za <LENGTH>.",
-                "12": "Idite <CARDINAL_DIRECTION> na <STREET_NAMES>.",
-                "13": "Idite <CARDINAL_DIRECTION> na <STREET_NAMES> za <LENGTH>.",
-                "14": "Idite <CARDINAL_DIRECTION> na <BEGIN_STREET_NAMES>.",
-                "15": "Vozite biciklom <CARDINAL_DIRECTION>.",
-                "16": "Vozite biciklom <CARDINAL_DIRECTION> za <LENGTH>.",
-                "17": "Vozite biciklom <CARDINAL_DIRECTION> na <STREET_NAMES>.",
-                "18": "Vozite biciklom <CARDINAL_DIRECTION> na <STREET_NAMES> za <LENGTH>.",
-                "19": "Vozite biciklom <CARDINAL_DIRECTION> na <BEGIN_STREET_NAMES>."
-            },
-            "cardinal_directions": [
-                "sjever",
-                "sjeveroistok",
-                "istok",
-                "jugoistok",
-                "jug",
-                "jugozapad",
-                "zapad",
-                "sjeverozapad"
-            ],
-            "empty_street_name_labels": [
-                "pješačka staza",
-                "biciklistička staza",
-                "staza za brdski biciklizam",
-                "pješački prijelaz"
-            ],
-            "metric_lengths": [
-                "<KILOMETERS> kilometara",
-                "1 kilometar",
-                "<METERS> metara",
-                "manje od 10 metara"
-            ],
-            "us_customary_lengths": [
-                "<MILES> milja",
-                "1 milja",
-                "pola milje",
-                "četvrt milje",
-                "<FEET> stopa",
-                "manje od 10 stopa"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Krenite prema istoku.",
-                    "Krenite prema sjeveru."
-                ],
-                "1": [
-                    "Krenite prema istoku za pola milje.",
-                    "Krenite prema sjeveru za 1 kilometar."
-                ],
-                "2": [
-                    "Krenite jugozapadno na 5th Avenue."
-                ],
-                "3": [
-                    "Krenite jugozapadno na 5th Avenue za desetinu milje."
-                ],
-                "4": [
-                    "Krenite jugom na North Prince Street, U.S. 2 22."
-                ],
-                "5": [
-                    "Vozite prema istoku.",
-                    "Vozite prema sjeveru."
-                ],
-                "6": [
-                    "Vozite prema istoku za pola milje.",
-                    "Vozite prema sjeveru za 1 kilometar."
-                ],
-                "7": [
-                    "Vozite jugozapadno na 5th Avenue."
-                ],
-                "8": [
-                    "Vozite jugozapadno na 5th Avenue za desetinu milje."
-                ],
-                "9": [
-                    "Vozite jugom na North Prince Street, U.S. 2 22."
-                ],
-                "10": [
-                    "Idite prema istoku.",
-                    "Idite prema sjeveru."
-                ],
-                "11": [
-                    "Idite prema istoku za pola milje.",
-                    "Idite prema sjeveru za 1 kilometar."
-                ],
-                "12": [
-                    "Idite jugozapadno na 5th Avenue."
-                ],
-                "13": [
-                    "Idite jugozapadno na 5th Avenue za desetinu milje."
-                ],
-                "14": [
-                    "Idite jugom na North Prince Street, U.S. 2 22."
-                ],
-                "15": [
-                    "Vozite biciklom prema istoku.",
-                    "Vozite biciklom prema sjeveru."
-                ],
-                "16": [
-                    "Vozite biciklom prema istoku za pola milje.",
-                    "Vozite biciklom prema sjeveru za 1 kilometar."
-                ],
-                "17": [
-                    "Vozite biciklom jugozapadno na 5th Avenue."
-                ],
-                "18": [
-                    "Vozite biciklom jugozapadno na 5th Avenue za desetinu milje."
-                ],
-                "19": [
-                    "Vozite biciklom jugom na North Prince Street, U.S. 2 22."
-                ]
-            }
-        },
-        "transit": {
-            "phrases": {
-                "0": "Uzmite <TRANSIT_NAME>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)",
-                "1": "Uzmite <TRANSIT_NAME> prema <TRANSIT_HEADSIGN>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)"
-            },
-            "empty_transit_name_labels": [
-                "tramvaj",
-                "metro",
-                "vlak",
-                "autobus",
-                "trajekt",
-                "uspinjača",
-                "gondola",
-                "žičara"
-            ],
-            "transit_stop_count_labels": {
-                "one": "stanica",
-                "other": "stanice"
-            },
-            "example_phrases": {
-                "0": [
-                    "Uzmite New Haven. (1 stanica)",
-                    "Uzmite metro. (2 stanice)",
-                    "Uzmite autobus. (12 stanica)"
-                ],
-                "1": [
-                    "Uzmite F prema JAMAICA - 179 ST. (10 stanica)",
-                    "Uzmite trajekt prema Staten Island. (1 stanica)"
-                ]
-            }
-        },
-        "transit_connection_destination": {
-            "phrases": {
-                "0": "Izađite iz stanice.",
-                "1": "Izađite na <TRANSIT_STOP>.",
-                "2": "Izađite na <TRANSIT_STOP> <STATION_LABEL>."
-            },
-            "station_label": "Stanica",
-            "example_phrases": {
-                "0": [
-                    "Izađite iz stanice."
-                ],
-                "1": [
-                    "Izađite na Embarcadero Stanici."
-                ],
-                "2": [
-                    "Izađite na 8 St - NYU Stanici."
-                ]
-            }
-        },
-        "transit_connection_destination_verbal": {
-            "phrases": {
-                "0": "Izađite iz stanice.",
-                "1": "Izađite iz <TRANSIT_STOP>.",
-                "2": "Izađite iz <TRANSIT_STOP> <STATION_LABEL>."
-            },
-            "station_label": "Stanica",
-            "example_phrases": {
-                "0": [
-                    "Izađite iz stanice."
-                ],
-                "1": [
-                    "Izađite iz Stanice Embarcadero."
-                ],
-                "2": [
-                    "Izađite iz Stanice 8 St - NYU."
-                ]
-            }
-        },
-        "transit_connection_start": {
-            "phrases": {
-                "0": "Uđite u stanicu.",
-                "1": "Uđite u <TRANSIT_STOP>.",
-                "2": "Uđite u <TRANSIT_STOP> <STATION_LABEL>."
-            },
-            "station_label": "Stanica",
-            "example_phrases": {
-                "0": [
-                    "Unesite stanicu."
-                ],
-                "1": [
-                    "Unesite stanicu Embarcadero."
-                ],
-                "2": [
-                    "Unesite stanicu 8 St - NYU."
-                ]
-            }
-        },
-        "transit_connection_start_verbal": {
-            "phrases": {
-                "0": "Unesite stanicu.",
-                "1": "Unesite <STANICA_TRANZITA>.",
-                "2": "Unesite <STANICA_TRANZITA> <OZNAKA_STANICE>."
-            },
-            "station_label": "Stanica",
-            "example_phrases": {
-                "0": [
-                    "Unesite stanicu."
-                ],
-                "1": [
-                    "Unesite stanicu Embarcadero."
-                ],
-                "2": [
-                    "Unesite stanicu 8 St - NYU."
-                ]
-            }
-        },
-        "transit_connection_transfer": {
-            "phrases": {
-                "0": "Prijenos na stanici.",
-                "1": "Prijenos na <STANICA_TRANZITA>.",
-                "2": "Prijenos na <STANICA_TRANZITA> <OZNAKA_STANICE>."
-            },
-            "station_label": "Stanica",
-            "example_phrases": {
-                "0": [
-                    "Prijenos na stanici."
-                ],
-                "1": [
-                    "Prijenos na stanicu Embarcadero."
-                ],
-                "2": [
-                    "Prijenos na stanicu 8 St - NYU."
-                ]
-            }
-        },
-        "transit_connection_transfer_verbal": {
-            "phrases": {
-                "0": "Prijenos na stanici.",
-                "1": "Prijenos na <STANICA_TRANZITA>.",
-                "2": "Prijenos na <STANICA_TRANZITA> <OZNAKA_STANICE>."
-            },
-            "station_label": "Stanica",
-            "example_phrases": {
-                "0": [
-                    "Prijenos na stanici."
-                ],
-                "1": [
-                    "Prijenos na stanicu Embarcadero."
-                ],
-                "2": [
-                    "Prijenos na stanicu 8 St - NYU."
-                ]
-            }
-        },
-        "transit_remain_on": {
-            "phrases": {
-                "0": "Ostanite na <NAZIV_TRANZITA>. (<BROJ_STANICA_TRANZITA> <OZNAKA_BROJA_STANICA_TRANZITA>)",
-                "1": "Ostanite na <NAZIV_TRANZITA> prema <SMJER_TRANZITA>. (<BROJ_STANICA_TRANZITA> <OZNAKA_BROJA_STANICA_TRANZITA>)"
-            },
-            "empty_transit_name_labels": [
-                "tramvaj",
-                "metro",
-                "vlak",
-                "autobus",
-                "trajekt",
-                "žičara",
-                "gondola",
-                "lanac"
-            ],
-            "transit_stop_count_labels": {
-                "one": "stanica",
-                "other": "stanice"
-            },
-            "example_phrases": {
-                "0": [
-                    "Ostanite na New Haven. (1 stanica)",
-                    "Ostanite na vlaku. (3 stanice)"
-                ],
-                "1": [
-                    "Ostanite na F prema JAMAICA - 179 ST. (10 stanica)"
-                ]
-            }
-        },
-        "transit_remain_on_verbal": {
-            "phrases": {
-                "0": "Ostanite na <NAZIV_TRANZITA>.",
-                "1": "Ostanite na <NAZIV_TRANZITA> prema <SMJER_TRANZITA>."
-            },
-            "empty_transit_name_labels": [
-                "tramvaj",
-                "metro",
-                "vlak",
-                "autobus",
-                "trajekt",
-                "žičara",
-                "gondola",
-                "lanac"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Ostanite na New Haven."
-                ],
-                "1": [
-                    "Ostanite na F prema JAMAICA - 179 ST."
-                ]
-            }
-        },
-        "transit_transfer": {
-            "phrases": {
-                "0": "Prijenos za vožnju <NAZIV_TRANZITA>. (<BROJ_STANICA_TRANZITA> <OZNAKA_BROJA_STANICA_TRANZITA>)",
-                "1": "Prijenos za vožnju <NAZIV_TRANZITA> prema <SMJER_TRANZITA>. (<BROJ_STANICA_TRANZITA> <OZNAKA_BROJA_STANICA_TRANZITA>)"
-            },
-            "empty_transit_name_labels": [
-                "tramvaj",
-                "metro",
-                "vlak",
-                "autobus",
-                "trajekt",
-                "žičara",
-                "gondola",
-                "lanac"
-            ],
-            "transit_stop_count_labels": {
-                "one": "stanica",
-                "other": "stanice"
-            },
-            "example_phrases": {
-                "0": [
-                    "Prijenos za vožnju New Haven. (1 stanica)",
-                    "Prijenos za vožnju tramvajem. (4 stanice)"
-                ],
-                "1": [
-                    "Prijenos za vožnju F prema JAMAICA - 179 ST. (10 stanica)"
-                ]
-            }
-        },
-        "transit_transfer_verbal": {
-            "phrases": {
-                "0": "Prijenos za vožnju <NAZIV_TRANZITA>.",
-                "1": "Prijenos za vožnju <NAZIV_TRANZITA> prema <SMJER_TRANZITA>."
-            },
-            "empty_transit_name_labels": [
-                "tramvaj",
-                "metro",
-                "vlak",
-                "autobus",
-                "trajekt",
-                "žičara",
-                "gondola",
-                "lanac"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Prijenos za vožnju New Haven."
-                ],
-                "1": [
-                    "Prijenos za vožnju F prema JAMAICA - 179 ST."
-                ]
-            }
-        },
-        "transit_verbal": {
-            "phrases": {
-                "0": "Uzmite <NAZIV_TRANZITA>.",
-                "1": "Uzmite <NAZIV_TRANZITA> prema <SMJER_TRANZITA>."
-            },
-            "empty_transit_name_labels": [
-                "tramvaj",
-                "metro",
-                "vlak",
-                "autobus",
-                "trajekt",
-                "žičara",
-                "gondola",
-                "lanac"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Uzmite New Haven."
-                ],
-                "1": [
-                    "Uzmite F prema JAMAICA - 179 ST."
-                ]
-            }
-        },
-        "turn": {
-            "phrases": {
-                "0": "Skrenite <RELATIVNI_SMJER>.",
-                "1": "Skrenite <RELATIVNI_SMJER> na <IMENA_ULICA>.",
-                "2": "Skrenite <RELATIVNI_SMJER> na <POČETNA_IMENA_ULICA>. Nastavite na <IMENA_ULICA>.",
-                "3": "Skrenite <RELATIVNI_SMJER> kako biste ostali na <IMENA_ULICA>.",
-                "4": "Skrenite <RELATIVNI_SMJER> na <IME_RASKRIŽJA>.",
-                "5": "Skrenite <RELATIVNI_SMJER> prema <TABLA_PREMA>."
-            },
-            "empty_street_name_labels": [
-                "staza za hodanje",
-                "staza za bicikle",
-                "staza za brdski biciklizam",
-                "pješački prijelaz"
-            ],
-            "relative_directions": [
-                "lijevo",
-                "desno"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Skrenite lijevo."
-                ],
-                "1": [
-                    "Skrenite desno na Flatbush Avenue."
-                ],
-                "2": [
-                    "Skrenite lijevo na North Bond Street/US 1 Business/MD 924. Nastavite na MD 924."
-                ],
-                "3": [
-                    "Skrenite desno kako biste ostali na Sunstone Drive."
-                ],
-                "4": [
-                    "Skrenite desno na Mannenbashi East."
-                ],
-                "5": [
-                    "Skrenite lijevo prema Baltimoreu."
-                ]
-            }
-        },
-        "turn_verbal": {
-            "phrases": {
-                "0": "Skrenite <RELATIVNI_SMJER>.",
-                "1": "Skrenite <RELATIVNI_SMJER> na <IMENA_ULICA>.",
-                "2": "Skrenite <RELATIVNI_SMJER> na <POČETNA_IMENA_ULICA>.",
-                "3": "Skrenite <RELATIVNI_SMJER> kako biste ostali na <IMENA_ULICA>.",
-                "4": "Skrenite <RELATIVNI_SMJER> na <IME_RASKRIŽJA>.",
-                "5": "Skrenite <RELATIVNI_SMJER> prema <TABLA_PREMA>."
-            },
-            "empty_street_name_labels": [
-                "staza za hodanje",
-                "staza za bicikle",
-                "staza za brdski biciklizam",
-                "pješački prijelaz"
-            ],
-            "relative_directions": [
-                "lijevo",
-                "desno"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Skrenite lijevo."
-                ],
-                "1": [
-                    "Skrenite desno na Flatbush Avenue."
-                ],
-                "2": [
-                    "Skrenite lijevo na North Bond Street, U.S. 1 Business."
-                ],
-                "3": [
-                    "Skrenite desno kako biste ostali na Sunstone Drive."
-                ],
-                "4": [
-                    "Skrenite desno na Mannenbashi East."
-                ],
-                "5": [
-                    "Skrenite lijevo prema Baltimoreu."
-                ]
-            }
-        },
-        "uturn": {
-            "phrases": {
-                "0": "Napravite <RELATIVNI_SMJER> U-obrat.",
-                "1": "Napravite <RELATIVNI_SMJER> U-obrat na <IMENA_ULICA>.",
-                "2": "Napravite <RELATIVNI_SMJER> U-obrat kako biste ostali na <IMENA_ULICA>.",
-                "3": "Napravite <RELATIVNI_SMJER> U-obrat na <CROSS_IMENA_ULICA>.",
-                "4": "Napravite <RELATIVNI_SMJER> U-obrat na <CROSS_IMENA_ULICA> na <IMENA_ULICA>.",
-                "5": "Napravite <RELATIVNI_SMJER> U-obrat na <CROSS_IMENA_ULICA> kako biste ostali na <IMENA_ULICA>.",
-                "6": "Napravite <RELATIVNI_SMJER> U-obrat na <IME_RASKRIŽJA>.",
-                "7": "Napravite <RELATIVNI_SMJER> U-obrat prema <TABLA_PREMA>."
-            },
-            "empty_street_name_labels": [
-                "staza za hodanje",
-                "staza za bicikle",
-                "staza za brdski biciklizam",
-                "pješački prijelaz"
-            ],
-            "relative_directions": [
-                "lijevo",
-                "desno"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Napravite lijevi U-obrat."
-                ],
-                "1": [
-                    "Napravite desni U-obrat na Bunker Hill Road."
-                ],
-                "2": [
-                    "Napravite lijevi U-obrat kako biste ostali na Bunker Hill Road."
-                ],
-                "3": [
-                    "Napravite lijevi U-obrat na Devonshire Road."
-                ],
-                "4": [
-                    "Napravite lijevi U-obrat na Devonshire Road na Jonestown Road/US 22."
-                ],
-                "5": [
-                    "Napravite lijevi U-obrat na Devonshire Road kako biste ostali na Jonestown Road/US 22."
-                ],
-                "6": [
-                    "Napravite desni U-obrat na Mannenbashi East."
-                ],
-                "7": [
-                    "Napravite lijevi U-obrat prema Baltimoreu."
-                ]
-            }
-        },
-        "uturn_verbal": {
-            "phrases": {
-                "0": "Napravite <RELATIVNI_SMJER> U-obrat.",
-                "1": "Napravite <RELATIVNI_SMJER> U-obrat na <IMENA_ULICA>.",
-                "2": "Napravite <RELATIVNI_SMJER> U-obrat kako biste ostali na <IMENA_ULICA>.",
-                "3": "Napravite <RELATIVNI_SMJER> U-obrat na <CROSS_IMENA_ULICA>.",
-                "4": "Napravite <RELATIVNI_SMJER> U-obrat na <CROSS_IMENA_ULICA> na <IMENA_ULICA>.",
-                "5": "Napravite <RELATIVNI_SMJER> U-obrat na <CROSS_IMENA_ULICA> kako biste ostali na <IMENA_ULICA>.",
-                "6": "Napravite <RELATIVNI_SMJER> U-obrat na <IME_RASKRIŽJA>.",
-                "7": "Napravite <RELATIVNI_SMJER> U-obrat prema <TABLA_PREMA>."
-            },
-            "empty_street_name_labels": [
-                "staza za hodanje",
-                "staza za bicikle",
-                "staza za brdski biciklizam",
-                "pješački prijelaz"
-            ],
-            "relative_directions": [
-                "lijevo",
-                "desno"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Napravite lijevi U-obrat."
-                ],
-                "1": [
-                    "Napravite desni U-obrat na Bunker Hill Road."
-                ],
-                "2": [
-                    "Napravite lijevi U-obrat kako biste ostali na Bunker Hill Road."
-                ],
-                "3": [
-                    "Napravite lijevi U-obrat na Devonshire Road."
-                ],
-                "4": [
-                    "Napravite lijevi U-obrat na Devonshire Road na Jonestown Road, U.S. 22."
-                ],
-                "5": [
-                    "Napravite lijevi U-obrat na Devonshire Road kako biste ostali na Jonestown Road, U.S. 22."
-                ],
-                "6": [
-                    "Napravite desni U-obrat na Mannenbashi East."
-                ],
-                "7": [
-                    "Napravite lijevi U-obrat prema Baltimoreu."
-                ]
-            }
-        },
-        "verbal_multi_cue": {
-            "phrases": {
-                "0": "<CURRENT_VERBAL_CUE> Zatim <NEXT_VERBAL_CUE>",
-                "1": "<CURRENT_VERBAL_CUE> Zatim, za <LENGTH>, <NEXT_VERBAL_CUE>"
-            },
-            "metric_lengths": [
-                "<KILOMETARA> kilometara",
-                "1 kilometar",
-                "<METARA> metara",
-                "manje od 10 metara"
-            ],
-            "us_customary_lengths": [
-                "<MILA> milja",
-                "1 milja",
-                "polovina milje",
-                "četvrtina milje",
-                "<STOPA> stopa",
-                "manje od 10 stopa"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Skrenite desno na East Fayette Street. Zatim skrenite desno na North Gay Street."
-                ],
-                "1": [
-                    "Skrenite desno na East Fayette Street. Zatim, za 500 metara, skrenite desno na North Gay Street."
-                ]
-            }
-        },
-        "approach_verbal_alert": {
-            "phrases": {
-                "0": "Za <LENGTH>, <CURRENT_VERBAL_CUE>"
-            },
-            "metric_lengths": [
-                "<KILOMETARA> kilometara",
-                "1 kilometar",
-                "<METARA> metara",
-                "manje od 10 metara"
-            ],
-            "us_customary_lengths": [
-                "<MILA> milja",
-                "1 milja",
-                "polovina milje",
-                "četvrtina milje",
-                "<STOPA> stopa",
-                "manje od 10 stopa"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Za četvrtinu milje, skrenite desno na North Gay Street."
-                ]
-            }
-        },
-        "pass": {
-            "phrases": {
-                "0": "Prođi kroz <OBJECT_LABEL>.",
-                "1": "Prođi prometne signale na <OBJECT_LABEL>."
-            },
-            "object_labels": [
-                "vrata",
-                "stupovi",
-                "križanje puteva"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Prođi kroz vrata."
-                ]
-            }
-        },
-        "elevator": {
-            "phrases": {
-                "0": "Uzmite dizalo.",
-                "1": "Uzmite dizalo do <RAZINA>."
-            },
-            "example_phrases": {
-                "0": [
-                    "Uzmite dizalo."
-                ],
-                "1": [
-                    "Uzmite dizalo do Razine 1."
-                ]
-            }
-        },
-        "steps": {
-            "phrases": {
-                "0": "Uzmite stepenice.",
-                "1": "Uzmite stepenice do <RAZINA>."
-            },
-            "example_phrases": {
-                "0": [
-                    "Uzmite stepenice."
-                ],
-                "1": [
-                    "Uzmite stepenice do Razine 2."
-                ]
-            }
-        },
-        "escalator": {
-            "phrases": {
-                "0": "Uzmite pokretnu stepenicu.",
-                "1": "Uzmite pokretnu stepenicu do <RAZINA>."
-            },
-            "example_phrases": {
-                "0": [
-                    "Uzmite pokretnu stepenicu."
-                ],
-                "1": [
-                    "Uzmite pokretnu stepenicu do Razine 3."
-                ]
-            }
-        },
-        "enter_building": {
-            "phrases": {
-                "0": "Uđite u zgradu.",
-                "1": "Uđite u zgradu i nastavite na <IMENA_ULICA>."
-            },
-            "empty_street_name_labels": [
-                "staza za hodanje",
-                "staza za bicikle",
-                "staza za brdski biciklizam",
-                "pješački prijelaz"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Uđite u zgradu."
-                ],
-                "1": [
-                    "Uđite u zgradu i nastavite na stazi za hodanje."
-                ]
-            }
-        },
-        "exit_building": {
-            "phrases": {
-                "0": "Izađite iz zgrade.",
-                "1": "Izađite iz zgrade i nastavite na <IMENA_ULICA>."
-            },
-            "empty_street_name_labels": [
-                "staza za hodanje",
-                "staza za bicikle",
-                "staza za brdski biciklizam",
-                "pješački prijelaz"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Izađite iz zgrade."
-                ],
-                "1": [
-                    "Izađite iz zgrade i nastavite na stazi za hodanje."
-                ]
-            }
-        }
+  "posix_locale": "hr_HR.UTF-8.",
+  "aliases": [
+    "hr"
+  ],
+  "instructions": {
+    "arrive": {
+      "phrases": {
+        "0": "Dolazak: <TIME>.",
+        "1": "Dolazak: <TIME> na <TRANSIT_STOP>."
+      },
+      "example_phrases": {
+        "0": [
+          "Dolazak: 8:02 AM."
+        ],
+        "1": [
+          "Dolazak: 8:02 AM na 8 St - NYU."
+        ]
+      }
+    },
+    "arrive_verbal": {
+      "phrases": {
+        "0": "Dolazite u <TIME>.",
+        "1": "Dolazite u <TIME> na <TRANSIT_STOP>."
+      },
+      "example_phrases": {
+        "0": [
+          "Dolazite u 8:02 AM."
+        ],
+        "1": [
+          "Dolazite u 8:02 AM na 8 St - NYU."
+        ]
+      }
+    },
+    "bear": {
+      "phrases": {
+        "0": "Držite se <RELATIVE_DIRECTION>.",
+        "1": "Držite se <RELATIVE_DIRECTION> prema <STREET_NAMES>.",
+        "2": "Držite se <RELATIVE_DIRECTION> prema <BEGIN_STREET_NAMES>. Nastavite na <STREET_NAMES>.",
+        "3": "Držite se <RELATIVE_DIRECTION> da ostanete na <STREET_NAMES>.",
+        "4": "Držite se <RELATIVE_DIRECTION> kod <JUNCTION_NAME>.",
+        "5": "Držite se <RELATIVE_DIRECTION> prema <TOWARD_SIGN>."
+      },
+      "empty_street_name_labels": [
+        "pješački put",
+        "biciklistička staza",
+        "staza za brdski biciklizam",
+        "pješački prijelaz",
+        "stepenice",
+        "Most",
+        "tunel"
+      ],
+      "relative_directions": [
+        "lijevo",
+        "desno"
+      ],
+      "example_phrases": {
+        "0": [
+          "Držite desno."
+        ],
+        "1": [
+          "Držite lijevo prema Arlen Road."
+        ],
+        "2": [
+          "Držite desno prema Belair Road/US 1 Business. Nastavite na US 1 Business."
+        ],
+        "3": [
+          "Držite lijevo da ostanete na US 15 South."
+        ],
+        "4": [
+          "Držite desno kod Mannenbashi East."
+        ],
+        "5": [
+          "Držite lijevo prema Baltimore."
+        ]
+      }
+    },
+    "bear_verbal": {
+      "phrases": {
+        "0": "Držite se <RELATIVE_DIRECTION>.",
+        "1": "Držite se <RELATIVE_DIRECTION> prema <STREET_NAMES>.",
+        "2": "Držite se <RELATIVE_DIRECTION> prema <BEGIN_STREET_NAMES>.",
+        "3": "Držite se <RELATIVE_DIRECTION> da ostanete na <STREET_NAMES>.",
+        "4": "Držite se <RELATIVE_DIRECTION> kod <JUNCTION_NAME>.",
+        "5": "Držite se <RELATIVE_DIRECTION> prema <TOWARD_SIGN>."
+      },
+      "empty_street_name_labels": [
+        "pješački put",
+        "biciklistička staza",
+        "staza za brdski biciklizam",
+        "pješački prijelaz",
+        "stepenice",
+        "Most",
+        "tunel"
+      ],
+      "relative_directions": [
+        "lijevo",
+        "desno"
+      ],
+      "example_phrases": {
+        "0": [
+          "Držite desno."
+        ],
+        "1": [
+          "Držite lijevo prema Arlen Road."
+        ],
+        "2": [
+          "Držite desno prema Belair Road, U.S. 1 Business."
+        ],
+        "3": [
+          "Držite lijevo da ostanete na U.S. 15 South."
+        ],
+        "4": [
+          "Držite desno kod Mannenbashi East."
+        ],
+        "5": [
+          "Držite lijevo prema Baltimore."
+        ]
+      }
+    },
+    "becomes": {
+      "phrases": {
+        "0": "<PREVIOUS_STREET_NAMES> postaje <STREET_NAMES>."
+      },
+      "example_phrases": {
+        "0": [
+          "Vine Street postaje Middletown Road."
+        ]
+      }
+    },
+    "becomes_verbal": {
+      "phrases": {
+        "0": "<PREVIOUS_STREET_NAMES> postaje <STREET_NAMES>."
+      },
+      "example_phrases": {
+        "0": [
+          "Vine Street postaje Middletown Road."
+        ]
+      }
+    },
+    "continue": {
+      "phrases": {
+        "0": "Nastaviti.",
+        "1": "Nastavite <STREET_NAMES>.",
+        "2": "Nastavite na <JUNCTION_NAME>.",
+        "3": "Nastavite prema <TOWARD_SIGN>."
+      },
+      "empty_street_name_labels": [
+        "šetnica",
+        "biciklistička staza",
+        "staza za brdski biciklizam",
+        "pješački prijelaz",
+        "stepenice",
+        "Most",
+        "tunel"
+      ],
+      "example_phrases": {
+        "0": [
+          "Nastavite."
+        ],
+        "1": [
+          "Nastavite na 10th Avenue."
+        ],
+        "2": [
+          "Nastavite kod Mannenbashi East."
+        ],
+        "3": [
+          "Nastavite prema Baltimore."
+        ]
+      }
+    },
+    "continue_verbal": {
+      "phrases": {
+        "0": "Nastaviti.",
+        "1": "Nastavite <LENGTH>.",
+        "2": "Nastavite <STREET_NAMES>.",
+        "3": "Nastavite <STREET_NAMES> <LENGTH>.",
+        "4": "Nastavite na <JUNCTION_NAME>.",
+        "5": "Nastavite na <JUNCTION_NAME> <LENGTH>.",
+        "6": "Nastavite prema <TOWARD_SIGN>.",
+        "7": "Nastavite prema <TOWARD_SIGN> <LENGTH>."
+      },
+      "empty_street_name_labels": [
+        "šetnica",
+        "biciklistička staza",
+        "staza za brdski biciklizam",
+        "pješački prijelaz",
+        "stepenice",
+        "Most",
+        "tunel"
+      ],
+      "metric_lengths": [
+        "<KILOMETERS> kilometara",
+        "1 kilometar",
+        "<METERS> metara",
+        "manje od 10 metara"
+      ],
+      "us_customary_lengths": [
+        "<MILES> milja",
+        "1 milja",
+        "pola milje",
+        "četvrt milje",
+        "<FEET> stopa",
+        "manje od 10 stopa"
+      ],
+      "example_phrases": {
+        "0": [
+          "Nastavite."
+        ],
+        "1": [
+          "Nastavite 300 stopa."
+        ],
+        "2": [
+          "Nastavite na 10th Avenue."
+        ],
+        "3": [
+          "Nastavite na 10th Avenue 3 milje."
+        ],
+        "4": [
+          "Nastavite kod Mannenbashi East."
+        ],
+        "5": [
+          "Nastavite kod Mannenbashi East 2 milje."
+        ],
+        "6": [
+          "Nastavite prema Baltimore."
+        ],
+        "7": [
+          "Nastavite prema Baltimore 5 milja."
+        ]
+      }
+    },
+    "continue_verbal_alert": {
+      "phrases": {
+        "0": "Nastaviti.",
+        "1": "Nastavite <STREET_NAMES>.",
+        "2": "Nastavite na <JUNCTION_NAME>.",
+        "3": "Nastavite prema <TOWARD_SIGN>."
+      },
+      "empty_street_name_labels": [
+        "šetnica",
+        "biciklistička staza",
+        "staza za brdski biciklizam",
+        "pješački prijelaz",
+        "stepenice",
+        "Most",
+        "tunel"
+      ],
+      "example_phrases": {
+        "0": [
+          "Nastavite."
+        ],
+        "1": [
+          "Nastavite na 10th Avenue."
+        ],
+        "2": [
+          "Nastavite kod Mannenbashi East."
+        ],
+        "3": [
+          "Nastavite prema Baltimore."
+        ]
+      }
+    },
+    "depart": {
+      "phrases": {
+        "0": "Polazak: <TIME>.",
+        "1": "Polazak: <TIME> s <TRANSIT_STOP>."
+      },
+      "example_phrases": {
+        "0": [
+          "Polazak: 8:02 AM."
+        ],
+        "1": [
+          "Polazak: 8:02 AM s 8 St - NYU."
+        ]
+      }
+    },
+    "depart_verbal": {
+      "phrases": {
+        "0": "Polazak u <TIME>.",
+        "1": "Polazak u <TIME> s <TRANSIT_STOP>."
+      },
+      "example_phrases": {
+        "0": [
+          "Polazak u 8:02 AM."
+        ],
+        "1": [
+          "Polazak u 8:02 AM s 8 St - NYU."
+        ]
+      }
+    },
+    "destination": {
+      "phrases": {
+        "0": "Stigli ste na odredište.",
+        "1": "Stigli ste na <DESTINATION>.",
+        "2": "Vaše odredište je na <RELATIVE_DIRECTION>.",
+        "3": "<DESTINATION> nalazi se na <RELATIVE_DIRECTION>."
+      },
+      "relative_directions": [
+        "lijevo",
+        "desno"
+      ],
+      "example_phrases": {
+        "0": [
+          "Stigli ste na odredište."
+        ],
+        "1": [
+          "Stigli ste na 3206 Powelton Avenue."
+        ],
+        "2": [
+          "Vaše odredište je s lijeva.",
+          "Vaše odredište je s desna."
+        ],
+        "3": [
+          "Lancaster Brewing Company je s lijeva."
+        ]
+      }
+    },
+    "destination_verbal": {
+      "phrases": {
+        "0": "Stigli ste na odredište.",
+        "1": "Stigli ste na <DESTINATION>.",
+        "2": "Vaše odredište je na <RELATIVE_DIRECTION>.",
+        "3": "<DESTINATION> nalazi se na <RELATIVE_DIRECTION>."
+      },
+      "relative_directions": [
+        "lijevo",
+        "desno"
+      ],
+      "example_phrases": {
+        "0": [
+          "Stigli ste na odredište."
+        ],
+        "1": [
+          "Stigli ste na 32 o6 Powelton Avenue."
+        ],
+        "2": [
+          "Vaše odredište je s lijeva.",
+          "Vaše odredište je s desna."
+        ],
+        "3": [
+          "Lancaster Brewing Company je s lijeva."
+        ]
+      }
+    },
+    "destination_verbal_alert": {
+      "phrases": {
+        "0": "Stići ćete na odredište.",
+        "1": "Stići ćete na <ODREDIŠTE>.",
+        "2": "Vaše odredište bit će na <RELATIVE_DIRECTION>.",
+        "3": "<DESTINATION> bit će na <RELATIVE_DIRECTION>."
+      },
+      "relative_directions": [
+        "lijevo",
+        "desno"
+      ],
+      "example_phrases": {
+        "0": [
+          "Doći ćete na odredište."
+        ],
+        "1": [
+          "Doći ćete na 32 o6 Powelton Avenue."
+        ],
+        "2": [
+          "Vaše odredište će biti s lijeva.",
+          "Vaše odredište će biti s desna."
+        ],
+        "3": [
+          "Lancaster Brewing Company će biti s lijeva."
+        ]
+      }
+    },
+    "enter_ferry": {
+      "phrases": {
+        "0": "Idite trajektom.",
+        "1": "Idite <STREET_NAMES>.",
+        "2": "Idite <STREET_NAMES> <FERRY_LABEL>.",
+        "3": "Idite trajektom prema <TOWARD_SIGN>."
+      },
+      "empty_street_name_labels": [
+        "šetnica",
+        "biciklistička staza",
+        "staza za brdski biciklizam",
+        "pješački prijelaz",
+        "stepenice",
+        "Most",
+        "tunel"
+      ],
+      "ferry_label": "Trajekt",
+      "example_phrases": {
+        "0": [
+          "Uzmite trajekt."
+        ],
+        "1": [
+          "Uzmite Millersburg trajekt."
+        ],
+        "2": [
+          "Uzmite trajekt Bridgeport - Port Jefferson."
+        ],
+        "3": [
+          "Uzmite trajekt prema Cape May."
+        ]
+      }
+    },
+    "enter_ferry_verbal": {
+      "phrases": {
+        "0": "Idite trajektom.",
+        "1": "Idite <STREET_NAMES>.",
+        "2": "Idite <STREET_NAMES> <FERRY_LABEL>.",
+        "3": "Idite trajektom prema <TOWARD_SIGN>."
+      },
+      "empty_street_name_labels": [
+        "šetnica",
+        "biciklistička staza",
+        "staza za brdski biciklizam",
+        "pješački prijelaz",
+        "stepenice",
+        "Most",
+        "tunel"
+      ],
+      "ferry_label": "Trajekt",
+      "example_phrases": {
+        "0": [
+          "Uzmite trajekt."
+        ],
+        "1": [
+          "Uzmite Millersburg trajekt."
+        ],
+        "2": [
+          "Uzmite trajekt Bridgeport - Port Jefferson."
+        ],
+        "3": [
+          "Uzmite trajekt prema Cape May."
+        ]
+      }
+    },
+    "enter_roundabout": {
+      "phrases": {
+        "0": "Uđite u kružni tok.",
+        "1": "Uđite u kružni tok i izađite na izlaz <ORDINAL_VALUE>.",
+        "2": "Uđite u kružni tok i idite na izlaz <ORDINAL_VALUE> na <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "3": "Uđite u kružni tok i idite na izlaz <ORDINAL_VALUE> na <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>. Nastavite <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "4": "Uđite u kružni tok i idite na izlaz <ORDINAL_VALUE> prema <TOWARD_SIGN>.",
+        "5": "Uđite u kružni tok i izađite na <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "6": "Uđite u kružni tok i izađite na <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>. Nastavite <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "7": "Uđite u kružni tok i izađite prema <TOWARD_SIGN>.",
+        "8": "Unesite <STREET_NAMES>",
+        "9": "Uđite <STREET_NAMES> i idite na izlaz <ORDINAL_VALUE>.",
+        "10": "Uđite <STREET_NAMES> i idite na izlaz <ORDINAL_VALUE> na <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "11": "Uđite <STREET_NAMES> i idite na izlaz <ORDINAL_VALUE> na <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>. Nastavite <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "12": "Uđite <STREET_NAMES> i idite na izlaz <ORDINAL_VALUE> prema <TOWARD_SIGN>.",
+        "13": "Uđite <STREET_NAMES> i izađite na <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "14": "Uđite <STREET_NAMES> i izađite na <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>. Nastavite <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "15": "Uđite <STREET_NAMES> i idite na izlaz prema <TOWARD_SIGN>."
+      },
+      "ordinal_values": [
+        "1.",
+        "2.",
+        "3.",
+        "4.",
+        "5.",
+        "6.",
+        "7.",
+        "8.",
+        "9.",
+        "10."
+      ],
+      "empty_street_name_labels": [
+        "šetnica",
+        "biciklistička staza",
+        "staza za brdski biciklizam",
+        "pješački prijelaz",
+        "stepenice",
+        "Most",
+        "tunel"
+      ],
+      "example_phrases": {
+        "0": [
+          "Uđite u kružni tok."
+        ],
+        "1": [
+          "Uđite u kružni tok i izađite na 1. izlazu.",
+          "Uđite u kružni tok i izađite na 2. izlazu.",
+          "Uđite u kružni tok i izađite na 3. izlazu.",
+          "Uđite u kružni tok i izađite na 4. izlazu.",
+          "Uđite u kružni tok i izađite na 5. izlazu.",
+          "Uđite u kružni tok i izađite na 6. izlazu.",
+          "Uđite u kružni tok i izađite na 7. izlazu.",
+          "Uđite u kružni tok i izađite na 8. izlazu.",
+          "Uđite u kružni tok i izađite na 9. izlazu.",
+          "Uđite u kružni tok i izađite na 10. izlazu."
+        ],
+        "2": [
+          "Uđite u kružni tok i izađite na 3. izlazu prema Main Street."
+        ],
+        "3": [
+          "Uđite u kružni tok i izađite na 3. izlazu prema US 322/Main Street. Nastavite na US 322."
+        ],
+        "4": [
+          "Uđite u kružni tok i izađite na 3. izlazu prema Baltimore."
+        ],
+        "5": [
+          "Uđite u kružni tok i izađite na izlazu prema Main Street."
+        ],
+        "6": [
+          "Uđite u kružni tok i izađite na izlazu prema US 322/Main Street. Nastavite na US 322."
+        ],
+        "7": [
+          "Uđite u kružni tok i izađite prema Baltimore."
+        ],
+        "8": [
+          "Uđite u Dupont Circle."
+        ],
+        "9": [
+          "Uđite u Dupont Circle i izađite na 1. izlazu."
+        ],
+        "10": [
+          "Uđite u Dupont Circle i izađite na 3. izlazu prema Main Street."
+        ],
+        "11": [
+          "Uđite u Dupont Circle i izađite na 3. izlazu prema US 322/Main Street. Nastavite na US 322."
+        ],
+        "12": [
+          "Uđite u Dupont Circle i izađite prema Baltimore."
+        ],
+        "13": [
+          "Uđite u Dupont Circle i izađite na izlazu prema Main Street."
+        ],
+        "14": [
+          "Uđite u Dupont Circle i izađite na izlazu prema US 322/Main Street. Nastavite na US 322."
+        ],
+        "15": [
+          "Uđite u Dupont Circle i izađite prema Baltimore."
+        ]
+      }
+    },
+    "enter_roundabout_verbal": {
+      "phrases": {
+        "0": "Uđite u kružni tok.",
+        "1": "Uđite u kružni tok i izađite na izlaz <ORDINAL_VALUE>.",
+        "2": "Uđite u kružni tok i idite na izlaz <ORDINAL_VALUE> na <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "3": "Uđite u kružni tok i idite na izlaz <ORDINAL_VALUE> na <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>.",
+        "4": "Uđite u kružni tok i idite na izlaz <ORDINAL_VALUE> prema <TOWARD_SIGN>.",
+        "5": "Uđite u kružni tok i izađite na <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "6": "Uđite u kružni tok i izađite na <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>.",
+        "7": "Uđite u kružni tok i izađite prema <TOWARD_SIGN>.",
+        "8": "Unesite <STREET_NAMES>",
+        "9": "Uđite <STREET_NAMES> i idite na izlaz <ORDINAL_VALUE>.",
+        "10": "Uđite <STREET_NAMES> i idite na izlaz <ORDINAL_VALUE> na <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "11": "Uđite <STREET_NAMES> i idite na izlaz <ORDINAL_VALUE> na <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>.",
+        "12": "Uđite <STREET_NAMES> i idite na izlaz <ORDINAL_VALUE> prema <TOWARD_SIGN>.",
+        "13": "Uđite <STREET_NAMES> i izađite na <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "14": "Uđite <STREET_NAMES> i izađite na <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>.",
+        "15": "Uđite <STREET_NAMES> i idite na izlaz prema <TOWARD_SIGN>."
+      },
+      "ordinal_values": [
+        "1.",
+        "2.",
+        "3.",
+        "4.",
+        "5.",
+        "6.",
+        "7.",
+        "8.",
+        "9.",
+        "10."
+      ],
+      "empty_street_name_labels": [
+        "šetnica",
+        "biciklistička staza",
+        "staza za brdski biciklizam",
+        "pješački prijelaz",
+        "stepenice",
+        "Most",
+        "tunel"
+      ],
+      "example_phrases": {
+        "0": [
+          "Uđite u kružni tok."
+        ],
+        "1": [
+          "Uđite u kružni tok i izađite na 1. izlazu.",
+          "Uđite u kružni tok i izađite na 2. izlazu.",
+          "Uđite u kružni tok i izađite na 3. izlazu.",
+          "Uđite u kružni tok i izađite na 4. izlazu.",
+          "Uđite u kružni tok i izađite na 5. izlazu.",
+          "Uđite u kružni tok i izađite na 6. izlazu.",
+          "Uđite u kružni tok i izađite na 7. izlazu.",
+          "Uđite u kružni tok i izađite na 8. izlazu.",
+          "Uđite u kružni tok i izađite na 9. izlazu.",
+          "Uđite u kružni tok i izađite na 10. izlazu."
+        ],
+        "2": [
+          "Uđite u kružni tok i izađite na 3. izlazu prema Main Street."
+        ],
+        "3": [
+          "Uđite u kružni tok i izađite na 3. izlazu prema U.S. 3 22/Main Street."
+        ],
+        "4": [
+          "Uđite u kružni tok i izađite na 3. izlazu prema Baltimore."
+        ],
+        "5": [
+          "Uđite u kružni tok i izađite na izlazu prema Main Street."
+        ],
+        "6": [
+          "Uđite u kružni tok i izađite na izlazu prema U.S. 3 22/Main Street."
+        ],
+        "7": [
+          "Uđite u kružni tok i izađite prema Baltimore."
+        ],
+        "8": [
+          "Uđite u Dupont Circle."
+        ],
+        "9": [
+          "Uđite u Dupont Circle i izađite na 1. izlazu."
+        ],
+        "10": [
+          "Uđite u Dupont Circle i izađite na 3. izlazu prema Main Street."
+        ],
+        "11": [
+          "Uđite u Dupont Circle i izađite na 3. izlazu prema U.S. 3 22/Main Street."
+        ],
+        "12": [
+          "Uđite u Dupont Circle i izađite na 3. izlazu prema Baltimore."
+        ],
+        "13": [
+          "Uđite u Dupont Circle i izađite na izlazu prema Main Street."
+        ],
+        "14": [
+          "Uđite u Dupont Circle i izađite na izlazu prema U.S. 3 22/Main Street."
+        ],
+        "15": [
+          "Uđite u Dupont Circle i izađite prema Baltimore."
+        ]
+      }
+    },
+    "exit": {
+      "phrases": {
+        "0": "Idite na izlaz na <RELATIVE_DIRECTION>.",
+        "1": "Idite na izlaz <NUMBER_SIGN> na <RELATIVE_DIRECTION>.",
+        "2": "Idite na izlaz <BRANCH_SIGN> na <RELATIVE_DIRECTION>.",
+        "3": "Idite na izlaz <NUMBER_SIGN> na <RELATIVE_DIRECTION> na <BRANCH_SIGN>.",
+        "4": "Idite na izlaz na <RELATIVE_DIRECTION> prema <TOWARD_SIGN>.",
+        "5": "Idite na izlaz <NUMBER_SIGN> na <RELATIVE_DIRECTION> prema <TOWARD_SIGN>.",
+        "6": "Idite na izlaz <BRANCH_SIGN> na <RELATIVE_DIRECTION> prema <TOWARD_SIGN>.",
+        "7": "Idite na izlaz <NUMBER_SIGN> na <RELATIVE_DIRECTION> na <BRANCH_SIGN> prema <TOWARD_SIGN>.",
+        "8": "Idite na izlaz <NAME_SIGN> na <RELATIVE_DIRECTION>.",
+        "10": "Idite na izlaz <NAME_SIGN> na <RELATIVE_DIRECTION> na <BRANCH_SIGN>.",
+        "12": "Idite na izlaz <NAME_SIGN> na <RELATIVE_DIRECTION> prema <TOWARD_SIGN>.",
+        "14": "Idite na izlaz <NAME_SIGN> na <RELATIVE_DIRECTION> na <BRANCH_SIGN> prema <TOWARD_SIGN>.",
+        "15": "Idite na izlaz.",
+        "16": "Idite na izlaz <NUMBER_SIGN>.",
+        "17": "Idite na izlaz <BRANCH_SIGN>.",
+        "18": "Idite na izlaz <NUMBER_SIGN> na <BRANCH_SIGN>.",
+        "19": "Idite na izlaz prema <TOWARD_SIGN>.",
+        "20": "Idite na izlaz <NUMBER_SIGN> prema <TOWARD_SIGN>.",
+        "21": "Idite na izlaz <BRANCH_SIGN> prema <TOWARD_SIGN>.",
+        "22": "Idite na izlaz <NUMBER_SIGN> na <BRANCH_SIGN> prema <TOWARD_SIGN>.",
+        "23": "Idite na izlaz <NAME_SIGN>.",
+        "25": "Idite na izlaz <NAME_SIGN> na <BRANCH_SIGN>.",
+        "27": "Idite na izlaz <NAME_SIGN> prema <TOWARD_SIGN>.",
+        "29": "Idite na izlaz <NAME_SIGN> na <BRANCH_SIGN> prema <TOWARD_SIGN>."
+      },
+      "relative_directions": [
+        "lijevo",
+        "desno"
+      ],
+      "example_phrases": {
+        "0": [
+          "Uzmite izlaz s lijeva.",
+          "Uzmite izlaz s desna."
+        ],
+        "1": [
+          "Uzmite izlaz 67 B-A s desna."
+        ],
+        "2": [
+          "Uzmite izlaz za US 322 West s desna."
+        ],
+        "3": [
+          "Uzmite izlaz 67 B-A s desna prema US 322 West."
+        ],
+        "4": [
+          "Uzmite izlaz s desna prema Lewistown."
+        ],
+        "5": [
+          "Uzmite izlaz 67 B-A s desna prema Lewistown."
+        ],
+        "6": [
+          "Uzmite izlaz za US 322 West s desna prema Lewistown."
+        ],
+        "7": [
+          "Uzmite izlaz 67 B-A s desna prema US 322 West u smjeru Lewistown/State College."
+        ],
+        "8": [
+          "Uzmite izlaz za White Marsh Boulevard s lijeva."
+        ],
+        "10": [
+          "Uzmite izlaz za White Marsh Boulevard s lijeva prema MD 43 East."
+        ],
+        "12": [
+          "Uzmite izlaz za White Marsh Boulevard s lijeva u smjeru White Marsh."
+        ],
+        "14": [
+          "Uzmite izlaz za White Marsh Boulevard s lijeva prema MD 43 East u smjeru White Marsh."
+        ],
+        "15": [
+          "Uzmite izlaz."
+        ],
+        "16": [
+          "Uzmite izlaz 67 B-A."
+        ],
+        "17": [
+          "Uzmite izlaz za US 322 West."
+        ],
+        "18": [
+          "Uzmite izlaz 67 B-A prema US 322 West."
+        ],
+        "19": [
+          "Uzmite izlaz u smjeru Lewistown."
+        ],
+        "20": [
+          "Uzmite izlaz 67 B-A u smjeru Lewistown."
+        ],
+        "21": [
+          "Uzmite izlaz za US 322 West prema Lewistown."
+        ],
+        "22": [
+          "Uzmite izlaz 67 B-A prema US 322 West u smjeru Lewistown/State College."
+        ],
+        "23": [
+          "Uzmite izlaz za White Marsh Boulevard."
+        ],
+        "25": [
+          "Uzmite izlaz za White Marsh Boulevard prema MD 43 East."
+        ],
+        "27": [
+          "Uzmite izlaz za White Marsh Boulevard u smjeru White Marsh."
+        ],
+        "29": [
+          "Uzmite izlaz za White Marsh Boulevard prema MD 43 East u smjeru White Marsh."
+        ]
+      }
+    },
+    "exit_roundabout": {
+      "phrases": {
+        "0": "Izađite iz kružnog toka.",
+        "1": "Izađite iz kružnog toka na <STREET_NAMES>.",
+        "2": "Izađite iz kružnog toka na <BEGIN_STREET_NAMES>. Nastavite <STREET_NAMES>.",
+        "3": "Izađite iz kružnog toka prema <TOWARD_SIGN>."
+      },
+      "empty_street_name_labels": [
+        "šetnica",
+        "biciklistička staza",
+        "staza za brdski biciklizam",
+        "pješački prijelaz",
+        "stepenice",
+        "Most",
+        "tunel"
+      ],
+      "example_phrases": {
+        "0": [
+          "Izađite iz kružnog toka."
+        ],
+        "1": [
+          "Izađite iz kružnog toka prema Philadelphia Road/MD 7."
+        ],
+        "2": [
+          "Izađite iz kružnog toka prema Catoctin Mountain Highway/US 15. Nastavite na US 15."
+        ],
+        "3": [
+          "Izađite iz kružnog toka prema Baltimore."
+        ]
+      }
+    },
+    "exit_roundabout_verbal": {
+      "phrases": {
+        "0": "Izađite iz kružnog toka.",
+        "1": "Izađite iz kružnog toka na <STREET_NAMES>.",
+        "2": "Izađite iz kružnog toka na <BEGIN_STREET_NAMES>.",
+        "3": "Izađite iz kružnog toka prema <TOWARD_SIGN>."
+      },
+      "empty_street_name_labels": [
+        "šetnica",
+        "biciklistička staza",
+        "staza za brdski biciklizam",
+        "pješački prijelaz",
+        "stepenice",
+        "Most",
+        "tunel"
+      ],
+      "example_phrases": {
+        "0": [
+          "Izađite iz kružnog toka."
+        ],
+        "1": [
+          "Izađite iz kružnog toka na Philadelphia Road, Maryland 7."
+        ],
+        "2": [
+          "Izađite iz kružnog toka na Catoctin Mountain Highway, U.S. 15."
+        ],
+        "3": [
+          "Izađite iz kružnog toka prema Baltimore."
+        ]
+      }
+    },
+    "exit_verbal": {
+      "phrases": {
+        "0": "Izađite na <RELATIVE_DIRECTION>.",
+        "1": "Krenite na izlaz <NUMBER_SIGN> na <RELATIVE_DIRECTION>.",
+        "2": "Krenite na izlaz <BRANCH_SIGN> na <RELATIVE_DIRECTION>.",
+        "3": "Krenite na izlaz <NUMBER_SIGN> na <RELATIVE_DIRECTION> na <BRANCH_SIGN>.",
+        "4": "Izađite na <RELATIVE_DIRECTION> prema <TOWARD_SIGN>.",
+        "5": "Krenite na izlaz <NUMBER_SIGN> na <RELATIVE_DIRECTION> prema <TOWARD_SIGN>.",
+        "6": "Krenite na izlaz <BRANCH_SIGN> na <RELATIVE_DIRECTION> prema <TOWARD_SIGN>.",
+        "7": "Krenite na izlaz <NUMBER_SIGN> na <RELATIVE_DIRECTION> na <BRANCH_SIGN> prema <TOWARD_SIGN>.",
+        "8": "Krenite na izlaz <NAME_SIGN> na <RELATIVE_DIRECTION>.",
+        "10": "Krenite na izlaz <NAME_SIGN> na <RELATIVE_DIRECTION> na <BRANCH_SIGN>.",
+        "12": "Krenite na izlaz <NAME_SIGN> na <RELATIVE_DIRECTION> prema <TOWARD_SIGN>.",
+        "14": "Krenite na izlaz <NAME_SIGN> na <RELATIVE_DIRECTION> na <BRANCH_SIGN> prema <TOWARD_SIGN>.",
+        "15": "Krenite na izlaz.",
+        "16": "Krenite na izlaz <NUMBER_SIGN>.",
+        "17": "Krenite na izlaz <BRANCH_SIGN>.",
+        "18": "Krenite na izlaz <NUMBER_SIGN> na <BRANCH_SIGN>.",
+        "19": "Izađite prema <TOWARD_SIGN>.",
+        "20": "Krenite na izlaz <NUMBER_SIGN> prema <TOWARD_SIGN>.",
+        "21": "Krenite na izlaz <BRANCH_SIGN> prema <TOWARD_SIGN>.",
+        "22": "Krenite na izlaz <NUMBER_SIGN> na <BRANCH_SIGN> prema <TOWARD_SIGN>.",
+        "23": "Krenite na izlaz <NAME_SIGN>.",
+        "25": "Krenite na izlaz <NAME_SIGN> na <BRANCH_SIGN>.",
+        "27": "Krenite na izlaz <NAME_SIGN> prema <TOWARD_SIGN>.",
+        "29": "Krenite na izlaz <NAME_SIGN> na <BRANCH_SIGN> prema <TOWARD_SIGN>."
+      },
+      "relative_directions": [
+        "lijevo",
+        "desno"
+      ],
+      "example_phrases": {
+        "0": [
+          "Uzmite izlaz s lijeva.",
+          "Uzmite izlaz s desna."
+        ],
+        "1": [
+          "Uzmite izlaz 67 B-A s desna."
+        ],
+        "2": [
+          "Uzmite izlaz za U.S. 3 22 West s desna."
+        ],
+        "3": [
+          "Uzmite izlaz 67 B-A s desna na U.S. 3 22 West."
+        ],
+        "4": [
+          "Uzmite izlaz s desna prema Lewistown."
+        ],
+        "5": [
+          "Uzmite izlaz 67 B-A s desna prema Lewistown."
+        ],
+        "6": [
+          "Uzmite izlaz za U.S. 3 22 West s desna prema Lewistown."
+        ],
+        "7": [
+          "Uzmite izlaz 67 B-A s desna na U.S. 3 22 West prema Lewistown, State College."
+        ],
+        "8": [
+          "Uzmite izlaz za White Marsh Boulevard s lijeva."
+        ],
+        "10": [
+          "Uzmite izlaz za White Marsh Boulevard s lijeva na Maryland 43 East."
+        ],
+        "12": [
+          "Uzmite izlaz za White Marsh Boulevard s lijeva prema White Marsh."
+        ],
+        "14": [
+          "Uzmite izlaz za White Marsh Boulevard s lijeva na Maryland 43 East prema White Marsh."
+        ],
+        "15": [
+          "Uzmite izlaz."
+        ],
+        "16": [
+          "Uzmite izlaz 67 B-A."
+        ],
+        "17": [
+          "Uzmite izlaz za US 322 West."
+        ],
+        "18": [
+          "Uzmite izlaz 67 B-A na US 322 West."
+        ],
+        "19": [
+          "Uzmite izlaz prema Lewistown."
+        ],
+        "20": [
+          "Uzmite izlaz 67 B-A prema Lewistown."
+        ],
+        "21": [
+          "Uzmite izlaz za US 322 West prema Lewistown."
+        ],
+        "22": [
+          "Uzmite izlaz 67 B-A na US 322 West prema Lewistown/State College."
+        ],
+        "23": [
+          "Uzmite izlaz za White Marsh Boulevard."
+        ],
+        "25": [
+          "Uzmite izlaz za White Marsh Boulevard na MD 43 East."
+        ],
+        "27": [
+          "Uzmite izlaz za White Marsh Boulevard prema White Marsh."
+        ],
+        "29": [
+          "Uzmite izlaz za White Marsh Boulevard na MD 43 East prema White Marsh."
+        ]
+      }
+    },
+    "exit_visual": {
+      "phrases": {
+        "0": "Izlaz <EXIT_NUMBERS>"
+      },
+      "example_phrases": {
+        "0": [
+          "Izlaz 1A"
+        ]
+      }
+    },
+    "keep": {
+      "phrases": {
+        "0": "Držite se <RELATIVE_DIRECTION> na račvanju.",
+        "1": "Držite se <RELATIVE_DIRECTION> da izađete na izlaz <NUMBER_SIGN>.",
+        "2": "Držite se <RELATIVE_DIRECTION> da biste krenuli <STREET_NAMES>.",
+        "3": "Držite se <RELATIVE_DIRECTION> da izađete na izlaz <NUMBER_SIGN> na <STREET_NAMES>.",
+        "4": "Držite se <RELATIVE_DIRECTION> prema <TOWARD_SIGN>.",
+        "5": "Držite se <RELATIVE_DIRECTION> da izađete na izlaz <NUMBER_SIGN> prema <TOWARD_SIGN>.",
+        "6": "Držite se <RELATIVE_DIRECTION> da biste krenuli prema <STREET_NAMES> prema <TOWARD_SIGN>.",
+        "7": "Držite se <RELATIVE_DIRECTION> da izađete na izlaz <NUMBER_SIGN> na <STREET_NAMES> prema <TOWARD_SIGN>."
+      },
+      "empty_street_name_labels": [
+        "šetnica",
+        "biciklistička staza",
+        "staza za brdski biciklizam",
+        "pješački prijelaz",
+        "stepenice",
+        "Most",
+        "tunel"
+      ],
+      "relative_directions": [
+        "lijevo",
+        "ravno",
+        "desno"
+      ],
+      "example_phrases": {
+        "0": [
+          "Držite se lijevo na raskrižju.",
+          "Držite se ravno na raskrižju.",
+          "Držite se desno na raskrižju."
+        ],
+        "1": [
+          "Držite se desno da uzmete izlaz 62."
+        ],
+        "2": [
+          "Držite se desno da uzmete I 895 South."
+        ],
+        "3": [
+          "Držite se desno da uzmete izlaz 62 na I 895 South."
+        ],
+        "4": [
+          "Držite se desno prema Annapolis."
+        ],
+        "5": [
+          "Držite se desno da uzmete izlaz 62 prema Annapolis."
+        ],
+        "6": [
+          "Držite se desno da uzmete I 895 South prema Annapolis."
+        ],
+        "7": [
+          "Držite se desno da uzmete izlaz 62 na I 895 South prema Annapolis."
+        ]
+      }
+    },
+    "keep_to_stay_on": {
+      "phrases": {
+        "0": "Držite se <RELATIVE_DIRECTION> da biste ostali na <STREET_NAMES>.",
+        "1": "Držite se <RELATIVE_DIRECTION> da izađete na izlaz <NUMBER_SIGN> i ostanete na <STREET_NAMES>.",
+        "2": "Držite se <RELATIVE_DIRECTION> da biste ostali na <STREET_NAMES> prema <TOWARD_SIGN>.",
+        "3": "Držite se <RELATIVE_DIRECTION> da biste izašli na izlaz <NUMBER_SIGN> i ostali na <STREET_NAMES> prema <TOWARD_SIGN>."
+      },
+      "empty_street_name_labels": [
+        "šetnica",
+        "biciklistička staza",
+        "staza za brdski biciklizam",
+        "pješački prijelaz",
+        "stepenice",
+        "Most",
+        "tunel"
+      ],
+      "relative_directions": [
+        "lijevo",
+        "ravno",
+        "desno"
+      ],
+      "example_phrases": {
+        "0": [
+          "Držite se lijevo da ostanete na I 95 South.",
+          "Držite se ravno da ostanete na I 95 South.",
+          "Držite se desno da ostanete na I 95 South."
+        ],
+        "1": [
+          "Držite se lijevo da uzmete izlaz 62 da ostanete na I 95 South."
+        ],
+        "2": [
+          "Držite se lijevo da ostanete na I 95 South prema Baltimore."
+        ],
+        "3": [
+          "Držite se lijevo da uzmete izlaz 62 da ostanete na I 95 South prema Baltimore."
+        ]
+      }
+    },
+    "keep_to_stay_on_verbal": {
+      "phrases": {
+        "0": "Držite se <RELATIVE_DIRECTION> da biste ostali na <STREET_NAMES>.",
+        "1": "Držite se <RELATIVE_DIRECTION> da izađete na izlaz <NUMBER_SIGN> i ostanete na <STREET_NAMES>.",
+        "2": "Držite se <RELATIVE_DIRECTION> da biste ostali na <STREET_NAMES> prema <TOWARD_SIGN>.",
+        "3": "Držite se <RELATIVE_DIRECTION> da biste izašli na izlaz <NUMBER_SIGN> i ostali na <STREET_NAMES> prema <TOWARD_SIGN>."
+      },
+      "empty_street_name_labels": [
+        "šetnica",
+        "biciklistička staza",
+        "staza za brdski biciklizam",
+        "pješački prijelaz",
+        "stepenice",
+        "Most",
+        "tunel"
+      ],
+      "relative_directions": [
+        "lijevo",
+        "ravno",
+        "desno"
+      ],
+      "example_phrases": {
+        "0": [
+          "Držite se lijevo da ostanete na Interstate 95 South.",
+          "Držite se ravno da ostanete na Interstate 95 South.",
+          "Držite se desno da ostanete na Interstate 95 South."
+        ],
+        "1": [
+          "Držite se lijevo da uzmete izlaz 62 da ostanete na Interstate 95 South."
+        ],
+        "2": [
+          "Držite se lijevo da ostanete na I 95 South prema Baltimore."
+        ],
+        "3": [
+          "Držite se lijevo da uzmete izlaz 62 da ostanete na Interstate 95 South prema Baltimore."
+        ]
+      }
+    },
+    "keep_verbal": {
+      "phrases": {
+        "0": "Držite se <RELATIVE_DIRECTION> na raskrižju.",
+        "1": "Držite se <RELATIVE_DIRECTION> da uzmete izlaz <NUMBER_SIGN>.",
+        "2": "Držite se <RELATIVE_DIRECTION> da uzmete <STREET_NAMES>.",
+        "3": "Držite se <RELATIVE_DIRECTION> da uzmete izlaz <NUMBER_SIGN> na <STREET_NAMES>.",
+        "4": "Držite se <RELATIVE_DIRECTION> prema <TOWARD_SIGN>.",
+        "5": "Držite se <RELATIVE_DIRECTION> da uzmete izlaz <NUMBER_SIGN> prema <TOWARD_SIGN>.",
+        "6": "Držite se <RELATIVE_DIRECTION> da uzmete <STREET_NAMES> prema <TOWARD_SIGN>.",
+        "7": "Držite se <RELATIVE_DIRECTION> da uzmete izlaz <NUMBER_SIGN> na <STREET_NAMES> prema <TOWARD_SIGN>."
+      },
+      "empty_street_name_labels": [
+        "šetnica",
+        "biciklistička staza",
+        "staza za brdski biciklizam",
+        "pješački prijelaz",
+        "stepenice",
+        "Most",
+        "tunel"
+      ],
+      "relative_directions": [
+        "lijevo",
+        "ravno",
+        "desno"
+      ],
+      "example_phrases": {
+        "0": [
+          "Držite se lijevo na raskrižju.",
+          "Držite se ravno na raskrižju.",
+          "Držite se desno na raskrižju."
+        ],
+        "1": [
+          "Držite se desno da uzmete izlaz 62."
+        ],
+        "2": [
+          "Držite se desno da uzmete Interstate 8 95 South."
+        ],
+        "3": [
+          "Držite se desno da uzmete izlaz 62 na Interstate 8 95 South."
+        ],
+        "4": [
+          "Držite se desno prema Annapolis."
+        ],
+        "5": [
+          "Držite se desno da uzmete izlaz 62 prema Annapolis."
+        ],
+        "6": [
+          "Držite se desno da uzmete Interstate 8 95 South prema Annapolis."
+        ],
+        "7": [
+          "Držite se desno da uzmete izlaz 62 na Interstate 8 95 South prema Annapolis."
+        ]
+      }
+    },
+    "merge": {
+      "phrases": {
+        "0": "Spoji.",
+        "1": "Spoji <RELATIVE_DIRECTION>.",
+        "2": "Priključite se na <STREET_NAMES>.",
+        "3": "Spajanje <RELATIVE_DIRECTION> na <STREET_NAMES>.",
+        "4": "Spojite se prema <TOWARD_SIGN>.",
+        "5": "Spajanje <RELATIVE_DIRECTION> prema <TOWARD_SIGN>."
+      },
+      "relative_directions": [
+        "lijevo",
+        "desno"
+      ],
+      "empty_street_name_labels": [
+        "šetnica",
+        "biciklistička staza",
+        "staza za brdski biciklizam",
+        "pješački prijelaz",
+        "stepenice",
+        "Most",
+        "tunel"
+      ],
+      "example_phrases": {
+        "0": [
+          "Uključite se."
+        ],
+        "1": [
+          "Uključite se lijevo."
+        ],
+        "2": [
+          "Uključite se na I 76 West/Pennsylvania Turnpike."
+        ],
+        "3": [
+          "Uključite se desno na I 83 South."
+        ],
+        "4": [
+          "Uključite se prema Baltimore."
+        ],
+        "5": [
+          "Uključite se desno prema Baltimore."
+        ]
+      }
+    },
+    "merge_verbal": {
+      "phrases": {
+        "0": "Sjediniti.",
+        "1": "Spoji <RELATIVE_DIRECTION>.",
+        "2": "Uključite se na <STREET_NAMES>.",
+        "3": "Uključite se <RELATIVE_DIRECTION> u <STREET_NAMES>.",
+        "4": "Uključite se prema <TOWARD_SIGN>.",
+        "5": "Spojite <RELATIVE_DIRECTION> prema <TOWARD_SIGN>."
+      },
+      "relative_directions": [
+        "lijevo",
+        "desno"
+      ],
+      "empty_street_name_labels": [
+        "šetnica",
+        "biciklistička staza",
+        "staza za brdski biciklizam",
+        "pješački prijelaz",
+        "stepenice",
+        "Most",
+        "tunel"
+      ],
+      "example_phrases": {
+        "0": [
+          "Uključite se."
+        ],
+        "1": [
+          "Uključite se lijevo."
+        ],
+        "2": [
+          "Uključite se na I 76 West/Pennsylvania Turnpike."
+        ],
+        "3": [
+          "Uključite se desno na I 83 South."
+        ],
+        "4": [
+          "Uključite se prema Baltimore."
+        ],
+        "5": [
+          "Uključite se desno prema Baltimore."
+        ]
+      }
+    },
+    "post_transition_transit_verbal": {
+      "phrases": {
+        "0": "Putujte <TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>."
+      },
+      "transit_stop_count_labels": {
+        "one": "Stop",
+        "other": "zaustavlja"
+      },
+      "example_phrases": {
+        "0": [
+          "Putujte 1 stanica.",
+          "Putujte 3 stanice."
+        ]
+      }
+    },
+    "post_transition_verbal": {
+      "phrases": {
+        "0": "Nastavite <LENGTH>.",
+        "1": "Nastavite <STREET_NAMES> <LENGTH>."
+      },
+      "empty_street_name_labels": [
+        "šetnica",
+        "biciklistička staza",
+        "staza za brdski biciklizam",
+        "pješački prijelaz",
+        "stepenice",
+        "Most",
+        "tunel"
+      ],
+      "metric_lengths": [
+        "<KILOMETERS> kilometara",
+        "1 kilometar",
+        "<METERS> metara",
+        "manje od 10 metara"
+      ],
+      "us_customary_lengths": [
+        "<MILES> milja",
+        "1 milja",
+        "pola milje",
+        "četvrt milje",
+        "<FEET> stopa",
+        "manje od 10 stopa"
+      ],
+      "example_phrases": {
+        "0": [
+          "Nastavite 300 stopa.",
+          "Nastavite 9 milja."
+        ],
+        "1": [
+          "Nastavite na Pennsylvania 7 43 za 6.2 milje.",
+          "Nastavite na Main Street, Vermont 30 za 1 desetinu milje."
+        ]
+      }
+    },
+    "ramp": {
+      "phrases": {
+        "0": "Idite izlazom na <RELATIVE_DIRECTION>.",
+        "1": "Idite na <BRANCH_SIGN> rampu na <RELATIVE_DIRECTION>.",
+        "2": "Idite na izlaz na <RELATIVE_DIRECTION> prema <TOWARD_SIGN>.",
+        "3": "Krenite na <BRANCH_SIGN> rampu na <RELATIVE_DIRECTION> prema <TOWARD_SIGN>.",
+        "4": "Idite na rampu <NAME_SIGN> na <RELATIVE_DIRECTION>.",
+        "5": "Skrenite <RELATIVE_DIRECTION> da biste izašli na rampu.",
+        "6": "Skrenite <RELATIVE_DIRECTION> da biste izašli na <BRANCH_SIGN> rampu.",
+        "7": "Skrenite <RELATIVE_DIRECTION> da biste izašli na rampu prema <TOWARD_SIGN>.",
+        "8": "Skrenite <RELATIVE_DIRECTION> da biste izašli na <BRANCH_SIGN> rampu prema <TOWARD_SIGN>.",
+        "9": "Skrenite <RELATIVE_DIRECTION> da biste izašli na rampu <NAME_SIGN>.",
+        "10": "Idite na rampu.",
+        "11": "Idite na <BRANCH_SIGN> rampu.",
+        "12": "Idite izlazom prema <TOWARD_SIGN>.",
+        "13": "Idite <BRANCH_SIGN> izlazom prema <TOWARD_SIGN>.",
+        "14": "Idite na rampu <NAME_SIGN>."
+      },
+      "relative_directions": [
+        "lijevo",
+        "desno"
+      ],
+      "example_phrases": {
+        "0": [
+          "Uzmite rampu s lijeve strane.",
+          "Uzmite rampu s desne strane."
+        ],
+        "1": [
+          "Uzmite rampu I 95 s desne strane."
+        ],
+        "2": [
+          "Uzmite rampu s lijeve strane prema JFK."
+        ],
+        "3": [
+          "Uzmite rampu South Conduit Avenue s lijeve strane prema JFK."
+        ],
+        "4": [
+          "Uzmite rampu Gettysburg Pike s desne strane."
+        ],
+        "5": [
+          "Sklonite lijevo da uzmite rampu.",
+          "Sklonite desno da uzmite rampu."
+        ],
+        "6": [
+          "Sklonite lijevo da uzmite rampu PA 283 West."
+        ],
+        "7": [
+          "Sklonite lijevo da uzmite rampu prema Harrisburg/Harrisburg International Airport."
+        ],
+        "8": [
+          "Sklonite lijevo da uzmite rampu PA 283 West prema Harrisburg/Harrisburg International Airport."
+        ],
+        "9": [
+          "Sklonite desno da uzmite rampu Gettysburg Pike."
+        ],
+        "10": [
+          "Uzmite rampu."
+        ],
+        "11": [
+          "Uzmite rampu I 95."
+        ],
+        "12": [
+          "Uzmite rampu prema JFK."
+        ],
+        "13": [
+          "Uzmite rampu South Conduit Avenue prema JFK."
+        ],
+        "14": [
+          "Uzmite rampu Gettysburg."
+        ]
+      }
+    },
+    "ramp_straight": {
+      "phrases": {
+        "0": "Ostanite ravno kako biste prešli na rampu.",
+        "1": "Ostanite ravno kako biste krenuli na rampu <BRANCH_SIGN>.",
+        "2": "Ostanite ravno kako biste izašli na rampu prema <TOWARD_SIGN>.",
+        "3": "Ostanite ravno kako biste izašli na <BRANCH_SIGN> rampu prema <TOWARD_SIGN>.",
+        "4": "Ostanite ravno kako biste otišli na rampu <NAME_SIGN>."
+      },
+      "example_phrases": {
+        "0": [
+          "Idite ravno da uzmite rampu."
+        ],
+        "1": [
+          "Idite ravno da uzmite rampu US 322 East."
+        ],
+        "2": [
+          "Idite ravno da uzmite rampu prema Hershey."
+        ],
+        "3": [
+          "Idite ravno da uzmite rampu US 322 East/US 422 East/US 522 East/US 622 East prema Hershey/Palmdale/Palmyra/Campbelltown."
+        ],
+        "4": [
+          "Idite ravno da uzmite rampu Gettysburg Pike."
+        ]
+      }
+    },
+    "ramp_straight_verbal": {
+      "phrases": {
+        "0": "Ostanite ravno kako biste prešli na rampu.",
+        "1": "Ostanite ravno kako biste krenuli na rampu <BRANCH_SIGN>.",
+        "2": "Ostanite ravno kako biste izašli na rampu prema <TOWARD_SIGN>.",
+        "3": "Ostanite ravno kako biste izašli na <BRANCH_SIGN> rampu prema <TOWARD_SIGN>.",
+        "4": "Ostanite ravno kako biste otišli na rampu <NAME_SIGN>."
+      },
+      "example_phrases": {
+        "0": [
+          "Idite ravno da uzmite rampu."
+        ],
+        "1": [
+          "Idite ravno da uzmite rampu U.S. 3 22 East."
+        ],
+        "2": [
+          "Idite ravno da uzmite rampu prema Hershey."
+        ],
+        "3": [
+          "Idite ravno da uzmite rampu U.S. 3 22 East, U.S. 4 22 East prema Hershey, Palmdale."
+        ],
+        "4": [
+          "Idite ravno da uzmite rampu Gettysburg Pike."
+        ]
+      }
+    },
+    "ramp_verbal": {
+      "phrases": {
+        "0": "Idite na rampu na <RELATIVE_DIRECTION>.",
+        "1": "Idite na <BRANCH_SIGN> rampu na <RELATIVE_DIRECTION>.",
+        "2": "Idite na rampu na <RELATIVE_DIRECTION> prema <TOWARD_SIGN>.",
+        "3": "Idite na rampu <BRANCH_SIGN> na <RELATIVE_DIRECTION> prema <TOWARD_SIGN>.",
+        "4": "Idite na rampu <NAME_SIGN> na <RELATIVE_DIRECTION>.",
+        "5": "Skrenite <RELATIVE_DIRECTION> da biste izašli na rampu.",
+        "6": "Skrenite <RELATIVE_DIRECTION> da biste izašli na <BRANCH_SIGN> rampu.",
+        "7": "Skrenite <RELATIVE_DIRECTION> da biste izašli na rampu prema <TOWARD_SIGN>.",
+        "8": "Skrenite <RELATIVE_DIRECTION> kako biste krenuli na <BRANCH_SIGN> rampu prema <TOWARD_SIGN>.",
+        "9": "Skrenite <RELATIVE_DIRECTION> da biste otišli na rampu <NAME_SIGN>.",
+        "10": "Idite rampom.",
+        "11": "Idite na rampu <BRANCH_SIGN>.",
+        "12": "Idite na rampu prema <TOWARD_SIGN>.",
+        "13": "Idite na <BRANCH_SIGN> rampu prema <TOWARD_SIGN>.",
+        "14": "Idite na rampu <NAME_SIGN>."
+      },
+      "relative_directions": [
+        "lijevo",
+        "desno"
+      ],
+      "example_phrases": {
+        "0": [
+          "Uzmite rampu s lijeve strane.",
+          "Uzmite rampu s desne strane."
+        ],
+        "1": [
+          "Uzmite rampu Interstate 95 s desne strane."
+        ],
+        "2": [
+          "Uzmite rampu s lijeve strane prema JFK."
+        ],
+        "3": [
+          "Uzmite rampu South Conduit Avenue s lijeve strane prema JFK."
+        ],
+        "4": [
+          "Uzmite rampu Gettysburg Pike s desne strane."
+        ],
+        "5": [
+          "Sklonite lijevo da uzmite rampu.",
+          "Sklonite desno da uzmite rampu."
+        ],
+        "6": [
+          "Sklonite lijevo da uzmite rampu Pennsylvania 2 83 West."
+        ],
+        "7": [
+          "Sklonite lijevo da uzmite rampu prema Harrisburg/Harrisburg International Airport."
+        ],
+        "8": [
+          "Sklonite lijevo da uzmite rampu Pennsylvania 2 83 West prema Harrisburg, Harrisburg International Airport."
+        ],
+        "9": [
+          "Sklonite desno da uzmite rampu Gettysburg Pike."
+        ],
+        "10": [
+          "Uzmite rampu."
+        ],
+        "11": [
+          "Uzmite rampu Interstate 95."
+        ],
+        "12": [
+          "Uzmite rampu prema JFK."
+        ],
+        "13": [
+          "Uzmite rampu South Conduit Avenue prema JFK."
+        ],
+        "14": [
+          "Uzmite rampu Gettysburg Pike."
+        ]
+      }
+    },
+    "sharp": {
+      "phrases": {
+        "0": "Napravite oštar <RELATIVE_DIRECTION>.",
+        "1": "Skrenite oštro <RELATIVE_DIRECTION> na <STREET_NAMES>.",
+        "2": "Skrenite oštro <RELATIVE_DIRECTION> na <BEGIN_STREET_NAMES>. Nastavite <STREET_NAMES>.",
+        "3": "Skrenite oštro <RELATIVE_DIRECTION> da ostanete na <STREET_NAMES>.",
+        "4": "Skrenite oštro <RELATIVE_DIRECTION> kod <JUNCTION_NAME>.",
+        "5": "Skrenite oštro <RELATIVE_DIRECTION> prema <TOWARD_SIGN>."
+      },
+      "empty_street_name_labels": [
+        "šetnica",
+        "biciklistička staza",
+        "staza za brdski biciklizam",
+        "pješački prijelaz",
+        "stepenice",
+        "Most",
+        "tunel"
+      ],
+      "relative_directions": [
+        "lijevo",
+        "desno"
+      ],
+      "example_phrases": {
+        "0": [
+          "Napravite oštar skretanje ulijevo."
+        ],
+        "1": [
+          "Napravite oštar skretanje udesno na Flatbush Avenue."
+        ],
+        "2": [
+          "Napravite oštar skretanje ulijevo na North Bond Street/US 1 Business/MD 924. Nastavite na MD 924."
+        ],
+        "3": [
+          "Napravite oštar skretanje udesno kako biste ostali na Sunstone Drive."
+        ],
+        "4": [
+          "Napravite oštar skretanje udesno kod Mannenbashi East."
+        ],
+        "5": [
+          "Napravite oštar skretanje ulijevo prema Baltimoreu."
+        ]
+      }
+    },
+    "sharp_verbal": {
+      "phrases": {
+        "0": "Napravite oštar <RELATIVE_DIRECTION>.",
+        "1": "Skrenite oštro <RELATIVE_DIRECTION> na <STREET_NAMES>.",
+        "2": "Skrenite oštro <RELATIVE_DIRECTION> na <BEGIN_STREET_NAMES>.",
+        "3": "Skrenite oštro <RELATIVE_DIRECTION> da ostanete na <STREET_NAMES>.",
+        "4": "Skrenite oštro <RELATIVE_DIRECTION> kod <JUNCTION_NAME>.",
+        "5": "Skrenite oštro <RELATIVE_DIRECTION> prema <TOWARD_SIGN>."
+      },
+      "empty_street_name_labels": [
+        "šetnica",
+        "biciklistička staza",
+        "staza za brdski biciklizam",
+        "pješački prijelaz",
+        "stepenice",
+        "Most",
+        "tunel"
+      ],
+      "relative_directions": [
+        "lijevo",
+        "desno"
+      ],
+      "example_phrases": {
+        "0": [
+          "Napravite oštar skretanje ulijevo."
+        ],
+        "1": [
+          "Napravite oštar skretanje udesno na Flatbush Avenue."
+        ],
+        "2": [
+          "Napravite oštar skretanje ulijevo na North Bond Street, U.S. 1 Business."
+        ],
+        "3": [
+          "Napravite oštar skretanje udesno kako biste ostali na Sunstone Drive."
+        ],
+        "4": [
+          "Napravite oštar skretanje udesno kod Mannenbashi East."
+        ],
+        "5": [
+          "Napravite oštar skretanje ulijevo prema Baltimoreu."
+        ]
+      }
+    },
+    "start": {
+      "phrases": {
+        "0": "Krenite <CARDINAL_DIRECTION>.",
+        "1": "Krenite <CARDINAL_DIRECTION> <STREET_NAMES>.",
+        "2": "Krenite <CARDINAL_DIRECTION> <BEGIN_STREET_NAMES>. Nastavite <STREET_NAMES>.",
+        "4": "Vozite <CARDINAL_DIRECTION>.",
+        "5": "Vozite <CARDINAL_DIRECTION> <STREET_NAMES>.",
+        "6": "Vozite <CARDINAL_DIRECTION> <BEGIN_STREET_NAMES>. Nastavite <STREET_NAMES>.",
+        "8": "Hodajte <CARDINAL_DIRECTION>.",
+        "9": "Hodajte <CARDINAL_DIRECTION> <STREET_NAMES>.",
+        "10": "Hodajte <CARDINAL_DIRECTION> <BEGIN_STREET_NAMES>. Nastavite <STREET_NAMES>.",
+        "16": "Biciklirajte <CARDINAL_DIRECTION>.",
+        "17": "Vozite bicikl <CARDINAL_DIRECTION> <STREET_NAMES>.",
+        "18": "Vozite bicikl <CARDINAL_DIRECTION> <BEGIN_STREET_NAMES>. Nastavite <STREET_NAMES>."
+      },
+      "cardinal_directions": [
+        "sjever",
+        "sjeveroistok",
+        "istok",
+        "jugoistok",
+        "jug",
+        "jugozapadno",
+        "Zapad",
+        "sjeverozapad"
+      ],
+      "empty_street_name_labels": [
+        "šetnica",
+        "biciklistička staza",
+        "staza za brdski biciklizam",
+        "pješački prijelaz",
+        "stepenice",
+        "Most",
+        "tunel"
+      ],
+      "example_phrases": {
+        "0": [
+          "Krenite prema istoku.",
+          "Krenite prema sjeveru."
+        ],
+        "1": [
+          "Krenite jugozapadno na 5th Avenue.",
+          "Krenite prema zapadu na pješačkoj stazi",
+          "Krenite prema istoku na biciklističkoj stazi",
+          "Krenite prema sjeveru na stazi za brdski biciklizam"
+        ],
+        "2": [
+          "Krenite jugom na North Prince Street/US 222/PA 272. Nastavite na US 222/PA 272."
+        ],
+        "4": [
+          "Vozite prema istoku.",
+          "Vozite prema sjeveru."
+        ],
+        "5": [
+          "Vozite jugozapadno na 5th Avenue."
+        ],
+        "6": [
+          "Vozite jugom na North Prince Street/US 222/PA 272. Nastavite na US 222/PA 272."
+        ],
+        "8": [
+          "Idite prema istoku.",
+          "Idite prema sjeveru."
+        ],
+        "9": [
+          "Idite jugozapadno na 5th Avenue.",
+          "Idite prema zapadu na pješačkoj stazi"
+        ],
+        "10": [
+          "Idite jugom na North Prince Street/US 222/PA 272. Nastavite na US 222/PA 272."
+        ],
+        "16": [
+          "Vozite biciklom prema istoku.",
+          "Vozite biciklom prema sjeveru."
+        ],
+        "17": [
+          "Vozite biciklom jugozapadno na 5th Avenue.",
+          "Vozite biciklom prema istoku na biciklističkoj stazi",
+          "Vozite biciklom prema sjeveru na stazi za brdski biciklizam"
+        ],
+        "18": [
+          "Vozite biciklom jugom na North Prince Street/US 222/PA 272. Nastavite na US 222/PA 272."
+        ]
+      }
+    },
+    "start_verbal": {
+      "phrases": {
+        "0": "Krenite <CARDINAL_DIRECTION>.",
+        "1": "Krenite <CARDINAL_DIRECTION> za <LENGTH>.",
+        "2": "Krenite <CARDINAL_DIRECTION> <STREET_NAMES>.",
+        "3": "Krenite <CARDINAL_DIRECTION> <STREET_NAMES> <LENGTH>.",
+        "4": "Krenite <CARDINAL_DIRECTION> <BEGIN_STREET_NAMES>.",
+        "5": "Vozite <CARDINAL_DIRECTION>.",
+        "6": "Vozite <CARDINAL_DIRECTION> <LENGTH>.",
+        "7": "Vozite <CARDINAL_DIRECTION> <STREET_NAMES>.",
+        "8": "Vozite <CARDINAL_DIRECTION> <STREET_NAMES> <LENGTH>.",
+        "9": "Vozite <CARDINAL_DIRECTION> <BEGIN_STREET_NAMES>.",
+        "10": "Hodajte <CARDINAL_DIRECTION>.",
+        "11": "Hodajte <CARDINAL_DIRECTION> <LENGTH>.",
+        "12": "Hodajte <CARDINAL_DIRECTION> <STREET_NAMES>.",
+        "13": "Hodajte <CARDINAL_DIRECTION> <STREET_NAMES> <LENGTH>.",
+        "14": "Hodajte <CARDINAL_DIRECTION> <BEGIN_STREET_NAMES>.",
+        "15": "Biciklirajte <CARDINAL_DIRECTION>.",
+        "16": "Biciklirajte <CARDINAL_DIRECTION> <LENGTH>.",
+        "17": "Vozite bicikl <CARDINAL_DIRECTION> <STREET_NAMES>.",
+        "18": "Vozite bicikl <CARDINAL_DIRECTION> <STREET_NAMES> <LENGTH>.",
+        "19": "Vozite bicikl <CARDINAL_DIRECTION> <BEGIN_STREET_NAMES>."
+      },
+      "cardinal_directions": [
+        "sjeverno",
+        "sjeveroistočno",
+        "istočno",
+        "jugoistok",
+        "jug",
+        "jugozapadno",
+        "Zapad",
+        "sjeverozapad"
+      ],
+      "empty_street_name_labels": [
+        "šetnica",
+        "biciklistička staza",
+        "staza za brdski biciklizam",
+        "pješački prijelaz",
+        "stepenice",
+        "Most",
+        "tunel"
+      ],
+      "metric_lengths": [
+        "<KILOMETERS> kilometara",
+        "1 kilometar",
+        "<METERS> metara",
+        "manje od 10 metara"
+      ],
+      "us_customary_lengths": [
+        "<MILES> milja",
+        "1 milja",
+        "pola milje",
+        "četvrt milje",
+        "<FEET> stopa",
+        "manje od 10 stopa"
+      ],
+      "example_phrases": {
+        "0": [
+          "Krenite prema istoku.",
+          "Krenite prema sjeveru."
+        ],
+        "1": [
+          "Krenite prema istoku za pola milje.",
+          "Krenite prema sjeveru za 1 kilometar."
+        ],
+        "2": [
+          "Krenite jugozapadno na 5th Avenue."
+        ],
+        "3": [
+          "Krenite jugozapadno na 5th Avenue za desetinu milje."
+        ],
+        "4": [
+          "Krenite jugom na North Prince Street, U.S. 2 22."
+        ],
+        "5": [
+          "Vozite prema istoku.",
+          "Vozite prema sjeveru."
+        ],
+        "6": [
+          "Vozite prema istoku za pola milje.",
+          "Vozite prema sjeveru za 1 kilometar."
+        ],
+        "7": [
+          "Vozite jugozapadno na 5th Avenue."
+        ],
+        "8": [
+          "Vozite jugozapadno na 5th Avenue za desetinu milje."
+        ],
+        "9": [
+          "Vozite jugom na North Prince Street, U.S. 2 22."
+        ],
+        "10": [
+          "Idite prema istoku.",
+          "Idite prema sjeveru."
+        ],
+        "11": [
+          "Idite prema istoku za pola milje.",
+          "Idite prema sjeveru za 1 kilometar."
+        ],
+        "12": [
+          "Idite jugozapadno na 5th Avenue."
+        ],
+        "13": [
+          "Idite jugozapadno na 5th Avenue za desetinu milje."
+        ],
+        "14": [
+          "Idite jugom na North Prince Street, U.S. 2 22."
+        ],
+        "15": [
+          "Vozite biciklom prema istoku.",
+          "Vozite biciklom prema sjeveru."
+        ],
+        "16": [
+          "Vozite bicikl na istok pola milje.",
+          "Vozite bicikl prema sjeveru 1 kilometar."
+        ],
+        "17": [
+          "Biciklirajte jugozapadno 5. avenijom."
+        ],
+        "18": [
+          "Vozite bicikl jugozapadno 5. avenijom 1 desetinu milje."
+        ],
+        "19": [
+          "Vozite bicikl južno ulicom North Prince Street, U.S. 2 22."
+        ]
+      }
+    },
+    "transit": {
+      "phrases": {
+        "0": "Idite <TRANSIT_NAME>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)",
+        "1": "Idite <TRANSIT_NAME> prema <TRANSIT_HEADSIGN>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)"
+      },
+      "empty_transit_name_labels": [
+        "tramvaj",
+        "metro",
+        "vlak",
+        "autobus",
+        "trajekt",
+        "žičara",
+        "gondola",
+        "uspinjača"
+      ],
+      "transit_stop_count_labels": {
+        "one": "Stop",
+        "other": "zaustavlja"
+      },
+      "example_phrases": {
+        "0": [
+          "Uzmite New Haven. (1 stanica)",
+          "Uzmite metro. (2 stanice)",
+          "Uzmite autobus. (12 stanica)"
+        ],
+        "1": [
+          "Uzmite F prema JAMAICA - 179 ST. (10 stanica)",
+          "Uzmite trajekt prema Staten Island. (1 stanica)"
+        ]
+      }
+    },
+    "transit_connection_destination": {
+      "phrases": {
+        "0": "Izađite iz stanice.",
+        "1": "Izađite na <TRANSIT_STOP>.",
+        "2": "Izađite na <TRANSIT_STOP> <STATION_LABEL>."
+      },
+      "station_label": "Stanica",
+      "example_phrases": {
+        "0": [
+          "Izađite iz stanice."
+        ],
+        "1": [
+          "Izađite na Embarcadero Stanici."
+        ],
+        "2": [
+          "Izađite na 8 St - NYU Stanici."
+        ]
+      }
+    },
+    "transit_connection_destination_verbal": {
+      "phrases": {
+        "0": "Izađite iz stanice.",
+        "1": "Izađite na <TRANSIT_STOP>.",
+        "2": "Izađite na <TRANSIT_STOP> <STATION_LABEL>."
+      },
+      "station_label": "Stanica",
+      "example_phrases": {
+        "0": [
+          "Izađite iz stanice."
+        ],
+        "1": [
+          "Izađite iz Stanice Embarcadero."
+        ],
+        "2": [
+          "Izađite iz Stanice 8 St - NYU."
+        ]
+      }
+    },
+    "transit_connection_start": {
+      "phrases": {
+        "0": "Uđite u stanicu.",
+        "1": "Unesite <TRANSIT_STOP>.",
+        "2": "Unesite <TRANSIT_STOP> <STATION_LABEL>."
+      },
+      "station_label": "Stanica",
+      "example_phrases": {
+        "0": [
+          "Unesite stanicu."
+        ],
+        "1": [
+          "Unesite stanicu Embarcadero."
+        ],
+        "2": [
+          "Unesite stanicu 8 St - NYU."
+        ]
+      }
+    },
+    "transit_connection_start_verbal": {
+      "phrases": {
+        "0": "Uđite u stanicu.",
+        "1": "Unesite <TRANSIT_STOP>.",
+        "2": "Unesite <TRANSIT_STOP> <STATION_LABEL>."
+      },
+      "station_label": "Stanica",
+      "example_phrases": {
+        "0": [
+          "Unesite stanicu."
+        ],
+        "1": [
+          "Unesite stanicu Embarcadero."
+        ],
+        "2": [
+          "Unesite stanicu 8 St - NYU."
+        ]
+      }
+    },
+    "transit_connection_transfer": {
+      "phrases": {
+        "0": "Transfer na stanici.",
+        "1": "Presjedanje na <TRANSIT_STOP>.",
+        "2": "Presjednite na <TRANSIT_STOP> <STATION_LABEL>."
+      },
+      "station_label": "Stanica",
+      "example_phrases": {
+        "0": [
+          "Prijenos na stanici."
+        ],
+        "1": [
+          "Prijenos na stanicu Embarcadero."
+        ],
+        "2": [
+          "Prijenos na stanicu 8 St - NYU."
+        ]
+      }
+    },
+    "transit_connection_transfer_verbal": {
+      "phrases": {
+        "0": "Transfer na stanici.",
+        "1": "Presjedanje na <TRANSIT_STOP>.",
+        "2": "Presjednite na <TRANSIT_STOP> <STATION_LABEL>."
+      },
+      "station_label": "Stanica",
+      "example_phrases": {
+        "0": [
+          "Prijenos na stanici."
+        ],
+        "1": [
+          "Prijenos na stanicu Embarcadero."
+        ],
+        "2": [
+          "Prijenos na stanicu 8 St - NYU."
+        ]
+      }
+    },
+    "transit_remain_on": {
+      "phrases": {
+        "0": "Ostanite na <TRANSIT_NAME>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)",
+        "1": "Ostanite na <TRANSIT_NAME> prema <TRANSIT_HEADSIGN>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)"
+      },
+      "empty_transit_name_labels": [
+        "tramvaj",
+        "metro",
+        "vlak",
+        "autobus",
+        "trajekt",
+        "žičara",
+        "gondola",
+        "uspinjača"
+      ],
+      "transit_stop_count_labels": {
+        "one": "Stop",
+        "other": "zaustavlja"
+      },
+      "example_phrases": {
+        "0": [
+          "Ostanite na New Haven. (1 stanica)",
+          "Ostanite na vlaku. (3 stanice)"
+        ],
+        "1": [
+          "Ostanite na F prema JAMAICA - 179 ST. (10 stanica)"
+        ]
+      }
+    },
+    "transit_remain_on_verbal": {
+      "phrases": {
+        "0": "Ostanite na <TRANSIT_NAME>.",
+        "1": "Ostanite na <TRANSIT_NAME> prema <TRANSIT_HEADSIGN>."
+      },
+      "empty_transit_name_labels": [
+        "tramvaj",
+        "metro",
+        "vlak",
+        "autobus",
+        "trajekt",
+        "žičara",
+        "gondola",
+        "uspinjača"
+      ],
+      "example_phrases": {
+        "0": [
+          "Ostanite na New Haven."
+        ],
+        "1": [
+          "Ostanite na F prema JAMAICA - 179 ST."
+        ]
+      }
+    },
+    "transit_transfer": {
+      "phrases": {
+        "0": "Prijeđite na <TRANSIT_NAME>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)",
+        "1": "Presjednite na <TRANSIT_NAME> prema <TRANSIT_HEADSIGN>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)"
+      },
+      "empty_transit_name_labels": [
+        "tramvaj",
+        "metro",
+        "vlak",
+        "autobus",
+        "trajekt",
+        "žičara",
+        "gondola",
+        "uspinjača"
+      ],
+      "transit_stop_count_labels": {
+        "one": "Stop",
+        "other": "zaustavlja"
+      },
+      "example_phrases": {
+        "0": [
+          "Prijenos za vožnju New Haven. (1 stanica)",
+          "Prijenos za vožnju tramvajem. (4 stanice)"
+        ],
+        "1": [
+          "Prijenos za vožnju F prema JAMAICA - 179 ST. (10 stanica)"
+        ]
+      }
+    },
+    "transit_transfer_verbal": {
+      "phrases": {
+        "0": "Prijeđite na <TRANSIT_NAME>.",
+        "1": "Presjednite na <TRANSIT_NAME> prema <TRANSIT_HEADSIGN>."
+      },
+      "empty_transit_name_labels": [
+        "tramvaj",
+        "metro",
+        "vlak",
+        "autobus",
+        "trajekt",
+        "žičara",
+        "gondola",
+        "uspinjača"
+      ],
+      "example_phrases": {
+        "0": [
+          "Prijenos za vožnju New Haven."
+        ],
+        "1": [
+          "Prijenos za vožnju F prema JAMAICA - 179 ST."
+        ]
+      }
+    },
+    "transit_verbal": {
+      "phrases": {
+        "0": "Idite <TRANSIT_NAME>.",
+        "1": "Idite <TRANSIT_NAME> prema <TRANSIT_HEADSIGN>."
+      },
+      "empty_transit_name_labels": [
+        "tramvaj",
+        "metro",
+        "vlak",
+        "autobus",
+        "trajekt",
+        "žičara",
+        "gondola",
+        "uspinjača"
+      ],
+      "example_phrases": {
+        "0": [
+          "Uzmite New Haven."
+        ],
+        "1": [
+          "Uzmite F prema JAMAICA - 179 ST."
+        ]
+      }
+    },
+    "turn": {
+      "phrases": {
+        "0": "Skrenite <RELATIVE_DIRECTION>.",
+        "1": "Skrenite <RELATIVE_DIRECTION> na <STREET_NAMES>.",
+        "2": "Skrenite <RELATIVE_DIRECTION> na <BEGIN_STREET_NAMES>. Nastavite <STREET_NAMES>.",
+        "3": "Skrenite <RELATIVE_DIRECTION> da ostanete na <STREET_NAMES>.",
+        "4": "Skrenite <RELATIVE_DIRECTION> kod <JUNCTION_NAME>.",
+        "5": "Skrenite <RELATIVE_DIRECTION> prema <TOWARD_SIGN>."
+      },
+      "empty_street_name_labels": [
+        "šetnica",
+        "biciklistička staza",
+        "staza za brdski biciklizam",
+        "pješački prijelaz",
+        "stepenice",
+        "Most",
+        "tunel"
+      ],
+      "relative_directions": [
+        "lijevo",
+        "desno"
+      ],
+      "example_phrases": {
+        "0": [
+          "Skrenite lijevo."
+        ],
+        "1": [
+          "Skrenite desno na Flatbush Avenue."
+        ],
+        "2": [
+          "Skrenite lijevo na North Bond Street/US 1 Business/MD 924. Nastavite na MD 924."
+        ],
+        "3": [
+          "Skrenite desno kako biste ostali na Sunstone Drive."
+        ],
+        "4": [
+          "Skrenite desno na Mannenbashi East."
+        ],
+        "5": [
+          "Skrenite lijevo prema Baltimoreu."
+        ]
+      }
+    },
+    "turn_verbal": {
+      "phrases": {
+        "0": "Skrenite <RELATIVE_DIRECTION>.",
+        "1": "Skrenite <RELATIVE_DIRECTION> na <STREET_NAMES>.",
+        "2": "Skrenite <RELATIVE_DIRECTION> na <BEGIN_STREET_NAMES>.",
+        "3": "Skrenite <RELATIVE_DIRECTION> da ostanete na <STREET_NAMES>.",
+        "4": "Skrenite <RELATIVE_DIRECTION> kod <JUNCTION_NAME>.",
+        "5": "Skrenite <RELATIVE_DIRECTION> prema <TOWARD_SIGN>."
+      },
+      "empty_street_name_labels": [
+        "šetnica",
+        "biciklistička staza",
+        "staza za brdski biciklizam",
+        "pješački prijelaz",
+        "stepenice",
+        "Most",
+        "tunel"
+      ],
+      "relative_directions": [
+        "lijevo",
+        "desno"
+      ],
+      "example_phrases": {
+        "0": [
+          "Skrenite lijevo."
+        ],
+        "1": [
+          "Skrenite desno na Flatbush Avenue."
+        ],
+        "2": [
+          "Skrenite lijevo na North Bond Street, U.S. 1 Business."
+        ],
+        "3": [
+          "Skrenite desno kako biste ostali na Sunstone Drive."
+        ],
+        "4": [
+          "Skrenite desno na Mannenbashi East."
+        ],
+        "5": [
+          "Skrenite lijevo prema Baltimoreu."
+        ]
+      }
+    },
+    "uturn": {
+      "phrases": {
+        "0": "Napravite <RELATIVE_DIRECTION> polukružno skretanje.",
+        "1": "Napravite <RELATIVE_DIRECTION> polukružno na <STREET_NAMES>.",
+        "2": "Napravite <RELATIVE_DIRECTION> polukružno da biste ostali na <STREET_NAMES>.",
+        "3": "Napravite <RELATIVE_DIRECTION> polukružno na <CROSS_STREET_NAMES>.",
+        "4": "Napravite <RELATIVE_DIRECTION> polukružno na <CROSS_STREET_NAMES> na <STREET_NAMES>.",
+        "5": "Napravite <RELATIVE_DIRECTION> polukružno na <CROSS_STREET_NAMES> da biste ostali na <STREET_NAMES>.",
+        "6": "Napravite <RELATIVE_DIRECTION> polukružno na <JUNCTION_NAME>.",
+        "7": "Napravite <RELATIVE_DIRECTION> polukružno prema <TOWARD_SIGN>."
+      },
+      "empty_street_name_labels": [
+        "šetnica",
+        "biciklistička staza",
+        "staza za brdski biciklizam",
+        "pješački prijelaz",
+        "stepenice",
+        "Most",
+        "tunel"
+      ],
+      "relative_directions": [
+        "lijevo",
+        "desno"
+      ],
+      "example_phrases": {
+        "0": [
+          "Napravite lijevi U-obrat."
+        ],
+        "1": [
+          "Napravite desni U-obrat na Bunker Hill Road."
+        ],
+        "2": [
+          "Napravite lijevi U-obrat kako biste ostali na Bunker Hill Road."
+        ],
+        "3": [
+          "Napravite lijevi U-obrat na Devonshire Road."
+        ],
+        "4": [
+          "Napravite lijevi U-obrat na Devonshire Road na Jonestown Road/US 22."
+        ],
+        "5": [
+          "Napravite lijevi U-obrat na Devonshire Road kako biste ostali na Jonestown Road/US 22."
+        ],
+        "6": [
+          "Napravite desni U-obrat na Mannenbashi East."
+        ],
+        "7": [
+          "Napravite lijevi U-obrat prema Baltimoreu."
+        ]
+      }
+    },
+    "uturn_verbal": {
+      "phrases": {
+        "0": "Napravite <RELATIVE_DIRECTION> polukružno skretanje.",
+        "1": "Napravite <RELATIVE_DIRECTION> polukružno na <STREET_NAMES>.",
+        "2": "Napravite <RELATIVE_DIRECTION> polukružno da biste ostali na <STREET_NAMES>.",
+        "3": "Napravite <RELATIVE_DIRECTION> polukružno na <CROSS_STREET_NAMES>.",
+        "4": "Napravite <RELATIVE_DIRECTION> polukružno na <CROSS_STREET_NAMES> na <STREET_NAMES>.",
+        "5": "Napravite <RELATIVE_DIRECTION> polukružno na <CROSS_STREET_NAMES> da biste ostali na <STREET_NAMES>.",
+        "6": "Napravite <RELATIVE_DIRECTION> polukružno na <JUNCTION_NAME>.",
+        "7": "Napravite <RELATIVE_DIRECTION> polukružno prema <TOWARD_SIGN>."
+      },
+      "empty_street_name_labels": [
+        "šetnica",
+        "biciklistička staza",
+        "staza za brdski biciklizam",
+        "pješački prijelaz",
+        "stepenice",
+        "Most",
+        "tunel"
+      ],
+      "relative_directions": [
+        "lijevo",
+        "desno"
+      ],
+      "example_phrases": {
+        "0": [
+          "Napravite lijevi U-obrat."
+        ],
+        "1": [
+          "Napravite desni U-obrat na Bunker Hill Road."
+        ],
+        "2": [
+          "Napravite lijevi U-obrat kako biste ostali na Bunker Hill Road."
+        ],
+        "3": [
+          "Napravite lijevi U-obrat na Devonshire Road."
+        ],
+        "4": [
+          "Napravite lijevi U-obrat na Devonshire Road na Jonestown Road, U.S. 22."
+        ],
+        "5": [
+          "Napravite lijevi U-obrat na Devonshire Road kako biste ostali na Jonestown Road, U.S. 22."
+        ],
+        "6": [
+          "Napravite desni U-obrat na Mannenbashi East."
+        ],
+        "7": [
+          "Napravite lijevi U-obrat prema Baltimoreu."
+        ]
+      }
+    },
+    "verbal_multi_cue": {
+      "phrases": {
+        "0": "<CURRENT_VERBAL_CUE> Zatim <NEXT_VERBAL_CUE>",
+        "1": "<CURRENT_VERBAL_CUE> Zatim, u <LENGTH>, <NEXT_VERBAL_CUE>"
+      },
+      "metric_lengths": [
+        "<KILOMETERS> kilometara",
+        "1 kilometar",
+        "<METERS> metara",
+        "manje od 10 metara"
+      ],
+      "us_customary_lengths": [
+        "<MILES> milja",
+        "1 milja",
+        "pola milje",
+        "četvrt milje",
+        "<FEET> stopa",
+        "manje od 10 stopa"
+      ],
+      "example_phrases": {
+        "0": [
+          "Skrenite desno na East Fayette Street. Zatim skrenite desno na North Gay Street."
+        ],
+        "1": [
+          "Skrenite desno na East Fayette Street. Zatim, za 500 metara, skrenite desno na North Gay Street."
+        ]
+      }
+    },
+    "approach_verbal_alert": {
+      "phrases": {
+        "0": "U <LENGTH>, <CURRENT_VERBAL_CUE>"
+      },
+      "metric_lengths": [
+        "<KILOMETERS> kilometara",
+        "1 kilometar",
+        "<METERS> metara",
+        "manje od 10 metara"
+      ],
+      "us_customary_lengths": [
+        "<MILES> milja",
+        "1 milja",
+        "polovina milje",
+        "četvrtina milje",
+        "<STOPA> stopa",
+        "manje od 10 stopa"
+      ],
+      "example_phrases": {
+        "0": [
+          "Za četvrtinu milje, skrenite desno na North Gay Street."
+        ]
+      }
+    },
+    "pass": {
+      "phrases": {
+        "0": "Prijeđi <OBJECT_LABEL>.",
+        "1": "Prođite prometne signale na <OBJECT_LABEL>."
+      },
+      "object_labels": [
+        "vrata",
+        "bitve",
+        "načini raskrižje"
+      ],
+      "example_phrases": {
+        "0": [
+          "Prođi vrata."
+        ]
+      }
+    },
+    "elevator": {
+      "phrases": {
+        "0": "Idite liftom.",
+        "1": "Idite dizalom do <razine>."
+      },
+      "example_phrases": {
+        "0": [
+          "Uzmite dizalo."
+        ],
+        "1": [
+          "Uzmite dizalo do Razine 1."
+        ]
+      }
+    },
+    "steps": {
+      "phrases": {
+        "0": "Uzmite stepenice.",
+        "1": "Uzmite stepenice do <RAZINA>."
+      },
+      "example_phrases": {
+        "0": [
+          "Uzmite stepenice."
+        ],
+        "1": [
+          "Uzmite stepenice do Razine 2."
+        ]
+      }
+    },
+    "escalator": {
+      "phrases": {
+        "0": "Uzmite pokretnu stepenicu.",
+        "1": "Uzmite pokretnu stepenicu do <RAZINA>."
+      },
+      "example_phrases": {
+        "0": [
+          "Uzmite pokretnu stepenicu."
+        ],
+        "1": [
+          "Uzmite pokretnu stepenicu do Razine 3."
+        ]
+      }
+    },
+    "enter_building": {
+      "phrases": {
+        "0": "Uđite u zgradu.",
+        "1": "Uđite u zgradu i nastavite na <IMENA_ULICA>."
+      },
+      "empty_street_name_labels": [
+        "staza za hodanje",
+        "staza za bicikle",
+        "staza za brdski biciklizam",
+        "pješački prijelaz"
+      ],
+      "example_phrases": {
+        "0": [
+          "Uđite u zgradu."
+        ],
+        "1": [
+          "Uđite u zgradu i nastavite na stazi za hodanje."
+        ]
+      }
+    },
+    "exit_building": {
+      "phrases": {
+        "0": "Izađite iz zgrade.",
+        "1": "Izađite iz zgrade i nastavite na <IMENA_ULICA>."
+      },
+      "empty_street_name_labels": [
+        "staza za hodanje",
+        "staza za bicikle",
+        "staza za brdski biciklizam",
+        "pješački prijelaz"
+      ],
+      "example_phrases": {
+        "0": [
+          "Izađite iz zgrade."
+        ],
+        "1": [
+          "Izađite iz zgrade i nastavite na stazi za hodanje."
+        ]
+      }
     }
+  }
 }

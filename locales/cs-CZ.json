@@ -6,8 +6,8 @@
   "instructions": {
     "arrive": {
       "phrases": {
-        "0": "Přijeďte: <TIME>.",
-        "1": "Přijeďte: <TIME> do <TRANSIT_STOP>."
+        "0": "Příjezd: <TIME>.",
+        "1": "Příjezd: <TIME> v <TRANSIT_STOP>."
       },
       "example_phrases": {
         "0": [
@@ -20,8 +20,8 @@
     },
     "arrive_verbal": {
       "phrases": {
-        "0": "Přijeďte v <TIME>.",
-        "1": "Přijeďte v <TIME> do <TRANSIT_STOP>."
+        "0": "Příjezd v <TIME>.",
+        "1": "Přijeďte v <TIME> na <TRANSIT_STOP>."
       },
       "example_phrases": {
         "0": [
@@ -45,10 +45,10 @@
         "chodník",
         "cyklostezka",
         "stezka pro horská kola",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "přechod pro chodce",
+        "schody",
+        "most",
+        "tunel"
       ],
       "relative_directions": [
         "vlevo",
@@ -88,10 +88,10 @@
         "chodník",
         "cyklostezka",
         "stezka pro horská kola",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "přechod pro chodce",
+        "schody",
+        "most",
+        "tunel"
       ],
       "relative_directions": [
         "vlevo",
@@ -99,95 +99,95 @@
       ],
       "example_phrases": {
         "0": [
-          "Bear right."
+          "Bear že jo."
         ],
         "1": [
-          "Bear left onto Arlen Road."
+          "Dejte se vlevo, přejděte na Arlen Road."
         ],
         "2": [
-          "Bear right onto Belair Road, U.S. 1 Business."
+          "Bear že jo on Belair Road, U.S. 1 Business."
         ],
         "3": [
-          "Bear left to stay on U.S. 15 South."
+          "Bear vlevo, odjet zůstat na U.S. 15 South."
         ],
         "4": [
-          "Bear right at Mannenbashi East."
+          "Bear že jo na Mannenbashi East."
         ],
         "5": [
-          "Bear left toward Baltimore."
+          "Bear vlevo, odjet směrem na Baltimore."
         ]
       }
     },
     "becomes": {
       "phrases": {
-        "0": "Z <PREVIOUS_STREET_NAMES> se stává <STREET_NAMES>."
+        "0": "<PREVIOUS_STREET_NAMES> se změní na <STREET_NAMES>."
       },
       "example_phrases": {
         "0": [
-          "Vine Street becomes Middletown Road."
+          "Vine Street se stává Middletown Road."
         ]
       }
     },
     "becomes_verbal": {
       "phrases": {
-        "0": "Z <PREVIOUS_STREET_NAMES> se stává <STREET_NAMES>."
+        "0": "<PREVIOUS_STREET_NAMES> se změní na <STREET_NAMES>."
       },
       "example_phrases": {
         "0": [
-          "Vine Street becomes Middletown Road."
+          "Vine Street se stává Middletown Road."
         ]
       }
     },
     "continue": {
       "phrases": {
-        "0": "Pokračujte.",
-        "1": "Pokračujte na <STREET_NAMES>.",
+        "0": "Pokračovat.",
+        "1": "Pokračujte po <STREET_NAMES>.",
         "2": "Pokračujte na <JUNCTION_NAME>.",
-        "3": "Pokračujte směrem na <TOWARD_SIGN>."
+        "3": "Pokračujte směrem k <TOWARD_SIGN>."
       },
       "empty_street_name_labels": [
         "chodník",
         "cyklostezka",
         "stezka pro horská kola",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "přechod pro chodce",
+        "schody",
+        "most",
+        "tunel"
       ],
       "example_phrases": {
         "0": [
-          "Continue."
+          "Pokračovat."
         ],
         "1": [
-          "Continue on 10th Avenue."
+          "Pokračujte na 10. Avenue."
         ],
         "2": [
-          "Continue at Mannenbashi East."
+          "Pokračovat na Mannenbashi East."
         ],
         "3": [
-          "Continue toward Baltimore."
+          "Pokračujte směrem na Baltimore."
         ]
       }
     },
     "continue_verbal": {
       "phrases": {
-        "0": "Pokračujte.",
-        "1": "Pokračujte <LENGTH>.",
-        "2": "Pokračujte na <STREET_NAMES>.",
-        "3": "Pokračujte <LENGTH> na <STREET_NAMES> .",
+        "0": "Pokračovat.",
+        "1": "Pokračujte <DÉLKA>.",
+        "2": "Pokračujte po <STREET_NAMES>.",
+        "3": "Pokračujte po <STREET_NAMES> po dobu <LENGTH>.",
         "4": "Pokračujte na <JUNCTION_NAME>.",
-        "5": "Pokračujte <LENGTH> na <JUNCTION_NAME>.",
-        "6": "Pokračujte směrem na <TOWARD_SIGN>.",
-        "7": "Pokračujte <LENGTH> směrem na <TOWARD_SIGN>."
+        "5": "Pokračujte na <JUNCTION_NAME> po dobu <LENGTH>.",
+        "6": "Pokračujte směrem k <TOWARD_SIGN>.",
+        "7": "Pokračujte směrem <TOWARD_SIGN> po dobu <LENGTH>."
       },
       "empty_street_name_labels": [
         "chodník",
         "cyklostezka",
         "stezka pro horská kola",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "přechod pro chodce",
+        "schody",
+        "most",
+        "tunel"
       ],
       "metric_lengths": [
         "<KILOMETERS> kilometrů",
@@ -197,104 +197,104 @@
       ],
       "us_customary_lengths": [
         "<MILES> mil",
-        "1 míli",
+        "1 míle",
         "půl míle",
         "čtvrt míle",
-        "<FEET> stop",
+        "<FEET> nohy",
         "méně než 10 stop"
       ],
       "example_phrases": {
         "0": [
-          "Continue."
+          "Pokračovat."
         ],
         "1": [
-          "Continue for 300 feet."
+          "Pokračujte 300 stop."
         ],
         "2": [
-          "Continue on 10th Avenue."
+          "Pokračujte na 10. Avenue."
         ],
         "3": [
-          "Continue on 10th Avenue for 3 miles."
+          "Pokračujte na 10th Avenue 3 míle."
         ],
         "4": [
-          "Continue at Mannenbashi East."
+          "Pokračovat na Mannenbashi East."
         ],
         "5": [
-          "Continue at Mannenbashi East for 2 miles."
+          "Pokračujte na Mannenbashi East 2 míle."
         ],
         "6": [
-          "Continue toward Baltimore."
+          "Pokračujte směrem na Baltimore."
         ],
         "7": [
-          "Continue toward Baltimore for 5 miles."
+          "Pokračujte směrem na Baltimore 5 mil."
         ]
       }
     },
     "continue_verbal_alert": {
       "phrases": {
-        "0": "Pokračujte.",
-        "1": "Pokračujte na <STREET_NAMES>.",
+        "0": "Pokračovat.",
+        "1": "Pokračujte po <STREET_NAMES>.",
         "2": "Pokračujte na <JUNCTION_NAME>.",
-        "3": "Pokračujte na <TOWARD_SIGN>."
+        "3": "Pokračujte směrem k <TOWARD_SIGN>."
       },
       "empty_street_name_labels": [
         "chodník",
         "cyklostezka",
         "stezka pro horská kola",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "přechod pro chodce",
+        "schody",
+        "most",
+        "tunel"
       ],
       "example_phrases": {
         "0": [
-          "Continue."
+          "Pokračovat."
         ],
         "1": [
-          "Continue on 10th Avenue."
+          "Pokračujte na 10. Avenue."
         ],
         "2": [
-          "Continue at Mannenbashi East."
+          "Pokračovat na Mannenbashi East."
         ],
         "3": [
-          "Continue toward Baltimore."
+          "Pokračujte směrem na Baltimore."
         ]
       }
     },
     "depart": {
       "phrases": {
-        "0": "Vyjeďte: <TIME>.",
-        "1": "Vyjeďte: <TIME> z <TRANSIT_STOP>."
+        "0": "Odjezd: <ČAS>.",
+        "1": "Odjezd: <TIME> z <TRANSIT_STOP>."
       },
       "example_phrases": {
         "0": [
-          "Depart: 8:02 AM."
+          "Odjezd: 8:02."
         ],
         "1": [
-          "Depart: 8:02 AM from 8 St - NYU."
+          "Odjezd: 8:02 z 8 St – NYU."
         ]
       }
     },
     "depart_verbal": {
       "phrases": {
-        "0": "Vyjeďte v <TIME>.",
-        "1": "Vyjeďte v <TIME> z <TRANSIT_STOP>."
+        "0": "Odjezd v <TIME>.",
+        "1": "Odjezd v <TIME> z <TRANSIT_STOP>."
       },
       "example_phrases": {
         "0": [
-          "Depart at 8:02 AM."
+          "Odjezd v 8:02."
         ],
         "1": [
-          "Depart at 8:02 AM from 8 St - NYU."
+          "Odjezd v 8:02 z 8 St – NYU."
         ]
       }
     },
     "destination": {
       "phrases": {
-        "0": "Dorazili jste do svého cíle.",
+        "0": "Dorazili jste do cíle.",
         "1": "Dorazili jste do <DESTINATION>.",
-        "2": "Váš cíl je <RELATIVE_DIRECTION>.",
-        "3": "<DESTINATION> je <RELATIVE_DIRECTION>."
+        "2": "Váš cíl je na <RELATIVE_DIRECTION>.",
+        "3": "<DESTINATION> je na <RELATIVE_DIRECTION>."
       },
       "relative_directions": [
         "vlevo",
@@ -302,26 +302,26 @@
       ],
       "example_phrases": {
         "0": [
-          "You have arrived at your destination."
+          "Has arribat al teu destí."
         ],
         "1": [
-          "You have arrived at 3206 Powelton Avenue."
+          "Has arribat al 3206 Powelton Avenue."
         ],
         "2": [
-          "Your destination is on the left.",
-          "Your destination is on the right."
+          "La teva destinació és a l'esquerra.",
+          "La teva destinació és a la dreta."
         ],
         "3": [
-          "Lancaster Brewing Company is on the left."
+          "Lancaster Brewing Company és a l'esquerra."
         ]
       }
     },
     "destination_verbal": {
       "phrases": {
-        "0": "Dorazili jste do svého cíle.",
+        "0": "Dorazili jste do cíle.",
         "1": "Dorazili jste do <DESTINATION>.",
-        "2": "Váš cíl je <RELATIVE_DIRECTION>.",
-        "3": "<DESTINATION> je <RELATIVE_DIRECTION>."
+        "2": "Váš cíl je na <RELATIVE_DIRECTION>.",
+        "3": "<DESTINATION> je na <RELATIVE_DIRECTION>."
       },
       "relative_directions": [
         "vlevo",
@@ -345,10 +345,10 @@
     },
     "destination_verbal_alert": {
       "phrases": {
-        "0": "Dorazíte do svého cíle.",
+        "0": "Dorazíte do cíle.",
         "1": "Dorazíte do <DESTINATION>.",
-        "2": "Váš cíl bude <RELATIVE_DIRECTION>.",
-        "3": "<DESTINATION> bude <RELATIVE_DIRECTION>."
+        "2": "Váš cíl bude na <RELATIVE_DIRECTION>.",
+        "3": "<DESTINATION> bude na <RELATIVE_DIRECTION>."
       },
       "relative_directions": [
         "vlevo",
@@ -374,17 +374,17 @@
       "phrases": {
         "0": "Jeďte trajektem.",
         "1": "Jeďte po <STREET_NAMES>.",
-        "2": "Jeďte <STREET_NAMES> <FERRY_LABEL>.",
-        "3": "Jeďte trajektem k <TOWARD_SIGN>."
+        "2": "Jeďte po <STREET_NAMES> <FERRY_LABEL>.",
+        "3": "Jeďte trajektem směrem <TOWARD_SIGN>."
       },
       "empty_street_name_labels": [
         "chodník",
-        "tcyklostezka",
+        "cyklostezka",
         "stezka pro horská kola",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "přechod pro chodce",
+        "schody",
+        "most",
+        "tunel"
       ],
       "ferry_label": "Trajekt",
       "example_phrases": {
@@ -406,17 +406,17 @@
       "phrases": {
         "0": "Jeďte trajektem.",
         "1": "Jeďte po <STREET_NAMES>.",
-        "2": "Jeďte <STREET_NAMES> <FERRY_LABEL>.",
-        "3": "Jeďte trajektem k <TOWARD_SIGN>."
+        "2": "Jeďte po <STREET_NAMES> <FERRY_LABEL>.",
+        "3": "Jeďte trajektem směrem <TOWARD_SIGN>."
       },
       "empty_street_name_labels": [
         "chodník",
         "cyklostezka",
         "stezka pro horská kola",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "přechod pro chodce",
+        "schody",
+        "most",
+        "tunel"
       ],
       "ferry_label": "Trajekt",
       "example_phrases": {
@@ -436,22 +436,22 @@
     },
     "enter_roundabout": {
       "phrases": {
-        "0": "Vjeďte na kruhový objezd.",
-        "1": "Vjeďte na kruhový objezd a sjeďte na <ORDINAL_VALUE> výjezdu.",
-        "2": "Vjeďte na kruhový objezd a sjeďte na <ORDINAL_VALUE> výjezdu na <ROUNDABOUT_EXIT_STREET_NAMES>.",
-        "3": "Vjeďte na kruhový objezd a sjeďte na <ORDINAL_VALUE> výjezdu na <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>. Pokračujte na <ROUNDABOUT_EXIT_STREET_NAMES>.",
-        "4": "Vjeďte na kruhový objezd a sjeďte na <ORDINAL_VALUE> výjezdu na <TOWARD_SIGN>.",
-        "5": "Vjeďte na kruhový objezd a sjeďte na výjezdu na <ROUNDABOUT_EXIT_STREET_NAMES>.",
-        "6": "Vjeďte na kruhový objezd a sjeďte na výjezdu na <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>. Pokračujte na <ROUNDABOUT_EXIT_STREET_NAMES>.",
-        "7": "Vjeďte na kruhový objezd a sjeďte na výjezdu směrem na <TOWARD_SIGN>.",
-        "8": "Vjeďte do <STREET_NAMES>",
-        "9": "Vjeďte do <STREET_NAMES> a sjeďte na <ORDINAL_VALUE> výjezdu.",
-        "10": "Vjeďte do <STREET_NAMES> a sjeďte na <ORDINAL_VALUE> výjezdu na <ROUNDABOUT_EXIT_STREET_NAMES>.",
-        "11": "Vjeďte do <STREET_NAMES> a sjeďte na <ORDINAL_VALUE> výjezdu na <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>. Pokračujte na <ROUNDABOUT_EXIT_STREET_NAMES>.",
-        "12": "Vjeďte do <STREET_NAMES> a sjeďte na <ORDINAL_VALUE> výjezdu na <TOWARD_SIGN>.",
-        "13": "Vjeďte do <STREET_NAMES> a sjeďte na výjezdu na <ROUNDABOUT_EXIT_STREET_NAMES>.",
-        "14": "Vjeďte do <STREET_NAMES> a sjeďte na výjezdu na <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>. Pokračujte na <ROUNDABOUT_EXIT_STREET_NAMES>.",
-        "15": "Vjeďte do <STREET_NAMES> a sjeďte na výjezdu směrem na <TOWARD_SIGN>."
+        "0": "Vstupte do kruhového objezdu.",
+        "1": "Vjeďte do kruhového objezdu a sjeďte <ORDINAL_VALUE>.",
+        "2": "Vjeďte do kruhového objezdu a sjeďte <ORDINAL_VALUE> na <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "3": "Vjeďte do kruhového objezdu a sjeďte <ORDINAL_VALUE> na <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>. Pokračujte po <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "4": "Vjeďte do kruhového objezdu a sjeďte <ORDINAL_VALUE> směrem na <TOWARD_SIGN>.",
+        "5": "Vjeďte do kruhového objezdu a sjeďte na <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "6": "Vjeďte do kruhového objezdu a sjeďte na <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>. Pokračujte po <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "7": "Vjeďte do kruhového objezdu a sjeďte směrem <TOWARD_SIGN>.",
+        "8": "Zadejte <STREET_NAMES>",
+        "9": "Vstupte do <STREET_NAMES> a sjeďte sjezdem <ORDINAL_VALUE>.",
+        "10": "Zadejte <STREET_NAMES> a sjeďte <ORDINAL_VALUE> na <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "11": "Zadejte <STREET_NAMES> a sjeďte <ORDINAL_VALUE> na <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>. Pokračujte po <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "12": "Zadejte <STREET_NAMES> a sjeďte <ORDINAL_VALUE> směrem <TOWARD_SIGN>.",
+        "13": "Zadejte <STREET_NAMES> a sjeďte na <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "14": "Zadejte <STREET_NAMES> a sjeďte na <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>. Pokračujte po <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "15": "Zadejte <STREET_NAMES> a sjeďte směrem <TOWARD_SIGN>."
       },
       "ordinal_values": [
         "1.",
@@ -469,10 +469,10 @@
         "chodník",
         "cyklostezka",
         "stezka pro horská kola",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "přechod pro chodce",
+        "schody",
+        "most",
+        "tunel"
       ],
       "example_phrases": {
         "0": [
@@ -536,22 +536,22 @@
     },
     "enter_roundabout_verbal": {
       "phrases": {
-        "0": "Vjeďte na kruhový objezd.",
-        "1": "Vjeďte na kruhový objezd a sjeďte na <ORDINAL_VALUE> výjezdu.",
-        "2": "Vjeďte na kruhový objezd a sjeďte na <ORDINAL_VALUE> výjezdu na <ROUNDABOUT_EXIT_STREET_NAMES>.",
-        "3": "Vjeďte na kruhový objezd a sjeďte <ORDINAL_VALUE> výjezdu na <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>.",
-        "4": "Vjeďte na kruhový objezd a sjeďte na <ORDINAL_VALUE> výjezdu směrem na <TOWARD_SIGN>.",
-        "5": "Vjeďte na kruhový objezd a sjeďte na výjezdu na <ROUNDABOUT_EXIT_STREET_NAMES>.",
-        "6": "Vjeďte na kruhový objezd a vyjeďte na <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>.",
-        "7": "Vjeďte na kruhový objezd a sjeďte na výjezdu směrem na <TOWARD_SIGN>.",
-        "8": "Vjeďte na <STREET_NAMES>",
-        "9": "Vjeďte na <STREET_NAMES> a sjeďte na <ORDINAL_VALUE> výjezdu.",
-        "10": "Vjeďte na <STREET_NAMES> a sjeďte na <ORDINAL_VALUE> výjezdu na <ROUNDABOUT_EXIT_STREET_NAMES>.",
-        "11": "Vjeďte na <STREET_NAMES> a sjeďte na <ORDINAL_VALUE> výjezdu na <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>.",
-        "12": "Vjeďte na <STREET_NAMES> a sjeďte na <ORDINAL_VALUE> výjezdu směrem na <TOWARD_SIGN>.",
-        "13": "Vjeďte na <STREET_NAMES> a sjeďte na výjezdu na <ROUNDABOUT_EXIT_STREET_NAMES>.",
-        "14": "Vjeďte na <STREET_NAMES> a sjeďte na výjezdu na <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>.",
-        "15": "Vjeďtena <STREET_NAMES> a sjeďte na výjezdu směrem na <TOWARD_SIGN>."
+        "0": "Vstupte do kruhového objezdu.",
+        "1": "Vjeďte do kruhového objezdu a sjeďte <ORDINAL_VALUE>.",
+        "2": "Vjeďte do kruhového objezdu a sjeďte <ORDINAL_VALUE> na <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "3": "Vjeďte do kruhového objezdu a sjeďte <ORDINAL_VALUE> na <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>.",
+        "4": "Vjeďte do kruhového objezdu a sjeďte <ORDINAL_VALUE> směrem na <TOWARD_SIGN>.",
+        "5": "Vjeďte do kruhového objezdu a sjeďte na <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "6": "Vjeďte do kruhového objezdu a sjeďte na <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>.",
+        "7": "Vjeďte do kruhového objezdu a sjeďte směrem <TOWARD_SIGN>.",
+        "8": "Zadejte <STREET_NAMES>",
+        "9": "Vstupte do <STREET_NAMES> a sjeďte sjezdem <ORDINAL_VALUE>.",
+        "10": "Zadejte <STREET_NAMES> a sjeďte <ORDINAL_VALUE> na <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "11": "Zadejte <STREET_NAMES> a sjeďte <ORDINAL_VALUE> na <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>.",
+        "12": "Zadejte <STREET_NAMES> a sjeďte <ORDINAL_VALUE> směrem <TOWARD_SIGN>.",
+        "13": "Zadejte <STREET_NAMES> a sjeďte na <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "14": "Zadejte <STREET_NAMES> a sjeďte na <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>.",
+        "15": "Zadejte <STREET_NAMES> a sjeďte směrem <TOWARD_SIGN>."
       },
       "ordinal_values": [
         "1.",
@@ -569,10 +569,10 @@
         "chodník",
         "cyklostezka",
         "stezka pro horská kola",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "přechod pro chodce",
+        "schody",
+        "most",
+        "tunel"
       ],
       "example_phrases": {
         "0": [
@@ -695,49 +695,49 @@
           "Take the White Marsh Boulevard exit on the left."
         ],
         "10": [
-          "Take the White Marsh Boulevard exit on the left onto MD 43 East."
+          "Sjeďte vlevo sjezdem White Marsh Boulevard, přejděte na MD 43 East."
         ],
         "12": [
-          "Take the White Marsh Boulevard exit on the left toward White Marsh."
+          "Sjeďte vlevo sjezdem White Marsh Boulevard, odjet směrem na White Marsh."
         ],
         "14": [
-          "Take the White Marsh Boulevard exit on the left onto MD 43 East toward White Marsh."
+          "Sjeďte vlevo sjezdem White Marsh Boulevard, přejděte na MD 43 East směrem na White Marsh."
         ],
         "15": [
-          "Take the exit."
+          "Jeďte východem."
         ],
         "16": [
-          "Take exit 67 B-A."
+          "Sjeďte sjezdem 67 B-A."
         ],
         "17": [
-          "Take the US 322 West exit."
+          "Použijte výjezd US 322 West."
         ],
         "18": [
-          "Take exit 67 B-A onto US 322 West."
+          "Sjeďte výjezdem 67 B-A na US 322 West."
         ],
         "19": [
-          "Take the exit toward Lewistown."
+          "Jeďte výjezdem směrem na Lewistown."
         ],
         "20": [
-          "Take exit 67 B-A toward Lewistown."
+          "Sjeďte výjezdem 67 B-A směrem na Lewistown."
         ],
         "21": [
-          "Take the US 322 West exit toward Lewistown."
+          "Použijte výjezd US 322 West směrem na Lewistown."
         ],
         "22": [
-          "Take exit 67 B-A onto US 322 West toward Lewistown/State College."
+          "Sjeďte výjezdem 67 B-A na US 322 West směrem na Lewistown/State College."
         ],
         "23": [
-          "Take the White Marsh Boulevard exit."
+          "Použijte výjezd White Marsh Boulevard."
         ],
         "25": [
-          "Take the White Marsh Boulevard exit onto MD 43 East."
+          "Použijte výjezd White Marsh Boulevard na MD 43 East."
         ],
         "27": [
-          "Take the White Marsh Boulevard exit toward White Marsh."
+          "Použijte výjezd White Marsh Boulevard směrem k White Marsh."
         ],
         "29": [
-          "Take the White Marsh Boulevard exit onto MD 43 East toward White Marsh."
+          "Použijte výjezd White Marsh Boulevard na MD 43 East směrem na White Marsh."
         ]
       }
     },
@@ -752,10 +752,10 @@
         "chodník",
         "cyklostezka",
         "stezka pro horská kola",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "přechod pro chodce",
+        "schody",
+        "most",
+        "tunel"
       ],
       "example_phrases": {
         "0": [
@@ -783,10 +783,10 @@
         "chodník",
         "cyklostezka",
         "stezka pro horská kola",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "přechod pro chodce",
+        "schody",
+        "most",
+        "tunel"
       ],
       "example_phrases": {
         "0": [
@@ -912,33 +912,33 @@
     },
     "exit_visual": {
       "phrases": {
-        "0": "Sjeďte <EXIT_NUMBERS>"
+        "0": "Opusťte <EXIT_NUMBERS>"
       },
       "example_phrases": {
         "0": [
-          "Exit 1A"
+          "Výstup 1A"
         ]
       }
     },
     "keep": {
       "phrases": {
-        "0": "Na rozdvojení se držte <RELATIVE_DIRECTION>.",
-        "1": "Držte se <RELATIVE_DIRECTION>, abyste sjeli na výjezdu <NUMBER_SIGN>.",
-        "2": "Držte se <RELATIVE_DIRECTION>, abyste vjeli na <STREET_NAMES>.",
-        "3": "Držte se <RELATIVE_DIRECTION>, abyste sjeli na výjezdu <NUMBER_SIGN> na <STREET_NAMES>.",
-        "4": "Držte se <RELATIVE_DIRECTION> směrem na <TOWARD_SIGN>.",
-        "5": "Držte se <RELATIVE_DIRECTION>, abyste sjeli na výjezdu <NUMBER_SIGN> směrem na <TOWARD_SIGN>.",
-        "6": "Držte se <RELATIVE_DIRECTION>, abyste vjeli na <STREET_NAMES> směrem na <TOWARD_SIGN>.",
-        "7": "Držte se <RELATIVE_DIRECTION>, abyste sjeli na výjezdu <NUMBER_SIGN> na <STREET_NAMES> směrem na <TOWARD_SIGN>."
+        "0": "Držte <RELATIVE_DIRECTION> na rozvětvení.",
+        "1": "Držte se <RELATIVE_DIRECTION> a sjeďte sjezdem <NUMBER_SIGN>.",
+        "2": "Držte se <RELATIVE_DIRECTION> a pokračujte <STREET_NAMES>.",
+        "3": "Držte se <RELATIVE_DIRECTION> a sjeďte sjezdem <NUMBER_SIGN> na <STREET_NAMES>.",
+        "4": "Držte se <RELATIVE_DIRECTION> směrem k <TOWARD_SIGN>.",
+        "5": "Držte se <RELATIVE_DIRECTION> a sjeďte výjezdem <NUMBER_SIGN> směrem <TOWARD_SIGN>.",
+        "6": "Držte se <RELATIVE_DIRECTION> a pokračujte <STREET_NAMES> směrem <TOWARD_SIGN>.",
+        "7": "Držte se <RELATIVE_DIRECTION> a sjeďte výjezdem <NUMBER_SIGN> na <STREET_NAMES> směrem na <TOWARD_SIGN>."
       },
       "empty_street_name_labels": [
         "chodník",
         "cyklostezka",
         "stezka pro horská kola",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "přechod pro chodce",
+        "schody",
+        "most",
+        "tunel"
       ],
       "relative_directions": [
         "vlevo",
@@ -964,31 +964,31 @@
           "Keep right toward Annapolis."
         ],
         "5": [
-          "Keep right to take exit 62 toward Annapolis."
+          "Nechte si že jo a sjeďte výjezdem 62 směrem na Annapolis."
         ],
         "6": [
-          "Keep right to take I 895 South toward Annapolis."
+          "Udržujte že jo, abyste jeli I 895 na jih směrem na Annapolis."
         ],
         "7": [
-          "Keep right to take exit 62 onto I 895 South toward Annapolis."
+          "Držte se že jo a sjeďte výjezdem 62 na I 895 South směrem na Annapolis."
         ]
       }
     },
     "keep_to_stay_on": {
       "phrases": {
-        "0": "Držte se <RELATIVE_DIRECTION>, abyste zůstali na <STREET_NAMES>.",
-        "1": "Držte se <RELATIVE_DIRECTION>, abyste sjeli na výjezdu <NUMBER_SIGN> a zůstali na <STREET_NAMES>.",
-        "2": "Držte se <RELATIVE_DIRECTION>, abyste zůstali na <STREET_NAMES> směrem na <TOWARD_SIGN>.",
-        "3": "Držte se <RELATIVE_DIRECTION>, abyste sjeli na výjezdu <NUMBER_SIGN> a zůstali na <STREET_NAMES> směrem na <TOWARD_SIGN>."
+        "0": "Držte <RELATIVE_DIRECTION> a zůstaňte na <STREET_NAMES>.",
+        "1": "Držte se <RELATIVE_DIRECTION>, sjeďte sjezdem <NUMBER_SIGN> a zůstaňte na <STREET_NAMES>.",
+        "2": "Držte se <RELATIVE_DIRECTION> a zůstaňte na <STREET_NAMES> směrem k <TOWARD_SIGN>.",
+        "3": "Držte se <RELATIVE_DIRECTION>, sjeďte výjezdem <NUMBER_SIGN> a zůstaňte na <STREET_NAMES> směrem <TOWARD_SIGN>."
       },
       "empty_street_name_labels": [
         "chodník",
         "cyklostezka",
         "stezka pro horská kola",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "přechod pro chodce",
+        "schody",
+        "most",
+        "tunel"
       ],
       "relative_directions": [
         "vlevo",
@@ -1014,19 +1014,19 @@
     },
     "keep_to_stay_on_verbal": {
       "phrases": {
-        "0": "Držte se <RELATIVE_DIRECTION>, abyste zůstali na <STREET_NAMES>.",
-        "1": "Držte se <RELATIVE_DIRECTION>, abyste sjeli na výjezdu <NUMBER_SIGN> a zůstali na <STREET_NAMES>.",
-        "2": "Držte se <RELATIVE_DIRECTION>, abyste zůstali na <STREET_NAMES> směrem na <TOWARD_SIGN>.",
-        "3": "Držte se <RELATIVE_DIRECTION>, abyste sjeli na výjezdu <NUMBER_SIGN> a zůstali na <STREET_NAMES> směrem na <TOWARD_SIGN>."
+        "0": "Držte <RELATIVE_DIRECTION> a zůstaňte na <STREET_NAMES>.",
+        "1": "Držte se <RELATIVE_DIRECTION>, sjeďte sjezdem <NUMBER_SIGN> a zůstaňte na <STREET_NAMES>.",
+        "2": "Držte se <RELATIVE_DIRECTION> a zůstaňte na <STREET_NAMES> směrem k <TOWARD_SIGN>.",
+        "3": "Držte se <RELATIVE_DIRECTION>, sjeďte výjezdem <NUMBER_SIGN> a zůstaňte na <STREET_NAMES> směrem <TOWARD_SIGN>."
       },
       "empty_street_name_labels": [
         "chodník",
         "cyklostezka",
         "stezka pro horská kola",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "přechod pro chodce",
+        "schody",
+        "most",
+        "tunel"
       ],
       "relative_directions": [
         "vlevo",
@@ -1052,23 +1052,23 @@
     },
     "keep_verbal": {
       "phrases": {
-        "0": "Na rozdvojení se držte <RELATIVE_DIRECTION>.",
-        "1": "Držte se <RELATIVE_DIRECTION>, abyste sjeli na výjezdu <NUMBER_SIGN>.",
-        "2": "Držte se <RELATIVE_DIRECTION>, abyste sjeli na výjezdu <STREET_NAMES>.",
-        "3": "Držte se <RELATIVE_DIRECTION>, abyste sjeli na výjezdu <NUMBER_SIGN> na <STREET_NAMES>.",
-        "4": "Držte se <RELATIVE_DIRECTION> směrem na <TOWARD_SIGN>.",
-        "5": "Držte se <RELATIVE_DIRECTION>, abyste sjeli na výjezdu <NUMBER_SIGN> směrem na <TOWARD_SIGN>.",
-        "6": "Držte se <RELATIVE_DIRECTION>, abyste vjeli do <STREET_NAMES> směrem na <TOWARD_SIGN>.",
-        "7": "Drže se <RELATIVE_DIRECTION>, abyste sjeli na výjezdu <NUMBER_SIGN> na <STREET_NAMES> směrem na <TOWARD_SIGN>."
+        "0": "Udržujte <RELATIVE_DIRECTION> na rozvětvení.",
+        "1": "Držte se <RELATIVE_DIRECTION> a sjeďte sjezdem <NUMBER_SIGN>.",
+        "2": "Držte se <RELATIVE_DIRECTION> a pokračujte <STREET_NAMES>.",
+        "3": "Držte se <RELATIVE_DIRECTION> a sjeďte výjezdem <NUMBER_SIGN> na <STREET_NAMES>.",
+        "4": "Držte <RELATIVE_DIRECTION> směrem k <TOWARD_SIGN>.",
+        "5": "Držte se <RELATIVE_DIRECTION> a sjeďte výjezdem <NUMBER_SIGN> směrem na <TOWARD_SIGN>.",
+        "6": "Držte se <RELATIVE_DIRECTION> a pokračujte na <STREET_NAMES> směrem na <TOWARD_SIGN>.",
+        "7": "Držte se <RELATIVE_DIRECTION> a sjeďte výjezdem <NUMBER_SIGN> na <STREET_NAMES> směrem na <TOWARD_SIGN>."
       },
       "empty_street_name_labels": [
         "chodník",
         "cyklostezka",
         "stezka pro horská kola",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "přechod pro chodce",
+        "schody",
+        "most",
+        "tunel"
       ],
       "relative_directions": [
         "vlevo",
@@ -1106,12 +1106,12 @@
     },
     "merge": {
       "phrases": {
-        "0": "Zařaďte se.",
-        "1": "Zařaďte se <RELATIVE_DIRECTION>.",
-        "2": "Zařaďte se k <STREET_NAMES>.",
-        "3": "Zařaďte se <RELATIVE_DIRECTION> k <STREET_NAMES>.",
-        "4": "Zařaďte se směrem na <TOWARD_SIGN>.",
-        "5": "Zařaďte se <RELATIVE_DIRECTION> směrem na <TOWARD_SIGN>."
+        "0": "Spojit.",
+        "1": "Sloučit <RELATIVE_DIRECTION>.",
+        "2": "Zařaďte se na <STREET_NAMES>.",
+        "3": "Sloučit <RELATIVE_DIRECTION> do <STREET_NAMES>.",
+        "4": "Zařaďte se směrem k <TOWARD_SIGN>.",
+        "5": "Sloučit <RELATIVE_DIRECTION> směrem k <TOWARD_SIGN>."
       },
       "relative_directions": [
         "vlevo",
@@ -1121,10 +1121,10 @@
         "chodník",
         "cyklostezka",
         "stezka pro horská kola",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "přechod pro chodce",
+        "schody",
+        "most",
+        "tunel"
       ],
       "example_phrases": {
         "0": [
@@ -1149,12 +1149,12 @@
     },
     "merge_verbal": {
       "phrases": {
-        "0": "Zařaďte se.",
-        "1": "Zařaďte se <RELATIVE_DIRECTION>.",
-        "2": "Zařaďte se k <STREET_NAMES>.",
-        "3": "Zařaďte se <RELATIVE_DIRECTION> k <STREET_NAMES>.",
-        "4": "Zařaďte se směrem na <TOWARD_SIGN>.",
-        "5": "Zařaďte se <RELATIVE_DIRECTION> směrem na <TOWARD_SIGN>."
+        "0": "Spojit.",
+        "1": "Sloučit <RELATIVE_DIRECTION>.",
+        "2": "Zařaďte se na <STREET_NAMES>.",
+        "3": "Sloučit <RELATIVE_DIRECTION> do <STREET_NAMES>.",
+        "4": "Zařaďte se směrem k <TOWARD_SIGN>.",
+        "5": "Sloučit <RELATIVE_DIRECTION> směrem k <TOWARD_SIGN>."
       },
       "relative_directions": [
         "vlevo",
@@ -1164,10 +1164,10 @@
         "chodník",
         "cyklostezka",
         "stezka pro horská kola",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "přechod pro chodce",
+        "schody",
+        "most",
+        "tunel"
       ],
       "example_phrases": {
         "0": [
@@ -1195,29 +1195,29 @@
         "0": "Cestování <TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>."
       },
       "transit_stop_count_labels": {
-        "one": "zastávka",
-        "other": "zastávky"
+        "one": "stop",
+        "other": "zastaví"
       },
       "example_phrases": {
         "0": [
-          "Travel 1 stop.",
-          "Travel 3 stops."
+          "Cesta 1 zastávka.",
+          "Cesta 3 zastávky."
         ]
       }
     },
     "post_transition_verbal": {
       "phrases": {
-        "0": "Pokračujte <LENGTH>.",
-        "1": "Pokračujte <LENGTH> po <STREET_NAMES>."
+        "0": "Pokračujte <DÉLKA>.",
+        "1": "Pokračujte po <STREET_NAMES> po dobu <LENGTH>."
       },
       "empty_street_name_labels": [
         "chodník",
         "cyklostezka",
         "stezka pro horská kola",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "přechod pro chodce",
+        "schody",
+        "most",
+        "tunel"
       ],
       "metric_lengths": [
         "<KILOMETERS> kilometrů",
@@ -1235,32 +1235,32 @@
       ],
       "example_phrases": {
         "0": [
-          "Continue for 300 feet.",
-          "Continue for 9 miles."
+          "Pokračujte 300 stop.",
+          "Pokračujte 9 mil."
         ],
         "1": [
-          "Continue on Pennsylvania 7 43 for 6.2 miles.",
-          "Continue on Main Street, Vermont 30 for 1 tenth of a mile."
+          "Pokračujte po Pennsylvania 7 43 6,2 mil.",
+          "Pokračujte na Main Street, Vermont 30 na 1 desetinu míle."
         ]
       }
     },
     "ramp": {
       "phrases": {
-        "0": "Vjeďte na nájezd <RELATIVE_DIRECTION>.",
-        "1": "Vjeďte na nájezd <BRANCH_SIGN> <RELATIVE_DIRECTION>.",
-        "2": "Vjeďte na nájezd <RELATIVE_DIRECTION> směrem na <TOWARD_SIGN>.",
-        "3": "Vjeďte na nájezd <BRANCH_SIGN> <RELATIVE_DIRECTION> směrem na <TOWARD_SIGN>.",
-        "4": "Vjeďte na nájezd <NAME_SIGN> <RELATIVE_DIRECTION>.",
-        "5": "Odbočte <RELATIVE_DIRECTION>, abyste vjeli na nájezd.",
-        "6": "Odbočte <RELATIVE_DIRECTION>, abyste vjeli na nájezd <BRANCH_SIGN>.",
-        "7": "Odbočte <RELATIVE_DIRECTION>, abyste vjeli na nájezd směrem na <TOWARD_SIGN>.",
-        "8": "Odbočte <RELATIVE_DIRECTION>, abyste vjeli na nájezd <BRANCH_SIGN> směrem na <TOWARD_SIGN>.",
-        "9": "Odbočte <RELATIVE_DIRECTION>, abyste vjeli na nájezd <NAME_SIGN>.",
-        "10": "Vjeďte na nájezd.",
-        "11": "Vjeďte na nájezd <BRANCH_SIGN>.",
-        "12": "Vjeďte na nájezd směrem na <TOWARD_SIGN>.",
-        "13": "Vjeďte na nájezd <BRANCH_SIGN> směrem na <TOWARD_SIGN>.",
-        "14": "Vjeďte na nájezd <NAME_SIGN>."
+        "0": "Jeďte na nájezd na <RELATIVE_DIRECTION>.",
+        "1": "Jeďte na nájezd <BRANCH_SIGN> na <RELATIVE_DIRECTION>.",
+        "2": "Jeďte na nájezd na <RELATIVE_DIRECTION> směrem na <TOWARD_SIGN>.",
+        "3": "Jeďte na nájezd <BRANCH_SIGN> na <RELATIVE_DIRECTION> směrem na <TOWARD_SIGN>.",
+        "4": "Jeďte na nájezd <NAME_SIGN> na <RELATIVE_DIRECTION>.",
+        "5": "Odbočte <RELATIVE_DIRECTION> a vyjeďte na nájezd.",
+        "6": "Odbočte <RELATIVE_DIRECTION> a vyjeďte na nájezd <BRANCH_SIGN>.",
+        "7": "Odbočte <RELATIVE_DIRECTION> a jeďte na nájezd směrem na <TOWARD_SIGN>.",
+        "8": "Odbočte <RELATIVE_DIRECTION> a jeďte na nájezd <BRANCH_SIGN> směrem na <TOWARD_SIGN>.",
+        "9": "Odbočte <RELATIVE_DIRECTION> a vyjeďte na nájezd <NAME_SIGN>.",
+        "10": "Vezměte rampu.",
+        "11": "Jeďte na nájezd <BRANCH_SIGN>.",
+        "12": "Jeďte na nájezd směrem na <TOWARD_SIGN>.",
+        "13": "Jeďte nájezdem <BRANCH_SIGN> směrem na <TOWARD_SIGN>.",
+        "14": "Jeďte na nájezd <NAME_SIGN>."
       },
       "relative_directions": [
         "vlevo",
@@ -1318,11 +1318,11 @@
     },
     "ramp_straight": {
       "phrases": {
-        "0": "Pokračujte rovně, abyste vjeli na nájezd.",
-        "1": "Pokračujte rovně, abyste vjeli na nájezd <BRANCH_SIGN>.",
-        "2": "Pokračujte rovně, abyste vjeli na nájezd <TOWARD_SIGN>.",
-        "3": "Pokračujte rovně, abyste vjeli na nájezd <BRANCH_SIGN> směrem na <TOWARD_SIGN>.",
-        "4": "Pokračujte rovně, abyste vjeli na nájezd <NAME_SIGN>."
+        "0": "Zůstaňte rovně, abyste se dostali na rampu.",
+        "1": "Zůstaňte rovně a sjeďte na nájezd <BRANCH_SIGN>.",
+        "2": "Zůstaňte rovně a sjeďte na nájezd směrem na <TOWARD_SIGN>.",
+        "3": "Zůstaňte rovně a sjeďte na nájezd <BRANCH_SIGN> směrem na <TOWARD_SIGN>.",
+        "4": "Zůstaňte rovně a sjeďte na nájezd <NAME_SIGN>."
       },
       "example_phrases": {
         "0": [
@@ -1344,11 +1344,11 @@
     },
     "ramp_straight_verbal": {
       "phrases": {
-        "0": "Pokračujte rovně, abyste vjeli na nájezd.",
-        "1": "Pokračujte rovně, abyste vjeli na nájezd <BRANCH_SIGN>.",
-        "2": "Pokračujte rovně, abyste vjeli na nájezd směrem na <TOWARD_SIGN>.",
-        "3": "Pokračujte rovně, abyste vjeli na nájezd <BRANCH_SIGN> směrem na <TOWARD_SIGN>.",
-        "4": "Pokračujte rovně, abyste vjeli na nájezd <NAME_SIGN>."
+        "0": "Zůstaňte rovně, abyste se dostali na rampu.",
+        "1": "Zůstaňte rovně a sjeďte na nájezd <BRANCH_SIGN>.",
+        "2": "Zůstaňte rovně a sjeďte na nájezd směrem na <TOWARD_SIGN>.",
+        "3": "Zůstaňte rovně a sjeďte na nájezd <BRANCH_SIGN> směrem na <TOWARD_SIGN>.",
+        "4": "Zůstaňte rovně a sjeďte na nájezd <NAME_SIGN>."
       },
       "example_phrases": {
         "0": [
@@ -1370,21 +1370,21 @@
     },
     "ramp_verbal": {
       "phrases": {
-        "0": "Vjeďte na nájezd <RELATIVE_DIRECTION>.",
-        "1": "Vjeďte na nájezd <BRANCH_SIGN> <RELATIVE_DIRECTION>.",
-        "2": "Vjeďte na nájezd <RELATIVE_DIRECTION> směrem na <TOWARD_SIGN>.",
-        "3": "Vjeďte na nájezd <BRANCH_SIGN> <RELATIVE_DIRECTION> směrem na <TOWARD_SIGN>.",
-        "4": "Vjeďte na nájezd <NAME_SIGN> <RELATIVE_DIRECTION>.",
-        "5": "Odbočte <RELATIVE_DIRECTION>, abyste vjeli na nájezd.",
-        "6": "Odbočte <RELATIVE_DIRECTION>, abyste vjeli na nájezd <BRANCH_SIGN>.",
-        "7": "Odbočte <RELATIVE_DIRECTION>, abyste vjeli na nájezd směrem na <TOWARD_SIGN>.",
-        "8": "Odbočte <RELATIVE_DIRECTION>, abyste vjeli na nájezd <BRANCH_SIGN> směrem na <TOWARD_SIGN>.",
-        "9": "Odbočte <RELATIVE_DIRECTION>, abyste vjeli na nájezd <NAME_SIGN>.",
-        "10": "Vjeďte na nájezd.",
-        "11": "Vjeďte na nájezd <BRANCH_SIGN>.",
-        "12": "Vjeďte na nájezd směrem na <TOWARD_SIGN>.",
-        "13": "Vjeďte na nájezd <BRANCH_SIGN> směrem na <TOWARD_SIGN>.",
-        "14": "Vjeďte na nájezd <NAME_SIGN>."
+        "0": "Jeďte na nájezd na <RELATIVE_DIRECTION>.",
+        "1": "Jeďte na nájezd <BRANCH_SIGN> na <RELATIVE_DIRECTION>.",
+        "2": "Jeďte na nájezd na <RELATIVE_DIRECTION> směrem na <TOWARD_SIGN>.",
+        "3": "Jeďte na nájezd <BRANCH_SIGN> na <RELATIVE_DIRECTION> směrem na <TOWARD_SIGN>.",
+        "4": "Jeďte na nájezd <NAME_SIGN> na <RELATIVE_DIRECTION>.",
+        "5": "Odbočte <RELATIVE_DIRECTION> a vyjeďte na nájezd.",
+        "6": "Odbočte <RELATIVE_DIRECTION> a vyjeďte na nájezd <BRANCH_SIGN>.",
+        "7": "Odbočte <RELATIVE_DIRECTION> a jeďte na nájezd směrem na <TOWARD_SIGN>.",
+        "8": "Odbočte <RELATIVE_DIRECTION> a jeďte na nájezd <BRANCH_SIGN> směrem na <TOWARD_SIGN>.",
+        "9": "Odbočte <RELATIVE_DIRECTION> a vyjeďte na nájezd <NAME_SIGN>.",
+        "10": "Vezměte rampu.",
+        "11": "Jeďte na nájezd <BRANCH_SIGN>.",
+        "12": "Jeďte na nájezd směrem na <TOWARD_SIGN>.",
+        "13": "Jeďte nájezdem <BRANCH_SIGN> směrem na <TOWARD_SIGN>.",
+        "14": "Jeďte na nájezd <NAME_SIGN>."
       },
       "relative_directions": [
         "vlevo",
@@ -1442,21 +1442,21 @@
     },
     "sharp": {
       "phrases": {
-        "0": "Odbočte ostře <RELATIVE_DIRECTION>.",
-        "1": "Odbočte ostře <RELATIVE_DIRECTION> na <STREET_NAMES>.",
-        "2": "Odbočte ostře <RELATIVE_DIRECTION> na <BEGIN_STREET_NAMES>. Pokračujte na <STREET_NAMES>.",
-        "3": "Odbočte ostře <RELATIVE_DIRECTION>, abyste zůstali na <STREET_NAMES>.",
-        "4": "Na <JUNCTION_NAME> odbočte ostře <RELATIVE_DIRECTION>.",
-        "5": "Odbočte ostře <RELATIVE_DIRECTION> směrem na <TOWARD_SIGN>."
+        "0": "Proveďte ostrý <RELATIVE_DIRECTION>.",
+        "1": "Proveďte ostře <RELATIVE_DIRECTION> na <STREET_NAMES>.",
+        "2": "Zahněte ostře <RELATIVE_DIRECTION> na <BEGIN_STREET_NAMES>. Pokračujte po <STREET_NAMES>.",
+        "3": "Udělejte ostře <RELATIVE_DIRECTION> a zůstaňte na <STREET_NAMES>.",
+        "4": "Proveďte ostrý <RELATIVE_DIRECTION> na <JUNCTION_NAME>.",
+        "5": "Proveďte ostře <RELATIVE_DIRECTION> směrem k <TOWARD_SIGN>."
       },
       "empty_street_name_labels": [
         "chodník",
         "cyklostezka",
         "stezka pro horská kola",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "přechod pro chodce",
+        "schody",
+        "most",
+        "tunel"
       ],
       "relative_directions": [
         "vlevo",
@@ -1485,21 +1485,21 @@
     },
     "sharp_verbal": {
       "phrases": {
-        "0": "Odbočte ostře <RELATIVE_DIRECTION>.",
-        "1": "Odbočte ostře <RELATIVE_DIRECTION> na <STREET_NAMES>.",
-        "2": "Odbočte ostře <RELATIVE_DIRECTION> na <BEGIN_STREET_NAMES>.",
-        "3": "Odbočte ostře <RELATIVE_DIRECTION>, abyste zůstali na <STREET_NAMES>.",
-        "4": "Na <JUNCTION_NAME> odbočte ostře <RELATIVE_DIRECTION>.",
-        "5": "Odbočte ostře <RELATIVE_DIRECTION> směrem na <TOWARD_SIGN>."
+        "0": "Proveďte ostrý <RELATIVE_DIRECTION>.",
+        "1": "Proveďte ostře <RELATIVE_DIRECTION> na <STREET_NAMES>.",
+        "2": "Zahněte ostře <RELATIVE_DIRECTION> na <BEGIN_STREET_NAMES>.",
+        "3": "Udělejte ostře <RELATIVE_DIRECTION> a zůstaňte na <STREET_NAMES>.",
+        "4": "Proveďte ostrý <RELATIVE_DIRECTION> na <JUNCTION_NAME>.",
+        "5": "Proveďte ostře <RELATIVE_DIRECTION> směrem k <TOWARD_SIGN>."
       },
       "empty_street_name_labels": [
         "chodník",
         "cyklostezka",
         "stezka pro horská kola",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "přechod pro chodce",
+        "schody",
+        "most",
+        "tunel"
       ],
       "relative_directions": [
         "vlevo",
@@ -1542,23 +1542,23 @@
         "18": "Jeďte <CARDINAL_DIRECTION> na <BEGIN_STREET_NAMES>. Pokračujte na <STREET_NAMES>."
       },
       "cardinal_directions": [
-        "na sever",
-        "na severovýchod",
-        "na východ",
-        "na jihovýchod",
-        "na jih",
-        "na jihozápad",
-        "na západ",
-        "na severozápad"
+        "severní",
+        "severovýchod",
+        "východní",
+        "jihovýchodní",
+        "jižní",
+        "jihozápadní",
+        "Západ",
+        "Severozápad"
       ],
       "empty_street_name_labels": [
         "chodník",
         "cyklostezka",
         "stezka pro horská kola",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "přechod pro chodce",
+        "schody",
+        "most",
+        "tunel"
       ],
       "example_phrases": {
         "0": [
@@ -1611,45 +1611,45 @@
     },
     "start_verbal": {
       "phrases": {
-        "0": "Směřujte <CARDINAL_DIRECTION>.",
-        "1": "Směřujte <LENGTH> <CARDINAL_DIRECTION>.",
-        "2": "Směřujte <CARDINAL_DIRECTION> na <STREET_NAMES>.",
-        "3": "Směřujte <LENGTH><CARDINAL_DIRECTION> na <STREET_NAMES>.",
-        "4": "Směřujte <CARDINAL_DIRECTION> na <BEGIN_STREET_NAMES>.",
+        "0": "Zamiřte <CARDINAL_DIRECTION>.",
+        "1": "Přejděte na <CARDINAL_DIRECTION> a přejděte na <LENGTH>.",
+        "2": "Zamiřte <CARDINAL_DIRECTION> na <STREET_NAMES>.",
+        "3": "Zamiřte <CARDINAL_DIRECTION> na <STREET_NAMES> na <LENGTH>.",
+        "4": "Zamiřte <CARDINAL_DIRECTION> na <BEGIN_STREET_NAMES>.",
         "5": "Jeďte <CARDINAL_DIRECTION>.",
-        "6": "Jeďte <LENGTH> <CARDINAL_DIRECTION>.",
-        "7": "Jeďte <CARDINAL_DIRECTION> na <STREET_NAMES>.",
-        "8": "Jeďte <LENGTH> <CARDINAL_DIRECTION> na <STREET_NAMES>.",
-        "9": "Jeďte <CARDINAL_DIRECTION> na <BEGIN_STREET_NAMES>.",
-        "10": "Jděte <CARDINAL_DIRECTION>.",
-        "11": "Jděte <LENGTH> <CARDINAL_DIRECTION>.",
-        "12": "Jděte <CARDINAL_DIRECTION> na <STREET_NAMES>.",
-        "13": "Jděte <LENGTH> <CARDINAL_DIRECTION> na <STREET_NAMES>.",
-        "14": "Jděte <CARDINAL_DIRECTION> na <BEGIN_STREET_NAMES>.",
-        "15": "Jeďte <CARDINAL_DIRECTION>.",
-        "16": "Jeďte <LENGTH> <CARDINAL_DIRECTION>.",
-        "17": "Jeďte <CARDINAL_DIRECTION> na <STREET_NAMES>.",
-        "18": "Jeďte <LENGTH> <CARDINAL_DIRECTION> na <STREET_NAMES>.",
-        "19": "Jeďte <CARDINAL_DIRECTION> na <BEGIN_STREET_NAMES>."
+        "6": "Jeďte <CARDINAL_DIRECTION> po dobu <LENGTH>.",
+        "7": "Jeďte <CARDINAL_DIRECTION> po <STREET_NAMES>.",
+        "8": "Jeďte <CARDINAL_DIRECTION> po <STREET_NAMES> po dobu <LENGTH>.",
+        "9": "Jeďte <CARDINAL_DIRECTION> po <BEGIN_STREET_NAMES>.",
+        "10": "Pěšky <CARDINAL_DIRECTION>.",
+        "11": "Jděte <CARDINAL_DIRECTION> na <LENGTH>.",
+        "12": "Jděte <CARDINAL_DIRECTION> po <STREET_NAMES>.",
+        "13": "Jděte <CARDINAL_DIRECTION> po <STREET_NAMES> na <LENGTH>.",
+        "14": "Jděte <CARDINAL_DIRECTION> po <BEGIN_STREET_NAMES>.",
+        "15": "Na kole <CARDINAL_DIRECTION>.",
+        "16": "Na kole <CARDINAL_DIRECTION> <LENGTH>.",
+        "17": "Na kole <CARDINAL_DIRECTION> na <STREET_NAMES>.",
+        "18": "Na kole <CARDINAL_DIRECTION> na <STREET_NAMES> <LENGTH>.",
+        "19": "Na kole <CARDINAL_DIRECTION> po <BEGIN_STREET_NAMES>."
       },
       "cardinal_directions": [
-        "na sever",
-        "na severovýchod",
-        "na východ",
-        "na jihovýchod",
-        "na jih",
-        "na jihozápad",
-        "na západ",
-        "na severozápad"
+        "severní",
+        "severovýchod",
+        "východní",
+        "jihovýchodní",
+        "jižní",
+        "jihozápadní",
+        "Západ",
+        "Severozápad"
       ],
       "empty_street_name_labels": [
         "chodník",
         "cyklostezka",
         "stezka pro horská kola",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "přechod pro chodce",
+        "schody",
+        "most",
+        "tunel"
       ],
       "metric_lengths": [
         "<KILOMETERS> kilometrů",
@@ -1659,10 +1659,10 @@
       ],
       "us_customary_lengths": [
         "<MILES> mil",
-        "1 míli",
+        "1 míle",
         "půl míle",
         "čtvrt míle",
-        "<FEET> stop",
+        "<FEET> nohy",
         "méně než 10 stop"
       ],
       "example_phrases": {
@@ -1738,18 +1738,18 @@
     },
     "transit": {
       "phrases": {
-        "0": "Jeďte <TRANSIT_NAME>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)",
+        "0": "Použijte <TRANSIT_NAME>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)",
         "1": "Jeďte <TRANSIT_NAME> směrem na <TRANSIT_HEADSIGN>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)"
       },
       "empty_transit_name_labels": [
-        "tramvají",
-        "metrem",
-        "vlakem",
-        "autobusem",
-        "trajektem",
-        "lanovkou",
-        "gondolou",
-        "pozemní lanovkou"
+        "tramvaj",
+        "metro",
+        "vlak",
+        "autobus",
+        "trajekt",
+        "lanovka",
+        "gondola",
+        "lanovka"
       ],
       "transit_stop_count_labels": {
         "one": "zastávka",
@@ -1769,11 +1769,11 @@
     },
     "transit_connection_destination": {
       "phrases": {
-        "0": "Odejděte ze zastávky.",
-        "1": "Odejděte z <TRANSIT_STOP>.",
-        "2": "Odejděte z <TRANSIT_STOP> <STATION_LABEL>."
+        "0": "Vyjděte ze stanice.",
+        "1": "Opusťte <TRANSIT_STOP>.",
+        "2": "Opusťte <TRANSIT_STOP> <STATION_LABEL>."
       },
-      "station_label": "Zastávka",
+      "station_label": "Stanice",
       "example_phrases": {
         "0": [
           "Exit the station."
@@ -1788,226 +1788,226 @@
     },
     "transit_connection_destination_verbal": {
       "phrases": {
-        "0": "Odejděte ze zastávky.",
-        "1": "Odejděte z <TRANSIT_STOP>.",
-        "2": "Odejděte z <TRANSIT_STOP> <STATION_LABEL>."
+        "0": "Opusťte stanici.",
+        "1": "Opusťte <TRANSIT_STOP>.",
+        "2": "Opusťte <TRANSIT_STOP> <STATION_LABEL>."
       },
-      "station_label": "Zastávka",
+      "station_label": "Stanice",
       "example_phrases": {
         "0": [
-          "Exit the station."
+          "Opusťte stanici."
         ],
         "1": [
-          "Exit the Embarcadero Station."
+          "Opusťte stanici Embarcadero."
         ],
         "2": [
-          "Exit the 8 St - NYU Station."
+          "Opusťte stanici 8 St - NYU."
         ]
       }
     },
     "transit_connection_start": {
       "phrases": {
-        "0": "Vstupte na zastávku.",
-        "1": "Vstupte na <TRANSIT_STOP>.",
-        "2": "Vstupte na <TRANSIT_STOP> <STATION_LABEL>."
+        "0": "Výstup do stanice.",
+        "1": "Zadejte <TRANSIT_STOP>.",
+        "2": "Zadejte <TRANSIT_STOP> <STATION_LABEL>."
       },
-      "station_label": "Zastávka",
+      "station_label": "Stanice",
       "example_phrases": {
         "0": [
-          "Enter the station."
+          "Vstupte do stanice."
         ],
         "1": [
-          "Enter the Embarcadero Station."
+          "Vstupte do stanice Embarcadero."
         ],
         "2": [
-          "Enter the 8 St - NYU Station."
+          "Výstup do stanice 8 St - NYU."
         ]
       }
     },
     "transit_connection_start_verbal": {
       "phrases": {
-        "0": "Vstupte na zastávku.",
-        "1": "Vstupte na <TRANSIT_STOP>.",
-        "2": "Vstupte na <TRANSIT_STOP> <STATION_LABEL>."
+        "0": "Zadejte stanici.",
+        "1": "Zadejte <TRANSIT_STOP>.",
+        "2": "Zadejte <TRANSIT_STOP> <STATION_LABEL>."
       },
-      "station_label": "Zastávka",
+      "station_label": "Stanice",
       "example_phrases": {
         "0": [
-          "Enter the station."
+          "Vstupte do stanice."
         ],
         "1": [
-          "Enter the Embarcadero Station."
+          "Vstupte do stanice Embarcadero."
         ],
         "2": [
-          "Enter the 8 St - NYU Station."
+          "Vstupte do stanice 8 St - NYU."
         ]
       }
     },
     "transit_connection_transfer": {
       "phrases": {
-        "0": "Přestupte na zastávce.",
-        "1": "Přestupte na <TRANSIT_STOP>.",
-        "2": "Přestupte na <TRANSIT_STOP> <STATION_LABEL>."
+        "0": "Přestup na stanici.",
+        "1": "Přestup na <TRANSIT_STOP>.",
+        "2": "Přestup na <TRANSIT_STOP> <STATION_LABEL>."
       },
-      "station_label": "Zastávka",
+      "station_label": "Stanice",
       "example_phrases": {
         "0": [
-          "Transfer at the station."
+          "Přestup na nádraží."
         ],
         "1": [
-          "Transfer at the Embarcadero Station."
+          "Přestup na nádraží Embarcadero."
         ],
         "2": [
-          "Transfer at the 8 St - NYU Station."
+          "Přestup na stanici 8 St - NYU."
         ]
       }
     },
     "transit_connection_transfer_verbal": {
       "phrases": {
-        "0": "Přestupte na zastávce.",
-        "1": "Přestupte na <TRANSIT_STOP>.",
-        "2": "Přestupte na <TRANSIT_STOP> <STATION_LABEL>."
+        "0": "Přestup na stanici.",
+        "1": "Přestup na <TRANSIT_STOP>.",
+        "2": "Přestup na <TRANSIT_STOP> <STATION_LABEL>."
       },
-      "station_label": "Zastávka",
+      "station_label": "Stanice",
       "example_phrases": {
         "0": [
-          "Transfer at the station."
+          "Přestup na nádraží."
         ],
         "1": [
-          "Transfer at the Embarcadero Station."
+          "Přestup na nádraží Embarcadero."
         ],
         "2": [
-          "Transfer at the 8 St - NYU Station."
+          "Přestup na stanici 8 St - NYU."
         ]
       }
     },
     "transit_remain_on": {
       "phrases": {
-        "0": "Zůstaňte <TRANSIT_NAME>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)",
-        "1": "Zůstaňte <TRANSIT_NAME> směrem na <TRANSIT_HEADSIGN>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)"
+        "0": "Zůstaňte na <TRANSIT_NAME>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)",
+        "1": "Zůstaňte na <TRANSIT_NAME> ve směru <TRANSIT_HEADSIGN>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)"
       },
       "empty_transit_name_labels": [
-        "v tramvaji",
-        "v metru",
-        "ve vlaku",
-        "v autobuse",
-        "na trajektu",
-        "v lanovce",
-        "v gondole",
-        "v pozemní lanovce"
+        "tramvaj",
+        "metro",
+        "vlak",
+        "autobus",
+        "trajekt",
+        "lanovka",
+        "gondola",
+        "lanovka"
       ],
       "transit_stop_count_labels": {
-        "one": "zastávka",
-        "other": "zastávky"
+        "one": "stop",
+        "other": "zastaví"
       },
       "example_phrases": {
         "0": [
-          "Remain on the New Haven. (1 stop)",
-          "Remain on the train. (3 stops)"
+          "Zůstaňte v New Havenu. (1 zastávka)",
+          "Zůstaňte ve vlaku. (3 zastávky)"
         ],
         "1": [
-          "Remain on the F toward JAMAICA - 179 ST. (10 stops)"
+          "Zůstaňte na F směrem na JAMAJKU - 179 ST. (10 zastávek)"
         ]
       }
     },
     "transit_remain_on_verbal": {
       "phrases": {
-        "0": "Zůstaňte <TRANSIT_NAME>.",
-        "1": "Zůstaňte <TRANSIT_NAME> směrem na <TRANSIT_HEADSIGN>."
+        "0": "Zůstaňte na <TRANSIT_NAME>.",
+        "1": "Zůstaňte na <TRANSIT_NAME> ve směru <TRANSIT_HEADSIGN>."
       },
       "empty_transit_name_labels": [
-        "v tramvaji",
-        "v metru",
-        "ve vlaku",
-        "v autobuse",
-        "na trajektu",
-        "v lanovce",
-        "v gondole",
-        "v pozemní lanovce"
+        "tramvaj",
+        "metro",
+        "vlak",
+        "autobus",
+        "trajekt",
+        "lanovka",
+        "gondola",
+        "lanovka"
       ],
       "example_phrases": {
         "0": [
-          "Remain on the New Haven."
+          "Zůstaňte v New Havenu."
         ],
         "1": [
-          "Remain on the F toward JAMAICA - 179 ST."
+          "Zůstaňte na F směrem na JAMAJKU - 179 ST."
         ]
       }
     },
     "transit_transfer": {
       "phrases": {
-        "0": "Přestupte, abyste nastoupili <TRANSIT_NAME>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)",
-        "1": "Přestupte, abyste nastoupili <TRANSIT_NAME> směrem na <TRANSIT_HEADSIGN>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)"
+        "0": "Přestupte na <TRANSIT_NAME>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)",
+        "1": "Přestupte na <TRANSIT_NAME> ve směru <TRANSIT_HEADSIGN>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)"
       },
       "empty_transit_name_labels": [
-        "do tramvaje",
-        "do metra",
-        "do vlaku",
-        "do autobusu",
-        "na trajekt",
-        "do lanovky",
-        "na gondolu",
-        "do pozemní lanovky"
+        "tramvaj",
+        "metro",
+        "vlak",
+        "autobus",
+        "trajekt",
+        "lanovka",
+        "gondola",
+        "lanovka"
       ],
       "transit_stop_count_labels": {
-        "one": "zastávka",
-        "other": "zastávky"
+        "one": "stop",
+        "other": "zastaví"
       },
       "example_phrases": {
         "0": [
-          "Transfer to take the New Haven. (1 stop)",
-          "Transfer to take the tram. (4 stops)"
+          "Přestup do New Havenu. (1 zastávka)",
+          "Přestup na tramvaj. (4 zastávky)"
         ],
         "1": [
-          "Transfer to take the F toward JAMAICA - 179 ST. (10 stops)"
+          "Přestupte na F směrem na JAMAJKU - 179 ST. (10 zastávek)"
         ]
       }
     },
     "transit_transfer_verbal": {
       "phrases": {
-        "0": "Přestupte, abyste nastoupili <TRANSIT_NAME>.",
-        "1": "Přestupte, abyste nastoupili <TRANSIT_NAME> směrem na <TRANSIT_HEADSIGN>."
+        "0": "Přestupte na <TRANSIT_NAME>.",
+        "1": "Přestupte na <TRANSIT_NAME> ve směru <TRANSIT_HEADSIGN>."
       },
       "empty_transit_name_labels": [
-        "do tramvaje",
-        "do metra",
-        "do vlaku",
-        "do autobusu",
-        "na trajekt",
-        "do lanovky",
-        "na gondolu",
-        "do pozemní lanovky"
+        "tramvaj",
+        "metro",
+        "vlak",
+        "autobus",
+        "trajekt",
+        "lanovka",
+        "gondola",
+        "lanovka"
       ],
       "example_phrases": {
         "0": [
-          "Transfer to take the New Haven."
+          "Přestup do New Havenu."
         ],
         "1": [
-          "Transfer to take the F toward JAMAICA - 179 ST."
+          "Přestupte na F směrem na JAMAJKU - 179 ST."
         ]
       }
     },
     "transit_verbal": {
       "phrases": {
-        "0": "Jeďte <TRANSIT_NAME>.",
+        "0": "Použijte <TRANSIT_NAME>.",
         "1": "Jeďte <TRANSIT_NAME> směrem na <TRANSIT_HEADSIGN>."
       },
       "empty_transit_name_labels": [
-        "tramvají",
-        "metrem",
-        "vlakem",
-        "autobusem",
-        "trajektem",
-        "lanovkou",
-        "gondolou",
-        "pozemní lanovkou"
+        "tramvaj",
+        "metro",
+        "vlak",
+        "autobus",
+        "trajekt",
+        "lanovka",
+        "gondola",
+        "lanovka"
       ],
       "example_phrases": {
         "0": [
-          "Take the New Haven."
+          "Vezměte si New Haven."
         ],
         "1": [
-          "Take the F toward JAMAICA - 179 ST."
+          "Jeďte po F směrem na JAMAICA - 179 ST."
         ]
       }
     },
@@ -2015,19 +2015,19 @@
       "phrases": {
         "0": "Odbočte <RELATIVE_DIRECTION>.",
         "1": "Odbočte <RELATIVE_DIRECTION> na <STREET_NAMES>.",
-        "2": "Odbočte <RELATIVE_DIRECTION> na <BEGIN_STREET_NAMES>. Pokračujte na <STREET_NAMES>.",
-        "3": "Odbočte <RELATIVE_DIRECTION>, abyste zůstali na <STREET_NAMES>.",
+        "2": "Odbočte z <RELATIVE_DIRECTION> na <BEGIN_STREET_NAMES>. Pokračujte po <STREET_NAMES>.",
+        "3": "Odbočte <RELATIVE_DIRECTION> a zůstaňte na <STREET_NAMES>.",
         "4": "Odbočte <RELATIVE_DIRECTION> na <JUNCTION_NAME>.",
-        "5": "Odbočte <RELATIVE_DIRECTION> směrem na <TOWARD_SIGN>."
+        "5": "Otočte <RELATIVE_DIRECTION> směrem k <TOWARD_SIGN>."
       },
       "empty_street_name_labels": [
         "chodník",
         "cyklostezka",
         "stezka pro horská kola",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "přechod pro chodce",
+        "schody",
+        "most",
+        "tunel"
       ],
       "relative_directions": [
         "vlevo",
@@ -2058,19 +2058,19 @@
       "phrases": {
         "0": "Odbočte <RELATIVE_DIRECTION>.",
         "1": "Odbočte <RELATIVE_DIRECTION> na <STREET_NAMES>.",
-        "2": "Odbočte <RELATIVE_DIRECTION> na <BEGIN_STREET_NAMES>.",
-        "3": "Odbočte <RELATIVE_DIRECTION>, abyste zůstali na <STREET_NAMES>.",
+        "2": "Odbočte z <RELATIVE_DIRECTION> na <BEGIN_STREET_NAMES>.",
+        "3": "Odbočte <RELATIVE_DIRECTION> a zůstaňte na <STREET_NAMES>.",
         "4": "Odbočte <RELATIVE_DIRECTION> na <JUNCTION_NAME>.",
-        "5": "Odbočte <RELATIVE_DIRECTION> směrem na <TOWARD_SIGN>."
+        "5": "Otočte <RELATIVE_DIRECTION> směrem k <TOWARD_SIGN>."
       },
       "empty_street_name_labels": [
         "chodník",
         "cyklostezka",
         "stezka pro horská kola",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "přechod pro chodce",
+        "schody",
+        "most",
+        "tunel"
       ],
       "relative_directions": [
         "vlevo",
@@ -2099,23 +2099,23 @@
     },
     "uturn": {
       "phrases": {
-        "0": "Otočte se o 180° <RELATIVE_DIRECTION>.",
-        "1": "Otočte se o 180° <RELATIVE_DIRECTION> na <STREET_NAMES>.",
-        "2": "Otočte se o 180° <RELATIVE_DIRECTION>, abyste zůstali na <STREET_NAMES>.",
-        "3": "Na <CROSS_STREET_NAMES> se otočte o 180° <RELATIVE_DIRECTION> .",
-        "4": "Na <CROSS_STREET_NAMES> se otočte o 180° <RELATIVE_DIRECTION> na <STREET_NAMES>.",
-        "5": "Na <CROSS_STREET_NAMES> se otočte o 180° <RELATIVE_DIRECTION>, abyste zůstali na <STREET_NAMES>.",
-        "6": "Na <JUNCTION_NAME> se otočte o 180° <RELATIVE_DIRECTION> .",
-        "7": "Otočte se o 180° <RELATIVE_DIRECTION> směrem na <TOWARD_SIGN>."
+        "0": "Otočte se <RELATIVE_DIRECTION>.",
+        "1": "Otočte se <RELATIVE_DIRECTION> na <STREET_NAMES>.",
+        "2": "Otočte se <RELATIVE_DIRECTION> a zůstaňte na <STREET_NAMES>.",
+        "3": "Otočte se <RELATIVE_DIRECTION> na <CROSS_STREET_NAMES>.",
+        "4": "Otočte se <RELATIVE_DIRECTION> na <CROSS_STREET_NAMES> na <STREET_NAMES>.",
+        "5": "Otočte se <RELATIVE_DIRECTION> na <CROSS_STREET_NAMES> a zůstaňte na <STREET_NAMES>.",
+        "6": "Otočte se <RELATIVE_DIRECTION> na <JUNCTION_NAME>.",
+        "7": "Otočte se <RELATIVE_DIRECTION> směrem k <TOWARD_SIGN>."
       },
       "empty_street_name_labels": [
         "chodník",
         "cyklostezka",
         "stezka pro horská kola",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "přechod pro chodce",
+        "schody",
+        "most",
+        "tunel"
       ],
       "relative_directions": [
         "vlevo",
@@ -2150,23 +2150,23 @@
     },
     "uturn_verbal": {
       "phrases": {
-        "0": "Otočte se o 180° <RELATIVE_DIRECTION>.",
-        "1": "Otočte se o 180° <RELATIVE_DIRECTION> na <STREET_NAMES>.",
-        "2": "Otočte se o 180° <RELATIVE_DIRECTION>, abyste zůstali na <STREET_NAMES>.",
-        "3": "Na <CROSS_STREET_NAMES> se otočte o 180° <RELATIVE_DIRECTION>.",
-        "4": "Na <CROSS_STREET_NAMES> se otočte o 180° <RELATIVE_DIRECTION> na <STREET_NAMES>.",
-        "5": "Na <CROSS_STREET_NAMES> se otočte o 180°<RELATIVE_DIRECTION>, abyste zůstali na <STREET_NAMES>.",
-        "6": "Na <JUNCTION_NAME> se otočte o 180 °<RELATIVE_DIRECTION>.",
-        "7": "Otočte se o 180° <RELATIVE_DIRECTION> směrem na <TOWARD_SIGN>."
+        "0": "Otočte se <RELATIVE_DIRECTION>.",
+        "1": "Otočte se <RELATIVE_DIRECTION> na <STREET_NAMES>.",
+        "2": "Otočte se <RELATIVE_DIRECTION> a zůstaňte na <STREET_NAMES>.",
+        "3": "Otočte se <RELATIVE_DIRECTION> na <CROSS_STREET_NAMES>.",
+        "4": "Otočte se <RELATIVE_DIRECTION> na <CROSS_STREET_NAMES> na <STREET_NAMES>.",
+        "5": "Otočte se <RELATIVE_DIRECTION> na <CROSS_STREET_NAMES> a zůstaňte na <STREET_NAMES>.",
+        "6": "Otočte se <RELATIVE_DIRECTION> na <JUNCTION_NAME>.",
+        "7": "Otočte se <RELATIVE_DIRECTION> směrem k <TOWARD_SIGN>."
       },
       "empty_street_name_labels": [
         "chodník",
         "cyklostezka",
         "stezka pro horská kola",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "přechod pro chodce",
+        "schody",
+        "most",
+        "tunel"
       ],
       "relative_directions": [
         "vlevo",
@@ -2202,7 +2202,7 @@
     "verbal_multi_cue": {
       "phrases": {
         "0": "<CURRENT_VERBAL_CUE> Poté <NEXT_VERBAL_CUE>",
-        "1": "<CURRENT_VERBAL_CUE> Poté za <LENGTH>, <NEXT_VERBAL_CUE>"
+        "1": "<CURRENT_VERBAL_CUE> Poté v <LENGTH>, <NEXT_VERBAL_CUE>"
       },
       "metric_lengths": [
         "<KILOMETERS> kilometrů",
@@ -2212,24 +2212,24 @@
       ],
       "us_customary_lengths": [
         "<MILES> mil",
-        "1 míli",
+        "1 míle",
         "půl míle",
         "čtvrt míle",
-        "<FEET> stop",
+        "<FEET> nohy",
         "méně než 10 stop"
       ],
       "example_phrases": {
         "0": [
-          "Bear right onto East Fayette Street. Then Turn right onto North Gay Street."
+          "Bear že jo na East Fayette Street. Pak odbočte že jo na North Gay Street."
         ],
         "1": [
-          "Bear right onto East Fayette Street. Then, in 500 feet, Turn right onto North Gay Street."
+          "Bear že jo na East Fayette Street. Pak za 500 stop odbočte že jo na North Gay Street."
         ]
       }
     },
     "approach_verbal_alert": {
       "phrases": {
-        "0": "Za <LENGTH>, <CURRENT_VERBAL_CUE>"
+        "0": "V <LENGTH>, <CURRENT_VERBAL_CUE>"
       },
       "metric_lengths": [
         "<KILOMETERS> kilometrů",
@@ -2239,113 +2239,113 @@
       ],
       "us_customary_lengths": [
         "<MILES> mil",
-        "1 míli",
+        "1 míle",
         "půl míle",
         "čtvrt míle",
-        "<FEET> stop",
+        "<FEET> nohy",
         "méně než 10 stop"
       ],
       "example_phrases": {
         "0": [
-          "In a quarter mile, Turn right onto North Gay Street."
+          "Za čtvrt míle odbočte že jo na North Gay Street."
         ]
       }
     },
     "pass": {
       "phrases": {
-          "0": "Projděte <OBJECT_LABEL>.",
-          "1": "Projděte semafory na <OBJECT_LABEL>."
+        "0": "Předejte <OBJECT_LABEL>.",
+        "1": "Mít dopravní signály na <OBJECT_LABEL>."
       },
       "object_labels": [
-          "bránu",
-          "sloupy",
-          "křižovatku"
+        "brána",
+        "patníky",
+        "křižovatka cest"
       ],
       "example_phrases": {
-          "0": [
-              "Projděte bránou."
-          ]
+        "0": [
+          "Projděte branou."
+        ]
       }
     },
     "elevator": {
       "phrases": {
-        "0": "Take the elevator.",
-        "1": "Take the elevator to <LEVEL>."
+        "0": "Jeď výtahem.",
+        "1": "Jeďte výtahem do <LEVEL>."
       },
       "example_phrases": {
         "0": [
-          "Take the elevator."
+          "Jeď výtahem."
         ],
         "1": [
-          "Take the elevator to Level 1."
+          "Vyjeďte výtahem na úroveň 1."
         ]
       }
     },
     "steps": {
       "phrases": {
-        "0": "Take the stairs.",
-        "1": "Take the stairs to <LEVEL>."
+        "0": "Jděte po schodech.",
+        "1": "Vyjděte po schodech do <LEVEL>."
       },
       "example_phrases": {
         "0": [
-          "Take the stairs."
+          "Jděte po schodech."
         ],
         "1": [
-          "Take the stairs to Level 2."
+          "Vyjděte po schodech do úrovně 2."
         ]
       }
     },
     "escalator": {
       "phrases": {
-        "0": "Take the escalator.",
-        "1": "Take the escalator to <LEVEL>."
+        "0": "Jeďte po eskalátoru.",
+        "1": "Jeďte po eskalátoru do <LEVEL>."
       },
       "example_phrases": {
         "0": [
-          "Take the escalator."
+          "Jeďte po eskalátoru."
         ],
         "1": [
-          "Take the escalator to Level 3."
+          "Vyjeďte eskalátorem na úroveň 3."
         ]
       }
     },
     "enter_building": {
       "phrases": {
-        "0": "Enter the building.",
-        "1": "Enter the building, and continue on <STREET_NAMES>."
+        "0": "Vstupte do budovy.",
+        "1": "Vstupte do budovy a pokračujte po <STREET_NAMES>."
       },
       "empty_street_name_labels": [
         "chodník",
         "cyklostezka",
         "stezka pro horská kola",
-        "the crosswalk"
+        "přechod pro chodce"
       ],
       "example_phrases": {
         "0": [
-          "Enter the building."
+          "Vstupte do budovy."
         ],
         "1": [
-          "Enter the building, and continue on the walkway."
+          "Vstupte do budovy a pokračujte po chodníku."
         ]
       }
     },
     "exit_building": {
       "phrases": {
-        "0": "Exit the building.",
-        "1": "Exit the building, and continue on <STREET_NAMES>."
+        "0": "Vyjděte z budovy.",
+        "1": "Vyjděte z budovy a pokračujte po <STREET_NAMES>."
       },
       "empty_street_name_labels": [
         "chodník",
         "cyklostezka",
         "stezka pro horská kola",
-        "the crosswalk"
+        "přechod pro chodce"
       ],
       "example_phrases": {
         "0": [
-          "Exit the building."
+          "Vyjděte z budovy."
         ],
         "1": [
-          "Exit the building, and continue on the walkway."
+          "Vyjděte z budovy a pokračujte po chodníku."
         ]
       }
     }

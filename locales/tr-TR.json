@@ -45,10 +45,10 @@
         "yaya geçidi",
         "bisiklet yolu",
         "dağ bisikleti yolu",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "yaya geçidi",
+        "merdivenler",
+        "köprü",
+        "tünel"
       ],
       "relative_directions": [
         "sol",
@@ -88,10 +88,10 @@
         "yaya geçidi",
         "bisiklet yolu",
         "dağ bisikleti yolu",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "yaya geçidi",
+        "merdivenler",
+        "köprü",
+        "tünel"
       ],
       "relative_directions": [
         "sol",
@@ -149,10 +149,10 @@
         "yaya geçidi",
         "bisiklet yolu",
         "dağ bisikleti yolu",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "yaya geçidi",
+        "merdivenler",
+        "köprü",
+        "tünel"
       ],
       "example_phrases": {
         "0": [
@@ -184,10 +184,10 @@
         "yaya geçidi",
         "bisiklet yolu",
         "dağ bisikleti yolu",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "yaya geçidi",
+        "merdivenler",
+        "köprü",
+        "tünel"
       ],
       "metric_lengths": [
         "<KILOMETERS> kilometre",
@@ -241,10 +241,10 @@
         "yaya geçidi",
         "bisiklet yolu",
         "dağ bisikleti yolu",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "yaya geçidi",
+        "merdivenler",
+        "köprü",
+        "tünel"
       ],
       "example_phrases": {
         "0": [
@@ -381,10 +381,10 @@
         "yaya geçidi",
         "bisiklet yolu",
         "dağ bisikleti yolu",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "yaya geçidi",
+        "merdivenler",
+        "köprü",
+        "tünel"
       ],
       "ferry_label": "Feribot",
       "example_phrases": {
@@ -413,10 +413,10 @@
         "yaya geçidi",
         "bisiklet yolu",
         "dağ bisikleti yolu",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "yaya geçidi",
+        "merdivenler",
+        "köprü",
+        "tünel"
       ],
       "ferry_label": "Feribot",
       "example_phrases": {
@@ -469,10 +469,10 @@
         "yaya geçidi",
         "bisiklet yolu",
         "dağ bisikleti yolu",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "yaya geçidi",
+        "merdivenler",
+        "köprü",
+        "tünel"
       ],
       "example_phrases": {
         "0": [
@@ -569,10 +569,10 @@
         "yaya geçidi",
         "bisiklet yolu",
         "dağ bisikleti yolu",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "yaya geçidi",
+        "merdivenler",
+        "köprü",
+        "tünel"
       ],
       "example_phrases": {
         "0": [
@@ -752,10 +752,10 @@
         "yaya geçidi",
         "bisiklet yolu",
         "dağ bisikleti yolu",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "yaya geçidi",
+        "merdivenler",
+        "köprü",
+        "tünel"
       ],
       "example_phrases": {
         "0": [
@@ -783,10 +783,10 @@
         "yaya geçidi",
         "bisiklet yolu",
         "dağ bisikleti yolu",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "yaya geçidi",
+        "merdivenler",
+        "köprü",
+        "tünel"
       ],
       "example_phrases": {
         "0": [
@@ -935,10 +935,10 @@
         "yaya geçidi",
         "bisiklet yolu",
         "dağ bisikleti yolu",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "yaya geçidi",
+        "merdivenler",
+        "köprü",
+        "tünel"
       ],
       "relative_directions": [
         "sol",
@@ -985,10 +985,10 @@
         "yaya geçidi",
         "bisiklet yolu",
         "dağ bisikleti yolu",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "yaya geçidi",
+        "merdivenler",
+        "köprü",
+        "tünel"
       ],
       "relative_directions": [
         "sol",
@@ -1023,10 +1023,10 @@
         "yaya geçidi",
         "bisiklet yolu",
         "dağ bisikleti yolu",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "yaya geçidi",
+        "merdivenler",
+        "köprü",
+        "tünel"
       ],
       "relative_directions": [
         "sol",
@@ -1065,10 +1065,10 @@
         "yaya geçidi",
         "bisiklet yolu",
         "dağ bisikleti yolu",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "yaya geçidi",
+        "merdivenler",
+        "köprü",
+        "tünel"
       ],
       "relative_directions": [
         "sol",
@@ -1121,10 +1121,10 @@
         "yaya geçidi",
         "bisiklet yolu",
         "dağ bisikleti yolu",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "yaya geçidi",
+        "merdivenler",
+        "köprü",
+        "tünel"
       ],
       "example_phrases": {
         "0": [
@@ -1164,10 +1164,10 @@
         "yaya geçidi",
         "bisiklet yolu",
         "dağ bisikleti yolu",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "yaya geçidi",
+        "merdivenler",
+        "köprü",
+        "tünel"
       ],
       "example_phrases": {
         "0": [
@@ -1214,10 +1214,10 @@
         "yaya geçidi",
         "bisiklet yolu",
         "dağ bisikleti yolu",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "yaya geçidi",
+        "merdivenler",
+        "köprü",
+        "tünel"
       ],
       "metric_lengths": [
         "<KILOMETERS>kilometre",
@@ -1453,10 +1453,10 @@
         "yaya geçidi",
         "bisiklet yolu",
         "dağ bisikleti yolu",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "yaya geçidi",
+        "merdivenler",
+        "köprü",
+        "tünel"
       ],
       "relative_directions": [
         "sol",
@@ -1496,10 +1496,10 @@
         "yaya geçidi",
         "bisiklet yolu",
         "dağ bisikleti yolu",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "yaya geçidi",
+        "merdivenler",
+        "köprü",
+        "tünel"
       ],
       "relative_directions": [
         "sol",
@@ -1555,10 +1555,10 @@
         "yaya geçidi",
         "bisiklet yolu",
         "dağ bisikleti yolu",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "yaya geçidi",
+        "merdivenler",
+        "köprü",
+        "tünel"
       ],
       "example_phrases": {
         "0": [
@@ -1646,10 +1646,10 @@
         "yaya geçidi",
         "bisiklet yolu",
         "dağ bisikleti yolu",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "yaya geçidi",
+        "merdivenler",
+        "köprü",
+        "tünel"
       ],
       "metric_lengths": [
         "<KILOMETERS>kilometre",
@@ -2024,10 +2024,10 @@
         "yaya geçidi",
         "bisiklet yolu",
         "dağ bisikleti yolu",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "yaya geçidi",
+        "merdivenler",
+        "köprü",
+        "tünel"
       ],
       "relative_directions": [
         "sol",
@@ -2067,10 +2067,10 @@
         "yaya geçidi",
         "bisiklet yolu",
         "dağ bisikleti yolu",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "yaya geçidi",
+        "merdivenler",
+        "köprü",
+        "tünel"
       ],
       "relative_directions": [
         "sol",
@@ -2112,10 +2112,10 @@
         "yaya geçidi",
         "bisiklet yolu",
         "dağ bisikleti yolu",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "yaya geçidi",
+        "merdivenler",
+        "köprü",
+        "tünel"
       ],
       "relative_directions": [
         "sol",
@@ -2163,10 +2163,10 @@
         "yaya geçidi",
         "bisiklet yolu",
         "dağ bisikleti yolu",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "yaya geçidi",
+        "merdivenler",
+        "köprü",
+        "tünel"
       ],
       "relative_directions": [
         "sol",

@@ -6,8 +6,8 @@
   "instructions": {
     "arrive": {
       "phrases": {
-        "0": "Ankomst: <TIME>.",
-        "1": "Ankomst: <TIME> ved <TRANSIT_STOP>.<TRANSIT_STOP>"
+        "0": "Ankomme: <TIME>.",
+        "1": "Ankomme: <TIME> ved <TRANSIT_STOP>.<TRANSIT_STOP>"
       },
       "example_phrases": {
         "0": [
@@ -45,10 +45,10 @@
         "fortovet",
         "cykelstien",
         "mountainbike-sporet",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "overgangen",
+        "trappen",
+        "broen",
+        "tunnelen"
       ],
       "relative_directions": [
         "venstre",
@@ -88,10 +88,10 @@
         "fortovet",
         "cykelstien",
         "mountainbike-sporet",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "overgangen",
+        "trappen",
+        "broen",
+        "tunnelen"
       ],
       "relative_directions": [
         "venstre",
@@ -142,17 +142,17 @@
       "phrases": {
         "0": "Fortsæt.",
         "1": "Fortsæt på <STREET_NAMES>.",
-        "2": "Fortsæt ved <JUNCTION_NAME>.",
+        "2": "Fortsæt kl <JUNCTION_NAME>.",
         "3": "Fortsæt mod <TOWARD_SIGN>."
       },
       "empty_street_name_labels": [
         "fortovet",
         "cykelstien",
         "mountainbike-sporet",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "overgangen",
+        "trappen",
+        "broen",
+        "tunnelen"
       ],
       "example_phrases": {
         "0": [
@@ -184,10 +184,10 @@
         "fortovet",
         "cykelstien",
         "mountainbike-sporet",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "overgangen",
+        "trappen",
+        "broen",
+        "tunnelen"
       ],
       "metric_lengths": [
         "<KILOMETERS> kilometer",
@@ -241,10 +241,10 @@
         "fortovet",
         "cykelstien",
         "mountainbike-sporet",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "overgangen",
+        "trappen",
+        "broen",
+        "tunnelen"
       ],
       "example_phrases": {
         "0": [
@@ -293,8 +293,8 @@
       "phrases": {
         "0": "Du er ankommet til din destination.",
         "1": "Du er ankommet til <DESTINATION>.",
-        "2": "Din destination er til <RELATIVE_DIRECTION>.",
-        "3": "<DESTINATION> er til <RELATIVE_DIRECTION>."
+        "2": "Din destination er på <RELATIVE_DIRECTION>.",
+        "3": "<DESTINATION> er på <RELATIVE_DIRECTION>."
       },
       "relative_directions": [
         "venstre",
@@ -381,10 +381,10 @@
         "fortovet",
         "cykelstien",
         "mountainbike-sporet",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "overgangen",
+        "trappen",
+        "broen",
+        "tunnelen"
       ],
       "ferry_label": "Færge",
       "example_phrases": {
@@ -413,10 +413,10 @@
         "fortovet",
         "cykelstien",
         "mountainbike-sporet",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "overgangen",
+        "trappen",
+        "broen",
+        "tunnelen"
       ],
       "ferry_label": "Færge",
       "example_phrases": {
@@ -437,21 +437,21 @@
     "enter_roundabout": {
       "phrases": {
         "0": "Kør ind i rundkørslen.",
-        "1": "Kør ind i rundkørslen og tag <ORDINAL_VALUE> frakørsel.",
-        "2": "Kør ind i rundkørslen og tag <ORDINAL_VALUE> frakørsel ind på <ROUNDABOUT_EXIT_STREET_NAMES>.",
-        "3": "Kør ind i rundkørslen og tag <ORDINAL_VALUE> frakørsel ind på <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>. Fortsæt på <ROUNDABOUT_EXIT_STREET_NAMES>.",
-        "4": "Kør ind i rundkørslen og tag <ORDINAL_VALUE> frakørsel mod <TOWARD_SIGN>.",
-        "5": "Kør ind i rundkørslen og tag frakørslen ind på <ROUNDABOUT_EXIT_STREET_NAMES>.",
-        "6": "Kør ind i rundkørslen og tag frakørslen ind på <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>. Fortsæt på <ROUNDABOUT_EXIT_STREET_NAMES>.",
-        "7": "Kør ind i rundkørslen og tag frakørslen mod <TOWARD_SIGN>.",
-        "8": "Kør ind på <STREET_NAMES>",
-        "9": "Kør ind på <STREET_NAMES> og tag <ORDINAL_VALUE> frakørsel.",
-        "10": "Kør ind på <STREET_NAMES> og tag <ORDINAL_VALUE> frakørsel ind på <ROUNDABOUT_EXIT_STREET_NAMES>.",
-        "11": "Kør ind på <STREET_NAMES> og tag <ORDINAL_VALUE> frakørsel ind på <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>. Fortsæt på <ROUNDABOUT_EXIT_STREET_NAMES>.",
-        "12": "Kør ind på <STREET_NAMES> og tag <ORDINAL_VALUE> frakørsel mod <TOWARD_SIGN>.",
-        "13": "Kør ind på <STREET_NAMES> og tag frakørslen ind på <ROUNDABOUT_EXIT_STREET_NAMES>.",
-        "14": "Kør ind på <STREET_NAMES> og tag frakørslen ind på <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>. Fortsæt på <ROUNDABOUT_EXIT_STREET_NAMES>.",
-        "15": "Kør ind på <STREET_NAMES> og tag frakørslen mod <TOWARD_SIGN>."
+        "1": "Gå ind i rundkørslen og tag afkørslen <ORDINAL_VALUE>.",
+        "2": "Gå ind i rundkørslen og tag afkørslen <ORDINAL_VALUE> ad <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "3": "Gå ind i rundkørslen og tag afkørslen <ORDINAL_VALUE> ad <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>. Fortsæt ad <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "4": "Gå ind i rundkørslen og tag afkørslen <ORDINAL_VALUE> mod <TOWARD_SIGN>.",
+        "5": "Gå ind i rundkørslen og tag frakørslen til <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "6": "Gå ind i rundkørslen og tag frakørslen til <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>. Fortsæt ad <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "7": "Kør ind i rundkørslen og tag afkørslen mod <TOWARD_SIGN>.",
+        "8": "Indtast <STREET_NAMES>",
+        "9": "Indtast <STREET_NAMES> og tag afkørslen <ORDINAL_VALUE>.",
+        "10": "Indtast <STREET_NAMES> og tag afkørslen <ORDINAL_VALUE> ad <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "11": "Indtast <STREET_NAMES> og tag afkørslen <ORDINAL_VALUE> ad <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>. Fortsæt ad <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "12": "Indtast <STREET_NAMES> og tag afkørslen <ORDINAL_VALUE> mod <TOWARD_SIGN>.",
+        "13": "Indtast <STREET_NAMES> og tag afkørslen ind på <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "14": "Indtast <STREET_NAMES> og tag frakørslen til <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>. Fortsæt ad <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "15": "Indtast <STREET_NAMES> og tag afkørslen mod <TOWARD_SIGN>."
       },
       "ordinal_values": [
         "første",
@@ -469,10 +469,10 @@
         "fortovet",
         "cykelstien",
         "mountainbike-sporet",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "overgangen",
+        "trappen",
+        "broen",
+        "tunnelen"
       ],
       "example_phrases": {
         "0": [
@@ -569,10 +569,10 @@
         "fortovet",
         "cykelstien",
         "mountainbike-sporet",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "overgangen",
+        "trappen",
+        "broen",
+        "tunnelen"
       ],
       "example_phrases": {
         "0": [
@@ -752,10 +752,10 @@
         "fortovet",
         "cykelstien",
         "mountainbike-sporet",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "overgangen",
+        "trappen",
+        "broen",
+        "tunnelen"
       ],
       "example_phrases": {
         "0": [
@@ -783,10 +783,10 @@
         "fortovet",
         "cykelstien",
         "mountainbike-sporet",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "overgangen",
+        "trappen",
+        "broen",
+        "tunnelen"
       ],
       "example_phrases": {
         "0": [
@@ -935,10 +935,10 @@
         "fortovet",
         "cykelstien",
         "mountainbike-sporet",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "overgangen",
+        "trappen",
+        "broen",
+        "tunnelen"
       ],
       "relative_directions": [
         "venstre",
@@ -985,10 +985,10 @@
         "fortovet",
         "cykelstien",
         "mountainbike-sporet",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "overgangen",
+        "trappen",
+        "broen",
+        "tunnelen"
       ],
       "relative_directions": [
         "venstre",
@@ -1023,10 +1023,10 @@
         "fortovet",
         "cykelstien",
         "mountainbike-sporet",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "overgangen",
+        "trappen",
+        "broen",
+        "tunnelen"
       ],
       "relative_directions": [
         "venstre",
@@ -1065,10 +1065,10 @@
         "fortovet",
         "cykelstien",
         "mountainbike-sporet",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "overgangen",
+        "trappen",
+        "broen",
+        "tunnelen"
       ],
       "relative_directions": [
         "venstre",
@@ -1121,10 +1121,10 @@
         "fortovet",
         "cykelstien",
         "mountainbike-sporet",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "overgangen",
+        "trappen",
+        "broen",
+        "tunnelen"
       ],
       "example_phrases": {
         "0": [
@@ -1164,10 +1164,10 @@
         "fortovet",
         "cykelstien",
         "mountainbike-sporet",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "overgangen",
+        "trappen",
+        "broen",
+        "tunnelen"
       ],
       "example_phrases": {
         "0": [
@@ -1214,10 +1214,10 @@
         "fortovet",
         "cykelstien",
         "mountainbike-sporet",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "overgangen",
+        "trappen",
+        "broen",
+        "tunnelen"
       ],
       "metric_lengths": [
         "<KILOMETERS> kilometer",
@@ -1453,10 +1453,10 @@
         "fortovet",
         "cykelstien",
         "mountainbike-sporet",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "overgangen",
+        "trappen",
+        "broen",
+        "tunnelen"
       ],
       "relative_directions": [
         "venstre",
@@ -1496,10 +1496,10 @@
         "fortovet",
         "cykelstien",
         "mountainbike-sporet",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "overgangen",
+        "trappen",
+        "broen",
+        "tunnelen"
       ],
       "relative_directions": [
         "venstre",
@@ -1555,10 +1555,10 @@
         "fortovet",
         "cykelstien",
         "mountainbike-sporet",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "overgangen",
+        "trappen",
+        "broen",
+        "tunnelen"
       ],
       "example_phrases": {
         "0": [
@@ -1646,10 +1646,10 @@
         "fortovet",
         "cykelstien",
         "mountainbike-sporet",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "overgangen",
+        "trappen",
+        "broen",
+        "tunnelen"
       ],
       "metric_lengths": [
         "<KILOMETERS> kilometer",
@@ -1936,8 +1936,8 @@
     },
     "transit_transfer": {
       "phrases": {
-        "0": "Transfer for at tage <TRANSIT_NAME>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)",
-        "1": "Transfer for at tage <TRANSIT_NAME> mod <TRANSIT_HEADSIGN>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)"
+        "0": "Overfør for at tage <TRANSIT_NAME>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)",
+        "1": "Overfør for at tage <TRANSIT_NAME> mod <TRANSIT_HEADSIGN>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)"
       },
       "empty_transit_name_labels": [
         "sporvogn",
@@ -1965,8 +1965,8 @@
     },
     "transit_transfer_verbal": {
       "phrases": {
-        "0": "Transfer for at tage <TRANSIT_NAME>.",
-        "1": "Transfer for at tage <TRANSIT_NAME> mod <TRANSIT_HEADSIGN>."
+        "0": "Overfør for at tage <TRANSIT_NAME>.",
+        "1": "Overfør for at tage <TRANSIT_NAME> mod <TRANSIT_HEADSIGN>."
       },
       "empty_transit_name_labels": [
         "sporvogn",
@@ -2024,10 +2024,10 @@
         "fortovet",
         "cykelstien",
         "mountainbike-sporet",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "overgangen",
+        "trappen",
+        "broen",
+        "tunnelen"
       ],
       "relative_directions": [
         "venstre",
@@ -2067,10 +2067,10 @@
         "fortovet",
         "cykelstien",
         "mountainbike-sporet",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "overgangen",
+        "trappen",
+        "broen",
+        "tunnelen"
       ],
       "relative_directions": [
         "venstre",
@@ -2112,10 +2112,10 @@
         "fortovet",
         "cykelstien",
         "mountainbike-sporet",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "overgangen",
+        "trappen",
+        "broen",
+        "tunnelen"
       ],
       "relative_directions": [
         "venstre",
@@ -2163,10 +2163,10 @@
         "fortovet",
         "cykelstien",
         "mountainbike-sporet",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "overgangen",
+        "trappen",
+        "broen",
+        "tunnelen"
       ],
       "relative_directions": [
         "venstre",
@@ -2253,92 +2253,92 @@
     },
     "pass": {
       "phrases": {
-          "0": "Passere <OBJECT_LABEL>.",
-          "1": "Passere trafiklysene på <OBJECT_LABEL>."
+        "0": "Passere <OBJECT_LABEL>.",
+        "1": "Passere trafiklysene på <OBJECT_LABEL>."
       },
       "object_labels": [
-          "porten",
-          "stolperne",
-          "krydset"
+        "porten",
+        "stolperne",
+        "krydset"
       ],
       "example_phrases": {
-          "0": [
-              "Passere porten."
-          ]
+        "0": [
+          "Passere porten."
+        ]
       }
     },
     "elevator": {
       "phrases": {
-        "0": "Take the elevator.",
-        "1": "Take the elevator to <LEVEL>."
+        "0": "Tag elevatoren.",
+        "1": "Tag elevatoren til <LEVEL>."
       },
       "example_phrases": {
         "0": [
-          "Take the elevator."
+          "Tag elevatoren."
         ],
         "1": [
-          "Take the elevator to Level 1."
+          "Tag elevatoren til niveau 1."
         ]
       }
     },
     "steps": {
       "phrases": {
-        "0": "Take the stairs.",
-        "1": "Take the stairs to <LEVEL>."
+        "0": "Tag trappen.",
+        "1": "Tag trappen til <LEVEL>."
       },
       "example_phrases": {
         "0": [
-          "Take the stairs."
+          "Tag trapperne."
         ],
         "1": [
-          "Take the stairs to Level 2."
+          "Tag trappen til niveau 2."
         ]
       }
     },
     "escalator": {
       "phrases": {
-        "0": "Take the escalator.",
-        "1": "Take the escalator to <LEVEL>."
+        "0": "Tag rulletrappen.",
+        "1": "Tag rulletrappen til <LEVEL>."
       },
       "example_phrases": {
         "0": [
-          "Take the escalator."
+          "Tag rulletrappen."
         ],
         "1": [
-          "Take the escalator to Level 3."
+          "Tag rulletrappen til niveau 3."
         ]
       }
     },
     "enter_building": {
       "phrases": {
-        "0": "Enter the building.",
-        "1": "Enter the building, and continue on <STREET_NAMES>."
+        "0": "Gå ind i bygningen.",
+        "1": "Gå ind i bygningen, og fortsæt ad <STREET_NAMES>."
       },
       "empty_street_name_labels": [
         "fortovet",
         "cykelstien",
         "mountainbike-sporet",
-        "the crosswalk"
+        "overgangen"
       ],
       "example_phrases": {
         "0": [
-          "Enter the building."
+          "Gå ind i bygningen."
         ],
         "1": [
-          "Enter the building, and continue on the walkway."
+          "Gå ind i bygningen, og fortsæt ad gangbroen."
         ]
       }
     },
     "exit_building": {
       "phrases": {
-        "0": "Exit the building.",
-        "1": "Exit the building, and continue on <STREET_NAMES>."
+        "0": "Forlad bygningen.",
+        "1": "Forlad bygningen, og fortsæt ad <STREET_NAMES>."
       },
       "empty_street_name_labels": [
         "fortovet",
         "cykelstien",
         "mountainbike-sporet",
-        "the crosswalk"
+        "overgangen"
       ],
       "example_phrases": {
         "0": [

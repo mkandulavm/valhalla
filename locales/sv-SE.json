@@ -45,10 +45,10 @@
         "gångvägen",
         "cykelbanan",
         "terrängcykelbanan",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "övergångsstället",
+        "trapporna",
+        "bron",
+        "tunneln"
       ],
       "relative_directions": [
         "vänster",
@@ -88,10 +88,10 @@
         "gångvägen",
         "cykelbanan",
         "terrängcykelbanan",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "övergångsstället",
+        "trapporna",
+        "bron",
+        "tunneln"
       ],
       "relative_directions": [
         "vänster",
@@ -149,10 +149,10 @@
         "gångvägen",
         "cykelbanan",
         "terrängcykelbanan",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "övergångsstället",
+        "trapporna",
+        "bron",
+        "tunneln"
       ],
       "example_phrases": {
         "0": [
@@ -184,10 +184,10 @@
         "gångvägen",
         "cykelbanan",
         "terrängcykelbanan",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "övergångsstället",
+        "trapporna",
+        "bron",
+        "tunneln"
       ],
       "metric_lengths": [
         "<KILOMETERS> kilometer",
@@ -241,10 +241,10 @@
         "gångvägen",
         "cykelbanan",
         "terrängcykelbanan",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "övergångsstället",
+        "trapporna",
+        "bron",
+        "tunneln"
       ],
       "example_phrases": {
         "0": [
@@ -381,10 +381,10 @@
         "gångvägen",
         "cykelbanan",
         "terrängcykelbanan",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "övergångsstället",
+        "trapporna",
+        "bron",
+        "tunneln"
       ],
       "ferry_label": "Färja",
       "example_phrases": {
@@ -413,10 +413,10 @@
         "gångvägen",
         "cykelbanan",
         "terrängcykelbanan",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "övergångsstället",
+        "trapporna",
+        "bron",
+        "tunneln"
       ],
       "ferry_label": "Färja",
       "example_phrases": {
@@ -469,10 +469,10 @@
         "gångvägen",
         "cykelbanan",
         "terrängcykelbanan",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "övergångsstället",
+        "trapporna",
+        "bron",
+        "tunneln"
       ],
       "example_phrases": {
         "0": [
@@ -569,10 +569,10 @@
         "gångvägen",
         "cykelbanan",
         "terrängcykelbanan",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "övergångsstället",
+        "trapporna",
+        "bron",
+        "tunneln"
       ],
       "example_phrases": {
         "0": [
@@ -752,10 +752,10 @@
         "gångvägen",
         "cykelbanan",
         "terrängcykelbanan",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "övergångsstället",
+        "trapporna",
+        "bron",
+        "tunneln"
       ],
       "example_phrases": {
         "0": [
@@ -783,10 +783,10 @@
         "gångvägen",
         "cykelbanan",
         "terrängcykelbanan",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "övergångsstället",
+        "trapporna",
+        "bron",
+        "tunneln"
       ],
       "example_phrases": {
         "0": [
@@ -935,10 +935,10 @@
         "gångvägen",
         "cykelbanan",
         "terrängcykelbanan",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "övergångsstället",
+        "trapporna",
+        "bron",
+        "tunneln"
       ],
       "relative_directions": [
         "vänster",
@@ -985,10 +985,10 @@
         "gångvägen",
         "cykelbanan",
         "terrängcykelbanan",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "övergångsstället",
+        "trapporna",
+        "bron",
+        "tunneln"
       ],
       "relative_directions": [
         "vänster",
@@ -1023,10 +1023,10 @@
         "gångvägen",
         "cykelbanan",
         "terrängcykelbanan",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "övergångsstället",
+        "trapporna",
+        "bron",
+        "tunneln"
       ],
       "relative_directions": [
         "vänster",
@@ -1065,10 +1065,10 @@
         "gångvägen",
         "cykelbanan",
         "terrängcykelbanan",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "övergångsstället",
+        "trapporna",
+        "bron",
+        "tunneln"
       ],
       "relative_directions": [
         "vänster",
@@ -1121,10 +1121,10 @@
         "gångvägen",
         "cykelbanan",
         "terrängcykelbanan",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "övergångsstället",
+        "trapporna",
+        "bron",
+        "tunneln"
       ],
       "example_phrases": {
         "0": [
@@ -1164,10 +1164,10 @@
         "gångvägen",
         "cykelbanan",
         "terrängcykelbanan",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "övergångsstället",
+        "trapporna",
+        "bron",
+        "tunneln"
       ],
       "example_phrases": {
         "0": [
@@ -1214,10 +1214,10 @@
         "gångvägen",
         "cykelbanan",
         "terrängcykelbanan",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "övergångsstället",
+        "trapporna",
+        "bron",
+        "tunneln"
       ],
       "metric_lengths": [
         "<KILOMETERS> kilometer",
@@ -1453,10 +1453,10 @@
         "gångvägen",
         "cykelbanan",
         "terrängcykelbanan",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "övergångsstället",
+        "trapporna",
+        "bron",
+        "tunneln"
       ],
       "relative_directions": [
         "vänster",
@@ -1496,10 +1496,10 @@
         "gångvägen",
         "cykelbanan",
         "terrängcykelbanan",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "övergångsstället",
+        "trapporna",
+        "bron",
+        "tunneln"
       ],
       "relative_directions": [
         "vänster",
@@ -1555,10 +1555,10 @@
         "gångvägen",
         "cykelbanan",
         "terrängcykelbanan",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "övergångsstället",
+        "trapporna",
+        "bron",
+        "tunneln"
       ],
       "example_phrases": {
         "0": [
@@ -1646,10 +1646,10 @@
         "gångvägen",
         "cykelbanan",
         "terrängcykelbanan",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "övergångsstället",
+        "trapporna",
+        "bron",
+        "tunneln"
       ],
       "metric_lengths": [
         "<KILOMETERS> kilometer",
@@ -2024,10 +2024,10 @@
         "gångvägen",
         "cykelbanan",
         "terrängcykelbanan",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "övergångsstället",
+        "trapporna",
+        "bron",
+        "tunneln"
       ],
       "relative_directions": [
         "vänster",
@@ -2067,10 +2067,10 @@
         "gångvägen",
         "cykelbanan",
         "terrängcykelbanan",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "övergångsstället",
+        "trapporna",
+        "bron",
+        "tunneln"
       ],
       "relative_directions": [
         "vänster",
@@ -2112,10 +2112,10 @@
         "gångvägen",
         "cykelbanan",
         "terrängcykelbanan",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "övergångsstället",
+        "trapporna",
+        "bron",
+        "tunneln"
       ],
       "relative_directions": [
         "vänster",
@@ -2163,10 +2163,10 @@
         "gångvägen",
         "cykelbanan",
         "terrängcykelbanan",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "övergångsstället",
+        "trapporna",
+        "bron",
+        "tunneln"
       ],
       "relative_directions": [
         "vänster",
@@ -2318,7 +2318,7 @@
         "gångvägen",
         "cykelbanan",
         "terrängcykelbanan",
-        "the crosswalk"
+        "övergångsstället"
       ],
       "example_phrases": {
         "0": [
@@ -2338,7 +2338,7 @@
         "gångvägen",
         "cykelbanan",
         "terrängcykelbanan",
-        "the crosswalk"
+        "övergångsstället"
       ],
       "example_phrases": {
         "0": [

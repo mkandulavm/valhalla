@@ -34,87 +34,87 @@
     },
     "bear": {
       "phrases": {
-        "0": "Queda't a <RELATIVE_DIRECTION>.",
-        "1": "Queda't a <RELATIVE_DIRECTION> cap a <STREET_NAMES>.",
-        "2": "Queda't a <RELATIVE_DIRECTION> cap a <BEGIN_STREET_NAMES>. Continua per <STREET_NAMES>.",
-        "3": "Queda't a <RELATIVE_DIRECTION> per continuar per <STREET_NAMES>.",
-        "4": "Bear <RELATIVE_DIRECTION> at <JUNCTION_NAME>.",
-        "5": "Bear <RELATIVE_DIRECTION> toward <TOWARD_SIGN>."
+        "0": "Ós <RELATIVE_DIRECTION>.",
+        "1": "Continuar <RELATIVE_DIRECTION> cap a <STREET_NAMES>.",
+        "2": "Continueu <RELATIVE_DIRECTION> cap a <BEGIN_STREET_NAMES>. Continueu per <STREET_NAMES>.",
+        "3": "Porteu <RELATIVE_DIRECTION> per quedar-vos a <STREET_NAMES>.",
+        "4": "Porteu <RELATIVE_DIRECTION> a <JUNCTION_NAME>.",
+        "5": "Encamineu <RELATIVE_DIRECTION> cap a <TOWARD_SIGN>."
       },
       "empty_street_name_labels": [
-        "la vorera",
+        "la passarel·la",
         "el carril bici",
-        "la pista de bicicleta de muntanya",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "la ruta de bicicleta de muntanya",
+        "el pas de vianants",
+        "les escales",
+        "el pont",
+        "el túnel"
       ],
       "relative_directions": [
-        "l'esquerra",
-        "la dreta"
+        "esquerra",
+        "dret"
       ],
       "example_phrases": {
         "0": [
-          "Queda't a la dreta."
+          "Teniu a la dreta"
         ],
         "1": [
-          "Queda't a l'esquerra cap a Arlen Road."
+          "Gireu a l'esquerra per Arlen Road"
         ],
         "2": [
-          "queda't a la dreta cap a Belair Road/US 1 Business. Continua per US 1 Business."
+          "Gireu a la dreta per Belair Road/US 1 Business. Continueu per US 1 Business"
         ],
         "3": [
-          "Queda't a l'esquerra per continuar per US 15 South."
+          "Gireu a l'esquerra per quedar-vos a la US 15 South"
         ],
         "4": [
-          "Bear right at Mannenbashi East."
+          "Gireu a la dreta a Mannenbashi East"
         ],
         "5": [
-          "Bear left toward Baltimore."
+          "Gireu a l'esquerra cap a Baltimore"
         ]
       }
     },
     "bear_verbal": {
       "phrases": {
-        "0": "Queda't a <RELATIVE_DIRECTION>.",
-        "1": "Queda't a <RELATIVE_DIRECTION> cap a <STREET_NAMES>.",
-        "2": "Queda't a <RELATIVE_DIRECTION> cap a <BEGIN_STREET_NAMES>.",
-        "3": "Queda't a <RELATIVE_DIRECTION> per continuar per <STREET_NAMES>.",
-        "4": "Bear <RELATIVE_DIRECTION> at <JUNCTION_NAME>.",
-        "5": "Bear <RELATIVE_DIRECTION> toward <TOWARD_SIGN>."
+        "0": "Ós <RELATIVE_DIRECTION>.",
+        "1": "Mantenir <RELATIVE_DIRECTION> cap a <STREET_NAMES>.",
+        "2": "Mantenir <RELATIVE_DIRECTION> cap a <BEGIN_STREET_NAMES>.",
+        "3": "Porteu <RELATIVE_DIRECTION> per quedar-vos a <STREET_NAMES>.",
+        "4": "Porteu <RELATIVE_DIRECTION> a <JUNCTION_NAME>.",
+        "5": "Encamineu <RELATIVE_DIRECTION> cap a <TOWARD_SIGN>."
       },
       "empty_street_name_labels": [
-        "la vorera",
+        "la passarel·la",
         "el carril bici",
-        "la pista de bicicleta de muntanya",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "la ruta de bicicleta de muntanya",
+        "el pas de vianants",
+        "les escales",
+        "el pont",
+        "el túnel"
       ],
       "relative_directions": [
-        "l'esquerra",
-        "la dreta"
+        "esquerra",
+        "dret"
       ],
       "example_phrases": {
         "0": [
-          "Queda't a la dreta."
+          "Teniu a la dreta"
         ],
         "1": [
-          "Queda't a l'esquerra cap a Arlen Road."
+          "Gireu a l'esquerra per Arlen Road"
         ],
         "2": [
-          "queda't a la dreta cap a Belair Road/US 1 Business. Continua per US 1 Business."
+          "Gireu a la dreta per Belair Road, U.S. 1 Business"
         ],
         "3": [
-          "Queda't a l'esquerra per continuar per US 15 South."
+          "Gireu a l'esquerra per quedar-vos a la US 15 South"
         ],
         "4": [
-          "Bear right at Mannenbashi East."
+          "Gireu a la dreta a Mannenbashi East"
         ],
         "5": [
-          "Bear left toward Baltimore."
+          "Gireu a l'esquerra cap a Baltimore"
         ]
       }
     },
@@ -142,17 +142,17 @@
       "phrases": {
         "0": "Continua.",
         "1": "Continua per <STREET_NAMES>.",
-        "2": "Continue at <JUNCTION_NAME>.",
-        "3": "Continue toward <TOWARD_SIGN>."
+        "2": "Continueu a <JUNCTION_NAME>.",
+        "3": "Continueu cap a <TOWARD_SIGN>."
       },
       "empty_street_name_labels": [
-        "la vorera",
+        "la passarel·la",
         "el carril bici",
-        "la pista de bicicleta de muntanya",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "la ruta de bicicleta de muntanya",
+        "el pas de vianants",
+        "les escales",
+        "el pont",
+        "el túnel"
       ],
       "example_phrases": {
         "0": [
@@ -172,22 +172,22 @@
     "continue_verbal": {
       "phrases": {
         "0": "Continua.",
-        "1": "Continua durant <LENGTH>.",
-        "2": "Continua per <STREET_NAMES>.",
-        "3": "Continua per <STREET_NAMES> durant <LENGTH>.",
-        "4": "Continue at <JUNCTION_NAME>.",
-        "5": "Continue at <JUNCTION_NAME> for <LENGTH>.",
-        "6": "Continue toward <TOWARD_SIGN>.",
-        "7": "Continue toward <TOWARD_SIGN> for <LENGTH>."
+        "1": "Continueu durant <LENGTH>.",
+        "2": "Continueu per <STREET_NAMES>.",
+        "3": "Continueu per <STREET_NAMES> durant <LENGTH>.",
+        "4": "Continueu a <JUNCTION_NAME>.",
+        "5": "Continueu a <JUNCTION_NAME> durant <LENGTH>.",
+        "6": "Continueu cap a <TOWARD_SIGN>.",
+        "7": "Continueu cap a <TOWARD_SIGN> durant <LENGTH>."
       },
       "empty_street_name_labels": [
-        "la vorera",
+        "la passarel·la",
         "el carril bici",
-        "la pista de bicicleta de muntanya",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "la ruta de bicicleta de muntanya",
+        "el pas de vianants",
+        "les escales",
+        "el pont",
+        "el túnel"
       ],
       "metric_lengths": [
         "<KILOMETERS> quilòmetres",
@@ -199,72 +199,72 @@
         "<MILES> milles",
         "1 milla",
         "mitja milla",
-        "a quarter mile",
+        "un quart de milla",
         "<FEET> peus",
         "menys de 10 peus"
-      ],
-      "example_phrases": {
-        "0": [
-          "Continue."
-        ],
-        "1": [
-          "Continue for 300 feet."
-        ],
-        "2": [
-          "Continue on 10th Avenue."
-        ],
-        "3": [
-          "Continue on 10th Avenue for 3 miles."
-        ],
-        "4": [
-          "Continue at Mannenbashi East."
-        ],
-        "5": [
-          "Continue at Mannenbashi East for 2 miles."
-        ],
-        "6": [
-          "Continue toward Baltimore."
-        ],
-        "7": [
-          "Continue toward Baltimore for 5 miles."
-        ]
-      }
-    },
-    "continue_verbal_alert": {
-      "phrases": {
-        "0": "Continua.",
-        "1": "Continua per <STREET_NAMES>.",
-        "2": "Continue at <JUNCTION_NAME>.",
-        "3": "Continue toward <TOWARD_SIGN>."
-      },
-      "empty_street_name_labels": [
-        "la vorera",
-        "el carril bici",
-        "la pista de bicicleta de muntanya",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
       ],
       "example_phrases": {
         "0": [
           "Continua."
         ],
         "1": [
-          "Continua per 10th Avenue."
+          "Continueu 300 peus."
         ],
         "2": [
-          "Continue at Mannenbashi East."
+          "Continueu per la 10th Avenue."
         ],
         "3": [
-          "Continue toward Baltimore."
+          "Continueu per la 10th Avenue durant 3 milles."
+        ],
+        "4": [
+          "Continueu a Mannenbashi East."
+        ],
+        "5": [
+          "Continueu a Mannenbashi East durant 2 milles."
+        ],
+        "6": [
+          "Continueu cap a Baltimore."
+        ],
+        "7": [
+          "Continueu cap a Baltimore durant 5 milles."
+        ]
+      }
+    },
+    "continue_verbal_alert": {
+      "phrases": {
+        "0": "Continua.",
+        "1": "Continueu per <STREET_NAMES>.",
+        "2": "Continueu a <JUNCTION_NAME>.",
+        "3": "Continueu cap a <TOWARD_SIGN>."
+      },
+      "empty_street_name_labels": [
+        "la passarel·la",
+        "el carril bici",
+        "la ruta de bicicleta de muntanya",
+        "el pas de vianants",
+        "les escales",
+        "el pont",
+        "el túnel"
+      ],
+      "example_phrases": {
+        "0": [
+          "Continua."
+        ],
+        "1": [
+          "Continueu per la 10th Avenue."
+        ],
+        "2": [
+          "Continueu a Mannenbashi East."
+        ],
+        "3": [
+          "Continueu cap a Baltimore."
         ]
       }
     },
     "depart": {
       "phrases": {
         "0": "Sortida: <TIME>.",
-        "1": "Sortida: <TIME> de <TRANSIT_STOP>."
+        "1": "Sortida: <TIME> des de <TRANSIT_STOP>."
       },
       "example_phrases": {
         "0": [
@@ -277,8 +277,8 @@
     },
     "depart_verbal": {
       "phrases": {
-        "0": "Sortida a les <TIME>.",
-        "1": "Sortida a les <TIME> de <TRANSIT_STOP>."
+        "0": "Sortida a <TIME>.",
+        "1": "Sortida a <TIME> des de <TRANSIT_STOP>."
       },
       "example_phrases": {
         "0": [
@@ -291,25 +291,25 @@
     },
     "destination": {
       "phrases": {
-        "0": "Has arribat a la teva destinació.",
-        "1": "Has arribat a <DESTINATION>.",
-        "2": "La teva destinació és a <RELATIVE_DIRECTION>.",
+        "0": "Has arribat al teu destí.",
+        "1": "Heu arribat a <DESTINATION>.",
+        "2": "La vostra destinació és a <RELATIVE_DIRECTION>.",
         "3": "<DESTINATION> és a <RELATIVE_DIRECTION>."
       },
       "relative_directions": [
-        "l'esquerra",
-        "la dreta"
+        "esquerra",
+        "dret"
       ],
       "example_phrases": {
         "0": [
-          "Has arribat a la teva destinació."
+          "Has arribat al teu destí."
         ],
         "1": [
-          "Has arribat a 3206 Powelton Avenue."
+          "Heu arribat al 3206 Powelton Avenue."
         ],
         "2": [
-          "La teva destinació és a l'esquerra.",
-          "La teva destinació és a la dreta."
+          "El teu destí és a l'esquerra.",
+          "El teu destí és al dret."
         ],
         "3": [
           "Lancaster Brewing Company és a l'esquerra."
@@ -318,25 +318,25 @@
     },
     "destination_verbal": {
       "phrases": {
-        "0": "Has arribat a la teva destinació.",
-        "1": "Has arribat a <DESTINATION>.",
-        "2": "La teva destinació és a <RELATIVE_DIRECTION>.",
+        "0": "Has arribat al teu destí.",
+        "1": "Heu arribat a <DESTINATION>.",
+        "2": "La vostra destinació és a <RELATIVE_DIRECTION>.",
         "3": "<DESTINATION> és a <RELATIVE_DIRECTION>."
       },
       "relative_directions": [
-        "l'esquerra",
-        "la dreta"
+        "esquerra",
+        "dret"
       ],
       "example_phrases": {
         "0": [
-          "Has arribat a la teva destinació."
+          "Has arribat al teu destí."
         ],
         "1": [
-          "Has arribat a 32 o6 Powelton Avenue."
+          "Heu arribat al 32 o6 Powelton Avenue."
         ],
         "2": [
-          "La teva destinació és a l'esquerra.",
-          "La teva destinació és a la dreta."
+          "El teu destí és a l'esquerra.",
+          "El teu destí és al dret."
         ],
         "3": [
           "Lancaster Brewing Company és a l'esquerra."
@@ -345,25 +345,25 @@
     },
     "destination_verbal_alert": {
       "phrases": {
-        "0": "Arribaràs a la teva destinació.",
-        "1": "Arribaràs a <DESTINATION>.",
-        "2": "La teva destinació estarà a <RELATIVE_DIRECTION>.",
+        "0": "Arribareu al vostre destí.",
+        "1": "Arribareu a <DESTINATION>.",
+        "2": "La vostra destinació estarà a <RELATIVE_DIRECTION>.",
         "3": "<DESTINATION> estarà a <RELATIVE_DIRECTION>."
       },
       "relative_directions": [
-        "l'esquerra",
-        "la dreta"
+        "esquerra",
+        "dret"
       ],
       "example_phrases": {
         "0": [
-          "Arribaràs a la teva destinació."
+          "Arribareu al vostre destí."
         ],
         "1": [
-          "Arribaràs a 32 o6 Powelton Avenue."
+          "Arribareu al 32 o6 Powelton Avenue."
         ],
         "2": [
-          "La teva destinació estarà a l'esquerra.",
-          "La teva destinació estarà a la dreta."
+          "El vostre destí serà a l'esquerra.",
+          "El teu destí estarà al dret."
         ],
         "3": [
           "Lancaster Brewing Company estarà a l'esquerra."
@@ -372,86 +372,86 @@
     },
     "enter_ferry": {
       "phrases": {
-        "0": "Agafa el ferri.",
-        "1": "Agafa el <STREET_NAMES>.",
-        "2": "Agafa el <STREET_NAMES> <FERRY_LABEL>.",
-        "3": "Take the ferry toward <TOWARD_SIGN>."
+        "0": "Agafeu el ferri.",
+        "1": "Agafeu <STREET_NAMES>.",
+        "2": "Agafeu <STREET_NAMES> <FERRY_LABEL>.",
+        "3": "Agafeu el ferri cap a <TOWARD_SIGN>."
       },
       "empty_street_name_labels": [
-        "la vorera",
+        "la passarel·la",
         "el carril bici",
-        "la pista de bicicleta de muntanya",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "la ruta de bicicleta de muntanya",
+        "el pas de vianants",
+        "les escales",
+        "el pont",
+        "el túnel"
       ],
-      "ferry_label": "Ferry",
+      "ferry_label": "Ferri",
       "example_phrases": {
         "0": [
-          "Agafa el ferri."
+          "Agafeu el ferri."
         ],
         "1": [
-          "Agafa el Millersburg Ferry."
+          "Agafeu el ferri de Millersburg."
         ],
         "2": [
-          "Agafa el Bridgeport - Port Jefferson Ferry."
+          "Agafeu el ferri Bridgeport - Port Jefferson."
         ],
         "3": [
-          "Take the ferry toward Cape May."
+          "Agafeu el ferri cap a Cape May."
         ]
       }
     },
     "enter_ferry_verbal": {
       "phrases": {
-        "0": "Agafa el ferri.",
-        "1": "Agafa el <STREET_NAMES>.",
-        "2": "Agafa el <STREET_NAMES> <FERRY_LABEL>.",
-        "3": "Take the ferry toward <TOWARD_SIGN>."
+        "0": "Agafeu el ferri.",
+        "1": "Agafeu <STREET_NAMES>.",
+        "2": "Agafeu <STREET_NAMES> <FERRY_LABEL>.",
+        "3": "Agafeu el ferri cap a <TOWARD_SIGN>."
       },
       "empty_street_name_labels": [
-        "la vorera",
+        "la passarel·la",
         "el carril bici",
-        "la pista de bicicleta de muntanya",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "la ruta de bicicleta de muntanya",
+        "el pas de vianants",
+        "les escales",
+        "el pont",
+        "el túnel"
       ],
-      "ferry_label": "Ferry",
+      "ferry_label": "Ferri",
       "example_phrases": {
         "0": [
-          "Agafa el ferri."
+          "Agafeu el ferri."
         ],
         "1": [
-          "Agafa el Millersburg Ferry."
+          "Agafeu el ferri de Millersburg."
         ],
         "2": [
-          "Agafa el Bridgeport - Port Jefferson Ferry."
+          "Agafeu el ferri Bridgeport - Port Jefferson."
         ],
         "3": [
-          "Take the ferry toward Cape May."
+          "Agafeu el ferri cap a Cape May."
         ]
       }
     },
     "enter_roundabout": {
       "phrases": {
         "0": "Entra a la rotonda.",
-        "1": "Entra a la rotonda i pren la sortida <ORDINAL_VALUE>.",
-        "2": "Enter the roundabout and take the <ORDINAL_VALUE> exit onto <ROUNDABOUT_EXIT_STREET_NAMES>.",
-        "3": "Enter the roundabout and take the <ORDINAL_VALUE> exit onto <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>. Continue on <ROUNDABOUT_EXIT_STREET_NAMES>.",
-        "4": "Enter the roundabout and take the <ORDINAL_VALUE> exit toward <TOWARD_SIGN>.",
-        "5": "Enter the roundabout and take the exit onto <ROUNDABOUT_EXIT_STREET_NAMES>.",
-        "6": "Enter the roundabout and take the exit onto <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>. Continue on <ROUNDABOUT_EXIT_STREET_NAMES>.",
-        "7": "Enter the roundabout and take the exit toward <TOWARD_SIGN>.",
-        "8": "Enter <STREET_NAMES>",
-        "9": "Enter <STREET_NAMES> and take the <ORDINAL_VALUE> exit.",
-        "10": "Enter <STREET_NAMES> and take the <ORDINAL_VALUE> exit onto <ROUNDABOUT_EXIT_STREET_NAMES>.",
-        "11": "Enter <STREET_NAMES> and take the <ORDINAL_VALUE> exit onto <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>. Continue on <ROUNDABOUT_EXIT_STREET_NAMES>.",
-        "12": "Enter <STREET_NAMES> and take the <ORDINAL_VALUE> exit toward <TOWARD_SIGN>.",
-        "13": "Enter <STREET_NAMES> and take the exit onto <ROUNDABOUT_EXIT_STREET_NAMES>.",
-        "14": "Enter <STREET_NAMES> and take the exit onto <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>. Continue on <ROUNDABOUT_EXIT_STREET_NAMES>.",
-        "15": "Enter <STREET_NAMES> and take the exit toward <TOWARD_SIGN>."
+        "1": "Entreu a la rotonda i agafeu la sortida <ORDINAL_VALUE>.",
+        "2": "Entreu a la rotonda i agafeu la sortida <ORDINAL_VALUE> per <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "3": "Entreu a la rotonda i agafeu la sortida <ORDINAL_VALUE> per <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>. Continueu per <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "4": "Entreu a la rotonda i agafeu la sortida <ORDINAL_VALUE> cap a <TOWARD_SIGN>.",
+        "5": "Entreu a la rotonda i agafeu la sortida cap a <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "6": "Entreu a la rotonda i agafeu la sortida cap a <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>. Continueu per <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "7": "Entreu a la rotonda i agafeu la sortida cap a <TOWARD_SIGN>.",
+        "8": "Introduïu <STREET_NAMES>",
+        "9": "Introduïu <STREET_NAMES> i agafeu la sortida <ORDINAL_VALUE>.",
+        "10": "Introduïu <STREET_NAMES> i agafeu la sortida <ORDINAL_VALUE> cap a <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "11": "Introduïu <STREET_NAMES> i agafeu la sortida <ORDINAL_VALUE> cap a <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>. Continueu per <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "12": "Introduïu <STREET_NAMES> i agafeu la sortida <ORDINAL_VALUE> cap a <TOWARD_SIGN>.",
+        "13": "Introduïu <STREET_NAMES> i agafeu la sortida cap a <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "14": "Introduïu <STREET_NAMES> i agafeu la sortida a <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>. Continueu per <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "15": "Introduïu <STREET_NAMES> i agafeu la sortida cap a <TOWARD_SIGN>."
       },
       "ordinal_values": [
         "1a",
@@ -466,92 +466,92 @@
         "10ena"
       ],
       "empty_street_name_labels": [
-        "la vorera",
+        "la passarel·la",
         "el carril bici",
-        "la pista de bicicleta de muntanya",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "la ruta de bicicleta de muntanya",
+        "el pas de vianants",
+        "les escales",
+        "el pont",
+        "el túnel"
       ],
       "example_phrases": {
         "0": [
           "Entra a la rotonda."
         ],
         "1": [
-          "Entra a la rotonda i pren la sortida 1a.",
-          "Entra a la rotonda i pren la sortida 2a.",
-          "Entra a la rotonda i pren la sortida 3a.",
-          "Entra a la rotonda i pren la sortida 4a.",
-          "Entra a la rotonda i pren la sortida 5ena.",
-          "Entra a la rotonda i pren la sortida 6ena.",
-          "Entra a la rotonda i pren la sortida 7ena.",
-          "Entra a la rotonda i pren la sortida 8ena.",
-          "Entra a la rotonda i pren la sortida 9ena.",
-          "Entra a la rotonda i pren la sortida 10ena."
+          "Entreu a la rotonda i agafeu la 1a sortida.",
+          "Entreu a la rotonda i agafeu la 2a sortida.",
+          "Entreu a la rotonda i agafeu la 3a sortida.",
+          "Entreu a la rotonda i agafeu la 4a sortida.",
+          "Entreu a la rotonda i agafeu la 5a sortida.",
+          "Entreu a la rotonda i agafeu la 6a sortida.",
+          "Entreu a la rotonda i agafeu la 7a sortida.",
+          "Entreu a la rotonda i agafeu la 8a sortida.",
+          "Entreu a la rotonda i agafeu la 9a sortida.",
+          "Entreu a la rotonda i agafeu la 10a sortida."
         ],
         "2": [
-          "Enter the roundabout and take the 3rd exit onto Main Street."
+          "Entreu a la rotonda i agafeu la 3a sortida cap a Main Street."
         ],
         "3": [
-          "Enter the roundabout and take the 3rd exit onto US 322/Main Street. Continue on US 322."
+          "Entreu a la rotonda i agafeu la tercera sortida cap a la US 322/Main Street. Continueu per la US 322."
         ],
         "4": [
-          "Enter the roundabout and take the 3rd exit toward Baltimore."
+          "Entreu a la rotonda i agafeu la tercera sortida cap a Baltimore."
         ],
         "5": [
-          "Enter the roundabout and take the exit onto Main Street."
+          "Entreu a la rotonda i agafeu la sortida al carrer Major."
         ],
         "6": [
-          "Enter the roundabout and take the exit onto US 322/Main Street. Continue on US 322."
+          "Entreu a la rotonda i agafeu la sortida cap a la US 322/Main Street. Continueu per la US 322."
         ],
         "7": [
-          "Enter the roundabout and take the exit toward Baltimore."
+          "Entreu a la rotonda i agafeu la sortida cap a Baltimore."
         ],
         "8": [
-          "Enter Dupont Circle."
+          "Entra a Dupont Circle."
         ],
         "9": [
-          "Enter Dupont Circle and take the 1st exit."
+          "Entreu a Dupont Circle i agafeu la 1a sortida."
         ],
         "10": [
-          "Enter Dupont Circle and take the 3rd exit onto Main Street."
+          "Entreu a Dupont Circle i agafeu la 3a sortida cap a Main Street."
         ],
         "11": [
-          "Enter Dupont Circle and take the 3rd exit onto US 322/Main Street. Continue on US 322."
+          "Entreu a Dupont Circle i agafeu la tercera sortida cap a la US 322/Main Street. Continueu per la US 322."
         ],
         "12": [
-          "Enter Dupont Circle and take the 3rd exit toward Baltimore."
+          "Entreu a Dupont Circle i agafeu la tercera sortida cap a Baltimore."
         ],
         "13": [
-          "Enter Dupont Circle and take the exit onto Main Street."
+          "Entreu a Dupont Circle i agafeu la sortida a Main Street."
         ],
         "14": [
-          "Enter Dupont Circle and take the exit onto US 322/Main Street. Continue on US 322."
+          "Entreu a Dupont Circle i agafeu la sortida cap a la US 322/Main Street. Continueu per la US 322."
         ],
         "15": [
-          "Enter Dupont Circle and take the exit toward Baltimore."
+          "Entreu a Dupont Circle i agafeu la sortida cap a Baltimore."
         ]
       }
     },
     "enter_roundabout_verbal": {
       "phrases": {
         "0": "Entra a la rotonda.",
-        "1": "Entra a la rotonda i pren la sortida <ORDINAL_VALUE>.",
-        "2": "Enter the roundabout and take the <ORDINAL_VALUE> exit onto <ROUNDABOUT_EXIT_STREET_NAMES>.",
-        "3": "Enter the roundabout and take the <ORDINAL_VALUE> exit onto <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>.",
-        "4": "Enter the roundabout and take the <ORDINAL_VALUE> exit toward <TOWARD_SIGN>.",
-        "5": "Enter the roundabout and take the exit onto <ROUNDABOUT_EXIT_STREET_NAMES>.",
-        "6": "Enter the roundabout and take the exit onto <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>.",
-        "7": "Enter the roundabout and take the exit toward <TOWARD_SIGN>.",
-        "8": "Enter <STREET_NAMES>",
-        "9": "Enter <STREET_NAMES> and take the <ORDINAL_VALUE> exit.",
-        "10": "Enter <STREET_NAMES> and take the <ORDINAL_VALUE> exit onto <ROUNDABOUT_EXIT_STREET_NAMES>.",
-        "11": "Enter <STREET_NAMES> and take the <ORDINAL_VALUE> exit onto <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>.",
-        "12": "Enter <STREET_NAMES> and take the <ORDINAL_VALUE> exit toward <TOWARD_SIGN>.",
-        "13": "Enter <STREET_NAMES> and take the exit onto <ROUNDABOUT_EXIT_STREET_NAMES>.",
-        "14": "Enter <STREET_NAMES> and take the exit onto <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>.",
-        "15": "Enter <STREET_NAMES> and take the exit toward <TOWARD_SIGN>."
+        "1": "Entreu a la rotonda i agafeu la sortida <ORDINAL_VALUE>.",
+        "2": "Entreu a la rotonda i agafeu la sortida <ORDINAL_VALUE> cap a <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "3": "Entreu a la rotonda i agafeu la sortida <ORDINAL_VALUE> per <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>.",
+        "4": "Entreu a la rotonda i agafeu la sortida <ORDINAL_VALUE> cap a <TOWARD_SIGN>.",
+        "5": "Entreu a la rotonda i agafeu la sortida cap a <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "6": "Entreu a la rotonda i agafeu la sortida cap a <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>.",
+        "7": "Entreu a la rotonda i agafeu la sortida cap a <TOWARD_SIGN>.",
+        "8": "Introduïu <STREET_NAMES>",
+        "9": "Introduïu <STREET_NAMES> i agafeu la sortida <ORDINAL_VALUE>.",
+        "10": "Introduïu <STREET_NAMES> i agafeu la sortida <ORDINAL_VALUE> cap a <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "11": "Introduïu <STREET_NAMES> i agafeu la sortida <ORDINAL_VALUE> per <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>.",
+        "12": "Introduïu <STREET_NAMES> i agafeu la sortida <ORDINAL_VALUE> cap a <TOWARD_SIGN>.",
+        "13": "Introduïu <STREET_NAMES> i agafeu la sortida a <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "14": "Introduïu <STREET_NAMES> i agafeu la sortida a <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>.",
+        "15": "Introduïu <STREET_NAMES> i agafeu la sortida cap a <TOWARD_SIGN>."
       },
       "ordinal_values": [
         "1a",
@@ -566,178 +566,178 @@
         "10ena"
       ],
       "empty_street_name_labels": [
-        "la vorera",
+        "la passarel·la",
         "el carril bici",
-        "la pista de bicicleta de muntanya",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "la ruta de bicicleta de muntanya",
+        "el pas de vianants",
+        "les escales",
+        "el pont",
+        "el túnel"
       ],
       "example_phrases": {
         "0": [
           "Entra a la rotonda."
         ],
         "1": [
-          "Entra a la rotonda i pren la sortida 1a.",
-          "Entra a la rotonda i pren la sortida 2a.",
-          "Entra a la rotonda i pren la sortida 3a.",
-          "Entra a la rotonda i pren la sortida 4a.",
-          "Entra a la rotonda i pren la sortida 5ena.",
-          "Entra a la rotonda i pren la sortida 6ena.",
-          "Entra a la rotonda i pren la sortida 7ena.",
-          "Entra a la rotonda i pren la sortida 8ena.",
-          "Entra a la rotonda i pren la sortida 9ena.",
-          "Entra a la rotonda i pren la sortida 10ena."
+          "Entreu a la rotonda i agafeu la 1a sortida.",
+          "Entreu a la rotonda i agafeu la 2a sortida.",
+          "Entreu a la rotonda i agafeu la 3a sortida.",
+          "Entreu a la rotonda i agafeu la 4a sortida.",
+          "Entreu a la rotonda i agafeu la 5a sortida.",
+          "Entreu a la rotonda i agafeu la 6a sortida.",
+          "Entreu a la rotonda i agafeu la 7a sortida.",
+          "Entreu a la rotonda i agafeu la 8a sortida.",
+          "Entreu a la rotonda i agafeu la 9a sortida.",
+          "Entreu a la rotonda i agafeu la 10a sortida."
         ],
         "2": [
-          "Enter the roundabout and take the 3rd exit onto Main Street."
+          "Entreu a la rotonda i agafeu la 3a sortida cap al carrer principal."
         ],
         "3": [
-          "Enter the roundabout and take the 3rd exit onto U.S. 3 22/Main Street."
+          "Entreu a la rotonda i agafeu la tercera sortida cap a U.S. 3 22/Main Street."
         ],
         "4": [
-          "Enter the roundabout and take the 3rd exit toward Baltimore."
+          "Entreu a la rotonda i agafeu la tercera sortida cap a Baltimore."
         ],
         "5": [
-          "Enter the roundabout and take the exit onto Main Street."
+          "Entreu a la rotonda i agafeu la sortida al carrer principal."
         ],
         "6": [
-          "Enter the roundabout and take the exit onto U.S. 3 22/Main Street."
+          "Entreu a la rotonda i agafeu la sortida cap a U.S. 3 22/Main Street."
         ],
         "7": [
-          "Enter the roundabout and take the exit toward Baltimore."
+          "Entreu a la rotonda i agafeu la sortida cap a Baltimore."
         ],
         "8": [
-          "Enter Dupont Circle."
+          "Entreu a Dupont Circle."
         ],
         "9": [
-          "Enter Dupont Circle and take the 1st exit."
+          "Entreu a Dupont Circle i agafeu la 1a sortida."
         ],
         "10": [
-          "Enter Dupont Circle and take the 3rd exit onto Main Street."
+          "Entreu a Dupont Circle i agafeu la tercera sortida cap a Main Street."
         ],
         "11": [
-          "Enter Dupont Circle and take the 3rd exit onto U.S. 3 22/Main Street."
+          "Entreu a Dupont Circle i agafeu la tercera sortida cap a U.S. 3 22/Main Street."
         ],
         "12": [
-          "Enter Dupont Circle and take the 3rd exit toward Baltimore."
+          "Entreu a Dupont Circle i agafeu la tercera sortida cap a Baltimore."
         ],
         "13": [
-          "Enter Dupont Circle and take the exit onto Main Street."
+          "Entreu a Dupont Circle i agafeu la sortida a Main Street."
         ],
         "14": [
-          "Enter Dupont Circle and take the exit onto U.S. 3 22/Main Street."
+          "Entreu a Dupont Circle i agafeu la sortida cap a U.S. 3 22/Main Street."
         ],
         "15": [
-          "Enter Dupont Circle and take the exit toward Baltimore."
+          "Entreu a Dupont Circle i agafeu la sortida cap a Baltimore."
         ]
       }
     },
     "exit": {
       "phrases": {
-        "0": "Pren la sortida de <RELATIVE_DIRECTION>.",
-        "1": "Pren la sortida <NUMBER_SIGN> de <RELATIVE_DIRECTION>.",
-        "2": "Pren la sortida <BRANCH_SIGN> de <RELATIVE_DIRECTION>.",
-        "3": "Pren la sortida <NUMBER_SIGN> de <RELATIVE_DIRECTION> cap a <BRANCH_SIGN>.",
-        "4": "Pren la sortida de <RELATIVE_DIRECTION> cap a <TOWARD_SIGN>.",
-        "5": "Pren la sortida <NUMBER_SIGN> de <RELATIVE_DIRECTION> cap a <TOWARD_SIGN>.",
-        "6": "Pren la sortida <BRANCH_SIGN> de <RELATIVE_DIRECTION> cap a <TOWARD_SIGN>.",
-        "7": "Pren la sortida <NUMBER_SIGN> de <RELATIVE_DIRECTION> a <BRANCH_SIGN> cap a <TOWARD_SIGN>.",
-        "8": "Pren la sortida <NAME_SIGN> de <RELATIVE_DIRECTION>.",
-        "10": "Pren la sortida <NAME_SIGN> de <RELATIVE_DIRECTION> cap a <BRANCH_SIGN>.",
-        "12": "Pren la sortida <NAME_SIGN> de <RELATIVE_DIRECTION> cap a <TOWARD_SIGN>.",
-        "14": "Pren la sortida <NAME_SIGN> de <RELATIVE_DIRECTION> a <BRANCH_SIGN> cap a <TOWARD_SIGN>.",
-        "15": "Pren la sortida.",
-        "16": "Pren la sortida <NUMBER_SIGN>.",
-        "17": "Pren la sortida <BRANCH_SIGN>.",
-        "18": "Pren la sortida <NUMBER_SIGN> cap a <BRANCH_SIGN>.",
-        "19": "Pren la sortida cap a <TOWARD_SIGN>.",
-        "20": "Pren la sortida <NUMBER_SIGN> cap a <TOWARD_SIGN>.",
-        "21": "Pren la sortida <BRANCH_SIGN> cap a <TOWARD_SIGN>.",
-        "22": "Pren la sortida <NUMBER_SIGN> a <BRANCH_SIGN> cap a <TOWARD_SIGN>.",
-        "23": "Pren la sortida <NAME_SIGN>.",
-        "25": "Pren la sortida <NAME_SIGN> cap a <BRANCH_SIGN>.",
-        "27": "Pren la sortida <NAME_SIGN> cap a <TOWARD_SIGN>.",
-        "29": "Pren la sortida <NAME_SIGN> a <BRANCH_SIGN> cap a <TOWARD_SIGN>."
+        "0": "Agafeu la sortida a <RELATIVE_DIRECTION>.",
+        "1": "Agafeu la sortida <NUMBER_SIGN> per la <RELATIVE_DIRECTION>.",
+        "2": "Agafeu la sortida <BRANCH_SIGN> a <RELATIVE_DIRECTION>.",
+        "3": "Agafeu la sortida <NUMBER_SIGN> de la <RELATIVE_DIRECTION> cap a <BRANCH_SIGN>.",
+        "4": "Agafeu la sortida de <RELATIVE_DIRECTION> cap a <TOWARD_SIGN>.",
+        "5": "Agafeu la sortida <NUMBER_SIGN> de la <RELATIVE_DIRECTION> cap a <TOWARD_SIGN>.",
+        "6": "Agafeu la sortida <BRANCH_SIGN> de la <RELATIVE_DIRECTION> cap a <TOWARD_SIGN>.",
+        "7": "Agafeu la sortida <NUMBER_SIGN> de la <RELATIVE_DIRECTION> cap a <BRANCH_SIGN> cap a <TOWARD_SIGN>.",
+        "8": "Agafeu la sortida <NAME_SIGN> per la <RELATIVE_DIRECTION>.",
+        "10": "Agafeu la sortida <NAME_SIGN> de la <RELATIVE_DIRECTION> cap a <BRANCH_SIGN>.",
+        "12": "Agafeu la sortida <NAME_SIGN> de la <RELATIVE_DIRECTION> cap a <TOWARD_SIGN>.",
+        "14": "Agafeu la sortida <NAME_SIGN> de la <RELATIVE_DIRECTION> cap a <BRANCH_SIGN> cap a <TOWARD_SIGN>.",
+        "15": "Agafeu la sortida.",
+        "16": "Agafeu la sortida <NUMBER_SIGN>.",
+        "17": "Agafeu la sortida <BRANCH_SIGN>.",
+        "18": "Agafeu la sortida <NUMBER_SIGN> cap a <BRANCH_SIGN>.",
+        "19": "Agafeu la sortida cap a <TOWARD_SIGN>.",
+        "20": "Agafeu la sortida <NUMBER_SIGN> cap a <TOWARD_SIGN>.",
+        "21": "Agafeu la sortida <BRANCH_SIGN> cap a <TOWARD_SIGN>.",
+        "22": "Agafeu la sortida <NUMBER_SIGN> cap a <BRANCH_SIGN> cap a <TOWARD_SIGN>.",
+        "23": "Agafeu la sortida <NAME_SIGN>.",
+        "25": "Agafeu la sortida <NAME_SIGN> cap a <BRANCH_SIGN>.",
+        "27": "Agafeu la sortida <NAME_SIGN> cap a <TOWARD_SIGN>.",
+        "29": "Agafeu la sortida <NAME_SIGN> cap a <BRANCH_SIGN> cap a <TOWARD_SIGN>."
       },
       "relative_directions": [
-        "l'esquerra",
-        "la dreta"
+        "esquerra",
+        "dret"
       ],
       "example_phrases": {
         "0": [
-          "Pren la sortida de l'esquerra.",
-          "Pren la sortida de la dreta."
+          "Agafeu la sortida de l'esquerra.",
+          "Agafeu la sortida de la dreta."
         ],
         "1": [
-          "Pren la sortida 67 B-A de la dreta."
+          "Agafeu la sortida 67 B-A a la dreta."
         ],
         "2": [
-          "Pren la sortida US 322 West de la dreta."
+          "Agafeu la sortida US 322 West a la dreta."
         ],
         "3": [
-          "Pren la sortida 67 B-A de la dreta cap a US 322 West."
+          "Agafeu la sortida 67 B-A a la dreta cap a la US 322 West."
         ],
         "4": [
-          "Pren la sortida de la dreta cap a Lewistown."
+          "Agafeu la sortida a la dreta cap a Lewistown."
         ],
         "5": [
-          "Pren la sortida 67 B-A de la dreta cap a Lewistown."
+          "Agafeu la sortida 67 B-A a la dreta cap a Lewistown."
         ],
         "6": [
-          "Pren la sortida US 322 West de la dreta cap a Lewistown."
+          "Agafeu la sortida US 322 West a la dreta cap a Lewistown."
         ],
         "7": [
-          "Pren la sortida 67 B-A de la dreta a US 322 West cap a Lewistown/State College."
+          "Agafeu la sortida 67 B-A a la dreta cap a la US 322 West cap a Lewistown/State College."
         ],
         "8": [
-          "Pren la sortida White Marsh Boulevard de l'esquerra."
+          "Agafeu la sortida de White Marsh Boulevard a l'esquerra."
         ],
         "10": [
-          "Pren la sortida White Marsh Boulevard de l'esquerra cap a MD 43 East."
+          "Agafeu la sortida de White Marsh Boulevard a l'esquerra per MD 43 East."
         ],
         "12": [
-          "Pren la sortida White Marsh Boulevard de l'esquerra cap a White Marsh."
+          "Agafeu la sortida de White Marsh Boulevard a l'esquerra cap a White Marsh."
         ],
         "14": [
-          "Pren la sortida White Marsh Boulevard de l'esquerra a MD 43 East cap a White Marsh."
+          "Agafeu la sortida de White Marsh Boulevard a l'esquerra per MD 43 East cap a White Marsh."
         ],
         "15": [
-          "Pren la sortida."
+          "Agafeu la sortida."
         ],
         "16": [
-          "Pren la sortida 67 B-A."
+          "Agafeu la sortida 67 B-A."
         ],
         "17": [
           "Pren la sortida US 322 West."
         ],
         "18": [
-          "Pren la sortida 67 B-A cap a US 322 West."
+          "Agafeu la sortida 67 B-A cap a la US 322 West."
         ],
         "19": [
-          "Pren la sortida cap a Lewistown."
+          "Agafeu la sortida cap a Lewistown."
         ],
         "20": [
-          "Pren la sortida 67 B-A cap a Lewistown."
+          "Agafeu la sortida 67 B-A cap a Lewistown."
         ],
         "21": [
-          "Pren la sortida US 322 West cap a Lewistown."
+          "Agafeu la sortida US 322 West cap a Lewistown."
         ],
         "22": [
-          "Pren la sortida 67 B-A cap a US 322 West cap a Lewistown/State College."
+          "Agafeu la sortida 67 B-A cap a la US 322 West cap a Lewistown/State College."
         ],
         "23": [
-          "Pren la sortida White Marsh Boulevard."
+          "Agafeu la sortida de White Marsh Boulevard."
         ],
         "25": [
-          "Pren la sortida White Marsh Boulevard cap a MD 43 East."
+          "Agafeu la sortida de White Marsh Boulevard per MD 43 East."
         ],
         "27": [
-          "Pren la sortida White Marsh Boulevard cap a White Marsh."
+          "Agafeu la sortida de White Marsh Boulevard cap a White Marsh."
         ],
         "29": [
-          "Pren la sortida White Marsh Boulevard cap a MD 43 East cap a White Marsh."
+          "Agafeu la sortida de White Marsh Boulevard per MD 43 East cap a White Marsh."
         ]
       }
     },
@@ -749,444 +749,444 @@
         "3": "Exit the roundabout toward <TOWARD_SIGN>."
       },
       "empty_street_name_labels": [
-        "la vorera",
+        "la passarel·la",
         "el carril bici",
-        "la pista de bicicleta de muntanya",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "la ruta de bicicleta de muntanya",
+        "el pas de vianants",
+        "les escales",
+        "el pont",
+        "el túnel"
       ],
       "example_phrases": {
         "0": [
-          "Surt de la rotonda."
+          "Sortir de la rotonda."
         ],
         "1": [
-          "Surt de la rotonda a Philadelphia Road/MD 7."
+          "Sortiu de la rotonda cap a Philadelphia Road/MD 7."
         ],
         "2": [
-          "Surt de la rotonda a Catoctin Mountain Highway/US 15. Continua per US 15."
+          "Sortiu de la rotonda per Catoctin Mountain Highway/US 15. Continueu per US 15."
         ],
         "3": [
-          "Exit the roundabout toward Baltimore."
+          "Sortiu de la rotonda cap a Baltimore."
         ]
       }
     },
     "exit_roundabout_verbal": {
       "phrases": {
-        "0": "Surt de la rotonda.",
-        "1": "Surt de la rotonda a <STREET_NAMES>.",
+        "0": "Sortir de la rotonda.",
+        "1": "Sortiu de la rotonda per <STREET_NAMES>.",
         "2": "Surt de la rotonda a <BEGIN_STREET_NAMES>. Continua per <STREET_NAMES>.",
-        "3": "Exit the roundabout toward <TOWARD_SIGN>."
+        "3": "Sortiu de la rotonda cap a <TOWARD_SIGN>."
       },
       "empty_street_name_labels": [
-        "la vorera",
+        "la passarel·la",
         "el carril bici",
-        "la pista de bicicleta de muntanya",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "la ruta de bicicleta de muntanya",
+        "el pas de vianants",
+        "les escales",
+        "el pont",
+        "el túnel"
       ],
       "example_phrases": {
         "0": [
-          "Surt de la rotonda."
+          "Sortir de la rotonda."
         ],
         "1": [
-          "Surt de la rotonda a Philadelphia Road, Maryland 7."
+          "Sortiu de la rotonda cap a Philadelphia Road, Maryland 7."
         ],
         "2": [
-          "Surt de la rotonda a Catoctin Mountain Highway, U.S. 15."
+          "Sortiu de la rotonda per Catoctin Mountain Highway, U.S. 15."
         ],
         "3": [
-          "Exit the roundabout toward Baltimore."
+          "Sortiu de la rotonda cap a Baltimore."
         ]
       }
     },
     "exit_verbal": {
       "phrases": {
-        "0": "Pren la sortida de <RELATIVE_DIRECTION>.",
-        "1": "Pren la sortida <NUMBER_SIGN> de <RELATIVE_DIRECTION>.",
-        "2": "Pren la sortida <BRANCH_SIGN> de <RELATIVE_DIRECTION>.",
-        "3": "Pren la sortida <NUMBER_SIGN> de <RELATIVE_DIRECTION> cap a <BRANCH_SIGN>.",
-        "4": "Pren la sortida de <RELATIVE_DIRECTION> cap a <TOWARD_SIGN>.",
-        "5": "Pren la sortida <NUMBER_SIGN> de <RELATIVE_DIRECTION> cap a <TOWARD_SIGN>.",
-        "6": "Pren la sortida <BRANCH_SIGN> de <RELATIVE_DIRECTION> cap a <TOWARD_SIGN>.",
-        "7": "Pren la sortida <NUMBER_SIGN> de <RELATIVE_DIRECTION> a <BRANCH_SIGN> cap a <TOWARD_SIGN>.",
-        "8": "Pren la sortida <NAME_SIGN> de <RELATIVE_DIRECTION>.",
-        "10": "Pren la sortida <NAME_SIGN> de <RELATIVE_DIRECTION> cap a <BRANCH_SIGN>.",
-        "12": "Pen la sortida <NAME_SIGN> de <RELATIVE_DIRECTION> cap a <TOWARD_SIGN>.",
-        "14": "Pren la sortida <NAME_SIGN> de <RELATIVE_DIRECTION> a <BRANCH_SIGN> cap a <TOWARD_SIGN>.",
-        "15": "Pren la sortida",
-        "16": "Pren la sortida <NUMBER_SIGN>.",
-        "17": "Pren la sortida <BRANCH_SIGN>.",
-        "18": "Pren la sortida <NUMBER_SIGN> cap a <BRANCH_SIGN>.",
-        "19": "Pren la sortida cap a <TOWARD_SIGN>.",
-        "20": "Pren la sortida <NUMBER_SIGN> cap a <TOWARD_SIGN>.",
-        "21": "Pren la sortida <BRANCH_SIGN> cap a <TOWARD_SIGN>.",
-        "22": "Pren la sortida <NUMBER_SIGN> a <BRANCH_SIGN> cap a <TOWARD_SIGN>.",
-        "23": "Pren la sortida <NAME_SIGN>.",
-        "25": "Pren la sortida <NAME_SIGN> cap a <BRANCH_SIGN>.",
-        "27": "Pren la sortida <NAME_SIGN> cap a <TOWARD_SIGN>.",
-        "29": "Pren la sortida <NAME_SIGN> a <BRANCH_SIGN> cap a <TOWARD_SIGN>."
+        "0": "Agafeu la sortida de <RELATIVE_DIRECTION>.",
+        "1": "Agafeu la sortida <NUMBER_SIGN> de la <RELATIVE_DIRECTION>.",
+        "2": "Agafeu la sortida <BRANCH_SIGN> de la <RELATIVE_DIRECTION>.",
+        "3": "Agafeu la sortida <NUMBER_SIGN> de la <RELATIVE_DIRECTION> cap a <BRANCH_SIGN>.",
+        "4": "Agafeu la sortida de <RELATIVE_DIRECTION> cap a <TOWARD_SIGN>.",
+        "5": "Agafeu la sortida <NUMBER_SIGN> de la <RELATIVE_DIRECTION> cap a <TOWARD_SIGN>.",
+        "6": "Agafeu la sortida <BRANCH_SIGN> de la <RELATIVE_DIRECTION> cap a <TOWARD_SIGN>.",
+        "7": "Agafeu la sortida <NUMBER_SIGN> de la <RELATIVE_DIRECTION> cap a <BRANCH_SIGN> cap a <TOWARD_SIGN>.",
+        "8": "Agafeu la sortida <NAME_SIGN> per la <RELATIVE_DIRECTION>.",
+        "10": "Agafeu la sortida <NAME_SIGN> de la <RELATIVE_DIRECTION> cap a <BRANCH_SIGN>.",
+        "12": "Agafeu la sortida <NAME_SIGN> de la <RELATIVE_DIRECTION> cap a <TOWARD_SIGN>.",
+        "14": "Agafeu la sortida <NAME_SIGN> de <RELATIVE_DIRECTION> cap a <BRANCH_SIGN> cap a <TOWARD_SIGN>.",
+        "15": "Agafeu la sortida.",
+        "16": "Agafeu la sortida <NUMBER_SIGN>.",
+        "17": "Agafeu la sortida <BRANCH_SIGN>.",
+        "18": "Agafeu la sortida <NUMBER_SIGN> cap a <BRANCH_SIGN>.",
+        "19": "Agafeu la sortida cap a <TOWARD_SIGN>.",
+        "20": "Agafeu la sortida <NUMBER_SIGN> cap a <TOWARD_SIGN>.",
+        "21": "Agafeu la sortida <BRANCH_SIGN> cap a <TOWARD_SIGN>.",
+        "22": "Agafeu la sortida <NUMBER_SIGN> cap a <BRANCH_SIGN> cap a <TOWARD_SIGN>.",
+        "23": "Agafeu la sortida <NAME_SIGN>.",
+        "25": "Agafeu la sortida <NAME_SIGN> cap a <BRANCH_SIGN>.",
+        "27": "Agafeu la sortida <NAME_SIGN> cap a <TOWARD_SIGN>.",
+        "29": "Agafeu la sortida <NAME_SIGN> cap a <BRANCH_SIGN> cap a <TOWARD_SIGN>."
       },
       "relative_directions": [
-        "l'esquerra",
-        "la dreta"
+        "esquerra",
+        "dret"
       ],
       "example_phrases": {
         "0": [
-          "Pren la sortida de l'esquerra.",
-          "Pren la sortida de la dreta."
+          "Agafeu la sortida a l'esquerra.",
+          "Agafeu la sortida a la dreta."
         ],
         "1": [
-          "Pren la sortida 67 B-A de la dreta."
+          "Agafeu la sortida 67 B-A a la dreta."
         ],
         "2": [
-          "Pren la sortida U.S. 3 22 West de la dreta."
+          "Agafeu la sortida U.S. 3 22 West a la dreta."
         ],
         "3": [
-          "Pren la sortida 67 B-A de la dreta cap a U.S. 3 22 West."
+          "Agafeu la sortida 67 B-A a la dreta per U.S. 3 22 West."
         ],
         "4": [
-          "Pren la sortida de la dreta cap a Lewistown."
+          "Agafeu la sortida a la dreta cap a Lewistown."
         ],
         "5": [
-          "Pren la sortida 67 B-A de la dreta cap a Lewistown."
+          "Agafeu la sortida 67 B-A a la dreta cap a Lewistown."
         ],
         "6": [
-          "Pren la sortida U.S. 3 22 West de la dreta cap a Lewistown."
+          "Agafeu la sortida U.S. 3 22 West a la dreta cap a Lewistown."
         ],
         "7": [
-          "Pren la sortida 67 B-A de la dreta a U.S. 3 22 West cap a Lewistown, State College."
+          "Agafeu la sortida 67 B-A a la dreta per U.S. 3 22 West cap a Lewistown, State College."
         ],
         "8": [
-          "Pren la sortida White Marsh Boulevard de l'esquerra."
+          "Agafeu la sortida de White Marsh Boulevard a l'esquerra."
         ],
         "10": [
-          "Pren la sortida White Marsh Boulevard de l'esquerra a Maryland 43 East."
+          "Agafeu la sortida de White Marsh Boulevard a l'esquerra per Maryland 43 East."
         ],
         "12": [
-          "Pren la sortida White Marsh Boulevard de l'esquerra cap a White Marsh."
+          "Agafeu la sortida de White Marsh Boulevard a l'esquerra cap a White Marsh."
         ],
         "14": [
-          "Pren la sortida White Marsh Boulevard de l'esquerra a Maryland 43 East cap a White Marsh."
+          "Agafeu la sortida de White Marsh Boulevard a l'esquerra per Maryland 43 East cap a White Marsh."
         ],
         "15": [
-          "Pren la sortida."
+          "Agafeu la sortida."
         ],
         "16": [
-          "Pren la sortida 67 B-A."
+          "Agafeu la sortida 67 B-A."
         ],
         "17": [
-          "Pren la sortida US 322 West."
+          "Agafeu la sortida US 322 West."
         ],
         "18": [
-          "Pren la sortida 67 B-A cap a US 322 West."
+          "Agafeu la sortida 67 B-A per la US 322 West."
         ],
         "19": [
-          "Pren la sortida cap a Lewistown."
+          "Agafeu la sortida cap a Lewistown."
         ],
         "20": [
-          "Pren la sortida 67 B-A cap a Lewistown."
+          "Agafeu la sortida 67 B-A cap a Lewistown."
         ],
         "21": [
-          "Pren la sortida US 322 West cap a Lewistown."
+          "Agafeu la sortida US 322 West cap a Lewistown."
         ],
         "22": [
-          "Pren la sortida 67 B-A a US 322 West cap a Lewistown/State College."
+          "Agafeu la sortida 67 B-A cap a la US 322 West cap a Lewistown/State College."
         ],
         "23": [
-          "Pren la sortida White Marsh Boulevard."
+          "Agafeu la sortida de White Marsh Boulevard."
         ],
         "25": [
-          "Pren la sortida White Marsh Boulevard onto MD 43 East."
+          "Agafeu la sortida de White Marsh Boulevard per MD 43 East."
         ],
         "27": [
-          "Pren la sortida White Marsh Boulevard cap a White Marsh."
+          "Agafeu la sortida de White Marsh Boulevard cap a White Marsh."
         ],
         "29": [
-          "Pren la sortida White Marsh Boulevard a MD 43 East cap a White Marsh."
+          "Agafeu la sortida de White Marsh Boulevard per MD 43 East cap a White Marsh."
         ]
       }
     },
     "exit_visual": {
       "phrases": {
-        "0": "Exit <EXIT_NUMBERS>"
+        "0": "Sortiu de <EXIT_NUMBERS>"
       },
       "example_phrases": {
         "0": [
-          "Exit 1A"
+          "Sortida 1A"
         ]
       }
     },
     "keep": {
       "phrases": {
-        "0": "Queda't a <RELATIVE_DIRECTION> a la bifurcació.",
-        "1": "Queda't a <RELATIVE_DIRECTION> per prendre la sortida <NUMBER_SIGN>.",
-        "2": "Queda't a <RELATIVE_DIRECTION> per prendre <STREET_NAMES>.",
-        "3": "Queda't a <RELATIVE_DIRECTION> per prendre la sortida <NUMBER_SIGN> a <STREET_NAMES>.",
-        "4": "Queda't a <RELATIVE_DIRECTION> cap a <TOWARD_SIGN>.",
-        "5": "Queda't a <RELATIVE_DIRECTION> per prendre la sortida <NUMBER_SIGN> cap a <TOWARD_SIGN>.",
-        "6": "Queda't a <RELATIVE_DIRECTION> per prendre <STREET_NAMES> a <TOWARD_SIGN>.",
-        "7": "Queda't a <RELATIVE_DIRECTION> per prendre la sortida <NUMBER_SIGN> a <STREET_NAMES> cap a <TOWARD_SIGN>."
+        "0": "Mantingueu <RELATIVE_DIRECTION> a la bifurcació.",
+        "1": "Manteniu <RELATIVE_DIRECTION> per agafar la sortida <NUMBER_SIGN>.",
+        "2": "Mantingueu <RELATIVE_DIRECTION> per agafar <STREET_NAMES>.",
+        "3": "Manteniu <RELATIVE_DIRECTION> per agafar la sortida <NUMBER_SIGN> cap a <STREET_NAMES>.",
+        "4": "Mantingueu <RELATIVE_DIRECTION> cap a <TOWARD_SIGN>.",
+        "5": "Manteniu <RELATIVE_DIRECTION> per agafar la sortida <NUMBER_SIGN> cap a <TOWARD_SIGN>.",
+        "6": "Mantingueu <RELATIVE_DIRECTION> per agafar <STREET_NAMES> cap a <TOWARD_SIGN>.",
+        "7": "Manteniu <RELATIVE_DIRECTION> per agafar la sortida <NUMBER_SIGN> cap a <STREET_NAMES> cap a <TOWARD_SIGN>."
       },
       "empty_street_name_labels": [
-        "la vorera",
+        "la passarel·la",
         "el carril bici",
-        "la pista de bicicleta de muntanya",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "la ruta de bicicleta de muntanya",
+        "el pas de vianants",
+        "les escales",
+        "el pont",
+        "el túnel"
       ],
       "relative_directions": [
-        "l'esquerra",
-        "el centre",
-        "la dreta"
+        "esquerra",
+        "recte",
+        "dret"
       ],
       "example_phrases": {
         "0": [
-          "Queda't a l'esquerra a la bifuració.",
-          "Queda't al centre a la bifurcació",
-          "Queda't a la dreta a la bifurcació."
+          "Mantingueu l'esquerra a la bifurcació.",
+          "Seguiu recte a la bifurcació.",
+          "Mantingueu el dret a la bifurcació."
         ],
         "1": [
-          "Queda't a la dreta per prendre la sortida 62."
+          "Mantingueu el dret per agafar la sortida 62."
         ],
         "2": [
-          "Queda't a la dreta per prendre la I 895 South."
+          "Mantingueu-vos a la dreta per agafar la I 895 South."
         ],
         "3": [
-          "Queda't a la dreta per prendre la sortida 62 cap a I 895 South."
+          "Mantingueu-vos al dret per agafar la sortida 62 cap a la I 895 South."
         ],
         "4": [
-          "Queda't a la dreta cap a Annapolis."
+          "Mantingueu el dret cap a Annapolis."
         ],
         "5": [
-          "Queda't a la dreta per prendre la sortida 62 cap a Annapolis."
+          "Mantingueu-vos a la dreta per agafar la sortida 62 cap a Annapolis."
         ],
         "6": [
-          "Queda't a la dreta per prendre la I 895 South cap a Annapolis."
+          "Mantingueu-vos a la dreta per agafar la I 895 South cap a Annapolis."
         ],
         "7": [
-          "Queda't a la dreta per prendre la sortida 62 a I 895 South cap a Annapolis."
+          "Mantingueu-vos a la dreta per agafar la sortida 62 cap a la I 895 South cap a Annapolis."
         ]
       }
     },
     "keep_to_stay_on": {
       "phrases": {
-        "0": "Queda't a <RELATIVE_DIRECTION> per continuar per <STREET_NAMES>.",
-        "1": "Queda't a <RELATIVE_DIRECTION> per prendre la sortida <NUMBER_SIGN> per continuar per <STREET_NAMES>.",
-        "2": "Queda't a <RELATIVE_DIRECTION> per continuar per <STREET_NAMES> cap a <TOWARD_SIGN>.",
-        "3": "Queda't a <RELATIVE_DIRECTION> per prendre la sortida <NUMBER_SIGN> per continuar per <STREET_NAMES> cap a <TOWARD_SIGN>."
+        "0": "Contingueu <RELATIVE_DIRECTION> per romandre a <STREET_NAMES>.",
+        "1": "Mantingueu <RELATIVE_DIRECTION> per agafar la sortida <NUMBER_SIGN> per quedar-vos a <STREET_NAMES>.",
+        "2": "Mantingueu <RELATIVE_DIRECTION> per romandre a <STREET_NAMES> cap a <TOWARD_SIGN>.",
+        "3": "Mantingueu <RELATIVE_DIRECTION> per agafar la sortida <NUMBER_SIGN> i romandre a <STREET_NAMES> cap a <TOWARD_SIGN>."
       },
       "empty_street_name_labels": [
-        "la vorera",
+        "la passarel·la",
         "el carril bici",
-        "la pista de bicicleta de muntanya",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "la ruta de bicicleta de muntanya",
+        "el pas de vianants",
+        "les escales",
+        "el pont",
+        "el túnel"
       ],
       "relative_directions": [
-        "l'esquerra",
-        "el centre",
-        "la dreta"
+        "esquerra",
+        "recte",
+        "dret"
       ],
       "example_phrases": {
         "0": [
-          "Queda't a l'esquerra per continuar per I 95 South.",
-          "Queda't al centre per continuar per I 95 South.",
-          "Queda't a la dreta per continuar per I 95 South."
+          "Mantingueu-vos a l'esquerra per quedar-vos a I 95 South.",
+          "Seguiu recte per romandre a la I 95 South.",
+          "Mantingueu-vos a la dreta per quedar-vos a I 95 South"
         ],
         "1": [
-          "Queda't a l'esquerra per prendre la sortida 62 per continuar per I 95 South."
+          "Mantingueu-vos a l'esquerra per agafar la sortida 62 i romandre a I 95 South"
         ],
         "2": [
-          "Queda't a l'esquerra per continuar per I 95 South cap a Baltimore."
+          "Mantingueu-vos a l'esquerra per quedar-vos a la I 95 South cap a Baltimore"
         ],
         "3": [
-          "Queda't a l'esquerra per prendre la sortida 62 per continuar per I 95 South cap a Baltimore."
+          "Mantingueu-vos a l'esquerra per agafar la sortida 62 i romandre a la I 95 South cap a Baltimore"
         ]
       }
     },
     "keep_to_stay_on_verbal": {
       "phrases": {
-        "0": "Queda't a <RELATIVE_DIRECTION> per continuar per <STREET_NAMES>.",
-        "1": "Queda't a <RELATIVE_DIRECTION> per prendre la sortida <NUMBER_SIGN> per continuar per <STREET_NAMES>.",
-        "2": "Queda't a <RELATIVE_DIRECTION> per continuar per <STREET_NAMES> cap a <TOWARD_SIGN>.",
-        "3": "Queda't a <RELATIVE_DIRECTION> per prendre la sortida <NUMBER_SIGN> per continuar per <STREET_NAMES> cap a <TOWARD_SIGN>."
+        "0": "Mantingueu <RELATIVE_DIRECTION> per romandre a <STREET_NAMES>.",
+        "1": "Manteniu <RELATIVE_DIRECTION> per agafar la sortida <NUMBER_SIGN> i romandre a <STREET_NAMES>.",
+        "2": "Mantingueu <RELATIVE_DIRECTION> per romandre a <STREET_NAMES> cap a <TOWARD_SIGN>.",
+        "3": "Manteniu <RELATIVE_DIRECTION> per agafar la sortida <NUMBER_SIGN> i romandre a <STREET_NAMES> cap a <TOWARD_SIGN>."
       },
       "empty_street_name_labels": [
-        "la vorera",
+        "la passarel·la",
         "el carril bici",
-        "la pista de bicicleta de muntanya",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "la ruta de bicicleta de muntanya",
+        "el pas de vianants",
+        "les escales",
+        "el pont",
+        "el túnel"
       ],
       "relative_directions": [
-        "l'esquerra",
-        "el centre",
-        "la dreta"
+        "esquerra",
+        "recte",
+        "dret"
       ],
       "example_phrases": {
         "0": [
-          "Queda't a l'esquerra per continuar per Interstate 95 South.",
-          "Queda't al centre per continuar per Interstate 95 South.",
-          "Queda't a la dreta per continuar per Interstate 95 South."
+          "Mantingueu-vos a l'esquerra per continuar a la Interstate 95 South.",
+          "Mantingueu-vos recte per continuar a la Interstate 95 South.",
+          "Mantingueu-vos en dret per mantenir-vos a la Interstate 95 South."
         ],
         "1": [
-          "Queda't a l'esquerra per prendre la sortida 62 per continuar per Interstate 95 South."
+          "Mantingueu-vos a l'esquerra per agafar la sortida 62 per continuar a la Interstate 95 South."
         ],
         "2": [
-          "Queda't a l'esquerra per continuar per Interstate 95 South cap a Baltimore."
+          "Mantingueu-vos a l'esquerra per continuar a la I 95 South cap a Baltimore."
         ],
         "3": [
-          "Queda't a l'esquerra per prendre la sortida 62 per continuar per Interstate 95 South cap a Baltimore."
+          "Mantingueu-vos a l'esquerra per agafar la sortida 62 per continuar a la Interstate 95 South cap a Baltimore."
         ]
       }
     },
     "keep_verbal": {
       "phrases": {
-        "0": "Queda't a <RELATIVE_DIRECTION> a la bifurcació.",
-        "1": "Queda't a <RELATIVE_DIRECTION> per prendre la sortida <NUMBER_SIGN>.",
-        "2": "Queda't a <RELATIVE_DIRECTION> per prendre <STREET_NAMES>.",
-        "3": "Queda't a <RELATIVE_DIRECTION> per prendre la sortida <NUMBER_SIGN> a <STREET_NAMES>.",
-        "4": "Queda't a <RELATIVE_DIRECTION> cap a <TOWARD_SIGN>.",
-        "5": "Queda't a <RELATIVE_DIRECTION> per prendre la sortida <NUMBER_SIGN> cap a <TOWARD_SIGN>.",
-        "6": "Queda't a <RELATIVE_DIRECTION> per prendre <STREET_NAMES> a <TOWARD_SIGN>.",
-        "7": "Queda't a <RELATIVE_DIRECTION> per prendre la sortida <NUMBER_SIGN> a <STREET_NAMES> cap a <TOWARD_SIGN>."
+        "0": "Mantingueu <RELATIVE_DIRECTION> a la bifurcació.",
+        "1": "Manteniu <RELATIVE_DIRECTION> per agafar la sortida <NUMBER_SIGN>.",
+        "2": "Mantingueu <RELATIVE_DIRECTION> per agafar <STREET_NAMES>.",
+        "3": "Manteniu <RELATIVE_DIRECTION> per agafar la sortida <NUMBER_SIGN> cap a <STREET_NAMES>.",
+        "4": "Mantingueu <RELATIVE_DIRECTION> cap a <TOWARD_SIGN>.",
+        "5": "Manteniu <RELATIVE_DIRECTION> per agafar la sortida <NUMBER_SIGN> cap a <TOWARD_SIGN>.",
+        "6": "Mantingueu <RELATIVE_DIRECTION> per agafar <STREET_NAMES> cap a <TOWARD_SIGN>.",
+        "7": "Manteniu <RELATIVE_DIRECTION> per agafar la sortida <NUMBER_SIGN> cap a <STREET_NAMES> cap a <TOWARD_SIGN>."
       },
       "empty_street_name_labels": [
-        "la vorera",
+        "la passarel·la",
         "el carril bici",
-        "la pista de bicicleta de muntanya",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "la ruta de bicicleta de muntanya",
+        "el pas de vianants",
+        "les escales",
+        "el pont",
+        "el túnel"
       ],
       "relative_directions": [
-        "l'esquerra",
-        "el centre",
-        "la dreta"
+        "esquerra",
+        "recte",
+        "dret"
       ],
       "example_phrases": {
         "0": [
-          "Queda't a l'esquerra a la bifuració.",
-          "Queda't al centre a la bifurcació",
-          "Queda't a la dreta a la bifurcació."
+          "Mantingueu l'esquerra a la bifurcació.",
+          "Seguiu recte a la bifurcació.",
+          "Mantingueu el dret a la bifurcació."
         ],
         "1": [
-          "Queda't a la dreta per prendre la sortida 62."
+          "Mantingueu el dret per agafar la sortida 62."
         ],
         "2": [
-          "Queda't a la dreta per prendre la Interstate 895 South."
+          "Mantingueu-vos a la dreta per agafar l'Interstate 8 95 South."
         ],
         "3": [
-          "Queda't a la dreta per prendre la sortida 62 cap a Interstate 895 South."
+          "Mantingueu-vos al dret per agafar la sortida 62 cap a la Interstate 8 95 South."
         ],
         "4": [
-          "Queda't a la dreta cap a Annapolis."
+          "Mantingueu el dret cap a Annapolis."
         ],
         "5": [
-          "Queda't a la dreta per prendre la sortida 62 cap a Annapolis."
+          "Mantingueu-vos a la dreta per agafar la sortida 62 cap a Annapolis."
         ],
         "6": [
-          "Queda't a la dreta per prendre la Interstate 895 South cap a Annapolis."
+          "Mantingueu-vos a la dreta per agafar la Interstate 8 95 South cap a Annapolis."
         ],
         "7": [
-          "Queda't a la dreta per prendre la sortida 62 a Interstate 895 South cap a Annapolis."
+          "Mantingueu-vos a la dreta per agafar la sortida 62 cap a la Interstate 8 95 South cap a Annapolis."
         ]
       }
     },
     "merge": {
       "phrases": {
-        "0": "Enllaça.",
-        "1": "Enllaça a <RELATIVE_DIRECTION>.",
-        "2": "Enllaça amb <STREET_NAMES>.",
-        "3": "Enllaça a <RELATIVE_DIRECTION> amb <STREET_NAMES>.",
-        "4": "Merge toward <TOWARD_SIGN>.",
-        "5": "Merge <RELATIVE_DIRECTION> toward <TOWARD_SIGN>."
+        "0": "Fusionar.",
+        "1": "Combina <RELATIVE_DIRECTION>.",
+        "2": "Uniu-vos a <STREET_NAMES>.",
+        "3": "Combina <RELATIVE_DIRECTION> a <STREET_NAMES>.",
+        "4": "Uniu-vos cap a <TOWARD_SIGN>.",
+        "5": "Combina <RELATIVE_DIRECTION> cap a <TOWARD_SIGN>."
       },
       "relative_directions": [
-        "l'esquerra",
-        "la dreta"
+        "esquerra",
+        "dret"
       ],
       "empty_street_name_labels": [
-        "la vorera",
+        "la passarel·la",
         "el carril bici",
-        "la pista de bicicleta de muntanya",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "la ruta de bicicleta de muntanya",
+        "el pas de vianants",
+        "les escales",
+        "el pont",
+        "el túnel"
       ],
       "example_phrases": {
         "0": [
-          "Enllaça."
+          "Fusionar."
         ],
         "1": [
-          "Enllaça a l'esquerra."
+          "Fusionar esquerra."
         ],
         "2": [
-          "Enllaça amb I 76 West/Pennsylvania Turnpike."
+          "Incorporeu-vos a I 76 West/Pennsylvania Turnpike."
         ],
         "3": [
-          "Enllaça a la dreta amb I 83 South."
+          "Incorporeu-vos a dret per I 83 South."
         ],
         "4": [
-          "Merge toward Baltimore."
+          "Uniu-vos cap a Baltimore."
         ],
         "5": [
-          "Merge right toward Baltimore."
+          "Fusionar dret cap a Baltimore."
         ]
       }
     },
     "merge_verbal": {
       "phrases": {
-        "0": "Enllaça.",
-        "1": "Enllaça a <RELATIVE_DIRECTION>.",
-        "2": "Enllaça amb <STREET_NAMES>.",
-        "3": "Enllaça a <RELATIVE_DIRECTION> amb <STREET_NAMES>.",
-        "4": "Merge toward <TOWARD_SIGN>.",
-        "5": "Merge <RELATIVE_DIRECTION> toward <TOWARD_SIGN>."
+        "0": "Fusionar.",
+        "1": "fusionar <RELATIVE_DIRECTION>.",
+        "2": "fusionar-se a <STREET_NAMES>.",
+        "3": "Combina <RELATIVE_DIRECTION> a <STREET_NAMES>.",
+        "4": "Uniu-vos cap a <TOWARD_SIGN>.",
+        "5": "Combina <RELATIVE_DIRECTION> cap a <TOWARD_SIGN>."
       },
       "relative_directions": [
-        "l'esquerra",
-        "la dreta"
+        "esquerra",
+        "dret"
       ],
       "empty_street_name_labels": [
-        "la vorera",
+        "la passarel·la",
         "el carril bici",
-        "la pista de bicicleta de muntanya",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "la ruta de bicicleta de muntanya",
+        "el pas de vianants",
+        "les escales",
+        "el pont",
+        "el túnel"
       ],
       "example_phrases": {
         "0": [
-          "Merge."
+          "Fusionar."
         ],
         "1": [
-          "Enllaça a l'esquerra."
+          "Fusionar esquerra."
         ],
         "2": [
-          "Enllaça amb I 76 West/Pennsylvania Turnpike."
+          "Incorporeu-vos a I 76 West/Pennsylvania Turnpike."
         ],
         "3": [
-          "Enllaça a la dreta amb I 83 South."
+          "Incorporeu-vos a dret per I 83 South."
         ],
         "4": [
-          "Merge toward Baltimore."
+          "Uniu-vos cap a Baltimore."
         ],
         "5": [
-          "Merge right toward Baltimore."
+          "Fusionar dret cap a Baltimore."
         ]
       }
     },
@@ -1195,29 +1195,29 @@
         "0": "Viatja <TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>."
       },
       "transit_stop_count_labels": {
-        "one": "parada",
-        "other": "parades"
+        "one": "Atura",
+        "other": "s'atura"
       },
       "example_phrases": {
         "0": [
-          "Travel 1 stop.",
-          "Travel 3 stops."
+          "Viatge 1 parada.",
+          "Recorregut 3 parades."
         ]
       }
     },
     "post_transition_verbal": {
       "phrases": {
-        "0": "Continua durant <LENGTH>.",
-        "1": "Continua per <STREET_NAMES> durant <LENGTH>."
+        "0": "Continueu durant <LENGTH>.",
+        "1": "Continueu per <STREET_NAMES> durant <LENGTH>."
       },
       "empty_street_name_labels": [
-        "la vorera",
+        "la passarel·la",
         "el carril bici",
-        "la pista de bicicleta de muntanya",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "la ruta de bicicleta de muntanya",
+        "el pas de vianants",
+        "les escales",
+        "el pont",
+        "el túnel"
       ],
       "metric_lengths": [
         "<KILOMETERS> quilòmetres",
@@ -1229,300 +1229,300 @@
         "<MILES> milles",
         "1 milla",
         "mitja milla",
-        "a quarter mile",
+        "un quart de milla",
         "<FEET> peus",
         "menys de 10 peus"
       ],
       "example_phrases": {
         "0": [
-          "Continue for 300 feet.",
-          "Continue for 9 miles."
+          "Continueu 300 peus.",
+          "Continueu 9 milles."
         ],
         "1": [
-          "Continue on Pennsylvania 7 43 for 6.2 miles.",
-          "Continue on Main Street, Vermont 30 for 1 tenth of a mile."
+          "Continueu per Pennsylvania 7 43 durant 6,2 milles.",
+          "Continueu per Main Street, Vermont 30 durant 1 dècima de milla."
         ]
       }
     },
     "ramp": {
       "phrases": {
-        "0": "Pren l'accés de <RELATIVE_DIRECTION>.",
-        "1": "Pren l'accés <BRANCH_SIGN> de <RELATIVE_DIRECTION>.",
-        "2": "Pren l'accés de <RELATIVE_DIRECTION> cap a <TOWARD_SIGN>.",
-        "3": "Pren l'accés <BRANCH_SIGN> de <RELATIVE_DIRECTION> cap a <TOWARD_SIGN>.",
-        "4": "Pren l'accés <NAME_SIGN> de <RELATIVE_DIRECTION>.",
-        "5": "Gira cap a <RELATIVE_DIRECTION> per prendre l'accés.",
-        "6": "Gira cap a <RELATIVE_DIRECTION> per prendre l'accés <BRANCH_SIGN>.",
-        "7": "Gira cap a <RELATIVE_DIRECTION> per prendre l'accés cap a <TOWARD_SIGN>.",
-        "8": "Gira cap a <RELATIVE_DIRECTION> per prendre l'accés <BRANCH_SIGN> cap a <TOWARD_SIGN>.",
-        "9": "Gira cap a <RELATIVE_DIRECTION> per prendre l'accés <NAME_SIGN>.",
-        "10": "Pren l'accés.",
-        "11": "Pren l'accés <BRANCH_SIGN>.",
-        "12": "Pren l'accés cap a <TOWARD_SIGN>.",
-        "13": "Pren l'accés <BRANCH_SIGN> cap a <TOWARD_SIGN>.",
-        "14": "Pren l'accés <NAME_SIGN>."
+        "0": "Agafeu la rampa de la <RELATIVE_DIRECTION>.",
+        "1": "Agafeu la rampa <BRANCH_SIGN> a la <RELATIVE_DIRECTION>.",
+        "2": "Agafeu la rampa de la <RELATIVE_DIRECTION> cap a <TOWARD_SIGN>.",
+        "3": "Agafeu la rampa <BRANCH_SIGN> de la <RELATIVE_DIRECTION> cap a <TOWARD_SIGN>.",
+        "4": "Agafeu la rampa <NAME_SIGN> per la <RELATIVE_DIRECTION>.",
+        "5": "Gireu <RELATIVE_DIRECTION> per agafar la rampa.",
+        "6": "Gireu <RELATIVE_DIRECTION> per agafar la rampa <BRANCH_SIGN>.",
+        "7": "Gireu <RELATIVE_DIRECTION> per agafar la rampa cap a <TOWARD_SIGN>.",
+        "8": "Gireu <RELATIVE_DIRECTION> per agafar la rampa <BRANCH_SIGN> cap a <TOWARD_SIGN>.",
+        "9": "Gireu <RELATIVE_DIRECTION> per agafar la rampa <NAME_SIGN>.",
+        "10": "Agafeu la rampa.",
+        "11": "Agafeu la rampa <BRANCH_SIGN>.",
+        "12": "Agafeu la rampa cap a <TOWARD_SIGN>.",
+        "13": "Agafeu la rampa <BRANCH_SIGN> cap a <TOWARD_SIGN>.",
+        "14": "Agafeu la rampa <NAME_SIGN>."
       },
       "relative_directions": [
-        "l'esquerra",
-        "la dreta"
+        "esquerra",
+        "dret"
       ],
       "example_phrases": {
         "0": [
-          "Pren l'accés de l'esquerra.",
-          "Pren l'accés de la dreta."
+          "Agafeu la rampa de l'esquerra.",
+          "Agafeu la rampa de la dreta."
         ],
         "1": [
-          "Pren l'accés I 95 ramp de la dreta."
+          "Agafeu la rampa I 95 a la dreta."
         ],
         "2": [
-          "Pren l'accés de l'esquerra cap a JFK."
+          "Agafeu la rampa de l'esquerra cap a JFK."
         ],
         "3": [
-          "Pren l'accés South Conduit Avenue de l'esquerra cap a JFK."
+          "Agafeu la rampa de South Conduit Avenue a l'esquerra cap a JFK."
         ],
         "4": [
-          "Pren l'accés Gettysburg Pike de la dreta."
+          "Agafeu la rampa de Gettysburg Pike a la dreta."
         ],
         "5": [
-          "Gira cap a l'esquerra per prendre l'accés.",
-          "Gira cap a la dreta per prendre l'accés."
+          "Gireu a l'esquerra per agafar la rampa.",
+          "Gireu a la dreta per agafar la rampa."
         ],
         "6": [
-          "Gira cap a l'esquerra per prendre l'accés PA 283 West."
+          "Gireu a l'esquerra per agafar la rampa PA 283 Oest."
         ],
         "7": [
-          "Gira cap a l'esquerra per prendre l'accés cap a Harrisburg/Harrisburg International Airport."
+          "Gireu a l'esquerra per agafar la rampa cap a l'aeroport internacional de Harrisburg/Harrisburg."
         ],
         "8": [
-          "Gira cap a l'esquerra per prendre l'accés PA 283 West cap a Harrisburg/Harrisburg International Airport."
+          "Gireu a l'esquerra per agafar la rampa PA 283 West cap a l'aeroport internacional de Harrisburg/Harrisburg."
         ],
         "9": [
-          "Gira cap a la dreta per prendre l'accés Gettysburg Pike."
+          "Gireu a la dreta per agafar la rampa de Gettysburg Pike."
         ],
         "10": [
-          "Pren l'accés."
+          "Agafeu la rampa."
         ],
         "11": [
-          "Pren l'accés I 95."
+          "Agafeu la rampa I 95."
         ],
         "12": [
-          "Pren l'accés cap a JFK."
+          "Agafeu la rampa cap a JFK."
         ],
         "13": [
-          "Pren l'accés South Conduit Avenue cap a JFK."
+          "Agafeu la rampa de South Conduit Avenue cap a JFK."
         ],
         "14": [
-          "Pren l'accés Gettysburg."
+          "Agafeu la rampa de Gettysburg."
         ]
       }
     },
     "ramp_straight": {
       "phrases": {
-        "0": "Continua recte per agafar l'accés.",
-        "1": "Continua recte per agafar l'accés <BRANCH_SIGN>.",
-        "2": "Continua recte per agafar l'accés cap a <TOWARD_SIGN>.",
-        "3": "Continua recte per agafar l'accés <BRANCH_SIGN> cap a <TOWARD_SIGN>.",
-        "4": "Continua recte per agafar l'accés <NAME_SIGN>."
+        "0": "Continueu recte per agafar la rampa.",
+        "1": "Continueu recte per agafar la rampa <BRANCH_SIGN>.",
+        "2": "Continueu recte per agafar la rampa cap a <TOWARD_SIGN>.",
+        "3": "Continueu recte per agafar la rampa <BRANCH_SIGN> cap a <TOWARD_SIGN>.",
+        "4": "Continueu recte per agafar la rampa <NAME_SIGN>."
       },
       "example_phrases": {
         "0": [
-          "Continua recte per agafar l'accés."
+          "Continueu recte per agafar la rampa."
         ],
         "1": [
-          "Continua recte per agafar l'accés US 322 East."
+          "Mantingueu-vos recte per agafar la rampa US 322 East."
         ],
         "2": [
-          "Continua recte per agafar l'accés cap a Hershey."
+          "Mantingueu-vos recte per agafar la rampa cap a Hershey."
         ],
         "3": [
-          "Continua recte per agafar l'accés US 322 East/US 422 East/US 522 East/US 622 East ramp cap a  Hershey/Palmdale/Palmyra/Campbelltown."
+          "Mantingueu-vos recte per agafar la rampa US 322 East/US 422 East/US 522 East/US 622 East cap a Hershey/Palmdale/Palmyra/Campbelltown."
         ],
         "4": [
-          "Continua recte per agafar l'accés Gettysburg Pike."
+          "Mantingueu-vos recte per agafar la rampa de Gettysburg Pike."
         ]
       }
     },
     "ramp_straight_verbal": {
       "phrases": {
-        "0": "Continua recte per agafar l'accés.",
-        "1": "Continua recte per agafar l'accés <BRANCH_SIGN>.",
-        "2": "Continua recte per agafar l'accés cap a <TOWARD_SIGN>.",
-        "3": "Continua recte per agafar l'accés <BRANCH_SIGN> cap a <TOWARD_SIGN>.",
-        "4": "Continua recte per agafar l'accés <NAME_SIGN>."
+        "0": "Continueu recte per agafar la rampa.",
+        "1": "Continueu recte per agafar la rampa <BRANCH_SIGN>.",
+        "2": "Continueu recte per agafar la rampa cap a <TOWARD_SIGN>.",
+        "3": "Continueu recte per agafar la rampa <BRANCH_SIGN> cap a <TOWARD_SIGN>.",
+        "4": "Continueu recte per agafar la rampa <NAME_SIGN>."
       },
       "example_phrases": {
         "0": [
-          "Continua recte per agafar l'accés."
+          "Continueu recte per agafar la rampa."
         ],
         "1": [
-          "Continua recte per agafar l'accés U.S. 3 22 East."
+          "Mantingueu-vos recte per agafar la rampa U.S. 3 22 East."
         ],
         "2": [
-          "Continua recte per agafar l'accés cap a Hershey."
+          "Mantingueu-vos recte per agafar la rampa cap a Hershey."
         ],
         "3": [
-          "Continua recte per agafar l'accés U.S. 3 22 East, U.S. 4 22 East cap a Hershey, Palmdale."
+          "Mantingueu-vos recte per agafar la rampa U.S. 3 22 East, U.S. 4 22 East cap a Hershey, Palmdale."
         ],
         "4": [
-          "Continua recte per agafar l'accés Gettysburg Pike."
+          "Mantingueu-vos recte per agafar la rampa de Gettysburg Pike."
         ]
       }
     },
     "ramp_verbal": {
       "phrases": {
-        "0": "Pren l'accés de <RELATIVE_DIRECTION>.",
-        "1": "Pren l'accés <BRANCH_SIGN> de <RELATIVE_DIRECTION>.",
-        "2": "Pren l'accés de <RELATIVE_DIRECTION> cap a <TOWARD_SIGN>.",
-        "3": "Pren l'accés <BRANCH_SIGN> de <RELATIVE_DIRECTION> cap a <TOWARD_SIGN>.",
-        "4": "Pren l'accés <NAME_SIGN> de <RELATIVE_DIRECTION>.",
-        "5": "Gira cap a <RELATIVE_DIRECTION> per prendre l'accés.",
-        "6": "Gira cap a <RELATIVE_DIRECTION> per prendre l'accés <BRANCH_SIGN>.",
-        "7": "Gira cap a <RELATIVE_DIRECTION> per prendre l'accés cap a <TOWARD_SIGN>.",
-        "8": "Gira cap a <RELATIVE_DIRECTION> per prendre l'accés <BRANCH_SIGN> cap a <TOWARD_SIGN>.",
-        "9": "Gira cap a <RELATIVE_DIRECTION> per prendre l'accés <NAME_SIGN>.",
-        "10": "Pren l'accés.",
-        "11": "Pren l'accés <BRANCH_SIGN>.",
-        "12": "Pren l'accés cap a <TOWARD_SIGN>.",
-        "13": "Pren l'accés <BRANCH_SIGN> cap a <TOWARD_SIGN>.",
-        "14": "Pren l'accés <NAME_SIGN>."
+        "0": "Agafeu la rampa de la <RELATIVE_DIRECTION>.",
+        "1": "Agafeu la rampa <BRANCH_SIGN> a la <RELATIVE_DIRECTION>.",
+        "2": "Agafeu la rampa de la <RELATIVE_DIRECTION> cap a <TOWARD_SIGN>.",
+        "3": "Agafeu la rampa <BRANCH_SIGN> de la <RELATIVE_DIRECTION> cap a <TOWARD_SIGN>.",
+        "4": "Agafeu la rampa <NAME_SIGN> per la <RELATIVE_DIRECTION>.",
+        "5": "Gireu <RELATIVE_DIRECTION> per agafar la rampa.",
+        "6": "Gireu <RELATIVE_DIRECTION> per agafar la rampa <BRANCH_SIGN>.",
+        "7": "Gireu <RELATIVE_DIRECTION> per agafar la rampa cap a <TOWARD_SIGN>.",
+        "8": "Gireu <RELATIVE_DIRECTION> per agafar la rampa <BRANCH_SIGN> cap a <TOWARD_SIGN>.",
+        "9": "Gireu <RELATIVE_DIRECTION> per agafar la rampa <NAME_SIGN>.",
+        "10": "Agafeu la rampa.",
+        "11": "Agafeu la rampa <BRANCH_SIGN>.",
+        "12": "Agafeu la rampa cap a <TOWARD_SIGN>.",
+        "13": "Agafeu la rampa <BRANCH_SIGN> cap a <TOWARD_SIGN>.",
+        "14": "Agafeu la rampa <NAME_SIGN>."
       },
       "relative_directions": [
-        "l'esquerra",
-        "la dreta"
+        "esquerra",
+        "dret"
       ],
       "example_phrases": {
         "0": [
-          "Pren l'accés de l'esquerra.",
-          "Pren l'accés de la dreta."
+          "Agafeu la rampa de l'esquerra.",
+          "Agafeu la rampa de la dreta."
         ],
         "1": [
-          "Pren l'accés I 95 de la dreta."
+          "Agafeu la rampa de l'Interstate 95 a la dreta."
         ],
         "2": [
-          "Pren l'accés de l'esquerra cap a JFK."
+          "Agafeu la rampa de l'esquerra cap a JFK."
         ],
         "3": [
-          "Pren l'accés South Conduit Avenue de l'esquerra cap a JFK."
+          "Agafeu la rampa de South Conduit Avenue a l'esquerra cap a JFK."
         ],
         "4": [
-          "Pren l'accés Gettysburg Pike de la dreta."
+          "Agafeu la rampa de Gettysburg Pike a la dreta."
         ],
         "5": [
-          "Gira cap a l'esquerra per prendre l'accés.",
-          "Gira cap a la dreta per prendre l'accés."
+          "Gireu a l'esquerra per agafar la rampa.",
+          "Gireu a la dreta per agafar la rampa."
         ],
         "6": [
-          "Gira cap a l'esquerra per prendre l'accés Pennsylvania 283 West."
+          "Gireu a l'esquerra per agafar la rampa Pennsylvania 2 83 West."
         ],
         "7": [
-          "Gira cap a l'esquerra per prendre l'accés cap a Harrisburg/Harrisburg International Airport."
+          "Gireu a l'esquerra per agafar la rampa cap a l'aeroport internacional de Harrisburg/Harrisburg."
         ],
         "8": [
-          "Gira cap a l'esquerra per prendre l'accés Pennsylvania 283 West cap a Harrisburg/Harrisburg International Airport."
+          "Gireu a l'esquerra per agafar la rampa Pennsylvania 2 83 West cap a Harrisburg, aeroport internacional de Harrisburg."
         ],
         "9": [
-          "Gira cap a la dreta per prendre l'accés Gettysburg Pike."
+          "Gireu a la dreta per agafar la rampa de Gettysburg Pike."
         ],
         "10": [
-          "Pren l'accés."
+          "Agafeu la rampa."
         ],
         "11": [
-          "Pren l'accés Interstate 95."
+          "Agafeu la rampa de l'Interstate 95."
         ],
         "12": [
-          "Pren l'accés cap a JFK."
+          "Agafeu la rampa cap a JFK."
         ],
         "13": [
-          "Pren l'accés South Conduit Avenue cap a JFK."
+          "Agafeu la rampa de South Conduit Avenue cap a JFK."
         ],
         "14": [
-          "Pren l'accés Gettysburg Pike."
+          "Agafeu la rampa de Gettysburg Pike."
         ]
       }
     },
     "sharp": {
       "phrases": {
         "0": "Gir tancat a <RELATIVE_DIRECTION>.",
-        "1": "Gir tancat a <RELATIVE_DIRECTION> cap a <STREET_NAMES>.",
-        "2": "Gir tancat a <RELATIVE_DIRECTION> cap a <BEGIN_STREET_NAMES>. Continua per <STREET_NAMES>.",
-        "3": "Gir tancat a <RELATIVE_DIRECTION> per continuar per <STREET_NAMES>.",
-        "4": "Make a sharp <RELATIVE_DIRECTION> at <JUNCTION_NAME>.",
-        "5": "Make a sharp <RELATIVE_DIRECTION> toward <TOWARD_SIGN>."
+        "1": "Feu un gir pronunciat <RELATIVE_DIRECTION> cap a <STREET_NAMES>.",
+        "2": "Gireu <RELATIVE_DIRECTION> cap a <BEGIN_STREET_NAMES>. Continueu per <STREET_NAMES>.",
+        "3": "Feu una <RELATIVE_DIRECTION> pronunciada per romandre a <STREET_NAMES>.",
+        "4": "Feu una <RELATIVE_DIRECTION> pronunciada a <JUNCTION_NAME>.",
+        "5": "Feu un gir pronunciat <RELATIVE_DIRECTION> cap a <TOWARD_SIGN>."
       },
       "empty_street_name_labels": [
-        "la vorera",
+        "la passarel·la",
         "el carril bici",
-        "la pista de bicicleta de muntanya",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "la ruta de bicicleta de muntanya",
+        "el pas de vianants",
+        "les escales",
+        "el pont",
+        "el túnel"
       ],
       "relative_directions": [
-        "l'esquerra",
-        "la dreta"
+        "esquerra",
+        "dret"
       ],
       "example_phrases": {
         "0": [
-          "Gir tancat a l'esquerra."
+          "Feu una esquerra pronunciada."
         ],
         "1": [
-          "Gir tancat a la dreta cap a Flatbush Avenue."
+          "Gireu a la dreta completament cap a Flatbush Avenue."
         ],
         "2": [
-          "Gir tancat a l'esquerra cap a North Bond Street/US 1 Business/MD 924. Continua per MD 924."
+          "Gireu completament a l'esquerra cap a North Bond Street/US 1 Business/MD 924. Continueu per MD 924."
         ],
         "3": [
-          "Gir tancat a la dreta per continuar per Sunstone Drive."
+          "Fes un dret fort per quedar-te a Sunstone Drive."
         ],
         "4": [
-          "Make a sharp right at Mannenbashi East."
+          "Feu un dret fort a Mannenbashi East."
         ],
         "5": [
-          "Make a sharp left toward Baltimore."
+          "Feu una esquerra pronunciada cap a Baltimore."
         ]
       }
     },
     "sharp_verbal": {
       "phrases": {
-        "0": "Gir tancat a <RELATIVE_DIRECTION>.",
-        "1": "Gir tancat a <RELATIVE_DIRECTION> cap a <STREET_NAMES>.",
-        "2": "Gir tancat a <RELATIVE_DIRECTION> cap a <BEGIN_STREET_NAMES>.",
-        "3": "Gir tancat a <RELATIVE_DIRECTION> per continuar per <STREET_NAMES>.",
-        "4": "Make a sharp <RELATIVE_DIRECTION> at <JUNCTION_NAME>.",
-        "5": "Make a sharp <RELATIVE_DIRECTION> toward <TOWARD_SIGN>."
+        "0": "Feu un fort <RELATIVE_DIRECTION>.",
+        "1": "Feu un gir pronunciat <RELATIVE_DIRECTION> cap a <STREET_NAMES>.",
+        "2": "Gireu <RELATIVE_DIRECTION> cap a <BEGIN_STREET_NAMES>.",
+        "3": "Feu una <RELATIVE_DIRECTION> pronunciada per romandre a <STREET_NAMES>.",
+        "4": "Feu una <RELATIVE_DIRECTION> pronunciada a <JUNCTION_NAME>.",
+        "5": "Feu un gir pronunciat <RELATIVE_DIRECTION> cap a <TOWARD_SIGN>."
       },
       "empty_street_name_labels": [
-        "la vorera",
+        "la passarel·la",
         "el carril bici",
-        "la pista de bicicleta de muntanya",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "la ruta de bicicleta de muntanya",
+        "el pas de vianants",
+        "les escales",
+        "el pont",
+        "el túnel"
       ],
       "relative_directions": [
-        "l'esquerra",
-        "la dreta"
+        "esquerra",
+        "dret"
       ],
       "example_phrases": {
         "0": [
-          "Gir tancat a l'esquerra."
+          "Feu una esquerra pronunciada."
         ],
         "1": [
-          "Gir tancat a la dreta cap a Flatbush Avenue."
+          "Gireu a la dreta completament cap a Flatbush Avenue."
         ],
         "2": [
-          "Gir tancat a l'esquerra cap a North Bond Street/US 1 Business/MD 924."
+          "Gireu completament a l'esquerra cap a North Bond Street, U.S. 1 Business."
         ],
         "3": [
-          "Gir tancat a la dreta per continuar per Sunstone Drive."
+          "Fes un dret fort per quedar-te a Sunstone Drive."
         ],
         "4": [
-          "Make a sharp right at Mannenbashi East."
+          "Feu un dret fort a Mannenbashi East."
         ],
         "5": [
-          "Make a sharp left toward Baltimore."
+          "Feu una esquerra pronunciada cap a Baltimore."
         ]
       }
     },
@@ -1542,70 +1542,70 @@
         "18": "Pedala cap <CARDINAL_DIRECTION> per <BEGIN_STREET_NAMES>. Continua per <STREET_NAMES>."
       },
       "cardinal_directions": [
-        "el nord",
-        "el nordest",
-        "l'est",
-        "el sudest",
-        "el sud",
-        "el sudoest",
-        "l'oest",
-        "el nordoest"
+        "nord",
+        "nord-est",
+        "est",
+        "sud-est",
+        "sud",
+        "sud-oest",
+        "oest",
+        "nord-oest"
       ],
       "empty_street_name_labels": [
-        "la vorera",
+        "la passarel·la",
         "el carril bici",
-        "la pista de bicicleta de muntanya",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "la ruta de bicicleta de muntanya",
+        "el pas de vianants",
+        "les escales",
+        "el pont",
+        "el túnel"
       ],
       "example_phrases": {
         "0": [
-          "Vés cap a l'est.",
-          "Vés cap al nord."
+          "Dirigiu-vos a l'est.",
+          "Dirigiu-vos al nord."
         ],
         "1": [
-          "Vés cap al sudoest per 5th Avenue.",
-          "Vés cap a l'oest per la vorera",
-          "Vés cap a l'est pel carril bici",
-          "Vés cap al nort per la pista de bicicleta de muntanya"
+          "Dirigiu-vos al sud-oest per la 5th Avenue.",
+          "Dirigiu-vos cap a l'oest per la passarel·la",
+          "Dirigiu-vos a l'est pel carril bici",
+          "Dirigiu-vos al nord per la ruta de bicicleta de muntanya"
         ],
         "2": [
-          "Vés cap al sud per North Prince Street/US 222/PA 272. Continua per US 222/PA 272."
+          "Dirigiu-vos cap al sud per North Prince Street/US 222/PA 272. Continueu per US 222/PA 272."
         ],
         "4": [
-          "Condueix cap a l'est.",
-          "Condueix cap al nord."
+          "Conduïu cap a l'est.",
+          "Conduïu cap al nord."
         ],
         "5": [
-          "Condueix cap al sudoest per 5th Avenue."
+          "Conduïu cap al sud-oest per la 5th Avenue."
         ],
         "6": [
-          "Condueix cap al sud per North Prince Street/US 222/PA 272. Continua per US 222/PA 272."
+          "Conduïu cap al sud per North Prince Street/US 222/PA 272. Continueu per US 222/PA 272."
         ],
         "8": [
-          "Camina cap a l'est.",
-          "Camina cap al nord."
+          "Caminar cap a l'est.",
+          "Caminar cap al nord."
         ],
         "9": [
-          "Camina cap al sudoest per 5th Avenue.",
-          "Camina cap a l'est per la vorera"
+          "Camineu cap al sud-oest per la 5th Avenue.",
+          "Camineu cap a l'oest per la passarel·la"
         ],
         "10": [
-          "Camina cap al sud per North Prince Street/US 222/PA 272. Continua per US 222/PA 272."
+          "Camineu cap al sud per North Prince Street/US 222/PA 272. Continueu per US 222/PA 272."
         ],
         "16": [
-          "Pedala cap a l'est.",
-          "Pedala cap al nord."
+          "Bicicleta cap a l'est.",
+          "Anar en bicicleta al nord."
         ],
         "17": [
-          "Pedala cap al sudoestper 5th Avenue.",
-          "Pedala cap a l'est pel carril bici",
-          "Pedala cap al nord per la pista de bicicleta de muntanya"
+          "Bicicleta cap al sud-oest per la 5th Avenue.",
+          "Anar en bicicleta cap a l'est pel carril bici",
+          "Anar en bicicleta al nord per la ruta de BTT"
         ],
         "18": [
-          "Pedala cap al sud per North Prince Street/US 222/PA 272. Continua per US 222/PA 272."
+          "Ves cap al sud per North Prince Street/US 222/PA 272. Continua per US 222/PA 272."
         ]
       }
     },
@@ -1633,23 +1633,23 @@
         "19": "Pedala cap <CARDINAL_DIRECTION> a <BEGIN_STREET_NAMES>."
       },
       "cardinal_directions": [
-        "el nord",
-        "el nordest",
-        "l'est",
-        "el sudest",
-        "el sud",
-        "el sudoest",
-        "l'oest",
-        "el nordoest"
+        "nord",
+        "nord-est",
+        "est",
+        "sud-est",
+        "sud",
+        "sud-oest",
+        "oest",
+        "nord-oest"
       ],
       "empty_street_name_labels": [
-        "la vorera",
+        "la passarel·la",
         "el carril bici",
-        "la pista de bicicleta de muntanya",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "la ruta de bicicleta de muntanya",
+        "el pas de vianants",
+        "les escales",
+        "el pont",
+        "el túnel"
       ],
       "metric_lengths": [
         "<KILOMETERS> quilòmetres",
@@ -1661,244 +1661,244 @@
         "<MILES> milles",
         "1 milla",
         "mitja milla",
-        "a quarter mile",
+        "un quart de milla",
         "<FEET> peus",
         "menys de 10 peus"
       ],
       "example_phrases": {
         "0": [
-          "Vés cap l'est.",
-          "Vés cap el nord."
+          "Dirigiu-vos a l'est.",
+          "Dirigiu-vos al nord."
         ],
         "1": [
-          "Vés cap l'est for a half mile.",
-          "Head north for 1 kilometer."
+          "Dirigiu-vos cap a l'est durant mitja milla.",
+          "Dirigiu-vos al nord durant 1 quilòmetre."
         ],
         "2": [
-          "Head southwest on 5th Avenue."
+          "Dirigiu-vos al sud-oest per la 5th Avenue."
         ],
         "3": [
-          "Head southwest on 5th Avenue for 1 tenth of a mile."
+          "Dirigiu-vos al sud-oest per la 5th Avenue durant 1 dècima de milla."
         ],
         "4": [
-          "Head south on North Prince Street, U.S. 2 22."
+          "Dirigiu-vos cap al sud per North Prince Street, U.S. 2 22."
         ],
         "5": [
-          "Condueix cap l'est.",
-          "Condueix cap el nord."
+          "Conduïu cap a l'est.",
+          "Conduïu cap al nord."
         ],
         "6": [
-          "Condueix cap l'est durant a half mile.",
-          "Drive north for 1 kilometer."
+          "Conduïu cap a l'est durant mitja milla.",
+          "Conduïu cap al nord durant 1 quilòmetre."
         ],
         "7": [
-          "Drive southwest on 5th Avenue."
+          "Conduïu cap al sud-oest per la 5th Avenue."
         ],
         "8": [
-          "Drive southwest on 5th Avenue for 1 tenth of a mile."
+          "Conduïu cap al sud-oest per la 5th Avenue durant 1 dècima de milla."
         ],
         "9": [
-          "Drive south on North Prince Street, U.S. 2 22."
+          "Conduïu cap al sud per North Prince Street, EUA 2 22."
         ],
         "10": [
-          "Camina cap l'est.",
-          "Camina cap el nord."
+          "Caminar cap a l'est.",
+          "Caminar cap al nord."
         ],
         "11": [
-          "Walk east for a half mile.",
-          "Walk north for 1 kilometer."
+          "Camineu cap a l'est durant mitja milla.",
+          "Camineu cap al nord durant 1 quilòmetre."
         ],
         "12": [
-          "Walk southwest on 5th Avenue."
+          "Camineu cap al sud-oest per la 5th Avenue."
         ],
         "13": [
-          "Walk southwest on 5th Avenue for 1 tenth of a mile."
+          "Camineu cap al sud-oest per la 5th Avenue durant 1 dècima de milla."
         ],
         "14": [
-          "Walk south on North Prince Street, U.S. 2 22."
+          "Camineu cap al sud per North Prince Street, EUA 2 22."
         ],
         "15": [
-          "Bike east.",
-          "Bike north."
+          "Bicicleta cap a l'est.",
+          "Anar en bicicleta al nord."
         ],
         "16": [
-          "Pedala cap l'est durant a half mile.",
-          "Bike north for 1 kilometer."
+          "Anar en bicicleta cap a l'est durant mitja milla.",
+          "Anar en bicicleta cap al nord durant 1 quilòmetre."
         ],
         "17": [
-          "Bike southwest on 5th Avenue."
+          "Bicicleta cap al sud-oest per la 5th Avenue."
         ],
         "18": [
-          "Bike southwest on 5th Avenue for 1 tenth of a mile."
+          "Aneu en bicicleta cap al sud-oest per la 5th Avenue durant 1 dècima de milla."
         ],
         "19": [
-          "Bike south on North Prince Street, U.S. 2 22."
+          "Ves en bici cap al sud per North Prince Street, EUA 2 22."
         ]
       }
     },
     "transit": {
       "phrases": {
-        "0": "Agafa el <TRANSIT_NAME>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)",
-        "1": "Agafa el <TRANSIT_NAME> cap a <TRANSIT_HEADSIGN>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)"
+        "0": "Agafeu el <TRANSIT_NAME>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)",
+        "1": "Agafeu el <TRANSIT_NAME> cap a <TRANSIT_HEADSIGN>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)"
       },
       "empty_transit_name_labels": [
         "tramvia",
         "metro",
         "tren",
-        "bus",
+        "autobús",
         "ferri",
         "telefèric",
-        "gòndola",
+        "góndola",
         "funicular"
       ],
       "transit_stop_count_labels": {
-        "one": "parada",
-        "other": "parades"
+        "one": "Atura",
+        "other": "s'atura"
       },
       "example_phrases": {
         "0": [
-          "Agafa el New Haven. (1 parada)",
-          "Agafa el metro. (2 parades)",
-          "Agafa el bus. (12 parades)"
+          "Agafeu el New Haven. (1 parada)",
+          "Agafeu el metro. (2 parades)",
+          "Agafa l'autobús. (12 parades)"
         ],
         "1": [
-          "Agafa el F cap a JAMAICA - 179 ST. (10 parades)",
-          "Agafa el ferri cap a Staten Island. (1 parada)"
+          "Agafeu la F cap a JAMAICA - 179 ST. (10 parades)",
+          "Agafeu el ferri cap a Staten Island. (1 parada)"
         ]
       }
     },
     "transit_connection_destination": {
       "phrases": {
-        "0": "Surt de l'estació.",
-        "1": "Surt de <TRANSIT_STOP>.",
-        "2": "Surt de <TRANSIT_STOP> <STATION_LABEL>."
+        "0": "Sortir de l'estació.",
+        "1": "Sortiu de <TRANSIT_STOP>.",
+        "2": "Sortiu de <TRANSIT_STOP> <STATION_LABEL>."
       },
-      "station_label": "Station",
+      "station_label": "Estació",
       "example_phrases": {
         "0": [
-          "Surt de l'estació."
+          "Sortir de l'estació."
         ],
         "1": [
-          "Surt de Embarcadero Station."
+          "Sortiu de l'estació d'Embarcadero."
         ],
         "2": [
-          "Surt de 8 St - NYU Station."
+          "Sortiu de l'estació de 8 St - NYU."
         ]
       }
     },
     "transit_connection_destination_verbal": {
       "phrases": {
-        "0": "Surt de l'estació.",
-        "1": "Surt de <TRANSIT_STOP>.",
-        "2": "Surt de <TRANSIT_STOP> <STATION_LABEL>."
+        "0": "Sortir de l'estació.",
+        "1": "Sortiu de <TRANSIT_STOP>.",
+        "2": "Sortiu de <TRANSIT_STOP> <STATION_LABEL>."
       },
-      "station_label": "Station",
+      "station_label": "Estació",
       "example_phrases": {
         "0": [
-          "Surt de l'estació."
+          "Sortir de l'estació."
         ],
         "1": [
-          "Surt de Embarcadero Station."
+          "Sortiu de l'estació d'Embarcadero."
         ],
         "2": [
-          "Surt de 8 St - NYU Station."
+          "Sortiu de l'estació 8 St - NYU."
         ]
       }
     },
     "transit_connection_start": {
       "phrases": {
         "0": "Entra a l'estació.",
-        "1": "Entra a <TRANSIT_STOP>.",
-        "2": "Entra a <TRANSIT_STOP> <STATION_LABEL>."
+        "1": "Introduïu <TRANSIT_STOP>.",
+        "2": "Introduïu <TRANSIT_STOP> <STATION_LABEL>."
       },
-      "station_label": "Station",
+      "station_label": "Estació",
       "example_phrases": {
         "0": [
           "Entra a l'estació."
         ],
         "1": [
-          "Entra a Embarcadero Station."
+          "Entra a l'estació d'Embarcadero."
         ],
         "2": [
-          "Entra a 8 St - NYU Station."
+          "Entra a l'estació 8 St - NYU."
         ]
       }
     },
     "transit_connection_start_verbal": {
       "phrases": {
         "0": "Entra a l'estació.",
-        "1": "Entra a <TRANSIT_STOP>.",
-        "2": "Entra a <TRANSIT_STOP> <STATION_LABEL>."
+        "1": "Introduïu <TRANSIT_STOP>.",
+        "2": "Introduïu <TRANSIT_STOP> <STATION_LABEL>."
       },
-      "station_label": "Station",
+      "station_label": "Estació",
       "example_phrases": {
         "0": [
           "Entra a l'estació."
         ],
         "1": [
-          "Entra a Embarcadero Station."
+          "Entra a l'estació d'Embarcadero."
         ],
         "2": [
-          "Entra a 8 St - NYU Station."
+          "Entra a l'estació 8 St - NYU."
         ]
       }
     },
     "transit_connection_transfer": {
       "phrases": {
-        "0": "Transbordament a l'estació.",
-        "1": "Transbordament a <TRANSIT_STOP>.",
-        "2": "Transbordament a <TRANSIT_STOP> <STATION_LABEL>."
+        "0": "Trasllat a l'estació.",
+        "1": "Transferència a <TRANSIT_STOP>.",
+        "2": "Transferència a <TRANSIT_STOP> <STATION_LABEL>."
       },
-      "station_label": "Station",
+      "station_label": "Estació",
       "example_phrases": {
         "0": [
-          "Transbordament a l'estació."
+          "Trasllat a l'estació."
         ],
         "1": [
-          "Transbordament a Embarcadero Station."
+          "Trasllat a l'estació d'Embarcadero."
         ],
         "2": [
-          "Transbordament a 8 St - NYU Station."
+          "Trasllat a l'estació 8 St - NYU."
         ]
       }
     },
     "transit_connection_transfer_verbal": {
       "phrases": {
-        "0": "Transbordament a l'estació.",
-        "1": "Transbordament a <TRANSIT_STOP>.",
-        "2": "Transbordament a <TRANSIT_STOP> <STATION_LABEL>."
+        "0": "Trasllat a l'estació.",
+        "1": "Transferència a <TRANSIT_STOP>.",
+        "2": "Transferència a <TRANSIT_STOP> <STATION_LABEL>."
       },
-      "station_label": "Station",
+      "station_label": "Estació",
       "example_phrases": {
         "0": [
-          "Transbordament a l'estació."
+          "Trasllat a l'estació."
         ],
         "1": [
-          "Transbordament a Embarcadero Station."
+          "Trasllat a l'estació d'Embarcadero."
         ],
         "2": [
-          "Transbordament a 8 St - NYU Station."
+          "Trasllat a l'estació 8 St - NYU."
         ]
       }
     },
     "transit_remain_on": {
       "phrases": {
-        "0": "Queda't al <TRANSIT_NAME>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)",
-        "1": "Queda't al <TRANSIT_NAME> cap a <TRANSIT_HEADSIGN>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)"
+        "0": "Continueu a <TRANSIT_NAME>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)",
+        "1": "Continueu a <TRANSIT_NAME> cap a <TRANSIT_HEADSIGN>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)"
       },
       "empty_transit_name_labels": [
         "tramvia",
         "metro",
         "tren",
-        "bus",
+        "autobús",
         "ferri",
         "telefèric",
-        "gòndola",
+        "góndola",
         "funicular"
       ],
       "transit_stop_count_labels": {
-        "one": "parada",
-        "other": "parades"
+        "one": "Atura",
+        "other": "s'atura"
       },
       "example_phrases": {
         "0": [
@@ -1906,23 +1906,23 @@
           "Queda't al tren. (3 parades)"
         ],
         "1": [
-          "Queda't al F toward JAMAICA - 179 ST. (10 parades)"
+          "Mantingueu-vos a la F cap a JAMAICA - 179 ST. (10 parades)"
         ]
       }
     },
     "transit_remain_on_verbal": {
       "phrases": {
-        "0": "Queda't al <TRANSIT_NAME>.",
-        "1": "Queda't <TRANSIT_NAME> cap a <TRANSIT_HEADSIGN>."
+        "0": "Continueu a <TRANSIT_NAME>.",
+        "1": "Continueu a <TRANSIT_NAME> cap a <TRANSIT_HEADSIGN>."
       },
       "empty_transit_name_labels": [
         "tramvia",
         "metro",
         "tren",
-        "bus",
+        "autobús",
         "ferri",
         "telefèric",
-        "gòndola",
+        "góndola",
         "funicular"
       ],
       "example_phrases": {
@@ -1930,279 +1930,279 @@
           "Queda't al New Haven."
         ],
         "1": [
-          "Queda't al F toward JAMAICA - 179 ST."
+          "Mantingueu-vos a la F cap a JAMAICA - 179 ST."
         ]
       }
     },
     "transit_transfer": {
       "phrases": {
-        "0": "Transbordament per agafar el <TRANSIT_NAME>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)",
-        "1": "Transbordament per agafar el <TRANSIT_NAME> cap a <TRANSIT_HEADSIGN>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)"
+        "0": "Transferiu per agafar el <TRANSIT_NAME>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)",
+        "1": "Transferiu per agafar el <TRANSIT_NAME> cap a <TRANSIT_HEADSIGN>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)"
       },
       "empty_transit_name_labels": [
         "tramvia",
         "metro",
         "tren",
-        "bus",
+        "autobús",
         "ferri",
         "telefèric",
-        "gòndola",
+        "góndola",
         "funicular"
       ],
       "transit_stop_count_labels": {
-        "one": "parada",
-        "other": "parades"
+        "one": "Atura",
+        "other": "s'atura"
       },
       "example_phrases": {
         "0": [
-          "Transbordament per agafar el New Haven. (1 parada)",
-          "Transbordament per agafar el tramvia. (4 parades)"
+          "Trasllat per agafar el New Haven. (1 parada)",
+          "Trasllat per agafar el tramvia. (4 parades)"
         ],
         "1": [
-          "Transbordament per agafar el F cap a JAMAICA - 179 ST. (10 parades)"
+          "Trasllat per agafar la F cap a JAMAICA - 179 ST. (10 parades)"
         ]
       }
     },
     "transit_transfer_verbal": {
       "phrases": {
-        "0": "Transbordament per agafar el <TRANSIT_NAME>.",
-        "1": "Transbordament per agafar el <TRANSIT_NAME> toward <TRANSIT_HEADSIGN>."
+        "0": "Transferiu per agafar el <TRANSIT_NAME>.",
+        "1": "Transferiu per agafar el <TRANSIT_NAME> cap a <TRANSIT_HEADSIGN>."
       },
       "empty_transit_name_labels": [
         "tramvia",
         "metro",
         "tren",
-        "bus",
+        "autobús",
         "ferri",
         "telefèric",
-        "gòndola",
+        "góndola",
         "funicular"
       ],
       "example_phrases": {
         "0": [
-          "Transbordament per agafar el New Haven."
+          "Trasllat per agafar el New Haven."
         ],
         "1": [
-          "Transbordament per agafar el F cap a JAMAICA - 179 ST."
+          "Trasllat per agafar la F cap a JAMAICA - 179 ST."
         ]
       }
     },
     "transit_verbal": {
       "phrases": {
-        "0": "Agafa el <TRANSIT_NAME>.",
-        "1": "Agafa el <TRANSIT_NAME> cap a <TRANSIT_HEADSIGN>."
+        "0": "Agafeu el <TRANSIT_NAME>.",
+        "1": "Agafeu el <TRANSIT_NAME> cap a <TRANSIT_HEADSIGN>."
       },
       "empty_transit_name_labels": [
         "tramvia",
         "metro",
         "tren",
-        "bus",
+        "autobús",
         "ferri",
         "telefèric",
-        "gòndola",
+        "góndola",
         "funicular"
       ],
       "example_phrases": {
         "0": [
-          "Agafa el New Haven."
+          "Agafeu el New Haven."
         ],
         "1": [
-          "Agafa el F toward JAMAICA - 179 ST."
+          "Agafeu la F cap a JAMAICA - 179 ST."
         ]
       }
     },
     "turn": {
       "phrases": {
-        "0": "Gira a <RELATIVE_DIRECTION>.",
-        "1": "Gira a <RELATIVE_DIRECTION> cap a <STREET_NAMES>.",
-        "2": "Gira a <RELATIVE_DIRECTION> cap a <BEGIN_STREET_NAMES>. Continua per <STREET_NAMES>.",
-        "3": "Gira a <RELATIVE_DIRECTION> per continuar per <STREET_NAMES>.",
-        "4": "Turn <RELATIVE_DIRECTION> at <JUNCTION_NAME>.",
-        "5": "Turn <RELATIVE_DIRECTION> toward <TOWARD_SIGN>."
+        "0": "Gireu <RELATIVE_DIRECTION>.",
+        "1": "Gireu a <RELATIVE_DIRECTION> cap a <STREET_NAMES>.",
+        "2": "Gireu a <RELATIVE_DIRECTION> cap a <BEGIN_STREET_NAMES>. Continueu per <STREET_NAMES>.",
+        "3": "Gireu <RELATIVE_DIRECTION> per romandre a <STREET_NAMES>.",
+        "4": "Gireu a <RELATIVE_DIRECTION> a <JUNCTION_NAME>.",
+        "5": "Gireu <RELATIVE_DIRECTION> cap a <TOWARD_SIGN>."
       },
       "empty_street_name_labels": [
-        "la vorera",
+        "la passarel·la",
         "el carril bici",
-        "la pista de bicicleta de muntanya",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "la ruta de bicicleta de muntanya",
+        "el pas de vianants",
+        "les escales",
+        "el pont",
+        "el túnel"
       ],
       "relative_directions": [
-        "l'esquerra",
-        "la dreta"
+        "esquerra",
+        "dret"
       ],
       "example_phrases": {
         "0": [
-          "Gira a l'esquerra."
+          "Gireu a l'esquerra."
         ],
         "1": [
-          "Gira a la dreta cap a Flatbush Avenue."
+          "Gireu a la dreta per Flatbush Avenue."
         ],
         "2": [
-          "gira a l'esquerra cap a North Bond Street/US 1 Business/MD 924. Continua per MD 924."
+          "Gireu a l'esquerra per North Bond Street/US 1 Business/MD 924. Continueu per MD 924."
         ],
         "3": [
-          "Gira a la dreta per continuar per Sunstone Drive."
+          "Gireu a la dreta per quedar-vos a Sunstone Drive."
         ],
         "4": [
-          "Turn right at Mannenbashi East."
+          "Gireu a la dreta a Mannenbashi East."
         ],
         "5": [
-          "Turn left toward Baltimore."
+          "Gireu a l'esquerra cap a Baltimore."
         ]
       }
     },
     "turn_verbal": {
       "phrases": {
-        "0": "Gira a <RELATIVE_DIRECTION>.",
-        "1": "Gira a <RELATIVE_DIRECTION> cap a <STREET_NAMES>.",
-        "2": "Gira a <RELATIVE_DIRECTION> cap a <BEGIN_STREET_NAMES>.",
-        "3": "Gira a <RELATIVE_DIRECTION> per continuar per <STREET_NAMES>.",
-        "4": "Turn <RELATIVE_DIRECTION> at <JUNCTION_NAME>.",
-        "5": "Turn <RELATIVE_DIRECTION> toward <TOWARD_SIGN>."
+        "0": "Gireu <RELATIVE_DIRECTION>.",
+        "1": "Gireu a <RELATIVE_DIRECTION> cap a <STREET_NAMES>.",
+        "2": "Gireu a <RELATIVE_DIRECTION> cap a <BEGIN_STREET_NAMES>.",
+        "3": "Gireu <RELATIVE_DIRECTION> per romandre a <STREET_NAMES>.",
+        "4": "Gireu a <RELATIVE_DIRECTION> a <JUNCTION_NAME>.",
+        "5": "Gireu <RELATIVE_DIRECTION> cap a <TOWARD_SIGN>."
       },
       "empty_street_name_labels": [
-        "la vorera",
+        "la passarel·la",
         "el carril bici",
-        "la pista de bicicleta de muntanya",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "la ruta de bicicleta de muntanya",
+        "el pas de vianants",
+        "les escales",
+        "el pont",
+        "el túnel"
       ],
       "relative_directions": [
-        "l'esquerra",
-        "la dreta"
+        "esquerra",
+        "dret"
       ],
       "example_phrases": {
         "0": [
-          "Turn left."
+          "Gireu a l'esquerra."
         ],
         "1": [
-          "Gira a la dreta cap a Flatbush Avenue."
+          "Gireu a la dreta per Flatbush Avenue."
         ],
         "2": [
-          "gira a l'esquerra cap a North Bond Street/US 1 Business/MD 924. Continua per MD 924."
+          "Gireu a l'esquerra per North Bond Street, U.S. 1 Business."
         ],
         "3": [
-          "Gira a la dreta per continuar per Sunstone Drive."
+          "Gireu a la dreta per quedar-vos a Sunstone Drive."
         ],
         "4": [
-          "Turn right at Mannenbashi East."
+          "Gireu a la dreta a Mannenbashi East."
         ],
         "5": [
-          "Turn left toward Baltimore."
+          "Gireu a l'esquerra cap a Baltimore."
         ]
       }
     },
     "uturn": {
       "phrases": {
-        "0": "Mitja volta a <RELATIVE_DIRECTION>.",
-        "1": "Mitja volta a <RELATIVE_DIRECTION> cap a <STREET_NAMES>.",
-        "2": "Mitja volta a <RELATIVE_DIRECTION> per continuar per <STREET_NAMES>.",
-        "3": "Mitja volta a <RELATIVE_DIRECTION> a <CROSS_STREET_NAMES>.",
-        "4": "Mitja volta a <RELATIVE_DIRECTION> a <CROSS_STREET_NAMES> cap a <STREET_NAMES>.",
-        "5": "Mitja volta a <RELATIVE_DIRECTION> a <CROSS_STREET_NAMES> per continuar per <STREET_NAMES>.",
-        "6": "Make a <RELATIVE_DIRECTION> U-turn at <JUNCTION_NAME>.",
-        "7": "Make a <RELATIVE_DIRECTION> U-turn toward <TOWARD_SIGN>."
+        "0": "Feu un gir en U <RELATIVE_DIRECTION>.",
+        "1": "Feu un gir en U a <RELATIVE_DIRECTION> per <STREET_NAMES>.",
+        "2": "Feu un gir en U a <RELATIVE_DIRECTION> per romandre a <STREET_NAMES>.",
+        "3": "Feu un gir en U a <RELATIVE_DIRECTION> a <CROSS_STREET_NAMES>.",
+        "4": "Feu un gir en U a <RELATIVE_DIRECTION> a <CROSS_STREET_NAMES> per <STREET_NAMES>.",
+        "5": "Feu un gir de <RELATIVE_DIRECTION> a <CROSS_STREET_NAMES> per romandre a <STREET_NAMES>.",
+        "6": "Feu un gir en U a <RELATIVE_DIRECTION> a <JUNCTION_NAME>.",
+        "7": "Feu un gir en U a <RELATIVE_DIRECTION> cap a <TOWARD_SIGN>."
       },
       "empty_street_name_labels": [
-        "la vorera",
+        "la passarel·la",
         "el carril bici",
-        "la pista de bicicleta de muntanya",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "la ruta de bicicleta de muntanya",
+        "el pas de vianants",
+        "les escales",
+        "el pont",
+        "el túnel"
       ],
       "relative_directions": [
-        "l'esquerra",
-        "la dreta"
+        "esquerra",
+        "dret"
       ],
       "example_phrases": {
         "0": [
-          "Mitja volta a l'esquerra."
+          "Feu un gir en U a l'esquerra."
         ],
         "1": [
-          "Mitja volta a la dreta cap a Bunker Hill Road."
+          "Feu un gir en U a dret per Bunker Hill Road."
         ],
         "2": [
-          "Mitja volta a l'esquerra per continuar per Bunker Hill Road."
+          "Gireu a l'esquerra per quedar-vos a Bunker Hill Road."
         ],
         "3": [
-          "Mitja volta a l'esquerra a Devonshire Road."
+          "Gireu a l'esquerra a Devonshire Road."
         ],
         "4": [
-          "Mitja volta a l'esquerra a Devonshire Road cap a Jonestown Road/US 22."
+          "Gireu a l'esquerra a Devonshire Road per Jonestown Road/US 22."
         ],
         "5": [
-          "Mitja volta a l'esquerra a Devonshire Road per continuar per Jonestown Road/US 22."
+          "Gireu a l'esquerra a Devonshire Road per quedar-vos a Jonestown Road/US 22."
         ],
         "6": [
-          "Make a right U-turn at Mannenbashi East."
+          "Feu un gir en U a dret a Mannenbashi East."
         ],
         "7": [
-          "Make a left U-turn toward Baltimore."
+          "Feu un gir a l'esquerra cap a Baltimore."
         ]
       }
     },
     "uturn_verbal": {
       "phrases": {
-        "0": "Mitja volta a <RELATIVE_DIRECTION>.",
-        "1": "Mitja volta a <RELATIVE_DIRECTION> cap a <STREET_NAMES>.",
-        "2": "Mitja volta a <RELATIVE_DIRECTION> per continuar per <STREET_NAMES>.",
-        "3": "Mitja volta a <RELATIVE_DIRECTION> a <CROSS_STREET_NAMES>.",
-        "4": "Mitja volta a <RELATIVE_DIRECTION> a <CROSS_STREET_NAMES> cap a <STREET_NAMES>.",
-        "5": "Mitja volta a <RELATIVE_DIRECTION> a <CROSS_STREET_NAMES> per continuar per <STREET_NAMES>.",
-        "6": "Make a <RELATIVE_DIRECTION> U-turn at <JUNCTION_NAME>.",
-        "7": "Make a <RELATIVE_DIRECTION> U-turn toward <TOWARD_SIGN>."
+        "0": "Feu un gir en U <RELATIVE_DIRECTION>.",
+        "1": "Feu un gir en U a <RELATIVE_DIRECTION> per <STREET_NAMES>.",
+        "2": "Feu un gir en U a <RELATIVE_DIRECTION> per romandre a <STREET_NAMES>.",
+        "3": "Feu un gir en U a <RELATIVE_DIRECTION> a <CROSS_STREET_NAMES>.",
+        "4": "Feu un gir en U a <RELATIVE_DIRECTION> a <CROSS_STREET_NAMES> per <STREET_NAMES>.",
+        "5": "Feu un gir de <RELATIVE_DIRECTION> a <CROSS_STREET_NAMES> per romandre a <STREET_NAMES>.",
+        "6": "Feu un gir en U a <RELATIVE_DIRECTION> a <JUNCTION_NAME>.",
+        "7": "Feu un gir en U a <RELATIVE_DIRECTION> cap a <TOWARD_SIGN>."
       },
       "empty_street_name_labels": [
-        "la vorera",
+        "la passarel·la",
         "el carril bici",
-        "la pista de bicicleta de muntanya",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "la ruta de bicicleta de muntanya",
+        "el pas de vianants",
+        "les escales",
+        "el pont",
+        "el túnel"
       ],
       "relative_directions": [
-        "l'esquerra",
-        "la dreta"
+        "esquerra",
+        "dret"
       ],
       "example_phrases": {
         "0": [
-          "Mitja volta a l'esquerra."
+          "Feu un gir en U a l'esquerra."
         ],
         "1": [
-          "Mitja volta a la dreta cap a Bunker Hill Road."
+          "Feu un gir en U a dret per Bunker Hill Road."
         ],
         "2": [
-          "Mitja volta a l'esquerra per continuar per Bunker Hill Road."
+          "Gireu a l'esquerra per quedar-vos a Bunker Hill Road."
         ],
         "3": [
-          "Mitja volta a l'esquerra a Devonshire Road."
+          "Gireu a l'esquerra a Devonshire Road."
         ],
         "4": [
-          "Mitja volta a l'esquerra a Devonshire Road cap a Jonestown Road/US 22."
+          "Gireu a l'esquerra a Devonshire Road per Jonestown Road, US 22."
         ],
         "5": [
-          "Mitja volta a l'esquerra a Devonshire Road per continuar per Jonestown Road/US 22."
+          "Gireu a l'esquerra a Devonshire Road per quedar-vos a Jonestown Road, US 22."
         ],
         "6": [
-          "Make a right U-turn at Mannenbashi East."
+          "Feu un gir en U a dret a Mannenbashi East."
         ],
         "7": [
-          "Make a left U-turn toward Baltimore."
+          "Feu un gir a l'esquerra cap a Baltimore."
         ]
       }
     },
     "verbal_multi_cue": {
       "phrases": {
-        "0": "<CURRENT_VERBAL_CUE> i després <NEXT_VERBAL_CUE>",
-        "1": "<CURRENT_VERBAL_CUE> Then, in <LENGTH>, <NEXT_VERBAL_CUE>"
+        "0": "<CURRENT_VERBAL_CUE> Després <NEXT_VERBAL_CUE>",
+        "1": "<CURRENT_VERBAL_CUE> Després, a <LENGTH>, <NEXT_VERBAL_CUE>"
       },
       "metric_lengths": [
         "<KILOMETERS> quilòmetres",
@@ -2214,25 +2214,25 @@
         "<MILES> milles",
         "1 milla",
         "mitja milla",
-        "a quarter mile",
+        "un quart de milla",
         "<FEET> peus",
         "menys de 10 peus"
       ],
       "example_phrases": {
         "0": [
-          "Queda't a la dreta cap a East Fayette Street. I després gira a la dreta cap a North Gay Street."
+          "Mantingueu el dret a East Fayette Street. A continuació, gireu a dret per North Gay Street."
         ],
         "1": [
-          "Bear right onto East Fayette Street. Then, in 500 feet, Turn right onto North Gay Street."
+          "Mantingueu el dret a East Fayette Street. A continuació, a 500 peus, gireu a dret per North Gay Street."
         ]
       }
     },
     "approach_verbal_alert": {
       "phrases": {
-        "0": "In <LENGTH>, <CURRENT_VERBAL_CUE>"
+        "0": "A <LENGTH>, <CURRENT_VERBAL_CUE>"
       },
       "metric_lengths": [
-        "<KILOMETERS> quilòmetres",
+        "<QUILOMETRES> quilòmetres",
         "1 quilòmetre",
         "<METERS> metres",
         "menys de 10 metres"
@@ -2241,104 +2241,104 @@
         "<MILES> milles",
         "1 milla",
         "mitja milla",
-        "a quarter mile",
-        "<FEET> peus",
+        "un quart de milla",
+        "<PEUS> peus",
         "menys de 10 peus"
       ],
       "example_phrases": {
         "0": [
-          "In a quarter mile, Turn right onto North Gay Street."
+          "En un quart de milla, gireu a dret per North Gay Street."
         ]
       }
     },
     "pass": {
       "phrases": {
-          "0": "Passa per sobre de <OBJECT_LABEL>.",
-          "1": "Passa pels semàfors de <OBJECT_LABEL>."
+        "0": "Passeu <OBJECT_LABEL>.",
+        "1": "Passeu els senyals de trànsit a <OBJECT_LABEL>."
       },
       "object_labels": [
-          "la porta",
-          "els pilons",
-          "el creuament de camins"
+        "la porta",
+        "els bolards",
+        "intersecció de camins"
       ],
       "example_phrases": {
-          "0": [
-              "Passa per sobre de la porta."
-          ]
+        "0": [
+          "Passeu la porta."
+        ]
       }
     },
     "elevator": {
       "phrases": {
-        "0": "Take the elevator.",
-        "1": "Take the elevator to <LEVEL>."
+        "0": "Agafeu l'ascensor.",
+        "1": "Agafeu l'ascensor fins a <NIVEL>."
       },
       "example_phrases": {
         "0": [
-          "Take the elevator."
+          "Agafeu l'ascensor."
         ],
         "1": [
-          "Take the elevator to Level 1."
+          "Agafeu l'ascensor fins al nivell 1."
         ]
       }
     },
     "steps": {
       "phrases": {
-        "0": "Take the stairs.",
-        "1": "Take the stairs to <LEVEL>."
+        "0": "Agafeu les escales.",
+        "1": "Agafeu les escales fins a <NIVEL>."
       },
       "example_phrases": {
         "0": [
-          "Take the stairs."
+          "Agafeu les escales."
         ],
         "1": [
-          "Take the stairs to Level 2."
+          "Agafeu les escales fins al nivell 2."
         ]
       }
     },
     "escalator": {
       "phrases": {
-        "0": "Take the escalator.",
-        "1": "Take the escalator to <LEVEL>."
+        "0": "Agafeu l'escala mecànica.",
+        "1": "Agafeu les escales mecàniques fins a <NIVEL>."
       },
       "example_phrases": {
         "0": [
-          "Take the escalator."
+          "Agafeu l'escala mecànica."
         ],
         "1": [
-          "Take the escalator to Level 3."
+          "Agafeu l'escala mecànica fins al nivell 3."
         ]
       }
     },
     "enter_building": {
       "phrases": {
-        "0": "Enter the building.",
-        "1": "Enter the building, and continue on <STREET_NAMES>."
+        "0": "Entra a l'edifici.",
+        "1": "Entra a l'edifici i continua per <STREET_NAMES>."
       },
       "empty_street_name_labels": [
-        "la vorera",
+        "la passarel·la",
         "el carril bici",
-        "la pista de bicicleta de muntanya",
-        "the crosswalk"
+        "la ruta de bicicleta de muntanya",
+        "el pas de vianants"
       ],
       "example_phrases": {
         "0": [
-          "Enter the building."
+          "Entra a l'edifici."
         ],
         "1": [
-          "Enter the building, and continue on the walkway."
+          "Entreu a l'edifici i continueu per la passarel·la."
         ]
       }
     },
     "exit_building": {
       "phrases": {
-        "0": "Exit the building.",
-        "1": "Exit the building, and continue on <STREET_NAMES>."
+        "0": "Sortir de l'edifici.",
+        "1": "Sortiu de l'edifici i continueu per <STREET_NAMES>."
       },
       "empty_street_name_labels": [
-        "la vorera",
+        "la passarel·la",
         "el carril bici",
-        "la pista de bicicleta de muntanya",
-        "the crosswalk"
+        "la ruta de bicicleta de muntanya",
+        "el pas de vianants"
       ],
       "example_phrases": {
         "0": [

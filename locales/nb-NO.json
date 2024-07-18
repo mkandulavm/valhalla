@@ -45,10 +45,10 @@
         "gangveien",
         "sykkelveien",
         "terrengsykkelstien",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "overgangen",
+        "trappene",
+        "broen",
+        "tunellen"
       ],
       "relative_directions": [
         "venstre",
@@ -88,10 +88,10 @@
         "gangveien",
         "sykkelveien",
         "terrengsykkelstien",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "overgangen",
+        "trappene",
+        "broen",
+        "tunellen"
       ],
       "relative_directions": [
         "venstre",
@@ -149,10 +149,10 @@
         "gangveien",
         "sykkelveien",
         "terrengsykkelstien",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "overgangen",
+        "trappene",
+        "broen",
+        "tunellen"
       ],
       "example_phrases": {
         "0": [
@@ -184,10 +184,10 @@
         "gangveien",
         "sykkelveien",
         "terrengsykkelstien",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "overgangen",
+        "trappene",
+        "broen",
+        "tunellen"
       ],
       "metric_lengths": [
         "<KILOMETERS> kilometer",
@@ -241,10 +241,10 @@
         "gangveien",
         "sykkelveien",
         "terrengsykkelstien",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "overgangen",
+        "trappene",
+        "broen",
+        "tunellen"
       ],
       "example_phrases": {
         "0": [
@@ -381,10 +381,10 @@
         "gangveien",
         "sykkelveien",
         "terrengsykkelstien",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "overgangen",
+        "trappene",
+        "broen",
+        "tunellen"
       ],
       "ferry_label": "Ferje",
       "example_phrases": {
@@ -413,10 +413,10 @@
         "gangveien",
         "sykkelveien",
         "terrengsykkelstien",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "overgangen",
+        "trappene",
+        "broen",
+        "tunellen"
       ],
       "ferry_label": "Ferje",
       "example_phrases": {
@@ -469,10 +469,10 @@
         "gangveien",
         "sykkelveien",
         "terrengsykkelstien",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "overgangen",
+        "trappene",
+        "broen",
+        "tunellen"
       ],
       "example_phrases": {
         "0": [
@@ -569,10 +569,10 @@
         "gangveien",
         "sykkelveien",
         "terrengsykkelstien",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "overgangen",
+        "trappene",
+        "broen",
+        "tunellen"
       ],
       "example_phrases": {
         "0": [
@@ -752,10 +752,10 @@
         "gangveien",
         "sykkelveien",
         "terrengsykkelstien",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "overgangen",
+        "trappene",
+        "broen",
+        "tunellen"
       ],
       "example_phrases": {
         "0": [
@@ -783,10 +783,10 @@
         "gangveien",
         "sykkelveien",
         "terrengsykkelstien",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "overgangen",
+        "trappene",
+        "broen",
+        "tunellen"
       ],
       "example_phrases": {
         "0": [
@@ -935,10 +935,10 @@
         "gangveien",
         "sykkelveien",
         "terrengsykkelstien",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "overgangen",
+        "trappene",
+        "broen",
+        "tunellen"
       ],
       "relative_directions": [
         "venstre",
@@ -985,10 +985,10 @@
         "gangveien",
         "sykkelveien",
         "terrengsykkelstien",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "overgangen",
+        "trappene",
+        "broen",
+        "tunellen"
       ],
       "relative_directions": [
         "venstre",
@@ -1023,10 +1023,10 @@
         "gangveien",
         "sykkelveien",
         "terrengsykkelstien",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "overgangen",
+        "trappene",
+        "broen",
+        "tunellen"
       ],
       "relative_directions": [
         "venstre",
@@ -1065,10 +1065,10 @@
         "gangveien",
         "sykkelveien",
         "terrengsykkelstien",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "overgangen",
+        "trappene",
+        "broen",
+        "tunellen"
       ],
       "relative_directions": [
         "venstre",
@@ -1121,10 +1121,10 @@
         "gangveien",
         "sykkelveien",
         "terrengsykkelstien",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "overgangen",
+        "trappene",
+        "broen",
+        "tunellen"
       ],
       "example_phrases": {
         "0": [
@@ -1164,10 +1164,10 @@
         "gangveien",
         "sykkelveien",
         "terrengsykkelstien",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "overgangen",
+        "trappene",
+        "broen",
+        "tunellen"
       ],
       "example_phrases": {
         "0": [
@@ -1214,10 +1214,10 @@
         "gangveien",
         "sykkelveien",
         "terrengsykkelstien",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "overgangen",
+        "trappene",
+        "broen",
+        "tunellen"
       ],
       "metric_lengths": [
         "<KILOMETERS> kilometer",
@@ -1453,10 +1453,10 @@
         "gangveien",
         "sykkelveien",
         "terrengsykkelstien",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "overgangen",
+        "trappene",
+        "broen",
+        "tunellen"
       ],
       "relative_directions": [
         "venstre",
@@ -1496,10 +1496,10 @@
         "gangveien",
         "sykkelveien",
         "terrengsykkelstien",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "overgangen",
+        "trappene",
+        "broen",
+        "tunellen"
       ],
       "relative_directions": [
         "venstre",
@@ -1555,10 +1555,10 @@
         "gangveien",
         "sykkelveien",
         "terrengsykkelstien",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "overgangen",
+        "trappene",
+        "broen",
+        "tunellen"
       ],
       "example_phrases": {
         "0": [
@@ -1646,10 +1646,10 @@
         "gangveien",
         "sykkelveien",
         "terrengsykkelstien",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "overgangen",
+        "trappene",
+        "broen",
+        "tunellen"
       ],
       "metric_lengths": [
         "<KILOMETERS> kilometer",
@@ -2024,10 +2024,10 @@
         "gangveien",
         "sykkelveien",
         "terrengsykkelstien",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "overgangen",
+        "trappene",
+        "broen",
+        "tunellen"
       ],
       "relative_directions": [
         "venstre",
@@ -2067,10 +2067,10 @@
         "gangveien",
         "sykkelveien",
         "terrengsykkelstien",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "overgangen",
+        "trappene",
+        "broen",
+        "tunellen"
       ],
       "relative_directions": [
         "venstre",
@@ -2112,10 +2112,10 @@
         "gangveien",
         "sykkelveien",
         "terrengsykkelstien",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "overgangen",
+        "trappene",
+        "broen",
+        "tunellen"
       ],
       "relative_directions": [
         "venstre",
@@ -2163,10 +2163,10 @@
         "gangveien",
         "sykkelveien",
         "terrengsykkelstien",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "overgangen",
+        "trappene",
+        "broen",
+        "tunellen"
       ],
       "relative_directions": [
         "venstre",
@@ -2318,7 +2318,7 @@
         "gangveien",
         "sykkelveien",
         "terrengsykkelstien",
-        "the crosswalk"
+        "overgangen"
       ],
       "example_phrases": {
         "0": [
@@ -2338,7 +2338,7 @@
         "gangveien",
         "sykkelveien",
         "terrengsykkelstien",
-        "the crosswalk"
+        "overgangen"
       ],
       "example_phrases": {
         "0": [

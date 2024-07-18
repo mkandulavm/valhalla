@@ -45,10 +45,10 @@
         "a sétány",
         "a kerékpárút",
         "a hegyi kerékpár út",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "átkelőhely",
+        "a lépcső",
+        "A híd",
+        "az alagút"
       ],
       "relative_directions": [
         "balra",
@@ -88,10 +88,10 @@
         "a sétány",
         "a kerékpárút",
         "a hegyi kerékpárút",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "átkelőhely",
+        "a lépcső",
+        "A híd",
+        "az alagút"
       ],
       "relative_directions": [
         "balra",
@@ -149,10 +149,10 @@
         "a sétány",
         "a kerékpárút",
         "a hegyi kerékpárút",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "átkelőhely",
+        "a lépcső",
+        "A híd",
+        "az alagút"
       ],
       "example_phrases": {
         "0": [
@@ -184,10 +184,10 @@
         "a sétány",
         "a kerékpárút",
         "a hegyi kerékpárút",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "átkelőhely",
+        "a lépcső",
+        "A híd",
+        "az alagút"
       ],
       "metric_lengths": [
         "<KILOMETERS> kilométerek",
@@ -241,10 +241,10 @@
         "a sétány",
         "a kerékpárút",
         "a hegyi kerékpárút",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "átkelőhely",
+        "a lépcső",
+        "A híd",
+        "az alagút"
       ],
       "example_phrases": {
         "0": [
@@ -381,10 +381,10 @@
         "a sétány",
         "a kerékpárút",
         "a hegyi kerékpárút",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "átkelőhely",
+        "a lépcső",
+        "A híd",
+        "az alagút"
       ],
       "ferry_label": "Komp",
       "example_phrases": {
@@ -413,10 +413,10 @@
         "a sétány",
         "a kerékpárút",
         "a hegyi kerékpárút",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "átkelőhely",
+        "a lépcső",
+        "A híd",
+        "az alagút"
       ],
       "ferry_label": "Komp",
       "example_phrases": {
@@ -469,10 +469,10 @@
         "a sétány",
         "a kerékpárút",
         "a hegyi kerékpárút",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "átkelőhely",
+        "a lépcső",
+        "A híd",
+        "az alagút"
       ],
       "example_phrases": {
         "0": [
@@ -569,10 +569,10 @@
         "a sétány",
         "a kerékpárút",
         "a hegyi kerékpárút",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "átkelőhely",
+        "a lépcső",
+        "A híd",
+        "az alagút"
       ],
       "example_phrases": {
         "0": [
@@ -752,10 +752,10 @@
         "a sétány",
         "kerékpárút",
         "a hegyi kerékpárút",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "átkelőhely",
+        "a lépcső",
+        "A híd",
+        "az alagút"
       ],
       "example_phrases": {
         "0": [
@@ -783,10 +783,10 @@
         "a sétány",
         "a kerékpárút",
         "a hegyi kerkpárút",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "átkelőhely",
+        "a lépcső",
+        "A híd",
+        "az alagút"
       ],
       "example_phrases": {
         "0": [
@@ -935,10 +935,10 @@
         "a sétány",
         "a kerékpárút",
         "a hegyi kerékpárút",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "átkelőhely",
+        "a lépcső",
+        "A híd",
+        "az alagút"
       ],
       "relative_directions": [
         "balra",
@@ -985,10 +985,10 @@
         "a sétány",
         "a kerékpárút",
         "a hegyi kerékpárút",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "átkelőhely",
+        "a lépcső",
+        "A híd",
+        "az alagút"
       ],
       "relative_directions": [
         "balra",
@@ -1023,10 +1023,10 @@
         "a sétány",
         "a kerékpárút",
         "a hegyi kerékpárút",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "átkelőhely",
+        "a lépcső",
+        "A híd",
+        "az alagút"
       ],
       "relative_directions": [
         "balra",
@@ -1065,10 +1065,10 @@
         "a sétány",
         "a kerékpárút",
         "a hegyi kerékpárút",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "átkelőhely",
+        "a lépcső",
+        "A híd",
+        "az alagút"
       ],
       "relative_directions": [
         "balra",
@@ -1121,10 +1121,10 @@
         "a sétány",
         "a kerékpárút",
         "a hegyi kerékpárút",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "átkelőhely",
+        "a lépcső",
+        "A híd",
+        "az alagút"
       ],
       "example_phrases": {
         "0": [
@@ -1164,10 +1164,10 @@
         "a sétány",
         "a kerékpárút",
         "a hegyi kerékpárút",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "átkelőhely",
+        "a lépcső",
+        "A híd",
+        "az alagút"
       ],
       "example_phrases": {
         "0": [
@@ -1214,10 +1214,10 @@
         "a sétány",
         "a kerékpárút",
         "a hegyi kerékpárút",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "átkelőhely",
+        "a lépcső",
+        "A híd",
+        "az alagút"
       ],
       "metric_lengths": [
         "<KILOMETERS> kilométerek",
@@ -1453,10 +1453,10 @@
         "a sétány",
         "a kerékpárút",
         "a hegyi kerékpárút",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "átkelőhely",
+        "a lépcső",
+        "A híd",
+        "az alagút"
       ],
       "relative_directions": [
         "balra",
@@ -1496,10 +1496,10 @@
         "a sétány",
         "a kerékpárút",
         "a hegyi kerékpárút",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "átkelőhely",
+        "a lépcső",
+        "A híd",
+        "az alagút"
       ],
       "relative_directions": [
         "balra",
@@ -1555,10 +1555,10 @@
         "a sétány",
         "a kerékpárút",
         "a hegyi kerékpárút",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "átkelőhely",
+        "a lépcső",
+        "A híd",
+        "az alagút"
       ],
       "example_phrases": {
         "0": [
@@ -1646,10 +1646,10 @@
         "a sétány",
         "a kerékpárút",
         "a hegyi kerékpárút",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "átkelőhely",
+        "a lépcső",
+        "A híd",
+        "az alagút"
       ],
       "metric_lengths": [
         "<KILOMETERS> kilométerek",
@@ -2024,10 +2024,10 @@
         "a sétány",
         "a kerékpárút",
         "a hegyi kerékpárút",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "átkelőhely",
+        "a lépcső",
+        "A híd",
+        "az alagút"
       ],
       "relative_directions": [
         "balra",
@@ -2067,10 +2067,10 @@
         "a sétány",
         "a kerékpárút",
         "a hegyi kerékpárút",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "átkelőhely",
+        "a lépcső",
+        "A híd",
+        "az alagút"
       ],
       "relative_directions": [
         "balra",
@@ -2112,10 +2112,10 @@
         "a sétány",
         "a kerékpárút",
         "a hegyi kerékpárút",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "átkelőhely",
+        "a lépcső",
+        "A híd",
+        "az alagút"
       ],
       "relative_directions": [
         "balra",
@@ -2163,10 +2163,10 @@
         "a sétány",
         "a kerékpárút",
         "a hegyi kerékpárút",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "átkelőhely",
+        "a lépcső",
+        "A híd",
+        "az alagút"
       ],
       "relative_directions": [
         "balra",
@@ -2318,7 +2318,7 @@
         "a sétány",
         "a kerékpárút",
         "a hegyi kerékpár út",
-        "the crosswalk"
+        "átkelőhely"
       ],
       "example_phrases": {
         "0": [
@@ -2338,7 +2338,7 @@
         "a sétány",
         "a kerékpárút",
         "a hegyi kerékpár út",
-        "the crosswalk"
+        "átkelőhely"
       ],
       "example_phrases": {
         "0": [

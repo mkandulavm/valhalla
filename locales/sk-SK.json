@@ -43,12 +43,12 @@
       },
       "empty_street_name_labels": [
         "chodník",
-"cyklocesta",
+        "cyklocesta",
         "cesta pre horské bicykle",
         "priechod pre chodcov",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "schody",
+        "Most",
+        "tunel"
       ],
       "relative_directions": [
         "vľavo",
@@ -89,9 +89,9 @@
         "cyklocestu",
         "cestu pre horské bicykle",
         "priechod pre chodcov",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "schody",
+        "Most",
+        "tunel"
       ],
       "relative_directions": [
         "vľavo",
@@ -150,9 +150,9 @@
         "cykloceste",
         "ceste pre horské bicykle",
         "priechod pre chodcov",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "schody",
+        "Most",
+        "tunel"
       ],
       "example_phrases": {
         "0": [
@@ -185,9 +185,9 @@
         "cykloceste",
         "ceste pre horské bicykle",
         "priechod pre chodcov",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "schody",
+        "Most",
+        "tunel"
       ],
       "metric_lengths": [
         "<KILOMETERS> kilometrov",
@@ -242,9 +242,9 @@
         "cykloceste",
         "ceste pre horské bicykle",
         "priechod pre chodcov",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "schody",
+        "Most",
+        "tunel"
       ],
       "example_phrases": {
         "0": [
@@ -382,9 +382,9 @@
         "cyklocestu",
         "cestu pre horské bicykle",
         "priechod pre chodcov",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "schody",
+        "Most",
+        "tunel"
       ],
       "ferry_label": "trajekt",
       "example_phrases": {
@@ -414,9 +414,9 @@
         "cyklocestu",
         "cestu pre horské bicykle",
         "priechod pre chodcov",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "schody",
+        "Most",
+        "tunel"
       ],
       "ferry_label": "trajekt",
       "example_phrases": {
@@ -470,9 +470,9 @@
         "the cycleway",
         "the mountain bike trail",
         "priechod pre chodcov",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "schody",
+        "Most",
+        "tunel"
       ],
       "example_phrases": {
         "0": [
@@ -570,9 +570,9 @@
         "the cycleway",
         "the mountain bike trail",
         "priechod pre chodcov",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "schody",
+        "Most",
+        "tunel"
       ],
       "example_phrases": {
         "0": [
@@ -753,9 +753,9 @@
         "cyklocestu",
         "cestu pre horské bicykle",
         "priechod pre chodcov",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "schody",
+        "Most",
+        "tunel"
       ],
       "example_phrases": {
         "0": [
@@ -784,9 +784,9 @@
         "cyklocestu",
         "cestu pre horské bicykle",
         "priechod pre chodcov",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "schody",
+        "Most",
+        "tunel"
       ],
       "example_phrases": {
         "0": [
@@ -936,9 +936,9 @@
         "cyklocestu",
         "cestu pre horské bicykle",
         "priechod pre chodcov",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "schody",
+        "Most",
+        "tunel"
       ],
       "relative_directions": [
         "vľavo",
@@ -986,9 +986,9 @@
         "cykloceste",
         "ceste pre horské bicykle",
         "priechod pre chodcov",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "schody",
+        "Most",
+        "tunel"
       ],
       "relative_directions": [
         "vľavo",
@@ -1024,9 +1024,9 @@
         "cykloceste",
         "ceste pre horské bicykle",
         "priechod pre chodcov",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "schody",
+        "Most",
+        "tunel"
       ],
       "relative_directions": [
         "vľavo",
@@ -1066,9 +1066,9 @@
         "cyklocestu",
         "cestu pre horské bicykle",
         "priechod pre chodcov",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "schody",
+        "Most",
+        "tunel"
       ],
       "relative_directions": [
         "vľavo",
@@ -1122,9 +1122,9 @@
         "cyklocestu",
         "cestu pre horské bicykle",
         "priechod pre chodcov",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "schody",
+        "Most",
+        "tunel"
       ],
       "example_phrases": {
         "0": [
@@ -1165,9 +1165,9 @@
         "cyklocestu",
         "cestu pre horské bicykle",
         "priechod pre chodcov",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "schody",
+        "Most",
+        "tunel"
       ],
       "example_phrases": {
         "0": [
@@ -1215,9 +1215,9 @@
         "cykloceste",
         "ceste pre horské bicykle",
         "priechod pre chodcov",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "schody",
+        "Most",
+        "tunel"
       ],
       "metric_lengths": [
         "<KILOMETERS> kilometrov",
@@ -1454,9 +1454,9 @@
         "cyklocestu",
         "cestu pre horské bicykle",
         "priechod pre chodcov",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "schody",
+        "Most",
+        "tunel"
       ],
       "relative_directions": [
         "vľavo",
@@ -1497,9 +1497,9 @@
         "cyklocestu",
         "cestu pre horské bicykle",
         "priechod pre chodcov",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "schody",
+        "Most",
+        "tunel"
       ],
       "relative_directions": [
         "vľavo",
@@ -1556,9 +1556,9 @@
         "cykloceste",
         "ceste pre horské bicykle",
         "priechod pre chodcov",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "schody",
+        "Most",
+        "tunel"
       ],
       "example_phrases": {
         "0": [
@@ -1647,9 +1647,9 @@
         "cykloceste",
         "ceste pre horské bicykle",
         "priechod pre chodcov",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "schody",
+        "Most",
+        "tunel"
       ],
       "metric_lengths": [
         "<KILOMETERS> kilometrov",
@@ -2025,9 +2025,9 @@
         "cyklocestu",
         "cestu pre horské bicykle",
         "priechod pre chodcov",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "schody",
+        "Most",
+        "tunel"
       ],
       "relative_directions": [
         "vľavo",
@@ -2068,9 +2068,9 @@
         "cyklocestu",
         "cestu pre horské bicykle",
         "priechod pre chodcov",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "schody",
+        "Most",
+        "tunel"
       ],
       "relative_directions": [
         "vľavo",
@@ -2113,9 +2113,9 @@
         "cyklocestu",
         "cestu pre horské bicykle",
         "priechod pre chodcov",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "schody",
+        "Most",
+        "tunel"
       ],
       "relative_directions": [
         "vľavo",
@@ -2164,9 +2164,9 @@
         "cyklocestu",
         "cestu pre horské bicykle",
         "priechod pre chodcov",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "schody",
+        "Most",
+        "tunel"
       ],
       "relative_directions": [
         "vľavo",
@@ -2253,18 +2253,18 @@
     },
     "pass": {
       "phrases": {
-          "0": "Prejdite cez <OBJECT_LABEL>.",
-          "1": "Prejdite cez dopravné svetlá na <OBJECT_LABEL>."
+        "0": "Prejdite cez <OBJECT_LABEL>.",
+        "1": "Prejdite cez dopravné svetlá na <OBJECT_LABEL>."
       },
       "object_labels": [
-          "bránu",
-          "zátarasy",
-          "kríženie ciest"
+        "bránu",
+        "zátarasy",
+        "kríženie ciest"
       ],
       "example_phrases": {
-          "0": [
-              "Prejdite cez bránu."
-          ]
+        "0": [
+          "Prejdite cez bránu."
+        ]
       }
     },
     "elevator": {

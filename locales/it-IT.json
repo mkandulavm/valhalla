@@ -45,10 +45,10 @@
         "la passerella",
         "la pista ciclabile",
         "il percorso per mountain bike",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "le strisce pedonali",
+        "le scale",
+        "il ponte",
+        "la galleria"
       ],
       "relative_directions": [
         "sinistra",
@@ -88,10 +88,10 @@
         "la passerella",
         "la pista ciclabile",
         "il percorso per mountain bike",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "le strisce pedonali",
+        "le scale",
+        "il ponte",
+        "la galleria"
       ],
       "relative_directions": [
         "sinistra",
@@ -149,10 +149,10 @@
         "la passerella",
         "la pista ciclabile",
         "il percorso per mountain bike",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "le strisce pedonali",
+        "le scale",
+        "il ponte",
+        "la galleria"
       ],
       "example_phrases": {
         "0": [
@@ -184,10 +184,10 @@
         "la passerella",
         "la pista ciclabile",
         "il percorso per mountain bike",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "le strisce pedonali",
+        "le scale",
+        "il ponte",
+        "la galleria"
       ],
       "metric_lengths": [
         "<KILOMETERS>chilometri",
@@ -241,10 +241,10 @@
         "la passerella",
         "la pista ciclabile",
         "il percorso per mountain bike",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "le strisce pedonali",
+        "le scale",
+        "il ponte",
+        "la galleria"
       ],
       "example_phrases": {
         "0": [
@@ -381,10 +381,10 @@
         "la passerella",
         "la pista ciclabile",
         "il percorso per mountain bike",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "le strisce pedonali",
+        "le scale",
+        "il ponte",
+        "la galleria"
       ],
       "ferry_label": "Traghetto",
       "example_phrases": {
@@ -413,10 +413,10 @@
         "la passerella",
         "la pista ciclabile",
         "il percorso per mountain bike",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "le strisce pedonali",
+        "le scale",
+        "il ponte",
+        "la galleria"
       ],
       "ferry_label": "Traghetto",
       "example_phrases": {
@@ -469,10 +469,10 @@
         "la passerella",
         "la pista ciclabile",
         "il percorso per mountain bike",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "le strisce pedonali",
+        "le scale",
+        "il ponte",
+        "la galleria"
       ],
       "example_phrases": {
         "0": [
@@ -569,10 +569,10 @@
         "la passerella",
         "la pista ciclabile",
         "il percorso per mountain bike",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "le strisce pedonali",
+        "le scale",
+        "il ponte",
+        "la galleria"
       ],
       "example_phrases": {
         "0": [
@@ -752,10 +752,10 @@
         "la passerella",
         "la pista ciclabile",
         "il percorso per mountain bike",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "le strisce pedonali",
+        "le scale",
+        "il ponte",
+        "la galleria"
       ],
       "example_phrases": {
         "0": [
@@ -783,10 +783,10 @@
         "la passerella",
         "la pista ciclabile",
         "il percorso per mountain bike",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "le strisce pedonali",
+        "le scale",
+        "il ponte",
+        "la galleria"
       ],
       "example_phrases": {
         "0": [
@@ -935,10 +935,10 @@
         "la passerella",
         "la pista ciclabile",
         "il percorso per mountain bike",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "le strisce pedonali",
+        "le scale",
+        "il ponte",
+        "la galleria"
       ],
       "relative_directions": [
         "sinistra",
@@ -985,10 +985,10 @@
         "la passerella",
         "la pista ciclabile",
         "il percorso per mountain bike",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "le strisce pedonali",
+        "le scale",
+        "il ponte",
+        "la galleria"
       ],
       "relative_directions": [
         "sinistra",
@@ -1023,10 +1023,10 @@
         "la passerella",
         "la pista ciclabile",
         "il percorso per mountain bike",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "le strisce pedonali",
+        "le scale",
+        "il ponte",
+        "la galleria"
       ],
       "relative_directions": [
         "sinistra",
@@ -1065,10 +1065,10 @@
         "la passerella",
         "la pista ciclabile",
         "il percorso per mountain bike",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "le strisce pedonali",
+        "le scale",
+        "il ponte",
+        "la galleria"
       ],
       "relative_directions": [
         "sinistra",
@@ -1121,10 +1121,10 @@
         "la passerella",
         "la pista ciclabile",
         "il percorso per mountain bike",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "le strisce pedonali",
+        "le scale",
+        "il ponte",
+        "la galleria"
       ],
       "example_phrases": {
         "0": [
@@ -1164,10 +1164,10 @@
         "la passerella",
         "la pista ciclabile",
         "il percorso per mountain bike",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "le strisce pedonali",
+        "le scale",
+        "il ponte",
+        "la galleria"
       ],
       "example_phrases": {
         "0": [
@@ -1214,10 +1214,10 @@
         "la passerella",
         "la pista ciclabile",
         "il percorso per mountain bike",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "le strisce pedonali",
+        "le scale",
+        "il ponte",
+        "la galleria"
       ],
       "metric_lengths": [
         "<KILOMETERS> chilometri",
@@ -1453,10 +1453,10 @@
         "la passerella",
         "la pista ciclabile",
         "il percorso per mountain bike",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "le strisce pedonali",
+        "le scale",
+        "il ponte",
+        "la galleria"
       ],
       "relative_directions": [
         "sinistra",
@@ -1496,10 +1496,10 @@
         "la passerella",
         "la pista ciclabile",
         "il percorso per mountain bike",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "le strisce pedonali",
+        "le scale",
+        "il ponte",
+        "la galleria"
       ],
       "relative_directions": [
         "sinistra",
@@ -1555,10 +1555,10 @@
         "la passerella",
         "la pista ciclabile",
         "il percorso per mountain bike",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "le strisce pedonali",
+        "le scale",
+        "il ponte",
+        "la galleria"
       ],
       "example_phrases": {
         "0": [
@@ -1646,10 +1646,10 @@
         "la passerella",
         "la pista ciclabile",
         "il percorso per mountain bike",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "le strisce pedonali",
+        "le scale",
+        "il ponte",
+        "la galleria"
       ],
       "metric_lengths": [
         "<KILOMETERS> chilometri",
@@ -2024,10 +2024,10 @@
         "la passerella",
         "la pista ciclabile",
         "il percorso per mountain bike",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "le strisce pedonali",
+        "le scale",
+        "il ponte",
+        "la galleria"
       ],
       "relative_directions": [
         "sinistra",
@@ -2067,10 +2067,10 @@
         "la passerella",
         "la pista ciclabile",
         "il percorso per mountain bike",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "le strisce pedonali",
+        "le scale",
+        "il ponte",
+        "la galleria"
       ],
       "relative_directions": [
         "sinistra",
@@ -2112,10 +2112,10 @@
         "la passerella",
         "la pista ciclabile",
         "il percorso per mountain bike",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "le strisce pedonali",
+        "le scale",
+        "il ponte",
+        "la galleria"
       ],
       "relative_directions": [
         "sinistra",
@@ -2163,10 +2163,10 @@
         "la passerella",
         "la pista ciclabile",
         "il percorso per mountain bike",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "le strisce pedonali",
+        "le scale",
+        "il ponte",
+        "la galleria"
       ],
       "relative_directions": [
         "sinistra",
@@ -2318,7 +2318,7 @@
         "la passerella",
         "la pista ciclabile",
         "il percorso per mountain bike",
-        "the crosswalk"
+        "le strisce pedonali"
       ],
       "example_phrases": {
         "0": [
@@ -2338,7 +2338,7 @@
         "la passerella",
         "la pista ciclabile",
         "il percorso per mountain bike",
-        "the crosswalk"
+        "le strisce pedonali"
       ],
       "example_phrases": {
         "0": [

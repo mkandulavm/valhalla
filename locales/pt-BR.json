@@ -43,10 +43,10 @@
         "a calçada",
         "a ciclovia",
         "a trilha de mountain bike",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "a faixa de pedestres",
+        "as escadas",
+        "a Ponte",
+        "o túnel"
       ],
       "relative_directions": [
         "à esquerda",
@@ -86,10 +86,10 @@
         "a calçada",
         "a ciclovia",
         "a trilha de mountain bike",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "a faixa de pedestres",
+        "as escadas",
+        "a Ponte",
+        "o túnel"
       ],
       "relative_directions": [
         "à esquerda",
@@ -147,10 +147,10 @@
         "a calçada",
         "a ciclovia",
         "a trilha de mountain bike",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "a faixa de pedestres",
+        "as escadas",
+        "a Ponte",
+        "o túnel"
       ],
       "example_phrases": {
         "0": [
@@ -182,10 +182,10 @@
         "a calçada",
         "a ciclovia",
         "a trilha de mountain bike",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "a faixa de pedestres",
+        "as escadas",
+        "a Ponte",
+        "o túnel"
       ],
       "metric_lengths": [
         "<KILOMETERS> quilômetros",
@@ -239,10 +239,10 @@
         "a calçada",
         "a ciclovia",
         "a trilha de mountain bike",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "a faixa de pedestres",
+        "as escadas",
+        "a Ponte",
+        "o túnel"
       ],
       "example_phrases": {
         "0": [
@@ -379,10 +379,10 @@
         "a calçada",
         "a ciclovia",
         "a trilha de mountain bike",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "a faixa de pedestres",
+        "as escadas",
+        "a Ponte",
+        "o túnel"
       ],
       "ferry_label": "Balsa",
       "example_phrases": {
@@ -411,10 +411,10 @@
         "a calçada",
         "a ciclovia",
         "a trilha de mountain bike",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "a faixa de pedestres",
+        "as escadas",
+        "a Ponte",
+        "o túnel"
       ],
       "ferry_label": "Balsa",
       "example_phrases": {
@@ -467,10 +467,10 @@
         "the walkway",
         "the cycleway",
         "the mountain bike trail",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "a faixa de pedestres",
+        "as escadas",
+        "a Ponte",
+        "o túnel"
       ],
       "example_phrases": {
         "0": [
@@ -567,10 +567,10 @@
         "the walkway",
         "the cycleway",
         "the mountain bike trail",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "a faixa de pedestres",
+        "as escadas",
+        "a Ponte",
+        "o túnel"
       ],
       "example_phrases": {
         "0": [
@@ -750,10 +750,10 @@
         "a calçada",
         "a ciclovia",
         "a trilha de mountain bike",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "a faixa de pedestres",
+        "as escadas",
+        "a Ponte",
+        "o túnel"
       ],
       "example_phrases": {
         "0": [
@@ -781,10 +781,10 @@
         "a calçada",
         "a ciclovia",
         "a trilha de mountain bike",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "a faixa de pedestres",
+        "as escadas",
+        "a Ponte",
+        "o túnel"
       ],
       "example_phrases": {
         "0": [
@@ -933,10 +933,10 @@
         "a estrada pedonal",
         "a ciclovia",
         "a trilha de mountain bike",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "a faixa de pedestres",
+        "as escadas",
+        "a Ponte",
+        "o túnel"
       ],
       "relative_directions": [
         "à esquerda",
@@ -983,10 +983,10 @@
         "a calçada",
         "a ciclovia",
         "a trilha de mountain bike",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "a faixa de pedestres",
+        "as escadas",
+        "a Ponte",
+        "o túnel"
       ],
       "relative_directions": [
         "à esquerda",
@@ -1021,10 +1021,10 @@
         "a calçada",
         "a ciclovia",
         "a trilha de mountain bike",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "a faixa de pedestres",
+        "as escadas",
+        "a Ponte",
+        "o túnel"
       ],
       "relative_directions": [
         "à esquerda",
@@ -1063,10 +1063,10 @@
         "a calçada",
         "a ciclovia",
         "a trilha de mountain bike",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "a faixa de pedestres",
+        "as escadas",
+        "a Ponte",
+        "o túnel"
       ],
       "relative_directions": [
         "à esquerda",
@@ -1119,10 +1119,10 @@
         "calçada",
         "ciclovia",
         "a trilha de mountain bike",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "a faixa de pedestres",
+        "as escadas",
+        "a Ponte",
+        "o túnel"
       ],
       "example_phrases": {
         "0": [
@@ -1162,10 +1162,10 @@
         "calçada",
         "ciclovia",
         "a trilha de mountain bike",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "a faixa de pedestres",
+        "as escadas",
+        "a Ponte",
+        "o túnel"
       ],
       "example_phrases": {
         "0": [
@@ -1212,10 +1212,10 @@
         "a calçada",
         "a ciclovia",
         "a trilha de mountain bike",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "a faixa de pedestres",
+        "as escadas",
+        "a Ponte",
+        "o túnel"
       ],
       "metric_lengths": [
         "<KILOMETERS> quilômetros",
@@ -1451,10 +1451,10 @@
         "a calçada",
         "a ciclovia",
         "a trilha de mountain bike",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "a faixa de pedestres",
+        "as escadas",
+        "a Ponte",
+        "o túnel"
       ],
       "relative_directions": [
         "à esquerda",
@@ -1494,10 +1494,10 @@
         "a calçada",
         "a ciclovia",
         "a trilha de mountain bike",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "a faixa de pedestres",
+        "as escadas",
+        "a Ponte",
+        "o túnel"
       ],
       "relative_directions": [
         "à esquerda",
@@ -1553,10 +1553,10 @@
         "a calçada",
         "a ciclovia",
         "a trilha de mountain bike",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "a faixa de pedestres",
+        "as escadas",
+        "a Ponte",
+        "o túnel"
       ],
       "example_phrases": {
         "0": [
@@ -1644,10 +1644,10 @@
         "a calçada",
         "a ciclovia",
         "a trilha de mountain bike",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "a faixa de pedestres",
+        "as escadas",
+        "a Ponte",
+        "o túnel"
       ],
       "metric_lengths": [
         "<KILOMETERS> quilômetros",
@@ -2022,10 +2022,10 @@
         "a calçada",
         "a ciclovia",
         "a trilha de mountain bike",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "a faixa de pedestres",
+        "as escadas",
+        "a Ponte",
+        "o túnel"
       ],
       "relative_directions": [
         "à esquerda",
@@ -2065,10 +2065,10 @@
         "a calçada",
         "a ciclovia",
         "a trilha de mountain bike",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "a faixa de pedestres",
+        "as escadas",
+        "a Ponte",
+        "o túnel"
       ],
       "relative_directions": [
         "à esquerda",
@@ -2110,10 +2110,10 @@
         "a calçada",
         "a ciclovia",
         "a trilha de mountain bike",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "a faixa de pedestres",
+        "as escadas",
+        "a Ponte",
+        "o túnel"
       ],
       "relative_directions": [
         "à esquerda",
@@ -2161,10 +2161,10 @@
         "a calçada",
         "a ciclovia",
         "a trilha de mountain bike",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "a faixa de pedestres",
+        "as escadas",
+        "a Ponte",
+        "o túnel"
       ],
       "relative_directions": [
         "à esquerda",
@@ -2316,7 +2316,7 @@
         "calçada",
         "ciclovia",
         "a trilha de mountain bike",
-        "the crosswalk"
+        "a faixa de pedestres"
       ],
       "example_phrases": {
         "0": [
@@ -2336,7 +2336,7 @@
         "calçada",
         "ciclovia",
         "a trilha de mountain bike",
-        "the crosswalk"
+        "a faixa de pedestres"
       ],
       "example_phrases": {
         "0": [

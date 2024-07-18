@@ -45,10 +45,10 @@
         "kävelyreitti",
         "pyöräilyreitti",
         "maastopyöräreitti",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "risteystie",
+        "portaat",
+        "silta",
+        "tunneli"
       ],
       "relative_directions": [
         "vasemmalle",
@@ -88,10 +88,10 @@
         "kävelyreitti",
         "pyöräilyreitti",
         "maastopyöräreitti",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "risteystie",
+        "portaat",
+        "silta",
+        "tunneli"
       ],
       "relative_directions": [
         "vasemmalle",
@@ -149,10 +149,10 @@
         "kävelyreitti",
         "pyöräilyreitti",
         "maastopyöräreitti",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "risteystie",
+        "portaat",
+        "silta",
+        "tunneli"
       ],
       "example_phrases": {
         "0": [
@@ -184,10 +184,10 @@
         "kävelyreitti",
         "pyöräilyreitti",
         "maastopyöräreitti",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "risteystie",
+        "portaat",
+        "silta",
+        "tunneli"
       ],
       "metric_lengths": [
         "<KILOMETERS> kilometriä",
@@ -241,10 +241,10 @@
         "kävelyreitti",
         "pyöräilyreitti",
         "maastopyöräreitti",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "risteystie",
+        "portaat",
+        "silta",
+        "tunneli"
       ],
       "example_phrases": {
         "0": [
@@ -381,10 +381,10 @@
         "kävelyreitti",
         "pyöräilyreitti",
         "maastopyöräreitti",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "risteystie",
+        "portaat",
+        "silta",
+        "tunneli"
       ],
       "ferry_label": "Lautta",
       "example_phrases": {
@@ -413,10 +413,10 @@
         "kävelyreitti",
         "pyöräilyreitti",
         "maastopyöräreitti",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "risteystie",
+        "portaat",
+        "silta",
+        "tunneli"
       ],
       "ferry_label": "Lautta",
       "example_phrases": {
@@ -469,10 +469,10 @@
         "kävelyreitti",
         "pyöräilyreitti",
         "maastopyöräreitti",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "risteystie",
+        "portaat",
+        "silta",
+        "tunneli"
       ],
       "example_phrases": {
         "0": [
@@ -569,10 +569,10 @@
         "kävelyreitti",
         "pyöräilyreitti",
         "maastopyöräreitti",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "risteystie",
+        "portaat",
+        "silta",
+        "tunneli"
       ],
       "example_phrases": {
         "0": [
@@ -752,10 +752,10 @@
         "kävelyreitti",
         "pyöräilyreitti",
         "maastopyöräreitti",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "risteystie",
+        "portaat",
+        "silta",
+        "tunneli"
       ],
       "example_phrases": {
         "0": [
@@ -783,10 +783,10 @@
         "kävelyreitti",
         "pyöräilyreitti",
         "maastopyöräreitti",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "risteystie",
+        "portaat",
+        "silta",
+        "tunneli"
       ],
       "example_phrases": {
         "0": [
@@ -935,10 +935,10 @@
         "kävelyreitti",
         "pyöräilyreitti",
         "maastopyöräreitti",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "risteystie",
+        "portaat",
+        "silta",
+        "tunneli"
       ],
       "relative_directions": [
         "vasemmalla",
@@ -985,10 +985,10 @@
         "kävelyreitti",
         "pyöräilyreitti",
         "maastopyöräreitti",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "risteystie",
+        "portaat",
+        "silta",
+        "tunneli"
       ],
       "relative_directions": [
         "vasemmalla",
@@ -1023,10 +1023,10 @@
         "kävelyreitti",
         "pyöräilyreitti",
         "maastopyöräreitti",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "risteystie",
+        "portaat",
+        "silta",
+        "tunneli"
       ],
       "relative_directions": [
         "vasemmalla",
@@ -1065,10 +1065,10 @@
         "kävelyreitti",
         "pyöräilyreitti",
         "maastopyöräreitti",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "risteystie",
+        "portaat",
+        "silta",
+        "tunneli"
       ],
       "relative_directions": [
         "vasemmalla",
@@ -1121,10 +1121,10 @@
         "kävelyreitti",
         "pyöräilyreitti",
         "maastopyöräreitti",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "risteystie",
+        "portaat",
+        "silta",
+        "tunneli"
       ],
       "example_phrases": {
         "0": [
@@ -1164,10 +1164,10 @@
         "kävelyreitti",
         "pyöräilyreitti",
         "maastopyöräreitti",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "risteystie",
+        "portaat",
+        "silta",
+        "tunneli"
       ],
       "example_phrases": {
         "0": [
@@ -1214,10 +1214,10 @@
         "kävelyreitti",
         "pyöräilyreitti",
         "maastopyöräreitti",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "risteystie",
+        "portaat",
+        "silta",
+        "tunneli"
       ],
       "metric_lengths": [
         "<KILOMETERS> kilometriä",
@@ -1453,10 +1453,10 @@
         "kävelyreitti",
         "pyöräilyreitti",
         "maastopyöräreitti",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "risteystie",
+        "portaat",
+        "silta",
+        "tunneli"
       ],
       "relative_directions": [
         "vasemmalle",
@@ -1496,10 +1496,10 @@
         "kävelyreitti",
         "pyöräilyreitti",
         "maastopyöräreitti",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "risteystie",
+        "portaat",
+        "silta",
+        "tunneli"
       ],
       "relative_directions": [
         "vasemmalle",
@@ -1555,10 +1555,10 @@
         "kävelyreitti",
         "pyöräilyreitti",
         "maastopyöräreitti",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "risteystie",
+        "portaat",
+        "silta",
+        "tunneli"
       ],
       "example_phrases": {
         "0": [
@@ -1646,10 +1646,10 @@
         "kävelyreitti",
         "pyöräilyreitti",
         "maastopyöräreitti",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "risteystie",
+        "portaat",
+        "silta",
+        "tunneli"
       ],
       "metric_lengths": [
         "<KILOMETERS> kilometriä",
@@ -2024,10 +2024,10 @@
         "kävelyreitti",
         "pyöräilyreitti",
         "maastopyöräreitti",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "risteystie",
+        "portaat",
+        "silta",
+        "tunneli"
       ],
       "relative_directions": [
         "vasemmalle",
@@ -2067,10 +2067,10 @@
         "kävelyreitti",
         "pyöräilyreitti",
         "maastopyöräreitti",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "risteystie",
+        "portaat",
+        "silta",
+        "tunneli"
       ],
       "relative_directions": [
         "vasemmalle",
@@ -2112,10 +2112,10 @@
         "kävelyreitti",
         "pyöräilyreitti",
         "maastopyöräreitti",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "risteystie",
+        "portaat",
+        "silta",
+        "tunneli"
       ],
       "relative_directions": [
         "vasemmalle",
@@ -2163,10 +2163,10 @@
         "kävelyreitti",
         "pyöräilyreitti",
         "maastopyöräreitti",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "risteystie",
+        "portaat",
+        "silta",
+        "tunneli"
       ],
       "relative_directions": [
         "vasemmalle",
@@ -2318,7 +2318,7 @@
         "kävelyreitti",
         "pyöräilyreitti",
         "maastopyöräreitti",
-        "the crosswalk"
+        "risteystie"
       ],
       "example_phrases": {
         "0": [
@@ -2338,7 +2338,7 @@
         "kävelyreitti",
         "pyöräilyreitti",
         "maastopyöräreitti",
-        "the crosswalk"
+        "risteystie"
       ],
       "example_phrases": {
         "0": [

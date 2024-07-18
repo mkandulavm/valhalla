@@ -6,46 +6,49 @@
     "instructions": {
         "arrive": {
             "phrases": {
-                "0": "ถึง: <TIME>.",
-                "1": "ถึง: <TIME> ที่ <TRANSIT_STOP>."
+                "0": "มาถึง: <TIME>-",
+                "1": "มาถึง: <TIME> ที่ <TRANSIT_STOP>-"
             },
             "example_phrases": {
                 "0": [
-                    "ถึง: 8:02 AM."
+                    "ถึง: 8:02 น."
                 ],
                 "1": [
-                    "ถึง: 8:02 AM ที่ 8 St - NYU."
+                    "ถึง: 8:02 น. ที่ 8 St - NYU"
                 ]
             }
         },
         "arrive_verbal": {
             "phrases": {
-                "0": "ถึงเวลา <TIME>.",
-                "1": "ถึงเวลา <TIME> ที่ <TRANSIT_STOP>."
+                "0": "มาถึงที่ <TIME>-",
+                "1": "มาถึงที่ <TIME> ที่ <TRANSIT_STOP>-"
             },
             "example_phrases": {
                 "0": [
-                    "ถึงเวลา 8:02 AM."
+                    "มาถึงเวลา 8:02 น."
                 ],
                 "1": [
-                    "ถึงเวลา 8:02 AM ที่ 8 St - NYU."
+                    "มาถึงเวลา 8:02 น. ที่ 8 St - NYU"
                 ]
             }
         },
         "bear": {
             "phrases": {
-                "0": "เลี้ยว <RELATIVE_DIRECTION>.",
-                "1": "เลี้ยว <RELATIVE_DIRECTION> ไปยัง <STREET_NAMES>.",
-                "2": "เลี้ยว <RELATIVE_DIRECTION> ไปยัง <BEGIN_STREET_NAMES>. ดำเนินต่อไปที่ <STREET_NAMES>.",
-                "3": "เลี้ยว <RELATIVE_DIRECTION> เพื่อยังคงอยู่ที่ <STREET_NAMES>.",
-                "4": "เลี้ยว <RELATIVE_DIRECTION> ที่ <JUNCTION_NAME>.",
-                "5": "เลี้ยว <RELATIVE_DIRECTION> ทาง <TOWARD_SIGN>."
+                "0": "หมี <RELATIVE_DIRECTION>-",
+                "1": "หมี <RELATIVE_DIRECTION> ไปยัง <STREET_NAMES>-",
+                "2": "หมี <RELATIVE_DIRECTION> ไปยัง <BEGIN_STREET_NAMES>-  <STREET_NAMES>-",
+                "3": "หมี <RELATIVE_DIRECTION> ที่จะอยู่ต่อ <STREET_NAMES>-",
+                "4": "หมี <RELATIVE_DIRECTION> ที่ <JUNCTION_NAME>-",
+                "5": "หมี <RELATIVE_DIRECTION> ไปทาง <TOWARD_SIGN>-"
             },
             "empty_street_name_labels": [
                 "ทางเดิน",
-                "ทางขี่จักรยาน",
-                "เส้นทางปั่นจักรยานเสือภูเขา",
-                "ทางข้าม"
+                "ทางจักรยาน",
+                "เส้นทางจักรยานเสือภูเขา",
+                "ทางม้าลาย",
+                "บันได",
+                "สะพาน",
+                "อุโมงค์"
             ],
             "relative_directions": [
                 "ซ้าย",
@@ -53,39 +56,42 @@
             ],
             "example_phrases": {
                 "0": [
-                    "เลี้ยวขวา."
+                    "ขวาหมี"
                 ],
                 "1": [
-                    "เลี้ยวซ้ายไปยัง Arlen Road."
+                    "เลี้ยวซ้ายเข้าสู่ถนนอาร์เลน"
                 ],
                 "2": [
-                    "เลี้ยวขวาไปยัง Belair Road/US 1 Business. ดำเนินต่อไปที่ US 1 Business."
+                    "เลี้ยวขวาเข้าสู่ Belair Road/US 1 Business. "
                 ],
                 "3": [
-                    "เลี้ยวซ้ายเพื่อยังคงอยู่ที่ US 15 South."
+                    "แบร์ออกไปอยู่ที่ 15 สหรัฐใต้"
                 ],
                 "4": [
-                    "เลี้ยวขวาที่ Mannenbashi East."
+                    "ไปทางขวามันเนนบาชิตะวันออก"
                 ],
                 "5": [
-                    "เลี้ยวซ้ายทาง Baltimore."
+                    "ไปทางซ้ายไปทางบัลติมอร์"
                 ]
             }
         },
         "bear_verbal": {
             "phrases": {
-                "0": "เลี้ยว <RELATIVE_DIRECTION>.",
-                "1": "เลี้ยว <RELATIVE_DIRECTION> ไปยัง <STREET_NAMES>.",
-                "2": "เลี้ยว <RELATIVE_DIRECTION> ไปยัง <BEGIN_STREET_NAMES>.",
-                "3": "เลี้ยว <RELATIVE_DIRECTION> เพื่อยังคงอยู่ที่ <STREET_NAMES>.",
-                "4": "เลี้ยว <RELATIVE_DIRECTION> ที่ <JUNCTION_NAME>.",
-                "5": "เลี้ยว <RELATIVE_DIRECTION> ทาง <TOWARD_SIGN>."
+                "0": "หมี <RELATIVE_DIRECTION>-",
+                "1": "หมี <RELATIVE_DIRECTION> ไปยัง <STREET_NAMES>-",
+                "2": "หมี <RELATIVE_DIRECTION> ไปยัง <BEGIN_STREET_NAMES>-",
+                "3": "หมี <RELATIVE_DIRECTION> ที่จะอยู่ต่อ <STREET_NAMES>-",
+                "4": "หมี <RELATIVE_DIRECTION> ที่ <JUNCTION_NAME>-",
+                "5": "หมี <RELATIVE_DIRECTION> ไปทาง <TOWARD_SIGN>-"
             },
             "empty_street_name_labels": [
                 "ทางเดิน",
-                "ทางขี่จักรยาน",
-                "เส้นทางปั่นจักรยานเสือภูเขา",
-                "ทางข้าม"
+                "ทางจักรยาน",
+                "เส้นทางจักรยานเสือภูเขา",
+                "ทางม้าลาย",
+                "บันได",
+                "สะพาน",
+                "อุโมงค์"
             ],
             "relative_directions": [
                 "ซ้าย",
@@ -93,89 +99,95 @@
             ],
             "example_phrases": {
                 "0": [
-                    "เลี้ยวขวา."
+                    "ขวาหมี"
                 ],
                 "1": [
-                    "เลี้ยวซ้ายไปยัง Arlen Road."
+                    "เลี้ยวซ้ายเข้าสู่ถนนอาร์เลน"
                 ],
                 "2": [
-                    "เลี้ยวขวาไปยัง Belair Road, U.S. 1 Business"
+                    "เลี้ยวขวาเข้าสู่ Belair Road, U.S. 1 Business"
                 ],
                 "3": [
-                    "เลี้ยวซ้ายเพื่อยังคงอยู่ที่ U.S. 15 South."
+                    "แบร์ออกไปอยู่ที่ US 15 South"
                 ],
                 "4": [
-                    "เลี้ยวขวาที่ Mannenbashi East."
+                    "ไปทางขวามันเนนบาชิตะวันออก"
                 ],
                 "5": [
-                    "เลี้ยวซ้ายทาง Baltimore."
+                    "ไปทางซ้ายไปทางบัลติมอร์"
                 ]
             }
         },
         "becomes": {
             "phrases": {
-                "0": "<PREVIOUS_STREET_NAMES> เปลี่ยนเป็น <STREET_NAMES>."
+                "0": "<PREVIOUS_STREET_NAMES> กลายเป็น <STREET_NAMES>-"
             },
             "example_phrases": {
                 "0": [
-                    "Vine Street เปลี่ยนเป็น Middletown Road."
+                    "ถนน Vine กลายเป็นถนน Middletown"
                 ]
             }
         },
         "becomes_verbal": {
             "phrases": {
-                "0": "<PREVIOUS_STREET_NAMES> เปลี่ยนเป็น <STREET_NAMES>."
+                "0": "<PREVIOUS_STREET_NAMES> กลายเป็น <STREET_NAMES>-"
             },
             "example_phrases": {
                 "0": [
-                    "Vine Street เปลี่ยนเป็น Middletown Road."
+                    "ถนน Vine กลายเป็นถนน Middletown"
                 ]
             }
         },
         "continue": {
             "phrases": {
-                "0": "ดำเนินต่อ.",
-                "1": "ดำเนินต่อบน <STREET_NAMES>.",
-                "2": "ดำเนินต่อที่ <JUNCTION_NAME>.",
-                "3": "ดำเนินต่อทาง <TOWARD_SIGN>."
+                "0": "ดำเนินการต่อ.",
+                "1": "ทำต่อไป <STREET_NAMES>-",
+                "2": "ไปต่อที่ <JUNCTION_NAME>-",
+                "3": "มุ่งหน้าต่อไป <TOWARD_SIGN>-"
             },
             "empty_street_name_labels": [
                 "ทางเดิน",
-                "ทางขี่จักรยาน",
-                "เส้นทางปั่นจักรยานเสือภูเขา",
-                "ทางข้าม"
+                "ทางจักรยาน",
+                "เส้นทางจักรยานเสือภูเขา",
+                "ทางม้าลาย",
+                "บันได",
+                "สะพาน",
+                "อุโมงค์"
             ],
             "example_phrases": {
                 "0": [
-                    "ดำเนินต่อ."
+                    "ดำเนินการต่อ."
                 ],
                 "1": [
-                    "ดำเนินต่อบน 10th Avenue."
+                    "ไปต่อที่ 10th Avenue"
                 ],
                 "2": [
-                    "ดำเนินต่อที่ Mannenbashi East."
+                    "เดินทางต่อที่ Mannenbashi East"
                 ],
                 "3": [
-                    "ดำเนินต่อทาง Baltimore."
+                    "มุ่งหน้าสู่บัลติมอร์ต่อไป"
                 ]
             }
         },
         "continue_verbal": {
             "phrases": {
-                "0": "ดำเนินต่อ.",
-                "1": "ดำเนินต่อเป็นระยะทาง <LENGTH>.",
-                "2": "ดำเนินต่อบน <STREET_NAMES>.",
-                "3": "ดำเนินต่อบน <STREET_NAMES> เป็นระยะทาง <LENGTH>.",
-                "4": "ดำเนินต่อที่ <JUNCTION_NAME>.",
-                "5": "ดำเนินต่อที่ <JUNCTION_NAME> เป็นระยะทาง <LENGTH>.",
-                "6": "ดำเนินต่อทาง <TOWARD_SIGN>.",
-                "7": "ดำเนินต่อทาง <TOWARD_SIGN> เป็นระยะทาง <LENGTH>."
+                "0": "ดำเนินการต่อ.",
+                "1": "ดำเนินการต่อเพื่อ <LENGTH>-",
+                "2": "ทำต่อไป <STREET_NAMES>-",
+                "3": "ทำต่อไป <STREET_NAMES> สำหรับ <LENGTH>-",
+                "4": "ไปต่อที่ <JUNCTION_NAME>-",
+                "5": "ไปต่อที่ <JUNCTION_NAME> สำหรับ <LENGTH>-",
+                "6": "มุ่งหน้าต่อไป <TOWARD_SIGN>-",
+                "7": "มุ่งหน้าต่อไป <TOWARD_SIGN> สำหรับ <LENGTH>-"
             },
             "empty_street_name_labels": [
                 "ทางเดิน",
-                "ทางขี่จักรยาน",
-                "เส้นทางปั่นจักรยานเสือภูเขา",
-                "ทางข้าม"
+                "ทางจักรยาน",
+                "เส้นทางจักรยานเสือภูเขา",
+                "ทางม้าลาย",
+                "บันได",
+                "สะพาน",
+                "อุโมงค์"
             ],
             "metric_lengths": [
                 "<KILOMETERS> กิโลเมตร",
@@ -188,98 +200,101 @@
                 "1 ไมล์",
                 "ครึ่งไมล์",
                 "หนึ่งในสี่ไมล์",
-                "<FEET> ฟุต",
+                "<FEET> เท้า",
                 "น้อยกว่า 10 ฟุต"
             ],
             "example_phrases": {
                 "0": [
-                    "ดำเนินต่อ."
+                    "ดำเนินการต่อ."
                 ],
                 "1": [
-                    "ดำเนินต่อเป็นระยะทาง 300 ฟุต."
+                    "เดินต่อไปอีก 300 ฟุต"
                 ],
                 "2": [
-                    "ดำเนินต่อบน 10th Avenue."
+                    "ไปต่อที่ 10th Avenue"
                 ],
                 "3": [
-                    "ดำเนินต่อบน 10th Avenue เป็นระยะทาง 3 ไมล์."
+                    "เดินทางต่อไปบน 10th Avenue อีก 3 ไมล์"
                 ],
                 "4": [
-                    "ดำเนินต่อที่ Mannenbashi East."
+                    "เดินทางต่อที่ Mannenbashi East"
                 ],
                 "5": [
-                    "ดำเนินต่อที่ Mannenbashi East เป็นระยะทาง 2 ไมล์."
+                    "เดินทางต่อที่ Mannenbashi East อีก 2 ไมล์"
                 ],
                 "6": [
-                    "ดำเนินต่อทาง Baltimore."
+                    "มุ่งหน้าสู่บัลติมอร์ต่อไป"
                 ],
                 "7": [
-                    "ดำเนินต่อทาง Baltimore เป็นระยะทาง 5 ไมล์."
+                    "เดินทางต่อไปยังบัลติมอร์อีก 5 ไมล์"
                 ]
             }
         },
         "continue_verbal_alert": {
             "phrases": {
-                "0": "ดำเนินต่อ.",
-                "1": "ดำเนินต่อบน <STREET_NAMES>.",
-                "2": "ดำเนินต่อที่ <JUNCTION_NAME>.",
-                "3": "ดำเนินต่อทาง <TOWARD_SIGN>."
+                "0": "ดำเนินการต่อ.",
+                "1": "ทำต่อไป <STREET_NAMES>-",
+                "2": "ไปต่อที่ <JUNCTION_NAME>-",
+                "3": "มุ่งหน้าต่อไป <TOWARD_SIGN>-"
             },
             "empty_street_name_labels": [
                 "ทางเดิน",
-                "ทางขี่จักรยาน",
-                "เส้นทางปั่นจักรยานเสือภูเขา",
-                "ทางข้าม"
+                "ทางจักรยาน",
+                "เส้นทางจักรยานเสือภูเขา",
+                "ทางม้าลาย",
+                "บันได",
+                "สะพาน",
+                "อุโมงค์"
             ],
             "example_phrases": {
                 "0": [
-                    "ดำเนินต่อ."
+                    "ดำเนินการต่อ."
                 ],
                 "1": [
-                    "ดำเนินต่อบน 10th Avenue."
+                    "ไปต่อที่ 10th Avenue"
                 ],
                 "2": [
-                    "ดำเนินต่อที่ Mannenbashi East."
+                    "เดินทางต่อที่ Mannenbashi East"
                 ],
                 "3": [
-                    "ดำเนินต่อทาง Baltimore."
+                    "มุ่งหน้าสู่บัลติมอร์ต่อไป"
                 ]
             }
         },
         "depart": {
             "phrases": {
-                "0": "ออก: <TIME>.",
-                "1": "ออก: <TIME> จาก <TRANSIT_STOP>."
+                "0": "ออกเดินทาง: <TIME>-",
+                "1": "ออกเดินทาง: <TIME> จาก <TRANSIT_STOP>-"
             },
             "example_phrases": {
                 "0": [
-                    "ออก: 8:02 AM."
+                    "ออกเดินทาง: 8:02 น."
                 ],
                 "1": [
-                    "ออก: 8:02 AM จาก 8 St - NYU."
+                    "ออกเดินทาง: 8:02 น. จาก 8 St - NYU"
                 ]
             }
         },
         "depart_verbal": {
             "phrases": {
-                "0": "ออกเวลา <TIME>.",
-                "1": "ออกเวลา <TIME> จาก <TRANSIT_STOP>."
+                "0": "ออกเดินทางเวลา <TIME>-",
+                "1": "ออกเดินทางเวลา <TIME> จาก <TRANSIT_STOP>-"
             },
             "example_phrases": {
                 "0": [
-                    "ออกเวลา 8:02 AM."
+                    "ออกเดินทางเวลา 8:02 น."
                 ],
                 "1": [
-                    "ออกเวลา 8:02 AM จาก 8 St - NYU."
+                    "ออกเดินทางเวลา 8:02 น. จาก 8 St - NYU"
                 ]
             }
         },
         "destination": {
             "phrases": {
-                "0": "คุณได้ถึงปลายทางแล้ว.",
-                "1": "คุณได้ถึง <DESTINATION> แล้ว.",
-                "2": "ปลายทางของคุณอยู่ทาง <RELATIVE_DIRECTION>.",
-                "3": "<DESTINATION> อยู่ทาง <RELATIVE_DIRECTION>."
+                "0": "คุณมาถึงที่หมายแล้ว",
+                "1": "คุณได้มาถึงที่ <DESTINATION>-",
+                "2": "จุดหมายปลายทางของคุณอยู่ที่ <RELATIVE_DIRECTION>-",
+                "3": "<DESTINATION> อยู่บน <RELATIVE_DIRECTION>-"
             },
             "relative_directions": [
                 "ซ้าย",
@@ -287,26 +302,26 @@
             ],
             "example_phrases": {
                 "0": [
-                    "คุณได้ถึงปลายทางแล้ว."
+                    "คุณมาถึงที่หมายแล้ว"
                 ],
                 "1": [
-                    "คุณได้ถึง 3206 Powelton Avenue แล้ว."
+                    "คุณมาถึงแล้วที่ 3206 Powelton Avenue"
                 ],
                 "2": [
-                    "ปลายทางของคุณอยู่ทางซ้าย.",
-                    "ปลายทางของคุณอยู่ทางขวา."
+                    "จุดหมายปลายทางของคุณอยู่ทางซ้าย",
+                    "จุดหมายปลายทางของคุณอยู่ทางขวามือ"
                 ],
                 "3": [
-                    "Lancaster Brewing Company อยู่ทางซ้าย."
+                    "บริษัท Lancaster Brewing อยู่ทางซ้ายมือ"
                 ]
             }
         },
         "destination_verbal": {
             "phrases": {
-                "0": "คุณได้ถึงปลายทางแล้ว.",
-                "1": "คุณได้ถึง <DESTINATION> แล้ว.",
-                "2": "ปลายทางของคุณอยู่ทาง <RELATIVE_DIRECTION>.",
-                "3": "<DESTINATION> อยู่ทาง <RELATIVE_DIRECTION>."
+                "0": "คุณมาถึงที่หมายแล้ว",
+                "1": "คุณได้มาถึงที่ <DESTINATION>-",
+                "2": "จุดหมายปลายทางของคุณอยู่ที่ <RELATIVE_DIRECTION>-",
+                "3": "<DESTINATION> อยู่บน <RELATIVE_DIRECTION>-"
             },
             "relative_directions": [
                 "ซ้าย",
@@ -314,26 +329,26 @@
             ],
             "example_phrases": {
                 "0": [
-                    "คุณได้ถึงปลายทางแล้ว."
+                    "คุณมาถึงที่หมายแล้ว"
                 ],
                 "1": [
-                    "คุณได้ถึง 32 o6 Powelton Avenue แล้ว."
+                    "คุณมาถึงแล้วที่ 32 o6 Powelton Avenue"
                 ],
                 "2": [
-                    "ปลายทางของคุณอยู่ทางซ้าย.",
-                    "ปลายทางของคุณอยู่ทางขวา."
+                    "จุดหมายปลายทางของคุณอยู่ทางซ้าย",
+                    "จุดหมายปลายทางของคุณอยู่ทางขวามือ"
                 ],
                 "3": [
-                    "Lancaster Brewing Company อยู่ทางซ้าย."
+                    "บริษัท Lancaster Brewing อยู่ทางซ้ายมือ"
                 ]
             }
         },
         "destination_verbal_alert": {
             "phrases": {
-                "0": "คุณจะถึงปลายทาง.",
-                "1": "คุณจะถึง <DESTINATION>.",
-                "2": "ปลายทางของคุณจะอยู่ทาง <RELATIVE_DIRECTION>.",
-                "3": "<DESTINATION> จะอยู่ทาง <RELATIVE_DIRECTION>."
+                "0": "คุณจะไปถึงที่หมายของคุณ",
+                "1": "คุณจะมาถึงที่ <DESTINATION>-",
+                "2": "จุดหมายปลายทางของคุณจะอยู่บน <RELATIVE_DIRECTION>-",
+                "3": "<DESTINATION> จะอยู่บน <RELATIVE_DIRECTION>-"
             },
             "relative_directions": [
                 "ซ้าย",
@@ -341,461 +356,479 @@
             ],
             "example_phrases": {
                 "0": [
-                    "คุณจะถึงปลายทาง."
+                    "คุณจะไปถึงที่หมายของคุณ"
                 ],
                 "1": [
-                    "คุณจะถึง 32 o6 Powelton Avenue."
+                    "คุณจะมาถึงที่ 32 o6 Powelton Avenue"
                 ],
                 "2": [
-                    "ปลายทางของคุณจะอยู่ทางซ้าย.",
-                    "ปลายทางของคุณจะอยู่ทางขวา."
+                    "จุดหมายปลายทางของคุณจะอยู่ทางซ้ายมือ",
+                    "จุดหมายปลายทางของคุณจะอยู่ทางขวามือ"
                 ],
                 "3": [
-                    "Lancaster Brewing Company จะอยู่ทางซ้าย."
+                    "บริษัท Lancaster Brewing จะอยู่ทางซ้ายมือ"
                 ]
             }
         },
         "enter_ferry": {
             "phrases": {
-                "0": "ขึ้นเรือโดยสาร.",
-                "1": "ขึ้น <STREET_NAMES>.",
-                "2": "ขึ้น <STREET_NAMES> <FERRY_LABEL>.",
-                "3": "ขึ้นเรือโดยสารทาง <TOWARD_SIGN>."
+                "0": "ขึ้นเรือเฟอร์รี่",
+                "1": "เอา <STREET_NAMES>-",
+                "2": "เอา <STREET_NAMES> <FERRY_LABEL>-",
+                "3": "ขึ้นเรือเฟอร์รี่มุ่งหน้าสู่ <TOWARD_SIGN>-"
             },
             "empty_street_name_labels": [
                 "ทางเดิน",
-                "ทางขี่จักรยาน",
-                "เส้นทางปั่นจักรยานเสือภูเขา",
-                "ทางข้าม"
+                "ทางจักรยาน",
+                "เส้นทางจักรยานเสือภูเขา",
+                "ทางม้าลาย",
+                "บันได",
+                "สะพาน",
+                "อุโมงค์"
             ],
-            "ferry_label": "เรือโดยสาร",
+            "ferry_label": "เรือข้ามฟาก",
             "example_phrases": {
                 "0": [
-                    "ขึ้นเรือโดยสาร."
+                    "ขึ้นเรือเฟอร์รี่"
                 ],
                 "1": [
-                    "ขึ้น Millersburg Ferry."
+                    "ขึ้นเรือเฟอร์รีมิลเลอร์สเบิร์ก"
                 ],
                 "2": [
-                    "ขึ้น Bridgeport - Port Jefferson Ferry."
+                    "นั่งเรือเฟอร์รีบริดจ์พอร์ต - พอร์ตเจฟเฟอร์สัน"
                 ],
                 "3": [
-                    "ขึ้นเรือโดยสารทาง Cape May."
+                    "ขึ้นเรือเฟอร์รีไปยังเคปเมย์"
                 ]
             }
         },
         "enter_ferry_verbal": {
             "phrases": {
-                "0": "ขึ้นเรือโดยสาร.",
-                "1": "เข้า <STREET_NAMES>.",
-                "2": "เข้า <STREET_NAMES> <FERRY_LABEL>.",
-                "3": "เข้าเรือโดยสารทาง <TOWARD_SIGN>."
+                "0": "ขึ้นเรือเฟอร์รี่",
+                "1": "เอา <STREET_NAMES>-",
+                "2": "เอา <STREET_NAMES> <FERRY_LABEL>-",
+                "3": "ขึ้นเรือเฟอร์รี่มุ่งหน้าสู่ <TOWARD_SIGN>-"
             },
             "empty_street_name_labels": [
                 "ทางเดิน",
-                "ทางขี่จักรยาน",
-                "เส้นทางปั่นจักรยานเสือภูเขา",
-                "ทางข้าม"
+                "ทางจักรยาน",
+                "เส้นทางจักรยานเสือภูเขา",
+                "ทางม้าลาย",
+                "บันได",
+                "สะพาน",
+                "อุโมงค์"
             ],
-            "ferry_label": "เรือโดยสาร",
+            "ferry_label": "เรือข้ามฟาก",
             "example_phrases": {
                 "0": [
-                    "ขึ้นเรือโดยสาร."
+                    "ขึ้นเรือเฟอร์รี่"
                 ],
                 "1": [
-                    "ขึ้น Millersburg Ferry."
+                    "ขึ้นเรือเฟอร์รีมิลเลอร์สเบิร์ก"
                 ],
                 "2": [
-                    "ขึ้น Bridgeport - Port Jefferson Ferry."
+                    "นั่งเรือเฟอร์รีบริดจ์พอร์ต - พอร์ตเจฟเฟอร์สัน"
                 ],
                 "3": [
-                    "ขึ้นเรือโดยสารทาง Cape May."
+                    "ขึ้นเรือเฟอร์รีไปยังเคปเมย์"
                 ]
             }
         },
         "enter_roundabout": {
             "phrases": {
-                "0": "เข้าทางวงรี.",
-                "1": "เข้าทางวงรีและเลือกออกทาง <ORDINAL_VALUE>.",
-                "2": "เข้าทางวงรีและเลือกออกทาง <ORDINAL_VALUE> ไปยัง <ROUNDABOUT_EXIT_STREET_NAMES>.",
-                "3": "เข้าทางวงรีและเลือกออกทาง <ORDINAL_VALUE> ไปยัง <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>. ดำเนินต่อที่ <ROUNDABOUT_EXIT_STREET_NAMES>.",
-                "4": "เข้าทางวงรีและเลือกออกทาง <ORDINAL_VALUE> ไปยังทาง <TOWARD_SIGN>.",
-                "5": "เข้าทางวงรีและเลือกออกทางไปที่ <ROUNDABOUT_EXIT_STREET_NAMES>.",
-                "6": "เข้าทางวงรีและเลือกออกทางไปที่ <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>. ดำเนินต่อที่ <ROUNDABOUT_EXIT_STREET_NAMES>.",
-                "7": "เข้าทางวงรีและเลือกออกทางไปที่ทาง <TOWARD_SIGN>.",
+                "0": "เข้าวงเวียน.",
+                "1": "เข้าสู่วงเวียนแล้วตรงไป <ORDINAL_VALUE> ออก",
+                "2": "เข้าสู่วงเวียนแล้วตรงไป <ORDINAL_VALUE> ออกสู่ <ROUNDABOUT_EXIT_STREET_NAMES>-",
+                "3": "เข้าสู่วงเวียนแล้วตรงไป <ORDINAL_VALUE> ออกสู่ <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>-  <ROUNDABOUT_EXIT_STREET_NAMES>-",
+                "4": "เข้าสู่วงเวียนแล้วตรงไป <ORDINAL_VALUE> ออกไปทาง <TOWARD_SIGN>-",
+                "5": "เข้าสู่วงเวียนแล้วใช้ทางออกเข้าสู่ <ROUNDABOUT_EXIT_STREET_NAMES>-",
+                "6": "เข้าสู่วงเวียนแล้วใช้ทางออกเข้าสู่ <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>-  <ROUNDABOUT_EXIT_STREET_NAMES>-",
+                "7": "เข้าสู่วงเวียนแล้วใช้ทางออกไปทาง <TOWARD_SIGN>-",
                 "8": "เข้า <STREET_NAMES>",
-                "9": "เข้า <STREET_NAMES> และเลือกออกทาง <ORDINAL_VALUE>.",
-                "10": "เข้า <STREET_NAMES> และเลือกออกทาง <ORDINAL_VALUE> ไปยัง <ROUNDABOUT_EXIT_STREET_NAMES>.",
-                "11": "เข้า <STREET_NAMES> และเลือกออกทาง <ORDINAL_VALUE> ไปยัง <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>. ดำเนินต่อที่ <ROUNDABOUT_EXIT_STREET_NAMES>.",
-                "12": "เข้า <STREET_NAMES> และเลือกออกทาง <ORDINAL_VALUE> ไปทาง <TOWARD_SIGN>.",
-                "13": "เข้า <STREET_NAMES> และเลือกออกทางไปที่ <ROUNDABOUT_EXIT_STREET_NAMES>.",
-                "14": "เข้า <STREET_NAMES> และเลือกออกทางไปยัง <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>. ดำเนินต่อที่ <ROUNDABOUT_EXIT_STREET_NAMES>.",
-                "15": "เข้า <STREET_NAMES> และเลือกออกทางไปทาง <TOWARD_SIGN>."
+                "9": "เข้า <STREET_NAMES> และรับ <ORDINAL_VALUE> ออก",
+                "10": "เข้า <STREET_NAMES> และรับ <ORDINAL_VALUE> ออกสู่ <ROUNDABOUT_EXIT_STREET_NAMES>-",
+                "11": "เข้า <STREET_NAMES> และรับ <ORDINAL_VALUE> ออกสู่ <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>-  <ROUNDABOUT_EXIT_STREET_NAMES>-",
+                "12": "เข้า <STREET_NAMES> และรับ <ORDINAL_VALUE> ออกไปทาง <TOWARD_SIGN>-",
+                "13": "เข้า <STREET_NAMES> และใช้ทางออกไปยัง <ROUNDABOUT_EXIT_STREET_NAMES>-",
+                "14": "เข้า <STREET_NAMES> และใช้ทางออกไปยัง <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>-  <ROUNDABOUT_EXIT_STREET_NAMES>-",
+                "15": "เข้า <STREET_NAMES> แล้วใช้ทางออกไปทาง <TOWARD_SIGN>-"
             },
             "ordinal_values": [
-                "1st",
-                "2nd",
-                "3rd",
-                "4th",
-                "5th",
-                "6th",
-                "7th",
-                "8th",
-                "9th",
-                "10th"
+                "ที่ 1",
+                "2",
+                "3",
+                "4",
+                "ที่ 5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10"
             ],
             "empty_street_name_labels": [
                 "ทางเดิน",
-                "ทางขี่จักรยาน",
-                "เส้นทางปั่นจักรยานเสือภูเขา",
-                "ทางข้าม"
+                "ทางจักรยาน",
+                "เส้นทางจักรยานเสือภูเขา",
+                "ทางม้าลาย",
+                "บันได",
+                "สะพาน",
+                "อุโมงค์"
             ],
             "example_phrases": {
                 "0": [
-                    "เข้าทางวงรี."
+                    "เข้าวงเวียน."
                 ],
                 "1": [
-                    "เข้าทางวงรีและเลือกออกทาง 1st.",
-                    "เข้าทางวงรีและเลือกออกทาง 2nd.",
-                    "เข้าทางวงรีและเลือกออกทาง 3rd.",
-                    "เข้าทางวงรีและเลือกออกทาง 4th.",
-                    "เข้าทางวงรีและเลือกออกทาง 5th.",
-                    "เข้าทางวงรีและเลือกออกทาง 6th.",
-                    "เข้าทางวงรีและเลือกออกทาง 7th.",
-                    "เข้าทางวงรีและเลือกออกทาง 8th.",
-                    "เข้าทางวงรีและเลือกออกทาง 9th.",
-                    "เข้าทางวงรีและเลือกออกทาง 10th."
+                    "เข้าวงเวียนแล้วใช้ทางออกที่ 1",
+                    "เข้าวงเวียนและใช้ทางออกที่ 2",
+                    "เข้าวงเวียนและใช้ทางออกที่ 3",
+                    "เข้าวงเวียนและใช้ทางออกที่ 4",
+                    "เข้าวงเวียนและใช้ทางออกที่ 5",
+                    "เข้าวงเวียนและใช้ทางออกที่ 6",
+                    "เข้าวงเวียนแล้วใช้ทางออกที่ 7",
+                    "เข้าวงเวียนและใช้ทางออกที่ 8",
+                    "เข้าวงเวียนและใช้ทางออกที่ 9",
+                    "เข้าวงเวียนและใช้ทางออกที่ 10"
                 ],
                 "2": [
-                    "เข้าทางวงรีและเลือกออกทาง 3rd ไปทาง Main Street."
+                    "เข้าวงเวียนแล้วใช้ทางออกที่ 3 เข้าสู่ถนนหลัก"
                 ],
                 "3": [
-                    "เข้าทางวงรีและเลือกออกทาง 3rd ไปทาง US 322/Main Street. ดำเนินต่อที่ US 322."
+                    "เข้าสู่วงเวียนแล้วใช้ทางออกที่ 3 ไปยัง US 322/Main Street "
                 ],
                 "4": [
-                    "เข้าทางวงรีและเลือกออกทาง 3rd ไปทาง Baltimore."
+                    "เข้าวงเวียนแล้วใช้ทางออกที่ 3 ไปทางบัลติมอร์"
                 ],
                 "5": [
-                    "เข้าทางวงรีและเลือกออกทางไปที่ Main Street."
+                    "เข้าวงเวียนแล้วใช้ทางออกไปถนนเมน"
                 ],
                 "6": [
-                    "เข้าทางวงรีและเลือกออกทางไปที่ US 322/Main Street. ดำเนินต่อที่ US 322."
+                    "เข้าสู่วงเวียนแล้วใช้ทางออกไปไปยัง US 322/Main Street "
                 ],
                 "7": [
-                    "เข้าทางวงรีและเลือกออกทางไปทาง Baltimore."
+                    "เข้าสู่วงเวียนแล้วใช้ทางออกไปบัลติมอร์"
                 ],
                 "8": [
-                    "เข้า Dupont Circle."
+                    "เข้าสู่วงเวียนดูปองท์"
                 ],
                 "9": [
-                    "เข้า Dupont Circle และเลือกออกทาง 1st."
+                    "เข้าสู่วงเวียน Dupont และใช้ทางออกที่ 1"
                 ],
                 "10": [
-                    "เข้า Dupont Circle และเลือกออกทาง 3rd ไปทาง Main Street."
+                    "เข้าสู่วงเวียนดูปองท์ และใช้ทางออกที่ 3 ไปยังถนนสายหลัก"
                 ],
                 "11": [
-                    "เข้า Dupont Circle และเลือกออกทาง 3rd ไปทาง US 322/Main Street. ดำเนินต่อที่ US 322."
+                    "เข้าสู่วงเวียนดูปองท์ และใช้ทางออกที่ 3 ไปยัง US 322/Main Street "
                 ],
                 "12": [
-                    "เข้า Dupont Circle และเลือกออกทาง 3rd ไปทาง Baltimore."
+                    "เข้าสู่วงเวียน Dupont และใช้ทางออกที่ 3 ไปยังบัลติมอร์"
                 ],
                 "13": [
-                    "เข้า Dupont Circle และเลือกออกทางไปที่ Main Street."
+                    "เข้าสู่วงเวียนดูปองท์แล้วใช้ทางออกไปสู่ถนนสายหลัก"
                 ],
                 "14": [
-                    "เข้า Dupont Circle และเลือกออกทางไปที่ US 322/Main Street. ดำเนินต่อที่ US 322."
+                    "เข้าสู่วงเวียนดูปองท์แล้วใช้ทางออกไปยัง US 322/Main Street "
                 ],
                 "15": [
-                    "เข้า Dupont Circle และเลือกออกทางไปทาง Baltimore."
+                    "เข้าสู่วงเวียนดูปองท์แล้วใช้ทางออกไปยังบัลติมอร์"
                 ]
             }
         },
         "enter_roundabout_verbal": {
             "phrases": {
-                "0": "เข้าทางวงรี.",
-                "1": "เข้าทางวงรีและเลือกออกทาง <ORDINAL_VALUE>.",
-                "2": "เข้าทางวงรีและเลือกออกทาง <ORDINAL_VALUE> ไปยัง <ROUNDABOUT_EXIT_STREET_NAMES>.",
-                "3": "เข้าทางวงรีและเลือกออกทาง <ORDINAL_VALUE> ไปยัง <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>.",
-                "4": "เข้าทางวงรีและเลือกออกทาง <ORDINAL_VALUE> ไปทาง <TOWARD_SIGN>.",
-                "5": "เข้าทางวงรีและเลือกออกทางไปที่ <ROUNDABOUT_EXIT_STREET_NAMES>.",
-                "6": "เข้าทางวงรีและเลือกออกทางไปที่ <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>.",
-                "7": "เข้าทางวงรีและเลือกออกทางไปทาง <TOWARD_SIGN>.",
+                "0": "เข้าวงเวียน.",
+                "1": "เข้าสู่วงเวียนแล้วตรงไป <ORDINAL_VALUE> ออก",
+                "2": "เข้าสู่วงเวียนแล้วตรงไป <ORDINAL_VALUE> ออกสู่ <ROUNDABOUT_EXIT_STREET_NAMES>-",
+                "3": "เข้าสู่วงเวียนแล้วตรงไป <ORDINAL_VALUE> ออกสู่ <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>-",
+                "4": "เข้าสู่วงเวียนแล้วตรงไป <ORDINAL_VALUE> ออกไปทาง <TOWARD_SIGN>-",
+                "5": "เข้าสู่วงเวียนแล้วใช้ทางออกเข้าสู่ <ROUNDABOUT_EXIT_STREET_NAMES>-",
+                "6": "เข้าสู่วงเวียนแล้วใช้ทางออกเข้าสู่ <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>-",
+                "7": "เข้าสู่วงเวียนแล้วใช้ทางออกไปทาง <TOWARD_SIGN>-",
                 "8": "เข้า <STREET_NAMES>",
-                "9": "เข้า <STREET_NAMES> และเลือกออกทาง <ORDINAL_VALUE>.",
-                "10": "เข้า <STREET_NAMES> และเลือกออกทาง <ORDINAL_VALUE> ไปยัง <ROUNDABOUT_EXIT_STREET_NAMES>.",
-                "11": "เข้า <STREET_NAMES> และเลือกออกทาง <ORDINAL_VALUE> ไปยัง <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>.",
-                "12": "เข้า <STREET_NAMES> และเลือกออกทาง <ORDINAL_VALUE> ไปทาง <TOWARD_SIGN>.",
-                "13": "เข้า <STREET_NAMES> และเลือกออกทางไปที่ <ROUNDABOUT_EXIT_STREET_NAMES>.",
-                "14": "เข้า <STREET_NAMES> และเลือกออกทางไปที่ <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>.",
-                "15": "เข้า <STREET_NAMES> และเลือกออกทางไปทาง <TOWARD_SIGN>."
+                "9": "เข้า <STREET_NAMES> และรับ <ORDINAL_VALUE> ออก",
+                "10": "เข้า <STREET_NAMES> และรับ <ORDINAL_VALUE> ออกสู่ <ROUNDABOUT_EXIT_STREET_NAMES>-",
+                "11": "เข้า <STREET_NAMES> และรับ <ORDINAL_VALUE> ออกสู่ <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>-",
+                "12": "เข้า <STREET_NAMES> และรับ <ORDINAL_VALUE> ออกไปทาง <TOWARD_SIGN>-",
+                "13": "เข้า <STREET_NAMES> และใช้ทางออกไปยัง <ROUNDABOUT_EXIT_STREET_NAMES>-",
+                "14": "เข้า <STREET_NAMES> และใช้ทางออกไปยัง <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>-",
+                "15": "เข้า <STREET_NAMES> แล้วใช้ทางออกไปทาง <TOWARD_SIGN>-"
             },
             "ordinal_values": [
-                "1st",
-                "2nd",
-                "3rd",
-                "4th",
-                "5th",
-                "6th",
-                "7th",
-                "8th",
-                "9th",
-                "10th"
+                "ที่ 1",
+                "2",
+                "3",
+                "4",
+                "ที่ 5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10"
             ],
             "empty_street_name_labels": [
                 "ทางเดิน",
-                "ทางขี่จักรยาน",
-                "เส้นทางปั่นจักรยานเสือภูเขา",
-                "ทางข้าม"
+                "ทางจักรยาน",
+                "เส้นทางจักรยานเสือภูเขา",
+                "ทางม้าลาย",
+                "บันได",
+                "สะพาน",
+                "อุโมงค์"
             ],
             "example_phrases": {
                 "0": [
-                    "เข้าทางวงรี."
+                    "เข้าวงเวียน."
                 ],
                 "1": [
-                    "เข้าทางวงรีและเลือกออกทาง 1st.",
-                    "เข้าทางวงรีและเลือกออกทาง 2nd.",
-                    "เข้าทางวงรีและเลือกออกทาง 3rd.",
-                    "เข้าทางวงรีและเลือกออกทาง 4th.",
-                    "เข้าทางวงรีและเลือกออกทาง 5th.",
-                    "เข้าทางวงรีและเลือกออกทาง 6th.",
-                    "เข้าทางวงรีและเลือกออกทาง 7th.",
-                    "เข้าทางวงรีและเลือกออกทาง 8th.",
-                    "เข้าทางวงรีและเลือกออกทาง 9th.",
-                    "เข้าทางวงรีและเลือกออกทาง 10th."
+                    "เข้าวงเวียนแล้วใช้ทางออกที่ 1",
+                    "เข้าวงเวียนและใช้ทางออกที่ 2",
+                    "เข้าวงเวียนและใช้ทางออกที่ 3",
+                    "เข้าวงเวียนและใช้ทางออกที่ 4",
+                    "เข้าวงเวียนและใช้ทางออกที่ 5",
+                    "เข้าวงเวียนและใช้ทางออกที่ 6",
+                    "เข้าวงเวียนแล้วใช้ทางออกที่ 7",
+                    "เข้าวงเวียนและใช้ทางออกที่ 8",
+                    "เข้าวงเวียนและใช้ทางออกที่ 9",
+                    "เข้าวงเวียนและใช้ทางออกที่ 10"
                 ],
                 "2": [
-                    "เข้าทางวงรีและเลือกออกทาง 3rd ไปทาง Main Street."
+                    "เข้าวงเวียนแล้วใช้ทางออกที่ 3 เข้าสู่ถนนหลัก"
                 ],
                 "3": [
-                    "เข้าทางวงรีและเลือกออกทาง 3rd ไปทาง U.S. 3 22/Main Street."
+                    "เข้าสู่วงเวียนแล้วใช้ทางออกที่ 3 ไปยัง U.S. 3 22/Main Street"
                 ],
                 "4": [
-                    "เข้าทางวงรีและเลือกออกทาง 3rd ไปทาง Baltimore."
+                    "เข้าวงเวียนแล้วใช้ทางออกที่ 3 ไปทางบัลติมอร์"
                 ],
                 "5": [
-                    "เข้าทางวงรีและเลือกออกทางไปที่ Main Street."
+                    "เข้าวงเวียนแล้วใช้ทางออกไปถนนเมน"
                 ],
                 "6": [
-                    "เข้าทางวงรีและเลือกออกทางไปที่ U.S. 3 22/Main Street."
+                    "เข้าสู่วงเวียนแล้วใช้ทางออกไปยัง U.S. 3 22/Main Street"
                 ],
                 "7": [
-                    "เข้าทางวงรีและเลือกออกทางไปทาง Baltimore."
+                    "เข้าสู่วงเวียนแล้วใช้ทางออกไปบัลติมอร์"
                 ],
                 "8": [
-                    "เข้า Dupont Circle."
+                    "เข้าสู่วงเวียนดูปองท์"
                 ],
                 "9": [
-                    "เข้า Dupont Circle และเลือกออกทาง 1st."
+                    "เข้าสู่วงเวียน Dupont และใช้ทางออกที่ 1"
                 ],
                 "10": [
-                    "เข้า Dupont Circle และเลือกออกทาง 3rd ไปทาง Main Street."
+                    "เข้าสู่วงเวียนดูปองท์ และใช้ทางออกที่ 3 ไปยังถนนสายหลัก"
                 ],
                 "11": [
-                    "เข้า Dupont Circle และเลือกออกทาง 3rd ไปทาง U.S. 3 22/Main Street."
+                    "เข้าสู่ Dupont Circle และใช้ทางออกที่ 3 ไปยัง U.S. 3 22/Main Street"
                 ],
                 "12": [
-                    "เข้า Dupont Circle และเลือกออกทาง 3rd ไปทาง Baltimore."
+                    "เข้าสู่วงเวียน Dupont และใช้ทางออกที่ 3 ไปยังบัลติมอร์"
                 ],
                 "13": [
-                    "เข้า Dupont Circle และเลือกออกทางไปที่ Main Street."
+                    "เข้าสู่วงเวียนดูปองท์แล้วใช้ทางออกไปสู่ถนนสายหลัก"
                 ],
                 "14": [
-                    "เข้า Dupont Circle และเลือกออกทางไปที่ U.S. 3 22/Main Street."
+                    "เข้าสู่ Dupont Circle แล้วใช้ทางออกไปยัง U.S. 3 22/Main Street"
                 ],
                 "15": [
-                    "เข้า Dupont Circle และเลือกออกทางไปทาง Baltimore."
+                    "เข้าสู่วงเวียนดูปองท์แล้วใช้ทางออกไปยังบัลติมอร์"
                 ]
             }
         },
         "exit": {
             "phrases": {
-                "0": "เลือกออกทางทาง <RELATIVE_DIRECTION>.",
-                "1": "เลือกออกทางหมายเลข <NUMBER_SIGN> ทาง <RELATIVE_DIRECTION>.",
-                "2": "เลือกออกทางหมายเลข <BRANCH_SIGN> ทาง <RELATIVE_DIRECTION>.",
-                "3": "เลือกออกทางหมายเลข <NUMBER_SIGN> ทาง <RELATIVE_DIRECTION> ไปที่ <BRANCH_SIGN>.",
-                "4": "เลือกออกทางทาง <RELATIVE_DIRECTION> ไปทาง <TOWARD_SIGN>.",
-                "5": "เลือกออกทางหมายเลข <NUMBER_SIGN> ทาง <RELATIVE_DIRECTION> ไปทาง <TOWARD_SIGN>.",
-                "6": "เลือกออกทางหมายเลข <BRANCH_SIGN> ทาง <RELATIVE_DIRECTION> ไปทาง <TOWARD_SIGN>.",
-                "7": "เลือกออกทางหมายเลข <NUMBER_SIGN> ทาง <RELATIVE_DIRECTION> ไปที่ <BRANCH_SIGN> ไปทาง <TOWARD_SIGN>.",
-                "8": "เลือกออกทางชื่อ <NAME_SIGN> ทาง <RELATIVE_DIRECTION>.",
-                "10": "เลือกออกทางชื่อ <NAME_SIGN> ทาง <RELATIVE_DIRECTION> ไปที่ <BRANCH_SIGN>.",
-                "12": "เลือกออกทางชื่อ <NAME_SIGN> ทาง <RELATIVE_DIRECTION> ไปทาง <TOWARD_SIGN>.",
-                "14": "เลือกออกทางชื่อ <NAME_SIGN> ทาง <RELATIVE_DIRECTION> ไปที่ <BRANCH_SIGN> ไปทาง <TOWARD_SIGN>.",
-                "15": "เลือกออกทาง.",
-                "16": "เลือกออกทางหมายเลข <NUMBER_SIGN>.",
-                "17": "เลือกออกทางหมายเลข <BRANCH_SIGN>.",
-                "18": "เลือกออกทางหมายเลข <NUMBER_SIGN> ไปที่ <BRANCH_SIGN>.",
-                "19": "เลือกออกทางไปทาง <TOWARD_SIGN>.",
-                "20": "เลือกออกทางหมายเลข <NUMBER_SIGN> ไปทาง <TOWARD_SIGN>.",
-                "21": "เลือกออกทางหมายเลข <BRANCH_SIGN> ไปทาง <TOWARD_SIGN>.",
-                "22": "เลือกออกทางหมายเลข <NUMBER_SIGN> ไปที่ <BRANCH_SIGN> ไปทาง <TOWARD_SIGN>.",
-                "23": "เลือกออกทางชื่อ <NAME_SIGN> ทาง <RELATIVE_DIRECTION>.",
-                "25": "เลือกออกทางชื่อ <NAME_SIGN> ทาง <RELATIVE_DIRECTION> ไปที่ <BRANCH_SIGN>.",
-                "27": "เลือกออกทางชื่อ <NAME_SIGN> ทาง <RELATIVE_DIRECTION> ไปทาง <TOWARD_SIGN>.",
-                "29": "เลือกออกทางชื่อ <NAME_SIGN> ทาง <RELATIVE_DIRECTION> ไปทาง <BRANCH_SIGN> ไปทาง <TOWARD_SIGN>."
+                "0": "ใช้ทางออกที่ <RELATIVE_DIRECTION>-",
+                "1": "ใช้ทางออก <NUMBER_SIGN> บน <RELATIVE_DIRECTION>-",
+                "2": "เอา <BRANCH_SIGN> ออกบน <RELATIVE_DIRECTION>-",
+                "3": "ใช้ทางออก <NUMBER_SIGN> บน <RELATIVE_DIRECTION> ไปยัง <BRANCH_SIGN>-",
+                "4": "ใช้ทางออกที่ <RELATIVE_DIRECTION> ไปทาง <TOWARD_SIGN>-",
+                "5": "ใช้ทางออก <NUMBER_SIGN> บน <RELATIVE_DIRECTION> ไปทาง <TOWARD_SIGN>-",
+                "6": "เอา <BRANCH_SIGN> ออกบน <RELATIVE_DIRECTION> ไปทาง <TOWARD_SIGN>-",
+                "7": "ใช้ทางออก <NUMBER_SIGN> บน <RELATIVE_DIRECTION> ไปยัง <BRANCH_SIGN> ไปทาง <TOWARD_SIGN>-",
+                "8": "เอา <NAME_SIGN> ออกบน <RELATIVE_DIRECTION>-",
+                "10": "เอา <NAME_SIGN> ออกบน <RELATIVE_DIRECTION> ไปยัง <BRANCH_SIGN>-",
+                "12": "เอา <NAME_SIGN> ออกบน <RELATIVE_DIRECTION> ไปทาง <TOWARD_SIGN>-",
+                "14": "เอา <NAME_SIGN> ออกบน <RELATIVE_DIRECTION> ไปยัง <BRANCH_SIGN> ไปทาง <TOWARD_SIGN>-",
+                "15": "ใช้ทางออก",
+                "16": "ใช้ทางออก <NUMBER_SIGN>-",
+                "17": "เอา <BRANCH_SIGN> ออก",
+                "18": "ใช้ทางออก <NUMBER_SIGN> ไปยัง <BRANCH_SIGN>-",
+                "19": "ใช้ทางออกไปทาง <TOWARD_SIGN>-",
+                "20": "ใช้ทางออก <NUMBER_SIGN> ไปทาง <TOWARD_SIGN>-",
+                "21": "เอา <BRANCH_SIGN> ออกไปทาง <TOWARD_SIGN>-",
+                "22": "ใช้ทางออก <NUMBER_SIGN> ไปยัง <BRANCH_SIGN> ไปทาง <TOWARD_SIGN>-",
+                "23": "เอา <NAME_SIGN> ออก",
+                "25": "เอา <NAME_SIGN> ออกสู่ <BRANCH_SIGN>-",
+                "27": "เอา <NAME_SIGN> ออกไปทาง <TOWARD_SIGN>-",
+                "29": "เอา <NAME_SIGN> ออกสู่ <BRANCH_SIGN> ไปทาง <TOWARD_SIGN>-"
             },
             "relative_directions": [
-                "left",
-                "right"
+                "ซ้าย",
+                "ขวา"
             ],
             "example_phrases": {
                 "0": [
-                    "เลือกออกทางทางซ้าย.",
-                    "เลือกออกทางทางขวา."
+                    "ใช้ทางออกด้านซ้าย",
+                    "ใช้ทางออกทางด้านขวา"
                 ],
                 "1": [
-                    "เลือกออกทางหมายเลข 67 B-A ทางขวา."
+                    "ใช้ทางออก 67 B-A ทางด้านขวา"
                 ],
                 "2": [
-                    "เลือกออกทาง US 322 ทางตะวันตก ทางขวา."
+                    "ใช้ทางออก US 322 West ทางด้านขวา"
                 ],
                 "3": [
-                    "เลือกออกทางหมายเลข 67 B-A ทางขวา ไปทาง US 322 ทางตะวันตก."
+                    "ใช้ทางออก 67 B-A ทางด้านขวาเข้าสู่ US 322 West"
                 ],
                 "4": [
-                    "เลือกออกทางทางขวา ไปทาง Lewistown."
+                    "ใช้ทางออกทางด้านขวาไปทาง Lewistown"
                 ],
                 "5": [
-                    "เลือกออกทางหมายเลข 67 B-A ทางขวา ไปทาง Lewistown."
+                    "ใช้ทางออก 67 B-A ทางด้านขวาไปทาง Lewistown"
                 ],
                 "6": [
-                    "เลือกออกทาง US 322 ทางตะวันตก ทางขวา ไปทาง Lewistown."
+                    "ใช้ทางออก US 322 West ทางด้านขวาไปยัง Lewistown"
                 ],
                 "7": [
-                    "เลือกออกทางหมายเลข 67 B-A ทางขวา ไปทาง US 322 ทางตะวันตก ไปทาง Lewistown/State College."
+                    "ใช้ทางออก 67 B-A ทางด้านขวาไปยัง US 322 West ไปทาง Lewistown/State College"
                 ],
                 "8": [
-                    "เลือกออกทาง White Marsh Boulevard ทางซ้าย."
+                    "ใช้ทางออก White Marsh Boulevard ทางด้านซ้าย"
                 ],
                 "10": [
-                    "เลือกออกทาง White Marsh Boulevard ทางซ้าย ไปทาง MD 43 ทางตะวันออก."
+                    "ใช้ทางออก White Marsh Boulevard ทางซ้ายเข้าสู่ MD 43 East"
                 ],
                 "12": [
-                    "เลือกออกทาง White Marsh Boulevard ทางซ้าย ไปทาง White Marsh."
+                    "ใช้ทางออก White Marsh Boulevard ทางซ้ายไปทาง White Marsh"
                 ],
                 "14": [
-                    "เลือกออกทาง White Marsh Boulevard ทางซ้าย ไปทาง MD 43 ทางตะวันออก ไปทาง White Marsh."
+                    "ใช้ทางออก White Marsh Boulevard ทางซ้ายเข้าสู่ MD 43 East ไปทาง White Marsh"
                 ],
                 "15": [
-                    "เลือกออกทาง."
+                    "ใช้ทางออก"
                 ],
                 "16": [
-                    "เลือกออกทางหมายเลข 67 B-A."
+                    "ใช้ทางออก 67 B-A"
                 ],
                 "17": [
-                    "เลือกออกทาง US 322 ทางตะวันตก."
+                    "ใช้ทางออก US 322 West"
                 ],
                 "18": [
-                    "เลือกออกทางหมายเลข 67 B-A ไปทาง US 322 ทางตะวันตก."
+                    "ใช้ทางออก 67 B-A ไปยัง US 322 West"
                 ],
                 "19": [
-                    "เลือกออกทางไปทาง Lewistown."
+                    "ใช้ทางออกไปยัง Lewistown"
                 ],
                 "20": [
-                    "เลือกออกทางหมายเลข 67 B-A ไปทาง Lewistown."
+                    "ใช้ทางออก 67 B-A ไปทาง Lewistown"
                 ],
                 "21": [
-                    "เลือกออกทาง US 322 ทางตะวันตก ไปทาง Lewistown."
+                    "ใช้ทางออก US 322 West ไปทาง Lewistown"
                 ],
                 "22": [
-                    "เลือกออกทางหมายเลข 67 B-A ไปทาง US 322 ทางตะวันตก ไปทาง Lewistown/State College."
+                    "ใช้ทางออก 67 B-A ไปยัง US 322 West ไปทาง Lewistown/State College"
                 ],
                 "23": [
-                    "เลือกออกทาง White Marsh Boulevard."
+                    "ใช้ทางออก White Marsh Boulevard"
                 ],
                 "25": [
-                    "เลือกออกทาง White Marsh Boulevard ไปทาง MD 43 ทางตะวันออก."
+                    "ใช้ทางออก White Marsh Boulevard ไปยัง MD 43 East"
                 ],
                 "27": [
-                    "เลือกออกทาง White Marsh Boulevard ไปทาง White Marsh."
+                    "ใช้ทางออก White Marsh Boulevard ไปทาง White Marsh"
                 ],
                 "29": [
-                    "เลือกออกทาง White Marsh Boulevard ไปทาง MD 43 ทางตะวันออก ไปทาง White Marsh."
+                    "ใช้ทางออก White Marsh Boulevard ไปยัง MD 43 East ไปทาง White Marsh"
                 ]
             }
         },
         "exit_roundabout": {
             "phrases": {
-                "0": "ออกจากวงรี.",
-                "1": "ออกจากวงรีไปที่ <STREET_NAMES>.",
-                "2": "ออกจากวงรีไปที่ <BEGIN_STREET_NAMES>. ดำเนินต่อที่ <STREET_NAMES>.",
-                "3": "ออกจากวงรีไปทาง <TOWARD_SIGN>."
+                "0": "ออกจากวงเวียน.",
+                "1": "ออกจากวงเวียนเข้าสู่ <STREET_NAMES>-",
+                "2": "ออกจากวงเวียนเข้าสู่ <BEGIN_STREET_NAMES>-  <STREET_NAMES>-",
+                "3": "ออกจากวงเวียนไปทาง <TOWARD_SIGN>-"
             },
             "empty_street_name_labels": [
                 "ทางเดิน",
-                "ทางขี่จักรยาน",
-                "เส้นทางปั่นจักรยานเสือภูเขา",
-                "ทางข้าม"
+                "ทางจักรยาน",
+                "เส้นทางจักรยานเสือภูเขา",
+                "ทางม้าลาย",
+                "บันได",
+                "สะพาน",
+                "อุโมงค์"
             ],
             "example_phrases": {
                 "0": [
-                    "ออกจากวงรี."
+                    "ออกจากวงเวียน."
                 ],
                 "1": [
-                    "ออกจากวงรีไปที่ Philadelphia Road/MD 7."
+                    "ออกจากวงเวียนเข้าสู่ Philadelphia Road/MD 7"
                 ],
                 "2": [
-                    "ออกจากวงรีไปที่ Catoctin Mountain Highway/US 15. ดำเนินต่อที่ US 15."
+                    "ออกจากวงเวียนไปยัง Catoctin Mountain Highway/US 15 ต่อไปบน US 15"
                 ],
                 "3": [
-                    "ออกจากวงรีไปทาง Baltimore."
+                    "ออกจากวงเวียนไปทางบัลติมอร์"
                 ]
             }
         },
         "exit_roundabout_verbal": {
             "phrases": {
-                "0": "ออกจากวงรี.",
-                "1": "ออกจากวงรีไปที่ <STREET_NAMES>.",
-                "2": "ออกจากวงรีไปที่ <BEGIN_STREET_NAMES>.",
-                "3": "ออกจากวงรีไปทาง <TOWARD_SIGN>."
+                "0": "ออกจากวงเวียน.",
+                "1": "ออกจากวงเวียนเข้าสู่ <STREET_NAMES>-",
+                "2": "ออกจากวงเวียนเข้าสู่ <BEGIN_STREET_NAMES>-",
+                "3": "ออกจากวงเวียนไปทาง <TOWARD_SIGN>-"
             },
             "empty_street_name_labels": [
                 "ทางเดิน",
-                "ทางขี่จักรยาน",
-                "เส้นทางปั่นจักรยานเสือภูเขา",
-                "ทางข้าม"
+                "ทางจักรยาน",
+                "เส้นทางจักรยานเสือภูเขา",
+                "ทางม้าลาย",
+                "บันได",
+                "สะพาน",
+                "อุโมงค์"
             ],
             "example_phrases": {
                 "0": [
-                    "ออกจากวงรี."
+                    "ออกจากวงเวียน."
                 ],
                 "1": [
-                    "ออกจากวงรีไปที่ Philadelphia Road, Maryland 7."
+                    "ออกจากวงเวียนเข้าสู่ถนนฟิลาเดลเฟีย แมริแลนด์ 7"
                 ],
                 "2": [
-                    "ออกจากวงรีไปที่ Catoctin Mountain Highway, U.S. 15."
+                    "ออกจากวงเวียนไปยัง Catoctin Mountain Highway, U.S. 15"
                 ],
                 "3": [
-                    "ออกจากวงรีไปทาง Baltimore."
+                    "ออกจากวงเวียนไปทางบัลติมอร์"
                 ]
             }
         },
         "exit_verbal": {
             "phrases": {
-                "0": "เลือกออกทางทาง <RELATIVE_DIRECTION>.",
-                "1": "เลือกออกทางหมายเลข <NUMBER_SIGN> ทาง <RELATIVE_DIRECTION>.",
-                "2": "เลือกออกทาง <BRANCH_SIGN> ทาง <RELATIVE_DIRECTION>.",
-                "3": "เลือกออกทางหมายเลข <NUMBER_SIGN> ทาง <RELATIVE_DIRECTION> ไปทาง <BRANCH_SIGN>.",
-                "4": "เลือกออกทางทาง <RELATIVE_DIRECTION> ไปทาง <TOWARD_SIGN>.",
-                "5": "เลือกออกทางหมายเลข <NUMBER_SIGN> ทาง <RELATIVE_DIRECTION> ไปทาง <TOWARD_SIGN>.",
-                "6": "เลือกออกทาง <BRANCH_SIGN> ทาง <RELATIVE_DIRECTION> ไปทาง <TOWARD_SIGN>.",
-                "7": "เลือกออกทางหมายเลข <NUMBER_SIGN> ทาง <RELATIVE_DIRECTION> ไปทาง <BRANCH_SIGN> ไปทาง <TOWARD_SIGN>.",
-                "8": "เลือกออกทาง <NAME_SIGN> ทาง <RELATIVE_DIRECTION>.",
-                "10": "เลือกออกทาง <NAME_SIGN> ทาง <RELATIVE_DIRECTION> ไปทาง <BRANCH_SIGN>.",
-                "12": "เลือกออกทาง <NAME_SIGN> ทาง <RELATIVE_DIRECTION> ไปทาง <TOWARD_SIGN>.",
-                "14": "เลือกออกทาง <NAME_SIGN> ทาง <RELATIVE_DIRECTION> ไปทาง <BRANCH_SIGN> ไปทาง <TOWARD_SIGN>.",
-                "15": "เลือกออกทาง.",
-                "16": "เลือกออกทางหมายเลข <NUMBER_SIGN>.",
-                "17": "เลือกออกทาง <BRANCH_SIGN>.",
-                "18": "เลือกออกทางหมายเลข <NUMBER_SIGN> ไปที่ <BRANCH_SIGN>.",
-                "19": "เลือกออกทางไปทาง <TOWARD_SIGN>.",
-                "20": "เลือกออกทางหมายเลข <NUMBER_SIGN> ไปทาง <TOWARD_SIGN>.",
-                "21": "เลือกออกทาง <BRANCH_SIGN> ไปทาง <TOWARD_SIGN>.",
-                "22": "เลือกออกทางหมายเลข <NUMBER_SIGN> ไปที่ <BRANCH_SIGN> ไปทาง <TOWARD_SIGN>.",
-                "23": "เลือกออกทาง <NAME_SIGN>.",
-                "25": "เลือกออกทาง <NAME_SIGN> ไปที่ <BRANCH_SIGN>.",
-                "27": "เลือกออกทาง <NAME_SIGN> ไปทาง <TOWARD_SIGN>.",
-                "29": "เลือกออกทาง <NAME_SIGN> ไปที่ <BRANCH_SIGN> ไปทาง <TOWARD_SIGN>."
+                "0": "ใช้ทางออกที่ <RELATIVE_DIRECTION>-",
+                "1": "ใช้ทางออก <NUMBER_SIGN> บน <RELATIVE_DIRECTION>-",
+                "2": "เอา <BRANCH_SIGN> ออกบน <RELATIVE_DIRECTION>-",
+                "3": "ใช้ทางออก <NUMBER_SIGN> บน <RELATIVE_DIRECTION> ไปยัง <BRANCH_SIGN>-",
+                "4": "ใช้ทางออกที่ <RELATIVE_DIRECTION> ไปทาง <TOWARD_SIGN>-",
+                "5": "ใช้ทางออก <NUMBER_SIGN> บน <RELATIVE_DIRECTION> ไปทาง <TOWARD_SIGN>-",
+                "6": "เอา <BRANCH_SIGN> ออกบน <RELATIVE_DIRECTION> ไปทาง <TOWARD_SIGN>-",
+                "7": "ใช้ทางออก <NUMBER_SIGN> บน <RELATIVE_DIRECTION> ไปยัง <BRANCH_SIGN> ไปทาง <TOWARD_SIGN>-",
+                "8": "เอา <NAME_SIGN> ออกบน <RELATIVE_DIRECTION>-",
+                "10": "เอา <NAME_SIGN> ออกบน <RELATIVE_DIRECTION> ไปยัง <BRANCH_SIGN>-",
+                "12": "เอา <NAME_SIGN> ออกบน <RELATIVE_DIRECTION> ไปทาง <TOWARD_SIGN>-",
+                "14": "เอา <NAME_SIGN> ออกบน <RELATIVE_DIRECTION> ไปยัง <BRANCH_SIGN> ไปทาง <TOWARD_SIGN>-",
+                "15": "ใช้ทางออก",
+                "16": "ใช้ทางออก <NUMBER_SIGN>-",
+                "17": "เอา <BRANCH_SIGN> ออก",
+                "18": "ใช้ทางออก <NUMBER_SIGN> ไปยัง <BRANCH_SIGN>-",
+                "19": "ใช้ทางออกไปทาง <TOWARD_SIGN>-",
+                "20": "ใช้ทางออก <NUMBER_SIGN> ไปทาง <TOWARD_SIGN>-",
+                "21": "เอา <BRANCH_SIGN> ออกไปทาง <TOWARD_SIGN>-",
+                "22": "ใช้ทางออก <NUMBER_SIGN> ไปยัง <BRANCH_SIGN> ไปทาง <TOWARD_SIGN>-",
+                "23": "เอา <NAME_SIGN> ออก",
+                "25": "เอา <NAME_SIGN> ออกสู่ <BRANCH_SIGN>-",
+                "27": "เอา <NAME_SIGN> ออกไปทาง <TOWARD_SIGN>-",
+                "29": "เอา <NAME_SIGN> ออกสู่ <BRANCH_SIGN> ไปทาง <TOWARD_SIGN>-"
             },
             "relative_directions": [
                 "ซ้าย",
@@ -803,66 +836,109 @@
             ],
             "example_phrases": {
                 "0": [
-                    "เลือกออกทางทางด้านซ้าย.",
-                    "เลือกออกทางทางด้านขวา."
+                    "ใช้ทางออกด้านซ้าย",
+                    "ใช้ทางออกทางด้านขวา"
                 ],
                 "1": [
-                    "เลือกออกทางหมายเลข 67 B-A ทางด้านขวา."
+                    "ใช้ทางออก 67 B-A ทางด้านขวา"
                 ],
                 "2": [
-                    "เลือกออกทาง U.S. 3 22 ทางตะวันตก ทางด้านขวา."
+                    "ใช้ทางออก U.S. 3 22 West ทางด้านขวา"
                 ],
                 "3": [
-                    "เลือกออกทางหมายเลข 67 B-A ทางด้านขวา ไปทาง U.S. 3 22 ทางตะวันตก."
+                    "ใช้ทางออก 67 B-A ทางด้านขวาเข้าสู่ U.S. 3 22 West"
                 ],
                 "4": [
-                    "เลือกออกทางไปทางด้านขวา ไปทาง Lewistown."
+                    "ใช้ทางออกทางด้านขวาไปทาง Lewistown"
                 ],
-                "5": "เลือกออกทางหมายเลข 67 B-A ทางด้านขวา ไปทาง Lewistown.",
-                "6": "เลือกออกทาง U.S. 3 22 ทางตะวันตก ทางด้านขวา ไปทาง Lewistown.",
-                "7": "เลือกออกทางหมายเลข 67 B-A ทางด้านขวา ไปทาง U.S. 3 22 ทางตะวันตก ไปทาง Lewistown, State College.",
-                "8": "เลือกออกทาง White Marsh Boulevard ทางด้านซ้าย.",
-                "10": "เลือกออกทาง White Marsh Boulevard ทางด้านซ้าย ไปทาง Maryland 43 East.",
-                "12": "เลือกออกทาง White Marsh Boulevard ทางด้านซ้าย ไปทาง White Marsh.",
-                "14": "เลือกออกทาง White Marsh Boulevard ทางด้านซ้าย ไปทาง Maryland 43 East ไปทาง White Marsh.",
-                "15": "เลือกออกทาง.",
-                "16": "เลือกออกทางหมายเลข 67 B-A.",
-                "17": "เลือกออกทาง US 322 West.",
-                "18": "เลือกออกทางหมายเลข 67 B-A ไปทาง US 322 West.",
-                "19": "เลือกออกทางไปทาง Lewistown.",
-                "20": "เลือกออกทางหมายเลข 67 B-A ไปทาง Lewistown.",
-                "21": "เลือกออกทาง US 322 West ไปทาง Lewistown.",
-                "22": "เลือกออกทางหมายเลข 67 B-A ไปทาง US 322 West ไปทาง Lewistown, State College.",
-                "23": "เลือกออกทาง White Marsh Boulevard.",
-                "25": "เลือกออกทาง White Marsh Boulevard ไปทาง MD 43 East.",
-                "27": "เลือกออกทาง White Marsh Boulevard ไปทาง White Marsh.",
-                "29": "เลือกออกทาง White Marsh Boulevard ไปทาง MD 43 East ไปทาง White Marsh."
+                "5": [
+                    "ใช้ทางออก 67 B-A ทางด้านขวาไปทาง Lewistown"
+                ],
+                "6": [
+                    "ใช้ทางออก U.S. 3 22 West ทางด้านขวาไปยัง Lewistown"
+                ],
+                "7": [
+                    "ใช้ทางออก 67 B-A ทางด้านขวาเข้าสู่ U.S. 3 22 West มุ่งหน้าไปยัง Lewistown, State College"
+                ],
+                "8": [
+                    "ใช้ทางออก White Marsh Boulevard ทางด้านซ้าย"
+                ],
+                "10": [
+                    "ใช้ทางออก White Marsh Boulevard ทางซ้ายเข้าสู่ Maryland 43 East"
+                ],
+                "12": [
+                    "ใช้ทางออก White Marsh Boulevard ทางซ้ายไปทาง White Marsh"
+                ],
+                "14": [
+                    "ใช้ทางออก White Marsh Boulevard ทางซ้ายเข้าสู่ Maryland 43 East ไปทาง White Marsh"
+                ],
+                "15": [
+                    "ใช้ทางออก"
+                ],
+                "16": [
+                    "ใช้ทางออก 67 B-A"
+                ],
+                "17": [
+                    "ใช้ทางออก US 322 West"
+                ],
+                "18": [
+                    "ใช้ทางออก 67 B-A ไปยัง US 322 West"
+                ],
+                "19": [
+                    "ใช้ทางออกไปยัง Lewistown"
+                ],
+                "20": [
+                    "ใช้ทางออก 67 B-A ไปทาง Lewistown"
+                ],
+                "21": [
+                    "ใช้ทางออก US 322 West ไปทาง Lewistown"
+                ],
+                "22": [
+                    "ใช้ทางออก 67 B-A ไปยัง US 322 West ไปทาง Lewistown/State College"
+                ],
+                "23": [
+                    "ใช้ทางออก White Marsh Boulevard"
+                ],
+                "25": [
+                    "ใช้ทางออก White Marsh Boulevard ไปยัง MD 43 East"
+                ],
+                "27": [
+                    "ใช้ทางออก White Marsh Boulevard ไปทาง White Marsh"
+                ],
+                "29": [
+                    "ใช้ทางออก White Marsh Boulevard ไปยัง MD 43 East ไปทาง White Marsh"
+                ]
             }
         },
         "exit_visual": {
             "phrases": {
-                "0": "ออกจาก <EXIT_NUMBERS>"
+                "0": "ออก <EXIT_NUMBERS>"
             },
             "example_phrases": {
-                "0": "ออกจาก 1A"
+                "0": [
+                    "ทางออก 1A"
+                ]
             }
         },
         "keep": {
             "phrases": {
-                "0": "ให้รักษาทิศทาง <RELATIVE_DIRECTION> ที่คันคาน.",
-                "1": "ให้รักษาทิศทาง <RELATIVE_DIRECTION> เพื่อเข้าออกทางหมายเลข <NUMBER_SIGN>.",
-                "2": "ให้รักษาทิศทาง <RELATIVE_DIRECTION> เพื่อเข้า <STREET_NAMES>.",
-                "3": "ให้รักษาทิศทาง <RELATIVE_DIRECTION> เพื่อเข้าออกทางหมายเลข <NUMBER_SIGN> ไปยัง <STREET_NAMES>.",
-                "4": "ให้รักษาทิศทาง <RELATIVE_DIRECTION> เพื่อเข้าไปยัง <TOWARD_SIGN>.",
-                "5": "ให้รักษาทิศทาง <RELATIVE_DIRECTION> เพื่อเข้าออกทางหมายเลข <NUMBER_SIGN> ไปยัง <TOWARD_SIGN>.",
-                "6": "ให้รักษาทิศทาง <RELATIVE_DIRECTION> เพื่อเข้า <STREET_NAMES> ไปยัง <TOWARD_SIGN>.",
-                "7": "ให้รักษาทิศทาง <RELATIVE_DIRECTION> เพื่อเข้าออกทางหมายเลข <NUMBER_SIGN> ไปยัง <STREET_NAMES> ไปยัง <TOWARD_SIGN>."
+                "0": "เก็บ <RELATIVE_DIRECTION> ที่ทางแยก",
+                "1": "เก็บ <RELATIVE_DIRECTION> เพื่อใช้ทางออก <NUMBER_SIGN>-",
+                "2": "เก็บ <RELATIVE_DIRECTION> ที่จะใช้ <STREET_NAMES>-",
+                "3": "เก็บ <RELATIVE_DIRECTION> เพื่อใช้ทางออก <NUMBER_SIGN> ไปยัง <STREET_NAMES>-",
+                "4": "เก็บ <RELATIVE_DIRECTION> ไปทาง <TOWARD_SIGN>-",
+                "5": "เก็บ <RELATIVE_DIRECTION> เพื่อใช้ทางออก <NUMBER_SIGN> ไปทาง <TOWARD_SIGN>-",
+                "6": "เก็บ <RELATIVE_DIRECTION> ที่จะใช้ <STREET_NAMES> ไปทาง <TOWARD_SIGN>-",
+                "7": "เก็บ <RELATIVE_DIRECTION> เพื่อใช้ทางออก <NUMBER_SIGN> ไปยัง <STREET_NAMES> ไปทาง <TOWARD_SIGN>-"
             },
             "empty_street_name_labels": [
-                "ทางเท้า",
-                "เส้นทางจักรยาน",
-                "เส้นทางจักรยานเฟซต",
-                "ทางข้ามความเสี่ยง"
+                "ทางเดิน",
+                "ทางจักรยาน",
+                "เส้นทางจักรยานเสือภูเขา",
+                "ทางม้าลาย",
+                "บันได",
+                "สะพาน",
+                "อุโมงค์"
             ],
             "relative_directions": [
                 "ซ้าย",
@@ -871,45 +947,48 @@
             ],
             "example_phrases": {
                 "0": [
-                    "ให้รักษาทิศทางซ้ายที่คันคาน.",
-                    "ให้รักษาทิศทางตรงที่คันคาน.",
-                    "ให้รักษาทิศทางขวาที่คันคาน."
+                    "ให้ชิดซ้ายตรงทางแยก",
+                    "ให้ตรงไปที่ทางแยก",
+                    "ชิดขวาตรงทางแยก"
                 ],
                 "1": [
-                    "ให้รักษาทิศทางขวาเพื่อเข้าออกทางหมายเลข 62."
+                    "ชิดขวาเพื่อใช้ทางออก 62"
                 ],
                 "2": [
-                    "ให้รักษาทิศทางขวาเพื่อเข้า I 895 South."
+                    "ชิดขวาเพื่อใช้เส้นทาง I 895 South"
                 ],
                 "3": [
-                    "ให้รักษาทิศทางขวาเพื่อเข้าออกทางหมายเลข 62 ไปยัง I 895 South."
+                    "ชิดขวาเพื่อใช้ทางออก 62 เข้าสู่ I 895 South"
                 ],
                 "4": [
-                    "ให้รักษาทิศทางขวาเพื่อเข้า Annapolis."
+                    "ชิดขวาไปทางแอนนาโพลิส"
                 ],
                 "5": [
-                    "ให้รักษาทิศทางขวาเพื่อเข้าออกทางหมายเลข 62 ไปยัง Annapolis."
+                    "ชิดขวาเพื่อใช้ทางออก 62 ไปทางแอนนาโพลิส"
                 ],
                 "6": [
-                    "ให้รักษาทิศทางขวาเพื่อเข้า I 895 South ไปยัง Annapolis."
+                    "ชิดขวาเพื่อใช้ I 895 South มุ่งหน้าสู่ Annapolis"
                 ],
                 "7": [
-                    "ให้รักษาทิศทางขวาเพื่อเข้าออกทางหมายเลข 62 ไปยัง I 895 South ไปยัง Annapolis."
+                    "ชิดขวาเพื่อใช้ทางออก 62 ไปยัง I 895 South ไปยัง Annapolis"
                 ]
             }
         },
         "keep_to_stay_on": {
             "phrases": {
-                "0": "[\"ให้รักษาทิศทาง <RELATIVE_DIRECTION> เพื่ออยู่ใน <STREET_NAMES>.\"",
-                "1": "ให้รักษาทิศทาง <RELATIVE_DIRECTION> เพื่อเข้าออกทางหมายเลข <NUMBER_SIGN> เพื่ออยู่ใน <STREET_NAMES>.",
-                "2": "ให้รักษาทิศทาง <RELATIVE_DIRECTION> เพื่ออยู่ใน <STREET_NAMES> ไปยัง <TOWARD_SIGN>.",
-                "3": "ให้รักษาทิศทาง <RELATIVE_DIRECTION> เพื่อเข้าออกทางหมายเลข <NUMBER_SIGN> เพื่ออยู่ใน <STREET_NAMES> ไปยัง <TOWARD_SIGN>."
+                "0": "เก็บ <RELATIVE_DIRECTION> ที่จะอยู่ต่อ <STREET_NAMES>-",
+                "1": "เก็บ <RELATIVE_DIRECTION> เพื่อใช้ทางออก <NUMBER_SIGN> ที่จะอยู่ต่อ <STREET_NAMES>-",
+                "2": "เก็บ <RELATIVE_DIRECTION> ที่จะอยู่ต่อ <STREET_NAMES> ไปทาง <TOWARD_SIGN>-",
+                "3": "เก็บ <RELATIVE_DIRECTION> เพื่อใช้ทางออก <NUMBER_SIGN> ที่จะอยู่ต่อ <STREET_NAMES> ไปทาง <TOWARD_SIGN>-"
             },
             "empty_street_name_labels": [
-                "ทางเท้า",
-                "เส้นทางจักรยาน",
-                "เส้นทางจักรยานเฟซต",
-                "ทางข้ามความเสี่ยง"
+                "ทางเดิน",
+                "ทางจักรยาน",
+                "เส้นทางจักรยานเสือภูเขา",
+                "ทางม้าลาย",
+                "บันได",
+                "สะพาน",
+                "อุโมงค์"
             ],
             "relative_directions": [
                 "ซ้าย",
@@ -918,33 +997,36 @@
             ],
             "example_phrases": {
                 "0": [
-                    "ให้รักษาทิศทางซ้ายเพื่ออยู่ใน I 95 South.",
-                    "ให้รักษาทิศทางตรงเพื่ออยู่ใน I 95 South.",
-                    "ให้รักษาทิศทางขวาเพื่ออยู่ใน I 95 South."
+                    "ชิดซ้ายเพื่ออยู่บน I 95 South",
+                    "ตรงต่อไปเพื่ออยู่บน I 95 South",
+                    "ชิดขวาเพื่ออยู่บน I 95 South"
                 ],
                 "1": [
-                    "ให้รักษาทิศทางซ้ายเพื่อเข้าออกทางหมายเลข 62 เพื่ออยู่ใน I 95 South."
+                    "ชิดซ้ายเพื่อใช้ทางออก 62 เพื่ออยู่บน I 95 South"
                 ],
                 "2": [
-                    "ให้รักษาทิศทางซ้ายเพื่ออยู่ใน I 95 South ไปยัง Baltimore."
+                    "ชิดซ้ายเพื่ออยู่บน I 95 South มุ่งหน้าสู่บัลติมอร์"
                 ],
                 "3": [
-                    "ให้รักษาทิศทางซ้ายเพื่อเข้าออกทางหมายเลข 62 เพื่ออยู่ใน I 95 South ไปยัง Baltimore."
+                    "ชิดซ้ายเพื่อใช้ทางออก 62 เพื่ออยู่บน I 95 South มุ่งหน้าสู่บัลติมอร์"
                 ]
             }
         },
         "keep_to_stay_on_verbal": {
             "phrases": {
-                "0": "ให้รักษาทิศทาง <RELATIVE_DIRECTION> เพื่ออยู่ใน <STREET_NAMES>.",
-                "1": "ให้รักษาทิศทาง <RELATIVE_DIRECTION> เพื่อเข้าออกทางหมายเลข <NUMBER_SIGN> เพื่ออยู่ใน <STREET_NAMES>.",
-                "2": "ให้รักษาทิศทาง <RELATIVE_DIRECTION> เพื่ออยู่ใน <STREET_NAMES> ไปยัง <TOWARD_SIGN>.",
-                "3": "ให้รักษาทิศทาง <RELATIVE_DIRECTION> เพื่อเข้าออกทางหมายเลข <NUMBER_SIGN> เพื่ออยู่ใน <STREET_NAMES> ไปยัง <TOWARD_SIGN>."
+                "0": "เก็บ <RELATIVE_DIRECTION> ที่จะอยู่ต่อ <STREET_NAMES>-",
+                "1": "เก็บ <RELATIVE_DIRECTION> เพื่อใช้ทางออก <NUMBER_SIGN> ที่จะอยู่ต่อ <STREET_NAMES>-",
+                "2": "เก็บ <RELATIVE_DIRECTION> ที่จะอยู่ต่อ <STREET_NAMES> ไปทาง <TOWARD_SIGN>-",
+                "3": "เก็บ <RELATIVE_DIRECTION> เพื่อใช้ทางออก <NUMBER_SIGN> ที่จะอยู่ต่อ <STREET_NAMES> ไปทาง <TOWARD_SIGN>-"
             },
             "empty_street_name_labels": [
-                "ทางเท้า",
-                "เส้นทางจักรยาน",
-                "เส้นทางจักรยานเฟซต",
-                "ทางข้ามความเสี่ยง"
+                "ทางเดิน",
+                "ทางจักรยาน",
+                "เส้นทางจักรยานเสือภูเขา",
+                "ทางม้าลาย",
+                "บันได",
+                "สะพาน",
+                "อุโมงค์"
             ],
             "relative_directions": [
                 "ซ้าย",
@@ -953,37 +1035,40 @@
             ],
             "example_phrases": {
                 "0": [
-                    "ให้รักษาทิศทางซ้ายเพื่ออยู่ใน Interstate 95 South.",
-                    "ให้รักษาทิศทางตรงเพื่ออยู่ใน Interstate 95 South.",
-                    "ให้รักษาทิศทางขวาเพื่ออยู่ใน Interstate 95 South."
+                    "ชิดซ้ายเพื่ออยู่บนทางหลวงอินเตอร์สเตต 95 ใต้",
+                    "ตรงไปเพื่ออยู่บนทางหลวง Interstate 95 South",
+                    "ชิดขวาเพื่ออยู่บนทางหลวงอินเตอร์สเตต 95 ใต้"
                 ],
                 "1": [
-                    "ให้รักษาทิศทางซ้ายเพื่อเข้าออกทางหมายเลข 62 เพื่ออยู่ใน Interstate 95 South."
+                    "ชิดซ้ายเพื่อใช้ทางออก 62 เพื่ออยู่บนทางหลวงระหว่างรัฐ 95 ใต้"
                 ],
                 "2": [
-                    "ให้รักษาทิศทางซ้ายเพื่ออยู่ใน I 95 South ไปยัง Baltimore."
+                    "ชิดซ้ายเพื่ออยู่บน I 95 South มุ่งหน้าสู่บัลติมอร์"
                 ],
                 "3": [
-                    "ให้รักษาทิศทางซ้ายเพื่อเข้าออกทางหมายเลข 62 เพื่ออยู่ใน I 95 South ไปยัง Baltimore."
+                    "ชิดซ้ายเพื่อใช้ทางออก 62 เพื่ออยู่บนทางหลวงระหว่างรัฐ 95 ใต้ มุ่งหน้าสู่บัลติมอร์"
                 ]
             }
         },
         "keep_verbal": {
             "phrases": {
-                "0": "ให้รักษาทิศทาง <RELATIVE_DIRECTION> ที่คันคาน.",
-                "1": "ให้รักษาทิศทาง <RELATIVE_DIRECTION> เพื่อเข้าออกทางหมายเลข <NUMBER_SIGN>.",
-                "2": "ให้รักษาทิศทาง <RELATIVE_DIRECTION> เพื่อเข้า <STREET_NAMES>.",
-                "3": "ให้รักษาทิศทาง <RELATIVE_DIRECTION> เพื่อเข้าออกทางหมายเลข <NUMBER_SIGN> ไปยัง <STREET_NAMES>.",
-                "4": "ให้รักษาทิศทาง <RELATIVE_DIRECTION> เพื่อเข้าไปยัง <TOWARD_SIGN>.",
-                "5": "ให้รักษาทิศทาง <RELATIVE_DIRECTION> เพื่อเข้าออกทางหมายเลข <NUMBER_SIGN> เพื่อเข้าไปยัง <TOWARD_SIGN>.",
-                "6": "ให้รักษาทิศทาง <RELATIVE_DIRECTION> เพื่อเข้า <STREET_NAMES> ไปยัง <TOWARD_SIGN>.",
-                "7": "ให้รักษาทิศทาง <RELATIVE_DIRECTION> เพื่อเข้าออกทางหมายเลข <NUMBER_SIGN> เพื่อเข้า <STREET_NAMES> ไปยัง <TOWARD_SIGN>."
+                "0": "เก็บ <RELATIVE_DIRECTION> ที่ทางแยก",
+                "1": "เก็บ <RELATIVE_DIRECTION> เพื่อใช้ทางออก <NUMBER_SIGN>-",
+                "2": "เก็บ <RELATIVE_DIRECTION> ที่จะใช้ <STREET_NAMES>-",
+                "3": "เก็บ <RELATIVE_DIRECTION> เพื่อใช้ทางออก <NUMBER_SIGN> ไปยัง <STREET_NAMES>-",
+                "4": "เก็บ <RELATIVE_DIRECTION> ไปทาง <TOWARD_SIGN>-",
+                "5": "เก็บ <RELATIVE_DIRECTION> เพื่อใช้ทางออก <NUMBER_SIGN> ไปทาง <TOWARD_SIGN>-",
+                "6": "เก็บ <RELATIVE_DIRECTION> ที่จะใช้ <STREET_NAMES> ไปทาง <TOWARD_SIGN>-",
+                "7": "เก็บ <RELATIVE_DIRECTION> เพื่อใช้ทางออก <NUMBER_SIGN> ไปยัง <STREET_NAMES> ไปทาง <TOWARD_SIGN>-"
             },
             "empty_street_name_labels": [
-                "ทางเท้า",
-                "เส้นทางจักรยาน",
-                "เส้นทางจักรยานเฟซต",
-                "ทางข้ามความเสี่ยง"
+                "ทางเดิน",
+                "ทางจักรยาน",
+                "เส้นทางจักรยานเสือภูเขา",
+                "ทางม้าลาย",
+                "บันได",
+                "สะพาน",
+                "อุโมงค์"
             ],
             "relative_directions": [
                 "ซ้าย",
@@ -992,138 +1077,147 @@
             ],
             "example_phrases": {
                 "0": [
-                    "ให้รักษาทิศทางซ้ายที่คันคาน.",
-                    "ให้รักษาทิศทางตรงที่คันคาน.",
-                    "ให้รักษาทิศทางขวาที่คันคาน."
+                    "ให้ชิดซ้ายตรงทางแยก",
+                    "ให้ตรงไปที่ทางแยก",
+                    "ชิดขวาตรงทางแยก"
                 ],
                 "1": [
-                    "ให้รักษาทิศทางขวาเพื่อออกทางหมายเลข 62."
+                    "ชิดขวาเพื่อใช้ทางออก 62"
                 ],
                 "2": [
-                    "ให้รักษาทิศทางขวาเพื่อเข้า Interstate 8 95 South."
+                    "ชิดขวาเพื่อใช้ทางหลวงระหว่างรัฐ 8 95 ใต้"
                 ],
                 "3": [
-                    "ให้รักษาทิศทางขวาเพื่อเข้าออกทางหมายเลข 62 เพื่อเข้า Interstate 8 95 South."
+                    "ชิดขวาเพื่อใช้ทางออก 62 เข้าสู่ รัฐ 8 95 ใต้"
                 ],
                 "4": [
-                    "ให้รักษาทิศทางขวาเพื่อเข้าสู่ Annapolis."
+                    "ชิดขวาไปทางแอนนาโพลิส"
                 ],
                 "5": [
-                    "รวมกันเข้าร่วมกันเพื่อทางออกทางหมายเลข 62 ไปทาง Annapolis."
+                    "ชิดขวาเพื่อใช้ทางออก 62 ไปทางแอนนาโพลิส"
                 ],
                 "6": [
-                    "รวมกันเข้าร่วมกันเพื่อเข้าสู่ Interstate 8 95 South ไปทาง Annapolis."
+                    "ชิดขวาเพื่อใช้ทางหลวงระหว่างรัฐ 8 95 ใต้ ไปทางแอนนาโพลิส"
                 ],
                 "7": [
-                    "รวมกันเข้าร่วมกันเพื่อทางออกทางหมายเลข 62 ไปทาง Interstate 8 95 South ไปทาง Annapolis."
+                    "ชิดขวาเพื่อใช้ทางออก 62 เข้าสู่รัฐ 8 95 ใต้ มุ่งหน้าสู่แอนนาโพลิส"
                 ]
             }
         },
         "merge": {
             "phrases": {
-                "0": "รวมกัน.",
-                "1": "รวมกันทาง <RELATIVE_DIRECTION>.",
-                "2": "รวมกันเข้าร่วมกันไปยัง <STREET_NAMES>.",
-                "3": "รวมกัน <RELATIVE_DIRECTION> ไปยัง <STREET_NAMES>.",
-                "4": "รวมกันไปทาง <TOWARD_SIGN>.",
-                "5": "รวมกัน <RELATIVE_DIRECTION> ไปทาง <TOWARD_SIGN>."
+                "0": "ผสาน.",
+                "1": "ผสาน <RELATIVE_DIRECTION>-",
+                "2": "ผสานเข้า <STREET_NAMES>-",
+                "3": "ผสาน <RELATIVE_DIRECTION> ไปยัง <STREET_NAMES>-",
+                "4": "ผสานเข้าหา <TOWARD_SIGN>-",
+                "5": "ผสาน <RELATIVE_DIRECTION> ไปทาง <TOWARD_SIGN>-"
             },
             "relative_directions": [
                 "ซ้าย",
                 "ขวา"
             ],
             "empty_street_name_labels": [
-                "ทางเท้า",
-                "เส้นทางจักรยาน",
-                "เส้นทางจักรยานเฟซต",
-                "ทางข้ามความเสี่ยง"
+                "ทางเดิน",
+                "ทางจักรยาน",
+                "เส้นทางจักรยานเสือภูเขา",
+                "ทางม้าลาย",
+                "บันได",
+                "สะพาน",
+                "อุโมงค์"
             ],
             "example_phrases": {
                 "0": [
-                    "รวมกัน."
+                    "ผสาน."
                 ],
                 "1": [
-                    "รวมกันทางซ้าย."
+                    "ผสานไปทางซ้าย."
                 ],
                 "2": [
-                    "รวมกันเข้าร่วมกันไปยัง I 76 West/Pennsylvania Turnpike."
+                    "ตัดเข้าสู่ I 76 West/Pennsylvania Turnpike"
                 ],
                 "3": [
-                    "รวมกันทางขวาไปยัง I 83 South."
+                    "ผสานเข้ากับ I 83 South"
                 ],
                 "4": [
-                    "รวมกันไปทาง Baltimore."
+                    "ผสานไปทางบัลติมอร์"
                 ],
                 "5": [
-                    "รวมกันทางขวาไปทาง Baltimore."
+                    "ผสานไปทางบัลติมอร์"
                 ]
             }
         },
         "merge_verbal": {
             "phrases": {
-                "0": "รวมกัน.",
-                "1": "รวมกัน <RELATIVE_DIRECTION>.",
-                "2": "รวมกันไปยัง <STREET_NAMES>.",
-                "3": "รวมกัน <RELATIVE_DIRECTION> ไปยัง <STREET_NAMES>.",
-                "4": "รวมกันไปทาง <TOWARD_SIGN>.",
-                "5": "รวมกัน <RELATIVE_DIRECTION> ไปทาง <TOWARD_SIGN>."
+                "0": "ผสาน.",
+                "1": "ผสาน <RELATIVE_DIRECTION>-",
+                "2": "ผสานเข้า <STREET_NAMES>-",
+                "3": "ผสาน <RELATIVE_DIRECTION> ไปยัง <STREET_NAMES>-",
+                "4": "ผสานเข้าหา <TOWARD_SIGN>-",
+                "5": "ผสาน <RELATIVE_DIRECTION> ไปทาง <TOWARD_SIGN>-"
             },
             "relative_directions": [
                 "ซ้าย",
                 "ขวา"
             ],
             "empty_street_name_labels": [
-                "เส้นทางเดิน",
-                "เส้นทางจักรยาน",
-                "เส้นทางจักรยานเฟซต",
-                "ทางข้ามความเสี่ยง"
+                "ทางเดิน",
+                "ทางจักรยาน",
+                "เส้นทางจักรยานเสือภูเขา",
+                "ทางม้าลาย",
+                "บันได",
+                "สะพาน",
+                "อุโมงค์"
             ],
             "example_phrases": {
                 "0": [
-                    "รวมกัน."
+                    "ผสาน."
                 ],
                 "1": [
-                    "รวมกันทางซ้าย."
+                    "ผสานไปทางซ้าย."
                 ],
                 "2": [
-                    "รวมกันเข้าร่วมกันไปยัง I 76 West/Pennsylvania Turnpike."
+                    "ตัดเข้าสู่ I 76 West/Pennsylvania Turnpike"
                 ],
                 "3": [
-                    "รวมกันทางขวาไปยัง I 83 South."
+                    "ผสานเข้ากับ I 83 South"
                 ],
                 "4": [
-                    "รวมกันไปทาง Baltimore."
+                    "ผสานไปทางบัลติมอร์"
                 ],
                 "5": [
-                    "รวมกันทางขวาไปทาง Baltimore."
+                    "ผสานไปทางบัลติมอร์"
                 ]
             }
         },
         "post_transition_transit_verbal": {
             "phrases": {
-                "0": "เดินทาง <TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>."
+                "0": "การท่องเที่ยว <TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>-"
             },
             "transit_stop_count_labels": {
-                "one": "ป้ายรถเมล์",
-                "other": "ป้ายรถเมล์"
+                "one": "หยุด",
+                "other": "หยุด"
             },
             "example_phrases": {
                 "0": [
-                    "เดินทาง 1 ป้ายรถเมล์.",
-                    "เดินทาง 3 ป้ายรถเมล์."
+                    "เดินทาง 1 สถานี.",
+                    "เดินทาง 3 สถานี."
                 ]
             }
         },
         "post_transition_verbal": {
             "phrases": {
-                "0": "ดำเนินการต่อเป็นอีก <LENGTH>.",
-                "1": "ดำเนินการต่อบน <STREET_NAMES> เป็นระยะทาง <LENGTH>."
+                "0": "ดำเนินการต่อเพื่อ <LENGTH>-",
+                "1": "ทำต่อไป <STREET_NAMES> สำหรับ <LENGTH>-"
             },
             "empty_street_name_labels": [
                 "ทางเดิน",
-                "เส้นทางจักรยาน",
-                "เส้นทางจักรยานเฟซต",
-                "ช่องม้า"
+                "ทางจักรยาน",
+                "เส้นทางจักรยานเสือภูเขา",
+                "ทางม้าลาย",
+                "บันได",
+                "สะพาน",
+                "อุโมงค์"
             ],
             "metric_lengths": [
                 "<KILOMETERS> กิโลเมตร",
@@ -1136,37 +1230,37 @@
                 "1 ไมล์",
                 "ครึ่งไมล์",
                 "หนึ่งในสี่ไมล์",
-                "<FEET> ฟุต",
+                "<FEET> เท้า",
                 "น้อยกว่า 10 ฟุต"
             ],
             "example_phrases": {
                 "0": [
-                    "ดำเนินการต่อเป็น 300 ฟุต.",
-                    "ดำเนินการต่อเป็น 9 ไมล์."
+                    "เดินต่อไปอีก 300 ฟุต",
+                    "เดินต่อไปอีก 9 ไมล์"
                 ],
                 "1": [
-                    "ดำเนินการต่อบนถนน Pennsylvania 7 43 เป็นระยะทาง 6.2 ไมล์.",
-                    "ดำเนินการต่อบนถนน Main Street, Vermont 30 เป็นระยะทาง 1 หนึ่งในสิบของไมล์."
+                    "เดินทางต่อไปบนเพนซิลเวเนีย 7 43 อีก 6.2 ไมล์",
+                    "เดินทางต่อไปที่ Main Street, Vermont 30 เป็นระยะทาง 1/10 ไมล์"
                 ]
             }
         },
         "ramp": {
             "phrases": {
-                "0": "เข้าสู่ทางรถไฟรามบน <RELATIVE_DIRECTION>.",
-                "1": "เข้าสู่ทางรถไฟราม <BRANCH_SIGN> บน <RELATIVE_DIRECTION>.",
-                "2": "เข้าสู่ทางรถไฟรามบน <RELATIVE_DIRECTION> ไปทาง <TOWARD_SIGN>.",
-                "3": "เข้าสู่ทางรถไฟราม <BRANCH_SIGN> บน <RELATIVE_DIRECTION> ไปทาง <TOWARD_SIGN>.",
-                "4": "เข้าสู่ทางรถไฟราม <NAME_SIGN> บน <RELATIVE_DIRECTION>.",
-                "5": "เลี้ยว <RELATIVE_DIRECTION> เพื่อเข้าสู่ทางรถไฟราม.",
-                "6": "เลี้ยว <RELATIVE_DIRECTION> เพื่อเข้าสู่ทางรถไฟราม <BRANCH_SIGN>.",
-                "7": "เลี้ยว <RELATIVE_DIRECTION> เพื่อเข้าสู่ทางรถไฟรามไปทาง <TOWARD_SIGN>.",
-                "8": "เลี้ยว <RELATIVE_DIRECTION> เพื่อเข้าสู่ทางรถไฟราม <BRANCH_SIGN> ไปทาง <TOWARD_SIGN>.",
-                "9": "เลี้ยว <RELATIVE_DIRECTION> เพื่อเข้าสู่ทางรถไฟราม <NAME_SIGN>.",
-                "10": "เข้าสู่ทางรถไฟราม.",
-                "11": "เข้าสู่ทางรถไฟราม <BRANCH_SIGN>.",
-                "12": "เข้าสู่ทางรถไฟรามไปทาง <TOWARD_SIGN>.",
-                "13": "เข้าสู่ทางรถไฟราม <BRANCH_SIGN> ไปทาง <TOWARD_SIGN>.",
-                "14": "เข้าสู่ทางรถไฟราม <NAME_SIGN>."
+                "0": "ใช้ทางลาดบน <RELATIVE_DIRECTION>-",
+                "1": "เอา <BRANCH_SIGN> ทางลาดบน <RELATIVE_DIRECTION>-",
+                "2": "ใช้ทางลาดบน <RELATIVE_DIRECTION> ไปทาง <TOWARD_SIGN>-",
+                "3": "เอา <BRANCH_SIGN> ทางลาดบน <RELATIVE_DIRECTION> ไปทาง <TOWARD_SIGN>-",
+                "4": "เอา <NAME_SIGN> ทางลาดบน <RELATIVE_DIRECTION>-",
+                "5": "เปลี่ยน <RELATIVE_DIRECTION> เพื่อใช้ทางลาด",
+                "6": "เปลี่ยน <RELATIVE_DIRECTION> ที่จะใช้ <BRANCH_SIGN> ทางลาด",
+                "7": "เปลี่ยน <RELATIVE_DIRECTION> เพื่อใช้ทางลาดไปทาง <TOWARD_SIGN>-",
+                "8": "เปลี่ยน <RELATIVE_DIRECTION> ที่จะใช้ <BRANCH_SIGN> ทางลาดไปทาง <TOWARD_SIGN>-",
+                "9": "เปลี่ยน <RELATIVE_DIRECTION> ที่จะใช้ <NAME_SIGN> ทางลาด",
+                "10": "ใช้ทางลาด",
+                "11": "เอา <BRANCH_SIGN> ทางลาด",
+                "12": "ใช้ทางลาดไปทาง <TOWARD_SIGN>-",
+                "13": "เอา <BRANCH_SIGN> ทางลาดไปทาง <TOWARD_SIGN>-",
+                "14": "เอา <NAME_SIGN> ทางลาด"
             },
             "relative_directions": [
                 "ซ้าย",
@@ -1174,159 +1268,195 @@
             ],
             "example_phrases": {
                 "0": [
-                    "เข้าสู่ทางรถไฟรามทางซ้าย.",
-                    "เข้าสู่ทางรถไฟรามทางขวา."
+                    "ใช้ทางลาดด้านซ้าย",
+                    "ใช้ทางลาดทางด้านขวา"
                 ],
                 "1": [
-                    "เข้าสู่ทางรถไฟราม I 95 ทางขวา."
+                    "ใช้ทางลาด I 95 ทางด้านขวา"
                 ],
                 "2": [
-                    "เข้าสู่ทางรถไฟรามทางซ้ายไปทาง JFK."
+                    "ใช้ทางลาดด้านซ้ายไปทาง JFK"
                 ],
                 "3": [
-                    "เข้าสู่ทางรถไฟราม South Conduit Avenue ทางซ้ายไปทาง JFK."
+                    "ใช้ทางลาด South Conduit Avenue ทางซ้ายไปทาง JFK"
                 ],
                 "4": [
-                    "เข้าสู่ทางรถไฟราม Gettysburg Pike ทางขวา."
+                    "ใช้ทางลาด Gettysburg Pike ทางด้านขวา"
                 ],
                 "5": [
-                    "เลี้ยวซ้ายเพื่อเข้าสู่ทางรถไฟราม.",
-                    "เลี้ยวขวาเพื่อเข้าสู่ทางรถไฟราม."
+                    "เลี้ยวซ้ายเพื่อใช้ทางลาด",
+                    "เลี้ยวขวาเพื่อใช้ทางลาด"
                 ],
                 "6": [
-                    "เลี้ยวซ้ายเพื่อเข้าสู่ทาง PA 283 West."
+                    "เลี้ยวซ้ายเพื่อใช้ทางลาด PA 283 West"
                 ],
                 "7": [
-                    "เลี้ยวซ้ายเพื่อเข้าสู่ทางรถไฟรามไปทาง Harrisburg/Harrisburg International Airport."
+                    "เลี้ยวซ้ายเพื่อใช้ทางลาดไปยังสนามบินนานาชาติแฮร์ริสเบิร์ก/แฮร์ริสเบิร์ก"
                 ],
                 "8": [
-                    "เลี้ยวซ้ายเพื่อเข้าสู่ทาง PA 283 West ไปทาง Harrisburg/Harrisburg International Airport."
+                    "เลี้ยวซ้ายเพื่อใช้ทางลาด PA 283 West ไปยังสนามบินนานาชาติแฮร์ริสเบิร์ก/แฮร์ริสเบิร์ก"
                 ],
                 "9": [
-                    "เลี้ยวขวาเพื่อเข้าสู่ทางรถไฟราม Gettysburg Pike."
+                    "เลี้ยวขวาเพื่อใช้ทางลาด Gettysburg Pike"
                 ],
                 "10": [
-                    "เข้าสู่ทางรถไฟราม."
+                    "ใช้ทางลาด"
                 ],
                 "11": [
-                    "เข้าสู่ทางรถไฟราม I 95."
+                    "ใช้ทางลาด I 95"
                 ],
                 "12": [
-                    "เข้าสู่ทางรถไฟรามไปทาง JFK."
+                    "ใช้ทางลาดไปทาง JFK"
                 ],
                 "13": [
-                    "เข้าสู่ทางรถไฟราม South Conduit Avenue ไปทาง JFK."
+                    "ใช้ทางลาด Soutch Conduit Avenue ไปทาง JFK"
                 ],
                 "14": [
-                    "เข้าสู่ทางรถไฟราม Gettysburg."
+                    "ใช้ทางลาดเกตตีสเบิร์ก"
                 ]
             }
         },
         "ramp_straight": {
             "phrases": {
-                "0": "ตรงไปเพื่อเข้าสู่ทางรถไฟราม.",
-                "1": "ตรงไปเพื่อเข้าสู่ทางรถไฟราม <BRANCH_SIGN>.",
-                "2": "ตรงไปเพื่อเข้าสู่ทางรถไฟรามไปทาง <TOWARD_SIGN>.",
-                "3": "ตรงไปเพื่อเข้าสู่ทางรถไฟราม <BRANCH_SIGN> ไปทาง <TOWARD_SIGN>.",
-                "4": "ตรงไปเพื่อเข้าสู่ทางรถไฟราม <NAME_SIGN>."
+                "0": "ตรงไปเพื่อใช้ทางลาด",
+                "1": "ยืนตรงเพื่อรับ <BRANCH_SIGN> ทางลาด",
+                "2": "ตรงไปเพื่อใช้ทางลาดไปทาง <TOWARD_SIGN>-",
+                "3": "ยืนตรงเพื่อรับ <BRANCH_SIGN> ทางลาดไปทาง <TOWARD_SIGN>-",
+                "4": "ยืนตรงเพื่อรับ <NAME_SIGN> ทางลาด"
             },
             "example_phrases": {
                 "0": [
-                    "ตรงไปเพื่อเข้าสู่ทางรถไฟราม."
+                    "ตรงไปเพื่อใช้ทางลาด"
                 ],
                 "1": [
-                    "ตรงไปเพื่อเข้าสู่ทางรถไฟราม US 322 East."
+                    "ตรงต่อไปเพื่อใช้ทางลาด US 322 East"
                 ],
                 "2": [
-                    "ตรงไปเพื่อเข้าสู่ทางรถไฟรามไปทาง Hershey."
+                    "ตรงไปเพื่อใช้ทางลาดไปยังเฮอร์ชีย์"
                 ],
                 "3": [
-                    "ตรงไปเพื่อเข้าสู่ทางรถไฟราม US 322 East/US 422 East/US 522 East/US 622 East ไปทาง Hershey/Palmdale/Palmyra/Campbelltown."
+                    "ตรงต่อไปเพื่อใช้ทางลาด US 322 East/US 422 East/US 522 East/US 622 East มุ่งหน้าไปยัง Hershey/Palmdale/Palmyra/Campbelltown"
                 ],
                 "4": [
-                    "ตรงไปเพื่อเข้าสู่ทางรถไฟราม Gettysburg Pike."
+                    "ตรงไปเพื่อใช้ทางลาด Gettysburg Pike"
                 ]
             }
         },
         "ramp_straight_verbal": {
             "phrases": {
-                "0": "\"อยู่ตรงเพื่อเข้ารามป์.\",",
-                "1": "\"อยู่ตรงเพื่อเข้ารามป์ <BRANCH_SIGN>.\",",
-                "2": "\"อยู่ตรงเพื่อเข้ารามป์ไปทาง <TOWARD_SIGN>.\",",
-                "3": "\"อยู่ตรงเพื่อเข้ารามป์ <BRANCH_SIGN> ไปทาง <TOWARD_SIGN>.\",",
-                "4": "\"อยู่ตรงเพื่อเข้ารามป์ <NAME_SIGN>.\","
+                "0": "ตรงไปเพื่อใช้ทางลาด",
+                "1": "ยืนตรงเพื่อรับ <BRANCH_SIGN> ทางลาด",
+                "2": "ตรงไปเพื่อใช้ทางลาดไปทาง <TOWARD_SIGN>-",
+                "3": "ยืนตรงเพื่อรับ <BRANCH_SIGN> ทางลาดไปทาง <TOWARD_SIGN>-",
+                "4": "ยืนตรงเพื่อรับ <NAME_SIGN> ทางลาด"
             },
             "example_phrases": {
-                "0": "[\"อยู่ตรงเพื่อเข้ารามป์.\"],",
-                "1": "[\"อยู่ตรงเพื่อเข้ารามป์ทางตะวันออก U.S. 3 22.\"],",
-                "2": "[\"อยู่ตรงเพื่อเข้ารามป์ไปทาง Hershey.\"],",
-                "3": "[\"อยู่ตรงเพื่อเข้ารามป์ทางตะวันออก U.S. 3 22, U.S. 4 22 ไปทาง Hershey, Palmdale.\"],",
-                "4": "[\"อยู่ตรงเพื่อเข้ารามป์ Gettysburg Pike.\"],"
+                "0": [
+                    "ตรงไปเพื่อใช้ทางลาด"
+                ],
+                "1": [
+                    "ตรงต่อไปเพื่อใช้ทางลาด U.S. 3 22 East"
+                ],
+                "2": [
+                    "ตรงไปเพื่อใช้ทางลาดไปยังเฮอร์ชีย์"
+                ],
+                "3": [
+                    "ตรงต่อไปเพื่อใช้ทางลาด U.S. 3 22 East, U.S. 4 22 East มุ่งหน้าสู่ Hershey, Palmdale"
+                ],
+                "4": [
+                    "ตรงไปเพื่อใช้ทางลาด Gettysburg Pike"
+                ]
             }
         },
         "ramp_verbal": {
             "phrases": {
-                "0": "\"เข้ารามป์ทาง <RELATIVE_DIRECTION>.\",",
-                "1": "เข้ารามป์ <BRANCH_SIGN> ทาง <RELATIVE_DIRECTION>.",
-                "2": "\"เข้ารามป์ทาง <RELATIVE_DIRECTION> ไปทาง <TOWARD_SIGN>.\",",
-                "3": "\"เข้ารามป์ <BRANCH_SIGN> ทาง <RELATIVE_DIRECTION> ไปทาง <TOWARD_SIGN>.\",",
-                "4": "\"เข้ารามป์ <NAME_SIGN> ทาง <RELATIVE_DIRECTION>.\",",
-                "5": "\"เลี้ยว <RELATIVE_DIRECTION> เพื่อเข้ารามป์.\",",
-                "6": "\"เลี้ยว <RELATIVE_DIRECTION> เพื่อเข้ารามป์ <BRANCH_SIGN>.\",",
-                "7": "\"เลี้ยว <RELATIVE_DIRECTION> เพื่อเข้ารามป์ไปทาง <TOWARD_SIGN>.\",",
-                "8": "\"เลี้ยว <RELATIVE_DIRECTION> เพื่อเข้ารามป์ <BRANCH_SIGN> ไปทาง <TOWARD_SIGN>.\",",
-                "9": "\"เลี้ยว <RELATIVE_DIRECTION> เพื่อเข้ารามป์ <NAME_SIGN>.\",",
-                "10": "\"เข้ารามป์.\",",
-                "11": "\"เข้ารามป์ <BRANCH_SIGN>.\",",
-                "12": "\"เข้ารามป์ไปทาง <TOWARD_SIGN>.\",",
-                "13": "\"เข้ารามป์ <BRANCH_SIGN> ไปทาง <TOWARD_SIGN>.\",",
-                "14": "\"เข้ารามป์ <NAME_SIGN>.\","
+                "0": "ใช้ทางลาดบน <RELATIVE_DIRECTION>-",
+                "1": "เอา <BRANCH_SIGN> ทางลาดบน <RELATIVE_DIRECTION>-",
+                "2": "ใช้ทางลาดบน <RELATIVE_DIRECTION> ไปทาง <TOWARD_SIGN>-",
+                "3": "เอา <BRANCH_SIGN> ทางลาดบน <RELATIVE_DIRECTION> ไปทาง <TOWARD_SIGN>-",
+                "4": "เอา <NAME_SIGN> ทางลาดบน <RELATIVE_DIRECTION>-",
+                "5": "เปลี่ยน <RELATIVE_DIRECTION> เพื่อใช้ทางลาด",
+                "6": "เปลี่ยน <RELATIVE_DIRECTION> ที่จะใช้ <BRANCH_SIGN> ทางลาด",
+                "7": "เปลี่ยน <RELATIVE_DIRECTION> เพื่อใช้ทางลาดไปทาง <TOWARD_SIGN>-",
+                "8": "เปลี่ยน <RELATIVE_DIRECTION> ที่จะใช้ <BRANCH_SIGN> ทางลาดไปทาง <TOWARD_SIGN>-",
+                "9": "เปลี่ยน <RELATIVE_DIRECTION> ที่จะใช้ <NAME_SIGN> ทางลาด",
+                "10": "ใช้ทางลาด",
+                "11": "เอา <BRANCH_SIGN> ทางลาด",
+                "12": "ใช้ทางลาดไปทาง <TOWARD_SIGN>-",
+                "13": "เอา <BRANCH_SIGN> ทางลาดไปทาง <TOWARD_SIGN>-",
+                "14": "เอา <NAME_SIGN> ทางลาด"
             },
-            "relative_directions": "[\"ซ้าย\", \"ขวา\"],",
+            "relative_directions": [
+                "ซ้าย",
+                "ขวา"
+            ],
             "example_phrases": {
-                "0": "[\"เข้ารามป์ทางซ้าย.\", \"เข้ารามป์ทางขวา.\"],",
-                "1": "[\"เข้ารามป์ทาง Interstate 95 ทางขวา.\"],",
-                "2": "[\"เข้ารามป์ทางซ้ายไปทาง JFK.\"],",
-                "3": "[\"เข้ารามป์ South Conduit Avenue ทางซ้ายไปทาง JFK.\"],",
-                "4": "[\"เข้ารามป์ Gettysburg Pike ทางขวา.\"],",
-                "5": "[\"เลี้ยวซ้ายเพื่อเข้ารามป์.\", \"เลี้ยวขวาเพื่อเข้ารามป์.\"],",
-                "6": "[\"เลี้ยวซ้ายเพื่อเข้ารามป์ Pennsylvania 2 83 West.\"],",
-                "7": "[\"เลี้ยวซ้ายเพื่อเข้ารามป์ไปทาง Harrisburg/Harrisburg International Airport.\"],",
-                "8": "[\"เลี้ยวซ้ายเพื่อเข้ารามป์ Pennsylvania 2 83 West ไปทาง Harrisburg, Harrisburg International Airport.\"],",
+                "0": [
+                    "ใช้ทางลาดด้านซ้าย",
+                    "ใช้ทางลาดทางด้านขวา"
+                ],
+                "1": [
+                    "ใช้ทางลาด Interstate 95 ทางด้านขวา"
+                ],
+                "2": [
+                    "ใช้ทางลาดด้านซ้ายไปทาง JFK"
+                ],
+                "3": [
+                    "ใช้ทางลาด South Conduit Avenue ทางซ้ายไปทาง JFK"
+                ],
+                "4": [
+                    "ใช้ทางลาด Gettysburg Pike ทางด้านขวา"
+                ],
+                "5": [
+                    "เลี้ยวซ้ายเพื่อใช้ทางลาด",
+                    "เลี้ยวขวาเพื่อใช้ทางลาด"
+                ],
+                "6": [
+                    "เลี้ยวซ้ายเพื่อใช้ทางลาด Pennsylvania 2 83 West"
+                ],
+                "7": [
+                    "เลี้ยวซ้ายเพื่อใช้ทางลาดไปยังสนามบินนานาชาติแฮร์ริสเบิร์ก/แฮร์ริสเบิร์ก"
+                ],
+                "8": [
+                    "เลี้ยวซ้ายเพื่อใช้ทางลาด Pennsylvania 2 83 West ไปยัง Harrisburg, Harrisburg International Airport"
+                ],
                 "9": [
-                    "เลี้ยวขวาเพื่อเข้ารามป์ Gettysburg Pike."
+                    "เลี้ยวขวาเพื่อใช้ทางลาด Gettysburg Pike"
                 ],
                 "10": [
-                    "เข้ารามป์."
+                    "ใช้ทางลาด"
                 ],
                 "11": [
-                    "เข้ารามป์ทาง Interstate 95."
+                    "ใช้ทางลาดอินเตอร์สเตต 95"
                 ],
                 "12": [
-                    "เข้ารามป์ไปทาง JFK."
+                    "ใช้ทางลาดไปทาง JFK"
                 ],
                 "13": [
-                    "เข้ารามป์ South Conduit Avenue ไปทาง JFK."
+                    "ใช้ทางลาด South Conduit Avenue ไปทาง JFK"
                 ],
                 "14": [
-                    "เข้ารามป์ Gettysburg Pike."
+                    "ใช้ทางลาด Gettysburg Pike"
                 ]
             }
         },
         "sharp": {
             "phrases": {
-                "0": "เลี้ยวมุมมาก <RELATIVE_DIRECTION>.",
-                "1": "เลี้ยวมุมมาก <RELATIVE_DIRECTION> ไปยัง <STREET_NAMES>.",
-                "2": "เลี้ยวมุมมาก <RELATIVE_DIRECTION> ไปยัง <BEGIN_STREET_NAMES> ดำเนินการต่อทาง <STREET_NAMES>.",
-                "3": "เลี้ยวมุมมาก <RELATIVE_DIRECTION> เพื่อยืนยันตัวอยู่บน <STREET_NAMES>.",
-                "4": "เลี้ยวมุมมาก <RELATIVE_DIRECTION> ที่ <JUNCTION_NAME>.",
-                "5": "เลี้ยวมุมมาก <RELATIVE_DIRECTION> ไปทาง <TOWARD_SIGN>."
+                "0": "ลับคม <RELATIVE_DIRECTION>-",
+                "1": "ลับคม <RELATIVE_DIRECTION> ไปยัง <STREET_NAMES>-",
+                "2": "ลับคม <RELATIVE_DIRECTION> ไปยัง <BEGIN_STREET_NAMES>-  <STREET_NAMES>-",
+                "3": "ลับคม <RELATIVE_DIRECTION> ที่จะอยู่ต่อ <STREET_NAMES>-",
+                "4": "ลับคม <RELATIVE_DIRECTION> ที่ <JUNCTION_NAME>-",
+                "5": "ลับคม <RELATIVE_DIRECTION> ไปทาง <TOWARD_SIGN>-"
             },
             "empty_street_name_labels": [
-                "ทางเท้า",
-                "ทางรถจักรยาน",
-                "เส้นทางจักรยานเสาธง",
-                "ทางเชื่อมต่อ"
+                "ทางเดิน",
+                "ทางจักรยาน",
+                "เส้นทางจักรยานเสือภูเขา",
+                "ทางม้าลาย",
+                "บันได",
+                "สะพาน",
+                "อุโมงค์"
             ],
             "relative_directions": [
                 "ซ้าย",
@@ -1334,39 +1464,42 @@
             ],
             "example_phrases": {
                 "0": [
-                    "เลี้ยวมุมมากซ้าย."
+                    "เลี้ยวซ้ายหักศอก."
                 ],
                 "1": [
-                    "เลี้ยวมุมมากขวาไปทาง Flatbush Avenue."
+                    "หักเลี้ยวขวาเข้าสู่ Flatbush Avenue"
                 ],
                 "2": [
-                    "เลี้ยวมุมมากซ้ายไปทาง North Bond Street/US 1 Business/MD 924. ดำเนินการต่อทาง MD 924."
+                    "หักเลี้ยวซ้ายเข้าสู่ North Bond Street/US 1 Business/MD 924 ขับต่อไปบน MD 924"
                 ],
                 "3": [
-                    "เลี้ยวมุมมากขวาเพื่อยืนยันตัวอยู่บน Sunstone Drive."
+                    "หักเลี้ยวขวาเพื่ออยู่บนซันสโตนไดรฟ์"
                 ],
                 "4": [
-                    "เลี้ยวมุมมากขวาที่ Mannenbashi East."
+                    "หักเลี้ยวขวาที่มันเนนบาชิตะวันออก"
                 ],
                 "5": [
-                    "เลี้ยวมุมมากซ้ายไปทาง Baltimore."
+                    "หักเลี้ยวซ้ายไปทางบัลติมอร์"
                 ]
             }
         },
         "sharp_verbal": {
             "phrases": {
-                "0": "เลี้ยวมุมมาก <RELATIVE_DIRECTION>.",
-                "1": "เลี้ยวมุมมาก <RELATIVE_DIRECTION> ไปยัง <STREET_NAMES>.",
-                "2": "เลี้ยวมุมมาก <RELATIVE_DIRECTION> ไปยัง <BEGIN_STREET_NAMES>.",
-                "3": "เลี้ยวมุมมาก <RELATIVE_DIRECTION> เพื่อยืนยันตัวอยู่บน <STREET_NAMES>.",
-                "4": "เลี้ยวมุมมาก <RELATIVE_DIRECTION> ที่ <JUNCTION_NAME>.",
-                "5": "เลี้ยวมุมมาก <RELATIVE_DIRECTION> ไปทาง <TOWARD_SIGN>."
+                "0": "ลับคม <RELATIVE_DIRECTION>-",
+                "1": "ลับคม <RELATIVE_DIRECTION> ไปยัง <STREET_NAMES>-",
+                "2": "ลับคม <RELATIVE_DIRECTION> ไปยัง <BEGIN_STREET_NAMES>-",
+                "3": "ลับคม <RELATIVE_DIRECTION> ที่จะอยู่ต่อ <STREET_NAMES>-",
+                "4": "ลับคม <RELATIVE_DIRECTION> ที่ <JUNCTION_NAME>-",
+                "5": "ลับคม <RELATIVE_DIRECTION> ไปทาง <TOWARD_SIGN>-"
             },
             "empty_street_name_labels": [
-                "ทางเท้า",
-                "ทางรถจักรยาน",
-                "เส้นทางจักรยานเสาธง",
-                "ทางเชื่อมต่อ"
+                "ทางเดิน",
+                "ทางจักรยาน",
+                "เส้นทางจักรยานเสือภูเขา",
+                "ทางม้าลาย",
+                "บันได",
+                "สะพาน",
+                "อุโมงค์"
             ],
             "relative_directions": [
                 "ซ้าย",
@@ -1374,143 +1507,149 @@
             ],
             "example_phrases": {
                 "0": [
-                    "เลี้ยวมุมมากซ้าย."
+                    "เลี้ยวซ้ายหักศอก."
                 ],
                 "1": [
-                    "เลี้ยวมุมมากขวาไปทาง Flatbush Avenue."
+                    "หักเลี้ยวขวาเข้าสู่ Flatbush Avenue"
                 ],
                 "2": [
-                    "เลี้ยวมุมมากซ้ายไปทาง North Bond Street, U.S. 1 Business."
+                    "หักเลี้ยวซ้ายเข้าสู่ North Bond Street, U.S. 1 Business"
                 ],
                 "3": [
-                    "เลี้ยวมุมมากขวาเพื่อยืนยันตัวอยู่บน Sunstone Drive."
+                    "หักเลี้ยวขวาเพื่ออยู่บนซันสโตนไดรฟ์"
                 ],
                 "4": [
-                    "เลี้ยวมุมมากขวาที่ Mannenbashi East."
+                    "หักเลี้ยวขวาที่มันเนนบาชิตะวันออก"
                 ],
                 "5": [
-                    "เลี้ยวมุมมากซ้ายไปทาง Baltimore."
+                    "หักเลี้ยวซ้ายไปทางบัลติมอร์"
                 ]
             }
         },
         "start": {
             "phrases": {
-                "0": "ไปทาง <CARDINAL_DIRECTION>.",
-                "1": "ไปทาง <CARDINAL_DIRECTION> บน <STREET_NAMES>.",
-                "2": "ไปทาง <CARDINAL_DIRECTION> บน <BEGIN_STREET_NAMES>. ดำเนินการต่อทาง <STREET_NAMES>.",
-                "4": "ขับรถทาง <CARDINAL_DIRECTION>.",
-                "5": "ขับรถทาง <CARDINAL_DIRECTION> บน <STREET_NAMES>.",
-                "6": "ขับรถทาง <CARDINAL_DIRECTION> บน <BEGIN_STREET_NAMES>. ดำเนินการต่อทาง <STREET_NAMES>.",
-                "8": "เดินทางทาง <CARDINAL_DIRECTION>.",
-                "9": "เดินทางทาง <CARDINAL_DIRECTION> บน <STREET_NAMES>.",
-                "10": "เดินทางทาง <CARDINAL_DIRECTION> บน <BEGIN_STREET_NAMES>. ดำเนินการต่อทาง <STREET_NAMES>.",
-                "16": "ขี่จักรยานทาง <CARDINAL_DIRECTION>.",
-                "17": "ขี่จักรยานทาง <CARDINAL_DIRECTION> บน <STREET_NAMES>.",
-                "18": "ขี่จักรยานทาง <CARDINAL_DIRECTION> บน <BEGIN_STREET_NAMES>. ดำเนินการต่อทาง <STREET_NAMES>."
+                "0": "ศีรษะ <CARDINAL_DIRECTION>-",
+                "1": "ศีรษะ <CARDINAL_DIRECTION> บน <STREET_NAMES>-",
+                "2": "ศีรษะ <CARDINAL_DIRECTION> บน <BEGIN_STREET_NAMES>-  <STREET_NAMES>-",
+                "4": "ขับ <CARDINAL_DIRECTION>-",
+                "5": "ขับ <CARDINAL_DIRECTION> บน <STREET_NAMES>-",
+                "6": "ขับ <CARDINAL_DIRECTION> บน <BEGIN_STREET_NAMES>-  <STREET_NAMES>-",
+                "8": "เดิน <CARDINAL_DIRECTION>-",
+                "9": "เดิน <CARDINAL_DIRECTION> บน <STREET_NAMES>-",
+                "10": "เดิน <CARDINAL_DIRECTION> บน <BEGIN_STREET_NAMES>-  <STREET_NAMES>-",
+                "16": "จักรยาน <CARDINAL_DIRECTION>-",
+                "17": "จักรยาน <CARDINAL_DIRECTION> บน <STREET_NAMES>-",
+                "18": "จักรยาน <CARDINAL_DIRECTION> บน <BEGIN_STREET_NAMES>-  <STREET_NAMES>-"
             },
             "cardinal_directions": [
                 "ทิศเหนือ",
-                "ทิศตะวันออกเฉียงเหนือ",
+                "ตะวันออกเฉียงเหนือ",
                 "ทิศตะวันออก",
-                "ทิศตะวันออกเฉียงใต้",
-                "ทิศใต้",
-                "ทิศตะวันตกเฉียงใต้",
-                "ทิศตะวันตก",
-                "ทิศตะวันตกเฉียงเหนือ"
+                "ตะวันออกเฉียงใต้",
+                "ใต้",
+                "ตะวันตกเฉียงใต้",
+                "ตะวันตก",
+                "ตะวันตกเฉียงเหนือ"
             ],
             "empty_street_name_labels": [
-                "ทางเท้า",
-                "ทางรถจักรยาน",
-                "เส้นทางจักรยานเสาธง",
-                "ทางเชื่อมต่อ"
+                "ทางเดิน",
+                "ทางจักรยาน",
+                "เส้นทางจักรยานเสือภูเขา",
+                "ทางม้าลาย",
+                "บันได",
+                "สะพาน",
+                "อุโมงค์"
             ],
             "example_phrases": {
                 "0": [
-                    "ไปทางทิศตะวันออก.",
-                    "ไปทางทิศเหนือ."
+                    "มุ่งหน้าไปทางทิศตะวันออก",
+                    "มุ่งหน้าไปทางเหนือ"
                 ],
                 "1": [
-                    "ไปทางทิศตะวันตกเฉียงใต้ที่ 5th Avenue.",
-                    "ไปทางทิศตะวันตกบนทางเดิน",
-                    "ไปทางทิศตะวันออกบนทางรถจักรยาน",
-                    "ไปทางทิศเหนือบนเส้นทางจักรยานเสาธง"
+                    "มุ่งหน้าไปทางตะวันตกเฉียงใต้บนถนน 5th Avenue",
+                    "มุ่งหน้าไปทางทิศตะวันตกบนทางเดิน",
+                    "มุ่งหน้าไปทางทิศตะวันออกบนทางจักรยาน",
+                    "มุ่งหน้าไปทางเหนือบนเส้นทางจักรยานเสือภูเขา"
                 ],
                 "2": [
-                    "ไปทางทิศใต้บน North Prince Street/US 222/PA 272. ดำเนินการต่อทาง US 222/PA 272."
+                    "มุ่งหน้าไปทางใต้บนถนน North Prince Street/US 222/PA 272 เดินทางต่อไปบน US 222/PA 272"
                 ],
                 "4": [
-                    "ขับรถไปทางทิศตะวันออก.",
-                    "ขับรถไปทางทิศเหนือ."
+                    "ขับรถไปทางทิศตะวันออก",
+                    "ขับรถไปทางเหนือ"
                 ],
                 "5": [
-                    "ขับรถไปทางทิศตะวันตกเฉียงใต้ที่ 5th Avenue."
+                    "ขับไปทางตะวันตกเฉียงใต้บนถนน 5th Avenue"
                 ],
                 "6": [
-                    "ขับรถไปทางทิศใต้บน North Prince Street/US 222/PA 272. ดำเนินการต่อทาง US 222/PA 272."
+                    "ขับไปทางใต้บนถนน North Prince Street/US 222/PA 272 ขับต่อไปบน US 222/PA 272"
                 ],
                 "8": [
-                    "เดินไปทางทิศตะวันออก.",
-                    "เดินไปทางทิศเหนือ."
+                    "เดินไปทางทิศตะวันออก",
+                    "เดินไปทางเหนือ"
                 ],
                 "9": [
-                    "เดินไปทางทิศตะวันตกบน 5th Avenue.",
-                    "เดินไปทางทิศตะวันตกบนทางเดิน"
+                    "เดินไปทางตะวันตกเฉียงใต้บน 5th Avenue",
+                    "เดินไปตามทางเดินไปทางทิศตะวันตก"
                 ],
                 "10": [
-                    "เดินไปทางทิศใต้บน North Prince Street/US 222/PA 272. ดำเนินการต่อทาง US 222/PA 272."
+                    "เดินไปทางทิศใต้บน North Prince Street/US 222/PA 272 เดินต่อไปบน US 222/PA 272"
                 ],
                 "16": [
-                    "ขี่จักรยานไปทางทิศตะวันออก.",
-                    "ขี่จักรยานไปทางทิศเหนือ."
+                    "ปั่นจักรยานไปทางทิศตะวันออก",
+                    "ปั่นจักรยานไปทางเหนือ"
                 ],
                 "17": [
-                    "ขี่จักรยานไปทางทิศตะวันตกบน 5th Avenue.",
-                    "ขี่จักรยานไปทางทิศตะวันออกบนเส้นทางจักรยานเสาธง",
-                    "ขี่จักรยานไปทางทิศเหนือบนเส้นทางจักรยานเสาธง"
+                    "ปั่นจักรยานไปทางตะวันตกเฉียงใต้บน 5th Avenue",
+                    "ปั่นจักรยานไปทางทิศตะวันออกบนทางจักรยาน",
+                    "ปั่นจักรยานไปทางเหนือบนเส้นทางจักรยานเสือภูเขา"
                 ],
                 "18": [
-                    "ขี่จักรยานไปทางทิศใต้บน North Prince Street/US 222/PA 272. ดำเนินการต่อทาง US 222/PA 272."
+                    "ปั่นจักรยานไปทางใต้บนถนน North Prince Street/US 222/PA 272 ขับต่อไปบน US 222/PA 272"
                 ]
             }
         },
         "start_verbal": {
             "phrases": {
-                "0": "ไปทาง <CARDINAL_DIRECTION>.",
-                "1": "ไปทาง <CARDINAL_DIRECTION> เป็นระยะ <LENGTH>.",
-                "2": "ไปทาง <CARDINAL_DIRECTION> บน <STREET_NAMES>.",
-                "3": "ไปทาง <CARDINAL_DIRECTION> บน <STREET_NAMES> เป็นระยะ <LENGTH>.",
-                "4": "ไปทาง <CARDINAL_DIRECTION> บน <BEGIN_STREET_NAMES>.",
-                "5": "ขับรถไปทาง <CARDINAL_DIRECTION>.",
-                "6": "ขับรถไปทาง <CARDINAL_DIRECTION> เป็นระยะ <LENGTH>.",
-                "7": "ขับรถไปทาง <CARDINAL_DIRECTION> บน <STREET_NAMES>.",
-                "8": "ขับรถไปทาง <CARDINAL_DIRECTION> บน <STREET_NAMES> เป็นระยะ <LENGTH>.",
-                "9": "ขับรถไปทาง <CARDINAL_DIRECTION> บน <BEGIN_STREET_NAMES>.",
-                "10": "เดินทางทาง <CARDINAL_DIRECTION>.",
-                "11": "เดินทางทาง <CARDINAL_DIRECTION> เป็นระยะ <LENGTH>.",
-                "12": "เดินทางทาง <CARDINAL_DIRECTION> บน <STREET_NAMES>.",
-                "13": "เดินทางทาง <CARDINAL_DIRECTION> บน <STREET_NAMES> เป็นระยะ <LENGTH>.",
-                "14": "เดินทางทาง <CARDINAL_DIRECTION> บน <BEGIN_STREET_NAMES>.",
-                "15": "ขี่จักรยานทาง <CARDINAL_DIRECTION>.",
-                "16": "ขี่จักรยานทาง <CARDINAL_DIRECTION> เป็นระยะ <LENGTH>.",
-                "17": "ขี่จักรยานทาง <CARDINAL_DIRECTION> บน <STREET_NAMES>.",
-                "18": "ขี่จักรยานทาง <CARDINAL_DIRECTION> บน <STREET_NAMES> เป็นระยะ <LENGTH>.",
-                "19": "ขี่จักรยานทาง <CARDINAL_DIRECTION> บน <BEGIN_STREET_NAMES>."
+                "0": "ศีรษะ <CARDINAL_DIRECTION>-",
+                "1": "ศีรษะ <CARDINAL_DIRECTION> สำหรับ <LENGTH>-",
+                "2": "ศีรษะ <CARDINAL_DIRECTION> บน <STREET_NAMES>-",
+                "3": "ศีรษะ <CARDINAL_DIRECTION> บน <STREET_NAMES> สำหรับ <LENGTH>-",
+                "4": "ศีรษะ <CARDINAL_DIRECTION> บน <BEGIN_STREET_NAMES>-",
+                "5": "ขับ <CARDINAL_DIRECTION>-",
+                "6": "ขับ <CARDINAL_DIRECTION> สำหรับ <LENGTH>-",
+                "7": "ขับ <CARDINAL_DIRECTION> บน <STREET_NAMES>-",
+                "8": "ขับ <CARDINAL_DIRECTION> บน <STREET_NAMES> สำหรับ <LENGTH>-",
+                "9": "ขับ <CARDINAL_DIRECTION> บน <BEGIN_STREET_NAMES>-",
+                "10": "เดิน <CARDINAL_DIRECTION>-",
+                "11": "เดิน <CARDINAL_DIRECTION> สำหรับ <LENGTH>-",
+                "12": "เดิน <CARDINAL_DIRECTION> บน <STREET_NAMES>-",
+                "13": "เดิน <CARDINAL_DIRECTION> บน <STREET_NAMES> สำหรับ <LENGTH>-",
+                "14": "เดิน <CARDINAL_DIRECTION> บน <BEGIN_STREET_NAMES>-",
+                "15": "จักรยาน <CARDINAL_DIRECTION>-",
+                "16": "จักรยาน <CARDINAL_DIRECTION> สำหรับ <LENGTH>-",
+                "17": "จักรยาน <CARDINAL_DIRECTION> บน <STREET_NAMES>-",
+                "18": "จักรยาน <CARDINAL_DIRECTION> บน <STREET_NAMES> สำหรับ <LENGTH>-",
+                "19": "จักรยาน <CARDINAL_DIRECTION> บน <BEGIN_STREET_NAMES>-"
             },
             "cardinal_directions": [
                 "ทิศเหนือ",
-                "ทิศตะวันออกเฉียงเหนือ",
+                "ตะวันออกเฉียงเหนือ",
                 "ทิศตะวันออก",
-                "ทิศตะวันออกเฉียงใต้",
-                "ทิศใต้",
-                "ทิศตะวันตกเฉียงใต้",
-                "ทิศตะวันตก",
-                "ทิศตะวันตกเฉียงเหนือ"
+                "ตะวันออกเฉียงใต้",
+                "ใต้",
+                "ตะวันตกเฉียงใต้",
+                "ตะวันตก",
+                "ตะวันตกเฉียงเหนือ"
             ],
             "empty_street_name_labels": [
-                "ทางเท้า",
-                "ทางรถจักรยาน",
-                "เส้นทางจักรยานเสาธง",
-                "ทางเชื่อมต่อ"
+                "ทางเดิน",
+                "ทางจักรยาน",
+                "เส้นทางจักรยานเสือภูเขา",
+                "ทางม้าลาย",
+                "บันได",
+                "สะพาน",
+                "อุโมงค์"
             ],
             "metric_lengths": [
                 "<KILOMETERS> กิโลเมตร",
@@ -1522,95 +1661,95 @@
                 "<MILES> ไมล์",
                 "1 ไมล์",
                 "ครึ่งไมล์",
-                "ริมไมล์",
-                "<FEET> ฟุต",
+                "หนึ่งในสี่ไมล์",
+                "<FEET> เท้า",
                 "น้อยกว่า 10 ฟุต"
             ],
             "example_phrases": {
                 "0": [
-                    "ไปทางทิศตะวันออก.",
-                    "ไปทางทิศเหนือ."
+                    "มุ่งหน้าไปทางทิศตะวันออก",
+                    "มุ่งหน้าไปทางเหนือ"
                 ],
                 "1": [
-                    "ไปทางทิศตะวันออกเป็นระยะ ครึ่งไมล์.",
-                    "ไปทางทิศเหนือเป็นระยะ 1 กิโลเมตร."
+                    "มุ่งหน้าไปทางทิศตะวันออกอีกครึ่งไมล์",
+                    "มุ่งหน้าไปทางเหนืออีก 1 กิโลเมตร"
                 ],
                 "2": [
-                    "ไปทางทิศตะวันตกเฉียงใต้ที่ 5th Avenue."
+                    "มุ่งหน้าไปทางตะวันตกเฉียงใต้บนถนน 5th Avenue"
                 ],
                 "3": [
-                    "ไปทางทิศตะวันตกบนทาง 5th Avenue เป็นระยะ 1/10 ไมล์."
+                    "มุ่งหน้าไปทางตะวันตกเฉียงใต้บนถนน 5th Avenue ไปอีก 1/10 ไมล์"
                 ],
                 "4": [
-                    "ไปทางทิศใต้บน North Prince Street, U.S. 2 22."
+                    "มุ่งหน้าไปทางใต้บนถนน North Prince Street, US 2 22."
                 ],
                 "5": [
-                    "ขับรถไปทางทิศตะวันออก.",
-                    "ขับรถไปทางทิศเหนือ."
+                    "ขับรถไปทางทิศตะวันออก",
+                    "ขับรถไปทางเหนือ"
                 ],
                 "6": [
-                    "ขับรถไปทางทิศตะวันออกเป็นระยะ ครึ่งไมล์.",
-                    "ขับรถไปทางทิศเหนือเป็นระยะ 1 กิโลเมตร."
+                    "ขับไปทางทิศตะวันออกอีกครึ่งไมล์",
+                    "ขับไปทางเหนือประมาณ 1 กิโลเมตร"
                 ],
                 "7": [
-                    "ขับรถไปทางทิศตะวันตกเฉียงใต้ที่ 5th Avenue."
+                    "ขับไปทางตะวันตกเฉียงใต้บนถนน 5th Avenue"
                 ],
                 "8": [
-                    "ขับรถไปทางทิศตะวันตกบนทาง 5th Avenue เป็นระยะ 1/10 ไมล์."
+                    "ขับรถไปทางตะวันตกเฉียงใต้บนถนน 5th Avenue ประมาณ 1/10 ไมล์"
                 ],
                 "9": [
-                    "ขับรถไปทางทิศใต้บน North Prince Street, U.S. 2 22."
+                    "ขับไปทางใต้บนถนน North Prince Street, U.S. 2 22."
                 ],
                 "10": [
-                    "เดินไปทางทิศตะวันออก.",
-                    "เดินไปทางทิศเหนือ."
+                    "เดินไปทางทิศตะวันออก",
+                    "เดินไปทางเหนือ"
                 ],
                 "11": [
-                    "เดินไปทางทิศตะวันออกเป็นระยะ ครึ่งไมล์.",
-                    "เดินไปทางทิศเหนือเป็นระยะ 1 กิโลเมตร."
+                    "เดินไปทางตะวันออกอีกครึ่งไมล์",
+                    "เดินไปทางเหนืออีก 1 กิโลเมตร"
                 ],
                 "12": [
-                    "เดินไปทางทิศตะวันตกบนทาง 5th Avenue."
+                    "เดินไปทางตะวันตกเฉียงใต้บน 5th Avenue"
                 ],
                 "13": [
-                    "เดินไปทางทิศตะวันตกบนทาง 5th Avenue เป็นระยะ 1/10 ไมล์."
+                    "เดินไปทางตะวันตกเฉียงใต้บนถนน 5th Avenue ประมาณ 1/10 ไมล์"
                 ],
                 "14": [
-                    "เดินไปทางทิศใต้บน North Prince Street, U.S. 2 22."
+                    "เดินไปทางทิศใต้บนถนน North Prince Street, US 2 22."
                 ],
                 "15": [
-                    "ขี่จักรยานไปทางทิศตะวันออก.",
-                    "ขี่จักรยานไปทางทิศเหนือ."
+                    "ปั่นจักรยานไปทางทิศตะวันออก",
+                    "ปั่นจักรยานไปทางเหนือ"
                 ],
                 "16": [
-                    "ขี่จักรยานไปทางทิศตะวันออกเป็นระยะ ครึ่งไมล์.",
-                    "ขี่จักรยานไปทางทิศเหนือเป็นระยะ 1 กิโลเมตร."
+                    "ปั่นจักรยานไปทางทิศตะวันออกอีกครึ่งไมล์",
+                    "ปั่นจักรยานไปทางเหนืออีก 1 กิโลเมตร"
                 ],
                 "17": [
-                    "ขี่จักรยานไปทางทิศตะวันตกบนทาง 5th Avenue."
+                    "ปั่นจักรยานไปทางตะวันตกเฉียงใต้บน 5th Avenue"
                 ],
                 "18": [
-                    "ขี่จักรยานไปทางทิศตะวันตกบนทาง 5th Avenue เป็นระยะ 1/10 ไมล์."
+                    "ปั่นจักรยานไปทางตะวันตกเฉียงใต้บนถนน 5th Avenue ประมาณ 1/10 ไมล์"
                 ],
                 "19": [
-                    "ขี่จักรยานไปทางทิศใต้บน North Prince Street, U.S. 2 22."
+                    "ปั่นจักรยานไปทางใต้บนถนน North Prince Street, US 2 22."
                 ]
             }
         },
         "transit": {
             "phrases": {
-                "0": "ใช้ <TRANSIT_NAME>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)",
-                "1": "ใช้ <TRANSIT_NAME> ไปทางทิศตะวันตกเฉียงใต้. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)"
+                "0": "เอา <TRANSIT_NAME>- <TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>-",
+                "1": "เอา <TRANSIT_NAME> ไปทาง <TRANSIT_HEADSIGN>- <TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>-"
             },
             "empty_transit_name_labels": [
                 "รถราง",
                 "รถไฟใต้ดิน",
                 "รถไฟ",
-                "รถประจำทาง",
-                "เรือ",
-                "รถกระเช้า",
-                "รถรางสายเคเบิล",
-                "รถรางสายรายเขื่อน"
+                "รสบัส",
+                "เรือข้ามฟาก",
+                "รถราง",
+                "เรือกอนโดลา",
+                "รถกระเช้าไฟฟ้า"
             ],
             "transit_stop_count_labels": {
                 "one": "หยุด",
@@ -1618,59 +1757,59 @@
             },
             "example_phrases": {
                 "0": [
-                    "ใช้ New Haven. (1 หยุด)",
-                    "ใช้รถไฟใต้ดิน. (2 หยุด)",
-                    "ใช้รถประจำทาง. (12 หยุด)"
+                    "ใช้นิวเฮเวน ",
+                    "ขึ้นรถไฟใต้ดิน ",
+                    "ขึ้นรถโดยสารประจำทาง. "
                 ],
                 "1": [
-                    "ใช้ F ไปทาง JAMAICA - 179 ST. (10 หยุด)",
-                    "ใช้เรือไปทาง Staten Island. (1 หยุด)"
+                    "ใช้ F ไปทาง JAMAICA - 179 ST. ",
+                    "ขึ้นเรือเฟอร์รีไปยังเกาะสแตเทน "
                 ]
             }
         },
         "transit_connection_destination": {
             "phrases": {
-                "0": "ออกจากสถานี.",
-                "1": "ออกจาก <TRANSIT_STOP>.",
-                "2": "ออกจาก <TRANSIT_STOP> <STATION_LABEL>."
+                "0": "ออกจากสถานี",
+                "1": "ออกจาก <TRANSIT_STOP>-",
+                "2": "ออกจาก <TRANSIT_STOP> <STATION_LABEL>-"
             },
             "station_label": "สถานี",
             "example_phrases": {
                 "0": [
-                    "ออกจากสถานี."
+                    "ออกจากสถานี"
                 ],
                 "1": [
-                    "ออกจากสถานี Embarcadero."
+                    "ออกจากสถานีเอ็มบาร์คาเดโร"
                 ],
                 "2": [
-                    "ออกจากสถานี 8 St - NYU."
+                    "ออกจากสถานี 8 St - NYU"
                 ]
             }
         },
         "transit_connection_destination_verbal": {
             "phrases": {
-                "0": "ออกจากสถานี.",
-                "1": "ออกจาก <TRANSIT_STOP>.",
-                "2": "ออกจาก <TRANSIT_STOP> <STATION_LABEL>."
+                "0": "ออกจากสถานี",
+                "1": "ออกจาก <TRANSIT_STOP>-",
+                "2": "ออกจาก <TRANSIT_STOP> <STATION_LABEL>-"
             },
             "station_label": "สถานี",
             "example_phrases": {
                 "0": [
-                    "ออกจากสถานี."
+                    "ออกจากสถานี"
                 ],
                 "1": [
-                    "ออกจากสถานี Embarcadero."
+                    "ออกจากสถานีเอ็มบาร์คาเดโร"
                 ],
                 "2": [
-                    "ออกจากสถานี 8 St - NYU."
+                    "ออกจากสถานี 8 St - NYU"
                 ]
             }
         },
         "transit_connection_start": {
             "phrases": {
                 "0": "เข้าสถานี.",
-                "1": "เข้าสถานี <TRANSIT_STOP>.",
-                "2": "เข้าสถานี <TRANSIT_STOP> <STATION_LABEL>."
+                "1": "ป้อน <TRANSIT_STOP>-",
+                "2": "ป้อน <TRANSIT_STOP> <STATION_LABEL>-"
             },
             "station_label": "สถานี",
             "example_phrases": {
@@ -1678,18 +1817,18 @@
                     "เข้าสถานี."
                 ],
                 "1": [
-                    "เข้าสถานี Embarcadero."
+                    "เข้าสู่สถานีเอ็มบาร์กาเดโร"
                 ],
                 "2": [
-                    "เข้าสถานี 8 St - NYU."
+                    "เข้าสถานี 8 St - NYU"
                 ]
             }
         },
         "transit_connection_start_verbal": {
             "phrases": {
                 "0": "เข้าสถานี.",
-                "1": "เข้าสถานี <TRANSIT_STOP>.",
-                "2": "เข้าสถานี <TRANSIT_STOP> <STATION_LABEL>."
+                "1": "ป้อน <TRANSIT_STOP>-",
+                "2": "ป้อน <TRANSIT_STOP> <STATION_LABEL>-"
             },
             "station_label": "สถานี",
             "example_phrases": {
@@ -1697,65 +1836,65 @@
                     "เข้าสถานี."
                 ],
                 "1": [
-                    "เข้าสถานี Embarcadero."
+                    "เข้าสู่สถานีเอ็มบาร์กาเดโร"
                 ],
                 "2": [
-                    "เข้าสถานี 8 St - NYU."
+                    "เข้าสถานี 8 St - NYU"
                 ]
             }
         },
         "transit_connection_transfer": {
             "phrases": {
-                "0": "โอนย้ายที่สถานี.",
-                "1": "โอนย้ายที่ <TRANSIT_STOP>.",
-                "2": "โอนย้ายที่ <TRANSIT_STOP> <STATION_LABEL>."
+                "0": "โอนที่สถานี.",
+                "1": "โอนได้ที่ <TRANSIT_STOP>-",
+                "2": "โอนได้ที่ <TRANSIT_STOP> <STATION_LABEL>-"
             },
             "station_label": "สถานี",
             "example_phrases": {
                 "0": [
-                    "โอนย้ายที่สถานี."
+                    "โอนที่สถานี."
                 ],
                 "1": [
-                    "โอนย้ายที่สถานี Embarcadero."
+                    "เปลี่ยนเครื่องที่สถานีเอ็มบาร์คาเดโร"
                 ],
                 "2": [
-                    "โอนย้ายที่สถานี 8 St - NYU."
+                    "เปลี่ยนรถที่สถานี 8 St - NYU"
                 ]
             }
         },
         "transit_connection_transfer_verbal": {
             "phrases": {
-                "0": "โอนย้ายที่สถานี.",
-                "1": "โอนย้ายที่ <TRANSIT_STOP>.",
-                "2": "โอนย้ายที่ <TRANSIT_STOP> <STATION_LABEL>."
+                "0": "โอนที่สถานี.",
+                "1": "โอนได้ที่ <TRANSIT_STOP>-",
+                "2": "โอนได้ที่ <TRANSIT_STOP> <STATION_LABEL>-"
             },
             "station_label": "สถานี",
             "example_phrases": {
                 "0": [
-                    "โอนย้ายที่สถานี."
+                    "โอนที่สถานี."
                 ],
                 "1": [
-                    "โอนย้ายที่สถานี Embarcadero."
+                    "เปลี่ยนเครื่องที่สถานีเอ็มบาร์คาเดโร"
                 ],
                 "2": [
-                    "โอนย้ายที่สถานี 8 St - NYU."
+                    "เปลี่ยนรถที่สถานี 8 St - NYU"
                 ]
             }
         },
         "transit_remain_on": {
             "phrases": {
-                "0": "ยังคงอยู่บน <TRANSIT_NAME>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)",
-                "1": "ยังคงอยู่บน <TRANSIT_NAME> ไปทางทิศตะวันตกเฉียงใต้. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)"
+                "0": "คงอยู่บน <TRANSIT_NAME>- <TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>-",
+                "1": "คงอยู่บน <TRANSIT_NAME> ไปทาง <TRANSIT_HEADSIGN>- <TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>-"
             },
             "empty_transit_name_labels": [
                 "รถราง",
                 "รถไฟใต้ดิน",
                 "รถไฟ",
-                "รถประจำทาง",
-                "เรือ",
-                "รถกระเช้า",
-                "รถรางสายเคเบิล",
-                "รถรางสายรายเขื่อน"
+                "รสบัส",
+                "เรือข้ามฟาก",
+                "รถราง",
+                "เรือกอนโดลา",
+                "รถกระเช้าไฟฟ้า"
             ],
             "transit_stop_count_labels": {
                 "one": "หยุด",
@@ -1763,52 +1902,52 @@
             },
             "example_phrases": {
                 "0": [
-                    "ยังคงอยู่บน New Haven. (1 หยุด)",
-                    "ยังคงอยู่บนรถไฟ. (3 หยุด)"
+                    "ยังคงอยู่ที่นิวเฮเวน ",
+                    "อยู่บนรถไฟต่อไป "
                 ],
                 "1": [
-                    "ยังคงอยู่บน F ไปทาง JAMAICA - 179 ST. (10 หยุด)"
+                    "คงอยู่บน F ไปทาง JAMAICA - 179 ST. "
                 ]
             }
         },
         "transit_remain_on_verbal": {
             "phrases": {
-                "0": "ยังคงอยู่บน <TRANSIT_NAME>.",
-                "1": "ยังคงอยู่บน <TRANSIT_NAME> ไปทางทิศตะวันตกเฉียงใต้."
+                "0": "คงอยู่บน <TRANSIT_NAME>-",
+                "1": "คงอยู่บน <TRANSIT_NAME> ไปทาง <TRANSIT_HEADSIGN>-"
             },
             "empty_transit_name_labels": [
                 "รถราง",
                 "รถไฟใต้ดิน",
                 "รถไฟ",
-                "รถประจำทาง",
-                "เรือ",
-                "รถกระเช้า",
-                "รถรางสายเคเบิล",
-                "รถรางสายรายเขื่อน"
+                "รสบัส",
+                "เรือข้ามฟาก",
+                "รถราง",
+                "เรือกอนโดลา",
+                "รถกระเช้าไฟฟ้า"
             ],
             "example_phrases": {
                 "0": [
-                    "ยังคงอยู่บน New Haven."
+                    "ยังคงอยู่ที่นิวเฮเวน"
                 ],
                 "1": [
-                    "ยังคงอยู่บน F ไปทาง JAMAICA - 179 ST."
+                    "คงอยู่บน F ไปทาง JAMAICA - 179 ST."
                 ]
             }
         },
         "transit_transfer": {
             "phrases": {
-                "0": "โอนย้ายเพื่อใช้ <TRANSIT_NAME>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)",
-                "1": "โอนย้ายเพื่อใช้ <TRANSIT_NAME> ไปทางทิศตะวันตกเฉียงใต้. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)"
+                "0": "โอนไปรับ <TRANSIT_NAME>- <TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>-",
+                "1": "โอนไปรับ <TRANSIT_NAME> ไปทาง <TRANSIT_HEADSIGN>- <TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>-"
             },
             "empty_transit_name_labels": [
                 "รถราง",
                 "รถไฟใต้ดิน",
                 "รถไฟ",
-                "รถประจำทาง",
-                "เรือ",
-                "รถกระเช้า",
-                "รถรางสายเคเบิล",
-                "รถรางสายรายเขื่อน"
+                "รสบัส",
+                "เรือข้ามฟาก",
+                "รถราง",
+                "เรือกอนโดลา",
+                "รถกระเช้าไฟฟ้า"
             ],
             "transit_stop_count_labels": {
                 "one": "หยุด",
@@ -1816,56 +1955,56 @@
             },
             "example_phrases": {
                 "0": [
-                    "โอนย้ายเพื่อใช้ New Haven. (1 หยุด)",
-                    "โอนย้ายเพื่อใช้รถราง. (4 หยุด)"
+                    "ถ่ายโอนไปยังนิวเฮเวน ",
+                    "เปลี่ยนไปขึ้นรถราง "
                 ],
                 "1": [
-                    "โอนย้ายเพื่อใช้ F ไปทาง JAMAICA - 179 ST. (10 หยุด)"
+                    "เปลี่ยนไปใช้ F ไปทาง JAMAICA - 179 ST. "
                 ]
             }
         },
         "transit_transfer_verbal": {
             "phrases": {
-                "0": "โอนย้ายเพื่อใช้ <TRANSIT_NAME>.",
-                "1": "โอนย้ายเพื่อใช้ <TRANSIT_NAME> ไปทางทิศตะวันตกเฉียงใต้."
+                "0": "โอนไปรับ <TRANSIT_NAME>-",
+                "1": "โอนไปรับ <TRANSIT_NAME> ไปทาง <TRANSIT_HEADSIGN>-"
             },
             "empty_transit_name_labels": [
                 "รถราง",
                 "รถไฟใต้ดิน",
                 "รถไฟ",
-                "รถประจำทาง",
-                "เรือ",
-                "รถกระเช้า",
-                "รถรางสายเคเบิล",
-                "รถรางสายรายเขื่อน"
+                "รสบัส",
+                "เรือข้ามฟาก",
+                "รถราง",
+                "เรือกอนโดลา",
+                "รถกระเช้าไฟฟ้า"
             ],
             "example_phrases": {
                 "0": [
-                    "โอนย้ายเพื่อใช้ New Haven."
+                    "ถ่ายโอนไปยังนิวเฮเวน"
                 ],
                 "1": [
-                    "โอนย้ายเพื่อใช้ F ไปทาง JAMAICA - 179 ST."
+                    "เปลี่ยนไปใช้ F ไปทาง JAMAICA - 179 ST."
                 ]
             }
         },
         "transit_verbal": {
             "phrases": {
-                "0": "ใช้ <TRANSIT_NAME>.",
-                "1": "ใช้ <TRANSIT_NAME> ไปทางทิศตะวันตกเฉียงใต้."
+                "0": "เอา <TRANSIT_NAME>-",
+                "1": "เอา <TRANSIT_NAME> ไปทาง <TRANSIT_HEADSIGN>-"
             },
             "empty_transit_name_labels": [
                 "รถราง",
                 "รถไฟใต้ดิน",
                 "รถไฟ",
-                "รถประจำทาง",
-                "เรือ",
-                "รถกระเช้า",
-                "รถรางสายเคเบิล",
-                "รถรางสายรายเขื่อน"
+                "รสบัส",
+                "เรือข้ามฟาก",
+                "รถราง",
+                "เรือกอนโดลา",
+                "รถกระเช้าไฟฟ้า"
             ],
             "example_phrases": {
                 "0": [
-                    "ใช้ New Haven."
+                    "ใช้นิวเฮเวน"
                 ],
                 "1": [
                     "ใช้ F ไปทาง JAMAICA - 179 ST."
@@ -1874,18 +2013,21 @@
         },
         "turn": {
             "phrases": {
-                "0": "เลี้ยว <RELATIVE_DIRECTION>.",
-                "1": "เลี้ยว <RELATIVE_DIRECTION> เข้า <STREET_NAMES>.",
-                "2": "เลี้ยว <RELATIVE_DIRECTION> เข้า <BEGIN_STREET_NAMES>. ดำเนินต่อไปบน <STREET_NAMES>.",
-                "3": "เลี้ยว <RELATIVE_DIRECTION> เพื่ออยู่บน <STREET_NAMES>.",
-                "4": "เลี้ยว <RELATIVE_DIRECTION> ที่ <JUNCTION_NAME>.",
-                "5": "เลี้ยว <RELATIVE_DIRECTION> ไปทาง <TOWARD_SIGN>."
+                "0": "เปลี่ยน <RELATIVE_DIRECTION>-",
+                "1": "เปลี่ยน <RELATIVE_DIRECTION> ไปยัง <STREET_NAMES>-",
+                "2": "เปลี่ยน <RELATIVE_DIRECTION> ไปยัง <BEGIN_STREET_NAMES>-  <STREET_NAMES>-",
+                "3": "เปลี่ยน <RELATIVE_DIRECTION> ที่จะอยู่ต่อ <STREET_NAMES>-",
+                "4": "เปลี่ยน <RELATIVE_DIRECTION> ที่ <JUNCTION_NAME>-",
+                "5": "เปลี่ยน <RELATIVE_DIRECTION> ไปทาง <TOWARD_SIGN>-"
             },
             "empty_street_name_labels": [
                 "ทางเดิน",
-                "ถนนสำหรับจักรยาน",
-                "เส้นทางจักรยานเสาเข็ม",
-                "ทางข้ามถนน"
+                "ทางจักรยาน",
+                "เส้นทางจักรยานเสือภูเขา",
+                "ทางม้าลาย",
+                "บันได",
+                "สะพาน",
+                "อุโมงค์"
             ],
             "relative_directions": [
                 "ซ้าย",
@@ -1896,36 +2038,39 @@
                     "เลี้ยวซ้าย."
                 ],
                 "1": [
-                    "เลี้ยวขวาเข้า Flatbush Avenue."
+                    "เลี้ยวขวาเข้าสู่แฟลตบุชอเวนิว"
                 ],
                 "2": [
-                    "เลี้ยวซ้ายเข้า North Bond Street/US 1 Business/MD 924. ดำเนินต่อ MD 924."
+                    "เลี้ยวซ้ายเข้าสู่ North Bond Street/US 1 Business/MD 924 เดินต่อไปบน MD 924"
                 ],
                 "3": [
-                    "เลี้ยวขวาเพื่ออยู่บน Sunstone Drive."
+                    "เลี้ยวขวาเพื่ออยู่บน Sunstone Drive"
                 ],
                 "4": [
-                    "เลี้ยวขวาที่ Mannenbashi East."
+                    "เลี้ยวขวาที่มันเน็นบาชิตะวันออก"
                 ],
                 "5": [
-                    "เลี้ยวซ้ายไปทาง Baltimore."
+                    "เลี้ยวซ้ายไปทางบัลติมอร์"
                 ]
             }
         },
         "turn_verbal": {
             "phrases": {
-                "0": "เลี้ยว <RELATIVE_DIRECTION>.",
-                "1": "เลี้ยว <RELATIVE_DIRECTION> เข้า <STREET_NAMES>.",
-                "2": "เลี้ยว <RELATIVE_DIRECTION> เข้า <BEGIN_STREET_NAMES>.",
-                "3": "เลี้ยว <RELATIVE_DIRECTION> เพื่ออยู่บน <STREET_NAMES>.",
-                "4": "เลี้ยว <RELATIVE_DIRECTION> ที่ <JUNCTION_NAME>.",
-                "5": "เลี้ยว <RELATIVE_DIRECTION> ไปทาง <TOWARD_SIGN>."
+                "0": "เปลี่ยน <RELATIVE_DIRECTION>-",
+                "1": "เปลี่ยน <RELATIVE_DIRECTION> ไปยัง <STREET_NAMES>-",
+                "2": "เปลี่ยน <RELATIVE_DIRECTION> ไปยัง <BEGIN_STREET_NAMES>-",
+                "3": "เปลี่ยน <RELATIVE_DIRECTION> ที่จะอยู่ต่อ <STREET_NAMES>-",
+                "4": "เปลี่ยน <RELATIVE_DIRECTION> ที่ <JUNCTION_NAME>-",
+                "5": "เปลี่ยน <RELATIVE_DIRECTION> ไปทาง <TOWARD_SIGN>-"
             },
             "empty_street_name_labels": [
                 "ทางเดิน",
-                "ถนนสำหรับจักรยาน",
-                "เส้นทางจักรยานเสาเข็ม",
-                "ทางข้ามถนน"
+                "ทางจักรยาน",
+                "เส้นทางจักรยานเสือภูเขา",
+                "ทางม้าลาย",
+                "บันได",
+                "สะพาน",
+                "อุโมงค์"
             ],
             "relative_directions": [
                 "ซ้าย",
@@ -1936,38 +2081,41 @@
                     "เลี้ยวซ้าย."
                 ],
                 "1": [
-                    "เลี้ยวขวาเข้า Flatbush Avenue."
+                    "เลี้ยวขวาเข้าสู่แฟลตบุชอเวนิว"
                 ],
                 "2": [
-                    "เลี้ยวซ้ายเข้า North Bond Street, U.S. 1 Business."
+                    "เลี้ยวซ้ายเข้าสู่ North Bond Street, U.S. 1 Business"
                 ],
                 "3": [
-                    "เลี้ยวขวาเพื่ออยู่บน Sunstone Drive."
+                    "เลี้ยวขวาเพื่ออยู่บน Sunstone Drive"
                 ],
                 "4": [
-                    "เลี้ยวขวาที่ Mannenbashi East."
+                    "เลี้ยวขวาที่มันเนนบาชิตะวันออก"
                 ],
                 "5": [
-                    "เลี้ยวซ้ายไปทาง Baltimore."
+                    "เลี้ยวซ้ายไปทางบัลติมอร์"
                 ]
             }
         },
         "uturn": {
             "phrases": {
-                "0": "เลี้ยวทาง<RELATIVE_DIRECTION>เพื่อทำการ U-turn.",
-                "1": "เลี้ยวทาง<RELATIVE_DIRECTION>เพื่อทำการ U-turn ไปทาง <STREET_NAMES>.",
-                "2": "เลี้ยวทาง<RELATIVE_DIRECTION>เพื่อทำการ U-turn เพื่ออยู่บน <STREET_NAMES>.",
-                "3": "เลี้ยวทาง<RELATIVE_DIRECTION>เพื่อทำการ U-turn ที่ <CROSS_STREET_NAMES>.",
-                "4": "เลี้ยวทาง<RELATIVE_DIRECTION>เพื่อทำการ U-turn ที่ <CROSS_STREET_NAMES> เข้า <STREET_NAMES>.",
-                "5": "เลี้ยวทาง<RELATIVE_DIRECTION>เพื่อทำการ U-turn ที่ <CROSS_STREET_NAMES> เพื่ออยู่บน <STREET_NAMES>.",
-                "6": "เลี้ยวทาง<RELATIVE_DIRECTION>เพื่อทำการ U-turn ที่ <JUNCTION_NAME>.",
-                "7": "เลี้ยวทาง<RELATIVE_DIRECTION>เพื่อทำการ U-turn ไปทาง <TOWARD_SIGN>."
+                "0": "ทำ <RELATIVE_DIRECTION> กลับรถ.",
+                "1": "ทำ <RELATIVE_DIRECTION> ยูเทิร์นเข้าสู่ <STREET_NAMES>-",
+                "2": "ทำ <RELATIVE_DIRECTION> กลับรถเพื่ออยู่บน <STREET_NAMES>-",
+                "3": "ทำ <RELATIVE_DIRECTION> กลับรถที่ <CROSS_STREET_NAMES>-",
+                "4": "ทำ <RELATIVE_DIRECTION> กลับรถที่ <CROSS_STREET_NAMES> ไปยัง <STREET_NAMES>-",
+                "5": "ทำ <RELATIVE_DIRECTION> กลับรถที่ <CROSS_STREET_NAMES> ที่จะอยู่ต่อ <STREET_NAMES>-",
+                "6": "ทำ <RELATIVE_DIRECTION> กลับรถที่ <JUNCTION_NAME>-",
+                "7": "ทำ <RELATIVE_DIRECTION> ยูเทิร์นไปทาง <TOWARD_SIGN>-"
             },
             "empty_street_name_labels": [
                 "ทางเดิน",
-                "ถนนสำหรับจักรยาน",
-                "เส้นทางจักรยานเสาเขื่อม",
-                "ทางข้ามถนน"
+                "ทางจักรยาน",
+                "เส้นทางจักรยานเสือภูเขา",
+                "ทางม้าลาย",
+                "บันได",
+                "สะพาน",
+                "อุโมงค์"
             ],
             "relative_directions": [
                 "ซ้าย",
@@ -1975,47 +2123,50 @@
             ],
             "example_phrases": {
                 "0": [
-                    "เลี้ยวทางซ้ายเพื่อทำการ U-turn."
+                    "กลับรถซ้าย."
                 ],
                 "1": [
-                    "เลี้ยวทางขวาเพื่อทำการ U-turn ไปทาง Bunker Hill Road."
+                    "กลับรถขวาเข้าสู่ถนนบังเกอร์ฮิลล์"
                 ],
                 "2": [
-                    "เลี้ยวทางซ้ายเพื่อทำการ U-turn เพื่ออยู่บน Bunker Hill Road."
+                    "กลับรถซ้ายเพื่ออยู่บน Bunker Hill Road"
                 ],
                 "3": [
-                    "เลี้ยวทางซ้ายเพื่อทำการ U-turn ที่ Devonshire Road."
+                    "กลับรถซ้ายที่ถนนเดวอนเชียร์"
                 ],
                 "4": [
-                    "เลี้ยวทางซ้ายเพื่อทำการ U-turn ที่ Devonshire Road เข้า Jonestown Road/US 22."
+                    "กลับรถซ้ายที่ถนน Devonshire เข้าสู่ Jonestown Road/US 22"
                 ],
                 "5": [
-                    "เลี้ยวทางซ้ายเพื่อทำการ U-turn ที่ Devonshire Road เพื่ออยู่บน Jonestown Road/US 22."
+                    "กลับรถซ้ายที่ถนน Devonshire เพื่ออยู่บน Jonestown Road/US 22"
                 ],
                 "6": [
-                    "เลี้ยวทางขวาเพื่อทำการ U-turn ที่ Mannenbashi East."
+                    "กลับรถทางขวาที่มันเน็นบาชิตะวันออก"
                 ],
                 "7": [
-                    "เลี้ยวทางซ้ายเพื่อทำการ U-turn ไปทาง Baltimore."
+                    "กลับรถซ้ายไปทางบัลติมอร์"
                 ]
             }
         },
         "uturn_verbal": {
             "phrases": {
-                "0": "เลี้ยวทาง<RELATIVE_DIRECTION>เพื่อทำการ U-turn.",
-                "1": "\"ทำการเลี้ยวย้อนกลับ<RELATIVE_DIRECTION> เข้าสู่ <STREET_NAMES>\",",
-                "2": "\"ทำการเลี้ยวย้อนกลับ<RELATIVE_DIRECTION> เพื่อยังคงอยู่บน <STREET_NAMES>\",",
-                "3": "\"ทำการเลี้ยวย้อนกลับ<RELATIVE_DIRECTION> ที่ <CROSS_STREET_NAMES>\",",
-                "4": "\"ทำการเลี้ยวย้อนกลับ<RELATIVE_DIRECTION> ที่ <CROSS_STREET_NAMES> เข้าสู่ <STREET_NAMES>\",",
-                "5": "\"ทำการเลี้ยวย้อนกลับ<RELATIVE_DIRECTION> ที่ <CROSS_STREET_NAMES> เพื่อยังคงอยู่บน <STREET_NAMES>\",",
-                "6": "\"ทำการเลี้ยวย้อนกลับ<RELATIVE_DIRECTION> ที่ <JUNCTION_NAME>\",",
-                "7": "ทำการเลี้ยวย้อนกลับ<RELATIVE_DIRECTION> ในทิศทาง <TOWARD_SIGN>"
+                "0": "ทำ <RELATIVE_DIRECTION> กลับรถ.",
+                "1": "ทำ <RELATIVE_DIRECTION> ยูเทิร์นเข้าสู่ <STREET_NAMES>-",
+                "2": "ทำ <RELATIVE_DIRECTION> กลับรถเพื่อวิ่งต่อไป <STREET_NAMES>-",
+                "3": "ทำ <RELATIVE_DIRECTION> กลับรถที่ <CROSS_STREET_NAMES>-",
+                "4": "ทำ <RELATIVE_DIRECTION> กลับรถที่ <CROSS_STREET_NAMES> ไปยัง <STREET_NAMES>-",
+                "5": "ทำ <RELATIVE_DIRECTION> กลับรถที่ <CROSS_STREET_NAMES> ที่จะอยู่ต่อ <STREET_NAMES>-",
+                "6": "ทำ <RELATIVE_DIRECTION> กลับรถที่ <JUNCTION_NAME>-",
+                "7": "ทำ <RELATIVE_DIRECTION> ยูเทิร์นไปทาง <TOWARD_SIGN>-"
             },
             "empty_street_name_labels": [
                 "ทางเดิน",
-                "ทางปั่นจักรยาน",
-                "เส้นทางปั่นจักรยานลงเขา",
-                "ทางข้าม"
+                "ทางจักรยาน",
+                "เส้นทางจักรยานเสือภูเขา",
+                "ทางม้าลาย",
+                "บันได",
+                "สะพาน",
+                "อุโมงค์"
             ],
             "relative_directions": [
                 "ซ้าย",
@@ -2023,39 +2174,35 @@
             ],
             "example_phrases": {
                 "0": [
-                    "เลี้ยวซ้ายเพื่อทำการเลี้ยวยู"
+                    "กลับรถซ้าย."
                 ],
                 "1": [
-                    "เลี้ยวขวาเพื่อทำการเลี้ยวยูที่ถนนบังเกอร์ฮิลล์"
+                    "กลับรถขวาเข้าสู่ถนนบังเกอร์ฮิลล์"
                 ],
                 "2": [
-                    "เลี้ยวซ้ายเพื่อทำการเลี้ยวยูเพื่อยังคงอยู่บนถนนบังเกอร์ฮิลล์"
+                    "กลับรถซ้ายเพื่ออยู่บน Bunker Hill Road"
                 ],
                 "3": [
-                    "เลี้ยวซ้ายเพื่อทำการเลี้ยวยูที่ถนนเดวอนเชียร์"
+                    "กลับรถซ้ายที่ถนนเดวอนเชียร์"
                 ],
                 "4": [
-                    "เลี้ยวซ้ายเพื่อทำการเลี้ยวยูที่ถนนเดวอนเชียร์เพื่อไปยังถนนโจนส์ทาวน์, ยู.เอส. 22"
+                    "กลับรถซ้ายที่ถนน Devonshire เข้าสู่ Jonestown Road, U.S. 22"
                 ],
                 "5": [
-                    "เลี้ยวซ้ายเพื่อทำการเลี้ยวยูที่ถนนเดวอนเชียร์เพื่อยังคงอยู่บนถนนโจนส์ทาวน์, ยู.เอส. 22"
+                    "กลับรถซ้ายที่ถนน Devonshire เพื่ออยู่บน Jonestown Road, U.S. 22"
                 ],
                 "6": [
-                    "เลี้ยวขวาเพื่อทำการเลี้ยวยูที่มันเนนบาชิอีสต์"
+                    "กลับรถทางขวาที่มันเน็นบาชิตะวันออก"
                 ],
                 "7": [
-                    "เลี้ยวซ้ายเพื่อทำการเลี้ยวยูในทิศทางบอลติมอร์"
+                    "กลับรถซ้ายไปทางบัลติมอร์"
                 ]
             }
         },
         "verbal_multi_cue": {
             "phrases": {
-                "0": [
-                    "<CURRENT_VERBAL_CUE> จากนั้น <NEXT_VERBAL_CUE>"
-                ],
-                "1": [
-                    "<CURRENT_VERBAL_CUE> จากนั้น, ในระยะ <LENGTH>, <NEXT_VERBAL_CUE>"
-                ]
+                "0": "<CURRENT_VERBAL_CUE> แล้ว <NEXT_VERBAL_CUE>",
+                "1": "<CURRENT_VERBAL_CUE> แล้วเข้า. <LENGTH>- <NEXT_VERBAL_CUE>"
             },
             "metric_lengths": [
                 "<KILOMETERS> กิโลเมตร",
@@ -2068,21 +2215,21 @@
                 "1 ไมล์",
                 "ครึ่งไมล์",
                 "หนึ่งในสี่ไมล์",
-                "<FEET> ฟุต",
+                "<FEET> เท้า",
                 "น้อยกว่า 10 ฟุต"
             ],
             "example_phrases": {
                 "0": [
-                    "เลี้ยวขวาเข้าถนนฟายอตต์ตะวันออก จากนั้น เลี้ยวขวาเข้าถนนเกย์ตะวันเหนือ"
+                    "เลี้ยวขวาเข้าสู่ถนน East Fayette "
                 ],
                 "1": [
-                    "เลี้ยวขวาเข้าถนนฟายอตต์ตะวันออก จากนั้น, ในระยะ 500 ฟุต, เลี้ยวขวาเข้าถนนเกย์ตะวันเหนือ"
+                    "เลี้ยวขวาเข้าสู่ถนน East Fayette "
                 ]
             }
         },
         "approach_verbal_alert": {
             "phrases": {
-                "0": "ในระยะ <LENGTH>, <CURRENT_VERBAL_CUE>"
+                "0": "ใน <LENGTH>- <CURRENT_VERBAL_CUE>"
             },
             "metric_lengths": [
                 "<KILOMETERS> กิโลเมตร",
@@ -2095,114 +2242,110 @@
                 "1 ไมล์",
                 "ครึ่งไมล์",
                 "หนึ่งในสี่ไมล์",
-                "<FEET> ฟุต",
+                "<FEET> เท้า",
                 "น้อยกว่า 10 ฟุต"
             ],
             "example_phrases": {
                 "0": [
-                    "ในระยะหนึ่งในสี่ไมล์, เลี้ยวขวาเข้าถนนเกย์ตะวันเหนือ"
+                    "ในอีกสี่ไมล์ เลี้ยวขวาเข้าสู่ North Gay Street"
                 ]
             }
         },
         "pass": {
             "phrases": {
-                "0": "ผ่าน <OBJECT_LABEL>.",
-                "1": "ผ่านสัญญาณไฟจราจรที่ <OBJECT_LABEL>."
+                "0": "ผ่าน <OBJECT_LABEL>-",
+                "1": "ผ่านสัญญาณไฟจราจร <OBJECT_LABEL>-"
             },
             "object_labels": [
                 "ประตู",
-                "คู่มือเสา",
-                "สี่แยก"
+                "เสา",
+                "ทางแยก"
             ],
             "example_phrases": {
                 "0": [
-                    "ผ่านประตู."
+                    "ผ่านประตู"
                 ]
             }
         },
         "elevator": {
             "phrases": {
-                "0": [
-                    "ใช้ลิฟต์"
-                ],
-                "1": [
-                    "ใช้ลิฟต์ไปยัง <LEVEL>"
-                ]
+                "0": "ขึ้นลิฟต์",
+                "1": "ขึ้นลิฟต์ไป <LEVEL>-"
             },
             "example_phrases": {
                 "0": [
-                    "ใช้ลิฟต์"
+                    "ขึ้นลิฟต์"
                 ],
                 "1": [
-                    "ใช้ลิฟต์ขึ้นไปชั้น 1"
+                    "ขึ้นลิฟต์ไปที่ชั้น 1"
                 ]
             }
         },
         "steps": {
             "phrases": {
-                "0": "ใช้บันได",
-                "1": "ใช้บันไดขึ้นไปที่ <LEVEL>"
+                "0": "ขึ้นบันได",
+                "1": "ขึ้นบันไดไป <LEVEL>-"
             },
             "example_phrases": {
                 "0": [
-                    "ใช้บันได"
+                    "ขึ้นบันได"
                 ],
                 "1": [
-                    "ใช้บันไดขึ้นไปชั้น 2"
+                    "ขึ้นบันไดไปยังชั้น 2"
                 ]
             }
         },
         "escalator": {
             "phrases": {
-                "0": "ใช้เลื่อนบันได",
-                "1": "ใช้เลื่อนบันไดขึ้นไปที่ <LEVEL>"
+                "0": "ขึ้นบันไดเลื่อน",
+                "1": "ขึ้นบันไดเลื่อนไป <LEVEL>-"
             },
             "example_phrases": {
                 "0": [
-                    "ใช้เลื่อนบันได"
+                    "ขึ้นบันไดเลื่อน"
                 ],
                 "1": [
-                    "ใช้เลื่อนบันไดขึ้นไปชั้น 3"
+                    "ขึ้นบันไดเลื่อนไปยังชั้น 3"
                 ]
             }
         },
         "enter_building": {
             "phrases": {
-                "0": "เข้าไปในอาคาร",
-                "1": "เข้าไปในอาคาร และต่อเนื่องไปที่ <STREET_NAMES>"
+                "0": "เข้าไปในอาคาร.",
+                "1": "เข้าไปในอาคารแล้วเดินต่อไป <STREET_NAMES>-"
             },
             "empty_street_name_labels": [
                 "ทางเดิน",
-                "ทางขี่จักรยาน",
-                "ทางปั่นจักรยานเสือภูเขา",
-                "ทางข้ามถนน"
+                "ทางจักรยาน",
+                "เส้นทางจักรยานเสือภูเขา",
+                "ทางม้าลาย"
             ],
             "example_phrases": {
                 "0": [
-                    "เข้าไปในอาคาร"
+                    "เข้าไปในอาคาร."
                 ],
                 "1": [
-                    "เข้าไปในอาคาร และต่อเนื่องไปที่ทางเดิน"
+                    "เข้าไปในอาคารแล้วเดินต่อไปตามทางเดิน"
                 ]
             }
         },
         "exit_building": {
             "phrases": {
                 "0": "ออกจากอาคาร",
-                "1": "ออกจากอาคาร และต่อเนื่องไปที่ <STREET_NAMES>"
+                "1": "ออกจากอาคารแล้วเดินต่อ <STREET_NAMES>-"
             },
             "empty_street_name_labels": [
                 "ทางเดิน",
-                "ทางขี่จักรยาน",
-                "ทางปั่นจักรยานเสือภูเขา",
-                "ทางข้ามถนน"
+                "ทางจักรยาน",
+                "เส้นทางจักรยานเสือภูเขา",
+                "ทางม้าลาย"
             ],
             "example_phrases": {
                 "0": [
                     "ออกจากอาคาร"
                 ],
                 "1": [
-                    "ออกจากอาคาร และต่อเนื่องไปที่ทางเดิน"
+                    "ออกจากอาคารแล้วเดินต่อไปตามทางเดิน"
                 ]
             }
         }

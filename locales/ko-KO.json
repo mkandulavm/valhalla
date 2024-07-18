@@ -1,1787 +1,2353 @@
 {
-    "posix_locale": "ko_KO.UTF-8",
-    "aliases": [
-        "ko"
-    ],
-    "instructions": {
-        "arrive": {
-            "phrases": {
-                "0": "도착: <TIME>.",
-                "1": "도착: <TIME>에 <TRANSIT_STOP>."
-            },
-            "example_phrases": {
-                "0": [
-                    "8:02 AM에 도착."
-                ],
-                "1": [
-                    "8 St - NYU에서 8:02 AM에 도착."
-                ]
-            }
-        },
-        "arrive_verbal": {
-            "phrases": {
-                "0": "<TIME>에 도착.",
-                "1": "<TIME>에 <TRANSIT_STOP>에 도착."
-            },
-            "example_phrases": {
-                "0": [
-                    "8:02 AM에 도착."
-                ],
-                "1": [
-                    "8 St - NYU에서 8:02 AM에 도착."
-                ]
-            }
-        },
-        "bear": {
-            "phrases": {
-                "0": "<RELATIVE_DIRECTION> 방향으로.",
-                "1": "<STREET_NAMES>로 <RELATIVE_DIRECTION> 방향으로.",
-                "2": "<BEGIN_STREET_NAMES>로 <RELATIVE_DIRECTION> 방향으로. <STREET_NAMES> 계속.",
-                "3": "<STREET_NAMES>를 계속하려면 <RELATIVE_DIRECTION> 방향으로.",
-                "4": "<JUNCTION_NAME>에서 <RELATIVE_DIRECTION> 방향으로.",
-                "5": "<TOWARD_SIGN> 쪽으로 <RELATIVE_DIRECTION> 방향으로."
-            },
-            "empty_street_name_labels": [
-                "보도",
-                "자전거 도로",
-                "산악 자전거 트레일",
-                "횡단보도"
-            ],
-            "relative_directions": [
-                "왼쪽",
-                "오른쪽"
-            ],
-            "example_phrases": {
-                "0": [
-                    "오른쪽으로."
-                ],
-                "1": [
-                    "Arlen Road로 왼쪽으로."
-                ],
-                "2": [
-                    "Belair Road/US 1 Business로 오른쪽으로. US 1 Business 계속."
-                ],
-                "3": [
-                    "US 15 South를 계속하려면 왼쪽으로."
-                ],
-                "4": [
-                    "Mannenbashi East에서 오른쪽으로."
-                ],
-                "5": [
-                    "Baltimore 쪽으로 왼쪽으로."
-                ]
-            }
-        },
-        "bear_verbal": {
-            "phrases": {
-                "0": "<RELATIVE_DIRECTION> 방향으로.",
-                "1": "<STREET_NAMES>로 <RELATIVE_DIRECTION> 방향으로.",
-                "2": "<BEGIN_STREET_NAMES>로 <RELATIVE_DIRECTION> 방향으로.",
-                "3": "<STREET_NAMES>를 계속하려면 <RELATIVE_DIRECTION> 방향으로.",
-                "4": "<JUNCTION_NAME>에서 <RELATIVE_DIRECTION> 방향으로.",
-                "5": "<TOWARD_SIGN> 쪽으로 <RELATIVE_DIRECTION> 방향으로."
-            },
-            "empty_street_name_labels": [
-                "보도",
-                "자전거 도로",
-                "산악 자전거 트레일",
-                "횡단보도"
-            ],
-            "relative_directions": [
-                "왼쪽",
-                "오른쪽"
-            ],
-            "example_phrases": {
-                "0": [
-                    "오른쪽으로."
-                ],
-                "1": [
-                    "Arlen Road로 왼쪽으로."
-                ],
-                "2": [
-                    "Belair Road, U.S. 1 Business로 오른쪽으로."
-                ],
-                "3": [
-                    "U.S. 15 South를 계속하려면 왼쪽으로."
-                ],
-                "4": [
-                    "Mannenbashi East에서 오른쪽으로."
-                ],
-                "5": [
-                    "Baltimore 쪽으로 왼쪽으로."
-                ]
-            }
-        },
-        "becomes": {
-            "phrases": {
-                "0": "<PREVIOUS_STREET_NAMES>은(는) <STREET_NAMES>(으)로 바뀝니다."
-            },
-            "example_phrases": {
-                "0": [
-                    "Vine Street은 Middletown Road로 바뀝니다."
-                ]
-            }
-        },
-        "becomes_verbal": {
-            "phrases": {
-                "0": "<PREVIOUS_STREET_NAMES>은(는) <STREET_NAMES>(으)로 바뀝니다."
-            },
-            "example_phrases": {
-                "0": [
-                    "Vine Street은 Middletown Road로 바뀝니다."
-                ]
-            }
-        },
-        "continue": {
-            "phrases": {
-                "0": "계속하십시오.",
-                "1": "<STREET_NAMES>를 계속하십시오.",
-                "2": "<JUNCTION_NAME>에서 계속하십시오.",
-                "3": "\"<TOWARD_SIGN> 쪽으로 계속하십시오.\"]"
-            },
-            "empty_street_name_labels": [
-                "보도",
-                "자전거 도로",
-                "산악 자전거 트레일",
-                "횡단보도"
-            ],
-            "example_phrases": {
-                "0": [
-                    "계속하십시오."
-                ],
-                "1": [
-                    "10th Avenue를 계속하십시오."
-                ],
-                "2": [
-                    "Mannenbashi East에서 계속하십시오."
-                ],
-                "3": [
-                    "Baltimore 쪽으로 계속하십시오."
-                ]
-            }
-        },
-        "continue_verbal": {
-            "phrases": {
-                "0": "계속하십시오.",
-                "1": "<LENGTH>만큼 계속하십시오.",
-                "2": "<STREET_NAMES>를 계속하십시오.",
-                "3": "<STREET_NAMES>를 <LENGTH>만큼 계속하십시오.",
-                "4": "<JUNCTION_NAME>에서 계속하십시오.",
-                "5": "<JUNCTION_NAME>에서 <LENGTH>만큼 계속하십시오.",
-                "6": "\"<TOWARD_SIGN> 쪽으로 계속하십시오.\"]",
-                "7": "\"<TOWARD_SIGN> 쪽으로 <LENGTH>만큼 계속하십시오.\"]"
-            },
-            "empty_street_name_labels": [
-                "보도",
-                "자전거 도로",
-                "산악 자전거 트레일",
-                "횡단보도"
-            ],
-            "metric_lengths": [
-                "<KILOMETERS> 킬로미터",
-                "1 킬로미터",
-                "<METERS> 미터",
-                "10 미터 미만"
-            ],
-            "us_customary_lengths": [
-                "<MILES> 마일",
-                "1 마일",
-                "반 마일",
-                "사분의 일 마일",
-                "<FEET> 피트",
-                "10 피트 미만"
-            ],
-            "example_phrases": {
-                "0": [
-                    "계속하십시오."
-                ],
-                "1": [
-                    "300 피트만큼 계속하십시오."
-                ],
-                "2": [
-                    "10th Avenue를 계속하십시오."
-                ],
-                "3": [
-                    "10th Avenue를 3 마일만큼 계속하십시오."
-                ],
-                "4": [
-                    "Mannenbashi East에서 계속하십시오."
-                ],
-                "5": [
-                    "Mannenbashi East에서 2 마일만큼 계속하십시오."
-                ],
-                "6": [
-                    "Baltimore 쪽으로 계속하십시오."
-                ],
-                "7": [
-                    "Baltimore 쪽으로 5 마일만큼 계속하십시오."
-                ]
-            }
-        },
-        "continue_verbal_alert": {
-            "phrases": {
-                "0": "계속하십시오.",
-                "1": "<STREET_NAMES>를 계속하십시오.",
-                "2": "<JUNCTION_NAME>에서 계속하십시오.",
-                "3": "<TOWARD_SIGN> 쪽으로 계속하십시오."
-            },
-            "empty_street_name_labels": [
-                "보도",
-                "자전거 도로",
-                "산악 자전거 트레일",
-                "횡단보도"
-            ],
-            "example_phrases": {
-                "0": [
-                    "계속하십시오."
-                ],
-                "1": [
-                    "10th Avenue를 계속하십시오."
-                ],
-                "2": [
-                    "Mannenbashi East에서 계속하십시오."
-                ],
-                "3": [
-                    "Baltimore 쪽으로 계속하십시오."
-                ]
-            }
-        },
-        "depart": {
-            "phrases": {
-                "0": "출발: <TIME>.",
-                "1": "<TRANSIT_STOP>에서 <TIME>에 출발."
-            },
-            "example_phrases": {
-                "0": [
-                    "8:02 AM에 출발."
-                ],
-                "1": [
-                    "8 St - NYU에서 8:02 AM에 출발."
-                ]
-            }
-        },
-        "depart_verbal": {
-            "phrases": {
-                "0": "<TIME>에 출발.",
-                "1": "<TRANSIT_STOP>에서 <TIME>에 출발."
-            },
-            "example_phrases": {
-                "0": [
-                    "8:02 AM에 출발."
-                ],
-                "1": [
-                    "8 St - NYU에서 8:02 AM에 출발."
-                ]
-            }
-        },
-        "destination": {
-            "phrases": {
-                "0": "목적지에 도착했습니다.",
-                "1": "<DESTINATION>에 도착했습니다.",
-                "2": "목적지는 <RELATIVE_DIRECTION>에 있습니다.",
-                "3": "<DESTINATION>은(는) <RELATIVE_DIRECTION>에 있습니다."
-            },
-            "relative_directions": [
-                "왼쪽",
-                "오른쪽"
-            ],
-            "example_phrases": {
-                "0": [
-                    "목적지에 도착했습니다."
-                ],
-                "1": [
-                    "3206 Powelton Avenue에 도착했습니다."
-                ],
-                "2": [
-                    "목적지는 왼쪽에 있습니다.",
-                    "목적지는 오른쪽에 있습니다."
-                ],
-                "3": [
-                    "Lancaster Brewing Company는 왼쪽에 있습니다."
-                ]
-            }
-        },
-        "destination_verbal": {
-            "phrases": {
-                "0": "목적지에 도착했습니다.",
-                "1": "<DESTINATION>에 도착했습니다.",
-                "2": "목적지는 <RELATIVE_DIRECTION>에 있습니다.",
-                "3": "<DESTINATION>은(는) <RELATIVE_DIRECTION>에 있습니다."
-            },
-            "relative_directions": [
-                "왼쪽",
-                "오른쪽"
-            ],
-            "example_phrases": {
-                "0": [
-                    "목적지에 도착했습니다."
-                ],
-                "1": [
-                    "32 o6 Powelton Avenue에 도착했습니다."
-                ],
-                "2": [
-                    "목적지는 왼쪽에 있습니다.",
-                    "목적지는 오른쪽에 있습니다."
-                ],
-                "3": [
-                    "Lancaster Brewing Company는 왼쪽에 있습니다."
-                ]
-            }
-        },
-        "destination_verbal_alert": {
-            "phrases": {
-                "0": "목적지에 도착할 예정입니다.",
-                "1": "<DESTINATION>에 도착할 예정입니다.",
-                "2": "목적지는 <RELATIVE_DIRECTION>에 있을 것입니다.",
-                "3": "<DESTINATION>은(는) <RELATIVE_DIRECTION>에 있을 것입니다."
-            },
-            "relative_directions": [
-                "왼쪽",
-                "오른쪽"
-            ],
-            "example_phrases": {
-                "0": [
-                    "목적지에 도착할 예정입니다."
-                ],
-                "1": [
-                    "32 o6 Powelton Avenue에 도착할 예정입니다."
-                ],
-                "2": [
-                    "목적지는 왼쪽에 있을 것입니다.",
-                    "목적지는 오른쪽에 있을 것입니다."
-                ],
-                "3": [
-                    "Lancaster Brewing Company는 왼쪽에 있을 것입니다."
-                ]
-            }
-        },
-        "enter_ferry": {
-            "phrases": {
-                "0": "페리를 이용하십시오.",
-                "1": "<STREET_NAMES>를 이용하십시오.",
-                "2": "\"<STREET_NAMES> <FERRY_LABEL>를 이용하십시오.\"]",
-                "3": "\"<TOWARD_SIGN> 쪽 페리를 이용하십시오.\"]"
-            },
-            "empty_street_name_labels": [
-                "보도",
-                "자전거 도로",
-                "산악 자전거 트레일",
-                "횡단보도"
-            ],
-            "ferry_label": "페리",
-            "example_phrases": {
-                "0": [
-                    "페리를 이용하십시오."
-                ],
-                "1": [
-                    "Millersburg 페리를 이용하십시오."
-                ],
-                "2": [
-                    "Bridgeport - Port Jefferson 페리를 이용하십시오."
-                ],
-                "3": [
-                    "Cape May 쪽 페리를 이용하십시오."
-                ]
-            }
-        },
-        "enter_ferry_verbal": {
-            "phrases": {
-                "0": "페리를 이용하십시오.",
-                "1": "<STREET_NAMES>를 이용하십시오.",
-                "2": "\"<STREET_NAMES> <FERRY_LABEL>를 이용하십시오.\"]",
-                "3": "\"<TOWARD_SIGN> 쪽 페리를 이용하십시오.\"]"
-            },
-            "empty_street_name_labels": [
-                "보도",
-                "자전거 도로",
-                "산악 자전거 트레일",
-                "횡단보도"
-            ],
-            "ferry_label": "페리",
-            "example_phrases": {
-                "0": [
-                    "페리를 이용하십시오."
-                ],
-                "1": [
-                    "Millersburg 페리를 이용하십시오."
-                ],
-                "2": [
-                    "Bridgeport - Port Jefferson 페리를 이용하십시오."
-                ],
-                "3": [
-                    "Cape May 쪽 페리를 이용하십시오."
-                ]
-            }
-        },
-        "enter_roundabout": {
-            "phrases": {
-                "0": "회전교차로에 들어가십시오.",
-                "1": "회전교차로에 들어가서 <ORDINAL_VALUE>번째 출구를 이용하십시오.",
-                "2": "회전교차로에 들어가서 <ORDINAL_VALUE>번째 출구로 <ROUNDABOUT_EXIT_STREET_NAMES>로 나가십시오.",
-                "3": "회전교차로에 들어가서 <ORDINAL_VALUE>번째 출구로 <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>로 나가고, <ROUNDABOUT_EXIT_STREET_NAMES>를 계속 따라가십시오.",
-                "4": "회전교차로에 들어가서 <ORDINAL_VALUE>번째 출구를 <TOWARD_SIGN> 방향으로 이용하십시오.",
-                "5": "회전교차로에 들어가서 출구로 <ROUNDABOUT_EXIT_STREET_NAMES>로 나가십시오.",
-                "6": "회전교차로에 들어가서 출구로 <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>로 나가고, <ROUNDABOUT_EXIT_STREET_NAMES>를 계속 따라가십시오.",
-                "7": "회전교차로에 들어가서 <TOWARD_SIGN> 방향의 출구를 이용하십시오.",
-                "8": "<STREET_NAMES>로 들어가십시오.",
-                "9": "<STREET_NAMES>로 들어가서 <ORDINAL_VALUE>번째 출구를 이용하십시오.",
-                "10": "<STREET_NAMES>로 들어가서 <ORDINAL_VALUE>번째 출구로 <ROUNDABOUT_EXIT_STREET_NAMES>로 나가십시오.",
-                "11": "<STREET_NAMES>에 진입하고 <ORDINAL_VALUE> 출구로 <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>로 나가십시오. <ROUNDABOUT_EXIT_STREET_NAMES>을 계속 진행하십시오.",
-                "12": "<STREET_NAMES>에 진입하고 <TOWARD_SIGN> 방향의 <ORDINAL_VALUE> 출구로 나가십시오.",
-                "13": "<STREET_NAMES>에 진입하고 <ROUNDABOUT_EXIT_STREET_NAMES>로 나가십시오.",
-                "14": "<STREET_NAMES>에 진입하고 <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>로 나가십시오. <ROUNDABOUT_EXIT_STREET_NAMES>을 계속 진행하십시오.",
-                "15": "<STREET_NAMES>에 진입하고 <TOWARD_SIGN> 방향으로 나가십시오."
-            },
-            "ordinal_values": "1번\", \"2번\", \"3번\", \"4번\", \"5번\", \"6번\", \"7번\", \"8번\", \"9번\", \"10번",
-            "empty_street_name_labels": "보도\", \"자전거 도로\", \"산악 자전거 길\", \"횡단보도",
-            "example_phrases": {
-                "0": "회전교차로에 진입하십시오.",
-                "1": "회전교차로에 진입하고 1번 출구로 나가십시오.\", \"회전교차로에 진입하고 2번 출구로 나가십시오.\" ... \"회전교차로에 진입하고 10번 출구로 나가십시오.",
-                "2": "회전교차로에 진입하고 3번 출구로 Main Street로 나가십시오.",
-                "3": "회전교차로에 진입하고 3번 출구로 US 322/Main Street로 나가십시오. US 322를 계속 진행하십시오.",
-                "4": "회전교차로에 진입하고 Baltimore 방향 3번 출구로 나가십시오.",
-                "5": "회전교차로에 진입하고 Main Street 방향으로 나가십시오.",
-                "6": "회전교차로에 진입하고 US 322/Main Street로 나가십시오. US 322를 계속 진행하십시오.",
-                "7": "회전교차로에 진입하고 Baltimore 방향으로 나가십시오.",
-                "8": "Dupont Circle에 진입하십시오.",
-                "9": "Dupont Circle에 진입하고 1번 출구로 나가십시오.",
-                "10": "Dupont Circle에 진입하고 3번 출구로 Main Street로 나가십시오.",
-                "11": "Dupont Circle에 진입하고 3번 출구로 US 322/Main Street로 나가십시오. US 322를 계속 진행하십시오.",
-                "12": "Dupont Circle에 진입하고 Baltimore 방향 3번 출구로 나가십시오.",
-                "13": "Dupont Circle에 진입하고 Main Street 방향으로 나가십시오.",
-                "14": "Dupont Circle에 진입하고 US 322/Main Street로 나가십시오. US 322를 계속 진행하십시오.",
-                "15": "Dupont Circle에 진입하고 Baltimore 방향으로 나가십시오."
-            }
-        },
-        "enter_roundabout_verbal": {
-            "phrases": {
-                "0": "회전교차로에 진입하십시오.",
-                "1": "회전교차로에 진입하고 <ORDINAL_VALUE> 출구로 나가십시오.",
-                "2": "회전교차로에 진입하고 <ORDINAL_VALUE> 출구로 <ROUNDABOUT_EXIT_STREET_NAMES>로 나가십시오.",
-                "3": "회전교차로에 진입하고 <ORDINAL_VALUE> 출구로 <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>로 나가십시오.",
-                "4": "회전교차로에 진입하고 <ORDINAL_VALUE> 출구를 <TOWARD_SIGN> 방향으로 나가십시오.",
-                "5": "회전교차로에 진입하고 <ROUNDABOUT_EXIT_STREET_NAMES>로 나가십시오.",
-                "6": "회전교차로에 진입하고 <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>로 나가십시오.",
-                "7": "회전교차로에 진입하고 <TOWARD_SIGN> 방향으로 나가십시오.",
-                "8": "<STREET_NAMES>에 진입하십시오.",
-                "9": "<STREET_NAMES>에 진입하고 <ORDINAL_VALUE> 출구로 나가십시오.",
-                "10": "<STREET_NAMES>에 진입하고 <ORDINAL_VALUE> 출구로 <ROUNDABOUT_EXIT_STREET_NAMES>로 나가십시오.",
-                "11": "<STREET_NAMES>에 진입하고 <ORDINAL_VALUE> 출구로 <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>로 나가십시오.",
-                "12": "<STREET_NAMES>에 진입하고 <ORDINAL_VALUE> 출구를 <TOWARD_SIGN> 방향으로 나가십시오.",
-                "13": "<STREET_NAMES>에 진입하고 <ROUNDABOUT_EXIT_STREET_NAMES>로 나가십시오.",
-                "14": "<STREET_NAMES>에 진입하고 <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>로 나가십시오.",
-                "15": "<STREET_NAMES>에 진입하고 <TOWARD_SIGN> 방향으로 나가십시오."
-            },
-            "ordinal_values": "1번\", \"2번\", \"3번\", \"4번\", \"5번\", \"6번\", \"7번\", \"8번\", \"9번\", \"10번",
-            "empty_street_name_labels": "보도\", \"자전거 도로\", \"산악 자전거 길\", \"횡단보도",
-            "example_phrases": {
-                "0": "회전교차로에 진입하십시오.",
-                "1": "회전교차로에 진입하고 1번 출구로 나가십시오.\", \"회전교차로에 진입하고 2번 출구로 나가십시오.\" ... \"회전교차로에 진입하고 10번 출구로 나가십시오.",
-                "2": "회전교차로에 진입하고 3번 출구로 Main Street로 나가십시오.",
-                "3": "회전교차로에 진입하고 3번 출구로 U.S. 3 22/Main Street로 나가십시오.",
-                "4": "회전교차로에 진입하고 3번 출구로 Baltimore 방향으로 나가십시오.",
-                "5": "회전교차로에 진입하고 Main Street 방향으로 나가십시오.",
-                "6": "회전교차로에 진입하고 U.S. 3 22/Main Street로 나가십시오.",
-                "7": "회전교차로에 진입하고 Baltimore 방향으로 나가십시오.",
-                "8": "Dupont Circle에 진입하십시오.",
-                "9": "Dupont Circle에 진입하고 1번 출구로 나가십시오.",
-                "10": "Dupont Circle에 진입하고 3번 출구로 Main Street로 나가십시오.",
-                "11": "Dupont Circle에 진입하고 3번 출구로 U.S. 3 22/Main Street로 나가십시오.",
-                "12": "Dupont Circle에 진입하고 3번 출구로 Baltimore 방향으로 나가십시오.",
-                "13": "Dupont Circle에 진입하고 Main Street 방향으로 나가십시오.",
-                "14": "Dupont Circle에 진입하고 U.S. 3 22/Main Street 방향으로 나가십시오.",
-                "15": "Dupont Circle에 진입하고 Baltimore 방향으로 나가십시오."
-            }
-        },
-        "exit": {
-            "phrases": {
-                "0": "<RELATIVE_DIRECTION> 방향으로 출구를 이용하십시오.",
-                "1": "<RELATIVE_DIRECTION> 방향으로 <NUMBER_SIGN>번 출구를 이용하십시오.",
-                "2": "<RELATIVE_DIRECTION> 방향 <BRANCH_SIGN> 출구를 이용하십시오.",
-                "3": "<RELATIVE_DIRECTION> 방향으로 <NUMBER_SIGN>번 출구를 <BRANCH_SIGN> 방향으로 이용하십시오.",
-                "4": "<RELATIVE_DIRECTION> 방향으로 <TOWARD_SIGN> 방향 출구를 이용하십시오.",
-                "5": "<RELATIVE_DIRECTION> 방향으로 <NUMBER_SIGN>번 출구를 <TOWARD_SIGN> 방향으로 이용하십시오.",
-                "6": "<RELATIVE_DIRECTION> 방향 <BRANCH_SIGN> 출구를 <TOWARD_SIGN> 방향으로 이용하십시오.",
-                "7": "<RELATIVE_DIRECTION> 방향으로 <NUMBER_SIGN>번 출구를 <BRANCH_SIGN> 방향, <TOWARD_SIGN> 방향으로 이용하십시오.",
-                "8": "<RELATIVE_DIRECTION> 방향 <NAME_SIGN> 출구를 이용하십시오.",
-                "10": "<RELATIVE_DIRECTION> 방향 <NAME_SIGN> 출구를 <BRANCH_SIGN> 방향으로 이용하십시오.",
-                "12": "<RELATIVE_DIRECTION> 방향 <NAME_SIGN> 출구를 <TOWARD_SIGN> 방향으로 이용하십시오.",
-                "14": "<RELATIVE_DIRECTION> 방향 <NAME_SIGN> 출구를 <BRANCH_SIGN> 방향, <TOWARD_SIGN> 방향으로 이용하십시오.",
-                "15": "출구를 이용하십시오.",
-                "16": "<NUMBER_SIGN>번 출구를 이용하십시오.",
-                "17": "<BRANCH_SIGN> 출구를 이용하십시오.",
-                "18": "<NUMBER_SIGN>번 출구를 <BRANCH_SIGN> 방향으로 이용하십시오.",
-                "19": "<TOWARD_SIGN> 방향 출구를 이용하십시오.",
-                "20": "<NUMBER_SIGN>번 출구를 <TOWARD_SIGN> 방향으로 이용하십시오.",
-                "21": "<BRANCH_SIGN> 출구를 <TOWARD_SIGN> 방향으로 이용하십시오.",
-                "22": "<NUMBER_SIGN>번 출구를 <BRANCH_SIGN> 방향, <TOWARD_SIGN> 방향으로 이용하십시오.",
-                "23": "<NAME_SIGN> 출구를 이용하십시오.",
-                "25": "<NAME_SIGN> 출구를 <BRANCH_SIGN> 방향으로 이용하십시오.",
-                "27": "<NAME_SIGN> 출구를 <TOWARD_SIGN> 방향으로 이용하십시오.",
-                "29": "<NAME_SIGN> 출구를 <BRANCH_SIGN> 방향, <TOWARD_SIGN> 방향으로 이용하십시오."
-            },
-            "relative_directions": "왼쪽\", \"오른쪽",
-            "example_phrases": {
-                "0": "왼쪽으로 출구를 이용하십시오.\", \"오른쪽으로 출구를 이용하십시오.",
-                "1": "오른쪽으로 67 B-A 번 출구를 이용하십시오.",
-                "2": "오른쪽으로 US 322 West 출구를 이용하십시오.",
-                "3": "오른쪽으로 67 B-A 번 출구를 US 322 West 방향으로 이용하십시오.",
-                "4": "오른쪽으로 Lewistown 방향 출구를 이용하십시오.",
-                "5": "오른쪽으로 67 B-A 번 출구를 Lewistown 방향으로 이용하십시오.",
-                "6": "오른쪽으로 US 322 West 출구를 Lewistown 방향으로 이용하십시오.",
-                "7": "오른쪽으로 67 B-A 번 출구를 US 322 West, Lewistown/State College 방향으로 이용하십시오.",
-                "8": "왼쪽으로 White Marsh Boulevard 출구를 이용하십시오.",
-                "10": "왼쪽으로 White Marsh Boulevard 출구를 MD 43 East 방향으로 이용하십시오.",
-                "12": "왼쪽으로 White Marsh Boulevard 출구를 White Marsh 방향으로 이용하십시오.",
-                "14": "왼쪽으로 White Marsh Boulevard 출구를 MD 43 East, White Marsh 방향으로 이용하십시오.",
-                "15": "출구를 이용하십시오.",
-                "16": "67 B-A 번 출구를 이용하십시오.",
-                "17": "US 322 West 출구를 이용하십시오.",
-                "18": "67 B-A 번 출구를 US 322 West 방향으로 이용하십시오.",
-                "19": "Lewistown 방향 출구를 이용하십시오.",
-                "20": "67 B-A 번 출구를 Lewistown 방향으로 이용하십시오.",
-                "21": "US 322 West 출구를 Lewistown 방향으로 이용하십시오.",
-                "22": "67 B-A 번 출구를 US 322 West, Lewistown/State College 방향으로 이용하십시오.",
-                "23": "White Marsh Boulevard 출구를 이용하십시오.",
-                "25": "White Marsh Boulevard 출구를 MD 43 East 방향으로 이용하십시오.",
-                "27": "White Marsh Boulevard 출구를 White Marsh 방향으로 이용하십시오.",
-                "29": "White Marsh Boulevard 출구를 MD 43 East, White Marsh 방향으로 이용하십시오."
-            }
-        },
-        "exit_roundabout": {
-            "phrases": {
-                "0": "로터리를 나가십시오.",
-                "1": "로터리에서 <STREET_NAMES> 방향으로 나가십시오.",
-                "2": "로터리에서 <BEGIN_STREET_NAMES> 방향으로 나가서 <STREET_NAMES>을(를) 따라가십시오.",
-                "3": "로터리에서 <TOWARD_SIGN> 방향으로 나가십시오."
-            },
-            "empty_street_name_labels": "보도, 자전거 도로, 산악 자전거 트레일, 횡단보도",
-            "example_phrases": {
-                "0": "로터리를 나가십시오.",
-                "1": "로터리에서 Philadelphia Road/MD 7 방향으로 나가십시오.",
-                "2": "로터리에서 Catoctin Mountain Highway/US 15 방향으로 나가서 US 15을(를) 따라가십시오.",
-                "3": "로터리에서 Baltimore 방향으로 나가십시오."
-            }
-        },
-        "exit_roundabout_verbal": {
-            "phrases": {
-                "0": "로터리를 나옵니다.",
-                "1": "로터리에서 <STREET_NAMES>로 나옵니다.",
-                "2": "로터리에서 <BEGIN_STREET_NAMES>로 나옵니다.",
-                "3": "로터리에서 <TOWARD_SIGN> 방향으로 나옵니다."
-            },
-            "empty_street_name_labels": "보도, 자전거 도로, 산악 자전거 트레일, 횡단보도",
-            "example_phrases": {
-                "0": "로터리를 나옵니다.",
-                "1": "로터리에서 필라델피아 로드, 메릴랜드 7로 나옵니다.",
-                "2": "로터리에서 카톡틴 마운틴 하이웨이, U.S. 15로 나옵니다.",
-                "3": "로터리에서 볼티모어 방향으로 나옵니다."
-            }
-        },
-        "exit_verbal": {
-            "phrases": {
-                "0": "<RELATIVE_DIRECTION> 방향으로 출구를 나옵니다.",
-                "1": "<RELATIVE_DIRECTION> 방향 <NUMBER_SIGN> 출구를 나옵니다.",
-                "2": "<RELATIVE_DIRECTION> 방향으로 <BRANCH_SIGN> 출구를 나옵니다.",
-                "3": "<RELATIVE_DIRECTION> 방향 <NUMBER_SIGN> 출구에서 <BRANCH_SIGN>로 나옵니다.",
-                "4": "<RELATIVE_DIRECTION> 방향으로 <TOWARD_SIGN> 출구를 나옵니다.",
-                "5": "<RELATIVE_DIRECTION> 방향 <NUMBER_SIGN> 출구로 <TOWARD_SIGN> 방향으로 나옵니다.",
-                "6": "<RELATIVE_DIRECTION> 방향으로 <BRANCH_SIGN> 출구로 <TOWARD_SIGN> 방향으로 나옵니다.",
-                "7": "<RELATIVE_DIRECTION> 방향 <NUMBER_SIGN> 출구에서 <BRANCH_SIGN>로 <TOWARD_SIGN> 방향으로 나옵니다.",
-                "8": "<RELATIVE_DIRECTION> 방향으로 <NAME_SIGN> 출구를 나옵니다.",
-                "10": "<RELATIVE_DIRECTION> 방향으로 <BRANCH_SIGN> <NAME_SIGN> 출구를 나옵니다.",
-                "12": "<RELATIVE_DIRECTION> 방향으로 <TOWARD_SIGN> <NAME_SIGN> 출구를 나옵니다.",
-                "14": "<RELATIVE_DIRECTION> 방향 <BRANCH_SIGN> 출구에서 <TOWARD_SIGN> <NAME_SIGN> 방향으로 나옵니다.",
-                "15": "출구를 나옵니다.",
-                "16": "<NUMBER_SIGN> 출구를 이용하세요.",
-                "17": "<BRANCH_SIGN> 출구를 이용하세요.",
-                "18": "<NUMBER_SIGN> 출구에서 <BRANCH_SIGN>로 나옵니다.",
-                "19": "<TOWARD_SIGN> 방향으로 출구를 이용하세요.",
-                "20": "<NUMBER_SIGN> 출구를 <TOWARD_SIGN> 방향으로 이용하세요.",
-                "21": "<BRANCH_SIGN> 출구를 <TOWARD_SIGN> 방향으로 이용하세요.",
-                "22": "<NUMBER_SIGN> 출구에서 <BRANCH_SIGN>로 <TOWARD_SIGN> 방향으로 나옵니다.",
-                "23": "<NAME_SIGN> 출구를 이용하세요.",
-                "25": "<NAME_SIGN> 출구에서 <BRANCH_SIGN>로 나옵니다.",
-                "27": "<NAME_SIGN> 출구를 <TOWARD_SIGN> 방향으로 이용하세요.",
-                "29": "<NAME_SIGN> 출구에서 <BRANCH_SIGN>로 <TOWARD_SIGN> 방향으로 나옵니다."
-            },
-            "relative_directions": "왼쪽, 오른쪽",
-            "example_phrases": {
-                "0": "왼쪽으로 출구를 이용하세요., 오른쪽으로 출구를 이용하세요.",
-                "1": "오른쪽 67 B-A 출구를 이용하세요.",
-                "2": "오른쪽으로 U.S. 3 22 West 출구를 이용하세요.",
-                "3": "오른쪽 67 B-A 출구에서 U.S. 3 22 West로 나옵니다.",
-                "4": "오른쪽으로 Lewistown 방향으로 출구를 이용하세요.",
-                "5": "오른쪽 67 B-A 출구를 Lewistown 방향으로 이용하세요.",
-                "6": "오른쪽으로 U.S. 3 22 West 출구를 Lewistown 방향으로 이용하세요.",
-                "7": "오른쪽 67 B-A 출구에서 U.S. 3 22 West로 Lewistown, State College 방향으로 나옵니다.",
-                "8": "왼쪽으로 White Marsh Boulevard 출구를 이용하세요.",
-                "10": "왼쪽으로 White Marsh Boulevard 출구에서 Maryland 43 East로 나옵니다.",
-                "12": "왼쪽으로 White Marsh Boulevard 출구를 White Marsh 방향으로 이용하세요.",
-                "14": "왼쪽으로 White Marsh Boulevard 출구에서 Maryland 43 East로 White Marsh 방향으로 나옵니다.",
-                "15": "출구를 이용하세요.",
-                "16": "67 B-A 출구를 이용하세요.",
-                "17": "US 322 West 출구를 이용하세요.",
-                "18": "67 B-A 출구에서 US 322 West로 나옵니다.",
-                "19": "Lewistown 방향으로 출구를 이용하세요.",
-                "20": "67 B-A 출구를 Lewistown 방향으로 이용하세요.",
-                "21": "US 322 West 출구를 Lewistown 방향으로 이용하세요.",
-                "22": "67 B-A 출구에서 US 322 West로 Lewistown/State College 방향으로 나옵니다.",
-                "23": "White Marsh Boulevard 출구를 이용하세요.",
-                "25": "White Marsh Boulevard 출구에서 MD 43 East로 나옵니다.",
-                "27": "White Marsh Boulevard 출구를 White Marsh 방향으로 이용하세요.",
-                "29": "White Marsh Boulevard 출구에서 MD 43 East로 White Marsh 방향으로 나옵니다."
-            }
-        },
-        "exit_visual": {
-            "phrases": {
-                "0": "<EXIT_NUMBERS> 출구"
-            },
-            "example_phrases": {
-                "0": "1A 출구"
-            }
-        },
-        "keep": {
-            "phrases": {
-                "0": "<RELATIVE_DIRECTION>쪽으로 갈림길에서 계속하세요.",
-                "1": "<RELATIVE_DIRECTION>쪽으로 <NUMBER_SIGN> 출구로 계속하세요.",
-                "2": "<RELATIVE_DIRECTION>쪽으로 <STREET_NAMES>로 계속하세요.",
-                "3": "<RELATIVE_DIRECTION>쪽으로 <NUMBER_SIGN> 출구에서 <STREET_NAMES>로 계속하세요.",
-                "4": "<RELATIVE_DIRECTION>쪽으로 <TOWARD_SIGN> 방향으로 계속하세요.",
-                "5": "<RELATIVE_DIRECTION>쪽으로 <NUMBER_SIGN> 출구로 <TOWARD_SIGN> 방향으로 계속하세요.",
-                "6": "<RELATIVE_DIRECTION>쪽으로 <STREET_NAMES>로 <TOWARD_SIGN> 방향으로 계속하세요.",
-                "7": "<RELATIVE_DIRECTION>쪽으로 <NUMBER_SIGN> 출구에서 <STREET_NAMES>로 <TOWARD_SIGN> 방향으로 계속하세요."
-            },
-            "empty_street_name_labels": "보도, 자전거 도로, 산악 자전거 길, 횡단보도",
-            "relative_directions": "왼쪽, 직진, 오른쪽",
-            "example_phrases": {
-                "0": "갈림길에서 왼쪽으로 계속하세요., 갈림길에서 직진하세요., 갈림길에서 오른쪽으로 계속하세요.",
-                "1": "오른쪽으로 62 출구로 계속하세요.",
-                "2": "오른쪽으로 I 895 South로 계속하세요.",
-                "3": "오른쪽으로 62 출구에서 I 895 South로 계속하세요.",
-                "4": "오른쪽으로 Annapolis 방향으로 계속하세요.",
-                "5": "오른쪽으로 62 출구로 Annapolis 방향으로 계속하세요.",
-                "6": "오른쪽으로 I 895 South로 Annapolis 방향으로 계속하세요.",
-                "7": "오른쪽으로 62 출구에서 I 895 South로 Annapolis 방향으로 계속하세요."
-            }
-        },
-        "keep_to_stay_on": {
-            "phrases": {
-                "0": "<RELATIVE_DIRECTION>쪽으로 <STREET_NAMES>로 계속하세요.",
-                "1": "<RELATIVE_DIRECTION>쪽으로 <NUMBER_SIGN> 출구로 <STREET_NAMES>로 계속하세요.",
-                "2": "<RELATIVE_DIRECTION>쪽으로 <STREET_NAMES>로 <TOWARD_SIGN> 방향으로 계속하세요.",
-                "3": "<RELATIVE_DIRECTION>쪽으로 <NUMBER_SIGN> 출구로 <STREET_NAMES>로 <TOWARD_SIGN> 방향으로 계속하세요."
-            },
-            "empty_street_name_labels": "보도, 자전거 도로, 산악 자전거 길, 횡단보도",
-            "relative_directions": "왼쪽, 직진, 오른쪽",
-            "example_phrases": {
-                "0": "I 95 South로 계속 하려면 왼쪽으로 계속하세요., I 95 South로 계속 하려면 직진하세요., I 95 South로 계속 하려면 오른쪽으로 계속하세요.",
-                "1": "I 95 South로 계속 하려면 왼쪽으로 62 출구로 계속하세요.",
-                "2": "Baltimore 방향으로 I 95 South로 계속 하려면 왼쪽으로 계속하세요.",
-                "3": "Baltimore 방향으로 I 95 South로 계속 하려면 왼쪽으로 62 출구로 계속하세요."
-            }
-        },
-        "keep_to_stay_on_verbal": {
-            "phrases": {
-                "0": "<STREET_NAMES>로 계속 하려면 <RELATIVE_DIRECTION>으로 계속하세요.",
-                "1": "<STREET_NAMES>로 계속 하려면 <RELATIVE_DIRECTION>으로 <NUMBER_SIGN> 출구로 계속하세요.",
-                "2": "<TOWARD_SIGN> 방향으로 <STREET_NAMES>로 계속 하려면 <RELATIVE_DIRECTION>으로 계속하세요.",
-                "3": "<TOWARD_SIGN> 방향으로 <STREET_NAMES>로 계속 하려면 <RELATIVE_DIRECTION>으로 <NUMBER_SIGN> 출구로 계속하세요."
-            },
-            "empty_street_name_labels": [
-                "보도, 자전거 도로, 산악 자전거 길, 횡단보도"
-            ],
-            "relative_directions": [
-                "왼쪽, 직진, 오른쪽"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Interstate 95 South로 계속 하려면 왼쪽으로 계속하세요., Interstate 95 South로 계속 하려면 직진하세요., Interstate 95 South로 계속 하려면 오른쪽으로 계속하세요."
-                ],
-                "1": "Interstate 95 South로 계속 하려면 왼쪽으로 62 출구로 계속하세요.",
-                "2": "Baltimore 방향으로 I 95 South로 계속 하려면 왼쪽으로 계속하세요.",
-                "3": "Baltimore 방향으로 Interstate 95 South로 계속 하려면 왼쪽으로 62 출구로 계속하세요."
-            }
-        },
-        "keep_verbal": {
-            "phrases": {
-                "0": "분기점에서 <RELATIVE_DIRECTION>으로 계속하세요.",
-                "1": "<NUMBER_SIGN> 출구로 <RELATIVE_DIRECTION>으로 계속하세요.",
-                "2": "<STREET_NAMES>로 <RELATIVE_DIRECTION>으로 계속하세요.",
-                "3": "<NUMBER_SIGN> 출구로 <STREET_NAMES>로 <RELATIVE_DIRECTION>으로 계속하세요.",
-                "4": "<TOWARD_SIGN> 방향으로 <RELATIVE_DIRECTION>으로 계속하세요.",
-                "5": "<NUMBER_SIGN> 출구로 <TOWARD_SIGN> 방향으로 <RELATIVE_DIRECTION>으로 계속하세요.",
-                "6": "<TOWARD_SIGN> 방향으로 <STREET_NAMES>로 <RELATIVE_DIRECTION>으로 계속하세요.",
-                "7": "<NUMBER_SIGN> 출구로 <TOWARD_SIGN> 방향으로 <STREET_NAMES>로 <RELATIVE_DIRECTION>으로 계속하세요."
-            },
-            "empty_street_name_labels": [
-                "보도, 자전거 도로, 산악 자전거 길, 횡단보도"
-            ],
-            "relative_directions": [
-                "왼쪽, 직진, 오른쪽"
-            ],
-            "example_phrases": {
-                "0": [
-                    "분기점에서 왼쪽으로 계속하세요., 분기점에서 직진하세요., 분기점에서 오른쪽으로 계속하세요."
-                ],
-                "1": "62 출구로 오른쪽으로 계속하세요.",
-                "2": "Interstate 8 95 South로 가려면 오른쪽으로 계속하세요.",
-                "3": "Interstate 8 95 South로 62 출구로 오른쪽으로 계속하세요.",
-                "4": "Annapolis 방향으로 오른쪽으로 계속하세요.",
-                "5": "Annapolis 방향으로 62 출구로 오른쪽으로 계속하세요.",
-                "6": "Annapolis 방향으로 Interstate 8 95 South로 오른쪽으로 계속하세요.",
-                "7": "Annapolis 방향으로 Interstate 8 95 South로 62 출구로 오른쪽으로 계속하세요."
-            }
-        },
-        "merge": {
-            "phrases": {
-                "0": "합류하세요.",
-                "1": "<RELATIVE_DIRECTION>으로 합류하세요.",
-                "2": "<STREET_NAMES>로 합류하세요.",
-                "3": "<RELATIVE_DIRECTION>으로 <STREET_NAMES>로 합류하세요.",
-                "4": "<TOWARD_SIGN> 방향으로 합류하세요.",
-                "5": "<RELATIVE_DIRECTION>으로 <TOWARD_SIGN> 방향으로 합류하세요."
-            },
-            "relative_directions": [
-                "왼쪽, 오른쪽"
-            ],
-            "empty_street_name_labels": [
-                "보도, 자전거 도로, 산악 자전거 길, 횡단보도"
-            ],
-            "example_phrases": {
-                "0": "합류하세요.",
-                "1": "왼쪽으로 합류하세요.",
-                "2": "I 76 West/Pennsylvania Turnpike로 합류하세요.",
-                "3": "I 83 South로 오른쪽으로 합류하세요.",
-                "4": "Baltimore 방향으로 합류하세요.",
-                "5": "Baltimore 방향으로 오른쪽으로 합류하세요."
-            }
-        },
-        "merge_verbal": {
-            "phrases": {
-                "0": "합류하세요.",
-                "1": "<RELATIVE_DIRECTION>으로 합류하세요.",
-                "2": "<STREET_NAMES>로 합류하세요.",
-                "3": "<RELATIVE_DIRECTION>으로 <STREET_NAMES>로 합류하세요.",
-                "4": "<TOWARD_SIGN> 방향으로 합류하세요.",
-                "5": "<RELATIVE_DIRECTION>으로 <TOWARD_SIGN> 방향으로 합류하세요."
-            },
-            "relative_directions": [
-                "왼쪽, 오른쪽"
-            ],
-            "empty_street_name_labels": [
-                "보도, 자전거 도로, 산악 자전거 길, 횡단보도"
-            ],
-            "example_phrases": {
-                "0": "합류하세요.",
-                "1": "왼쪽으로 합류하세요.",
-                "2": "I 76 West/Pennsylvania Turnpike로 합류하세요.",
-                "3": "I 83 South로 오른쪽으로 합류하세요.",
-                "4": "Baltimore 방향으로 합류하세요.",
-                "5": "Baltimore 방향으로 오른쪽으로 합류하세요."
-            }
-        },
-        "post_transition_transit_verbal": {
-            "phrases": {
-                "0": "<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>을(를) 이동하세요."
-            },
-            "transit_stop_count_labels": {
-                "one": "정거장",
-                "other": "정거장들"
-            },
-            "example_phrases": {
-                "0": [
-                    "1 정거장 이동하세요., 3 정거장들을 이동하세요."
-                ]
-            }
-        },
-        "post_transition_verbal": {
-            "phrases": {
-                "0": "<LENGTH> 동안 계속하세요.",
-                "1": "<STREET_NAMES>을(를) 따라 <LENGTH> 동안 계속하세요."
-            },
-            "empty_street_name_labels": [
-                "보도, 자전거 도로, 산악 자전거 길, 횡단보도"
-            ],
-            "metric_lengths": [
-                "<KILOMETERS> 킬로미터, 1 킬로미터, <METERS> 미터, 10 미터 미만"
-            ],
-            "us_customary_lengths": [
-                "<MILES> 마일, 1 마일, 반 마일, 4분의 1 마일, <FEET> 피트, 10 피트 미만"
-            ],
-            "example_phrases": {
-                "0": [
-                    "300 피트 동안 계속하세요., 9 마일 동안 계속하세요."
-                ],
-                "1": [
-                    "Pennsylvania 7 43을(를) 따라 6.2 마일 동안 계속하세요., Main Street, Vermont 30을(를) 따라 1/10 마일 동안 계속하세요."
-                ]
-            }
-        },
-        "ramp": {
-            "phrases": {
-                "0": "<RELATIVE_DIRECTION>쪽 램프를 이용하세요.",
-                "1": "<RELATIVE_DIRECTION>쪽 <BRANCH_SIGN> 램프를 이용하세요.",
-                "2": "<TOWARD_SIGN> 방향 <RELATIVE_DIRECTION>쪽 램프를 이용하세요.",
-                "3": "<TOWARD_SIGN> 방향 <RELATIVE_DIRECTION>쪽 <BRANCH_SIGN> 램프를 이용하세요.",
-                "4": "<RELATIVE_DIRECTION>쪽 <NAME_SIGN> 램프를 이용하세요.",
-                "5": "<RELATIVE_DIRECTION>으로 꺾어서 램프를 이용하세요.",
-                "6": "<RELATIVE_DIRECTION>으로 꺾어서 <BRANCH_SIGN> 램프를 이용하세요.",
-                "7": "<RELATIVE_DIRECTION>으로 꺾어서 <TOWARD_SIGN> 방향 램프를 이용하세요.",
-                "8": "<RELATIVE_DIRECTION>으로 꺾어서 <TOWARD_SIGN> 방향 <BRANCH_SIGN> 램프를 이용하세요.",
-                "9": "<RELATIVE_DIRECTION>으로 꺾어서 <NAME_SIGN> 램프를 이용하세요.",
-                "10": "램프를 이용하세요.",
-                "11": "<BRANCH_SIGN> 램프를 이용하세요.",
-                "12": "<TOWARD_SIGN> 방향 램프를 이용하세요.",
-                "13": "<TOWARD_SIGN> 방향 <BRANCH_SIGN> 램프를 이용하세요.",
-                "14": "<NAME_SIGN> 램프를 이용하세요."
-            },
-            "relative_directions": [
-                "왼쪽, 오른쪽"
-            ],
-            "example_phrases": {
-                "0": [
-                    "왼쪽 램프를 이용하세요., 오른쪽 램프를 이용하세요."
-                ],
-                "1": [
-                    "오른쪽 I 95 램프를 이용하세요."
-                ],
-                "2": [
-                    "JFK 방향 왼쪽 램프를 이용하세요."
-                ],
-                "3": [
-                    "JFK 방향 왼쪽 South Conduit Avenue 램프를 이용하세요."
-                ],
-                "4": [
-                    "오른쪽 Gettysburg Pike 램프를 이용하세요."
-                ],
-                "5": [
-                    "램프를 이용하기 위해 왼쪽으로 꺾으세요., 램프를 이용하기 위해 오른쪽으로 꺾으세요."
-                ],
-                "6": [
-                    "PA 283 West 램프를 이용하기 위해 왼쪽으로 꺾으세요."
-                ],
-                "7": "해리스버그/해리스버그 국제공항 방향 램프를 이용하기 위해 왼쪽으로 꺾으세요.",
-                "8": "해리스버그/해리스버그 국제공항 방향 PA 283 서쪽 램프를 이용하기 위해 왼쪽으로 꺾으세요.",
-                "9": "겟티스버그 파이크 램프를 이용하기 위해 오른쪽으로 꺾으세요.",
-                "10": "램프를 이용하세요.",
-                "11": "I 95 램프를 이용하세요.",
-                "12": "JFK 방향 램프를 이용하세요.",
-                "13": "JFK 방향 South Conduit Avenue 램프를 이용하세요.",
-                "14": "겟티스버그 램프를 이용하세요."
-            }
-        },
-        "ramp_straight": {
-            "phrases": {
-                "0": "직진해서 램프를 이용하세요.",
-                "1": "직진해서 <BRANCH_SIGN> 램프를 이용하세요.",
-                "2": "<TOWARD_SIGN> 방향 램프를 이용하기 위해 직진하세요.",
-                "3": "<TOWARD_SIGN> 방향 <BRANCH_SIGN> 램프를 이용하기 위해 직진하세요.",
-                "4": "직진해서 <NAME_SIGN> 램프를 이용하세요."
-            },
-            "example_phrases": {
-                "0": "직진해서 램프를 이용하세요.",
-                "1": "직진해서 US 322 동쪽 램프를 이용하세요.",
-                "2": "허쉬 방향 램프를 이용하기 위해 직진하세요.",
-                "3": "허쉬/Palmdale/Palmyra/Campbelltown 방향 US 322 동쪽/US 422 동쪽/US 522 동쪽/US 622 동쪽 램프를 이용하기 위해 직진하세요.",
-                "4": "직진해서 Gettysburg Pike 램프를 이용하세요."
-            }
-        },
-        "ramp_straight_verbal": {
-            "phrases": {
-                "0": "직진해서 램프를 이용하세요.",
-                "1": "직진해서 <BRANCH_SIGN> 램프를 이용하세요.",
-                "2": "<TOWARD_SIGN> 방향 램프를 이용하기 위해 직진하세요.",
-                "3": "직진해서 <TOWARD_SIGN> 방향 <BRANCH_SIGN> 램프를 이용하세요.",
-                "4": "직진해서 <NAME_SIGN> 램프를 이용하세요."
-            },
-            "example_phrases": {
-                "0": "직진해서 램프를 이용하세요.",
-                "1": "직진해서 U.S. 322 동쪽 램프를 이용하세요.",
-                "2": "허쉬 방향 램프를 이용하기 위해 직진하세요.",
-                "3": "허쉬, Palmdale 방향 U.S. 322 동쪽, U.S. 422 동쪽 램프를 이용하기 위해 직진하세요.",
-                "4": "직진해서 Gettysburg Pike 램프를 이용하세요."
-            }
-        },
-        "ramp_verbal": {
-            "phrases": {
-                "0": "<RELATIVE_DIRECTION>쪽 램프를 이용하세요.",
-                "1": "<RELATIVE_DIRECTION>쪽 <BRANCH_SIGN> 램프를 이용하세요.",
-                "2": "<RELATIVE_DIRECTION>쪽 <TOWARD_SIGN> 방향 램프를 이용하세요.",
-                "3": "<RELATIVE_DIRECTION>쪽 <TOWARD_SIGN> 방향 <BRANCH_SIGN> 램프를 이용하세요.",
-                "4": "<RELATIVE_DIRECTION>쪽 <NAME_SIGN> 램프를 이용하세요.",
-                "5": "<RELATIVE_DIRECTION>쪽으로 꺾어 램프를 이용하세요.",
-                "6": "<RELATIVE_DIRECTION>쪽으로 꺾어 <BRANCH_SIGN> 램프를 이용하세요.",
-                "7": "<RELATIVE_DIRECTION>쪽으로 꺾어 <TOWARD_SIGN> 방향 램프를 이용하세요.",
-                "8": "<RELATIVE_DIRECTION>쪽으로 꺾어 <TOWARD_SIGN> 방향 <BRANCH_SIGN> 램프를 이용하세요.",
-                "9": "<RELATIVE_DIRECTION>쪽으로 꺾어 <NAME_SIGN> 램프를 이용하세요.",
-                "10": "램프를 이용하세요.",
-                "11": "<BRANCH_SIGN> 램프를 이용하세요.",
-                "12": "<TOWARD_SIGN> 방향 램프를 이용하세요.",
-                "13": "<TOWARD_SIGN> 방향 <BRANCH_SIGN> 램프를 이용하세요.",
-                "14": "<NAME_SIGN> 램프를 이용하세요."
-            },
-            "relative_directions": [
-                "왼쪽",
-                "오른쪽"
-            ],
-            "example_phrases": {
-                "0": [
-                    "왼쪽 램프를 이용하세요.",
-                    "오른쪽 램프를 이용하세요."
-                ],
-                "1": "오른쪽 Interstate 95 램프를 이용하세요.",
-                "2": "왼쪽으로 JFK 방향 램프를 이용하세요.",
-                "3": "왼쪽으로 South Conduit Avenue, JFK 방향 램프를 이용하세요.",
-                "4": "오른쪽으로 Gettysburg Pike 램프를 이용하세요.",
-                "5": "왼쪽으로 꺾어 램프를 이용하세요.\", \"오른쪽으로 꺾어 램프를 이용하세요.",
-                "6": "왼쪽으로 Pennsylvania 283 서쪽 램프를 이용하세요.",
-                "7": "왼쪽으로 Harrisburg/Harrisburg International Airport 방향 램프를 이용하세요.",
-                "8": "왼쪽으로 Harrisburg, Harrisburg International Airport 방향 Pennsylvania 283 서쪽 램프를 이용하세요.",
-                "9": "오른쪽으로 Gettysburg Pike 램프를 이용하세요.",
-                "10": "램프를 이용하세요.",
-                "11": "Interstate 95 램프를 이용하세요.",
-                "12": "JFK 방향 램프를 이용하세요.",
-                "13": "JFK 방향 South Conduit Avenue 램프를 이용하세요.",
-                "14": "Gettysburg Pike 램프를 이용하세요."
-            }
-        },
-        "sharp": {
-            "phrases": {
-                "0": "<RELATIVE_DIRECTION>쪽으로 급격히 꺾으세요.",
-                "1": "<STREET_NAMES> 방향으로 <RELATIVE_DIRECTION>쪽으로 급격히 꺾으세요.",
-                "2": "<RELATIVE_DIRECTION>쪽으로 급격히 꺾어 <BEGIN_STREET_NAMES>로 진입하세요. <STREET_NAMES>를 따라 계속 진행하세요.",
-                "3": "<STREET_NAMES>를 계속 이용하기 위해 <RELATIVE_DIRECTION>쪽으로 급격히 꺾으세요.",
-                "4": "<JUNCTION_NAME>에서 <RELATIVE_DIRECTION>쪽으로 급격히 꺾으세요.",
-                "5": "<TOWARD_SIGN> 방향으로 <RELATIVE_DIRECTION>쪽으로 급격히 꺾으세요."
-            },
-            "empty_street_name_labels": [
-                "보도",
-                "자전거 도로",
-                "산악자전거 트레일",
-                "횡단보도"
-            ],
-            "relative_directions": [
-                "왼쪽",
-                "오른쪽"
-            ],
-            "example_phrases": {
-                "0": [
-                    "급격히 왼쪽으로 꺾으세요."
-                ],
-                "1": [
-                    "Flatbush Avenue로 급격히 오른쪽으로 꺾으세요."
-                ],
-                "2": [
-                    "North Bond Street/US 1 Business/MD 924로 급격히 왼쪽으로 꺾어 진입하세요. MD 924를 따라 계속 진행하세요."
-                ],
-                "3": "Sunstone Drive를 계속 이용하기 위해 급격히 오른쪽으로 꺾으세요.",
-                "4": "Mannenbashi East에서 급격히 오른쪽으로 꺾으세요.",
-                "5": "Baltimore 방향으로 급격히 왼쪽으로 꺾으세요."
-            }
-        },
-        "sharp_verbal": {
-            "phrases": {
-                "0": "<RELATIVE_DIRECTION>쪽으로 급격히 꺾으세요.",
-                "1": "<STREET_NAMES> 방향으로 <RELATIVE_DIRECTION>쪽으로 급격히 꺾으세요.",
-                "2": "<BEGIN_STREET_NAMES>로 진입하기 위해 <RELATIVE_DIRECTION>쪽으로 급격히 꺾으세요.",
-                "3": "<STREET_NAMES>를 계속 이용하기 위해 <RELATIVE_DIRECTION>쪽으로 급격히 꺾으세요.",
-                "4": "<JUNCTION_NAME>에서 <RELATIVE_DIRECTION>쪽으로 급격히 꺾으세요.",
-                "5": "<TOWARD_SIGN> 방향으로 <RELATIVE_DIRECTION>쪽으로 급격히 꺾으세요."
-            },
-            "empty_street_name_labels": [
-                "보도",
-                "자전거 도로",
-                "산악자전거 트레일",
-                "횡단보도"
-            ],
-            "relative_directions": [
-                "왼쪽",
-                "오른쪽"
-            ],
-            "example_phrases": {
-                "0": [
-                    "급격히 왼쪽으로 꺾으세요."
-                ],
-                "1": [
-                    "Flatbush Avenue로 급격히 오른쪽으로 꺾으세요."
-                ],
-                "2": [
-                    "North Bond Street, U.S. 1 Business로 급격히 왼쪽으로 꺾으세요."
-                ],
-                "3": "Sunstone Drive를 계속 이용하기 위해 급격히 오른쪽으로 꺾으세요.",
-                "4": "Mannenbashi East에서 급격히 오른쪽으로 꺾으세요.",
-                "5": "Baltimore 방향으로 급격히 왼쪽으로 꺾으세요."
-            }
-        },
-        "start": {
-            "phrases": {
-                "0": "<CARDINAL_DIRECTION>쪽으로 가세요.",
-                "1": "<CARDINAL_DIRECTION>쪽으로 <STREET_NAMES>를 따라 가세요.",
-                "2": "<CARDINAL_DIRECTION>쪽으로 <BEGIN_STREET_NAMES>를 따라 가세요. <STREET_NAMES>를 계속 따라 가세요.",
-                "4": "<CARDINAL_DIRECTION>쪽으로 운전하세요.",
-                "5": "<CARDINAL_DIRECTION>쪽으로 <STREET_NAMES>를 따라 운전하세요.",
-                "6": "<CARDINAL_DIRECTION>쪽으로 <BEGIN_STREET_NAMES>를 따라 운전하세요. <STREET_NAMES>를 계속 따라 운전하세요.",
-                "8": "<CARDINAL_DIRECTION>쪽으로 걸어가세요.",
-                "9": "<CARDINAL_DIRECTION>쪽으로 <STREET_NAMES>를 따라 걸어가세요.",
-                "10": "<CARDINAL_DIRECTION>쪽으로 <BEGIN_STREET_NAMES>를 따라 걸어가세요. <STREET_NAMES>를 계속 따라 걸어가세요.",
-                "16": "<CARDINAL_DIRECTION>쪽으로 자전거를 타고 가세요.",
-                "17": "<CARDINAL_DIRECTION>쪽으로 <STREET_NAMES>를 따라 자전거를 타고 가세요.",
-                "18": "<CARDINAL_DIRECTION>쪽으로 <BEGIN_STREET_NAMES>를 따라 자전거를 타고 가세요. <STREET_NAMES>를 계속 따라 자전거를 타고 가세요."
-            },
-            "cardinal_directions": [
-                "북쪽",
-                "북동쪽",
-                "동쪽",
-                "남동쪽",
-                "남쪽",
-                "남서쪽",
-                "서쪽",
-                "북서쪽"
-            ],
-            "empty_street_name_labels": [
-                "보도",
-                "자전거 도로",
-                "산악자전거 트레일",
-                "횡단보도"
-            ],
-            "example_phrases": {
-                "0": [
-                    "동쪽으로 가세요.",
-                    "북쪽으로 가세요."
-                ],
-                "1": [
-                    "5th Avenue를 따라 남서쪽으로 가세요.",
-                    "보도를 따라 서쪽으로 가세요",
-                    "자전거 도로를 따라 동쪽으로 가세요.",
-                    "산악자전거 트레일을 따라 북쪽으로 가세요."
-                ],
-                "2": "North Prince Street/US 222/PA 272를 따라 남쪽으로 가세요. US 222/PA 272를 계속 따라 가세요.",
-                "4": [
-                    "동쪽으로 운전하세요.",
-                    "북쪽으로 운전하세요."
-                ],
-                "5": [
-                    "5th Avenue를 따라 남서쪽으로 운전하세요."
-                ],
-                "6": "North Prince Street/US 222/PA 272를 따라 남쪽으로 운전하세요. US 222/PA 272를 계속 따라 운전하세요.",
-                "8": [
-                    "동쪽으로 걸어가세요.",
-                    "북쪽으로 걸어가세요."
-                ],
-                "9": [
-                    "5th Avenue를 따라 남서쪽으로 걸어가세요.",
-                    "보도를 따라 서쪽으로 걸어가세요"
-                ],
-                "10": "North Prince Street/US 222/PA 272를 따라 남쪽으로 걸어가세요. US 222/PA 272를 계속 따라 걸어가세요.",
-                "16": [
-                    "동쪽으로 자전거를 타고 가세요.",
-                    "북쪽으로 자전거를 타고 가세요."
-                ],
-                "17": [
-                    "5th Avenue를 따라 남서쪽으로 자전거를 타고 가세요.",
-                    "자전거 도로를 따라 동쪽으로 자전거를 타고 가세요.",
-                    "산악자전거 트레일을 따라 북쪽으로 자전거를 타고 가세요."
-                ],
-                "18": "North Prince Street/US 222/PA 272를 따라 남쪽으로 자전거를 타고 가세요. US 222/PA 272를 계속 따라 자전거를 타고 가세요."
-            }
-        },
-        "start_verbal": {
-            "phrases": {
-                "0": "<CARDINAL_DIRECTION>쪽으로 가세요.",
-                "1": "<CARDINAL_DIRECTION>쪽으로 <LENGTH> 만큼 가세요.",
-                "2": "<CARDINAL_DIRECTION>쪽으로 <STREET_NAMES>를 따라 가세요.",
-                "3": "<CARDINAL_DIRECTION>쪽으로 <STREET_NAMES>를 따라 <LENGTH> 만큼 가세요.",
-                "4": "<CARDINAL_DIRECTION>쪽으로 <BEGIN_STREET_NAMES>를 따라 가세요.",
-                "5": "<CARDINAL_DIRECTION>쪽으로 운전하세요.",
-                "6": "<CARDINAL_DIRECTION>쪽으로 <LENGTH> 만큼 운전하세요.",
-                "7": "<CARDINAL_DIRECTION>쪽으로 <STREET_NAMES>를 따라 운전하세요.",
-                "8": "<CARDINAL_DIRECTION>쪽으로 <STREET_NAMES>를 따라 <LENGTH> 만큼 운전하세요.",
-                "9": "<CARDINAL_DIRECTION>쪽으로 <BEGIN_STREET_NAMES>를 따라 운전하세요.",
-                "10": "<CARDINAL_DIRECTION>쪽으로 걸어가세요.",
-                "11": "<CARDINAL_DIRECTION>쪽으로 <LENGTH> 만큼 걸어가세요.",
-                "12": "<CARDINAL_DIRECTION>쪽으로 <STREET_NAMES>를 따라 걸어가세요.",
-                "13": "<CARDINAL_DIRECTION>쪽으로 <STREET_NAMES>를 따라 <LENGTH> 만큼 걸어가세요.",
-                "14": "<CARDINAL_DIRECTION>쪽으로 <BEGIN_STREET_NAMES>를 따라 걸어가세요.",
-                "15": "<CARDINAL_DIRECTION>쪽으로 자전거를 타고 가세요.",
-                "16": "<CARDINAL_DIRECTION>쪽으로 자전거를 타고 <LENGTH> 만큼 가세요.",
-                "17": "<CARDINAL_DIRECTION>쪽으로 <STREET_NAMES>를 따라 자전거를 타고 가세요.",
-                "18": "<CARDINAL_DIRECTION>쪽으로 <STREET_NAMES>를 따라 자전거를 타고 <LENGTH> 만큼 가세요.",
-                "19": "<CARDINAL_DIRECTION>쪽으로 <BEGIN_STREET_NAMES>를 따라 자전거를 타고 가세요."
-            },
-            "cardinal_directions": [
-                "북쪽",
-                "북동쪽",
-                "동쪽",
-                "남동쪽",
-                "남쪽",
-                "남서쪽",
-                "서쪽",
-                "북서쪽"
-            ],
-            "empty_street_name_labels": [
-                "보도",
-                "자전거 도로",
-                "산악자전거 트레일",
-                "횡단보도"
-            ],
-            "metric_lengths": [
-                "<KILOMETERS> 킬로미터",
-                "1 킬로미터",
-                "<METERS> 미터",
-                "10 미터 미만"
-            ],
-            "us_customary_lengths": [
-                "<MILES> 마일",
-                "1 마일",
-                "반 마일",
-                "사분의 일 마일",
-                "<FEET> 피트",
-                "10 피트 미만"
-            ],
-            "example_phrases": {
-                "0": [
-                    "동쪽으로 가세요.",
-                    "북쪽으로 가세요."
-                ],
-                "1": [
-                    "동쪽으로 반 마일 가세요.",
-                    "북쪽으로 1 킬로미터 가세요."
-                ],
-                "2": "5th Avenue를 따라 남서쪽으로 가세요.",
-                "3": "5th Avenue를 따라 남서쪽으로 0.1 마일 가세요.",
-                "4": "North Prince Street, U.S. 2 22를 따라 남쪽으로 가세요.",
-                "5": [
-                    "동쪽으로 운전하세요.",
-                    "북쪽으로 운전하세요."
-                ],
-                "6": [
-                    "동쪽으로 반 마일 운전하세요.",
-                    "북쪽으로 1 킬로미터 운전하세요."
-                ],
-                "7": "5th Avenue를 따라 남서쪽으로 운전하세요.",
-                "8": "5th Avenue를 따라 남서쪽으로 0.1 마일 운전하세요.",
-                "9": "North Prince Street, U.S. 2 22를 따라 남쪽으로 운전하세요.",
-                "10": [
-                    "동쪽으로 걸어가세요.",
-                    "북쪽으로 걸어가세요."
-                ],
-                "11": [
-                    "동쪽으로 반 마일 걸어가세요.",
-                    "북쪽으로 1 킬로미터 걸어가세요."
-                ],
-                "12": "5th Avenue를 따라 남서쪽으로 걸어가세요.",
-                "13": "5th Avenue를 따라 남서쪽으로 0.1 마일 걸어가세요.",
-                "14": "North Prince Street, U.S. 2 22를 따라 남쪽으로 걸어가세요.",
-                "15": [
-                    "동쪽으로 자전거를 타고 가세요.",
-                    "북쪽으로 자전거를 타고 가세요."
-                ],
-                "16": [
-                    "동쪽으로 반 마일 자전거를 타고 가세요.",
-                    "북쪽으로 1 킬로미터 자전거를 타고 가세요."
-                ],
-                "17": "5th Avenue를 따라 남서쪽으로 자전거를 타고 가세요.",
-                "18": "5th Avenue를 따라 남서쪽으로 0.1 마일 자전거를 타고 가세요.",
-                "19": "North Prince Street, U.S. 2 22를 따라 남쪽으로 자전거를 타고 가세요."
-            }
-        },
-        "transit": {
-            "phrases": {
-                "0": "<TRANSIT_NAME>을(를) 타세요. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)",
-                "1": "<TRANSIT_HEADSIGN> 방향의 <TRANSIT_NAME>을(를) 타세요. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)"
-            },
-            "empty_transit_name_labels": [
-                "트램",
-                "지하철",
-                "기차",
-                "버스",
-                "페리",
-                "케이블카",
-                "곤돌라",
-                "케이블카"
-            ],
-            "transit_stop_count_labels": {
-                "one": "정류장",
-                "other": "정류장들"
-            },
-            "example_phrases": {
-                "0": [
-                    "New Haven을 타세요. (1 정류장)",
-                    "지하철을 타세요. (2 정류장들)",
-                    "버스를 타세요. (12 정류장들)"
-                ],
-                "1": [
-                    "F를 JAMAICA - 179 ST 방향으로 타세요. (10 정류장들)",
-                    "Staten Island 방향의 페리를 타세요. (1 정류장)"
-                ]
-            }
-        },
-        "transit_connection_destination": {
-            "phrases": {
-                "0": "역을 나가세요.",
-                "1": "<TRANSIT_STOP>을(를) 나가세요.",
-                "2": "<TRANSIT_STOP> <STATION_LABEL>을(를) 나가세요."
-            },
-            "station_label": "역",
-            "example_phrases": {
-                "0": [
-                    "역을 나가세요."
-                ],
-                "1": "Embarcadero 역을 나가세요.",
-                "2": "8 St - NYU 역을 나가세요."
-            }
-        },
-        "transit_connection_destination_verbal": {
-            "phrases": {
-                "0": "역을 나가세요.",
-                "1": "<TRANSIT_STOP>을(를) 나가세요.",
-                "2": "<TRANSIT_STOP> <STATION_LABEL>을(를) 나가세요."
-            },
-            "station_label": "역",
-            "example_phrases": {
-                "0": [
-                    "역을 나가세요."
-                ],
-                "1": [
-                    "Embarcadero 역을 나가세요."
-                ],
-                "2": [
-                    "8 St - NYU 역을 나가세요."
-                ]
-            }
-        },
-        "transit_connection_start": {
-            "phrases": {
-                "0": "역에 들어가세요.",
-                "1": "<TRANSIT_STOP>에 들어가세요.",
-                "2": "<TRANSIT_STOP> <STATION_LABEL>에 들어가세요."
-            },
-            "station_label": "역",
-            "example_phrases": {
-                "0": [
-                    "역에 들어가세요."
-                ],
-                "1": [
-                    "Embarcadero 역에 들어가세요."
-                ],
-                "2": [
-                    "8 St - NYU 역에 들어가세요."
-                ]
-            }
-        },
-        "transit_connection_start_verbal": {
-            "phrases": {
-                "0": "역에 들어가세요.",
-                "1": "<TRANSIT_STOP>에 들어가세요.",
-                "2": "<TRANSIT_STOP> <STATION_LABEL>에 들어가세요."
-            },
-            "station_label": "역",
-            "example_phrases": {
-                "0": [
-                    "역에 들어가세요."
-                ],
-                "1": [
-                    "Embarcadero 역에 들어가세요."
-                ],
-                "2": [
-                    "8 St - NYU 역에 들어가세요."
-                ]
-            }
-        },
-        "transit_connection_transfer": {
-            "phrases": {
-                "0": "역에서 환승하세요.",
-                "1": "<TRANSIT_STOP>에서 환승하세요.",
-                "2": "<TRANSIT_STOP> <STATION_LABEL>에서 환승하세요."
-            },
-            "station_label": "역",
-            "example_phrases": {
-                "0": [
-                    "역에서 환승하세요."
-                ],
-                "1": [
-                    "Embarcadero 역에서 환승하세요."
-                ],
-                "2": [
-                    "8 St - NYU 역에서 환승하세요."
-                ]
-            }
-        },
-        "transit_connection_transfer_verbal": {
-            "phrases": {
-                "0": "역에서 환승하세요.",
-                "1": "<TRANSIT_STOP>에서 환승하세요.",
-                "2": "<TRANSIT_STOP> <STATION_LABEL>에서 환승하세요."
-            },
-            "station_label": "역",
-            "example_phrases": {
-                "0": [
-                    "역에서 환승하세요."
-                ],
-                "1": [
-                    "Embarcadero 역에서 환승하세요."
-                ],
-                "2": [
-                    "8 St - NYU 역에서 환승하세요."
-                ]
-            }
-        },
-        "transit_remain_on": {
-            "phrases": {
-                "0": "<TRANSIT_NAME>에 그대로 있으세요. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)",
-                "1": "<TRANSIT_NAME>을(를) <TRANSIT_HEADSIGN> 방향으로 타고 그대로 있으세요. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)"
-            },
-            "empty_transit_name_labels": [
-                "트램",
-                "지하철",
-                "기차",
-                "버스",
-                "페리",
-                "케이블카",
-                "곤돌라",
-                "케이블카"
-            ],
-            "transit_stop_count_labels": {
-                "one": "정거장",
-                "other": "정거장들"
-            },
-            "example_phrases": {
-                "0": [
-                    "New Haven에 그대로 있으세요. (1 정거장)",
-                    "기차에 그대로 있으세요. (3 정거장)"
-                ],
-                "1": [
-                    "F호선을 JAMAICA - 179 ST 방향으로 타고 그대로 있으세요. (10 정거장)"
-                ]
-            }
-        },
-        "transit_remain_on_verbal": {
-            "phrases": {
-                "0": "<TRANSIT_NAME>에 그대로 있으세요.",
-                "1": "<TRANSIT_NAME>을(를) <TRANSIT_HEADSIGN> 방향으로 타고 그대로 있으세요."
-            },
-            "empty_transit_name_labels": [
-                "트램",
-                "지하철",
-                "기차",
-                "버스",
-                "페리",
-                "케이블카",
-                "곤돌라",
-                "케이블카"
-            ],
-            "example_phrases": {
-                "0": [
-                    "New Haven에 그대로 있으세요."
-                ],
-                "1": [
-                    "F호선을 JAMAICA - 179 ST 방향으로 타고 그대로 있으세요."
-                ]
-            }
-        },
-        "transit_transfer": {
-            "phrases": {
-                "0": "<TRANSIT_NAME>을(를) 타기 위해 환승하세요. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)",
-                "1": "<TRANSIT_NAME>을(를) <TRANSIT_HEADSIGN> 방향으로 타기 위해 환승하세요. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)"
-            },
-            "empty_transit_name_labels": [
-                "트램",
-                "지하철",
-                "기차",
-                "버스",
-                "페리",
-                "케이블카",
-                "곤돌라",
-                "케이블카"
-            ],
-            "transit_stop_count_labels": {
-                "one": "정거장",
-                "other": "정거장들"
-            },
-            "example_phrases": {
-                "0": [
-                    "New Haven을 타기 위해 환승하세요. (1 정거장)",
-                    "트램을 타기 위해 환승하세요. (4 정거장)"
-                ],
-                "1": [
-                    "F호선을 JAMAICA - 179 ST 방향으로 타기 위해 환승하세요. (10 정거장)"
-                ]
-            }
-        },
-        "transit_transfer_verbal": {
-            "phrases": {
-                "0": "<TRANSIT_NAME>을(를) 타기 위해 환승하세요.",
-                "1": "<TRANSIT_NAME>을(를) <TRANSIT_HEADSIGN> 방향으로 타기 위해 환승하세요."
-            },
-            "empty_transit_name_labels": [
-                "트램",
-                "지하철",
-                "기차",
-                "버스",
-                "페리",
-                "케이블카",
-                "곤돌라",
-                "케이블카"
-            ],
-            "example_phrases": {
-                "0": [
-                    "New Haven을 타세요."
-                ],
-                "1": [
-                    "F호선을 JAMAICA - 179 ST 방향으로 타세요."
-                ]
-            }
-        },
-        "transit_verbal": {
-            "phrases": {
-                "0": "<TRANSIT_NAME>을(를) 타세요.",
-                "1": "<TRANSIT_NAME>을(를) <TRANSIT_HEADSIGN> 방향으로 타세요."
-            },
-            "empty_transit_name_labels": [
-                "트램",
-                "지하철",
-                "기차",
-                "버스",
-                "페리",
-                "케이블카",
-                "곤돌라",
-                "케이블카"
-            ],
-            "example_phrases": {
-                "0": [
-                    "New Haven을 타세요."
-                ],
-                "1": [
-                    "F호선을 JAMAICA - 179 ST 방향으로 타세요."
-                ]
-            }
-        },
-        "turn": {
-            "phrases": {
-                "0": "<RELATIVE_DIRECTION>으로 회전하세요.",
-                "1": "<RELATIVE_DIRECTION>으로 <STREET_NAMES>로 회전하세요.",
-                "2": "<RELATIVE_DIRECTION>으로 <BEGIN_STREET_NAMES>로 회전하십시오. <STREET_NAMES>을(를) 계속 진행하세요.",
-                "3": "<RELATIVE_DIRECTION>으로 <STREET_NAMES>을(를) 따라 계속 진행하세요.",
-                "4": "<JUNCTION_NAME>에서 <RELATIVE_DIRECTION>으로 회전하세요.",
-                "5": "<TOWARD_SIGN> 방향으로 <RELATIVE_DIRECTION>으로 회전하세요."
-            },
-            "empty_street_name_labels": [
-                "보도",
-                "자전거 도로",
-                "산악 자전거 길",
-                "횡단보도"
-            ],
-            "relative_directions": [
-                "왼쪽",
-                "오른쪽"
-            ],
-            "example_phrases": {
-                "0": [
-                    "왼쪽으로 회전하세요."
-                ],
-                "1": [
-                    "Flatbush Avenue로 오른쪽으로 회전하세요."
-                ],
-                "2": [
-                    "North Bond Street/US 1 Business/MD 924로 왼쪽으로 회전하세요. MD 924를 계속 진행하세요."
-                ],
-                "3": [
-                    "Sunstone Drive를 따라 오른쪽으로 회전하여 계속 진행하세요."
-                ],
-                "4": [
-                    "Mannenbashi East에서 오른쪽으로 회전하세요."
-                ],
-                "5": [
-                    "Baltimore 방향으로 왼쪽으로 회전하세요."
-                ]
-            }
-        },
-        "turn_verbal": {
-            "phrases": {
-                "0": "<RELATIVE_DIRECTION>으로 회전하세요.",
-                "1": "<STREET_NAMES>로 <RELATIVE_DIRECTION>으로 회전하세요.",
-                "2": "<BEGIN_STREET_NAMES>로 <RELATIVE_DIRECTION>으로 회전하세요.",
-                "3": "<STREET_NAMES>를 따라 <RELATIVE_DIRECTION>으로 회전하여 계속 진행하세요.",
-                "4": "<JUNCTION_NAME>에서 <RELATIVE_DIRECTION>으로 회전하세요.",
-                "5": "<TOWARD_SIGN> 방향으로 <RELATIVE_DIRECTION>으로 회전하세요."
-            },
-            "empty_street_name_labels": [
-                "보도",
-                "자전거 도로",
-                "산악 자전거 길",
-                "횡단보도"
-            ],
-            "relative_directions": [
-                "왼쪽",
-                "오른쪽"
-            ],
-            "example_phrases": {
-                "0": [
-                    "왼쪽으로 회전하세요."
-                ],
-                "1": [
-                    "Flatbush Avenue로 오른쪽으로 회전하세요."
-                ],
-                "2": [
-                    "North Bond Street, U.S. 1 Business로 왼쪽으로 회전하세요."
-                ],
-                "3": [
-                    "Sunstone Drive를 따라 오른쪽으로 회전하여 계속 진행하세요."
-                ],
-                "4": [
-                    "Mannenbashi East에서 오른쪽으로 회전하세요."
-                ],
-                "5": [
-                    "Baltimore 방향으로 왼쪽으로 회전하세요."
-                ]
-            }
-        },
-        "uturn": {
-            "phrases": {
-                "0": "<RELATIVE_DIRECTION>으로 U턴하세요.",
-                "1": "<STREET_NAMES>로 <RELATIVE_DIRECTION>으로 U턴하세요.",
-                "2": "<STREET_NAMES>를 따라 <RELATIVE_DIRECTION>으로 U턴하여 계속 진행하세요.",
-                "3": "<CROSS_STREET_NAMES>에서 <RELATIVE_DIRECTION>으로 U턴하세요.",
-                "4": "<CROSS_STREET_NAMES>에서 <STREET_NAMES>로 <RELATIVE_DIRECTION>으로 U턴하세요.",
-                "5": "<CROSS_STREET_NAMES>에서 <STREET_NAMES>를 따라 <RELATIVE_DIRECTION>으로 U턴하여 계속 진행하세요.",
-                "6": "<JUNCTION_NAME>에서 <RELATIVE_DIRECTION>으로 U턴하세요.",
-                "7": "<TOWARD_SIGN> 방향으로 <RELATIVE_DIRECTION>으로 U턴하세요."
-            },
-            "empty_street_name_labels": [
-                "보도",
-                "자전거 도로",
-                "산악 자전거 길",
-                "횡단보도"
-            ],
-            "relative_directions": [
-                "왼쪽",
-                "오른쪽"
-            ],
-            "example_phrases": {
-                "0": [
-                    "왼쪽으로 U턴하세요."
-                ],
-                "1": [
-                    "Bunker Hill Road로 오른쪽으로 U턴하세요."
-                ],
-                "2": [
-                    "Bunker Hill Road를 따라 왼쪽으로 U턴하여 계속 진행하세요."
-                ],
-                "3": [
-                    "Devonshire Road에서 왼쪽으로 U턴하세요."
-                ],
-                "4": [
-                    "Devonshire Road에서 Jonestown Road/US 22로 왼쪽으로 U턴하세요."
-                ],
-                "5": [
-                    "Devonshire Road에서 Jonestown Road/US 22를 따라 왼쪽으로 U턴하여 계속 진행하세요."
-                ],
-                "6": [
-                    "Mannenbashi East에서 오른쪽으로 U턴하세요."
-                ],
-                "7": [
-                    "Baltimore 방향으로 왼쪽으로 U턴하세요."
-                ]
-            }
-        },
-        "uturn_verbal": {
-            "phrases": {
-                "0": "<RELATIVE_DIRECTION>으로 U턴하세요.",
-                "1": "<STREET_NAMES>로 <RELATIVE_DIRECTION>으로 U턴하세요.",
-                "2": "<STREET_NAMES>를 따라 <RELATIVE_DIRECTION>으로 U턴하여 계속 진행하세요.",
-                "3": "<CROSS_STREET_NAMES>에서 <RELATIVE_DIRECTION>으로 U턴하세요.",
-                "4": "<CROSS_STREET_NAMES>에서 <STREET_NAMES>로 <RELATIVE_DIRECTION>으로 U턴하세요.",
-                "5": "<CROSS_STREET_NAMES>에서 <STREET_NAMES>를 따라 <RELATIVE_DIRECTION>으로 U턴하여 계속 진행하세요.",
-                "6": "<JUNCTION_NAME>에서 <RELATIVE_DIRECTION>으로 U턴하세요.",
-                "7": "<TOWARD_SIGN> 방향으로 <RELATIVE_DIRECTION>으로 U턴하세요."
-            },
-            "empty_street_name_labels": [
-                "보도",
-                "자전거 도로",
-                "산악 자전거 길",
-                "횡단보도"
-            ],
-            "relative_directions": [
-                "왼쪽",
-                "오른쪽"
-            ],
-            "example_phrases": {
-                "0": [
-                    "왼쪽으로 U턴하세요."
-                ],
-                "1": [
-                    "Bunker Hill Road로 오른쪽으로 U턴하세요."
-                ],
-                "2": [
-                    "Bunker Hill Road를 따라 왼쪽으로 U턴하여 계속 진행하세요."
-                ],
-                "3": [
-                    "Devonshire Road에서 왼쪽으로 U턴하세요."
-                ],
-                "4": [
-                    "Devonshire Road에서 Jonestown Road, U.S. 22로 왼쪽으로 U턴하세요."
-                ],
-                "5": [
-                    "Devonshire Road에서 Jonestown Road, U.S. 22를 따라 왼쪽으로 U턴하여 계속 진행하세요."
-                ],
-                "6": [
-                    "Mannenbashi East에서 오른쪽으로 U턴하세요."
-                ],
-                "7": [
-                    "Baltimore 방향으로 왼쪽으로 U턴하세요."
-                ]
-            }
-        },
-        "verbal_multi_cue": {
-            "phrases": {
-                "0": "<CURRENT_VERBAL_CUE>. 그리고 <NEXT_VERBAL_CUE>",
-                "1": "<CURRENT_VERBAL_CUE>. 그리고 <LENGTH> 후에, <NEXT_VERBAL_CUE>"
-            },
-            "metric_lengths": [
-                "<KILOMETERS>킬로미터",
-                "1킬로미터",
-                "<METERS>미터",
-                "10미터 미만"
-            ],
-            "us_customary_lengths": [
-                "<MILES>마일",
-                "1마일",
-                "반 마일",
-                "4분의 1마일",
-                "<FEET>피트",
-                "10피트 미만"
-            ],
-            "example_phrases": {
-                "0": [
-                    "East Fayette Street로 오른쪽으로 진행하세요. 그리고 North Gay Street로 오른쪽으로 회전하세요."
-                ],
-                "1": [
-                    "East Fayette Street로 오른쪽으로 진행하세요. 그리고 500피트 후에, North Gay Street로 오른쪽으로 회전하세요."
-                ]
-            }
-        },
-        "approach_verbal_alert": {
-            "phrases": {
-                "0": "<LENGTH> 후에, <CURRENT_VERBAL_CUE>"
-            },
-            "metric_lengths": [
-                "<KILOMETERS>킬로미터",
-                "1킬로미터",
-                "<METERS>미터",
-                "10미터 미만"
-            ],
-            "us_customary_lengths": [
-                "<MILES>마일",
-                "1마일",
-                "반 마일",
-                "4분의 1마일",
-                "<FEET>피트",
-                "10피트 미만"
-            ],
-            "example_phrases": {
-                "0": [
-                    "4분의 1마일 후에, North Gay Street로 오른쪽으로 회전하세요."
-                ]
-            }
-        },
-        "pass": {
-            "phrases": {
-                "0": "<OBJECT_LABEL>을(를) 통과하세요.",
-                "1": "<OBJECT_LABEL>의 교통 신호를 지나세요."
-            },
-            "object_labels": [
-                "게이트",
-                "볼라드",
-                "도로 교차로"
-            ],
-            "example_phrases": {
-                "0": [
-                    "게이트을(를) 통과하세요."
-                ]
-            }
-        },
-        "elevator": {
-            "phrases": {
-                "0": "엘리베이터를 이용하세요.",
-                "1": "<LEVEL>층으로 엘리베이터를 타세요."
-            },
-            "example_phrases": {
-                "0": [
-                    "엘리베이터를 이용하세요."
-                ],
-                "1": [
-                    "1층으로 엘리베이터를 타세요."
-                ]
-            }
-        },
-        "steps": {
-            "phrases": {
-                "0": "계단을 이용하세요.",
-                "1": "<LEVEL>층으로 계단을 올라가세요."
-            },
-            "example_phrases": {
-                "0": [
-                    "계단을 이용하세요."
-                ],
-                "1": [
-                    "2층으로 계단을 올라가세요."
-                ]
-            }
-        },
-        "escalator": {
-            "phrases": {
-                "0": "에스컬레이터를 이용하세요.",
-                "1": "<LEVEL>층으로 에스컬레이터를 타세요."
-            },
-            "example_phrases": {
-                "0": [
-                    "에스컬레이터를 이용하세요."
-                ],
-                "1": [
-                    "3층으로 에스컬레이터를 타세요."
-                ]
-            }
-        },
-        "enter_building": {
-            "phrases": {
-                "0": "건물로 들어가세요.",
-                "1": "건물로 들어가고, <STREET_NAMES>을 따라 계속 진행하세요."
-            },
-            "empty_street_name_labels": [
-                "보도",
-                "자전거 도로",
-                "산악 자전거 길",
-                "횡단보도"
-            ],
-            "example_phrases": {
-                "0": [
-                    "건물로 들어가세요."
-                ],
-                "1": [
-                    "건물로 들어가고, 보도를 따라 계속 진행하세요."
-                ]
-            }
-        },
-        "exit_building": {
-            "phrases": {
-                "0": "건물에서 나오세요.",
-                "1": "건물에서 나오고, <STREET_NAMES>을 따라 계속 진행하세요."
-            },
-            "empty_street_name_labels": [
-                "보도",
-                "자전거 도로",
-                "산악 자전거 길",
-                "횡단보도"
-            ],
-            "example_phrases": {
-                "0": [
-                    "건물에서 나오세요."
-                ],
-                "1": [
-                    "건물에서 나오고, 보도를 따라 계속 진행하세요."
-                ]
-            }
-        }
+  "posix_locale": "ko_KO.UTF-8",
+  "aliases": [
+    "ko"
+  ],
+  "instructions": {
+    "arrive": {
+      "phrases": {
+        "0": "도착 시간: <TIME>.",
+        "1": "도착: <TIME> <TRANSIT_STOP>."
+      },
+      "example_phrases": {
+        "0": [
+          "8:02 AM에 도착."
+        ],
+        "1": [
+          "8 St - NYU에서 8:02 AM에 도착."
+        ]
+      }
+    },
+    "arrive_verbal": {
+      "phrases": {
+        "0": "<TIME>에 도착하세요.",
+        "1": "<TIME> <TRANSIT_STOP>에 도착하세요."
+      },
+      "example_phrases": {
+        "0": [
+          "8:02 AM에 도착."
+        ],
+        "1": [
+          "8 St - NYU에서 8:02 AM에 도착."
+        ]
+      }
+    },
+    "bear": {
+      "phrases": {
+        "0": "<RELATIVE_DIRECTION>을 향하세요.",
+        "1": "<RELATIVE_DIRECTION> 방향으로 <STREET_NAMES> 방향으로 진입하세요.",
+        "2": "<BEGIN_STREET_NAMES> 방향으로 <RELATIVE_DIRECTION> 방향으로 이동하세요. <STREET_NAMES>에서 계속하세요.",
+        "3": "<RELATIVE_DIRECTION> 방향으로 이동하여 <STREET_NAMES>로 계속 이동하세요.",
+        "4": "<JUNCTION_NAME>에서 <RELATIVE_DIRECTION> 방향으로 이동하세요.",
+        "5": "<TOWARD_SIGN> 방향으로 <RELATIVE_DIRECTION> 방향으로 이동하세요."
+      },
+      "empty_street_name_labels": [
+        "산책로",
+        "자전거 도로",
+        "산악자전거 트레일",
+        "횡단보도",
+        "계단",
+        "다리",
+        "터널"
+      ],
+      "relative_directions": [
+        "왼쪽",
+        "오른쪽"
+      ],
+      "example_phrases": {
+        "0": [
+          "오른쪽으로."
+        ],
+        "1": [
+          "Arlen Road로 왼쪽으로."
+        ],
+        "2": [
+          "Belair Road/US 1 Business로 오른쪽으로. US 1 Business 계속."
+        ],
+        "3": [
+          "US 15 South를 계속하려면 왼쪽으로."
+        ],
+        "4": [
+          "Mannenbashi East에서 오른쪽으로."
+        ],
+        "5": [
+          "Baltimore 쪽으로 왼쪽으로."
+        ]
+      }
+    },
+    "bear_verbal": {
+      "phrases": {
+        "0": "<RELATIVE_DIRECTION>을 향하세요.",
+        "1": "<RELATIVE_DIRECTION> 방향으로 <STREET_NAMES> 방향으로 진입하세요.",
+        "2": "<BEGIN_STREET_NAMES> 방향으로 <RELATIVE_DIRECTION> 방향으로 이동하세요.",
+        "3": "<RELATIVE_DIRECTION> 방향으로 이동하여 <STREET_NAMES>로 계속 이동하세요.",
+        "4": "<JUNCTION_NAME>에서 <RELATIVE_DIRECTION> 방향으로 이동하세요.",
+        "5": "<TOWARD_SIGN> 방향으로 <RELATIVE_DIRECTION> 방향으로 이동하세요."
+      },
+      "empty_street_name_labels": [
+        "산책로",
+        "자전거 도로",
+        "산악자전거 트레일",
+        "횡단보도",
+        "계단",
+        "다리",
+        "터널"
+      ],
+      "relative_directions": [
+        "왼쪽",
+        "오른쪽"
+      ],
+      "example_phrases": {
+        "0": [
+          "오른쪽으로."
+        ],
+        "1": [
+          "Arlen Road로 왼쪽으로."
+        ],
+        "2": [
+          "Belair Road, U.S. 1 Business로 오른쪽으로."
+        ],
+        "3": [
+          "U.S. 15 South를 계속하려면 왼쪽으로."
+        ],
+        "4": [
+          "Mannenbashi East에서 오른쪽으로."
+        ],
+        "5": [
+          "Baltimore 쪽으로 왼쪽으로."
+        ]
+      }
+    },
+    "becomes": {
+      "phrases": {
+        "0": "<PREVIOUS_STREET_NAMES>이 <STREET_NAMES>이 됩니다."
+      },
+      "example_phrases": {
+        "0": [
+          "Vine Street은 Middletown Road로 바뀝니다."
+        ]
+      }
+    },
+    "becomes_verbal": {
+      "phrases": {
+        "0": "<PREVIOUS_STREET_NAMES>이 <STREET_NAMES>이 됩니다."
+      },
+      "example_phrases": {
+        "0": [
+          "Vine Street은 Middletown Road로 바뀝니다."
+        ]
+      }
+    },
+    "continue": {
+      "phrases": {
+        "0": "계속하다.",
+        "1": "<STREET_NAMES>에서 계속하세요.",
+        "2": "<JUNCTION_NAME>에서 계속하세요.",
+        "3": "<TOWARD_SIGN> 방향으로 계속 가세요."
+      },
+      "empty_street_name_labels": [
+        "산책로",
+        "자전거 도로",
+        "산악자전거 트레일",
+        "횡단보도",
+        "계단",
+        "다리",
+        "터널"
+      ],
+      "example_phrases": {
+        "0": [
+          "계속하십시오."
+        ],
+        "1": [
+          "10th Avenue를 계속하십시오."
+        ],
+        "2": [
+          "Mannenbashi East에서 계속하십시오."
+        ],
+        "3": [
+          "Baltimore 쪽으로 계속하십시오."
+        ]
+      }
+    },
+    "continue_verbal": {
+      "phrases": {
+        "0": "계속하다.",
+        "1": "<LENGTH> 동안 계속하세요.",
+        "2": "<STREET_NAMES>로 계속 가세요.",
+        "3": "<STREET_NAMES>에서 <LENGTH> 동안 계속 이동하세요.",
+        "4": "<JUNCTION_NAME>에서 계속하세요.",
+        "5": "<JUNCTION_NAME>에서 <LENGTH> 동안 계속 가세요.",
+        "6": "<TOWARD_SIGN> 방향으로 계속 가세요.",
+        "7": "<LENGTH> 동안 <TOWARD_SIGN> 방향으로 계속 가세요."
+      },
+      "empty_street_name_labels": [
+        "산책로",
+        "자전거 도로",
+        "산악자전거 트레일",
+        "횡단보도",
+        "계단",
+        "다리",
+        "터널"
+      ],
+      "metric_lengths": [
+        "<KILOMETERS> 킬로미터",
+        "1 킬로미터",
+        "<METERS> 미터",
+        "10 미터 미만"
+      ],
+      "us_customary_lengths": [
+        "<MILES>마일",
+        "1마일",
+        "반 마일",
+        "사분의 일 마일",
+        "<FEET> 피트",
+        "10 피트 미만"
+      ],
+      "example_phrases": {
+        "0": [
+          "계속하십시오."
+        ],
+        "1": [
+          "300 피트만큼 계속하십시오."
+        ],
+        "2": [
+          "10th Avenue를 계속하십시오."
+        ],
+        "3": [
+          "10th Avenue를 3 마일만큼 계속하십시오."
+        ],
+        "4": [
+          "Mannenbashi East에서 계속하십시오."
+        ],
+        "5": [
+          "Mannenbashi East에서 2 마일만큼 계속하십시오."
+        ],
+        "6": [
+          "Baltimore 쪽으로 계속하십시오."
+        ],
+        "7": [
+          "Baltimore 쪽으로 5 마일만큼 계속하십시오."
+        ]
+      }
+    },
+    "continue_verbal_alert": {
+      "phrases": {
+        "0": "계속하다.",
+        "1": "<STREET_NAMES>에서 계속하세요.",
+        "2": "<JUNCTION_NAME>에서 계속하세요.",
+        "3": "<TOWARD_SIGN> 방향으로 계속 가세요."
+      },
+      "empty_street_name_labels": [
+        "산책로",
+        "자전거 도로",
+        "산악자전거 트레일",
+        "횡단보도",
+        "계단",
+        "다리",
+        "터널"
+      ],
+      "example_phrases": {
+        "0": [
+          "계속하십시오."
+        ],
+        "1": [
+          "10th Avenue를 계속하십시오."
+        ],
+        "2": [
+          "Mannenbashi East에서 계속하십시오."
+        ],
+        "3": [
+          "Baltimore 쪽으로 계속하십시오."
+        ]
+      }
+    },
+    "depart": {
+      "phrases": {
+        "0": "출발: <TIME>.",
+        "1": "출발: <TIME>에 <TRANSIT_STOP>에서 출발합니다."
+      },
+      "example_phrases": {
+        "0": [
+          "8:02 AM에 출발."
+        ],
+        "1": [
+          "8 St - NYU에서 8:02 AM에 출발."
+        ]
+      }
+    },
+    "depart_verbal": {
+      "phrases": {
+        "0": "<TIME>에 출발합니다.",
+        "1": "<TRANSIT_STOP>에서 <TIME>에 출발합니다."
+      },
+      "example_phrases": {
+        "0": [
+          "8:02 AM에 출발."
+        ],
+        "1": [
+          "8 St - NYU에서 8:02 AM에 출발."
+        ]
+      }
+    },
+    "destination": {
+      "phrases": {
+        "0": "목적지에 도착했습니다.",
+        "1": "<DESTINATION>에 도착했습니다.",
+        "2": "목적지는 <RELATIVE_DIRECTION>에 있습니다.",
+        "3": "<DESTINATION>은 <RELATIVE_DIRECTION>에 있습니다."
+      },
+      "relative_directions": [
+        "왼쪽",
+        "오른쪽"
+      ],
+      "example_phrases": {
+        "0": [
+          "목적지에 도착했습니다."
+        ],
+        "1": [
+          "3206 Powelton Avenue에 도착했습니다."
+        ],
+        "2": [
+          "목적지는 왼쪽에 있습니다.",
+          "목적지는 오른쪽에 있습니다."
+        ],
+        "3": [
+          "Lancaster Brewing Company는 왼쪽에 있습니다."
+        ]
+      }
+    },
+    "destination_verbal": {
+      "phrases": {
+        "0": "목적지에 도착했습니다.",
+        "1": "<목적지>에 도착했습니다.",
+        "2": "목적지는 <RELATIVE_DIRECTION>에 있습니다.",
+        "3": "<DESTINATION>은 <RELATIVE_DIRECTION>에 있습니다."
+      },
+      "relative_directions": [
+        "왼쪽",
+        "오른쪽"
+      ],
+      "example_phrases": {
+        "0": [
+          "목적지에 도착했습니다."
+        ],
+        "1": [
+          "32 o6 Powelton Avenue에 도착했습니다."
+        ],
+        "2": [
+          "목적지는 왼쪽에 있습니다.",
+          "목적지는 오른쪽에 있습니다."
+        ],
+        "3": [
+          "Lancaster Brewing Company는 왼쪽에 있습니다."
+        ]
+      }
+    },
+    "destination_verbal_alert": {
+      "phrases": {
+        "0": "목적지에 도착하게 됩니다.",
+        "1": "<DESTINATION>에 도착합니다.",
+        "2": "목적지는 <RELATIVE_DIRECTION>에 있습니다.",
+        "3": "<DESTINATION>은 <RELATIVE_DIRECTION>에 있습니다."
+      },
+      "relative_directions": [
+        "왼쪽",
+        "오른쪽"
+      ],
+      "example_phrases": {
+        "0": [
+          "목적지에 도착할 예정입니다."
+        ],
+        "1": [
+          "32 o6 Powelton Avenue에 도착할 예정입니다."
+        ],
+        "2": [
+          "목적지는 왼쪽에 있을 것입니다.",
+          "목적지는 오른쪽에 있을 것입니다."
+        ],
+        "3": [
+          "Lancaster Brewing Company는 왼쪽에 있을 것입니다."
+        ]
+      }
+    },
+    "enter_ferry": {
+      "phrases": {
+        "0": "페리를 타세요.",
+        "1": "<STREET_NAMES> 방향으로 가세요.",
+        "2": "<STREET_NAMES> <FERRY_LABEL> 이용",
+        "3": "<TOWARD_SIGN> 방향으로 페리를 타세요."
+      },
+      "empty_street_name_labels": [
+        "산책로",
+        "자전거 도로",
+        "산악자전거 트레일",
+        "횡단보도",
+        "계단",
+        "다리",
+        "터널"
+      ],
+      "ferry_label": "나룻배",
+      "example_phrases": {
+        "0": [
+          "페리를 이용하십시오."
+        ],
+        "1": [
+          "Millersburg 페리를 이용하십시오."
+        ],
+        "2": [
+          "Bridgeport - Port Jefferson 페리를 이용하십시오."
+        ],
+        "3": [
+          "Cape May 쪽 페리를 이용하십시오."
+        ]
+      }
+    },
+    "enter_ferry_verbal": {
+      "phrases": {
+        "0": "페리를 타세요.",
+        "1": "<STREET_NAMES> 방향으로 가세요.",
+        "2": "<STREET_NAMES> <FERRY_LABEL> 이용.",
+        "3": "<TOWARD_SIGN> 방향 페리를 타세요."
+      },
+      "empty_street_name_labels": [
+        "산책로",
+        "자전거 도로",
+        "산악자전거 트레일",
+        "횡단보도",
+        "계단",
+        "다리",
+        "터널"
+      ],
+      "ferry_label": "나룻배",
+      "example_phrases": {
+        "0": [
+          "페리를 이용하십시오."
+        ],
+        "1": [
+          "Millersburg 페리를 이용하십시오."
+        ],
+        "2": [
+          "Bridgeport - Port Jefferson 페리를 이용하십시오."
+        ],
+        "3": [
+          "Cape May 쪽 페리를 이용하십시오."
+        ]
+      }
+    },
+    "enter_roundabout": {
+      "phrases": {
+        "0": "로터리로 들어갑니다.",
+        "1": "로터리로 진입한 후 <ORDINAL_VALUE> 출구로 나가세요.",
+        "2": "로터리로 진입한 후 <ROUNDABOUT_EXIT_STREET_NAMES> 방향 <ORDINAL_VALUE> 출구로 나가세요.",
+        "3": "로터리로 진입한 후 <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES> 방면 <ORDINAL_VALUE> 출구로 나가세요. <ROUNDABOUT_EXIT_STREET_NAMES>에서 계속 가세요.",
+        "4": "로터리로 진입한 후 <TOWARD_SIGN> 방면 <ORDINAL_VALUE> 출구로 나가세요.",
+        "5": "원형 교차로에 진입하여 <ROUNDABOUT_EXIT_STREET_NAMES>로 나가는 출구를 이용하세요.",
+        "6": "로터리로 진입한 후 <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES> 방향 출구로 나가세요. <ROUNDABOUT_EXIT_STREET_NAMES>에서 계속 가세요.",
+        "7": "로터리로 진입하여 <TOWARD_SIGN> 방향 출구로 나가세요.",
+        "8": "<STREET_NAMES> 입력",
+        "9": "<STREET_NAMES>에 진입한 후 <ORDINAL_VALUE> 출구로 나가세요.",
+        "10": "<STREET_NAMES>에 진입한 후 <ORDINAL_VALUE> 출구로 나와 <ROUNDABOUT_EXIT_STREET_NAMES> 방향으로 나가세요.",
+        "11": "<STREET_NAMES>에 진입한 후 <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES> 방면 <ORDINAL_VALUE> 출구로 나가세요. <ROUNDABOUT_EXIT_STREET_NAMES>에서 계속 가세요.",
+        "12": "<STREET_NAMES>에 진입한 후 <TOWARD_SIGN> 방면 <ORDINAL_VALUE> 출구로 진출하세요.",
+        "13": "<STREET_NAMES>에 진입한 후 <ROUNDABOUT_EXIT_STREET_NAMES> 방향 출구로 나가세요.",
+        "14": "<STREET_NAMES>에 진입한 후 <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES> 방향 출구로 나가세요. <ROUNDABOUT_EXIT_STREET_NAMES>에서 계속 가세요.",
+        "15": "<STREET_NAMES>로 진입하여 <TOWARD_SIGN> 방면으로 나가는 출구로 나가세요."
+      },
+      "ordinal_values": [
+        "1위",
+        "2번째",
+        "3번째",
+        "4번째",
+        "5번째",
+        "6번째",
+        "7번째",
+        "8일",
+        "9일",
+        "10일"
+      ],
+      "empty_street_name_labels": [
+        "산책로",
+        "자전거 도로",
+        "산악자전거 트레일",
+        "횡단보도",
+        "계단",
+        "다리",
+        "터널"
+      ],
+      "example_phrases": {
+        "0": [
+          "로터리로 들어가세요."
+        ],
+        "1": [
+          "로터리로 진입하여 1번 출구로 나가세요.",
+          "로터리로 진입하여 2번 출구로 나가세요.",
+          "로터리로 진입하여 3번 출구로 나가세요.",
+          "로터리로 진입하여 4번 출구로 나가세요.",
+          "로터리로 진입하여 5번 출구로 나가세요.",
+          "로터리 진입 후 6번 출구로 나가세요.",
+          "로터리 진입 후 7번 출구로 나가세요.",
+          "로터리로 진입하여 8번 출구로 나가세요.",
+          "로터리로 진입하여 9번 출구로 나가세요.",
+          "로터리 진입 후 10번 출구로 나가세요."
+        ],
+        "2": [
+          "로터리로 진입하여 3번 출구로 나와 Main Street으로 나가세요."
+        ],
+        "삼": [
+          "로터리로 진입하여 US 322/Main Street 방향으로 3번째 출구로 나가세요. 계속해서 US 322로 가세요."
+        ],
+        "4": [
+          "로터리로 진입하여 볼티모어 방향 3번 출구로 나가세요."
+        ],
+        "5": [
+          "로터리로 진입한 후 메인 스트리트(Main Street) 방향으로 출구로 나가세요."
+        ],
+        "6": [
+          "로터리로 진입한 후 US 322/Main Street 방향 출구로 나가세요. US 322를 계속 타세요."
+        ],
+        "7": [
+          "로터리 진입 후 볼티모어 방향 출구로 나가세요."
+        ],
+        "8": [
+          "듀퐁서클에 들어가세요."
+        ],
+        "9": [
+          "Dupont Circle에 진입하여 1번 출구로 나가세요."
+        ],
+        "10": [
+          "Dupont Circle에 진입하여 Main Street 방향의 3번째 출구로 나가세요."
+        ],
+        "11": [
+          "Dupont Circle에 진입한 후 US 322/Main Street 방향 3번째 출구로 나가세요. 계속해서 US 322로 가세요."
+        ],
+        "12": [
+          "Dupont Circle에 진입하여 볼티모어 방향 3번 출구로 나가세요."
+        ],
+        "13": [
+          "Dupont Circle에 진입한 후 Main Street 방향 출구로 나가세요."
+        ],
+        "14": [
+          "Dupont Circle에 진입한 후 US 322/Main Street 방향 출구로 나가세요. US 322에서 계속 진행하세요."
+        ],
+        "15": [
+          "Dupont Circle에 진입하여 볼티모어 방향 출구로 나가세요."
+        ]
+      }
+    },
+    "enter_roundabout_verbal": {
+      "phrases": {
+        "0": "로터리로 들어갑니다.",
+        "1": "로터리로 진입한 후 <ORDINAL_VALUE> 출구로 나가세요.",
+        "2": "로터리로 진입한 후 <ROUNDABOUT_EXIT_STREET_NAMES> 방향 <ORDINAL_VALUE> 출구로 나가세요.",
+        "3": "로터리로 진입한 후 <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES> 방면 <ORDINAL_VALUE> 출구로 나가세요.",
+        "4": "로터리로 진입한 후 <TOWARD_SIGN> 방면 <ORDINAL_VALUE> 출구로 나가세요.",
+        "5": "로터리로 진입한 후 <ROUNDABOUT_EXIT_STREET_NAMES> 방향으로 출구로 나가세요.",
+        "6": "원형 교차로에 진입하여 <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>로 나가는 출구를 이용하세요.",
+        "7": "원형 교차로에 진입하여 <TOWARD_SIGN> 방면으로 나가는 출구를 이용하세요.",
+        "8": "<STREET_NAMES> 입력",
+        "9": "<STREET_NAMES>에 진입한 후 <ORDINAL_VALUE> 출구로 나가세요.",
+        "10": "<STREET_NAMES>에 진입한 후 <ORDINAL_VALUE> 출구로 나와 <ROUNDABOUT_EXIT_STREET_NAMES> 방향으로 나가세요.",
+        "11": "<STREET_NAMES>에 진입한 후 <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES> 방면 <ORDINAL_VALUE> 출구로 나가세요.",
+        "12": "<STREET_NAMES>에 진입한 후 <TOWARD_SIGN> 방면 <ORDINAL_VALUE> 출구로 진출하세요.",
+        "13": "<STREET_NAMES>에 진입한 후 <ROUNDABOUT_EXIT_STREET_NAMES> 방향 출구로 나가세요.",
+        "14": "<STREET_NAMES>에 진입한 후 <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES> 방향 출구로 나가세요.",
+        "15": "<STREET_NAMES>에 진입한 후 <TOWARD_SIGN> 방향 출구로 나가세요."
+      },
+      "ordinal_values": [
+        "1위",
+        "2번째",
+        "3번째",
+        "4번째",
+        "5번째",
+        "6번째",
+        "7번째",
+        "8일",
+        "9일",
+        "10일"
+      ],
+      "empty_street_name_labels": [
+        "산책로",
+        "자전거 도로",
+        "산악자전거 트레일",
+        "횡단보도",
+        "계단",
+        "다리",
+        "터널"
+      ],
+      "example_phrases": {
+        "0": [
+          "로터리로 들어갑니다."
+        ],
+        "1": [
+          "로터리로 진입하여 1번 출구로 나오세요.",
+          "원형 교차로에 진입하여 두 번째 출구로 나가세요.",
+          "로터리로 진입하여 3번 출구로 나오세요.",
+          "로터리로 진입하여 4번 출구로 나오세요.",
+          "로터리로 진입하여 5번 출구로 나오세요.",
+          "원형 교차로에 진입하여 6번째 출구로 나가세요.",
+          "로터리로 진입하여 7번 출구로 나오세요.",
+          "로터리로 진입하여 8번 출구로 나가세요.",
+          "원형 교차로에 진입하여 9번째 출구로 나가세요.",
+          "로터리로 진입하여 10번 출구로 나오세요."
+        ],
+        "2": [
+          "로터리로 진입하여 3번째 출구로 나와 Main Street으로 나가세요."
+        ],
+        "3": [
+          "로터리로 진입한 후 3번째 출구로 나가 U.S. 3 22/Main Street로 향하세요."
+        ],
+        "4": [
+          "로터리로 진입하여 볼티모어 방향 3번째 출구로 나가세요."
+        ],
+        "5": [
+          "로터리로 진입하여 메인 스트리트(Main Street) 방향으로 출구로 나가세요."
+        ],
+        "6": [
+          "로터리로 진입하여 U.S. 3 22/Main Street 출구로 나가세요."
+        ],
+        "7": [
+          "로터리로 진입하여 볼티모어 방향 출구로 나가세요."
+        ],
+        "8": [
+          "듀퐁서클에 들어가세요."
+        ],
+        "9": [
+          "Dupont Circle에 진입하여 1번 출구로 나가세요."
+        ],
+        "10": [
+          "Dupont Circle에 진입하여 Main Street 방향의 3번째 출구로 나가세요."
+        ],
+        "11": [
+          "Dupont Circle으로 진입하여 3번째 출구로 나와 U.S. 3 22/Main Street 방향으로 나오세요."
+        ],
+        "12": [
+          "Dupont Circle에 진입하여 볼티모어 방향 3번째 출구로 나가세요."
+        ],
+        "13": [
+          "Dupont Circle에 진입하여 Main Street 방향 출구로 나가세요."
+        ],
+        "14": [
+          "Dupont Circle으로 진입한 후 U.S. 3 22/Main Street 방향 출구로 나가세요."
+        ],
+        "15": [
+          "Dupont Circle에 진입하여 볼티모어 방향 출구로 나가세요."
+        ]
+      }
+    },
+    "exit": {
+      "phrases": {
+        "0": "<RELATIVE_DIRECTION> 출구로 나가세요.",
+        "1": "<RELATIVE_DIRECTION> 방향 <NUMBER_SIGN>번 출구로 나가세요.",
+        "2": "<RELATIVE_DIRECTION>에서 <BRANCH_SIGN> 출구로 나가세요.",
+        "3": "<RELATIVE_DIRECTION>의 <NUMBER_SIGN> 출구에서 <BRANCH_SIGN> 방향으로 진출하세요.",
+        "4": "<TOWARD_SIGN> 방면 <RELATIVE_DIRECTION> 출구로 나가세요.",
+        "5": "<TOWARD_SIGN> 방면 <RELATIVE_DIRECTION> <NUMBER_SIGN>번 출구로 나가세요.",
+        "6": "<TOWARD_SIGN> 방향 <RELATIVE_DIRECTION>에서 <BRANCH_SIGN> 출구로 나가세요.",
+        "7": "<TOWARD_SIGN> 방면 <BRANCH_SIGN> 방향 <RELATIVE_DIRECTION>의 <NUMBER_SIGN> 출구로 나가세요.",
+        "8": "<RELATIVE_DIRECTION>에서 <NAME_SIGN> 출구로 나가세요.",
+        "10": "<RELATIVE_DIRECTION>에서 <NAME_SIGN> 출구로 나와 <BRANCH_SIGN> 방향으로 진입하세요.",
+        "12": "<TOWARD_SIGN> 방향 <RELATIVE_DIRECTION>에서 <NAME_SIGN> 출구로 진출하세요.",
+        "14": "<TOWARD_SIGN> 방면 <BRANCH_SIGN> 방향 <RELATIVE_DIRECTION>의 <NAME_SIGN> 출구로 진출하세요.",
+        "15": "출구로 나가세요.",
+        "16": "<NUMBER_SIGN>번 출구로 나가세요.",
+        "17": "<BRANCH_SIGN> 출구로 나가세요.",
+        "18": "<BRANCH_SIGN> 방향 <NUMBER_SIGN>번 출구로 나가세요.",
+        "19": "<TOWARD_SIGN> 방향 출구로 나가세요.",
+        "20": "<TOWARD_SIGN> 방면 <NUMBER_SIGN>번 출구로 나가세요.",
+        "21": "<TOWARD_SIGN> 방면 <BRANCH_SIGN> 출구로 나가세요.",
+        "22": "<TOWARD_SIGN> 방면 <BRANCH_SIGN> 방향 <NUMBER_SIGN>번 출구로 나가세요.",
+        "23": "<NAME_SIGN> 출구로 나가세요.",
+        "25": "<BRANCH_SIGN> 방면 <NAME_SIGN> 출구로 나가세요.",
+        "27": "<TOWARD_SIGN> 방면 <NAME_SIGN> 출구로 진출하세요.",
+        "29": "<TOWARD_SIGN> 방향 <BRANCH_SIGN> 방향 <NAME_SIGN> 출구로 진출하세요."
+      },
+      "relative_directions": [
+        "왼쪽",
+        "오른쪽"
+      ],
+      "example_phrases": {
+        "0": [
+          "왼쪽 출구로 나가세요.",
+          "오른쪽 출구로 나가세요."
+        ],
+        "1": [
+          "오른쪽 67 B-A 출구로 나가세요."
+        ],
+        "2": [
+          "오른쪽에 있는 US 322 West 출구로 나가세요."
+        ],
+        "3": [
+          "오른쪽에 있는 67 B-A 출구로 나와 US 322 West로 진입하세요."
+        ],
+        "4": [
+          "루이스타운(Lewistown) 방향 오른쪽 출구로 나가세요."
+        ],
+        "5": [
+          "루이스타운 방향 오른쪽의 67 B-A 출구로 나오세요."
+        ],
+        "6": [
+          "루이스타운(Lewistown) 방향 오른쪽에 있는 US 322 West 출구로 나오세요."
+        ],
+        "7": [
+          "오른쪽에 있는 67 B-A 출구로 나와 Lewistown/State College 방향 US 322 West로 진입하세요."
+        ],
+        "8": [
+          "왼쪽에 있는 White Marsh Boulevard 출구로 나가세요."
+        ],
+        "10": [
+          "왼쪽에 있는 White Marsh Boulevard 출구로 나와 MD 43 East로 진입하세요."
+        ],
+        "12": [
+          "화이트 마시 대로(White Marsh Boulevard) 출구를 타고 왼쪽으로 화이트 마시 방향으로 가세요."
+        ],
+        "14": [
+          "왼쪽에 있는 White Marsh Boulevard 출구로 나와 White Marsh 방향의 MD 43 East로 진입하세요."
+        ],
+        "15": [
+          "출구로 나가세요."
+        ],
+        "16": [
+          "67 B-A 출구를 이용하세요."
+        ],
+        "17": [
+          "US 322 West 출구로 나가세요."
+        ],
+        "18": [
+          "US 322 West 방향 67 B-A 출구로 나가세요."
+        ],
+        "19": [
+          "루이스타운(Lewistown) 방향 출구로 나가세요."
+        ],
+        "20": [
+          "루이스타운 방면 67 B-A 출구로 나오세요."
+        ],
+        "21": [
+          "Lewistown 방면 US 322 West 출구로 나오세요."
+        ],
+        "22": [
+          "67번 B-A 출구에서 US 322 West로 진입하여 Lewistown/State College 방향으로 가세요."
+        ],
+        "23": [
+          "White Marsh Boulevard 출구로 나가세요."
+        ],
+        "25": [
+          "White Marsh Boulevard 출구로 나와 MD 43 East로 진입하세요."
+        ],
+        "27": [
+          "화이트 마시 방향으로 화이트 마시 블러바드 출구를 이용하세요."
+        ],
+        "29": [
+          "White Marsh Boulevard 출구로 나와 White Marsh 방향 MD 43 East로 진입하세요."
+        ]
+      }
+    },
+    "exit_roundabout": {
+      "phrases": {
+        "0": "로터리에서 나가세요.",
+        "1": "로터리에서 <STREET_NAMES> 방향으로 나가세요.",
+        "2": "로터리에서 <BEGIN_STREET_NAMES> 방향으로 나가세요. <STREET_NAMES>에서 계속하세요.",
+        "3": "<TOWARD_SIGN> 방향으로 로터리에서 나가세요."
+      },
+      "empty_street_name_labels": [
+        "산책로",
+        "자전거 도로",
+        "산악자전거 트레일",
+        "횡단보도",
+        "계단",
+        "다리",
+        "터널"
+      ],
+      "example_phrases": {
+        "0": [
+          "로터리에서 나가세요."
+        ],
+        "1": [
+          "원형 교차로에서 Philadelphia Road/MD 7로 나가세요."
+        ],
+        "2": [
+          "원형 교차로에서 Catoctin Mountain Highway/US 15로 나가세요. 계속해서 US 15로 가세요."
+        ],
+        "3": [
+          "볼티모어 방향 로터리에서 나가세요."
+        ]
+      }
+    },
+    "exit_roundabout_verbal": {
+      "phrases": {
+        "0": "로터리에서 나가세요.",
+        "1": "로터리에서 <STREET_NAMES> 방향으로 나가세요.",
+        "2": "원형 교차로에서 <BEGIN_STREET_NAMES>로 나가세요.",
+        "3": "<TOWARD_SIGN> 방향으로 로터리에서 나가세요."
+      },
+      "empty_street_name_labels": [
+        "산책로",
+        "자전거 도로",
+        "산악자전거 트레일",
+        "횡단보도",
+        "계단",
+        "다리",
+        "터널"
+      ],
+      "example_phrases": {
+        "0": [
+          "로터리에서 나가세요."
+        ],
+        "1": [
+          "원형 교차로에서 Philadelphia Road, Maryland 7로 나가세요."
+        ],
+        "2": [
+          "원형 교차로에서 Catoctin Mountain Highway, U.S. 15로 나가세요."
+        ],
+        "3": [
+          "볼티모어 방향 로터리에서 나가세요."
+        ]
+      }
+    },
+    "exit_verbal": {
+      "phrases": {
+        "0": "<RELATIVE_DIRECTION> 방향으로 출구를 나옵니다.",
+        "1": "<RELATIVE_DIRECTION> 방향 <NUMBER_SIGN> 출구를 나옵니다.",
+        "2": "<RELATIVE_DIRECTION> 방향으로 <BRANCH_SIGN> 출구를 나옵니다.",
+        "3": "<RELATIVE_DIRECTION> 방향 <NUMBER_SIGN> 출구에서 <BRANCH_SIGN>로 나옵니다.",
+        "4": "<RELATIVE_DIRECTION> 방향으로 <TOWARD_SIGN> 출구를 나옵니다.",
+        "5": "<RELATIVE_DIRECTION> 방향 <NUMBER_SIGN> 출구로 <TOWARD_SIGN> 방향으로 나옵니다.",
+        "6": "<RELATIVE_DIRECTION> 방향으로 <BRANCH_SIGN> 출구로 <TOWARD_SIGN> 방향으로 나옵니다.",
+        "7": "<RELATIVE_DIRECTION> 방향 <NUMBER_SIGN> 출구에서 <BRANCH_SIGN>로 <TOWARD_SIGN> 방향으로 나옵니다.",
+        "8": "<RELATIVE_DIRECTION> 방향으로 <NAME_SIGN> 출구를 나옵니다.",
+        "10": "<RELATIVE_DIRECTION> 방향으로 <BRANCH_SIGN> <NAME_SIGN> 출구를 나옵니다.",
+        "12": "<RELATIVE_DIRECTION> 방향으로 <TOWARD_SIGN> <NAME_SIGN> 출구를 나옵니다.",
+        "14": "<RELATIVE_DIRECTION> 방향 <BRANCH_SIGN> 출구에서 <TOWARD_SIGN> <NAME_SIGN> 방향으로 나옵니다.",
+        "15": "출구를 나옵니다.",
+        "16": "<NUMBER_SIGN> 출구를 이용하세요.",
+        "17": "<BRANCH_SIGN> 출구를 이용하세요.",
+        "18": "<NUMBER_SIGN> 출구에서 <BRANCH_SIGN>로 나옵니다.",
+        "19": "<TOWARD_SIGN> 방향으로 출구를 이용하세요.",
+        "20": "<NUMBER_SIGN> 출구를 <TOWARD_SIGN> 방향으로 이용하세요.",
+        "21": "<BRANCH_SIGN> 출구를 <TOWARD_SIGN> 방향으로 이용하세요.",
+        "22": "<NUMBER_SIGN> 출구에서 <BRANCH_SIGN>로 <TOWARD_SIGN> 방향으로 나옵니다.",
+        "23": "<NAME_SIGN> 출구를 이용하세요.",
+        "25": "<NAME_SIGN> 출구에서 <BRANCH_SIGN>로 나옵니다.",
+        "27": "<NAME_SIGN> 출구를 <TOWARD_SIGN> 방향으로 이용하세요.",
+        "29": "<NAME_SIGN> 출구에서 <BRANCH_SIGN>로 <TOWARD_SIGN> 방향으로 나옵니다."
+      },
+      "relative_directions": [
+        "왼쪽",
+        "오른쪽"
+      ],
+      "example_phrases": {
+        "0": [
+          "왼쪽 출구로 나가세요.",
+          "오른쪽 출구로 나가세요."
+        ],
+        "1": [
+          "오른쪽 67 B-A 출구를 이용하세요."
+        ],
+        "2": [
+          "오른쪽에 있는 미국 3 22번 고속도로 서쪽 출구를 이용하세요."
+        ],
+        "3": [
+          "오른쪽에 있는 67 B-A 출구로 나와 U.S. 3 22 West로 진입하세요."
+        ],
+        "4": [
+          "루이스타운(Lewistown) 방향 오른쪽 출구로 나가세요."
+        ],
+        "5": [
+          "루이스타운 방향 오른쪽의 67 B-A 출구로 나오세요."
+        ],
+        "6": [
+          "루이스타운(Lewistown) 방향 오른쪽에 있는 US 3 22 West 출구로 나오세요."
+        ],
+        "7": [
+          "오른쪽에 있는 67 B-A 출구로 나와 U.S. 3 22 West Lewistown, State College 방향으로 진입하세요."
+        ],
+        "8": [
+          "왼쪽에 있는 White Marsh Boulevard 출구로 나가세요."
+        ],
+        "10": [
+          "왼쪽에 있는 White Marsh Boulevard 출구로 나와 Maryland 43 East 방향으로 나오세요."
+        ],
+        "12": [
+          "White Marsh 방향 왼쪽에 있는 White Marsh Boulevard 출구로 나오세요."
+        ],
+        "14": [
+          "White Marsh 방향의 Maryland 43 East 방향 왼쪽에 있는 White Marsh Boulevard 출구로 나오세요."
+        ],
+        "15": [
+          "출구로 나가세요."
+        ],
+        "16": [
+          "67 B-A 출구로 나가세요."
+        ],
+        "17": [
+          "US 322 West 출구로 나가세요."
+        ],
+        "18": [
+          "US 322 West 방향 67 B-A 출구로 나가세요."
+        ],
+        "19": [
+          "루이스타운(Lewistown) 방향 출구로 나가세요."
+        ],
+        "20": [
+          "루이스타운 방면 67 B-A 출구로 나오세요."
+        ],
+        "21": [
+          "Lewistown 방면 US 322 West 출구로 나오세요."
+        ],
+        "22": [
+          "Lewistown/State College 방면 US 322 West 방향 67 B-A 출구로 나오세요."
+        ],
+        "23": [
+          "White Marsh Boulevard 출구로 나가세요."
+        ],
+        "25": [
+          "White Marsh Boulevard 출구로 나와 MD 43 East로 진입하세요."
+        ],
+        "27": [
+          "White Marsh Boulevard 출구로 나와 White Marsh 방향으로 나오세요."
+        ],
+        "29": [
+          "White Marsh Boulevard 출구로 나와 White Marsh 방향 MD 43 East로 진입하세요."
+        ]
+      }
+    },
+    "exit_visual": {
+      "phrases": {
+        "0": "<EXIT_NUMBERS>번 출구"
+      },
+      "example_phrases": {
+        "0": [
+          "출구 1A"
+        ]
+      }
+    },
+    "keep": {
+      "phrases": {
+        "0": "분기점에 <RELATIVE_DIRECTION>을 유지하세요.",
+        "1": "<RELATIVE_DIRECTION> 방향을 유지하여 <NUMBER_SIGN>번 출구로 나가세요.",
+        "2": "<RELATIVE_DIRECTION>을 유지하여 <STREET_NAMES>로 가세요.",
+        "3": "<RELATIVE_DIRECTION> 방향을 따라 <STREET_NAMES> 방면 <NUMBER_SIGN>번 출구로 나가세요.",
+        "4": "<TOWARD_SIGN> 방향으로 <RELATIVE_DIRECTION>을 유지하세요.",
+        "5": "<RELATIVE_DIRECTION>을 유지하여 <TOWARD_SIGN> 방향의 <NUMBER_SIGN> 출구로 나가세요.",
+        "6": "<RELATIVE_DIRECTION> 방향을 유지하여 <STREET_NAMES> 방향 <TOWARD_SIGN> 방향으로 이동하세요.",
+        "7": "<RELATIVE_DIRECTION> 유지하여 <TOWARD_SIGN> 방면 <STREET_NAMES> 방향 <NUMBER_SIGN>번 출구로 나가세요."
+      },
+      "empty_street_name_labels": [
+        "산책로",
+        "자전거 도로",
+        "산악자전거 트레일",
+        "횡단보도",
+        "계단",
+        "다리",
+        "터널"
+      ],
+      "relative_directions": [
+        "왼쪽",
+        "똑바로",
+        "오른쪽"
+      ],
+      "example_phrases": {
+        "0": [
+          "왼쪽을 포크에 두세요.",
+          "분기점에서 똑바로 유지하십시오.",
+          "갈림길에서 오른쪽을 유지하세요."
+        ],
+        "1": [
+          "우회전하여 62번 출구로 나가세요."
+        ],
+        "2": [
+          "계속 우회전하여 I 895 South로 가세요."
+        ],
+        "3": [
+          "계속 우회전하여 62번 출구로 나가 I 895 South로 진입하세요."
+        ],
+        "4": [
+          "아나폴리스 방향으로 계속 우회전하세요."
+        ],
+        "5": [
+          "계속 우회전하여 아나폴리스 방향 62번 출구로 나오세요."
+        ],
+        "6": [
+          "계속 우회전하여 I 895 South를 타고 Annapolis 방향으로 가세요."
+        ],
+        "7": [
+          "계속 오른쪽을 유지하여 Annapolis 방향 I 895 South로 향하는 62번 출구로 나가세요."
+        ]
+      }
+    },
+    "keep_to_stay_on": {
+      "phrases": {
+        "0": "<RELATIVE_DIRECTION>쪽으로 <STREET_NAMES>로 계속하세요.",
+        "1": "<RELATIVE_DIRECTION>쪽으로 <NUMBER_SIGN> 출구로 <STREET_NAMES>로 계속하세요.",
+        "2": "<RELATIVE_DIRECTION>쪽으로 <STREET_NAMES>로 <TOWARD_SIGN> 방향으로 계속하세요.",
+        "3": "<RELATIVE_DIRECTION>쪽으로 <NUMBER_SIGN> 출구로 <STREET_NAMES>로 <TOWARD_SIGN> 방향으로 계속하세요."
+      },
+      "empty_street_name_labels": [
+        "보도",
+        "순환 도로",
+        "산악자전거 트레일",
+        "횡단보도",
+        "계단",
+        "다리",
+        "터널"
+      ],
+      "relative_directions": [
+        "왼쪽",
+        "똑바로",
+        "오른쪽"
+      ],
+      "example_phrases": {
+        "0": [
+          "왼쪽을 유지하여 I 95 South를 따라 가세요.",
+          "직진하여 I 95 South로 진입하세요.",
+          "I 95 South를 따라 계속 우회전하세요."
+        ],
+        "1": [
+          "왼쪽을 따라 가다가 62번 출구로 나가 I 95 South를 따라 계속 가세요."
+        ],
+        "2": [
+          "왼쪽을 유지하여 볼티모어 방향 I 95 South를 따라 계속 이동하세요."
+        ],
+        "3": [
+          "왼쪽을 따라 62번 출구로 나가 볼티모어 방향 I 95 South를 따라 계속 이동하세요."
+        ]
+      }
+    },
+    "keep_to_stay_on_verbal": {
+      "phrases": {
+        "0": "<RELATIVE_DIRECTION> 도로를 따라 <STREET_NAMES>로 계속 직진하세요.",
+        "1": "<RELATIVE_DIRECTION> 방향을 따라 <NUMBER_SIGN>번 출구로 나가 <STREET_NAMES>에서 계속 직진하세요.",
+        "2": "<RELATIVE_DIRECTION> 유지하여 <STREET_NAMES>에서 <TOWARD_SIGN> 방향으로 계속 직진하세요.",
+        "3": "<RELATIVE_DIRECTION> 유지하여 <NUMBER_SIGN> 출구로 나가고 <TOWARD_SIGN> 방면 <STREET_NAMES>에서 계속 직진하세요."
+      },
+      "empty_street_name_labels": [
+        "산책로",
+        "자전거 도로",
+        "산악자전거 트레일",
+        "횡단보도",
+        "계단",
+        "다리",
+        "터널"
+      ],
+      "relative_directions": [
+        "왼쪽",
+        "똑바로",
+        "오른쪽"
+      ],
+      "example_phrases": {
+        "0": [
+          "왼쪽을 유지하여 Interstate 95 South를 따라 가세요.",
+          "직진하여 95번 고속도로 사우스(Interstate 95 South)를 따라 오세요.",
+          "Interstate 95 South를 따라 오른쪽으로 운전하세요."
+        ],
+        "1": [
+          "왼쪽을 따라 가다가 62번 출구로 나가 95번 고속도로 남쪽으로 계속 가세요."
+        ],
+        "2": [
+          "왼쪽을 유지하여 볼티모어 방향 I 95 South를 따라 계속 이동하세요."
+        ],
+        "3": [
+          "왼쪽을 따라 가다가 62번 출구로 나가 볼티모어 방향의 95번 주간고속도로를 따라 계속 가세요."
+        ]
+      }
+    },
+    "keep_verbal": {
+      "phrases": {
+        "0": "분기점에 <RELATIVE_DIRECTION>을 유지하세요.",
+        "1": "<RELATIVE_DIRECTION> 방향을 유지하여 <NUMBER_SIGN>번 출구로 나가세요.",
+        "2": "<RELATIVE_DIRECTION>을 유지하여 <STREET_NAMES>로 가세요.",
+        "3": "<RELATIVE_DIRECTION> 방향을 따라 <STREET_NAMES> 방면 <NUMBER_SIGN>번 출구로 나가세요.",
+        "4": "<TOWARD_SIGN> 방향으로 <RELATIVE_DIRECTION>을 유지하세요.",
+        "5": "<RELATIVE_DIRECTION> 방향을 유지하여 <TOWARD_SIGN> 방면 <NUMBER_SIGN>번 출구로 나가세요.",
+        "6": "<RELATIVE_DIRECTION> 방향을 유지하여 <STREET_NAMES> 방향 <TOWARD_SIGN> 방향으로 이동하세요.",
+        "7": "<RELATIVE_DIRECTION>을 유지하여 <TOWARD_SIGN> 방향의 <STREET_NAMES> 출구 <NUMBER_SIGN>로 나가세요."
+      },
+      "empty_street_name_labels": [
+        "산책로",
+        "자전거 도로",
+        "산악자전거 트레일",
+        "횡단보도",
+        "계단",
+        "다리",
+        "터널"
+      ],
+      "relative_directions": [
+        "왼쪽",
+        "똑바로",
+        "오른쪽"
+      ],
+      "example_phrases": {
+        "0": [
+          "왼쪽을 포크에 두세요.",
+          "분기점에서 똑바로 유지하십시오.",
+          "분기점에서 오른쪽을 유지하세요."
+        ],
+        "1": [
+          "우회전하여 62번 출구로 나가세요."
+        ],
+        "2": [
+          "오른쪽을 따라 8~95번 고속도로 남쪽을 따라가세요."
+        ],
+        "3": [
+          "계속 우회전하여 62번 출구로 나가 Interstate 8 95 South로 진입하세요."
+        ],
+        "4": [
+          "아나폴리스 방향으로 계속 우회전하세요."
+        ],
+        "5": [
+          "계속 우회전하여 아나폴리스 방향 62번 출구로 나오세요."
+        ],
+        "6": [
+          "계속 우회전하여 Interstate 8 95 South를 타고 Annapolis 방향으로 가세요."
+        ],
+        "7": [
+          "계속 우회전하여 아나폴리스 방향 8번 95번 남쪽 고속도로로 62번 출구로 나오세요."
+        ]
+      }
+    },
+    "merge": {
+      "phrases": {
+        "0": "병합.",
+        "1": "<RELATIVE_DIRECTION>을 병합합니다.",
+        "2": "<STREET_NAMES>에 합류합니다.",
+        "3": "<RELATIVE_DIRECTION>을 <STREET_NAMES>에 병합합니다.",
+        "4": "<TOWARD_SIGN> 방향으로 합류합니다.",
+        "5": "<RELATIVE_DIRECTION>을 <TOWARD_SIGN> 방향으로 병합합니다."
+      },
+      "relative_directions": [
+        "왼쪽",
+        "오른쪽"
+      ],
+      "empty_street_name_labels": [
+        "산책로",
+        "자전거 도로",
+        "산악자전거 트레일",
+        "횡단보도",
+        "계단",
+        "다리",
+        "터널"
+      ],
+      "example_phrases": {
+        "0": [
+          "병합."
+        ],
+        "1": [
+          "왼쪽 병합."
+        ],
+        "2": [
+          "I 76 West/Pennsylvania Turnpike로 합류합니다."
+        ],
+        "3": [
+          "I 83 South로 우회전하세요."
+        ],
+        "4": [
+          "볼티모어 방향으로 합류합니다."
+        ],
+        "5": [
+          "볼티모어 방향으로 오른쪽으로 합류합니다."
+        ]
+      }
+    },
+    "merge_verbal": {
+      "phrases": {
+        "0": "병합.",
+        "1": "<RELATIVE_DIRECTION>을 병합합니다.",
+        "2": "<STREET_NAMES>에 합류합니다.",
+        "3": "<RELATIVE_DIRECTION>을 <STREET_NAMES>에 병합합니다.",
+        "4": "<TOWARD_SIGN> 방향으로 합류합니다.",
+        "5": "<RELATIVE_DIRECTION>을 <TOWARD_SIGN> 방향으로 병합합니다."
+      },
+      "relative_directions": [
+        "왼쪽",
+        "오른쪽"
+      ],
+      "empty_street_name_labels": [
+        "산책로",
+        "자전거 도로",
+        "산악자전거 트레일",
+        "횡단보도",
+        "계단",
+        "다리",
+        "터널"
+      ],
+      "example_phrases": {
+        "0": [
+          "병합합니다."
+        ],
+        "1": [
+          "왼쪽을 병합합니다."
+        ],
+        "2": [
+          "I 76 West/Pennsylvania Turnpike로 합류합니다."
+        ],
+        "3": [
+          "I 83 South로 우회전하세요."
+        ],
+        "4": [
+          "볼티모어 방향으로 합류합니다."
+        ],
+        "5": [
+          "볼티모어 방향으로 오른쪽으로 합류합니다."
+        ]
+      }
+    },
+    "post_transition_transit_verbal": {
+      "phrases": {
+        "0": "<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL> 여행."
+      },
+      "transit_stop_count_labels": {
+        "one": "멈추다",
+        "other": "정류장"
+      },
+      "example_phrases": {
+        "0": [
+          "1 정거장 이동하세요.",
+          "3 정거장들을 이동하세요."
+        ]
+      }
+    },
+    "post_transition_verbal": {
+      "phrases": {
+        "0": "<LENGTH> 동안 계속하세요.",
+        "1": "<STREET_NAMES>에서 <LENGTH> 동안 계속 이동하세요."
+      },
+      "empty_street_name_labels": [
+        "산책로",
+        "자전거 도로",
+        "산악자전거 트레일",
+        "횡단보도",
+        "계단",
+        "다리",
+        "터널"
+      ],
+      "metric_lengths": [
+        "<KILOMETERS>킬로미터",
+        "1킬로미터",
+        "<METERS>미터",
+        "10미터 미만"
+      ],
+      "us_customary_lengths": [
+        "<MILES>마일",
+        "1마일",
+        "반 마일",
+        "4분의 1마일",
+        "<FEET>피트",
+        "10피트 미만"
+      ],
+      "example_phrases": {
+        "0": [
+          "300피트 동안 계속 가세요.",
+          "9마일을 계속 가세요."
+        ],
+        "1": [
+          "Pennsylvania 7 43을 타고 6.2마일을 계속 가세요.",
+          "Main Street, Vermont 30에서 1/10마일 정도 계속 가세요."
+        ]
+      }
+    },
+    "ramp": {
+      "phrases": {
+        "0": "갈림길에서 <RELATIVE_DIRECTION>으로 진입하세요.",
+        "1": "갈림길에서 <RELATIVE_DIRECTION>으로 <BRANCH_SIGN> 진입하세요.",
+        "2": "<TOWARD_SIGN> 방면으로 <RELATIVE_DIRECTION>으로 진입하세요.",
+        "3": "<TOWARD_SIGN> 방면으로 <RELATIVE_DIRECTION>으로 <BRANCH_SIGN> 진입하세요.",
+        "4": "<NAME_SIGN> 갈림길에서 <RELATIVE_DIRECTION>으로 진입하세요.",
+        "5": "<RELATIVE_DIRECTION>으로 돌아서 갈림길로 진입하세요.",
+        "6": "<RELATIVE_DIRECTION>으로 돌아서 <BRANCH_SIGN> 갈림길로 진입하세요.",
+        "7": "<RELATIVE_DIRECTION>으로 돌아서 <TOWARD_SIGN> 방면으로 갈림길로 진입하세요.",
+        "8": "<RELATIVE_DIRECTION>으로 돌아서 <BRANCH_SIGN> <TOWARD_SIGN> 방면으로 갈림길로 진입하세요.",
+        "9": "<RELATIVE_DIRECTION>으로 돌아서 <NAME_SIGN> 갈림길로 진입하세요.",
+        "10": "갈림길로 진입하세요.",
+        "11": "<BRANCH_SIGN> 갈림길로 진입하세요.",
+        "12": "<TOWARD_SIGN> 방면으로 갈림길로 진입하세요.",
+        "13": "<BRANCH_SIGN> <TOWARD_SIGN> 방면으로 갈림길로 진입하세요.",
+        "14": "<NAME_SIGN> 갈림길로 진입하세요."
+      },
+      "relative_directions": [
+        "왼쪽",
+        "오른쪽"
+      ],
+      "example_phrases": {
+        "0": [
+          "갈림길에서 왼쪽으로 진입하세요.",
+          "갈림길에서 오른쪽으로 진입하세요."
+        ],
+        "1": [
+          "갈림길에서 오른쪽으로 I 95 진입하세요."
+        ],
+        "2": [
+          "JFK 방면으로 왼쪽으로 진입하세요."
+        ],
+        "3": [
+          "JFK 방면으로 왼쪽으로 South Conduit Avenue 갈림길로 진입하세요."
+        ],
+        "4": [
+          "Gettysburg Pike 갈림길에서 오른쪽으로 진입하세요."
+        ],
+        "5": [
+          "왼쪽으로 돌아서 갈림길로 진입하세요.",
+          "오른쪽으로 돌아서 갈림길로 진입하세요."
+        ],
+        "6": [
+          "왼쪽으로 돌아서 PA 283 West 갈림길로 진입하세요."
+        ],
+        "7": [
+          "Harrisburg/Harrisburg International Airport 방면으로 왼쪽으로 돌아서 갈림길로 진입하세요."
+        ],
+        "8": [
+          "Harrisburg/Harrisburg International Airport 방면으로 왼쪽으로 돌아서 PA 283 West 갈림길로 진입하세요."
+        ],
+        "9": [
+          "오른쪽으로 돌아서 Gettysburg Pike 갈림길로 진입하세요."
+        ],
+        "10": [
+          "갈림길로 진입하세요."
+        ],
+        "11": [
+          "I 95 갈림길로 진입하세요."
+        ],
+        "12": [
+          "JFK 방면으로 갈림길로 진입하세요."
+        ],
+        "13": [
+          "JFK 방면으로 South Conduit Avenue 갈림길로 진입하세요."
+        ],
+        "14": [
+          "Gettysburg 갈림길로 진입하세요."
+        ]
+      }
+    },
+    "ramp_straight": {
+      "phrases": {
+        "0": "경사로를 타려면 똑바로 가세요.",
+        "1": "<BRANCH_SIGN> 진입로로 직진하세요.",
+        "2": "<TOWARD_SIGN> 방향 경사로로 직진하세요.",
+        "3": "<TOWARD_SIGN> 방향 <BRANCH_SIGN> 램프로 직진하세요.",
+        "4": "<NAME_SIGN> 진입로로 직진하세요."
+      },
+      "example_phrases": {
+        "0": [
+          "경사로를 이용하려면 똑바로 서세요."
+        ],
+        "1": [
+          "직진하여 US 322 동쪽 램프로 진입하세요."
+        ],
+        "2": [
+          "Hershey 방향 경사로로 직진하세요."
+        ],
+        "3": [
+          "Hershey/Palmdale/Palmyra/Campbelltown 방향으로 직진하여 US 322 East/US 422 East/US 522 East/US 622 East 진입로를 타세요."
+        ],
+        "4": [
+          "게티즈버그 파이크(Gettysburg Pike) 경사로를 따라 직진하세요."
+        ]
+      }
+    },
+    "ramp_straight_verbal": {
+      "phrases": {
+        "0": "경사로를 이용하려면 똑바로 서세요.",
+        "1": "<BRANCH_SIGN> 진입로로 직진하세요.",
+        "2": "<TOWARD_SIGN> 방향 경사로로 직진하세요.",
+        "3": "<TOWARD_SIGN> 방향 <BRANCH_SIGN> 램프로 직진하세요.",
+        "4": "<NAME_SIGN> 램프로 가려면 직진하세요."
+      },
+      "example_phrases": {
+        "0": [
+          "경사로를 이용하려면 똑바로 서세요."
+        ],
+        "1": [
+          "직진하여 US 3 22 East 진입로로 진입하세요."
+        ],
+        "2": [
+          "Hershey 방향 경사로로 직진하세요."
+        ],
+        "3": [
+          "직진하여 미국 3 22번 고속도로 동쪽, 미국 4 22번 고속도로 동쪽 램프를 타고 Hershey, Palmdale로 향하세요."
+        ],
+        "4": [
+          "게티즈버그 파이크(Gettysburg Pike) 경사로를 따라 직진하세요."
+        ]
+      }
+    },
+    "ramp_verbal": {
+      "phrases": {
+        "0": "<RELATIVE_DIRECTION>의 경사로를 타세요.",
+        "1": "<RELATIVE_DIRECTION>에서 <BRANCH_SIGN> 램프로 진입하세요.",
+        "2": "<TOWARD_SIGN> 방향 <RELATIVE_DIRECTION> 램프로 진입하세요.",
+        "3": "<RELATIVE_DIRECTION>에서 <TOWARD_SIGN> 방향으로 <BRANCH_SIGN> 램프로 진입하세요.",
+        "4": "<RELATIVE_DIRECTION>에서 <NAME_SIGN> 램프로 진입하세요.",
+        "5": "경사로를 이용하려면 <RELATIVE_DIRECTION>을 돌리세요.",
+        "6": "<RELATIVE_DIRECTION>을 돌려 <BRANCH_SIGN> 램프로 진입하세요.",
+        "7": "<RELATIVE_DIRECTION> 방향으로 돌아 <TOWARD_SIGN> 방향으로 경사로를 타세요.",
+        "8": "<RELATIVE_DIRECTION> 방향으로 돌아 <BRANCH_SIGN> 램프를 따라 <TOWARD_SIGN> 방향으로 가세요.",
+        "9": "<RELATIVE_DIRECTION>을 돌려 <NAME_SIGN> 램프로 진입하세요.",
+        "10": "진입로를 이용하세요.",
+        "11": "<BRANCH_SIGN> 진입로를 이용하세요.",
+        "12": "<TOWARD_SIGN> 방향으로 진입로를 이용하세요.",
+        "13": "<TOWARD_SIGN> 방향으로 <BRANCH_SIGN> 진입로를 이용하세요.",
+        "14": "<NAME_SIGN> 진입로를 이용하세요."
+      },
+      "relative_directions": [
+        "왼쪽",
+        "오른쪽"
+      ],
+      "example_phrases": {
+        "0": [
+          "왼쪽 경사로를 이용하세요.",
+          "오른쪽 경사로를 이용하세요."
+        ],
+        "1": [
+          "오른쪽의 Interstate 95 램프를 타세요."
+        ],
+        "2": [
+          "JFK 방향 왼쪽 경사로를 이용하세요."
+        ],
+        "3": [
+          "JFK 방향 왼쪽에 있는 South Conduit Avenue 진입로를 이용하세요."
+        ],
+        "4": [
+          "오른쪽에 있는 Gettysburg Pike 진입로를 이용하세요."
+        ],
+        "5": [
+          "왼쪽으로 돌아 진입로를 이용하세요.",
+          "진입로를 이용하려면 우회전하세요."
+        ],
+        "6": [
+          "왼쪽으로 돌아 펜실베이니아 2 83 서쪽 램프로 진입하세요."
+        ],
+        "7": [
+          "왼쪽으로 돌아 해리스버그/해리스버그 국제공항 방향 진입로로 가세요."
+        ],
+        "8": [
+          "왼쪽으로 돌아 펜실베이니아 2 83 서쪽 램프를 타고 해리스버그, 해리스버그 국제공항으로 가세요."
+        ],
+        "9": [
+          "Gettysburg Pike 진입로로 우회전하세요."
+        ],
+        "10": [
+          "진입로를 이용하세요."
+        ],
+        "11": [
+          "95번 고속도로 진입로를 이용하세요."
+        ],
+        "12": [
+          "JFK 방향으로 진입로를 이용하세요."
+        ],
+        "13": [
+          "JFK 방향으로 South Conduit Avenue 진입로를 이용하세요."
+        ],
+        "14": [
+          "Gettysburg Pike 경사로를 이용하세요."
+        ]
+      }
+    },
+    "sharp": {
+      "phrases": {
+        "0": "날카로운 <RELATIVE_DIRECTION>을 만드세요.",
+        "1": "<STREET_NAMES> 방향으로 가파르게 <RELATIVE_DIRECTION> 방향으로 진입합니다.",
+        "2": "<BEGIN_STREET_NAMES> 방향으로 가파르게 <RELATIVE_DIRECTION> 방향으로 진입합니다. <STREET_NAMES>에서 계속하세요.",
+        "3": "<STREET_NAMES>을 따라 가려면 가파르게 <RELATIVE_DIRECTION> 방향으로 가세요.",
+        "4": "<JUNCTION_NAME>에서 가파르게 <RELATIVE_DIRECTION> 방향으로 가세요.",
+        "5": "<TOWARD_SIGN> 방향으로 가파르게 <RELATIVE_DIRECTION> 방향으로 가세요."
+      },
+      "empty_street_name_labels": [
+        "보도",
+        "순환 도로",
+        "산악자전거 트레일",
+        "횡단보도",
+        "계단",
+        "다리",
+        "터널"
+      ],
+      "relative_directions": [
+        "다음",
+        "오른쪽"
+      ],
+      "example_phrases": {
+        "0": [
+          "날카로운 옆을 만드세요."
+        ],
+        "1": [
+          "Flatbush Avenue 방향으로 가파르게 우회전하세요."
+        ],
+        "2": [
+          "North Bond Street/US 1 Business/MD 924 방향으로 가파르게 꺾은 다음 MD 924를 따라 계속 가세요."
+        ],
+        "3": [
+          "Sunstone Drive를 따라 가파르게 우회전하세요."
+        ],
+        "4": [
+          "만넨바시 동쪽에서 급우회전하세요."
+        ],
+        "5": [
+          "볼티모어 방향으로 가파르게 왼편으로 이동하세요."
+        ]
+      }
+    },
+    "sharp_verbal": {
+      "phrases": {
+        "0": "날카로운 <RELATIVE_DIRECTION>을 만드세요.",
+        "1": "<STREET_NAMES> 방향으로 가파르게 <RELATIVE_DIRECTION> 방향으로 진입합니다.",
+        "2": "<BEGIN_STREET_NAMES> 방향으로 가파르게 <RELATIVE_DIRECTION> 방향으로 진입합니다.",
+        "3": "<STREET_NAMES>을 따라 가려면 가파르게 <RELATIVE_DIRECTION> 방향으로 가세요.",
+        "4": "<JUNCTION_NAME>에서 가파르게 <RELATIVE_DIRECTION> 방향으로 가세요.",
+        "5": "<TOWARD_SIGN> 방향으로 가파르게 <RELATIVE_DIRECTION> 방향으로 가세요."
+      },
+      "empty_street_name_labels": [
+        "산책로",
+        "자전거 도로",
+        "산악자전거 트레일",
+        "횡단보도",
+        "계단",
+        "다리",
+        "터널"
+      ],
+      "relative_directions": [
+        "왼쪽",
+        "오른쪽"
+      ],
+      "example_phrases": {
+        "0": [
+          "날카로운 옆을 만드세요."
+        ],
+        "1": [
+          "Flatbush Avenue 방향으로 가파르게 우회전하세요."
+        ],
+        "2": [
+          "North Bond Street, U.S. 1 Business 방향으로 가파르게 우회전하세요."
+        ],
+        "3": [
+          "Sunstone Drive를 따라 가파르게 우회전하세요."
+        ],
+        "4": [
+          "만넨바시 동쪽에서 급우회전하세요."
+        ],
+        "5": [
+          "볼티모어 방향으로 가파르게 왼편으로 이동하세요."
+        ]
+      }
+    },
+    "start": {
+      "phrases": {
+        "0": "<CARDINAL_DIRECTION>으로 가세요.",
+        "1": "<STREET_NAMES>에서 <CARDINAL_DIRECTION> 방향으로 가세요.",
+        "2": "<BEGIN_STREET_NAMES>에서 <CARDINAL_DIRECTION> 방향으로 가세요. <STREET_NAMES>에서 계속하세요.",
+        "4": "<CARDINAL_DIRECTION>을 운전하세요.",
+        "5": "<STREET_NAMES>에서 <CARDINAL_DIRECTION>으로 운전하세요.",
+        "6": "<BEGIN_STREET_NAMES>에서 <CARDINAL_DIRECTION>을(를) 운전하세요. <STREET_NAMES>에서 계속하세요.",
+        "8": "<CARDINAL_DIRECTION>을 걸어보세요.",
+        "9": "<STREET_NAMES>에서 <CARDINAL_DIRECTION>을 걸어보세요.",
+        "10": "<BEGIN_STREET_NAMES>에서 <CARDINAL_DIRECTION>을 걸어보세요. <STREET_NAMES>에서 계속하세요.",
+        "16": "자전거 <CARDINAL_DIRECTION>.",
+        "17": "<STREET_NAMES>에서 <CARDINAL_DIRECTION>을 자전거로 이동하세요.",
+        "18": "<BEGIN_STREET_NAMES>에서 <CARDINAL_DIRECTION> 자전거를 타세요. <STREET_NAMES>에서 계속하세요."
+      },
+      "cardinal_directions": [
+        "북쪽",
+        "북동",
+        "동쪽",
+        "남동",
+        "남쪽",
+        "남서",
+        "서쪽",
+        "북서"
+      ],
+      "empty_street_name_labels": [
+        "산책로",
+        "자전거 도로",
+        "산악자전거 트레일",
+        "횡단보도",
+        "계단",
+        "다리",
+        "터널"
+      ],
+      "example_phrases": {
+        "0": [
+          "동쪽으로 가세요.",
+          "북쪽으로 가세요."
+        ],
+        "1": [
+          "5번가에서 남서쪽으로 가세요.",
+          "산책로를 따라 서쪽으로 가세요",
+          "자전거 도로를 타고 동쪽으로 가세요",
+          "산악자전거 트레일을 타고 북쪽으로 가세요"
+        ],
+        "2": [
+          "North Prince Street/US 222/PA 272에서 남쪽으로 가세요. 계속해서 US 222/PA 272를 타세요."
+        ],
+        "4": [
+          "동쪽으로 운전하세요.",
+          "북쪽으로 운전하세요."
+        ],
+        "5": [
+          "5번가에서 남서쪽으로 운전하세요."
+        ],
+        "6": [
+          "North Prince Street/US 222/PA 272에서 남쪽으로 운전하세요. 계속해서 US 222/PA 272를 타세요."
+        ],
+        "8": [
+          "동쪽으로 걸어가세요.",
+          "북쪽으로 걸어가세요."
+        ],
+        "9": [
+          "5번가에서 남서쪽으로 걸어가세요.",
+          "산책로를 따라 서쪽으로 걸어가세요"
+        ],
+        "10": [
+          "North Prince Street/US 222/PA 272에서 남쪽으로 걸어가세요. 계속해서 US 222/PA 272를 따라 가세요."
+        ],
+        "16": [
+          "동쪽으로 자전거를 타세요.",
+          "북쪽으로 자전거를 타세요."
+        ],
+        "17": [
+          "5번가에서 남서쪽으로 자전거를 타세요.",
+          "자전거 도로를 따라 동쪽으로 자전거를 타세요",
+          "산악자전거 트레일을 따라 북쪽으로 자전거를 타세요"
+        ],
+        "18": [
+          "North Prince Street/US 222/PA 272에서 남쪽으로 자전거를 타세요. 계속해서 US 222/PA 272를 타세요."
+        ]
+      }
+    },
+    "start_verbal": {
+      "phrases": {
+        "0": "<CARDINAL_DIRECTION>으로 가세요.",
+        "1": "<LENGTH>의 경우 <CARDINAL_DIRECTION> 방향으로 가세요.",
+        "2": "<STREET_NAMES>에서 <CARDINAL_DIRECTION> 방향으로 가세요.",
+        "3": "<LENGTH>의 경우 <STREET_NAMES>에서 <CARDINAL_DIRECTION> 방향으로 가세요.",
+        "4": "<BEGIN_STREET_NAMES>에서 <CARDINAL_DIRECTION> 방향으로 가세요.",
+        "5": "<CARDINAL_DIRECTION>을 운전하세요.",
+        "6": "<LENGTH> 동안 <CARDINAL_DIRECTION>을(를) 운전하세요.",
+        "7": "<STREET_NAMES>에서 <CARDINAL_DIRECTION>으로 운전하세요.",
+        "8": "<LENGTH> 동안 <STREET_NAMES>에서 <CARDINAL_DIRECTION>으로 운전하세요.",
+        "9": "<BEGIN_STREET_NAMES>에서 <CARDINAL_DIRECTION>을(를) 운전하세요.",
+        "10": "<CARDINAL_DIRECTION>을 걸어보세요.",
+        "11": "<CARDINAL_DIRECTION> 방향으로 <LENGTH> 동안 걷습니다.",
+        "12": "<STREET_NAMES>에서 <CARDINAL_DIRECTION>을 걸어보세요.",
+        "13": "<STREET_NAMES>에서 <CARDINAL_DIRECTION>에서 <LENGTH> 동안 도보로 이동하세요.",
+        "14": "<BEGIN_STREET_NAMES>에서 <CARDINAL_DIRECTION>을 걸어보세요.",
+        "15": "자전거 <CARDINAL_DIRECTION>.",
+        "16": "<LENGTH> 동안 <CARDINAL_DIRECTION> 자전거를 타세요.",
+        "17": "<STREET_NAMES>에서 <CARDINAL_DIRECTION> 자전거를 타세요.",
+        "18": "<STREET_NAMES>에서 <CARDINAL_DIRECTION>을 따라 <LENGTH> 동안 자전거를 타세요.",
+        "19": "<BEGIN_STREET_NAMES>에서 <CARDINAL_DIRECTION>을(를) 자전거로 이동하세요."
+      },
+      "cardinal_directions": [
+        "북쪽",
+        "북동",
+        "동쪽",
+        "남동",
+        "남쪽",
+        "남서",
+        "서쪽",
+        "북서"
+      ],
+      "empty_street_name_labels": [
+        "산책로",
+        "자전거 도로",
+        "산악자전거 트레일",
+        "횡단보도",
+        "계단",
+        "다리",
+        "터널"
+      ],
+      "metric_lengths": [
+        "<킬로미터> 킬로미터",
+        "1킬로미터",
+        "<METERS> 미터",
+        "10미터 이하"
+      ],
+      "us_customary_lengths": [
+        "<MILES>마일",
+        "1마일",
+        "반 마일",
+        "4분의 1마일",
+        "<FEET>피트",
+        "10피트 미만"
+      ],
+      "example_phrases": {
+        "0": [
+          "동쪽으로 가세요.",
+          "북쪽으로 가세요."
+        ],
+        "1": [
+          "동쪽으로 0.5마일 정도 가세요.",
+          "북쪽으로 1km 이동하세요."
+        ],
+        "2": [
+          "5번가에서 남서쪽으로 가세요."
+        ],
+        "3": [
+          "5번가에서 남서쪽으로 1/10마일 정도 가세요."
+        ],
+        "4": [
+          "North Prince Street, U.S. 2 22에서 남쪽으로 가세요."
+        ],
+        "5": [
+          "동쪽으로 운전하세요.",
+          "북쪽으로 운전하세요."
+        ],
+        "6": [
+          "동쪽으로 0.5마일 정도 운전하세요.",
+          "북쪽으로 1km 운전하세요."
+        ],
+        "7": [
+          "5번가에서 남서쪽으로 운전하세요."
+        ],
+        "8": [
+          "5번가에서 남서쪽으로 1/10마일 정도 운전하세요."
+        ],
+        "9": [
+          "North Prince Street, U.S. 2 22에서 남쪽으로 운전하세요."
+        ],
+        "10": [
+          "동쪽으로 걸어가세요.",
+          "북쪽으로 걸어가세요."
+        ],
+        "11": [
+          "동쪽으로 0.5마일 정도 걸어가세요.",
+          "북쪽으로 1km 정도 걸어가세요."
+        ],
+        "12": [
+          "5번가에서 남서쪽으로 걸어가세요."
+        ],
+        "13": [
+          "5번가에서 남서쪽으로 1/10마일 정도 걸어가세요."
+        ],
+        "14": [
+          "North Prince Street, U.S. 2 22에서 남쪽으로 걸어가세요."
+        ],
+        "15": [
+          "동쪽으로 자전거를 타세요.",
+          "북쪽으로 자전거를 타세요."
+        ],
+        "16": [
+          "동쪽으로 0.5마일 정도 자전거를 타세요.",
+          "북쪽으로 1km 정도 자전거를 타세요."
+        ],
+        "17": [
+          "5번가에서 남서쪽으로 자전거를 타세요."
+        ],
+        "18": [
+          "5번가에서 남서쪽으로 1/10마일 정도 자전거를 타세요."
+        ],
+        "19": [
+          "North Prince Street, U.S. 2 22에서 남쪽으로 자전거를 타세요."
+        ]
+      }
+    },
+    "transit": {
+      "phrases": {
+        "0": "<TRANSIT_NAME>을 타세요. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)",
+        "1": "<TRANSIT_HEADSIGN> 방면 <TRANSIT_NAME> 이용. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)"
+      },
+      "empty_transit_name_labels": [
+        "시가 전차",
+        "지하철",
+        "기차",
+        "버스",
+        "나룻배",
+        "케이블카",
+        "곤돌라",
+        "강삭 철도"
+      ],
+      "transit_stop_count_labels": {
+        "one": "멈추다",
+        "other": "정지하다"
+      },
+      "example_phrases": {
+        "0": [
+          "뉴헤이븐을 택하세요. (1정거장)",
+          "지하철을 타세요. (2정거장)",
+          "버스를 타고. (12정거장)"
+        ],
+        "1": [
+          "F를 타고 JAMAICA - 179 ST 방향으로 가세요. (10정거장)",
+          "Staten Island로 가는 페리를 타세요. (1정거장)"
+        ]
+      }
+    },
+    "transit_connection_destination": {
+      "phrases": {
+        "0": "역에서 나가세요.",
+        "1": "<TRANSIT_STOP>을 종료합니다.",
+        "2": "<TRANSIT_STOP> <STATION_LABEL>을 종료합니다."
+      },
+      "station_label": "역",
+      "example_phrases": {
+        "0": [
+          "역에서 나오세요."
+        ],
+        "1": [
+          "엠바카데로역(Embarcadero Station)에서 나오세요."
+        ],
+        "2": [
+          "8 St - NYU 역에서 나오세요."
+        ]
+      }
+    },
+    "transit_connection_destination_verbal": {
+      "phrases": {
+        "0": "역에서 나가세요.",
+        "1": "<TRANSIT_STOP>을 종료합니다.",
+        "2": "<TRANSIT_STOP> <STATION_LABEL>을 종료합니다."
+      },
+      "station_label": "역",
+      "example_phrases": {
+        "0": [
+          "역에서 나가세요."
+        ],
+        "1": [
+          "엠바카데로역(Embarcadero Station)에서 나오세요."
+        ],
+        "2": [
+          "8번가 - NYU 역에서 나오세요."
+        ]
+      }
+    },
+    "transit_connection_start": {
+      "phrases": {
+        "0": "역에 들어가세요.",
+        "1": "<TRANSIT_STOP>을 입력하세요.",
+        "2": "<TRANSIT_STOP> <STATION_LABEL>을 입력하세요."
+      },
+      "station_label": "역",
+      "example_phrases": {
+        "0": [
+          "역에 들어가세요."
+        ],
+        "1": [
+          "엠바카데로 역으로 들어갑니다."
+        ],
+        "2": [
+          "8 St - NYU 역으로 들어가세요."
+        ]
+      }
+    },
+    "transit_connection_start_verbal": {
+      "phrases": {
+        "0": "역에 들어가세요.",
+        "1": "<TRANSIT_STOP>을 입력하세요.",
+        "2": "<TRANSIT_STOP> <STATION_LABEL>을 입력하세요."
+      },
+      "station_label": "역",
+      "example_phrases": {
+        "0": [
+          "역에 들어가세요."
+        ],
+        "1": [
+          "엠바카데로 역으로 들어갑니다."
+        ],
+        "2": [
+          "8 St - NYU 역으로 들어가세요."
+        ]
+      }
+    },
+    "transit_connection_transfer": {
+      "phrases": {
+        "0": "역에서 환승하세요.",
+        "1": "<TRANSIT_STOP>에서 환승하세요.",
+        "2": "<TRANSIT_STOP> <STATION_LABEL>에서 환승하세요."
+      },
+      "station_label": "역",
+      "example_phrases": {
+        "0": [
+          "역에서 환승하세요."
+        ],
+        "1": [
+          "Embarcadero 역에서 환승하세요."
+        ],
+        "2": [
+          "8 St - NYU 역에서 환승하세요."
+        ]
+      }
+    },
+    "transit_connection_transfer_verbal": {
+      "phrases": {
+        "0": "역에서 환승합니다.",
+        "1": "<TRANSIT_STOP>에서 환승하세요.",
+        "2": "<TRANSIT_STOP> <STATION_LABEL>에서 환승하세요."
+      },
+      "station_label": "역",
+      "example_phrases": {
+        "0": [
+          "역에서 환승하세요."
+        ],
+        "1": [
+          "Embarcadero 역에서 환승하세요."
+        ],
+        "2": [
+          "8 St - NYU 역에서 환승하세요."
+        ]
+      }
+    },
+    "transit_remain_on": {
+      "phrases": {
+        "0": "<TRANSIT_NAME>을 타고 가세요. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)",
+        "1": "<TRANSIT_HEADSIGN> 방면 <TRANSIT_NAME>을 타고 가세요. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)"
+      },
+      "empty_transit_name_labels": [
+        "시가 전차",
+        "지하철",
+        "기차",
+        "버스",
+        "나룻배",
+        "케이블카",
+        "곤돌라",
+        "강삭 철도"
+      ],
+      "transit_stop_count_labels": {
+        "one": "멈추다",
+        "other": "정류장"
+      },
+      "example_phrases": {
+        "0": [
+          "뉴헤이븐에 머물라. (1정거장)",
+          "기차에 남아 있습니다. (3정거장)"
+        ],
+        "1": [
+          "JAMAICA - 179 ST 방면 F를 타고 오세요. (10정거장)"
+        ]
+      }
+    },
+    "transit_remain_on_verbal": {
+      "phrases": {
+        "0": "<TRANSIT_NAME>을 타고 가세요.",
+        "1": "<TRANSIT_HEADSIGN> 방면 <TRANSIT_NAME>을 타고 가세요."
+      },
+      "empty_transit_name_labels": [
+        "시가 전차",
+        "지하철",
+        "기차",
+        "버스",
+        "나룻배",
+        "케이블카",
+        "곤돌라",
+        "강삭 철도"
+      ],
+      "example_phrases": {
+        "0": [
+          "뉴헤이븐에 머물라."
+        ],
+        "1": [
+          "JAMAICA - 179 ST 방면 F를 타고 오세요."
+        ]
+      }
+    },
+    "transit_transfer": {
+      "phrases": {
+        "0": "<TRANSIT_NAME>을(를) 이용하려면 환승하세요. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)",
+        "1": "<TRANSIT_NAME>을 타고 <TRANSIT_HEADSIGN> 방향으로 환승하세요. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)"
+      },
+      "empty_transit_name_labels": [
+        "시가 전차",
+        "지하철",
+        "기차",
+        "버스",
+        "나룻배",
+        "케이블카",
+        "곤돌라",
+        "강삭 철도"
+      ],
+      "transit_stop_count_labels": {
+        "one": "멈추다",
+        "other": "정류장"
+      },
+      "example_phrases": {
+        "0": [
+          "뉴헤이븐(New Haven)으로 환승하세요. (1정거장)",
+          "트램으로 환승합니다. (4정거장)"
+        ],
+        "1": [
+          "F를 타고 JAMAICA - 179 ST 방향으로 환승하세요. (10정거장)"
+        ]
+      }
+    },
+    "transit_transfer_verbal": {
+      "phrases": {
+        "0": "<TRANSIT_NAME>을(를) 이용하려면 환승하세요.",
+        "1": "<TRANSIT_HEADSIGN> 방면 <TRANSIT_NAME>을 타고 환승하세요."
+      },
+      "empty_transit_name_labels": [
+        "시가 전차",
+        "지하철",
+        "기차",
+        "버스",
+        "나룻배",
+        "케이블카",
+        "곤돌라",
+        "강삭 철도"
+      ],
+      "example_phrases": {
+        "0": [
+          "뉴헤이븐(New Haven)으로 환승하세요."
+        ],
+        "1": [
+          "F를 타고 JAMAICA - 179 ST 방향으로 환승하세요."
+        ]
+      }
+    },
+    "transit_verbal": {
+      "phrases": {
+        "0": "<TRANSIT_NAME>을 타세요.",
+        "1": "<TRANSIT_HEADSIGN> 방면 <TRANSIT_NAME> 이용."
+      },
+      "empty_transit_name_labels": [
+        "시가 전차",
+        "지하철",
+        "기차",
+        "버스",
+        "나룻배",
+        "케이블카",
+        "곤돌라",
+        "강삭 철도"
+      ],
+      "example_phrases": {
+        "0": [
+          "뉴헤이븐을 택하세요."
+        ],
+        "1": [
+          "F를 타고 JAMAICA - 179 ST 방향으로 가세요."
+        ]
+      }
+    },
+    "turn": {
+      "phrases": {
+        "0": "<RELATIVE_DIRECTION>을(를) 돌립니다.",
+        "1": "<RELATIVE_DIRECTION>에서 <STREET_NAMES> 방향으로 진입하세요.",
+        "2": "<RELATIVE_DIRECTION>에서 <BEGIN_STREET_NAMES> 방향으로 진입하세요. <STREET_NAMES>에서 계속하세요.",
+        "3": "<RELATIVE_DIRECTION> 방향으로 돌아서 <STREET_NAMES>로 계속 가세요.",
+        "4": "<JUNCTION_NAME>에서 <RELATIVE_DIRECTION> 방향으로 회전하세요.",
+        "5": "<RELATIVE_DIRECTION>을 <TOWARD_SIGN> 방향으로 돌리세요."
+      },
+      "empty_street_name_labels": [
+        "산책로",
+        "자전거 도로",
+        "산악자전거 트레일",
+        "횡단보도",
+        "계단",
+        "다리",
+        "터널"
+      ],
+      "relative_directions": [
+        "왼쪽",
+        "오른쪽"
+      ],
+      "example_phrases": {
+        "0": [
+          "왼쪽으로 가세요."
+        ],
+        "1": [
+          "Flatbush Avenue로 우회전하세요."
+        ],
+        "2": [
+          "왼쪽 North Bond Street/US 1 Business/MD 924 방향으로 꺾습니다. MD 924를 타고 계속 가세요."
+        ],
+        "3": [
+          "우회전하여 Sunstone Drive를 따라 오세요."
+        ],
+        "4": [
+          "만넨바시 동쪽에서 우회전하세요."
+        ],
+        "5": [
+          "볼티모어 방향으로 왼쪽을 돌립니다."
+        ]
+      }
+    },
+    "turn_verbal": {
+      "phrases": {
+        "0": "<상대 방향>으로 회전하세요.",
+        "1": "<RELATIVE_DIRECTION>에서 <STREET_NAMES> 방향으로 진입하세요.",
+        "2": "<RELATIVE_DIRECTION>에서 <BEGIN_STREET_NAMES> 방향으로 진입하세요.",
+        "3": "<RELATIVE_DIRECTION> 방향으로 돌아서 <STREET_NAMES>로 계속 가세요.",
+        "4": "<JUNCTION_NAME>에서 <RELATIVE_DIRECTION> 방향으로 회전하세요.",
+        "5": "<RELATIVE_DIRECTION>을 <TOWARD_SIGN> 방향으로 돌리세요."
+      },
+      "empty_street_name_labels": [
+        "산책로",
+        "자전거 도로",
+        "산악자전거 트레일",
+        "횡단보도",
+        "계단",
+        "다리",
+        "터널"
+      ],
+      "relative_directions": [
+        "왼쪽",
+        "오른쪽"
+      ],
+      "example_phrases": {
+        "0": [
+          "왼쪽으로 회전하세요."
+        ],
+        "1": [
+          "Flatbush Avenue로 오른쪽으로 회전하세요."
+        ],
+        "2": [
+          "North Bond Street, U.S. 1 Business로 왼쪽으로 회전하세요."
+        ],
+        "3": [
+          "Sunstone Drive를 따라 오른쪽으로 회전하여 계속 진행하세요."
+        ],
+        "4": [
+          "Mannenbashi East에서 오른쪽으로 회전하세요."
+        ],
+        "5": [
+          "Baltimore 방향으로 왼쪽으로 회전하세요."
+        ]
+      }
+    },
+    "uturn": {
+      "phrases": {
+        "0": "<RELATIVE_DIRECTION> 방향으로 U턴하세요.",
+        "1": "<RELATIVE_DIRECTION> <STREET_NAMES> 방향으로 유턴하세요.",
+        "2": "<RELATIVE_DIRECTION> 유턴하여 <STREET_NAMES>에서 계속 직진하세요.",
+        "3": "<CROSS_STREET_NAMES>에서 <RELATIVE_DIRECTION> U턴하세요.",
+        "4": "<CROSS_STREET_NAMES>에서 <RELATIVE_DIRECTION> 유턴하여 <STREET_NAMES> 방향으로 진입하세요.",
+        "5": "<CROSS_STREET_NAMES>에서 <RELATIVE_DIRECTION> 유턴하여 <STREET_NAMES>(으)로 계속 이동하세요.",
+        "6": "<JUNCTION_NAME>에서 <RELATIVE_DIRECTION> U턴하세요.",
+        "7": "<TOWARD_SIGN> 방향으로 <RELATIVE_DIRECTION> 유턴하세요."
+      },
+      "empty_street_name_labels": [
+        "산책로",
+        "자전거 도로",
+        "산악자전거 트레일",
+        "횡단보도",
+        "계단",
+        "다리",
+        "터널"
+      ],
+      "relative_directions": [
+        "왼쪽",
+        "오른쪽"
+      ],
+      "example_phrases": {
+        "0": [
+          "왼쪽으로 U턴하세요."
+        ],
+        "1": [
+          "Bunker Hill Road로 오른쪽으로 U턴하세요."
+        ],
+        "2": [
+          "Bunker Hill Road를 따라 왼쪽으로 U턴하여 계속 진행하세요."
+        ],
+        "3": [
+          "Devonshire Road에서 왼쪽으로 U턴하세요."
+        ],
+        "4": [
+          "Devonshire Road에서 Jonestown Road/US 22로 왼쪽으로 U턴하세요."
+        ],
+        "5": [
+          "Devonshire Road에서 Jonestown Road/US 22를 따라 왼쪽으로 U턴하여 계속 진행하세요."
+        ],
+        "6": [
+          "Mannenbashi East에서 오른쪽으로 U턴하세요."
+        ],
+        "7": [
+          "Baltimore 방향으로 왼쪽으로 U턴하세요."
+        ]
+      }
+    },
+    "uturn_verbal": {
+      "phrases": {
+        "0": "<RELATIVE_DIRECTION> U턴하세요.",
+        "1": "<RELATIVE_DIRECTION> <STREET_NAMES> 방향으로 유턴하세요.",
+        "2": "<RELATIVE_DIRECTION> 유턴하여 <STREET_NAMES>에서 계속 직진하세요.",
+        "3": "<CROSS_STREET_NAMES>에서 <RELATIVE_DIRECTION> U턴하세요.",
+        "4": "<CROSS_STREET_NAMES>에서 <RELATIVE_DIRECTION> 유턴하여 <STREET_NAMES> 방향으로 진입하세요.",
+        "5": "<CROSS_STREET_NAMES>에서 <RELATIVE_DIRECTION> 유턴하여 <STREET_NAMES>(으)로 계속 이동하세요.",
+        "6": "<JUNCTION_NAME>에서 <RELATIVE_DIRECTION> 방향으로 U턴하세요.",
+        "7": "<TOWARD_SIGN> 방향으로 <RELATIVE_DIRECTION> 유턴하세요."
+      },
+      "empty_street_name_labels": [
+        "산책로",
+        "자전거 도로",
+        "산악자전거 트레일",
+        "횡단보도",
+        "계단",
+        "다리",
+        "터널"
+      ],
+      "relative_directions": [
+        "왼쪽",
+        "오른쪽"
+      ],
+      "example_phrases": {
+        "0": [
+          "왼쪽으로 U턴하세요."
+        ],
+        "1": [
+          "Bunker Hill Road로 오른쪽으로 U턴하세요."
+        ],
+        "2": [
+          "Bunker Hill Road를 따라 왼쪽으로 U턴하여 계속 진행하세요."
+        ],
+        "3": [
+          "Devonshire Road에서 왼쪽으로 U턴하세요."
+        ],
+        "4": [
+          "Devonshire Road에서 Jonestown Road, U.S. 22로 왼쪽으로 U턴하세요."
+        ],
+        "5": [
+          "Devonshire Road에서 Jonestown Road, U.S. 22를 따라 왼쪽으로 U턴하여 계속 진행하세요."
+        ],
+        "6": [
+          "Mannenbashi East에서 오른쪽으로 U턴하세요."
+        ],
+        "7": [
+          "Baltimore 방향으로 왼쪽으로 U턴하세요."
+        ]
+      }
+    },
+    "verbal_multi_cue": {
+      "phrases": {
+        "0": "<CURRENT_VERBAL_CUE> 다음 <NEXT_VERBAL_CUE>",
+        "1": "<CURRENT_VERBAL_CUE> 그런 다음 <LENGTH>에서 <NEXT_VERBAL_CUE>"
+      },
+      "metric_lengths": [
+        "<KILOMETERS>킬로미터",
+        "1 킬로미터",
+        "<METERS>미터",
+        "10미터 이하"
+      ],
+      "us_customary_lengths": [
+        "<MILES>마일",
+        "1마일",
+        "반 마일",
+        "4분의 1마일",
+        "<FEET>피트",
+        "10피트 미만"
+      ],
+      "example_phrases": {
+        "0": [
+          "East Fayette Street로 오른쪽으로 진행하세요. 그리고 North Gay Street로 오른쪽으로 회전하세요."
+        ],
+        "1": [
+          "East Fayette Street로 오른쪽으로 진행하세요. 그리고 500피트 후에, North Gay Street로 오른쪽으로 회전하세요."
+        ]
+      }
+    },
+    "approach_verbal_alert": {
+      "phrases": {
+        "0": "<LENGTH> 후에, <CURRENT_VERBAL_CUE>"
+      },
+      "metric_lengths": [
+        "<KILOMETERS>킬로미터",
+        "1킬로미터",
+        "<METERS>미터",
+        "10미터 미만"
+      ],
+      "us_customary_lengths": [
+        "<MILES>마일",
+        "1마일",
+        "반 마일",
+        "4분의 1마일",
+        "<FEET>피트",
+        "10피트 미만"
+      ],
+      "example_phrases": {
+        "0": [
+          "4분의 1마일 정도 이동한 후 North Gay Street으로 우회전하세요."
+        ]
+      }
+    },
+    "pass": {
+      "phrases": {
+        "0": "<OBJECT_LABEL>을 전달합니다.",
+        "1": "<OBJECT_LABEL>에서 교통 신호를 전달하세요."
+      },
+      "object_labels": [
+        "관문",
+        "볼라드",
+        "교차로"
+      ],
+      "example_phrases": {
+        "0": [
+          "게이트을(를) 통과하세요."
+        ]
+      }
+    },
+    "elevator": {
+      "phrases": {
+        "0": "엘리베이터를 타세요.",
+        "1": "엘리베이터를 타고 <LEVEL>로 가세요."
+      },
+      "example_phrases": {
+        "0": [
+          "엘리베이터를 이용하세요."
+        ],
+        "1": [
+          "1층으로 엘리베이터를 타세요."
+        ]
+      }
+    },
+    "steps": {
+      "phrases": {
+        "0": "계단을 이용하세요.",
+        "1": "계단을 이용하여 <LEVEL>로 가세요."
+      },
+      "example_phrases": {
+        "0": [
+          "계단을 이용하세요."
+        ],
+        "1": [
+          "2층으로 계단을 올라가세요."
+        ]
+      }
+    },
+    "escalator": {
+      "phrases": {
+        "0": "에스컬레이터를 타세요.",
+        "1": "에스컬레이터를 타고 <LEVEL>로 가세요."
+      },
+      "example_phrases": {
+        "0": [
+          "에스컬레이터를 이용하세요."
+        ],
+        "1": [
+          "3층으로 에스컬레이터를 타세요."
+        ]
+      }
+    },
+    "enter_building": {
+      "phrases": {
+        "0": "건물에 들어가십시오.",
+        "1": "건물에 들어가서 <STREET_NAMES>에서 계속 가세요."
+      },
+      "empty_street_name_labels": [
+        "산책로",
+        "순환 도로",
+        "산악자전거 트레일",
+        "횡단보도"
+      ],
+      "example_phrases": {
+        "0": [
+          "건물로 들어가세요."
+        ],
+        "1": [
+          "건물로 들어가고, 보도를 따라 계속 진행하세요."
+        ]
+      }
+    },
+    "exit_building": {
+      "phrases": {
+        "0": "건물을 나가십시오.",
+        "1": "건물에서 나와 <STREET_NAMES> 방향으로 계속 가세요."
+      },
+      "empty_street_name_labels": [
+        "산책로",
+        "순환 도로",
+        "산악자전거 트레일",
+        "횡단보도"
+      ],
+      "example_phrases": {
+        "0": [
+          "건물에서 나오세요."
+        ],
+        "1": [
+          "건물에서 나오고, 보도를 따라 계속 진행하세요."
+        ]
+      }
     }
+  }
 }

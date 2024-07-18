@@ -46,9 +46,9 @@
         "pistă pentru biciclete",
         "traseu pentru ciclism montan",
         "trecerea de pietoni",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "scările",
+        "podul",
+        "tunelul"
       ],
       "relative_directions": [
         "stânga",
@@ -89,9 +89,11 @@
         "pistă pentru biciclete",
         "traseu pentru ciclism montan",
         "trecerea de pietoni",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "scările",
+        "podul",
+        "tunelul","scările",
+        "podul",
+        "tunelul"
       ],
       "relative_directions": [
         "stânga",
@@ -150,9 +152,9 @@
         "pistă pentru biciclete",
         "traseu pentru ciclism montan",
         "trecerea de pietoni",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "scările",
+        "podul",
+        "tunelul"
       ],
       "example_phrases": {
         "0": [
@@ -185,9 +187,9 @@
         "pistă pentru biciclete",
         "traseu pentru ciclism montan",
         "trecerea de pietoni",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "scările",
+        "podul",
+        "tunelul"
       ],
       "metric_lengths": [
         "<KILOMETERS> kilometri",
@@ -241,10 +243,10 @@
         "alee",
         "pistă pentru biciclete",
         "traseu pentru ciclism montan",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "trecerea de pietoni",
+        "scările",
+        "podul",
+        "tunelul"
       ],
       "example_phrases": {
         "0": [
@@ -381,10 +383,10 @@
         "alee",
         "pistă pentru biciclete",
         "traseu pentru ciclism montan",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "trecerea de pietoni",
+        "scările",
+        "podul",
+        "tunelul"
       ],
       "ferry_label": "Feribot",
       "example_phrases": {
@@ -413,10 +415,10 @@
         "alee",
         "pistă pentru biciclete",
         "traseu pentru ciclism montan",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "trecerea de pietoni",
+        "scările",
+        "podul",
+        "tunelul"
       ],
       "ferry_label": "Feribot",
       "example_phrases": {
@@ -469,10 +471,10 @@
         "alee",
         "pistă pentru biciclete",
         "traseu pentru ciclism montan",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "trecerea de pietoni",
+        "scările",
+        "podul",
+        "tunelul"
       ],
       "example_phrases": {
         "0": [
@@ -569,10 +571,10 @@
         "alee",
         "pistă pentru biciclete",
         "traseu pentru ciclism montan",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "trecerea de pietoni",
+        "scările",
+        "podul",
+        "tunelul"
       ],
       "example_phrases": {
         "0": [
@@ -752,10 +754,10 @@
         "alee",
         "pistă de biciclete",
         "traseu pentru ciclism montan",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "trecerea de pietoni",
+        "scările",
+        "podul",
+        "tunelul"
       ],
       "example_phrases": {
         "0": [
@@ -783,10 +785,10 @@
         "alee",
         "pistă de biciclete",
         "traseu pentru ciclism montan",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "trecerea de pietoni",
+        "scările",
+        "podul",
+        "tunelul"
       ],
       "example_phrases": {
         "0": [
@@ -935,10 +937,10 @@
         "alee",
         "pistă pentru biciclete",
         "traseu pentru ciclism montan",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "trecerea de pietoni",
+        "scările",
+        "podul",
+        "tunelul"
       ],
       "relative_directions": [
         "stânga",
@@ -985,10 +987,10 @@
         "alee",
         "pistă pentru biciclete",
         "traseu pentru ciclism montan",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "trecerea de pietoni",
+        "scările",
+        "podul",
+        "tunelul"
       ],
       "relative_directions": [
         "stânga",
@@ -1023,10 +1025,10 @@
         "alee",
         "pistă pentru biciclete",
         "traseu pentru ciclism montan",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "trecerea de pietoni",
+        "scările",
+        "podul",
+        "tunelul"
       ],
       "relative_directions": [
         "stânga",
@@ -1065,10 +1067,10 @@
         "alee",
         "pistă pentru biciclete",
         "traseu pentru ciclism montan",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "trecerea de pietoni",
+        "scările",
+        "podul",
+        "tunelul"
       ],
       "relative_directions": [
         "stânga",
@@ -1121,10 +1123,10 @@
         "alee",
         "pistă pentru biciclete",
         "traseu pentru ciclism montan",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "trecerea de pietoni",
+        "scările",
+        "podul",
+        "tunelul"
       ],
       "example_phrases": {
         "0": [
@@ -1164,10 +1166,10 @@
         "alee",
         "pistă pentru biciclete",
         "traseu pentru ciclism montan",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "trecerea de pietoni",
+        "scările",
+        "podul",
+        "tunelul"
       ],
       "example_phrases": {
         "0": [
@@ -1214,10 +1216,10 @@
         "alee",
         "pistă pentru biciclete",
         "traseu pentru ciclism montan",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "trecerea de pietoni",
+        "scările",
+        "podul",
+        "tunelul"
       ],
       "metric_lengths": [
         "<KILOMETERS> kilometri",
@@ -1453,10 +1455,10 @@
         "alee",
         "pistă pentru biciclete",
         "traseu pentru ciclism montan",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "trecerea de pietoni",
+        "scările",
+        "podul",
+        "tunelul"
       ],
       "relative_directions": [
         "stânga",
@@ -1496,10 +1498,10 @@
         "alee",
         "pistă pentru biciclete",
         "traseu pentru ciclism montan",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "trecerea de pietoni",
+        "scările",
+        "podul",
+        "tunelul"
       ],
       "relative_directions": [
         "stânga",
@@ -1555,10 +1557,10 @@
         "alee",
         "pistă pentru biciclete",
         "traseu pentru ciclism montan",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "trecerea de pietoni",
+        "scările",
+        "podul",
+        "tunelul"
       ],
       "example_phrases": {
         "0": [
@@ -1646,10 +1648,10 @@
         "alee",
         "pistă de biciclete",
         "traseu pentru ciclism montan",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "trecerea de pietoni",
+        "scările",
+        "podul",
+        "tunelul"
       ],
       "metric_lengths": [
         "<KILOMETERS> kilometri",
@@ -2024,10 +2026,10 @@
         "alee",
         "pistă pentru biciclete",
         "traseu pentru ciclism montan",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "trecerea de pietoni",
+        "scările",
+        "podul",
+        "tunelul"
       ],
       "relative_directions": [
         "stânga",
@@ -2067,10 +2069,10 @@
         "alee",
         "pistă pentru biciclete",
         "traseu pentru ciclism montan",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "trecerea de pietoni",
+        "scările",
+        "podul",
+        "tunelul"
       ],
       "relative_directions": [
         "stânga",
@@ -2112,10 +2114,10 @@
         "alee",
         "pistă pentru biciclete",
         "traseu pentru ciclism montan",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "trecerea de pietoni",
+        "scările",
+        "podul",
+        "tunelul"
       ],
       "relative_directions": [
         "stânga",
@@ -2163,10 +2165,10 @@
         "alee",
         "pistă pentru biciclete",
         "traseu pentru ciclism montan",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "trecerea de pietoni",
+        "scările",
+        "podul",
+        "tunelul"
       ],
       "relative_directions": [
         "stânga",
@@ -2318,7 +2320,7 @@
         "alee",
         "pistă de biciclete",
         "traseu pentru ciclism montan",
-        "the crosswalk"
+        "trecerea de pietoni"
       ],
       "example_phrases": {
         "0": [
@@ -2338,7 +2340,7 @@
         "alee",
         "pistă de biciclete",
         "traseu pentru ciclism montan",
-        "the crosswalk"
+        "trecerea de pietoni"
       ],
       "example_phrases": {
         "0": [

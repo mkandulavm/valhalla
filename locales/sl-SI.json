@@ -45,10 +45,10 @@
         "pešpot",
         "kolesarsko stezo",
         "stezo za gorsko kolo",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "prehod za pešce",
+        "stopnice",
+        "most",
+        "tunel"
       ],
       "relative_directions": [
         "levo",
@@ -88,10 +88,10 @@
         "pešpot",
         "kolesarsko stezo",
         "stezo za gorsko kolo",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "prehod za pešce",
+        "stopnice",
+        "most",
+        "tunel"
       ],
       "relative_directions": [
         "levo",
@@ -149,10 +149,10 @@
         "pešpoti",
         "kolesarski stezi",
         "stezi za gorsko kolo",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "prehod za pešce",
+        "stopnice",
+        "most",
+        "tunel"
       ],
       "example_phrases": {
         "0": [
@@ -184,10 +184,10 @@
         "pešpoti",
         "kolesarski stezi",
         "stezi za gorsko kolo",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "prehod za pešce",
+        "stopnice",
+        "most",
+        "tunel"
       ],
       "metric_lengths": [
         "<KILOMETERS> kilometrov",
@@ -241,10 +241,10 @@
         "pešpoti",
         "kolesarski stezi",
         "stezi za gorsko kolo",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "prehod za pešce",
+        "stopnice",
+        "most",
+        "tunel"
       ],
       "example_phrases": {
         "0": [
@@ -381,10 +381,10 @@
         "pešpot",
         "kolesarsko stezo",
         "stezo za gorsko kolo",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "prehod za pešce",
+        "stopnice",
+        "most",
+        "tunel"
       ],
       "ferry_label": "Trajekt",
       "example_phrases": {
@@ -413,10 +413,10 @@
         "pešpot",
         "kolesarsko stezo",
         "stezo za gorsko kolo",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "prehod za pešce",
+        "stopnice",
+        "most",
+        "tunel"
       ],
       "ferry_label": "Trajekt",
       "example_phrases": {
@@ -469,10 +469,10 @@
         "the walkway",
         "the cycleway",
         "the mountain bike trail",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "prehod za pešce",
+        "stopnice",
+        "most",
+        "tunel"
       ],
       "example_phrases": {
         "0": [
@@ -569,10 +569,10 @@
         "the walkway",
         "the cycleway",
         "the mountain bike trail",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "prehod za pešce",
+        "stopnice",
+        "most",
+        "tunel"
       ],
       "example_phrases": {
         "0": [
@@ -752,10 +752,10 @@
         "pešpot",
         "kolesarsko stezo",
         "stezo za gorsko kolo",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "prehod za pešce",
+        "stopnice",
+        "most",
+        "tunel"
       ],
       "example_phrases": {
         "0": [
@@ -783,10 +783,10 @@
         "pešpot",
         "kolesarsko stezo",
         "stezo za gorsko kolo",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "prehod za pešce",
+        "stopnice",
+        "most",
+        "tunel"
       ],
       "example_phrases": {
         "0": [
@@ -935,10 +935,10 @@
         "pešpot",
         "kolesarsko stezo",
         "stezo za gorsko kolo",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "prehod za pešce",
+        "stopnice",
+        "most",
+        "tunel"
       ],
       "relative_directions": [
         "levo",
@@ -985,10 +985,10 @@
         "pešpoti",
         "kolesarski stezi",
         "stezi za gorsko kolo",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "prehod za pešce",
+        "stopnice",
+        "most",
+        "tunel"
       ],
       "relative_directions": [
         "levo",
@@ -1023,10 +1023,10 @@
         "pešpoti",
         "kolesarski stezi",
         "stezi za gorsko kolo",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "prehod za pešce",
+        "stopnice",
+        "most",
+        "tunel"
       ],
       "relative_directions": [
         "levo",
@@ -1065,10 +1065,10 @@
         "pešpot",
         "kolesarsko stezo",
         "stezo za gorsko kolo",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "prehod za pešce",
+        "stopnice",
+        "most",
+        "tunel"
       ],
       "relative_directions": [
         "levo",
@@ -1121,10 +1121,10 @@
         "pešpot",
         "kolesarsko stezo",
         "stezo za gorsko kolo",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "prehod za pešce",
+        "stopnice",
+        "most",
+        "tunel"
       ],
       "example_phrases": {
         "0": [
@@ -1164,10 +1164,10 @@
         "pešpot",
         "kolesarsko stezo",
         "stezo za gorsko kolo",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "prehod za pešce",
+        "stopnice",
+        "most",
+        "tunel"
       ],
       "example_phrases": {
         "0": [
@@ -1214,10 +1214,10 @@
         "pešpoti",
         "kolesarski stezi",
         "stezi za gorsko kolo",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "prehod za pešce",
+        "stopnice",
+        "most",
+        "tunel"
       ],
       "metric_lengths": [
         "<KILOMETERS> kilometrov",
@@ -1453,10 +1453,10 @@
         "pešpot",
         "kolesarsko stezo",
         "stezo za gorsko kolo",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "prehod za pešce",
+        "stopnice",
+        "most",
+        "tunel"
       ],
       "relative_directions": [
         "levo",
@@ -1496,10 +1496,10 @@
         "pešpot",
         "kolesarsko stezo",
         "stezo za gorsko kolo",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "prehod za pešce",
+        "stopnice",
+        "most",
+        "tunel"
       ],
       "relative_directions": [
         "levo",
@@ -1555,10 +1555,10 @@
         "pešpoti",
         "kolesarski stezi",
         "stezi za gorsko kolo",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "prehod za pešce",
+        "stopnice",
+        "most",
+        "tunel"
       ],
       "example_phrases": {
         "0": [
@@ -1646,10 +1646,10 @@
         "pešpoti",
         "kolesarski stezi",
         "stezi za gorsko kolo",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "prehod za pešce",
+        "stopnice",
+        "most",
+        "tunel"
       ],
       "metric_lengths": [
         "<KILOMETERS> kilometrov",
@@ -2024,10 +2024,10 @@
         "pešpot",
         "kolesarsko stezo",
         "stezo za gorsko kolo",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "prehod za pešce",
+        "stopnice",
+        "most",
+        "tunel"
       ],
       "relative_directions": [
         "levo",
@@ -2067,10 +2067,10 @@
         "pešpot",
         "kolesarsko stezo",
         "stezo za gorsko kolo",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "prehod za pešce",
+        "stopnice",
+        "most",
+        "tunel"
       ],
       "relative_directions": [
         "levo",
@@ -2112,10 +2112,10 @@
         "pešpot",
         "kolesarsko stezo",
         "stezo za gorsko kolo",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "prehod za pešce",
+        "stopnice",
+        "most",
+        "tunel"
       ],
       "relative_directions": [
         "levo",
@@ -2163,10 +2163,10 @@
         "pešpot",
         "kolesarsko stezo",
         "stezo za gorsko kolo",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "prehod za pešce",
+        "stopnice",
+        "most",
+        "tunel"
       ],
       "relative_directions": [
         "levo",

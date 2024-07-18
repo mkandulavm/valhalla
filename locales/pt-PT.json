@@ -45,10 +45,10 @@
         "o passeio",
         "a ciclovia",
         "o trilho para bicicleta de montanha",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "a passadeira de peões",
+        "as escadas",
+        "a ponte",
+        " o túnel"
       ],
       "relative_directions": [
         "esquerda",
@@ -88,10 +88,10 @@
         "o passeio",
         "a ciclovia",
         "o trilho de bicicleta de montanha",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "a passadeira de peões",
+        "as escadas",
+        "a ponte",
+        " o túnel"
       ],
       "relative_directions": [
         "esquerda",
@@ -149,10 +149,10 @@
         "o passeio",
         "a ciclovia",
         "o trilho de bibicleta de montanha",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "a passadeira de peões",
+        "as escadas",
+        "a ponte",
+        " o túnel"
       ],
       "example_phrases": {
         "0": [
@@ -184,10 +184,10 @@
         "o passeio",
         "a ciclovia",
         "o trilho de bicicleta de montanha",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "a passadeira de peões",
+        "as escadas",
+        "a ponte",
+        " o túnel"
       ],
       "metric_lengths": [
         "<KILOMETERS> quilómetros",
@@ -241,10 +241,10 @@
         "o passeio",
         "a ciclovia",
         "o trilho de bicicleta de montanha",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "a passadeira de peões",
+        "as escadas",
+        "a ponte",
+        " o túnel"
       ],
       "example_phrases": {
         "0": [
@@ -381,10 +381,10 @@
         "o passeio",
         "a ciclovia",
         "o trilho de bicicleta de montanha",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "a passadeira de peões",
+        "as escadas",
+        "a ponte",
+        " o túnel"
       ],
       "ferry_label": "Ferry",
       "example_phrases": {
@@ -413,10 +413,10 @@
         "o passeio",
         "a ciclovia",
         "o trilho de bicicleta de montanha",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "a passadeira de peões",
+        "as escadas",
+        "a ponte",
+        " o túnel"
       ],
       "ferry_label": "Ferry",
       "example_phrases": {
@@ -469,10 +469,10 @@
         "o passeio",
         "a ciclovia",
         "o trilho de bicicleta de montanha",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "a passadeira de peões",
+        "as escadas",
+        "a ponte",
+        " o túnel"
       ],
       "example_phrases": {
         "0": [
@@ -569,10 +569,10 @@
         "o passeio",
         "a ciclovia",
         "o trilho de bicicleta de montanha",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "a passadeira de peões",
+        "as escadas",
+        "a ponte",
+        " o túnel"
       ],
       "example_phrases": {
         "0": [
@@ -752,10 +752,10 @@
         "o passeio",
         "a ciclovia",
         "o trilho de bicicleta de montanha",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "a passadeira de peões",
+        "as escadas",
+        "a ponte",
+        " o túnel"
       ],
       "example_phrases": {
         "0": [
@@ -783,10 +783,10 @@
         "o passeio",
         "a ciclovia",
         "o trilho de bicicleta de montanha",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "a passadeira de peões",
+        "as escadas",
+        "a ponte",
+        " o túnel"
       ],
       "example_phrases": {
         "0": [
@@ -935,10 +935,10 @@
         "o passeio",
         "a ciclovia",
         "o trilho de bicicleta de montanha",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "a passadeira de peões",
+        "as escadas",
+        "a ponte",
+        " o túnel"
       ],
       "relative_directions": [
         "esquerda",
@@ -985,10 +985,10 @@
         "o passeio",
         "a ciclovia",
         "o trilho de bicicleta de montanha",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "a passadeira de peões",
+        "as escadas",
+        "a ponte",
+        " o túnel"
       ],
       "relative_directions": [
         "esquerda",
@@ -1023,10 +1023,10 @@
         "o passeio",
         "a ciclovia",
         "o trilho de bicicleta de montanha",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "a passadeira de peões",
+        "as escadas",
+        "a ponte",
+        " o túnel"
       ],
       "relative_directions": [
         "esquerda",
@@ -1065,10 +1065,10 @@
         "o passeio",
         "a ciclovia",
         "o trilho de bicicleta de montanha",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "a passadeira de peões",
+        "as escadas",
+        "a ponte",
+        " o túnel"
       ],
       "relative_directions": [
         "esquerda",
@@ -1121,10 +1121,10 @@
         "o passeio",
         "a ciclovia",
         "o trilho de bicicleta de montanha",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "a passadeira de peões",
+        "as escadas",
+        "a ponte",
+        " o túnel"
       ],
       "example_phrases": {
         "0": [
@@ -1164,10 +1164,10 @@
         "o passeio",
         "a ciclovia",
         "o trilho de bicicleta de montanha",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "a passadeira de peões",
+        "as escadas",
+        "a ponte",
+        " o túnel"
       ],
       "example_phrases": {
         "0": [
@@ -1214,10 +1214,10 @@
         "o passeio",
         "a ciclovia",
         "o trilho de bicicleta de montanha",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "a passadeira de peões",
+        "as escadas",
+        "a ponte",
+        " o túnel"
       ],
       "metric_lengths": [
         "<KILOMETERS> quilómetros",
@@ -1453,10 +1453,10 @@
         "o passeio",
         "a ciclovia",
         "o trilho de bicicleta de montanha",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "a passadeira de peões",
+        "as escadas",
+        "a ponte",
+        " o túnel"
       ],
       "relative_directions": [
         "esquerda",
@@ -1496,10 +1496,10 @@
         "o passeio",
         "a ciclovia",
         "o trilho de bicileta de montanha",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "a passadeira de peões",
+        "as escadas",
+        "a ponte",
+        " o túnel"
       ],
       "relative_directions": [
         "esquerda",
@@ -1555,10 +1555,10 @@
         "o passeio",
         "a ciclovia",
         "o trilho de bicicleta de montanha",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "a passadeira de peões",
+        "as escadas",
+        "a ponte",
+        " o túnel"
       ],
       "example_phrases": {
         "0": [
@@ -1646,10 +1646,10 @@
         "o passeio",
         "a ciclovia",
         "o trilho de bicicleta de montanha",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "a passadeira de peões",
+        "as escadas",
+        "a ponte",
+        " o túnel"
       ],
       "metric_lengths": [
         "<KILOMETERS> quilómetros",
@@ -2024,10 +2024,10 @@
         "o passeio",
         "a ciclovia",
         "o trilho de bicicleta de montanha",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "a passadeira de peões",
+        "as escadas",
+        "a ponte",
+        " o túnel"
       ],
       "relative_directions": [
         "esquerda",
@@ -2067,10 +2067,10 @@
         "o passeio",
         "a ciclovia",
         "o trilho de bicicleta de montanha",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "a passadeira de peões",
+        "as escadas",
+        "a ponte",
+        " o túnel"
       ],
       "relative_directions": [
         "esquerda",
@@ -2112,10 +2112,10 @@
         "o passeio",
         "a ciclovia",
         "o trilho de bicilceta de montanha",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "a passadeira de peões",
+        "as escadas",
+        "a ponte",
+        " o túnel"
       ],
       "relative_directions": [
         "esquerda",
@@ -2163,10 +2163,10 @@
         "o passeio",
         "a ciclovia",
         "o trilho de bicicleta de montanha",
-        "the crosswalk",
-        "the stairs",
-        "the bridge",
-        "the tunnel"
+        "a passadeira de peões",
+        "as escadas",
+        "a ponte",
+        " o túnel"
       ],
       "relative_directions": [
         "esquerda",
@@ -2318,7 +2318,7 @@
         "o passeio",
         "a ciclovia",
         "o trilho de bicilceta de montanha",
-        "the crosswalk"
+        "a passadeira de peões"
       ],
       "example_phrases": {
         "0": [
@@ -2338,7 +2338,7 @@
         "o passeio",
         "a ciclovia",
         "o trilho de bicilceta de montanha",
-        "the crosswalk"
+        "a passadeira de peões"
       ],
       "example_phrases": {
         "0": [
