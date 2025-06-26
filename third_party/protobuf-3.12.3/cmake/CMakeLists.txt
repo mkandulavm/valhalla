@@ -1,5 +1,6 @@
 # Minimum CMake required
 cmake_minimum_required(VERSION 3.1.3)
+cmake_policy(SET CMP0057 NEW)
 
 if(protobuf_VERBOSE)
   message(STATUS "Protocol Buffers Configuring...")
