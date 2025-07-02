@@ -19,11 +19,11 @@ configure_file(${VALHALLA_SOURCE_DIR}/scripts/valhalla_build_config ${CMAKE_CURR
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/config.py ${CMAKE_CURRENT_BINARY_DIR}/valhalla/config.py COPYONLY)
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/actor.py ${CMAKE_CURRENT_BINARY_DIR}/valhalla/actor.py COPYONLY)
 
-message(STATUS "Installing python modules to ${Python_SITEARCH}")
+message(STATUS "Installing python modules to ${NEVH_Python_SITEARCH}")
 install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/valhalla
-DESTINATION "${Python_SITEARCH}"
+DESTINATION "${NEVH_Python_SITEARCH}"
 COMPONENT runtime
 FILES_MATCHING PATTERN "*.py")
 install(TARGETS python_valhalla
-DESTINATION "${Python_SITEARCH}/valhalla"
+DESTINATION "${NEVH_Python_SITEARCH}/valhalla"
 COMPONENT runtime)
