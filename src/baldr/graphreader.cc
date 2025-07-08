@@ -82,19 +82,35 @@ GraphReader::tile_extract_t::tile_extract_t(const boost::property_tree::ptree& p
 
   bool scan_tar = pt.get<bool>("data_processing.scan_tar", false);  
   //nevh
-  // if you really meant to load it
-  if (pt.get_optional<std::string>("root")) 
+  std::string tileDirToUse;
+  //if the tile_extract has .zip extension, then we will load it as a zip file
+  if (pt.get_optional<std::string>("tile_dir")) 
   {
-    try {
-      // load the tar
-      // TODO: use the "scan" to iterate over tar
-      auto root = pt.get<std::string>("root");
-      // //replace .tar in te with .zip
-      // std::string::size_type i = te.rfind('.', te.length());
-      // if (i != std::string::npos) {
-      //   te.replace(i + 1, 3, "zip");
-      // }
-      auto te = root + "/valhalla_tiles.zip";
+    auto te = pt.get<std::string>("tile_dir");
+    //rmove any trailing slashes
+    if (te.back() == '/' || te.back() == '\\') {
+      te.pop_back();
+    }
+    te += ".zip"; // append .zip to the tile_dir    
+    //check if the file exists
+    std::cout << "checking if " << te << " exists..." << std::endl;
+    if (std::filesystem::exists(te.c_str())) {      
+      tileDirToUse = te;
+      std::cout<< "found " << te << ", using it as tile_extract" << std::endl;
+    }
+  }
+  if (pt.get_optional<std::string>("root")) 
+  {    
+    auto root = pt.get<std::string>("root");      
+    auto te = root + "/valhalla_tiles.zip";
+    if(te != tileDirToUse) {     
+      std::cout << "using tile_extract from root: " << te << ". This is used for reading routing tiles." << std::endl;  
+    }
+    tileDirToUse = te;
+  }  
+  {
+    try {      
+      auto te = tileDirToUse;
       std::cout << "trying to load " << te << std::endl;
       //check if te file exists
       bool zipFileExists = std::filesystem::exists(te.c_str());    
@@ -122,6 +138,7 @@ GraphReader::tile_extract_t::tile_extract_t(const boost::property_tree::ptree& p
       }
       else {
         std::cout << te << " file does not exist" << std::endl;
+        throw std::runtime_error(te + " file does not exist");
       }
 
       //auto zipArchive = std::make_unique<zip_t>(te);
