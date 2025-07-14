@@ -567,18 +567,31 @@ void legs(const valhalla::Api& api, int route_index, rapidjson::writer_wrapper_t
 
     if(directions_leg.speed_limits_size() > 0) {
       writer.start_array("speed_limits_lanes");
+      int writeSpeedC = 0;
       for(int s = 0; s < directions_leg.speed_limits_size(); ++s){
-        if(valhalla::Options_Units_Enum_Name(api.options().units()) == "miles") {
-          // convert from km/h to mph
-          //round number to nearest integer multiple of 5
-          auto speed_limit = static_cast<uint64_t>(directions_leg.speed_limits(s) * 0.621371);
-          speed_limit = (speed_limit + 2) / 5 * 5; // round to nearest 5
-          writer(speed_limit);
-        } else {
-          // keep as km/h
-          writer(static_cast<uint64_t>(directions_leg.speed_limits(s)));
+        //int v = directions_leg.speed_limits(s);
+        if(writeSpeedC == 2) {
+          if(valhalla::Options_Units_Enum_Name(api.options().units()) == "miles") {
+            // convert from km/h to mph
+            //round number to nearest integer multiple of 5
+            auto speed_limit = static_cast<uint64_t>(directions_leg.speed_limits(s) * 0.621371);
+            speed_limit = (speed_limit + 2) / 5 * 5; // round to nearest 5
+            writer(speed_limit);
+          } else {
+            // keep as km/h
+            writer(static_cast<uint64_t>(directions_leg.speed_limits(s)));
+          }
+          writeSpeedC++;
         }
-        //writer(static_cast<uint64_t>(directions_leg.speed_limits(s)));
+        else if(writeSpeedC == 3) {
+          // write null for the second lane
+          writer(static_cast<uint64_t>(directions_leg.speed_limits(s)));
+          writeSpeedC = 0; // reset counter
+        }
+        else {
+          writer(static_cast<uint64_t>(directions_leg.speed_limits(s)));
+          writeSpeedC++;
+        }
       }
       writer.end_array();
     }    
