@@ -2,6 +2,7 @@
 #include "midgard/logging.h"
 
 #include <algorithm>
+#include <iostream>
 
 using namespace valhalla::baldr;
 

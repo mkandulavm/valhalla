@@ -218,7 +218,6 @@ target_include_directories(valhalla SYSTEM PUBLIC
     $<$<BOOL:${WIN32}>:${VALHALLA_SOURCE_DIR}/third_party/dirent/include>    
   PRIVATE
     ${libvalhalla_include_directories})
-)
 
 
 

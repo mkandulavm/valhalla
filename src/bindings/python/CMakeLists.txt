@@ -58,9 +58,9 @@ install(TARGETS _valhalla
   DESTINATION "${NEVH_Python_SITEARCH}"
   COMPONENT runtime)
 install(TARGETS graph_utils
-  DESTINATION "${Python_SITEARCH}/valhalla/utils"
+  DESTINATION "${NEVH_Python_SITEARCH}/utils"
   COMPONENT runtime)
 install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/valhalla ${CMAKE_CURRENT_BINARY_DIR}/valhalla/utils
-  DESTINATION "${Python_SITEARCH}"
+  DESTINATION "${NEVH_Python_SITEARCH}"
   COMPONENT runtime
   FILES_MATCHING PATTERN "*.py*")
