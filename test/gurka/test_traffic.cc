@@ -1,15 +1,15 @@
+#include "baldr/graphreader.h"
+#include "baldr/traffictile.h"
 #include "gurka.h"
 #include "test.h"
 
-#include "baldr/graphreader.h"
-#include "baldr/traffictile.h"
+#ifndef _WIN32
+#include <sys/mman.h>
+#endif
 
-#include <boost/property_tree/ptree.hpp>
+#include <sys/stat.h>
 
 #include <cmath>
-#include <sstream>
-#include <sys/mman.h>
-#include <sys/stat.h>
 
 using namespace valhalla;
 using LiveTrafficCustomize = test::LiveTrafficCustomize;
@@ -113,7 +113,6 @@ TEST(Traffic, BasicUpdates) {
                "it's noticed the changes in the live traffic file"
             << std::endl;
   {
-
     auto result = gurka::do_action(valhalla::Options::route, map, {"B", "D"}, "auto",
                                    {{"/date_time/type", "0"}}, clean_reader);
     gurka::assert::osrm::expect_steps(result, {"BC", "CE", "DE"});

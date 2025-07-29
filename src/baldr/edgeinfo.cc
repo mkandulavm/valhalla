@@ -1,7 +1,9 @@
 #include "baldr/edgeinfo.h"
 #include "baldr/graphconstants.h"
-
+#include "baldr/rapidjson_utils.h"
 #include "midgard/elevation_encoding.h"
+
+#include <vector>
 
 using namespace valhalla::baldr;
 
@@ -9,27 +11,40 @@ namespace {
 
 // should return true if not equal to TaggedValue::kLinguistic
 bool IsNonLiguisticTagValue(char ch) {
-  static const std::unordered_set<TaggedValue> kNameTags =
-      {TaggedValue::kBridge, TaggedValue::kTunnel,   TaggedValue::kBssInfo, TaggedValue::kLayer,
-       TaggedValue::kLevel,  TaggedValue::kLevelRef, TaggedValue::kLandmark};
-  return kNameTags.count(static_cast<TaggedValue>(static_cast<uint8_t>(ch))) > 0;
+  return static_cast<TaggedValue>(ch) != TaggedValue::kLinguistic;
 }
 
-json::MapPtr bike_network_json(uint8_t mask) {
-  return json::map({
-      {"national", static_cast<bool>(mask & kNcn)},
-      {"regional", static_cast<bool>(mask & kRcn)},
-      {"local", static_cast<bool>(mask & kLcn)},
-      {"mountain", static_cast<bool>(mask & kMcn)},
-  });
+void bike_network_json(uint8_t mask, rapidjson::writer_wrapper_t& writer) {
+  writer("national", static_cast<bool>(mask & kNcn));
+  writer("regional", static_cast<bool>(mask & kRcn));
+  writer("local", static_cast<bool>(mask & kLcn));
+  writer("mountain", static_cast<bool>(mask & kMcn));
 }
 
-json::ArrayPtr names_json(const std::vector<std::string>& names) {
-  auto a = json::array({});
+void names_json(const std::vector<std::string>& names, rapidjson::writer_wrapper_t& writer) {
   for (const auto& n : names) {
-    a->push_back(n);
+    writer(n);
   }
-  return a;
+}
+
+/**
+ * Parse a 7-bit encoded varint.
+ *
+ * @param encoded the encoded c string
+ * @param i       value to store the varint size in
+ *
+ */
+int32_t parse_varint(const char*& encoded) {
+  int32_t byte = 0, shift = 0, result = 0;
+
+  while (byte & 0x80 || shift == 0) {
+    byte = int32_t(*encoded);
+    result |= (byte & 0x7f) << shift;
+    shift += 7;
+    ++encoded;
+  }
+
+  return (result & 1 ? ~result : result) >> 1;
 }
 
 // per tag parser. each returned string includes the leading TaggedValue.
@@ -47,6 +62,14 @@ std::vector<std::string> parse_tagged_value(const char* ptr) {
       size_t landmark_size = landmark_name.size() + 10;
       return {std::string(ptr, landmark_size)};
     }
+    case TaggedValue::kLevels: {
+      auto start = ptr + 1;
+      int size = static_cast<int>(parse_varint(start));
+      return {std::string(ptr, (start + size) - ptr)};
+    }
+    case TaggedValue::kConditionalSpeedLimits: {
+      return {std::string(ptr, 1 + sizeof(ConditionalSpeedLimit))};
+    }
     case TaggedValue::kLinguistic:
     default:
       return {};
@@ -57,6 +80,47 @@ std::vector<std::string> parse_tagged_value(const char* ptr) {
 
 namespace valhalla {
 namespace baldr {
+
+std::pair<std::vector<std::pair<float, float>>, uint32_t> decode_levels(const std::string& encoded) {
+  uint32_t precision = 0;
+  std::vector<std::pair<float, float>> decoded;
+  decoded.reserve(4);
+
+  auto ptr = encoded.data();
+
+  // first varint is the size
+  auto size = parse_varint(ptr);
+  // we keep track of where the string ends
+  auto end = ptr + size;
+  // second varint is the precision
+  if (int32_t prec_power = parse_varint(ptr) > 0)
+    precision = pow(10, prec_power);
+
+  // keep track of whether we're looking at the first or second value
+  // of a contiguous block
+  bool prev = false;
+
+  while (ptr != end) {
+    int32_t val = parse_varint(ptr);
+    if (val == kLevelRangeSeparator) {
+      prev = false;
+      continue;
+    }
+    float f = precision == 0 ? static_cast<float>(val)
+                             : static_cast<float>(val) / static_cast<float>(precision);
+    if (!prev) {
+      // first value
+      // (temporarily) set to the same value to indicate a single number
+      decoded.emplace_back(std::pair<float, float>{f, f});
+      prev = true;
+    } else {
+      // we found a second value
+      decoded.back().second = f;
+    }
+  }
+
+  return {decoded, static_cast<uint32_t>(precision)};
+}
 
 EdgeInfo::EdgeInfo(char* ptr, const char* names_list, const size_t names_list_length)
     : names_list_(names_list), names_list_length_(names_list_length) {
@@ -204,8 +268,9 @@ EdgeInfo::GetNamesAndTypes(bool include_tagged_values) const {
         if (IsNonLiguisticTagValue(tag)) {
           name_type_pairs.push_back({std::string(name + 1), false, static_cast<uint8_t>(tag)});
         }
-      } else
+      } else {
         throw std::runtime_error("GetNamesAndTypes: offset exceeds size of text list");
+      }
     } else if (ni->name_offset_ < names_list_length_) {
       name_type_pairs.push_back({names_list_ + ni->name_offset_, ni->is_route_num_, 0});
     } else {
@@ -391,6 +456,17 @@ std::vector<int8_t> EdgeInfo::encoded_elevation(const uint32_t length, double& i
   return std::vector<int8_t>(encoded_elevation_, encoded_elevation_ + n);
 }
 
+std::vector<ConditionalSpeedLimit> EdgeInfo::conditional_speed_limits() const {
+  std::vector<ConditionalSpeedLimit> limits;
+  const auto cond_limits_range = GetTags().equal_range(TaggedValue::kConditionalSpeedLimits);
+  for (auto it = cond_limits_range.first; it != cond_limits_range.second; ++it) {
+    const ConditionalSpeedLimit* l =
+        reinterpret_cast<const ConditionalSpeedLimit*>(it->second.data());
+    limits.push_back(*l);
+  }
+  return limits;
+}
+
 int8_t EdgeInfo::layer() const {
   const auto& tags = GetTags();
   auto itr = tags.find(TaggedValue::kLayer);
@@ -404,48 +480,125 @@ int8_t EdgeInfo::layer() const {
   return static_cast<int8_t>(value.front());
 }
 
-std::string EdgeInfo::level() const {
+std::pair<std::vector<std::pair<float, float>>, uint32_t> EdgeInfo::levels() const {
   const auto& tags = GetTags();
-  auto itr = tags.find(TaggedValue::kLevel);
+  auto itr = tags.find(TaggedValue::kLevels);
   if (itr == tags.end()) {
-    return "";
+    return {};
   }
-  const std::string& value = itr->second;
-  return value;
+  try {
+    return decode_levels(itr->second);
+  } catch (...) { throw std::runtime_error("failed to decode levels"); };
 }
 
-std::string EdgeInfo::level_ref() const {
+bool EdgeInfo::includes_level(float lvl) const {
   const auto& tags = GetTags();
-  auto itr = tags.find(TaggedValue::kLevelRef);
+  auto itr = tags.find(TaggedValue::kLevels);
   if (itr == tags.end()) {
-    return "";
+    return false;
   }
-  const std::string& value = itr->second;
-  return value;
+  auto decoded = std::get<0>(decode_levels(itr->second));
+  auto lower = std::lower_bound(decoded.cbegin(), decoded.cend(), lvl,
+                                [&](const decltype(decoded)::value_type& val, float lvl) {
+                                  return val.second < lvl;
+                                });
+  return lower != decoded.end() && lower->first <= lvl && lvl <= lower->second;
 }
 
-json::MapPtr EdgeInfo::json() const {
-  json::MapPtr edge_info = json::map({
-      {"way_id", static_cast<uint64_t>(wayid())},
-      {"bike_network", bike_network_json(bike_network())},
-      {"names", names_json(GetNames())},
-      {"shape", midgard::encode(shape())},
-  });
+std::vector<std::string> EdgeInfo::level_ref() const {
+  const auto& tags = GetTags();
+  std::vector<std::string> values;
+  for (auto [itr, range_end] = tags.equal_range(TaggedValue::kLevelRef); itr != range_end; ++itr) {
+    values.emplace_back(itr->second);
+  }
+  return values;
+}
+
+void EdgeInfo::json(rapidjson::writer_wrapper_t& writer) const {
+  writer("way_id", static_cast<uint64_t>(wayid()));
+
+  writer.start_object("bike_network");
+  bike_network_json(bike_network(), writer);
+  writer.end_object();
+
+  writer.start_array("names");
+  names_json(GetNames(), writer);
+  writer.end_array();
+
+  writer("shape", midgard::encode(shape()));
+
   // add the mean_elevation depending on its validity
   const auto elev = mean_elevation();
   if (elev == kNoElevationData) {
-    edge_info->emplace("mean_elevation", nullptr);
+    writer("mean_elevation", nullptr);
   } else {
-    edge_info->emplace("mean_elevation", static_cast<int64_t>(elev));
+    writer("mean_elevation", static_cast<int64_t>(elev));
   }
 
   if (speed_limit() == kUnlimitedSpeedLimit) {
-    edge_info->emplace("speed_limit", std::string("unlimited"));
+    writer("speed_limit", "unlimited");
   } else {
-    edge_info->emplace("speed_limit", static_cast<uint64_t>(speed_limit()));
+    writer("speed_limit", static_cast<uint64_t>(speed_limit()));
   }
 
-  return edge_info;
+  std::vector<std::pair<std::string, uint64_t>> conditional_speed_limits;
+  for (const auto& [tag, value] : GetTags()) {
+    switch (tag) {
+      case TaggedValue::kLayer:
+        break;
+      case TaggedValue::kLinguistic:
+        break;
+      case TaggedValue::kBssInfo:
+        break;
+      case TaggedValue::kLevel:
+        break;
+      case TaggedValue::kLevelRef:
+        break;
+      case TaggedValue::kLandmark:
+        break;
+      case TaggedValue::kLevels: {
+        writer.start_array("levels");
+        std::vector<std::pair<float, float>> decoded;
+        uint32_t precision;
+        std::tie(decoded, precision) = decode_levels(value);
+
+        if (precision)
+          writer.set_precision(precision);
+
+        for (auto& range : decoded) {
+          if (range.first == range.second) {
+            // single number
+            writer(range.first);
+          } else {
+            // range
+            writer.start_array();
+            writer(range.first);
+            writer(range.second);
+            writer.end_array();
+          }
+        }
+        writer.end_array();
+        break;
+      }
+      case TaggedValue::kConditionalSpeedLimits: {
+        const ConditionalSpeedLimit* l = reinterpret_cast<const ConditionalSpeedLimit*>(value.data());
+        conditional_speed_limits.push_back({l->td_.to_string(), l->speed_});
+        break;
+      }
+      case TaggedValue::kTunnel:
+        break;
+      case TaggedValue::kBridge:
+        break;
+    }
+  }
+
+  if (!conditional_speed_limits.empty()) {
+    writer.start_object("conditional_speed_limits");
+    for (auto& [condition, speed] : conditional_speed_limits) {
+      writer(condition, speed);
+    }
+    writer.end_object();
+  }
 }
 
 } // namespace baldr

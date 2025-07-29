@@ -1,11 +1,6 @@
 #ifndef VALHALLA_SIF_COSTFACTORY_H_
 #define VALHALLA_SIF_COSTFACTORY_H_
 
-#include <functional>
-#include <map>
-#include <memory>
-
-#include <valhalla/baldr/rapidjson_utils.h>
 #include <valhalla/proto/options.pb.h>
 #include <valhalla/proto_conversions.h>
 #include <valhalla/sif/autocost.h>
@@ -17,6 +12,9 @@
 #include <valhalla/sif/pedestriancost.h>
 #include <valhalla/sif/transitcost.h>
 #include <valhalla/sif/truckcost.h>
+
+#include <functional>
+#include <map>
 
 namespace valhalla {
 namespace sif {
@@ -54,9 +52,9 @@ public:
    * @param costing    the cost type that the function creates
    * @param function   the function pointer to call to actually create the cost object
    */
-  void Register(const Costing::Type costing, factory_function_t function) {
+  void Register(const Costing::Type costing, factory_function_t&& function) {
     factory_funcs_.erase(costing);
-    factory_funcs_.emplace(costing, function);
+    factory_funcs_.emplace(costing, std::move(function));
   }
 
   /**

@@ -143,8 +143,10 @@ message DirectionsLeg {
   Summary summary = 5;
   repeated Maneuver maneuver = 6;
   string shape = 7;  
-  repeated uint32 speed_limits= 8;      //nevh
-  repeated uint32 speed_cameras = 9;       //nevh    
+  repeated LevelChange level_changes = 8;
+  repeated uint32 speed_limits= 9;      //nevh
+  repeated uint32 speed_cameras = 10;       //nevh    
+  
 }
 
 message DirectionsRoute {

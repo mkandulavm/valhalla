@@ -8,9 +8,14 @@ src_dir="/src/valhalla"
 
 git config --global --add safe.directory /src/valhalla
 
+for s in $(ls /src/valhalla/third_party); do
+    git config --global --add safe.directory /src/valhalla/third_party/$s
+done
+
 git -C "${src_dir}" checkout master
 git -C "${src_dir}" pull
-git submodule update --init --recursive
+git -C "${src_dir}" submodule update --init --recursive
+version_modifier=$(git -C "${src_dir}" rev-parse --short HEAD)
 
 # remove the build folder first
 rm -r "${src_dir}"/build
@@ -23,7 +28,8 @@ if [[ $server == "builder" ]]; then
         -DENABLE_PYTHON_BINDINGS=OFF \
         -DENABLE_TESTS=OFF \
         -DENABLE_SINGLE_FILES_WERROR=OFF \
-        -DENABLE_GDAL=OFF
+        -DENABLE_GDAL=OFF \
+        -DVALHALLA_VERSION_MODIFIER=$version_modifier
 
     sudo make -C "${src_dir}/build" -j$(nproc) install
     # config is updated by the build script on the server
@@ -34,7 +40,8 @@ else
     -DENABLE_HTTP=ON \
     -DENABLE_PYTHON_BINDINGS=OFF \
     -DENABLE_TESTS=OFF \
-    -DENABLE_SINGLE_FILES_WERROR=OFF
+    -DENABLE_SINGLE_FILES_WERROR=OFF \
+    -DVALHALLA_VERSION_MODIFIER=$version_modifier
 
     sudo make -C "${src_dir}/build" -j$(nproc) install
     # Update the configs
