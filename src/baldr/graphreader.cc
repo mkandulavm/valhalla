@@ -143,7 +143,7 @@ GraphReader::tile_extract_t::tile_extract_t(const boost::property_tree::ptree& p
       }
       else {
         std::cout << te << " file does not exist" << std::endl;
-        throw std::runtime_error(te + " file does not exist");
+        //throw std::runtime_error(te + " file does not exist");
       }
 
       //auto zipArchive = std::make_unique<zip_t>(te);
