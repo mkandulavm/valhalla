@@ -25,6 +25,9 @@ add_library(valhalla_test
   ${VALHALLA_SOURCE_DIR}/third_party/microtar/src/microtar.h
   ${VALHALLA_SOURCE_DIR}/third_party/microtar/src/microtar.c
   )
+target_include_directories(valhalla_test PUBLIC
+  ${VALHALLA_SOURCE_DIR}/test
+  ${VALHALLA_SOURCE_DIR}/test/gurka)
 target_include_directories(valhalla_test SYSTEM PUBLIC
   ${unordered_dense_include_dir}
   ${VALHALLA_SOURCE_DIR}/third_party/just_gtfs/include
