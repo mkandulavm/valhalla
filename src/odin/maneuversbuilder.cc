@@ -1260,19 +1260,22 @@ std::vector<uint32_t> ManeuversBuilder::GetSpeedLimits(std::list<Maneuver> &mane
                 uint32_t end_shape_index = node.mutable_edge()->end_shape_index();
                 uint32_t speed_limit = trip_edge.speed_limit();
                 uint32_t lane_count = trip_edge.lane_count();
+                uint32_t way_id = trip_edge.way_id();
                 
                 if (!speed_limits.empty() &&                    
                     speed_limits[speed_limits.size() - 1] == lane_count &&
                     speed_limits[speed_limits.size() - 2] == speed_limit &&
-                    speed_limits[speed_limits.size() - 3] == begin_shape_index
+                    speed_limits[speed_limits.size() - 3] == way_id &&
+                    speed_limits[speed_limits.size() - 4] == begin_shape_index
                     ) {
                     // Adjust the end shape index of the previous segment
-                    speed_limits[speed_limits.size() - 3] = end_shape_index;
+                    speed_limits[speed_limits.size() - 4] = end_shape_index;
                 } else {
                     // Add new segment
                     speed_limits.push_back(begin_shape_index);
                     speed_limits.push_back(end_shape_index);
-                    speed_limits.push_back(speed_limit);
+                    speed_limits.push_back(way_id);
+                    speed_limits.push_back(speed_limit);                    
                     speed_limits.push_back(lane_count);
                 }
                 
