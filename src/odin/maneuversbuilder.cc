@@ -1252,7 +1252,7 @@ std::vector<uint32_t> ManeuversBuilder::GetSpeedLimits(std::list<Maneuver> &mane
 
         while(a != b) {
             auto node = trip_path_->node(a);
-
+            
             if (node.has_edge()) {
                 const auto& trip_edge = node.edge();
 
@@ -1261,21 +1261,47 @@ std::vector<uint32_t> ManeuversBuilder::GetSpeedLimits(std::list<Maneuver> &mane
                 uint32_t speed_limit = trip_edge.speed_limit();
                 uint32_t lane_count = trip_edge.lane_count();
                 uint32_t way_id = trip_edge.way_id();
+
                 
+                auto edgeSpeed = trip_edge.speed();
+
+                // auto t1 = trip_path_->GetEnhancedNode(a)->elapsed_time();
+                // auto t2 = trip_path_->GetEnhancedNode(a+1)->elapsed_time();
+                // double travel_time = t2 - t1; //in seconds
+                // double travel_distance_in_km = trip_edge.length_km();
+                // //calculate travel speed in km/h
+                // double travel_speed = 0;
+                // if (travel_time > 0) {
+                //     travel_speed = (travel_distance_in_km * 3600) / travel_time;                    
+                // } else {
+                //     travel_speed = 0;
+                // }
+                // std::cout << "edge: " << begin_shape_index << " - " << end_shape_index 
+                //           << " way_id: " << way_id 
+                //           //<< " travel_time: " << travel_time
+                //           // << " travel_distance_in_km: " << travel_distance_in_km
+                //           // << " speed_limit: " << speed_limit 
+                //           // << " travel_speed: " << travel_speed 
+                //           << " edgeSpeed: " << edgeSpeed
+                //           << " lane_count: " << lane_count 
+                //           << std::endl;
+
                 if (!speed_limits.empty() &&                    
                     speed_limits[speed_limits.size() - 1] == lane_count &&
-                    speed_limits[speed_limits.size() - 2] == speed_limit &&
-                    speed_limits[speed_limits.size() - 3] == way_id &&
-                    speed_limits[speed_limits.size() - 4] == begin_shape_index
+                    speed_limits[speed_limits.size() - 2] == ((uint32_t)edgeSpeed) &&
+                    speed_limits[speed_limits.size() - 3] == speed_limit &&
+                    speed_limits[speed_limits.size() - 4] == way_id &&
+                    speed_limits[speed_limits.size() - 5] == begin_shape_index
                     ) {
                     // Adjust the end shape index of the previous segment
-                    speed_limits[speed_limits.size() - 4] = end_shape_index;
+                    speed_limits[speed_limits.size() - 5] = end_shape_index;
                 } else {
                     // Add new segment
                     speed_limits.push_back(begin_shape_index);
                     speed_limits.push_back(end_shape_index);
                     speed_limits.push_back(way_id);
-                    speed_limits.push_back(speed_limit);                    
+                    speed_limits.push_back(speed_limit);
+                    speed_limits.push_back(((uint32_t)edgeSpeed));                    
                     speed_limits.push_back(lane_count);
                 }
                 
