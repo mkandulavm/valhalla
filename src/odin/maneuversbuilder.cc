@@ -1261,9 +1261,9 @@ std::vector<uint32_t> ManeuversBuilder::GetSpeedLimits(std::list<Maneuver> &mane
                 uint32_t speed_limit = trip_edge.speed_limit();
                 uint32_t lane_count = trip_edge.lane_count();
                 uint32_t way_id = trip_edge.way_id();
+                uint32_t default_speed = (uint32_t)trip_edge.default_speed();
 
-                
-                auto edgeSpeed = trip_edge.speed();
+                uint32_t edgeSpeed = (uint32_t)trip_edge.speed();
 
                 // auto t1 = trip_path_->GetEnhancedNode(a)->elapsed_time();
                 // auto t2 = trip_path_->GetEnhancedNode(a+1)->elapsed_time();
@@ -1276,19 +1276,22 @@ std::vector<uint32_t> ManeuversBuilder::GetSpeedLimits(std::list<Maneuver> &mane
                 // } else {
                 //     travel_speed = 0;
                 // }
-                // std::cout << "edge: " << begin_shape_index << " - " << end_shape_index 
-                //           << " way_id: " << way_id 
-                //           //<< " travel_time: " << travel_time
-                //           // << " travel_distance_in_km: " << travel_distance_in_km
-                //           // << " speed_limit: " << speed_limit 
-                //           // << " travel_speed: " << travel_speed 
-                //           << " edgeSpeed: " << edgeSpeed
-                //           << " lane_count: " << lane_count 
-                //           << std::endl;
+                std::cout << "edge: " << begin_shape_index << " - " << end_shape_index 
+                          << " way_id: " << way_id 
+                          //<< " travel_time: " << travel_time
+                          // << " travel_distance_in_km: " << travel_distance_in_km
+                          << " speed_limit: " << speed_limit 
+                          // << " travel_speed: " << travel_speed 
+                          << " edgeSpeed: " << edgeSpeed
+                          << " default_speed: " << default_speed
+                          << " lane_count: " << lane_count 
+                          << std::endl;
 
+                //pack edgespeed and default_speed into one uint32_t
+                uint32_t u32edgeSpeed = (edgeSpeed & 0xFFFF) | ((default_speed & 0xFFFF) << 16);
                 if (!speed_limits.empty() &&                    
                     speed_limits[speed_limits.size() - 1] == lane_count &&
-                    speed_limits[speed_limits.size() - 2] == ((uint32_t)edgeSpeed) &&
+                    speed_limits[speed_limits.size() - 2] == u32edgeSpeed &&
                     speed_limits[speed_limits.size() - 3] == speed_limit &&
                     speed_limits[speed_limits.size() - 4] == way_id &&
                     speed_limits[speed_limits.size() - 5] == begin_shape_index
@@ -1301,7 +1304,7 @@ std::vector<uint32_t> ManeuversBuilder::GetSpeedLimits(std::list<Maneuver> &mane
                     speed_limits.push_back(end_shape_index);
                     speed_limits.push_back(way_id);
                     speed_limits.push_back(speed_limit);
-                    speed_limits.push_back(((uint32_t)edgeSpeed));                    
+                    speed_limits.push_back(u32edgeSpeed);
                     speed_limits.push_back(lane_count);
                 }
                 
