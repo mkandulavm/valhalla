@@ -688,8 +688,14 @@ graph_tile_ptr GraphReader::GetGraphTile(const GraphId& graphid) {
     auto sz = unzippedData.size();
     auto memory = std::make_unique<ZipGraphMemory>(unzippedData);
 
+    auto traffic_ptr = tile_extract_->traffic_tiles.find(base);
+    auto traffic_memory = traffic_ptr != tile_extract_->traffic_tiles.end()
+                              ? std::make_unique<TarballGraphMemory>(tile_extract_->traffic_archive,
+                                                                     traffic_ptr->second)
+                              : nullptr;
+
     // This initializes the tile from mmap
-    auto tile = GraphTile::Create(base, std::move(memory), nullptr);
+    auto tile = GraphTile::Create(base, std::move(memory), std::move(traffic_memory));
     if (!tile) {
       LOG_ERROR("Couldn't load graph tile from zip " + GraphTile::FileSuffix(base));
       return nullptr;
@@ -702,8 +708,10 @@ graph_tile_ptr GraphReader::GetGraphTile(const GraphId& graphid) {
     //       //std::cout << "speed camera found in tile " << GraphTile::FileSuffix(base) << " at edge " << i << " osmid = " << einfo.wayid() << std::endl;
     //     }
     //   }
-    // Keep a copy in the cache and return it    
-    return cache_->Put(base, std::move(tile), sz);   
+     // Keep a copy in the cache and return it
+    const size_t size = AVERAGE_MM_TILE_SIZE; // tile.end_offset();  // TODO what size??
+    // Keep a copy in the cache and return it
+    return cache_->Put(base, std::move(tile), size);
   }
   else {
     //nevh

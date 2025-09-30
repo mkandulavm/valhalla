@@ -408,6 +408,9 @@ message Summary {
   bool has_toll = 5;
   bool has_ferry = 6;
   bool has_highway = 7;
+  //nevh
+  string nevhversion=8;
+  //nevh
 }
 
 message LevelChange {

@@ -460,6 +460,10 @@ void DirectionsBuilder::PopulateDirectionsLeg(const Options& options,
   trip_directions.mutable_summary()->set_has_toll(etp->summary().has_toll());
   trip_directions.mutable_summary()->set_has_highway(etp->summary().has_highway());
   trip_directions.mutable_summary()->set_has_ferry(etp->summary().has_ferry());
+
+  //nevh
+  trip_directions.mutable_summary()->set_nevhversion("1");
+  //nevh
 }
 
 } // namespace odin

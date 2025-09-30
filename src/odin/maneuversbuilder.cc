@@ -1264,28 +1264,17 @@ std::vector<uint32_t> ManeuversBuilder::GetSpeedLimits(std::list<Maneuver> &mane
                 uint32_t default_speed = (uint32_t)trip_edge.default_speed();
 
                 uint32_t edgeSpeed = (uint32_t)trip_edge.speed();
-
-                // auto t1 = trip_path_->GetEnhancedNode(a)->elapsed_time();
-                // auto t2 = trip_path_->GetEnhancedNode(a+1)->elapsed_time();
-                // double travel_time = t2 - t1; //in seconds
-                // double travel_distance_in_km = trip_edge.length_km();
-                // //calculate travel speed in km/h
-                // double travel_speed = 0;
-                // if (travel_time > 0) {
-                //     travel_speed = (travel_distance_in_km * 3600) / travel_time;                    
-                // } else {
-                //     travel_speed = 0;
-                // }
-                std::cout << "edge: " << begin_shape_index << " - " << end_shape_index 
-                          << " way_id: " << way_id 
-                          //<< " travel_time: " << travel_time
-                          // << " travel_distance_in_km: " << travel_distance_in_km
-                          << " speed_limit: " << speed_limit 
-                          // << " travel_speed: " << travel_speed 
-                          << " edgeSpeed: " << edgeSpeed
-                          << " default_speed: " << default_speed
-                          << " lane_count: " << lane_count 
-                          << std::endl;
+                
+                // std::cout << "edge: " << begin_shape_index << " - " << end_shape_index 
+                //           << " way_id: " << way_id 
+                //           //<< " travel_time: " << travel_time
+                //           // << " travel_distance_in_km: " << travel_distance_in_km
+                //           << " speed_limit: " << speed_limit 
+                //           // << " travel_speed: " << travel_speed 
+                //           << " edgeSpeed: " << edgeSpeed
+                //           << " default_speed: " << default_speed
+                //           << " lane_count: " << lane_count 
+                //           << std::endl;
 
                 //pack edgespeed and default_speed into one uint32_t
                 uint32_t u32edgeSpeed = (edgeSpeed & 0xFFFF) | ((default_speed & 0xFFFF) << 16);
