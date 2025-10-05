@@ -15,6 +15,22 @@ function(set_output_python rel_path)
   configure_file(${CMAKE_CURRENT_SOURCE_DIR}/${rel_path} ${CMAKE_CURRENT_BINARY_DIR}/${rel_path} COPYONLY)
 endfunction()
 
+# Generate Python protobuf files
+find_package(Protobuf REQUIRED)
+set(PROTO_DIR ${VALHALLA_SOURCE_DIR}/proto)
+set(PYTHON_PROTO_OUT_DIR ${CMAKE_CURRENT_BINARY_DIR}/valhalla)
+
+# Generate Python protobuf files for incidents
+add_custom_command(
+  OUTPUT ${PYTHON_PROTO_OUT_DIR}/incidents_pb2.py
+  COMMAND ${Protobuf_PROTOC_EXECUTABLE}
+  ARGS --proto_path=${PROTO_DIR}
+       --python_out=${PYTHON_PROTO_OUT_DIR}
+       ${PROTO_DIR}/incidents.proto
+  DEPENDS ${PROTO_DIR}/incidents.proto
+  COMMENT "Generating Python protobuf for incidents"
+)
+
 # add and install module(s)
 pybind11_add_module(_valhalla ${CMAKE_CURRENT_SOURCE_DIR}/src/_valhalla.cc)
 target_link_libraries(_valhalla PRIVATE valhalla)
@@ -54,12 +70,19 @@ foreach (py_src ${py_srcs})
 endforeach()
 configure_file(${VALHALLA_SOURCE_DIR}/scripts/valhalla_build_config ${CMAKE_CURRENT_BINARY_DIR}/valhalla/valhalla_build_config.py COPYONLY)
 
+# Add the generated protobuf file as a dependency
+add_custom_target(generate_incidents_pb2 ALL DEPENDS ${PYTHON_PROTO_OUT_DIR}/incidents_pb2.py)
+
 install(TARGETS _valhalla
   DESTINATION "${NEVH_Python_SITEARCH}"
   COMPONENT runtime)
 install(TARGETS graph_utils
   DESTINATION "${NEVH_Python_SITEARCH}/utils"
   COMPONENT runtime)
+install(FILES ${PYTHON_PROTO_OUT_DIR}/incidents_pb2.py
+  DESTINATION "${NEVH_Python_SITEARCH}/valhalla"
+  COMPONENT runtime)
+
 install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/valhalla ${CMAKE_CURRENT_BINARY_DIR}/valhalla/utils
   DESTINATION "${NEVH_Python_SITEARCH}"
   COMPONENT runtime
