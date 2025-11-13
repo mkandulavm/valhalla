@@ -408,6 +408,10 @@ public:
   const std::vector<RouteLandmark>& landmarks() const;
   void set_landmarks(const std::vector<RouteLandmark>& landmarks);
   std::string turnLanes;
+
+  bool has_level_changes() const;
+  void set_has_level_changes(const bool has_level_changes);
+
 #ifdef LOGGING_LEVEL_TRACE
   std::string ToString() const;
 

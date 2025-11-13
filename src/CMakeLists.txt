@@ -49,7 +49,7 @@ function(valhalla_module)
   endif()
   add_library(valhalla::${MODULE_NAME} ALIAS ${library})
   set_target_properties(${library} PROPERTIES FOLDER "Modules")
-  set_target_properties(${library} PROPERTIES CXX_STANDARD 17)
+  
   # Generate source groups so the files are properly sorted in IDEs like Xcode.
   create_source_groups("Header Files" ${MODULE_HEADERS})
   create_source_groups("Source Files" ${MODULE_SOURCES})
