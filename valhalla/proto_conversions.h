@@ -1,8 +1,11 @@
 #pragma once
 #include <valhalla/midgard/pointll.h>
-#include <valhalla/proto/api.pb.h>
+#include <valhalla/proto/directions.pb.h>
+#include <valhalla/proto/expansion.pb.h>
 #include <valhalla/proto/incidents.pb.h>
 #include <valhalla/proto/matrix.pb.h>
+#include <valhalla/proto/options.pb.h>
+#include <valhalla/proto/trip.pb.h>
 #include <valhalla/sif/costconstants.h>
 
 namespace valhalla {
@@ -525,7 +528,7 @@ const std::string& MatrixAlgoToString(const valhalla::Matrix::Algorithm algo);
 // Get the string representing the incident-type
 std::string incidentTypeToString(const valhalla::IncidentsTile::Metadata::Type& incident_type);
 // Get the string representing the incident-Impact
-const char* incidentImpactToString(const valhalla::IncidentsTile::Metadata::Impact& impact);
+std::string_view incidentImpactToString(const valhalla::IncidentsTile::Metadata::Impact& impact);
 // Get the string representing the guidance view type
 const std::string& GuidanceViewTypeToString(const valhalla::DirectionsLeg_GuidanceView_Type type);
 

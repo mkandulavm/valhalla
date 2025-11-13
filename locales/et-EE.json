@@ -45,8 +45,8 @@
         "läbipääs",
         "rattatee",
         "rada mägiratastele",
-        "ülekäigurajal",
-        "trepid",
+        "ülekäigurada",
+        "trepp",
         "sild",
         "tunnel"
       ],
@@ -89,7 +89,7 @@
         "rattatee",
         "rada mägiratastele",
         "ülekäigurajal",
-        "trepid",
+        "trepp",
         "sild",
         "tunnel"
       ],
@@ -150,7 +150,7 @@
         "rattatee",
         "rada mägiratastele",
         "ülekäigurajal",
-        "trepid",
+        "trepp",
         "sild",
         "tunnel"
       ],
@@ -185,7 +185,7 @@
         "rattatee",
         "rada mägiratastele",
         "ülekäigurajal",
-        "trepid",
+        "trepp",
         "sild",
         "tunnel"
       ],
@@ -242,7 +242,7 @@
         "rattatee",
         "rada mägiratastele",
         "ülekäigurajal",
-        "trepid",
+        "trepp",
         "sild",
         "tunnel"
       ],
@@ -382,7 +382,7 @@
         "rattatee",
         "rada mägiratastele",
         "ülekäigurajal",
-        "trepid",
+        "trepp",
         "sild",
         "tunnel"
       ],
@@ -414,7 +414,7 @@
         "rattatee",
         "rada mägiratastele",
         "ülekäigurajal",
-        "trepid",
+        "trepp",
         "sild",
         "tunnel"
       ],
@@ -470,7 +470,7 @@
         "rattatee",
         "rada mägiratastele",
         "ülekäigurajal",
-        "trepid",
+        "trepp",
         "sild",
         "tunnel"
       ],
@@ -570,7 +570,7 @@
         "rattatee",
         "rada mägiratastele",
         "ülekäigurajal",
-        "trepid",
+        "trepp",
         "sild",
         "tunnel"
       ],
@@ -753,7 +753,7 @@
         "rattatee",
         "rada mägiratastele",
         "ülekäigurajal",
-        "trepid",
+        "trepp",
         "sild",
         "tunnel"
       ],
@@ -784,7 +784,7 @@
         "rattatee",
         "rada mägiratastele",
         "ülekäigurajal",
-        "trepid",
+        "trepp",
         "sild",
         "tunnel"
       ],
@@ -936,7 +936,7 @@
         "rattatee",
         "rada mägiratastele",
         "ülekäigurajal",
-        "trepid",
+        "trepp",
         "sild",
         "tunnel"
       ],
@@ -986,7 +986,7 @@
         "rattatee",
         "rada mägiratastele",
         "ülekäigurajal",
-        "trepid",
+        "trepp",
         "sild",
         "tunnel"
       ],
@@ -1024,7 +1024,7 @@
         "rattatee",
         "rada mägiratastele",
         "ülekäigurajal",
-        "trepid",
+        "trepp",
         "sild",
         "tunnel"
       ],
@@ -1066,7 +1066,7 @@
         "rattatee",
         "rada mägiratastele",
         "ülekäigurajal",
-        "trepid",
+        "trepp",
         "sild",
         "tunnel"
       ],
@@ -1122,7 +1122,7 @@
         "rattatee",
         "rada mägiratastele",
         "ülekäigurajal",
-        "trepid",
+        "trepp",
         "sild",
         "tunnel"
       ],
@@ -1165,7 +1165,7 @@
         "rattatee",
         "rada mägiratastele",
         "ülekäigurajal",
-        "trepid",
+        "trepp",
         "sild",
         "tunnel"
       ],
@@ -1215,7 +1215,7 @@
         "rattatee",
         "rada mägiratastele",
         "ülekäigurajal",
-        "trepid",
+        "trepp",
         "sild",
         "tunnel"
       ],
@@ -1454,7 +1454,7 @@
         "rattatee",
         "rada mägiratastele",
         "ülekäigurajal",
-        "trepid",
+        "trepp",
         "sild",
         "tunnel"
       ],
@@ -1497,7 +1497,7 @@
         "rattatee",
         "rada mägiratastele",
         "ülekäigurajal",
-        "trepid",
+        "trepp",
         "sild",
         "tunnel"
       ],
@@ -1556,7 +1556,7 @@
         "rattatee",
         "rada mägiratastele",
         "ülekäigurajal",
-        "trepid",
+        "trepp",
         "sild",
         "tunnel"
       ],
@@ -1647,7 +1647,7 @@
         "rattatee",
         "rada mägiratastele",
         "ülekäigurajal",
-        "trepid",
+        "trepp",
         "sild",
         "tunnel"
       ],
@@ -2025,7 +2025,7 @@
         "rattatee",
         "rada mägiratastele",
         "ülekäigurajal",
-        "trepid",
+        "trepp",
         "sild",
         "tunnel"
       ],
@@ -2068,7 +2068,7 @@
         "rattatee",
         "rada mägiratastele",
         "ülekäigurajal",
-        "trepid",
+        "trepp",
         "sild",
         "tunnel"
       ],
@@ -2113,7 +2113,7 @@
         "rattatee",
         "rada mägiratastele",
         "ülekäigurajal",
-        "trepid",
+        "trepp",
         "sild",
         "tunnel"
       ],
@@ -2164,7 +2164,7 @@
         "rattatee",
         "rada mägiratastele",
         "ülekäigurajal",
-        "trepid",
+        "trepp",
         "sild",
         "tunnel"
       ],
@@ -2253,18 +2253,18 @@
     },
     "pass": {
       "phrases": {
-          "0": "Möödu <OBJECT_LABEL>.",
-          "1": "Möödu liiklusmärkidest <OBJECT_LABEL> juures."
+        "0": "Möödu siit: <OBJECT_LABEL>.",
+        "1": "Möödu valgusfooridest <OBJECT_LABEL> teel."
       },
       "object_labels": [
-          "väravast",
-          "piirdepostidest",
-          "teede ristmikust"
+        "värav",
+        "piirdetulbad",
+        "teede ristmik"
       ],
       "example_phrases": {
-          "0": [
-              "Möödu väravast."
-          ]
+        "0": [
+          "Möödu väravast."
+        ]
       }
     },
     "elevator": {
@@ -2306,6 +2306,16 @@
         ],
         "1": [
           "Take the escalator to Level 3."
+        ]
+      }
+    },
+    "level_change": {
+      "phrases": {
+        "0": "Continue to <LEVEL>."
+      },
+      "example_phrases": {
+        "0": [
+          "Continue to Level 2."
         ]
       }
     },

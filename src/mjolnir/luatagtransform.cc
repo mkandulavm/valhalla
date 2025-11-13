@@ -7,6 +7,12 @@
 
 #include <stdexcept>
 
+extern "C" {
+#include <lauxlib.h>
+#include <lua.h>
+#include <lualib.h>
+}
+
 using namespace valhalla::mjolnir;
 
 namespace {
@@ -89,7 +95,7 @@ Tags LuaTagTransform::Transform(OSMType type, uint64_t osmid, const osmium::TagL
       // it's possible to give.
       throw std::runtime_error((boost::format("Failed to execute lua function "
                                               "for basic tag processing in %1% %2%: %3%") %
-                                to_string(type) % osmid % lua_error_message)
+                                ::to_string(type) % osmid % lua_error_message)
                                    .str());
     }
 

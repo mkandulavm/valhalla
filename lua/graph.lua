@@ -32,7 +32,8 @@ highway = {
 ["busway"] =            {["auto_forward"] = "false", ["truck_forward"] = "false", ["bus_forward"] = "true",  ["taxi_forward"] = "false", ["moped_forward"] = "false", ["motorcycle_forward"] = "false", ["pedestrian_forward"] = "false", ["bike_forward"] = "false"},
 ["corridor"] =          {["auto_forward"] = "false", ["truck_forward"] = "false", ["bus_forward"] = "false", ["taxi_forward"] = "false", ["moped_forward"] = "false", ["motorcycle_forward"] = "false", ["pedestrian_forward"] = "true",  ["bike_forward"] = "false"},
 ["elevator"] =          {["auto_forward"] = "false", ["truck_forward"] = "false", ["bus_forward"] = "false", ["taxi_forward"] = "false", ["moped_forward"] = "false", ["motorcycle_forward"] = "false", ["pedestrian_forward"] = "true",  ["bike_forward"] = "false"},
-["platform"] =          {["auto_forward"] = "false", ["truck_forward"] = "false", ["bus_forward"] = "false", ["taxi_forward"] = "false", ["moped_forward"] = "false", ["motorcycle_forward"] = "false", ["pedestrian_forward"] = "true",  ["bike_forward"] = "false"}
+["platform"] =          {["auto_forward"] = "false", ["truck_forward"] = "false", ["bus_forward"] = "false", ["taxi_forward"] = "false", ["moped_forward"] = "false", ["motorcycle_forward"] = "false", ["pedestrian_forward"] = "true",  ["bike_forward"] = "false"},
+["via_ferrata"] =       {["auto_forward"] = "false", ["truck_forward"] = "false", ["bus_forward"] = "false", ["taxi_forward"] = "false", ["moped_forward"] = "false", ["motorcycle_forward"] = "false", ["pedestrian_forward"] = "true",  ["bike_forward"] = "false"}
 }
 
 road_class = {
@@ -272,12 +273,15 @@ truck = {
 ["discouraged"] = "false",
 ["permissive"] = "true",
 ["unsuitable"] = "false",
-["agricultural;forestry"] = "false",
 ["official"] = "true",
 ["forestry"] = "false",
-["destination;delivery"] = "true",
 ["permit"] = "true",
 ["residents"] = "true"
+}
+
+truck_hgv = {
+  ["designated"] = "true",
+  ["local"] = "true",
 }
 
 hazmat = {
@@ -590,10 +594,8 @@ truck_node = {
 ["discouraged"] = 0,
 ["permissive"] = 8,
 ["unsuitable"] = 0,
-["agricultural;forestry"] = 0,
 ["official"] = 8,
 ["forestry"] = 0,
-["destination;delivery"] = 8,
 ["permit"] = 8,
 ["residents"] = 8
 }
@@ -689,6 +691,43 @@ function restriction_suffix(restriction_str)
   return restriction_str:sub(index, string.len(restriction_str))
 end
 
+-- if key is a list separated by ";" then check all key parts in table
+-- return "true" if value is "true" for any key, "false" if for any key value is "false" else return nil
+function any_in(table, key)
+  if key == nil then
+    return nil
+  end
+  local val = table[key]
+  if val ~= nil then
+    return val
+  end
+  for key_part in key:gmatch"([^;]+)" do
+    val = table[key_part] or val
+    if val == "true" then
+      break
+    end
+  end
+  return val
+end
+
+-- if key is a list separated by ";" then check all key parts in table
+-- return value if value is > 0 for any key, 0 if for any key value is 0 else return nil
+function any_in_num(table, key)
+  if key == nil then
+    return nil
+  end
+  local val = table[key]
+  if val ~= nil then
+    return val
+  end
+  for key_part in key:gmatch"([^;]+)" do
+    val = table[key_part] or val
+    if (val or 0) > 0 then
+      break
+    end
+  end
+  return val
+end
 
 --convert the numeric (non negative) number portion at the beginning of the string
 function numeric_prefix(num_str, allow_decimals)
@@ -893,7 +932,7 @@ function filter_tags_generic(kv)
   end
   local ferry = kv["route"] == "ferry"
   local rail = kv["route"] == "shuttle_train"
-  local access = access[kv["access"]]
+  local access = any_in(access, kv["access"])
 
   kv["emergency_forward"] = "false"
   kv["emergency_backward"] = "false"
@@ -910,11 +949,13 @@ function filter_tags_generic(kv)
     end
   end
 
+  local motor_vehicle_access = any_in(motor_vehicle, kv["motor_vehicle"])
   if forward then
     for k,v in pairs(forward) do
       kv[k] = v
     end
 
+    -- expects access=private not to be combined with other values
     if kv["impassable"] == "yes" or access == "false" or (kv["access"] == "private" and (kv["emergency"] == "yes" or kv["service"] == "emergency_access")) then
 
       kv["auto_forward"] = "false"
@@ -953,36 +994,48 @@ function filter_tags_generic(kv)
     end
 
     --check for auto_forward overrides
-    kv["auto_forward"] = motor_vehicle[kv["motorcar"]] or motor_vehicle[kv["motor_vehicle"]] or kv["auto_forward"]
-    kv["auto_tag"] = motor_vehicle[kv["motorcar"]] or motor_vehicle[kv["motor_vehicle"]] or nil
+    kv["auto_tag"] = any_in(motor_vehicle, kv["motorcar"]) or motor_vehicle_access
+    kv["auto_forward"] = kv["auto_tag"] or kv["auto_forward"]
 
     --check for truck_forward override
-    kv["truck_forward"] = truck[kv["hgv"]] or motor_vehicle[kv["motor_vehicle"]] or kv["truck_forward"]
-    kv["truck_tag"] = truck[kv["hgv"]] or motor_vehicle[kv["motor_vehicle"]] or nil
+    kv["truck_tag"] = any_in(truck, kv["hgv"]) or motor_vehicle_access
+    kv["truck_forward"] = kv["truck_tag"] or kv["truck_forward"]
 
     --check for bus_forward overrides
-    kv["bus_forward"] = bus[kv["bus"]] or psv[kv["psv"]] or psv[kv["lanes:psv:forward"]] or motor_vehicle[kv["motor_vehicle"]] or kv["bus_forward"]
-    kv["bus_tag"] = bus[kv["bus"]] or psv[kv["psv"]] or psv[kv["lanes:psv:forward"]] or motor_vehicle[kv["motor_vehicle"]] or nil
+    kv["bus_tag"] = any_in(bus, kv["bus"]) or
+                    any_in(psv, kv["psv"]) or
+                    psv[kv["lanes:psv:forward"]] or
+                    motor_vehicle_access
+    kv["bus_forward"] = kv["bus_tag"] or kv["bus_forward"]
 
     --check for taxi_forward overrides
-    kv["taxi_forward"] = taxi[kv["taxi"]] or psv[kv["psv"]] or psv[kv["lanes:psv:forward"]] or motor_vehicle[kv["motor_vehicle"]] or kv["taxi_forward"]
-    kv["taxi_tag"] = taxi[kv["taxi"]] or psv[kv["psv"]] or psv[kv["lanes:psv:forward"]] or motor_vehicle[kv["motor_vehicle"]] or nil
+    kv["taxi_tag"] = any_in(taxi, kv["taxi"]) or
+                     any_in(psv, kv["psv"]) or
+                     psv[kv["lanes:psv:forward"]] or
+                     motor_vehicle_access
+    kv["taxi_forward"] = kv["taxi_tag"] or kv["taxi_forward"]
 
     --check for ped overrides
-    kv["pedestrian_forward"] = foot[kv["foot"]] or foot[kv["pedestrian"]] or kv["pedestrian_forward"]
-    kv["foot_tag"] = foot[kv["foot"]] or foot[kv["pedestrian"]] or nil
+    kv["foot_tag"] = any_in(foot, kv["foot"]) or
+                     foot[kv["pedestrian"]]
+    kv["pedestrian_forward"] = kv["foot_tag"] or kv["pedestrian_forward"]
 
     --check for bike_forward overrides
-    kv["bike_forward"] = bicycle[kv["bicycle"]] or cycleway[kv["cycleway"]] or bicycle[kv["bicycle_road"]] or bicycle[kv["cyclestreet"]] or kv["bike_forward"]
-    kv["bike_tag"] = bicycle[kv["bicycle"]] or cycleway[kv["cycleway"]] or bicycle[kv["bicycle_road"]] or bicycle[kv["cyclestreet"]] or nil
+    kv["bike_tag"] = any_in(bicycle, kv["bicycle"]) or
+                     any_in(cycleway, kv["cycleway"]) or
+                     any_in(bicycle, kv["bicycle_road"]) or
+                     bicycle[kv["cyclestreet"]]
+    kv["bike_forward"] = kv["bike_tag"] or kv["bike_forward"]
 
     --check for moped forward overrides
-    kv["moped_forward"] = moped[kv["moped"]] or moped[kv["mofa"]] or motor_vehicle[kv["motor_vehicle"]] or kv["moped_forward"]
-    kv["moped_tag"] = moped[kv["moped"]] or moped[kv["mofa"]] or motor_vehicle[kv["motor_vehicle"]] or nil
+    kv["moped_tag"] = any_in(moped, kv["moped"]) or
+                      any_in(moped, kv["mofa"]) or
+                      motor_vehicle_access
+    kv["moped_forward"] = kv["moped_tag"] or kv["moped_forward"]
 
     --check for motorcycle forward overrides
-    kv["motorcycle_forward"] = motor_vehicle[kv["motorcycle"]] or motor_vehicle[kv["motor_vehicle"]] or kv["motorcycle_forward"]
-    kv["motorcycle_tag"] = motor_vehicle[kv["motorcycle"]] or motor_vehicle[kv["motor_vehicle"]] or nil
+    kv["motorcycle_tag"] = any_in(motor_vehicle, kv["motorcycle"]) or motor_vehicle_access
+    kv["motorcycle_forward"] = kv["motorcycle_tag"] or kv["motorcycle_forward"]
 
     if kv["access"] == "psv" then
       kv["taxi_forward"] = "true"
@@ -1004,87 +1057,87 @@ function filter_tags_generic(kv)
       default_val = tostring(rail)
     end
 
+    -- expect access=private not be combined with other values
     if ((ferry == false and rail == false) or kv["impassable"] == "yes" or access == "false" or (kv["access"] == "private" and (kv["emergency"] == "yes" or kv["service"] == "emergency_access"))) then
+      default_val = "false"
+    end
 
-      kv["auto_forward"] = "false"
-      kv["truck_forward"] = "false"
-      kv["bus_forward"] = "false"
-      kv["taxi_forward"] = "false"
-      kv["moped_forward"] = "false"
-      kv["motorcycle_forward"] = "false"
-      kv["pedestrian_forward"] = "false"
-      kv["bike_forward"] = "false"
+    local ped_val = default_val
+    if kv["smoothness"] == "impassable" or kv["vehicle"] == "no" then --don't change ped access.
+      default_val = "false"
+    end
 
-      kv["auto_backward"] = "false"
-      kv["truck_backward"] = "false"
-      kv["bus_backward"] = "false"
-      kv["taxi_backward"] = "false"
-      kv["moped_backward"] = "false"
-      kv["motorcycle_backward"] = "false"
-      kv["pedestrian_backward"] = "false"
-      kv["bike_backward"] = "false"
+    --check for auto_forward overrides
+    kv["auto_tag"] = any_in(motor_vehicle, kv["motorcar"]) or motor_vehicle_access
+    kv["auto_forward"] = kv["auto_tag"] or default_val
 
-    else
-      local ped_val = default_val
-      if kv["smoothness"] == "impassable" or kv["vehicle"] == "no" then --don't change ped access.
-        default_val = "false"
-      end
-      --check for auto_forward overrides
-      kv["auto_forward"] = motor_vehicle[kv["motorcar"]] or motor_vehicle[kv["motor_vehicle"]] or default_val
-      kv["auto_tag"] = motor_vehicle[kv["motorcar"]] or motor_vehicle[kv["motor_vehicle"]] or nil
+    --check for truck_forward override
+    kv["truck_tag"] = any_in(truck, kv["hgv"]) or motor_vehicle_access
+    kv["truck_forward"] = any_in(truck, kv["hgv"]) or
+                          kv["truck_forward"] or
+                          motor_vehicle_access or
+                          default_val
 
-      --check for truck_forward override
-      kv["truck_forward"] = truck[kv["hgv"]] or kv["truck_forward"] or motor_vehicle[kv["motor_vehicle"]] or default_val
-      kv["truck_tag"] = truck[kv["hgv"]] or motor_vehicle[kv["motor_vehicle"]] or nil
+    --check for bus_forward overrides
+    kv["bus_tag"] = any_in(bus, kv["bus"]) or
+                    any_in(psv, kv["psv"]) or
+                    psv[kv["lanes:psv:forward"]] or
+                    motor_vehicle_access
+    kv["bus_forward"] = kv["bus_tag"] or default_val
 
-      --check for bus_forward overrides
-      kv["bus_forward"] = bus[kv["bus"]] or psv[kv["psv"]] or psv[kv["lanes:psv:forward"]] or motor_vehicle[kv["motor_vehicle"]] or default_val
-      kv["bus_tag"] = bus[kv["bus"]] or psv[kv["psv"]] or psv[kv["lanes:psv:forward"]] or motor_vehicle[kv["motor_vehicle"]] or nil
+    --check for taxi_forward overrides
+    kv["taxi_tag"] = any_in(taxi, kv["taxi"]) or
+                     any_in(psv, kv["psv"]) or
+                     psv[kv["lanes:psv:forward"]] or
+                     motor_vehicle_access
+    kv["taxi_forward"] = kv["taxi_tag"] or default_val
 
-      --check for taxi_forward overrides
-      kv["taxi_forward"] = taxi[kv["taxi"]] or psv[kv["psv"]] or psv[kv["lanes:psv:forward"]] or motor_vehicle[kv["motor_vehicle"]] or default_val
-      kv["taxi_tag"] = taxi[kv["taxi"]] or psv[kv["psv"]] or psv[kv["lanes:psv:forward"]] or motor_vehicle[kv["motor_vehicle"]] or nil
+    --check for ped overrides
+    kv["foot_tag"] = any_in(foot, kv["foot"]) or
+                     foot[kv["pedestrian"]]
+    kv["pedestrian_forward"] = kv["foot_tag"] or ped_val
 
-      --check for ped overrides
-      kv["pedestrian_forward"] = foot[kv["foot"]] or foot[kv["pedestrian"]] or ped_val
-      kv["foot_tag"] = foot[kv["foot"]] or foot[kv["pedestrian"]] or nil
+    --check for bike_forward overrides
+    kv["bike_tag"] = any_in(bicycle, kv["bicycle"]) or
+                     any_in(cycleway, kv["cycleway"]) or
+                     any_in(bicycle, kv["bicycle_road"]) or
+                     bicycle[kv["cyclestreet"]]
+    kv["bike_forward"] = kv["bike_tag"] or default_val
 
-      --check for bike_forward overrides
-      kv["bike_forward"] = bicycle[kv["bicycle"]] or cycleway[kv["cycleway"]] or bicycle[kv["bicycle_road"]] or bicycle[kv["cyclestreet"]] or default_val
-      kv["bike_tag"] = bicycle[kv["bicycle"]] or cycleway[kv["cycleway"]] or bicycle[kv["bicycle_road"]] or bicycle[kv["cyclestreet"]] or nil
+    --check for moped forward overrides
+    kv["moped_tag"] = any_in(moped, kv["moped"]) or
+                      any_in(moped, kv["mofa"]) or
+                      motor_vehicle_access
+    kv["moped_forward"] = kv["moped_tag"] or default_val
 
-      --check for moped forward overrides
-      kv["moped_forward"] = moped[kv["moped"]] or moped[kv["mofa"]] or motor_vehicle[kv["motor_vehicle"]] or default_val
-      kv["moped_tag"] = moped[kv["moped"]] or moped[kv["mofa"]] or motor_vehicle[kv["motor_vehicle"]] or nil
+    --check for motorcycle forward overrides
+    kv["motorcycle_tag"] = any_in(motor_vehicle, kv["motorcycle"]) or motor_vehicle_access
+    kv["motorcycle_forward"] = kv["motorcycle_tag"] or default_val
 
-      --check for motorcycle forward overrides
-      kv["motorcycle_forward"] = motor_vehicle[kv["motorcycle"]] or motor_vehicle[kv["motor_vehicle"]] or default_val
-      kv["motorcycle_tag"] = motor_vehicle[kv["motorcycle"]] or motor_vehicle[kv["motor_vehicle"]] or nil
-
-      if kv["bike_tag"] == nil then
-        if kv["sac_scale"] == "hiking" then
+    if kv["bike_tag"] == nil then
+      if kv["sac_scale"] == "hiking" then
           kv["bike_forward"] = "true"
           kv["bike_tag"] = "true"
-        elseif kv["sac_scale"] then
+      elseif kv["sac_scale"] then
           kv["bike_forward"] = "false"
-        end
       end
+    end
 
-      if kv["access"] == "psv" then
-        kv["taxi_forward"] = "true"
-        kv["taxi_tag"] = "true"
+    if kv["access"] == "psv" then
+      kv["taxi_forward"] = "true"
+      kv["taxi_tag"] = "true"
 
-        kv["bus_forward"] = "true"
-        kv["bus_tag"] = "true"
-      end
+      kv["bus_forward"] = "true"
+      kv["bus_tag"] = "true"
+    end
 
-      if kv["motorroad"] == "yes" then
-        kv["motorroad_tag"] = "true"
-      end
+    if kv["motorroad"] == "yes" then
+      kv["motorroad_tag"] = "true"
     end
   end
 
   --TODO: handle Time conditional restrictions if available for HOVs with oneway = reversible
+  -- expect access=permissive and access=hov not to be combined with other values
   if ((kv["access"] == "permissive" or kv["access"] == "hov" or kv["access"] == "taxi") and kv["oneway"] == "reversible") then
 
     -- for now enable only for buses if the tag exists and they are allowed.
@@ -1119,7 +1172,10 @@ function filter_tags_generic(kv)
   end
 
   if kv["bike_backward"] == nil or kv["bike_backward"] == "false" then
-    kv["bike_backward"] = bike_reverse[kv["cycleway"]] or bike_reverse[kv["cycleway:left"]] or bike_reverse[kv["cycleway:right"]] or "false"
+    kv["bike_backward"] = bike_reverse[kv["cycleway"]] or
+                          bike_reverse[kv["cycleway:left"]] or
+                          bike_reverse[kv["cycleway:right"]] or
+                          "false"
   end
 
   if kv["bike_backward"] == "true" then
@@ -1316,37 +1372,39 @@ function filter_tags_generic(kv)
   --let all the :forward overrides through
   local mv_forward = kv["motor_vehicle:forward"] or kv["vehicle:forward"]
   if mv_forward ~= nil then
-    kv["auto_forward"] = motor_vehicle[mv_forward]
-    kv["truck_forward"] = motor_vehicle[mv_forward]
-    kv["bus_forward"] = motor_vehicle[mv_forward]
-    kv["taxi_forward"] = motor_vehicle[mv_forward]
-    kv["moped_forward"] = motor_vehicle[mv_forward]
-    kv["motorcycle_forward"] = motor_vehicle[mv_forward]
+    local access_forward = any_in(motor_vehicle, mv_forward)
+    kv["auto_forward"] = access_forward
+    kv["truck_forward"] = access_forward
+    kv["bus_forward"] = access_forward
+    kv["taxi_forward"] = access_forward
+    kv["moped_forward"] = access_forward
+    kv["motorcycle_forward"] = access_forward
   end
   if kv["foot:forward"] ~= nil then
-    kv["pedestrian_forward"] = foot[kv["foot:forward"]]
+    kv["pedestrian_forward"] = any_in(foot, kv["foot:forward"])
   end
   local bk_forward = kv["bicycle:forward"] or kv["vehicle:forward"]
   if bk_forward ~= nil then
-    kv["bike_forward"] = bicycle[bk_forward]
+    kv["bike_forward"] = any_in(bicycle, bk_forward)
   end
 
   --let all the :backward overrides through, some of this is redundant but the code is a mess...
   local mv_backward = kv["motor_vehicle:backward"] or kv["vehicle:backward"]
   if mv_backward ~= nil then
-    kv["auto_backward"] = motor_vehicle[mv_backward]
-    kv["truck_backward"] = motor_vehicle[mv_backward]
-    kv["bus_backward"] = motor_vehicle[mv_backward]
-    kv["taxi_backward"] = motor_vehicle[mv_backward]
-    kv["moped_backward"] = motor_vehicle[mv_backward]
-    kv["motorcycle_backward"] = motor_vehicle[mv_backward]
+    local access_backward = any_in(motor_vehicle, mv_backward)
+    kv["auto_backward"] = access_backward
+    kv["truck_backward"] = access_backward
+    kv["bus_backward"] = access_backward
+    kv["taxi_backward"] = access_backward
+    kv["moped_backward"] = access_backward
+    kv["motorcycle_backward"] = access_backward
   end
   if kv["foot:backward"] ~= nil then
-    kv["pedestrian_backward"] = foot[kv["foot:backward"]]
+    kv["pedestrian_backward"] = any_in(foot, kv["foot:backward"])
   end
   local bk_backward = kv["bicycle:backward"] or kv["vehicle:backward"]
   if bk_backward ~= nil then
-    kv["bike_backward"] = bicycle[bk_backward]
+    kv["bike_backward"] = any_in(bicycle, bk_backward)
   end
 
   kv["oneway_reverse"] = "false"
@@ -1552,7 +1610,7 @@ function filter_tags_generic(kv)
 
   kv["use"] = use
 
-  local r_shoulder = shoulder[kv["shoulder"]] or shoulder[kv["shoulder:both"]] or nil
+  local r_shoulder = shoulder[kv["shoulder"]] or shoulder[kv["shoulder:both"]]
   local l_shoulder = r_shoulder
 
   if r_shoulder == nil then
@@ -1646,7 +1704,6 @@ function filter_tags_generic(kv)
   kv["cycle_lane_right_opposite"] = cycle_lane_right_opposite
   kv["cycle_lane_left_opposite"] = cycle_lane_left_opposite
 
-
   local highway_type = kv["highway"]
   if kv["highway"] == "construction" then
     highway_type = kv["construction"]
@@ -1657,10 +1714,17 @@ function filter_tags_generic(kv)
      kv["link_type"] = kv["link_type"]
   end
 
+  if kv["highway"] == "via_ferrata" and kv["sac_scale"] == nil then
+    kv["sac_scale"] = "difficult_alpine_hiking"
+  end
+
   --- TODO(nils): "private" also has directionality which we don't parse and handle yet
-  kv["private"] = private[kv["access"]] or private[kv["motor_vehicle"]] or private[kv["motorcar"]] or "false"
-  kv["private_hgv"] = private[kv["hgv"]] or kv["private"] or "false"
-  kv["no_thru_traffic"] = no_thru_traffic[kv["access"]] or "false"
+  kv["private"] = any_in(private, kv["access"]) or
+                  any_in(private, kv["motor_vehicle"]) or
+                  any_in(private, kv["motorcar"]) or
+                  "false"
+  kv["private_hgv"] = any_in(private, kv["hgv"]) or kv["private"] or "false"
+  kv["no_thru_traffic"] = any_in(no_thru_traffic, kv["access"]) or "false"
   kv["ferry"] = tostring(ferry)
   kv["rail"] = tostring(kv["auto_forward"] == "true" and (kv["railway"] == "rail" or kv["route"] == "shuttle_train"))
   kv["name"] = kv["name"]
@@ -1689,7 +1753,7 @@ function filter_tags_generic(kv)
   kv["int"] = kv["int"]
   kv["int_ref"] = kv["int_ref"]
   kv["surface"] = kv["surface"]
-  kv["wheelchair"] = wheelchair[kv["wheelchair"]]
+  kv["wheelchair"] = any_in(wheelchair, kv["wheelchair"])
 
   --lower the default speed for tracks
   if kv["highway"] == "track" then
@@ -1868,27 +1932,27 @@ function filter_tags_generic(kv)
     "forward", "backward"
   }
 
-  for restr_key, directed in pairs(access_restriction_tags) do 
+  for restr_key, directed in pairs(access_restriction_tags) do
     -- find out if there are exemptions
     local conditional_tag = string.format("%s:conditional", restr_key)
     local except_destination = conditional_access_restriction[kv[conditional_tag]] or 0
-    if except_destination == 1 then 
+    if except_destination == 1 and kv[restr_key] ~= nil then
       kv[restr_key] = tostring(kv[restr_key]) .. "~" -- parse this later in graphparser
     end
-    if directed then 
+    if directed then
       for _, direction in pairs(directions) do
         local key = restr_key .. "_" .. direction
         local tag = restr_key .. ":" .. direction
         local conditional_tag = string.format("%s:conditional", tag)
         local except_destination = conditional_access_restriction[kv[conditional_tag]] or 0
-        if except_destination == 1 then 
+        if except_destination == 1 and kv[tag] ~= nil then
           kv[key] = tostring(kv[key]) .. "~"
         end
       end
     end
   end
 
-  if (kv["hgv:national_network"] or kv["hgv:state_network"] or kv["hgv"] == "local" or kv["hgv"] == "designated") then
+  if kv["hgv:national_network"] or kv["hgv:state_network"] or any_in(truck_hgv, kv["hgv"]) then
     kv["truck_route"] = "true"
   end
 
@@ -1972,9 +2036,10 @@ function nodes_proc (kv, nokeys)
   end
 
   --normalize a few tags that we care about
-  local initial_access = access[kv["access"]]
+  local initial_access = any_in(access, kv["access"])
   local access = initial_access or "true"
 
+  -- expect access=private not to be combined with other values
   if (kv["impassable"] == "yes" or (kv["access"] == "private" and (kv["emergency"] == "yes" or kv["service"] == "emergency_access"))) then
     access = "false"
   end
@@ -1984,14 +2049,14 @@ function nodes_proc (kv, nokeys)
     hov_tag = 128
   end
 
-  local foot_tag = foot_node[kv["foot"]]
-  local wheelchair_tag = wheelchair_node[kv["wheelchair"]]
-  local bike_tag = bicycle_node[kv["bicycle"]]
-  local truck_tag = truck_node[kv["hgv"]]
-  local auto_tag = motor_vehicle_node[kv["motorcar"]]
-  local motor_vehicle_tag = motor_vehicle_node[kv["motor_vehicle"]]
-  local moped_tag = moped_node[kv["moped"]] or moped_node[kv["mofa"]]
-  local motorcycle_tag = motor_cycle_node[kv["motorcycle"]]
+  local foot_tag = any_in_num(foot_node, kv["foot"])
+  local wheelchair_tag = any_in_num(wheelchair_node, kv["wheelchair"])
+  local bike_tag = any_in_num(bicycle_node, kv["bicycle"])
+  local truck_tag = any_in_num(truck_node, kv["hgv"])
+  local auto_tag = any_in_num(motor_vehicle_node, kv["motorcar"])
+  local motor_vehicle_tag = any_in_num(motor_vehicle_node, kv["motor_vehicle"])
+  local moped_tag = any_in_num(moped_node, kv["moped"]) or any_in_num(moped_node, kv["mofa"])
+  local motorcycle_tag = any_in_num(motor_cycle_node, kv["motorcycle"])
 
   if auto_tag == nil then
     auto_tag = motor_vehicle_tag
@@ -2003,12 +2068,12 @@ function nodes_proc (kv, nokeys)
     bus_tag = 64
     taxi_tag = 32
   else
-    bus_tag = bus_node[kv["bus"]]
-    taxi_tag = taxi_node[kv["taxi"]]
+    bus_tag = any_in_num(bus_node, kv["bus"])
+    taxi_tag = any_in_num(taxi_node, kv["taxi"])
   end
 
   if bus_tag == nil then
-    bus_tag = psv_bus_node[kv["psv"]]
+    bus_tag = any_in_num(psv_bus_node, kv["psv"])
   end
   --if bus was not set and car is
   if bus_tag == nil and auto_tag == 1 then
@@ -2026,7 +2091,7 @@ function nodes_proc (kv, nokeys)
   end
 
   if taxi_tag == nil then
-    taxi_tag = psv_taxi_node[kv["psv"]]
+    taxi_tag = any_in_num(psv_taxi_node, kv["psv"])
   end
   --if taxi was not set and car is
   if taxi_tag == nil and auto_tag == 1 then
@@ -2103,16 +2168,16 @@ function nodes_proc (kv, nokeys)
   if gate == false then
     --if there was a bollard cars can't get through it
     bollard = kv["barrier"] == "bollard" or kv["barrier"] == "block" or
-      kv["bollard"] == "removable" or kv["barrier"] == "kissing_gate" or 
-      kv["barrier"] == "motorcycle_barrier" or kv["barrier"] == "cycle_barrier" or 
+      kv["bollard"] == "removable" or kv["barrier"] == "kissing_gate" or
+      kv["barrier"] == "motorcycle_barrier" or kv["barrier"] == "cycle_barrier" or
       kv["barrier"] == "chain" or kv["barrier"] == "bar" or false
 
     --if sump_buster then no access for auto, hov, and taxi unless a tag exists.
     sump_buster = kv["barrier"] == "sump_buster" or false
 
     --if there is a kind of wall, there is no access for all profiles unless a tag exists
-    wall = kv["barrier"] == "fence" or kv["barrier"] == "barrier_board" or 
-        kv["barrier"] == "wall" or kv["barrier"] == "jersey_barrier" or 
+    wall = kv["barrier"] == "fence" or kv["barrier"] == "barrier_board" or
+        kv["barrier"] == "wall" or kv["barrier"] == "jersey_barrier" or
         kv["barrier"] == "debris" or false
 
     --save the following as gates.
@@ -2259,7 +2324,9 @@ function nodes_proc (kv, nokeys)
     end
   end
 
-  kv["private"] = private[kv["access"]] or private[kv["motor_vehicle"]] or "false"
+  kv["private"] = any_in(private, kv["access"]) or
+                  any_in(private, kv["motor_vehicle"]) or
+                  "false"
 
   --store a mask denoting access
   kv["access_mask"] = bit.bor(auto, emergency, truck, bike, foot, wheelchair, bus, hov, moped, motorcycle, taxi)

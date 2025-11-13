@@ -1,39 +1,12 @@
 #include "thor/multimodal.h"
 #include "baldr/datetime.h"
+#include "exceptions.h"
 #include "midgard/logging.h"
-#include "worker.h"
 
 #include <algorithm>
 
 using namespace valhalla::baldr;
 using namespace valhalla::sif;
-
-namespace {
-
-// Method to get an operator Id from a map of operator strings vs. Id.
-uint32_t GetOperatorId(const graph_tile_ptr& tile,
-                       uint32_t routeid,
-                       std::unordered_map<std::string, uint32_t>& operators) {
-  const TransitRoute* transit_route = tile->GetTransitRoute(routeid);
-
-  // Test if the transit operator changed
-  if (transit_route && transit_route->op_by_onestop_id_offset()) {
-    // Get the operator name and look up in the operators map
-    std::string operator_name = tile->GetName(transit_route->op_by_onestop_id_offset());
-    auto operator_itr = operators.find(operator_name);
-    if (operator_itr == operators.end()) {
-      // Operator not found - add to the map
-      uint32_t id = operators.size() + 1;
-      operators[operator_name] = id;
-      return id;
-    } else {
-      return operator_itr->second;
-    }
-  }
-  return 0;
-}
-
-} // namespace
 
 namespace valhalla {
 namespace thor {
@@ -51,8 +24,7 @@ MultiModalPathAlgorithm::~MultiModalPathAlgorithm() {
 }
 
 // Initialize prior to finding best path
-void MultiModalPathAlgorithm::Init(const midgard::PointLL& destll,
-                                   const std::shared_ptr<DynamicCost>& costing) {
+void MultiModalPathAlgorithm::Init(const midgard::PointLL& destll, const cost_ptr_t& costing) {
   // Disable A* for multimodal
   astarheuristic_.Init(destll, 0.0f);
 
@@ -229,8 +201,8 @@ bool MultiModalPathAlgorithm::ExpandForward(GraphReader& graphreader,
                                             const MMEdgeLabel& pred,
                                             const uint32_t pred_idx,
                                             const bool from_transition,
-                                            const std::shared_ptr<DynamicCost>& pc,
-                                            const std::shared_ptr<DynamicCost>& tc,
+                                            const cost_ptr_t& pc,
+                                            const cost_ptr_t& tc,
                                             const sif::mode_costing_t& mode_costing,
                                             const TimeInfo& time_info) {
 
@@ -352,11 +324,13 @@ bool MultiModalPathAlgorithm::ExpandForward(GraphReader& graphreader,
     uint32_t tripid = 0;
     uint32_t blockid = 0;
     uint8_t restriction_idx = -1;
+    uint8_t destonly_restriction_mask = 0;
     const auto dest_edge_itr = destinations_.find(edgeid);
     const bool is_dest = dest_edge_itr != destinations_.cend();
     if (directededge->IsTransitLine()) {
       // Check if transit costing allows this edge
-      if (!tc->Allowed(directededge, is_dest, pred, tile, edgeid, 0, 0, restriction_idx)) {
+      if (!tc->Allowed(directededge, is_dest, pred, tile, edgeid, 0, 0, restriction_idx,
+                       destonly_restriction_mask)) {
         continue;
       }
       // check if excluded.
@@ -401,7 +375,7 @@ bool MultiModalPathAlgorithm::ExpandForward(GraphReader& graphreader,
           }
 
           // Get the operator Id
-          operator_id = GetOperatorId(tile, departure->routeindex(), operators_);
+          operator_id = tile->GetTransitOperatorId(departure->routeindex(), operators_);
 
           // Add transfer penalty and operator change penalty
           if (pred.transit_operator() > 0 && pred.transit_operator() != operator_id) {
@@ -441,7 +415,8 @@ bool MultiModalPathAlgorithm::ExpandForward(GraphReader& graphreader,
 
       // Regular edge - use the appropriate costing and check if access is allowed
       // and the walking distance didn't exceed (can't check in Allowed())
-      if (!pc->Allowed(directededge, is_dest, pred, tile, edgeid, 0, 0, restriction_idx) ||
+      if (!pc->Allowed(directededge, is_dest, pred, tile, edgeid, 0, 0, restriction_idx,
+                       destonly_restriction_mask) ||
           walking_distance > max_walking_dist_) {
         continue;
       }
@@ -541,7 +516,7 @@ bool MultiModalPathAlgorithm::ExpandForward(GraphReader& graphreader,
 void MultiModalPathAlgorithm::SetOrigin(GraphReader& graphreader,
                                         valhalla::Location& origin,
                                         const valhalla::Location& destination,
-                                        const std::shared_ptr<DynamicCost>& costing) {
+                                        const cost_ptr_t& costing) {
   // Only skip inbound edges if we have other options
   bool has_other_edges = false;
   std::for_each(origin.correlation().edges().begin(), origin.correlation().edges().end(),
@@ -649,7 +624,7 @@ void MultiModalPathAlgorithm::SetOrigin(GraphReader& graphreader,
 // Add a destination edge
 uint32_t MultiModalPathAlgorithm::SetDestination(GraphReader& graphreader,
                                                  const valhalla::Location& dest,
-                                                 const std::shared_ptr<DynamicCost>& costing) {
+                                                 const cost_ptr_t& costing) {
   // Only skip outbound edges if we have other options
   bool has_other_edges =
       std::any_of(dest.correlation().edges().begin(), dest.correlation().edges().end(),
@@ -695,7 +670,7 @@ bool MultiModalPathAlgorithm::ExpandFromNode(baldr::GraphReader& graphreader,
                                              const baldr::GraphId& node,
                                              const sif::EdgeLabel& pred,
                                              const uint32_t pred_idx,
-                                             const std::shared_ptr<DynamicCost>& costing,
+                                             const cost_ptr_t& costing,
                                              EdgeStatus& edgestatus,
                                              std::vector<EdgeLabel>& edgelabels,
                                              DoubleBucketQueue<EdgeLabel>& adjlist,
@@ -725,9 +700,11 @@ bool MultiModalPathAlgorithm::ExpandFromNode(baldr::GraphReader& graphreader,
     // Skip this edge if permanently labeled (best path already found to this directed edge) or
     // access is not allowed for this mode.
     uint8_t restriction_idx = -1;
+    uint8_t destonly_restriction_mask = 0;
     const bool is_dest = destinations_.find(edgeid) != destinations_.cend();
     if (es->set() == EdgeSet::kPermanent ||
-        !costing->Allowed(directededge, is_dest, pred, tile, edgeid, 0, 0, restriction_idx)) {
+        !costing->Allowed(directededge, is_dest, pred, tile, edgeid, 0, 0, restriction_idx,
+                          destonly_restriction_mask)) {
       continue;
     }
 
@@ -774,7 +751,7 @@ bool MultiModalPathAlgorithm::ExpandFromNode(baldr::GraphReader& graphreader,
 bool MultiModalPathAlgorithm::CanReachDestination(const valhalla::Location& destination,
                                                   GraphReader& graphreader,
                                                   const travel_mode_t dest_mode,
-                                                  const std::shared_ptr<DynamicCost>& costing) {
+                                                  const cost_ptr_t& costing) {
   // Assume pedestrian mode for now
   mode_ = dest_mode;
 

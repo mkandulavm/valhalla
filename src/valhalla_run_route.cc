@@ -2,14 +2,12 @@
 #include "baldr/attributes_controller.h"
 #include "baldr/graphreader.h"
 #include "baldr/pathlocation.h"
-#include "baldr/tilehierarchy.h"
 #include "loki/search.h"
 #include "loki/worker.h"
 #include "midgard/encoded.h"
 #include "midgard/logging.h"
 #include "odin/directionsbuilder.h"
 #include "odin/enhancedtrippath.h"
-#include "odin/util.h"
 #include "proto/api.pb.h"
 #include "proto/directions.pb.h"
 #include "proto/options.pb.h"
@@ -41,7 +39,6 @@ using namespace valhalla::loki;
 using namespace valhalla::odin;
 using namespace valhalla::sif;
 using namespace valhalla::thor;
-using namespace valhalla::meili;
 
 namespace {
 
@@ -194,7 +191,7 @@ const valhalla::TripLeg* PathTest(GraphReader& reader,
     locations.front().heading_ = std::round(PointLL::HeadingAlongPolyline(shape, 30.f));
     locations.back().heading_ = std::round(PointLL::HeadingAtEndOfPolyline(shape, 30.f));
 
-    const std::shared_ptr<DynamicCost>& cost = mode_costing[static_cast<uint32_t>(mode)];
+    const cost_ptr_t& cost = mode_costing[static_cast<uint32_t>(mode)];
     const auto projections = Search(locations, reader, cost);
     std::vector<PathLocation> path_location;
     valhalla::Options options;

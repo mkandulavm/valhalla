@@ -7,9 +7,8 @@
 #include <valhalla/midgard/aabb2.h>
 #include <valhalla/midgard/pointll.h>
 
-#include <boost/property_tree/ptree.hpp>
+#include <boost/property_tree/ptree_fwd.hpp>
 
-#include <algorithm>
 #include <cstdint>
 #include <memory>
 #include <mutex>
@@ -160,7 +159,8 @@ protected:
   inline uint32_t get_index(const GraphId& graphid) const {
     auto offset = get_offset(graphid);
     // using max value to indicate invalid
-    return offset < cache_indices_.size() ? cache_indices_[offset] : midgard::invalid<uint32_t>();
+    return offset < cache_indices_.size() ? cache_indices_[offset]
+                                          : std::numeric_limits<uint32_t>::max();
   }
 
   // The actual cached GraphTile objects

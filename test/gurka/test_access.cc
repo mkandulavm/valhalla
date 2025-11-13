@@ -1,5 +1,5 @@
+#include "exceptions.h"
 #include "gurka.h"
-#include "test.h"
 
 #include <gtest/gtest.h>
 
@@ -314,7 +314,7 @@ TEST_F(MultipleBarriers, BothClosed) {
       gurka::buildtiles(layout, ways, nodes, {}, "test/data/multiple_barrier_both_closed");
   try {
     auto result = gurka::do_action(valhalla::Options::route, map, {"A", "B"}, "auto");
-    gurka::assert::raw::expect_path(result, {"Unexpected path found"});
+    gurka::assert::raw::expect_path(result, {}, "Unexpected path found");
   } catch (const std::runtime_error& e) {
     EXPECT_STREQ(e.what(), "No path could be found for input");
   }
@@ -389,7 +389,7 @@ TEST_F(MultipleBarriers, BollardNoAccessInformation) {
       gurka::buildtiles(layout, ways, nodes, {}, "test/data/multiple_bollard_no_access_info");
   try {
     auto result = gurka::do_action(valhalla::Options::route, map, {"A", "B"}, "auto");
-    gurka::assert::raw::expect_path(result, {"Unexpected path found"});
+    gurka::assert::raw::expect_path(result, {}, "Unexpected path found");
   } catch (const std::runtime_error& e) {
     EXPECT_STREQ(e.what(), "No path could be found for input");
   }
@@ -651,4 +651,138 @@ TEST(Standalone, AccessForwardBackward) {
     result = gurka::do_action(valhalla::Options::route, map, {"F", "G"}, c);
     gurka::assert::raw::expect_path(result, {"CFH", "ABCDE", "EG"});
   }
+}
+
+TEST(Standalone, ViaFerrata) {
+  const std::string ascii_map = R"(A----B----C)";
+  const gurka::ways ways = {{"AB", {{"highway", "via_ferrata"}, {"sac_scale", "hiking"}}},
+                            {"BC", {{"highway", "via_ferrata"}, {"sac_scale", "hiking"}}}};
+
+  const auto layout = gurka::detail::map_to_coordinates(ascii_map, 100);
+  auto map = gurka::buildtiles(layout, ways, {}, {}, "test/data/example");
+
+  auto result = gurka::do_action(valhalla::Options::route, map, {"A", "C"}, "pedestrian");
+  gurka::assert::raw::expect_path(result, {"AB", "BC"});
+}
+
+TEST(Standalone, ViaFerrataDefault) {
+  const std::string ascii_map = R"(A----B----C)";
+  const gurka::ways ways = {{"AB", {{"highway", "via_ferrata"}}},
+                            {"BC", {{"highway", "via_ferrata"}}}};
+
+  const auto layout = gurka::detail::map_to_coordinates(ascii_map, 100);
+  auto map = gurka::buildtiles(layout, ways, {}, {}, "test/data/example");
+
+  try {
+    const auto result = gurka::do_action(valhalla::Options::route, map, {"A", "C"}, "pedestrian");
+    gurka::assert::raw::expect_path(result, {}, "Unexpected path found");
+  } catch (const valhalla_exception_t& e) {
+    EXPECT_STREQ(e.what(), "No suitable edges near location");
+  }
+}
+
+TEST(Standalone, AccessFerry) {
+  constexpr double gridsize_metres = 10;
+
+  const std::string ascii_map = R"(
+    A---B---C
+        |   |
+        |   |
+        |   |
+        D---E---F
+                |
+                |
+                |
+                G---H
+    )";
+
+  const gurka::ways ways = {
+      {"ABC", {{"highway", "primary"}}},
+      {"BD",
+       {
+           {"route", "ferry"},
+           // this combination of tags disables only pedestrian and bicycle access
+           {"access", "no"},
+           {"motor_vehicle", "yes"},
+       }},
+      {"CE",
+       {
+           {"route", "ferry"},
+           {"access", "no"},
+           {"foot", "yes"},
+           {"bicycle", "yes"},
+       }},
+      {"DEF", {{"highway", "primary"}}},
+      {"FG",
+       {
+           {"route", "ferry"},
+           // and this combination disables bus, taxi, truck access
+           {"access", "no"},
+           {"motorcar", "yes"},
+           {"motorcycle", "yes"},
+           {"foot", "yes"},
+           {"bicycle", "yes"},
+       }},
+      {"GH", {{"highway", "primary"}}},
+  };
+
+  const auto layout =
+      gurka::detail::map_to_coordinates(ascii_map, gridsize_metres, {5.1079374, 52.0887174});
+  auto map = gurka::buildtiles(layout, ways, {}, {}, "test/data/gurka_access_ferry", build_config);
+
+  for (auto& c : costing) {
+    SCOPED_TRACE(c);
+    auto result = gurka::do_action(valhalla::Options::route, map, {"A", "F"}, c);
+    // `motor_vehicle` in the first ferry includes everything except bicycle and pedestrian
+    if (c == "bicycle" || c == "pedestrian") {
+      gurka::assert::raw::expect_path(result, {"ABC", "ABC", "CE", "DEF"}); // second ferry
+    } else {
+      gurka::assert::raw::expect_path(result, {"ABC", "BD", "DEF", "DEF"}); // first ferry
+    }
+  }
+
+  // Route should fail for costing that cannot use the third ferry
+  for (auto& c : costing) {
+    if (c == "auto" || c == "bicycle" || c == "motorcycle" || c == "pedestrian") {
+      EXPECT_NO_THROW(gurka::do_action(valhalla::Options::route, map, {"D", "H"}, c)) << c;
+    } else {
+      EXPECT_ANY_THROW(gurka::do_action(valhalla::Options::route, map, {"D", "H"}, c)) << c;
+    }
+  }
+}
+
+class CombinedRestrictionTagValues : public ::testing::Test {
+protected:
+  static gurka::nodelayout layout;
+  static gurka::ways ways;
+  static void SetUpTestSuite() {
+    constexpr double gridsize = 100;
+
+    const std::string ascii_map = R"(
+        A---B
+     )";
+
+    layout = gurka::detail::map_to_coordinates(ascii_map, gridsize);
+    ways = {
+        {"AB", {{"highway", "primary"}, {"motor_vehicle", "forestry;agricultural"}}},
+    };
+  }
+
+  void check_auto_path(const gurka::map& map, const std::vector<std::string>& expected_path) {
+    try {
+      auto result = gurka::do_action(valhalla::Options::route, map, {"A", "B"}, "auto");
+      gurka::assert::raw::expect_path(result, expected_path, "Unexpected path found");
+    } catch (const std::runtime_error& e) {
+      EXPECT_STREQ(e.what(), "No suitable edges near location");
+    }
+  }
+};
+
+gurka::nodelayout CombinedRestrictionTagValues::layout = {};
+gurka::ways CombinedRestrictionTagValues::ways = {};
+
+TEST_F(CombinedRestrictionTagValues, DeniedCombinedValueAccess) {
+  const gurka::map map =
+      gurka::buildtiles(layout, ways, {}, {}, "test/data/combined_restriction_tag_values");
+  check_auto_path(map, {});
 }

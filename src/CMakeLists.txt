@@ -36,7 +36,7 @@ function(valhalla_module)
             ${MODULE_SOURCES}
             PROPERTIES
             COMPILE_FLAGS
-            "-Werror -Wall -Wextra -Wno-unused-parameter -Wno-missing-field-initializers")
+            "-Werror -Wall -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -Wno-cpp")
   endif()
   list(APPEND MODULE_SOURCES ${MODULE_SOURCES_WITH_WARNINGS})
 
@@ -106,7 +106,7 @@ function(valhalla_module)
     DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}/valhalla/${MODULE_NAME}"
     COMPONENT development)
 
-  if(BUILD_SHARED_LIBS OR ENABLE_PYTHON_BINDINGS)
+  if(BUILD_SHARED_LIBS OR ENABLE_PYTHON_BINDINGS OR ENABLE_NODE_BINDINGS)
     set_property(TARGET ${library} PROPERTY POSITION_INDEPENDENT_CODE ON)
   endif()
 
@@ -155,13 +155,14 @@ set(valhalla_hdrs
     ${VALHALLA_SOURCE_DIR}/valhalla/config.h
     ${VALHALLA_SOURCE_DIR}/valhalla/filesystem_utils.h
     ${VALHALLA_SOURCE_DIR}/valhalla/proto_conversions.h
-    ${VALHALLA_SOURCE_DIR}/valhalla/config.h
+    ${VALHALLA_SOURCE_DIR}/valhalla/exceptions.h
     )
 
 set(valhalla_src
     config.cc
     worker.cc
     proto_conversions.cc
+    exceptions.cc
     ${valhalla_hdrs}
     ${libvalhalla_link_objects})
 
@@ -240,7 +241,7 @@ if(PKG_CONFIG_FOUND)
   configure_valhalla_pc()
 
   install(FILES
-    ${CMAKE_BINARY_DIR}/libvalhalla.pc
+    ${VALHALLA_BUILD_DIR}/libvalhalla.pc
     DESTINATION "${CMAKE_INSTALL_LIBDIR}/pkgconfig")
 endif()
 

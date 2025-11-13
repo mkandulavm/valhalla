@@ -1,3 +1,4 @@
+#include "baldr/rapidjson_utils.h"
 #include "gurka.h"
 #include "mjolnir/adminbuilder.h"
 #include "mjolnir/util.h"
@@ -441,7 +442,7 @@ TEST(Standalone, AdminAlongEdge) {
   }
   std::string pbf_fname = workdir + "/map.pbf";
   std::vector<std::string> input_files = {pbf_fname};
-  gurka::detail::build_pbf(layout, ways, {}, relations, pbf_fname, 0, false);
+  gurka::detail::build_pbf(layout, ways, {}, relations, pbf_fname, false);
 
   // build the admin
   std::unordered_map<std::string, std::string> options = {

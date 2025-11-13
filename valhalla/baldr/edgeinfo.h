@@ -2,16 +2,16 @@
 #define VALHALLA_BALDR_EDGEINFO_H_
 
 #include <valhalla/baldr/conditional_speed_limit.h>
-#include <valhalla/baldr/graphid.h>
+#include <valhalla/baldr/graphconstants.h>
 #include <valhalla/baldr/rapidjson_fwd.h>
 #include <valhalla/midgard/encoded.h>
 #include <valhalla/midgard/pointll.h>
-#include <valhalla/midgard/util.h>
 
 #include <cstdint>
 #include <map>
 #include <string>
 #include <tuple>
+#include <unordered_map>
 #include <vector>
 
 namespace valhalla {
@@ -117,6 +117,15 @@ public:
    * Destructor
    */
   virtual ~EdgeInfo();
+
+  /**
+   * Calculate the size of a tagged value in bytes (including the tag byte and null terminator).
+   * This is used to properly determine the size of the last entry in the text list without
+   * including padding bytes.
+   * @param  ptr  Pointer to the start of the tagged value (including the tag byte)
+   * @return  Returns the size of the tagged value in bytes
+   */
+  static size_t TaggedValueSize(const char* ptr);
 
   /**
    * Gets the OSM way Id.
@@ -304,6 +313,12 @@ public:
    * @return layer index of the edge
    */
   std::vector<std::string> level_ref() const;
+
+  /**
+   * Get the OSM node Ids along this edge if any were included in the data
+   * @return vector of osm node ids
+   */
+  std::vector<uint64_t> osm_node_ids() const;
 
   /**
    * the json representation of the object

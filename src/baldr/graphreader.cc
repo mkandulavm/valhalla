@@ -12,6 +12,7 @@
 #include "incident_singleton.h"
 #include "midgard/encoded.h"
 #include "midgard/logging.h"
+#include "midgard/util.h"
 #include "shortcut_recovery.h"
 
 #include <sys/stat.h>
@@ -64,9 +65,9 @@ GraphReader::tile_extract_t::tile_extract_t(const boost::property_tree::ptree& p
 
     // get the info
     decltype(midgard::tar::contents) contents;
-    auto entries = midgard::iterable_t<tile_index_entry>(reinterpret_cast<tile_index_entry*>(
-                                                             const_cast<char*>(index_begin)),
-                                                         size / sizeof(tile_index_entry));
+    auto entries = std::span<tile_index_entry>(reinterpret_cast<tile_index_entry*>(
+                                                   const_cast<char*>(index_begin)),
+                                               size / sizeof(tile_index_entry));
     for (const auto& entry : entries) {
       contents.insert(
           std::make_pair(std::to_string(entry.tile_id),
@@ -217,11 +218,10 @@ GraphReader::tile_extract_t::tile_extract_t(const boost::property_tree::ptree& p
         archive.reset();
       } // loaded ok but with possibly bad blocks
       else {
-        LOG_INFO("Traffic tile extract successfully loaded with tile count: " +
-                 std::to_string(traffic_tiles.size()));
+        LOG_INFO("Traffic tile extract successfully loaded with tile count: {}",
+                 traffic_tiles.size());
         if (traffic_archive->corrupt_blocks) {
-          LOG_WARN("Traffic tile extract had " + std::to_string(traffic_archive->corrupt_blocks) +
-                   " corrupt blocks");
+          LOG_WARN("Traffic tile extract had {} corrupt blocks", traffic_archive->corrupt_blocks);
         }
       }
     } catch (const std::exception& e) {

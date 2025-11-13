@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.14 FATAL_ERROR)
+cmake_minimum_required(VERSION 3.15 FATAL_ERROR)
 project(valhalla LANGUAGES CXX C)
 
 include(FindPkgConfig)
@@ -8,7 +8,7 @@ set(VALHALLA_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR})
 set(VALHALLA_BUILD_DIR ${CMAKE_CURRENT_BINARY_DIR})
 list(INSERT CMAKE_MODULE_PATH 0 ${VALHALLA_SOURCE_DIR}/cmake)
 
-set(CMAKE_CXX_STANDARD 17 CACHE STRING "C++ language version to use (default is 17)")
+set(CMAKE_CXX_STANDARD 20 CACHE STRING "C++ language version to use (default is 20)")
 option(ENABLE_TOOLS "Enable Valhalla tools" ON)
 option(ENABLE_DATA_TOOLS "Enable Valhalla data tools" ON)
 option(ENABLE_SERVICES "Enable Valhalla services" OFF)
@@ -182,12 +182,12 @@ pkg_check_modules(ZLIB REQUIRED IMPORTED_TARGET zlib)
 pkg_check_modules(LZ4 REQUIRED IMPORTED_TARGET liblz4)
 
 # cURL
-set(curl_targets "")
-if (ENABLE_HTTP OR ENABLE_DATA_TOOLS)
+set(curl_target "")
+if (ENABLE_HTTP)
   pkg_check_modules(CURL REQUIRED IMPORTED_TARGET libcurl)
   if (CURL_FOUND)
-    set(curl_targets PkgConfig::CURL)
     target_compile_definitions(PkgConfig::CURL INTERFACE ENABLE_HTTP)
+    set(curl_target PkgConfig::CURL)
   else()
     message(FATAL_ERROR "ENABLE_HTTP=ON, but cURL not found...")
   endif()
@@ -258,19 +258,28 @@ set(date_include_dir ${VALHALLA_SOURCE_DIR}/third_party/date/include)
 set(rapidjson_include_dir ${VALHALLA_SOURCE_DIR}/third_party/rapidjson/include)
 set(unordered_dense_include_dir ${VALHALLA_SOURCE_DIR}/third_party/unordered_dense/include)
 set(cxxopts_include_dir ${VALHALLA_SOURCE_DIR}/third_party/cxxopts/include)
+set(libosmium_include_dirs ${VALHALLA_SOURCE_DIR}/third_party/libosmium/include ${VALHALLA_SOURCE_DIR}/third_party/protozero/include)
 set(dirent_include_dir ${VALHALLA_SOURCE_DIR}/third_party/dirent/include)
 if (PREFER_EXTERNAL_DEPS)
   # date
+  # check if tz_private.h exists, e.g. arch linux doesn't distribute that..
   find_package(date QUIET)
   if (date_FOUND)
-    get_target_property(date_include_dir date::date INTERFACE_INCLUDE_DIRECTORIES)
+    get_target_property(temp_date_include_dir date::date INTERFACE_INCLUDE_DIRECTORIES)
+    if (EXISTS ${temp_date_include_dir}/date/tz_private.h)
+      set(date_include_dir ${temp_date_include_dir})
+    else()
+      message(WARNING "Couldn't find date/tz_private.h in ${temp_date_include_dir}, using vendored date...")
+    endif()
   else()
-    message(WARNING "No date found in system libraries, using vendored date...")
+    message(WARNING "No date found in ${temp_date_include_dir}, using vendored date...")
   endif()
   # rapidjson
-  find_package(RapidJSON QUIET)
+  find_package(RapidJSON)
   if (RapidJSON_FOUND)
-    get_target_property(rapidjson_include_dir rapidjson INTERFACE_INCLUDE_DIRECTORIES)
+    # couldn't figure out how to get the includedir without this
+    find_path(RapidJSON_INCLUDE_DIR NAMES rapidjson/rapidjson.h)
+    set(rapidjson_include_dir ${RapidJSON_INCLUDE_DIR})
   else()
     message(WARNING "No RapidJSON found in system libraries, using vendored RapidJSON...")
   endif()
@@ -282,19 +291,27 @@ if (PREFER_EXTERNAL_DEPS)
     message(WARNING "No ankerl/unordered_dense found in system libraries, using vendored ankerl/unordered_dense...")
   endif()
   # cxxopts
-  if (ENABLE_DATA_TOOLS OR ENABLE_TOOLS)
-    find_package(cxxopts QUIET)
-    if (cxxopts_FOUND)
-      get_target_property(cxxopts_include_dir cxxopts::cxxopts INTERFACE_INCLUDE_DIRECTORIES)
-    else()
-      message(WARNING "No cxxopts found in system libraries, using vendored cxxopts...")
-    endif()
+  find_package(cxxopts QUIET)
+  if (cxxopts_FOUND)
+    get_target_property(cxxopts_include_dir cxxopts::cxxopts INTERFACE_INCLUDE_DIRECTORIES)
+  else()
+    message(WARNING "No cxxopts found in system libraries, using vendored cxxopts...")
+  endif()
+  # libosmium/protozero
+  find_path(OSMIUM_INCLUDE_DIRS "osmium/version.hpp")
+  find_path(PROTOZERO_INCLUDE_DIRS "protozero/version.hpp")
+  if (NOT OSMIUM_INCLUDE_DIRS OR NOT PROTOZERO_INCLUDE_DIRS)
+    message(WARNING "libosmium or protozero not found in system libraries, using vendored libosmium and protozero...")
+  else()
+    set(libosmium_include_dirs ${OSMIUM_INCLUDE_DIRS} ${PROTOZERO_INCLUDE_DIRS})
   endif()
   # dirent
   if (WIN32)
-    find_path(dirent_include_dir dirent.h REQUIRED)
-    if (dirent_include_dir-NOTFOUND)
+    find_path(DIRENT_INCLUDE_DIRS dirent.h)
+    if (NOT DIRENT_INCLUDE_DIRS)
       message(WARNING "No dirent.h found in system headers, using vendored dirent.h...")
+    else()
+      set(dirent_include_dir ${DIRENT_INCLUDE_DIRS})
     endif()
   endif()
 endif()
@@ -399,7 +416,7 @@ endif()
 # unless you said you didnt want gdal we try to turn it on, if we cant we tell you
 # we don't need it to build tiles (yet)
 set(GDAL_TARGET "")
-if (ENABLE_GDAL AND (ENABLE_SERVICES OR ENABLE_TOOLS OR ENABLE_PYTHON_BINDINGS))
+if (ENABLE_GDAL AND (ENABLE_SERVICES OR ENABLE_TOOLS OR ENABLE_NODE_BINDINGS))
   find_package(GDAL QUIET)
   if (GDAL_FOUND)
     set(GDAL_TARGET GDAL::GDAL)
@@ -442,6 +459,7 @@ if(ENABLE_DATA_TOOLS)
     INTERFACE_LINK_LIBRARIES "${LUA_LIBRARIES}"
     INTERFACE_INCLUDE_DIRECTORIES "${LUA_INCLUDE_DIR}")
   pkg_check_modules(GEOS REQUIRED IMPORTED_TARGET geos)
+  pkg_check_modules(OPENSSL REQUIRED IMPORTED_TARGET openssl)
 endif()
 
 if (ENABLE_THREAD_SAFE_TILE_REF_COUNT)
@@ -451,19 +469,8 @@ endif ()
 ## libvalhalla
 add_subdirectory(src)
 
-## Python bindings
-if(ENABLE_PYTHON_BINDINGS)
-  # python is fine for cmake as well
-  find_package(Python COMPONENTS Development Interpreter)
-  if (Python_FOUND)
-    add_subdirectory(src/bindings/python)
-    install(FILES COPYING CHANGELOG.md
-      DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/doc/python-valhalla"
-      COMPONENT python)
-  else()
-    set(ENABLE_PYTHON_BINDINGS OFF)
-    message(WARNING "Python development version not found, skipping Python bindings...")
-  endif()
+if(ENABLE_NODE_BINDINGS)
+  add_subdirectory(src/bindings/nodejs)
 endif()
 
 ## Executable targets
@@ -532,6 +539,21 @@ if(ENABLE_SERVICES)
   endforeach()
 endif()
 
+## Python bindings
+# needs to be after defining the tool targets above
+if(ENABLE_PYTHON_BINDINGS)
+  set(Python_FIND_STRATEGY LOCATION)
+  set(Python_FIND_REGISTRY NEVER)
+  set(Python_FIND_IMPLEMENTATIONS CPython)
+  set(Python_FIND_VIRTUALENV ONLY)
+  find_package(Python COMPONENTS Interpreter Development Development.Module Development.SABIModule)
+  add_subdirectory(src/bindings/python)
+  if (NOT Python_FOUND)
+    set(ENABLE_PYTHON_BINDINGS OFF)
+    message(WARNING "Python development version not found, skipping Python bindings...")
+  endif()
+endif()
+
 # add the scripts to the build folder as well
 foreach(script valhalla_build_config valhalla_build_elevation
   valhalla_build_extract valhalla_build_timezones)
@@ -554,12 +576,12 @@ install(FILES COPYING CHANGELOG.md
   COMPONENT runtime)
 
 # install third_party
-install(DIRECTORY ${rapidjson_include_dir}/
+install(DIRECTORY ${rapidjson_include_dir}/rapidjson
   DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}/valhalla/third_party")
-install(DIRECTORY ${date_include_dir}/
+install(DIRECTORY ${date_include_dir}/date
   DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}/valhalla/third_party")
 if (WIN32)
-  install(DIRECTORY ${dirent_include_dir}/
+  install(FILES ${dirent_include_dir}/dirent.h
     DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}/valhalla/third_party")
 endif()
 

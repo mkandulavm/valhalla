@@ -42,10 +42,10 @@
         "5": "Leicht nach <RELATIVE_DIRECTION> in Richtung <TOWARD_SIGN> abbiegen."
       },
       "empty_street_name_labels": [
-        "der Gehweg",
-        "der Radweg",
-        "der Mountainbike-Trail",
-        "der Zebrastreifen",
+        "Fußweg",
+        "Radweg",
+        "Mountainbike-Strecke",
+        "Fußgängerübergang",
         "die Treppe",
         "die Brücke",
         "der Tunnel"
@@ -85,10 +85,10 @@
         "5": "Leicht nach <RELATIVE_DIRECTION> in Richtung <TOWARD_SIGN> abbiegen."
       },
       "empty_street_name_labels": [
-        "der Gehweg",
-        "der Radweg",
-        "der Mountainbike-Trail",
-        "der Zebrastreifen",
+        "Fußweg",
+        "Radweg",
+        "Mountainbike-Strecke",
+        "Fußgängerübergang",
         "die Treppe",
         "die Brücke",
         "der Tunnel"
@@ -146,10 +146,10 @@
         "3": "Weiter in Richtung <TOWARD_SIGN>."
       },
       "empty_street_name_labels": [
-        "der Gehweg",
-        "der Radweg",
-        "der Mountainbike-Trail",
-        "der Zebrastreifen",
+        "Fußweg",
+        "Radweg",
+        "Mountainbike-Strecke",
+        "Fußgängerübergang",
         "die Treppe",
         "die Brücke",
         "der Tunnel"
@@ -181,10 +181,10 @@
         "7": "Weiterfahren in Richtung <WEG_SCHILD> für <LÄNGE>."
       },
       "empty_street_name_labels": [
-        "der Gehweg",
-        "der Radweg",
-        "der Mountainbike-Trail",
-        "der Zebrastreifen",
+        "Fußweg",
+        "Radweg",
+        "Mountainbike-Strecke",
+        "Fußgängerübergang",
         "die Treppe",
         "die Brücke",
         "der Tunnel"
@@ -238,10 +238,10 @@
         "3": "Weiter in Richtung <TOWARD_SIGN>."
       },
       "empty_street_name_labels": [
-        "der Gehweg",
-        "der Radweg",
-        "der Mountainbike-Trail",
-        "der Zebrastreifen",
+        "Fußweg",
+        "Radweg",
+        "Mountainbike-Strecke",
+        "Fußgängerübergang",
         "die Treppe",
         "die Brücke",
         "der Tunnel"
@@ -378,10 +378,10 @@
         "3": "Die Fähre in Richtung <TOWARD_SIGN> nehmen."
       },
       "empty_street_name_labels": [
-        "der Gehweg",
-        "der Radweg",
-        "der Mountainbike-Trail",
-        "der Zebrastreifen",
+        "Fußweg",
+        "Radweg",
+        "Mountainbike-Strecke",
+        "Fußgängerübergang",
         "die Treppe",
         "die Brücke",
         "der Tunnel"
@@ -410,10 +410,10 @@
         "3": "Nehmen Sie die Fähre in Richtung <TOWARD_SIGN>."
       },
       "empty_street_name_labels": [
-        "der Gehweg",
-        "der Radweg",
-        "der Mountainbike-Trail",
-        "der Zebrastreifen",
+        "Fußweg",
+        "Radweg",
+        "Mountainbike-Strecke",
+        "Fußgängerübergang",
         "die Treppe",
         "die Brücke",
         "der Tunnel"
@@ -466,10 +466,10 @@
         "10."
       ],
       "empty_street_name_labels": [
-        "der Gehweg",
-        "der Radweg",
-        "der Mountainbike-Trail",
-        "der Zebrastreifen",
+        "Fußweg",
+        "Radweg",
+        "Mountainbike-Strecke",
+        "Fußgängerübergang",
         "die Treppe",
         "die Brücke",
         "der Tunnel"
@@ -566,10 +566,10 @@
         "zehnte"
       ],
       "empty_street_name_labels": [
-        "der Gehweg",
-        "der Radweg",
-        "der Mountainbike-Trail",
-        "der Zebrastreifen",
+        "Fußweg",
+        "Radweg",
+        "Mountainbike-Strecke",
+        "Fußgängerübergang",
         "die Treppe",
         "die Brücke",
         "der Tunnel"
@@ -749,10 +749,10 @@
         "3": "Aus dem Kreisverkehr in Richtung <TOWARD_SIGN> ausfahren."
       },
       "empty_street_name_labels": [
-        "der Gehweg",
-        "der Radweg",
-        "der Mountainbike-Trail",
-        "der Zebrastreifen",
+        "Fußweg",
+        "Radweg",
+        "Mountainbike-Strecke",
+        "Fußgängerübergang",
         "die Treppe",
         "die Brücke",
         "der Tunnel"
@@ -780,10 +780,10 @@
         "3": "Aus dem Kreisverkehr in Richtung <TOWARD_SIGN> ausfahren."
       },
       "empty_street_name_labels": [
-        "der Gehweg",
-        "der Radweg",
-        "der Mountainbike-Trail",
-        "der Zebrastreifen",
+        "Fußweg",
+        "Radweg",
+        "Mountainbike-Strecke",
+        "Fußgängerübergang",
         "die Treppe",
         "die Brücke",
         "der Tunnel"
@@ -932,10 +932,10 @@
         "7": "<RELATIVE_DIRECTION> halten um die Ausfahrt <NUMBER_SIGN> auf <STREET_NAMES> Richtung <TOWARD_SIGN> zu nehmen."
       },
       "empty_street_name_labels": [
-        "der Gehweg",
-        "der Radweg",
-        "der Mountainbike-Trail",
-        "der Zebrastreifen",
+        "Fußweg",
+        "Radweg",
+        "Mountainbike-Strecke",
+        "Fußgängerübergang",
         "die Treppe",
         "die Brücke",
         "der Tunnel"
@@ -982,10 +982,10 @@
         "3": "Auf <STREET_NAMES> über die Ausfahrt <NUMBER_SIGN> <RELATIVE_DIRECTION> halten Richtung <TOWARD_SIGN>."
       },
       "empty_street_name_labels": [
-        "der Gehweg",
-        "der Radweg",
-        "der Mountainbike-Trail",
-        "der Zebrastreifen",
+        "Fußweg",
+        "Radweg",
+        "Mountainbike-Strecke",
+        "Fußgängerübergang",
         "die Treppe",
         "die Brücke",
         "der Tunnel"
@@ -1020,10 +1020,10 @@
         "3": "Auf <STREET_NAMES> über die Ausfahrt <NUMBER_SIGN> <RELATIVE_DIRECTION> halten Richtung <TOWARD_SIGN>."
       },
       "empty_street_name_labels": [
-        "der Gehweg",
-        "der Radweg",
-        "der Mountainbike-Trail",
-        "der Zebrastreifen",
+        "Fußweg",
+        "Radweg",
+        "Mountainbike-Strecke",
+        "Fußgängerübergang",
         "die Treppe",
         "die Brücke",
         "der Tunnel"
@@ -1062,10 +1062,10 @@
         "7": "<RELATIVE_DIRECTION> halten um die Ausfahrt <NUMBER_SIGN> auf <STREET_NAMES> Richtung <TOWARD_SIGN> zu nehmen."
       },
       "empty_street_name_labels": [
-        "der Gehweg",
-        "der Radweg",
-        "der Mountainbike-Trail",
-        "der Zebrastreifen",
+        "Fußweg",
+        "Radweg",
+        "Mountainbike-Strecke",
+        "Fußgängerübergang",
         "die Treppe",
         "die Brücke",
         "der Tunnel"
@@ -1118,10 +1118,10 @@
         "Rechts"
       ],
       "empty_street_name_labels": [
-        "der Gehweg",
-        "der Radweg",
-        "der Mountainbike-Trail",
-        "der Zebrastreifen",
+        "Fußweg",
+        "Radweg",
+        "Mountainbike-Strecke",
+        "Fußgängerübergang",
         "die Treppe",
         "die Brücke",
         "der Tunnel"
@@ -1161,10 +1161,10 @@
         "Rechts"
       ],
       "empty_street_name_labels": [
-        "der Gehweg",
-        "der Radweg",
-        "der Mountainbike-Trail",
-        "der Zebrastreifen",
+        "Fußweg",
+        "Radweg",
+        "Mountainbike-Strecke",
+        "Fußgängerübergang",
         "die Treppe",
         "die Brücke",
         "der Tunnel"
@@ -1211,10 +1211,10 @@
         "1": "<LENGTH> weiter auf <STREET_NAMES>."
       },
       "empty_street_name_labels": [
-        "der Gehweg",
-        "der Radweg",
-        "der Mountainbike-Trail",
-        "der Zebrastreifen",
+        "Fußweg",
+        "Radweg",
+        "Mountainbike-Strecke",
+        "Fußgängerübergang",
         "die Treppe",
         "die Brücke",
         "der Tunnel"
@@ -1450,10 +1450,10 @@
         "5": "Scharf nach <RELATIVE_DIRECTION> in Richtung <TOWARD_SIGN> abbiegen."
       },
       "empty_street_name_labels": [
-        "der Gehweg",
-        "der Radweg",
-        "der Mountainbike-Trail",
-        "der Zebrastreifen",
+        "Fußweg",
+        "Radweg",
+        "Mountainbike-Strecke",
+        "Fußgängerübergang",
         "die Treppe",
         "die Brücke",
         "der Tunnel"
@@ -1493,10 +1493,10 @@
         "5": "Scharf nach <RELATIVE_DIRECTION> in Richtung <TOWARD_SIGN> abbiegen."
       },
       "empty_street_name_labels": [
-        "der Gehweg",
-        "der Radweg",
-        "der Mountainbike-Trail",
-        "der Zebrastreifen",
+        "Fußweg",
+        "Radweg",
+        "Mountainbike-Strecke",
+        "Fußgängerübergang",
         "die Treppe",
         "die Brücke",
         "der Tunnel"
@@ -1552,10 +1552,10 @@
         "Nordwesten"
       ],
       "empty_street_name_labels": [
-        "der Gehweg",
-        "der Radweg",
-        "der Mountainbike-Trail",
-        "der Zebrastreifen",
+        "Fußweg",
+        "Radweg",
+        "Mountainbike-Strecke",
+        "Fußgängerübergang",
         "die Treppe",
         "die Brücke",
         "der Tunnel"
@@ -1643,10 +1643,10 @@
         "Nordwesten"
       ],
       "empty_street_name_labels": [
-        "der Gehweg",
-        "der Radweg",
-        "der Mountainbike-Trail",
-        "der Zebrastreifen",
+        "Fußweg",
+        "Radweg",
+        "Mountainbike-Strecke",
+        "Fußgängerübergang",
         "die Treppe",
         "die Brücke",
         "der Tunnel"
@@ -2021,13 +2021,13 @@
         "5": "Biegen Sie in <RELATIVE_DIRECTION> in Richtung <TOWARD_SIGN> ab."
       },
       "empty_street_name_labels": [
-        "der Gehweg",
-        "der Radweg",
-        "der Mountainbike-Trail",
-        "der Zebrastreifen",
+        "Fußweg",
+        "Radweg",
+        "Mountainbike-Strecke",
+        "Fußgängerübergang",
         "die Treppe",
         "die Brücke",
-        "Der Tunnel"
+        "der Tunnel"
       ],
       "relative_directions": [
         "Links",
@@ -2064,13 +2064,13 @@
         "5": "Biegen Sie in <RELATIVE_DIRECTION> in Richtung <TOWARD_SIGN> ab."
       },
       "empty_street_name_labels": [
-        "der Gehweg",
-        "der Radweg",
-        "der Mountainbike-Trail",
-        "der Zebrastreifen",
+        "Fußweg",
+        "Radweg",
+        "Mountainbike-Strecke",
+        "Fußgängerübergang",
         "die Treppe",
         "die Brücke",
-        "Der Tunnel"
+        "der Tunnel"
       ],
       "relative_directions": [
         "Links",
@@ -2109,13 +2109,13 @@
         "7": "Machen Sie eine Kehrtwende in <RELATIVE_DIRECTION> Richtung <TOWARD_SIGN>."
       },
       "empty_street_name_labels": [
-        "der Gehweg",
-        "der Radweg",
-        "der Mountainbike-Trail",
-        "der Zebrastreifen",
+        "Fußweg",
+        "Radweg",
+        "Mountainbike-Strecke",
+        "Fußgängerübergang",
         "die Treppe",
         "die Brücke",
-        "Der Tunnel"
+        "der Tunnel"
       ],
       "relative_directions": [
         "Links",
@@ -2160,13 +2160,13 @@
         "7": "Machen Sie eine Kehrtwende in <RELATIVE_DIRECTION> Richtung <TOWARD_SIGN>."
       },
       "empty_street_name_labels": [
-        "der Gehweg",
-        "der Radweg",
-        "der Mountainbike-Trail",
-        "der Zebrastreifen",
+        "Fußweg",
+        "Radweg",
+        "Mountainbike-Strecke",
+        "Fußgängerübergang",
         "die Treppe",
         "die Brücke",
-        "Der Tunnel"
+        "der Tunnel"
       ],
       "relative_directions": [
         "links",
@@ -2253,17 +2253,17 @@
     },
     "pass": {
       "phrases": {
-        "0": "Übergeben Sie <OBJECT_LABEL>.",
-        "1": "Passieren Sie Ampeln auf <OBJECT_LABEL>."
+        "0": "Passiere <OBJECT_LABEL>.",
+        "1": "Passiere die Verkehrszeichen auf <OBJECT_LABEL>."
       },
       "object_labels": [
         "das Tor",
         "die Poller",
-        "Wegekreuzung"
+        "Wegkreuzung"
       ],
       "example_phrases": {
         "0": [
-          "Gehen Sie durch das Tor."
+          "Passiere das Tor."
         ]
       }
     },
@@ -2305,7 +2305,17 @@
           "Nehmen Sie die Rolltreppe."
         ],
         "1": [
-          "Nehmen Sie die Rolltreppe zur Ebene 3."
+          "Take the escalator to Level 3."
+        ]
+      }
+    },
+    "level_change": {
+      "phrases": {
+        "0": "Continue to <LEVEL>."
+      },
+      "example_phrases": {
+        "0": [
+          "Continue to Level 2."
         ]
       }
     },
@@ -2317,7 +2327,7 @@
       "empty_street_name_labels": [
         "Fußweg",
         "Radweg",
-        "Mountainbike Strecke",
+        "Mountainbike-Strecke",
         "Fußgängerübergang"
       ],
       "example_phrases": {
@@ -2335,10 +2345,10 @@
         "1": "Verlassen Sie das Gebäude und gehen Sie weiter auf <STREET_NAMES>."
       },
       "empty_street_name_labels": [
-        "der Gehweg",
-        "der Radweg",
-        "der Mountainbike-Trail",
-        "der Zebrastreifen"
+        "Fußweg",
+        "Radweg",
+        "Mountainbike-Strecke",
+        "Fußgängerübergang"
       ],
       "example_phrases": {
         "0": [

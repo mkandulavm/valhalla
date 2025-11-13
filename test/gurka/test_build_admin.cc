@@ -1,9 +1,6 @@
-#include "baldr/admin.h"
 #include "gurka.h"
 #include "mjolnir/adminbuilder.h"
-#include "mjolnir/pbfgraphparser.h"
 #include "mjolnir/util.h"
-#include "test/test.h"
 
 #include <gtest/gtest.h>
 #include <sqlite3.h>
@@ -232,7 +229,7 @@ valhalla::gurka::map BuildPBF(const std::string& workdir) {
   auto node_layout = gurka::detail::map_to_coordinates(ascii_map, gridsize);
 
   auto pbf_filename = workdir + "/map.pbf";
-  detail::build_pbf(node_layout, ways, nodes, relations, pbf_filename, 0, false);
+  detail::build_pbf(node_layout, ways, nodes, relations, pbf_filename, false);
 
   valhalla::gurka::map result;
   result.nodes = node_layout;
