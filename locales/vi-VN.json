@@ -1,8 +1,6 @@
 {
   "posix_locale": "vi_VN.UTF-8",
-  "aliases": [
-    "vi"
-  ],
+  "aliases": [],
   "instructions": {
     "arrive": {
       "phrases": {

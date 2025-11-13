@@ -1,2351 +1,2361 @@
 {
-    "posix_locale": "zh_TW.UTF-8",
-    "aliases": [],
-    "instructions": {
-        "arrive": {
-            "phrases": {
-                "0": "到達：<TIME>。",
-                "1": "到達：<TIME> 在 <TRANSIT_STOP>。"
-            },
-            "example_phrases": {
-                "0": [
-                    "到達：8:02 AM。"
-                ],
-                "1": [
-                    "到達：8:02 AM 在 8 St - NYU。"
-                ]
-            }
-        },
-        "arrive_verbal": {
-            "phrases": {
-                "0": "到達 <TIME>。",
-                "1": "到達 <TIME> 在 <TRANSIT_STOP>。"
-            },
-            "example_phrases": {
-                "0": [
-                    "到達 8:02 AM。"
-                ],
-                "1": [
-                    "到達 8:02 AM 在 8 St - NYU。"
-                ]
-            }
-        },
-        "bear": {
-            "phrases": {
-                "0": "向 <RELATIVE_DIRECTION>。",
-                "1": "向 <RELATIVE_DIRECTION> 上 <STREET_NAMES>。",
-                "2": "向 <RELATIVE_DIRECTION> 上 <BEGIN_STREET_NAMES>。繼續在 <STREET_NAMES>。",
-                "3": "向 <RELATIVE_DIRECTION> 保持在 <STREET_NAMES>。",
-                "4": "在 <JUNCTION_NAME> 向 <RELATIVE_DIRECTION>。",
-                "5": "朝 <TOWARD_SIGN> 向 <RELATIVE_DIRECTION>。"
-            },
-            "empty_street_name_labels": [
-                "步道",
-                "自行車道",
-                "山地自行車道",
-                "人行橫道",
-                "樓梯",
-                "橋",
-                "隧道"
-            ],
-            "relative_directions": [
-                "左",
-                "右"
-            ],
-            "example_phrases": {
-                "0": [
-                    "向右。"
-                ],
-                "1": [
-                    "向左上 Arlen 路。"
-                ],
-                "2": [
-                    "向右上 Belair 路/US 1 商業道。繼續在 US 1 商業道。"
-                ],
-                "3": [
-                    "向左保持在 US 15 南。"
-                ],
-                "4": [
-                    "在 Mannenbashi 東向右。"
-                ],
-                "5": [
-                    "朝巴爾的摩向左。"
-                ]
-            }
-        },
-        "bear_verbal": {
-            "phrases": {
-                "0": "向 <RELATIVE_DIRECTION>。",
-                "1": "向 <RELATIVE_DIRECTION> 上 <STREET_NAMES>。",
-                "2": "向 <RELATIVE_DIRECTION> 上 <BEGIN_STREET_NAMES>。",
-                "3": "向 <RELATIVE_DIRECTION> 保持在 <STREET_NAMES>。",
-                "4": "在 <JUNCTION_NAME> 向 <RELATIVE_DIRECTION>。",
-                "5": "朝 <TOWARD_SIGN> 向 <RELATIVE_DIRECTION>。"
-            },
-            "empty_street_name_labels": [
-                "步道",
-                "自行車道",
-                "山地自行車道",
-                "人行橫道",
-                "樓梯",
-                "橋",
-                "隧道"
-            ],
-            "relative_directions": [
-                "左",
-                "右"
-            ],
-            "example_phrases": {
-                "0": [
-                    "向右。"
-                ],
-                "1": [
-                    "向左上 Arlen 路。"
-                ],
-                "2": [
-                    "向右上 Belair 路，U.S. 1 商業道。"
-                ],
-                "3": [
-                    "向左保持在 U.S. 15 南。"
-                ],
-                "4": [
-                    "在 Mannenbashi 東向右。"
-                ],
-                "5": [
-                    "朝巴爾的摩向左。"
-                ]
-            }
-        },
-        "becomes": {
-            "phrases": {
-                "0": "<PREVIOUS_STREET_NAMES> 變成 <STREET_NAMES>。"
-            },
-            "example_phrases": {
-                "0": [
-                    "Vine 街變成 Middletown 路。"
-                ]
-            }
-        },
-        "becomes_verbal": {
-            "phrases": {
-                "0": "<PREVIOUS_STREET_NAMES> 變成 <STREET_NAMES>。"
-            },
-            "example_phrases": {
-                "0": [
-                    "Vine 街變成 Middletown 路。"
-                ]
-            }
-        },
-        "continue": {
-            "phrases": {
-                "0": "繼續。",
-                "1": "繼續在 <STREET_NAMES>。",
-                "2": "在 <JUNCTION_NAME> 繼續。",
-                "3": "朝 <TOWARD_SIGN> 繼續。"
-            },
-            "empty_street_name_labels": [
-                "步道",
-                "自行車道",
-                "山地自行車道",
-                "人行橫道",
-                "樓梯",
-                "橋",
-                "隧道"
-            ],
-            "example_phrases": {
-                "0": [
-                    "繼續。"
-                ],
-                "1": [
-                    "繼續在 10th 大道。"
-                ],
-                "2": [
-                    "在 Mannenbashi 東繼續。"
-                ],
-                "3": [
-                    "朝巴爾的摩繼續。"
-                ]
-            }
-        },
-        "continue_verbal": {
-            "phrases": {
-                "0": "繼續。",
-                "1": "繼續走 <LENGTH>。",
-                "2": "繼續在 <STREET_NAMES>。",
-                "3": "繼續在 <STREET_NAMES> 走 <LENGTH>。",
-                "4": "在 <JUNCTION_NAME> 繼續。",
-                "5": "在 <JUNCTION_NAME> 走 <LENGTH> 繼續。",
-                "6": "朝 <TOWARD_SIGN> 繼續。",
-                "7": "朝 <TOWARD_SIGN> 走 <LENGTH> 繼續。"
-            },
-            "empty_street_name_labels": [
-                "步道",
-                "自行車道",
-                "山地自行車道",
-                "人行橫道",
-                "樓梯",
-                "橋",
-                "隧道"
-            ],
-            "metric_lengths": [
-                "<KILOMETERS> 公里",
-                "1 公里",
-                "<METERS> 公尺",
-                "少於 10 公尺"
-            ],
-            "us_customary_lengths": [
-                "<MILES> 英里",
-                "1 英里",
-                "半英里",
-                "四分之一英里",
-                "<FEET> 英尺",
-                "少於 10 英尺"
-            ],
-            "example_phrases": {
-                "0": [
-                    "繼續。"
-                ],
-                "1": [
-                    "繼續走 300 英尺。"
-                ],
-                "2": [
-                    "繼續在 10th 大道。"
-                ],
-                "3": [
-                    "繼續在 10th 大道走 3 英里。"
-                ],
-                "4": [
-                    "在 Mannenbashi 東繼續。"
-                ],
-                "5": [
-                    "在 Mannenbashi 東走 2 英里繼續。"
-                ],
-                "6": [
-                    "朝巴爾的摩繼續。"
-                ],
-                "7": [
-                    "朝巴爾的摩走 5 英里繼續。"
-                ]
-            }
-        },
-        "continue_verbal_alert": {
-            "phrases": {
-                "0": "繼續。",
-                "1": "繼續在 <STREET_NAMES>。",
-                "2": "在 <JUNCTION_NAME> 繼續。",
-                "3": "朝 <TOWARD_SIGN> 繼續。"
-            },
-            "empty_street_name_labels": [
-                "步道",
-                "自行車道",
-                "山地自行車道",
-                "人行橫道",
-                "樓梯",
-                "橋",
-                "隧道"
-            ],
-            "example_phrases": {
-                "0": [
-                    "繼續。"
-                ],
-                "1": [
-                    "繼續在 10th 大道。"
-                ],
-                "2": [
-                    "在 Mannenbashi 東繼續。"
-                ],
-                "3": [
-                    "朝巴爾的摩繼續。"
-                ]
-            }
-        },
-        "depart": {
-            "phrases": {
-                "0": "出發：<TIME>。",
-                "1": "出發：<TIME> 從 <TRANSIT_STOP>。"
-            },
-            "example_phrases": {
-                "0": [
-                    "出發：8:02 AM。"
-                ],
-                "1": [
-                    "出發：8:02 AM 從 8 St - NYU。"
-                ]
-            }
-        },
-        "depart_verbal": {
-            "phrases": {
-                "0": "出發於 <TIME>。",
-                "1": "出發於 <TIME> 從 <TRANSIT_STOP>。"
-            },
-            "example_phrases": {
-                "0": [
-                    "出發於 8:02 AM。"
-                ],
-                "1": [
-                    "出發於 8:02 AM 從 8 St - NYU。"
-                ]
-            }
-        },
-        "destination": {
-            "phrases": {
-                "0": "您已到達目的地。",
-                "1": "您已到達 <DESTINATION>。",
-                "2": "您的目的地在 <RELATIVE_DIRECTION>。",
-                "3": "<DESTINATION> 在 <RELATIVE_DIRECTION>。"
-            },
-            "relative_directions": [
-                "左",
-                "右"
-            ],
-            "example_phrases": {
-                "0": [
-                    "您已到達目的地。"
-                ],
-                "1": [
-                    "您已到達 3206 Powelton 大道。"
-                ],
-                "2": [
-                    "您的目的地在左邊。",
-                    "您的目的地在右邊。"
-                ],
-                "3": [
-                    "Lancaster Brewing Company 在左邊。"
-                ]
-            }
-        },
-        "destination_verbal": {
-            "phrases": {
-                "0": "您已到達目的地。",
-                "1": "您已到達 <DESTINATION>。",
-                "2": "您的目的地在 <RELATIVE_DIRECTION>。",
-                "3": "<DESTINATION> 在 <RELATIVE_DIRECTION>。"
-            },
-            "relative_directions": [
-                "左",
-                "右"
-            ],
-            "example_phrases": {
-                "0": [
-                    "您已到達目的地。"
-                ],
-                "1": [
-                    "您已到達 3206 Powelton 大道。"
-                ],
-                "2": [
-                    "您的目的地在左邊。",
-                    "您的目的地在右邊。"
-                ],
-                "3": [
-                    "Lancaster Brewing Company 在左邊。"
-                ]
-            }
-        },
-        "destination_verbal_alert": {
-            "phrases": {
-                "0": "您將到達目的地。",
-                "1": "您將到達 <DESTINATION>。",
-                "2": "您的目的地將在 <RELATIVE_DIRECTION>。",
-                "3": "<DESTINATION> 將在 <RELATIVE_DIRECTION>。"
-            },
-            "relative_directions": [
-                "左",
-                "右"
-            ],
-            "example_phrases": {
-                "0": [
-                    "您將到達目的地。"
-                ],
-                "1": [
-                    "您將到達 3206 Powelton 大道。"
-                ],
-                "2": [
-                    "您的目的地將在左邊。",
-                    "您的目的地將在右邊。"
-                ],
-                "3": [
-                    "Lancaster Brewing Company 將在左邊。"
-                ]
-            }
-        },
-        "enter_ferry": {
-            "phrases": {
-                "0": "乘坐渡輪。",
-                "1": "乘坐 <STREET_NAMES>。",
-                "2": "乘坐 <STREET_NAMES> <FERRY_LABEL>。",
-                "3": "乘坐渡輪朝 <TOWARD_SIGN>。"
-            },
-            "empty_street_name_labels": [
-                "步道",
-                "自行車道",
-                "山地自行車道",
-                "人行橫道",
-                "樓梯",
-                "橋",
-                "隧道"
-            ],
-            "ferry_label": "渡輪",
-            "example_phrases": {
-                "0": [
-                    "乘坐渡輪。"
-                ],
-                "1": [
-                    "乘坐 Millersburg 渡輪。"
-                ],
-                "2": [
-                    "乘坐 Bridgeport - Port Jefferson 渡輪。"
-                ],
-                "3": [
-                    "乘坐渡輪朝 Cape May。"
-                ]
-            }
-        },
-        "enter_ferry_verbal": {
-            "phrases": {
-                "0": "乘坐渡輪。",
-                "1": "乘坐 <STREET_NAMES>。",
-                "2": "乘坐 <STREET_NAMES> <FERRY_LABEL>。",
-                "3": "乘坐渡輪朝 <TOWARD_SIGN>。"
-            },
-            "empty_street_name_labels": [
-                "步道",
-                "自行車道",
-                "山地自行車道",
-                "人行橫道",
-                "樓梯",
-                "橋",
-                "隧道"
-            ],
-            "ferry_label": "渡輪",
-            "example_phrases": {
-                "0": [
-                    "乘坐渡輪。"
-                ],
-                "1": [
-                    "乘坐 Millersburg 渡輪。"
-                ],
-                "2": [
-                    "乘坐 Bridgeport - Port Jefferson 渡輪。"
-                ],
-                "3": [
-                    "乘坐渡輪朝 Cape May。"
-                ]
-            }
-        },
-        "enter_roundabout": {
-            "phrases": {
-                "0": "進入圓環。",
-                "1": "進入圓環並走第 <ORDINAL_VALUE> 出口。",
-                "2": "進入圓環並走第 <ORDINAL_VALUE> 出口上 <ROUNDABOUT_EXIT_STREET_NAMES>。",
-                "3": "進入圓環並走第 <ORDINAL_VALUE> 出口上 <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>。繼續在 <ROUNDABOUT_EXIT_STREET_NAMES>。",
-                "4": "進入圓環並走第 <ORDINAL_VALUE> 出口朝 <TOWARD_SIGN>。",
-                "5": "進入圓環並走出口上 <ROUNDABOUT_EXIT_STREET_NAMES>。",
-                "6": "進入圓環並走出口上 <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>。繼續在 <ROUNDABOUT_EXIT_STREET_NAMES>。",
-                "7": "進入圓環並走出口朝 <TOWARD_SIGN>。",
-                "8": "進入 <STREET_NAMES>",
-                "9": "進入 <STREET_NAMES> 並走第 <ORDINAL_VALUE> 出口。",
-                "10": "進入 <STREET_NAMES> 並走第 <ORDINAL_VALUE> 出口上 <ROUNDABOUT_EXIT_STREET_NAMES>。",
-                "11": "進入 <STREET_NAMES> 並走第 <ORDINAL_VALUE> 出口上 <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>。繼續在 <ROUNDABOUT_EXIT_STREET_NAMES>。",
-                "12": "進入 <STREET_NAMES> 並走第 <ORDINAL_VALUE> 出口朝 <TOWARD_SIGN>。",
-                "13": "進入 <STREET_NAMES> 並走出口上 <ROUNDABOUT_EXIT_STREET_NAMES>。",
-                "14": "進入 <STREET_NAMES> 並走出口上 <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>。繼續在 <ROUNDABOUT_EXIT_STREET_NAMES>。",
-                "15": "進入 <STREET_NAMES> 並走出口朝 <TOWARD_SIGN>。"
-            },
-            "ordinal_values": [
-                "第一",
-                "第二",
-                "第三",
-                "第四",
-                "第五",
-                "第六",
-                "第七",
-                "第八",
-                "第九",
-                "第十"
-            ],
-            "empty_street_name_labels": [
-                "步道",
-                "自行車道",
-                "山地自行車道",
-                "人行橫道",
-                "樓梯",
-                "橋",
-                "隧道"
-            ],
-            "example_phrases": {
-                "0": [
-                    "進入圓環。"
-                ],
-                "1": [
-                    "進入圓環並走第一出口。",
-                    "進入圓環並走第二出口。",
-                    "進入圓環並走第三出口。",
-                    "進入圓環並走第四出口。",
-                    "進入圓環並走第五出口。",
-                    "進入圓環並走第六出口。",
-                    "進入圓環並走第七出口。",
-                    "進入圓環並走第八出口。",
-                    "進入圓環並走第九出口。",
-                    "進入圓環並走第十出口。"
-                ],
-                "2": [
-                    "進入圓環並走第三出口上 Main 街。"
-                ],
-                "3": [
-                    "進入圓環並走第三出口上 US 322/Main 街。繼續在 US 322。"
-                ],
-                "4": [
-                    "進入圓環並走第三出口朝巴爾的摩。"
-                ],
-                "5": [
-                    "進入圓環並走出口上 Main 街。"
-                ],
-                "6": [
-                    "進入圓環並走出口上 US 322/Main 街。繼續在 US 322。"
-                ],
-                "7": [
-                    "進入圓環並走出口朝巴爾的摩。"
-                ],
-                "8": [
-                    "進入杜邦環形交叉路口。"
-                ],
-                "9": [
-                    "進入杜邦環形交叉路口並走第一出口。"
-                ],
-                "10": [
-                    "進入杜邦環形交叉路口並走第三出口上 Main 街。"
-                ],
-                "11": [
-                    "進入杜邦環形交叉路口並走第三出口上 US 322/Main 街。繼續在 US 322。"
-                ],
-                "12": [
-                    "進入杜邦環形交叉路口並走第三出口朝巴爾的摩。"
-                ],
-                "13": [
-                    "進入杜邦環形交叉路口並走出口上 Main 街。"
-                ],
-                "14": [
-                    "進入杜邦環形交叉路口並走出口上 US 322/Main 街。繼續在 US 322。"
-                ],
-                "15": [
-                    "進入杜邦環形交叉路口並走出口朝巴爾的摩。"
-                ]
-            }
-        },
-        "enter_roundabout_verbal": {
-            "phrases": {
-                "0": "進入圓環。",
-                "1": "進入圓環並走第 <ORDINAL_VALUE> 出口。",
-                "2": "進入圓環並走第 <ORDINAL_VALUE> 出口上 <ROUNDABOUT_EXIT_STREET_NAMES>。",
-                "3": "進入圓環並走第 <ORDINAL_VALUE> 出口上 <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>。",
-                "4": "進入圓環並走第 <ORDINAL_VALUE> 出口朝 <TOWARD_SIGN>。",
-                "5": "進入圓環並走出口上 <ROUNDABOUT_EXIT_STREET_NAMES>。",
-                "6": "進入圓環並走出口上 <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>。",
-                "7": "進入圓環並走出口朝 <TOWARD_SIGN>。",
-                "8": "進入 <STREET_NAMES>",
-                "9": "進入 <STREET_NAMES> 並走第 <ORDINAL_VALUE> 出口。",
-                "10": "進入 <STREET_NAMES> 並走第 <ORDINAL_VALUE> 出口上 <ROUNDABOUT_EXIT_STREET_NAMES>。",
-                "11": "進入 <STREET_NAMES> 並走第 <ORDINAL_VALUE> 出口上 <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>。",
-                "12": "進入 <STREET_NAMES> 並走第 <ORDINAL_VALUE> 出口朝 <TOWARD_SIGN>。",
-                "13": "進入 <STREET_NAMES> 並走出口上 <ROUNDABOUT_EXIT_STREET_NAMES>。",
-                "14": "進入 <STREET_NAMES> 並走出口上 <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>。",
-                "15": "進入 <STREET_NAMES> 並走出口朝 <TOWARD_SIGN>。"
-            },
-            "ordinal_values": [
-                "第一",
-                "第二",
-                "第三",
-                "第四",
-                "第五",
-                "第六",
-                "第七",
-                "第八",
-                "第九",
-                "第十"
-            ],
-            "empty_street_name_labels": [
-                "步道",
-                "自行車道",
-                "山地自行車道",
-                "人行橫道",
-                "樓梯",
-                "橋",
-                "隧道"
-            ],
-            "example_phrases": {
-                "0": [
-                    "進入圓環。"
-                ],
-                "1": [
-                    "進入圓環並走第一出口。",
-                    "進入圓環並走第二出口。",
-                    "進入圓環並走第三出口。",
-                    "進入圓環並走第四出口。",
-                    "進入圓環並走第五出口。",
-                    "進入圓環並走第六出口。",
-                    "進入圓環並走第七出口。",
-                    "進入圓環並走第八出口。",
-                    "進入圓環並走第九出口。",
-                    "進入圓環並走第十出口。"
-                ],
-                "2": [
-                    "進入圓環並走第三出口上 Main 街。"
-                ],
-                "3": [
-                    "進入圓環並走第三出口上 U.S. 3 22/Main 街。"
-                ],
-                "4": [
-                    "進入圓環並走第三出口朝巴爾的摩。"
-                ],
-                "5": [
-                    "進入圓環並走出口上 Main 街。"
-                ],
-                "6": [
-                    "進入圓環並走出口上 U.S. 3 22/Main 街。"
-                ],
-                "7": [
-                    "進入圓環並走出口朝巴爾的摩。"
-                ],
-                "8": [
-                    "進入杜邦環形交叉路口。"
-                ],
-                "9": [
-                    "進入杜邦環形交叉路口並走第一出口。"
-                ],
-                "10": [
-                    "進入杜邦環形交叉路口並走第三出口上 Main 街。"
-                ],
-                "11": [
-                    "進入杜邦環形交叉路口並走第三出口上 U.S. 3 22/Main 街。"
-                ],
-                "12": [
-                    "進入杜邦環形交叉路口並走第三出口朝巴爾的摩。"
-                ],
-                "13": [
-                    "進入杜邦環形交叉路口並走出口上 Main 街。"
-                ],
-                "14": [
-                    "進入杜邦環形交叉路口並走出口上 U.S. 3 22/Main 街。"
-                ],
-                "15": [
-                    "進入杜邦環形交叉路口並走出口朝巴爾的摩。"
-                ]
-            }
-        },
-        "exit": {
-            "phrases": {
-                "0": "在 <RELATIVE_DIRECTION> 出口。",
-                "1": "在 <RELATIVE_DIRECTION> 出口 <NUMBER_SIGN>。",
-                "2": "在 <RELATIVE_DIRECTION> 出口 <BRANCH_SIGN>。",
-                "3": "在 <RELATIVE_DIRECTION> 出口 <NUMBER_SIGN> 上 <BRANCH_SIGN>。",
-                "4": "在 <RELATIVE_DIRECTION> 出口朝 <TOWARD_SIGN>。",
-                "5": "在 <RELATIVE_DIRECTION> 出口 <NUMBER_SIGN> 朝 <TOWARD_SIGN>。",
-                "6": "在 <RELATIVE_DIRECTION> 出口 <BRANCH_SIGN> 朝 <TOWARD_SIGN>。",
-                "7": "在 <RELATIVE_DIRECTION> 出口 <NUMBER_SIGN> 上 <BRANCH_SIGN> 朝 <TOWARD_SIGN>。",
-                "8": "在 <RELATIVE_DIRECTION> 出口 <NAME_SIGN>。",
-                "10": "在 <RELATIVE_DIRECTION> 出口 <NAME_SIGN> 上 <BRANCH_SIGN>。",
-                "12": "在 <RELATIVE_DIRECTION> 出口 <NAME_SIGN> 朝 <TOWARD_SIGN>。",
-                "14": "在 <RELATIVE_DIRECTION> 出口 <NAME_SIGN> 上 <BRANCH_SIGN> 朝 <TOWARD_SIGN>。",
-                "15": "在出口。",
-                "16": "在出口 <NUMBER_SIGN>。",
-                "17": "在出口 <BRANCH_SIGN>。",
-                "18": "在出口 <NUMBER_SIGN> 上 <BRANCH_SIGN>。",
-                "19": "在出口朝 <TOWARD_SIGN>。",
-                "20": "在出口 <NUMBER_SIGN> 朝 <TOWARD_SIGN>。",
-                "21": "在出口 <BRANCH_SIGN> 朝 <TOWARD_SIGN>。",
-                "22": "在出口 <NUMBER_SIGN> 上 <BRANCH_SIGN> 朝 <TOWARD_SIGN>。",
-                "23": "在出口 <NAME_SIGN>。",
-                "25": "在出口 <NAME_SIGN> 上 <BRANCH_SIGN>。",
-                "27": "在出口 <NAME_SIGN> 朝 <TOWARD_SIGN>。",
-                "29": "在出口 <NAME_SIGN> 上 <BRANCH_SIGN> 朝 <TOWARD_SIGN>。"
-            },
-            "relative_directions": [
-                "左",
-                "右"
-            ],
-            "example_phrases": {
-                "0": [
-                    "在左出口。",
-                    "在右出口。"
-                ],
-                "1": [
-                    "在右出口 67 B-A。"
-                ],
-                "2": [
-                    "在右出口 US 322 西。"
-                ],
-                "3": [
-                    "在右出口 67 B-A 上 US 322 西。"
-                ],
-                "4": [
-                    "在右出口朝 Lewistown。"
-                ],
-                "5": [
-                    "在右出口 67 B-A 朝 Lewistown。"
-                ],
-                "6": [
-                    "在右出口 US 322 西朝 Lewistown。"
-                ],
-                "7": [
-                    "在右出口 67 B-A 上 US 322 西朝 Lewistown/State College。"
-                ],
-                "8": [
-                    "在左出口 White Marsh Boulevard。"
-                ],
-                "10": [
-                    "在左出口 White Marsh Boulevard 上 MD 43 東。"
-                ],
-                "12": [
-                    "在左出口 White Marsh Boulevard 朝 White Marsh。"
-                ],
-                "14": [
-                    "在左出口 White Marsh Boulevard 上 MD 43 東朝 White Marsh。"
-                ],
-                "15": [
-                    "在出口。"
-                ],
-                "16": [
-                    "在出口 67 B-A。"
-                ],
-                "17": [
-                    "在出口 US 322 西。"
-                ],
-                "18": [
-                    "在出口 67 B-A 上 US 322 西。"
-                ],
-                "19": [
-                    "在出口朝 Lewistown。"
-                ],
-                "20": [
-                    "在出口 67 B-A 朝 Lewistown。"
-                ],
-                "21": [
-                    "在出口 US 322 西朝 Lewistown。"
-                ],
-                "22": [
-                    "在出口 67 B-A 上 US 322 西朝 Lewistown/State College。"
-                ],
-                "23": [
-                    "在出口 White Marsh Boulevard。"
-                ],
-                "25": [
-                    "在出口 White Marsh Boulevard 上 MD 43 東。"
-                ],
-                "27": [
-                    "在出口 White Marsh Boulevard 朝 White Marsh。"
-                ],
-                "29": [
-                    "在出口 White Marsh Boulevard 上 MD 43 東朝 White Marsh。"
-                ]
-            }
-        },
-        "exit_roundabout": {
-            "phrases": {
-                "0": "離開圓環。",
-                "1": "離開圓環上 <STREET_NAMES>。",
-                "2": "離開圓環上 <BEGIN_STREET_NAMES>。繼續在 <STREET_NAMES>。",
-                "3": "離開圓環朝 <TOWARD_SIGN>。"
-            },
-            "empty_street_name_labels": [
-                "步道",
-                "自行車道",
-                "山地自行車道",
-                "人行橫道",
-                "樓梯",
-                "橋",
-                "隧道"
-            ],
-            "example_phrases": {
-                "0": [
-                    "離開圓環。"
-                ],
-                "1": [
-                    "離開圓環上 Philadelphia 路/MD 7。"
-                ],
-                "2": [
-                    "離開圓環上 Catoctin Mountain 高速公路/US 15。繼續在 US 15。"
-                ],
-                "3": [
-                    "離開圓環朝巴爾的摩。"
-                ]
-            }
-        },
-        "exit_roundabout_verbal": {
-            "phrases": {
-                "0": "離開圓環。",
-                "1": "離開圓環上 <STREET_NAMES>。",
-                "2": "離開圓環上 <BEGIN_STREET_NAMES>。",
-                "3": "離開圓環朝 <TOWARD_SIGN>。"
-            },
-            "empty_street_name_labels": [
-                "步道",
-                "自行車道",
-                "山地自行車道",
-                "人行橫道",
-                "樓梯",
-                "橋",
-                "隧道"
-            ],
-            "example_phrases": {
-                "0": [
-                    "離開圓環。"
-                ],
-                "1": [
-                    "離開圓環上 Philadelphia 路，馬里蘭 7。"
-                ],
-                "2": [
-                    "離開圓環上 Catoctin Mountain 高速公路，U.S. 15。"
-                ],
-                "3": [
-                    "離開圓環朝巴爾的摩。"
-                ]
-            }
-        },
-        "exit_verbal": {
-            "phrases": {
-                "0": "在 <RELATIVE_DIRECTION> 出口。",
-                "1": "在 <RELATIVE_DIRECTION> 出口 <NUMBER_SIGN>。",
-                "2": "在 <RELATIVE_DIRECTION> 出口 <BRANCH_SIGN>。",
-                "3": "在 <RELATIVE_DIRECTION> 出口 <NUMBER_SIGN> 上 <BRANCH_SIGN>。",
-                "4": "在 <RELATIVE_DIRECTION> 出口朝 <TOWARD_SIGN>。",
-                "5": "在 <RELATIVE_DIRECTION> 出口 <NUMBER_SIGN> 朝 <TOWARD_SIGN>。",
-                "6": "在 <RELATIVE_DIRECTION> 出口 <BRANCH_SIGN> 朝 <TOWARD_SIGN>。",
-                "7": "在 <RELATIVE_DIRECTION> 出口 <NUMBER_SIGN> 上 <BRANCH_SIGN> 朝 <TOWARD_SIGN>。",
-                "8": "在 <RELATIVE_DIRECTION> 出口 <NAME_SIGN>。",
-                "10": "在 <RELATIVE_DIRECTION> 出口 <NAME_SIGN> 上 <BRANCH_SIGN>。",
-                "12": "在 <RELATIVE_DIRECTION> 出口 <NAME_SIGN> 朝 <TOWARD_SIGN>。",
-                "14": "在 <RELATIVE_DIRECTION> 出口 <NAME_SIGN> 上 <BRANCH_SIGN> 朝 <TOWARD_SIGN>。",
-                "15": "在出口。",
-                "16": "在出口 <NUMBER_SIGN>。",
-                "17": "在出口 <BRANCH_SIGN>。",
-                "18": "在出口 <NUMBER_SIGN> 上 <BRANCH_SIGN>。",
-                "19": "在出口朝 <TOWARD_SIGN>。",
-                "20": "在出口 <NUMBER_SIGN> 朝 <TOWARD_SIGN>。",
-                "21": "在出口 <BRANCH_SIGN> 朝 <TOWARD_SIGN>。",
-                "22": "在出口 <NUMBER_SIGN> 上 <BRANCH_SIGN> 朝 <TOWARD_SIGN>。",
-                "23": "在出口 <NAME_SIGN>。",
-                "25": "在出口 <NAME_SIGN> 上 <BRANCH_SIGN>。",
-                "27": "在出口 <NAME_SIGN> 朝 <TOWARD_SIGN>。",
-                "29": "在出口 <NAME_SIGN> 上 <BRANCH_SIGN> 朝 <TOWARD_SIGN>。"
-            },
-            "relative_directions": [
-                "左",
-                "右"
-            ],
-            "example_phrases": {
-                "0": [
-                    "在左出口。",
-                    "在右出口。"
-                ],
-                "1": [
-                    "在右出口 67 B-A。"
-                ],
-                "2": [
-                    "在右出口 U.S. 3 22 西。"
-                ],
-                "3": [
-                    "在右出口 67 B-A 上 U.S. 3 22 西。"
-                ],
-                "4": [
-                    "在右出口朝 Lewistown。"
-                ],
-                "5": [
-                    "在右出口 67 B-A 朝 Lewistown。"
-                ],
-                "6": [
-                    "在右出口 U.S. 3 22 西朝 Lewistown。"
-                ],
-                "7": [
-                    "在右出口 67 B-A 上 U.S. 3 22 西朝 Lewistown，State College。"
-                ],
-                "8": [
-                    "在左出口 White Marsh Boulevard。"
-                ],
-                "10": [
-                    "在左出口 White Marsh Boulevard 上馬里蘭 43 東。"
-                ],
-                "12": [
-                    "在左出口 White Marsh Boulevard 朝 White Marsh。"
-                ],
-                "14": [
-                    "在左出口 White Marsh Boulevard 上馬里蘭 43 東朝 White Marsh。"
-                ],
-                "15": [
-                    "在出口。"
-                ],
-                "16": [
-                    "在出口 67 B-A。"
-                ],
-                "17": [
-                    "在出口 U.S. 3 22 西。"
-                ],
-                "18": [
-                    "在出口 67 B-A 上 U.S. 3 22 西。"
-                ],
-                "19": [
-                    "在出口朝 Lewistown。"
-                ],
-                "20": [
-                    "在出口 67 B-A 朝 Lewistown。"
-                ],
-                "21": [
-                    "在出口 U.S. 3 22 西朝 Lewistown。"
-                ],
-                "22": [
-                    "在出口 67 B-A 上 U.S. 3 22 西朝 Lewistown，State College。"
-                ],
-                "23": [
-                    "在出口 White Marsh Boulevard。"
-                ],
-                "25": [
-                    "在出口 White Marsh Boulevard 上馬里蘭 43 東。"
-                ],
-                "27": [
-                    "在出口 White Marsh Boulevard 朝 White Marsh。"
-                ],
-                "29": [
-                    "在出口 White Marsh Boulevard 上馬里蘭 43 東朝 White Marsh。"
-                ]
-            }
-        },
-        "exit_visual": {
-            "phrases": {
-                "0": "出口 <EXIT_NUMBERS>"
-            },
-            "example_phrases": {
-                "0": [
-                    "出口 1A"
-                ]
-            }
-        },
-        "keep": {
-            "phrases": {
-                "0": "在分叉處保持 <RELATIVE_DIRECTION>。",
-                "1": "保持 <RELATIVE_DIRECTION> 走出口 <NUMBER_SIGN>。",
-                "2": "保持 <RELATIVE_DIRECTION> 走 <STREET_NAMES>。",
-                "3": "保持 <RELATIVE_DIRECTION> 走出口 <NUMBER_SIGN> 上 <STREET_NAMES>。",
-                "4": "朝 <TOWARD_SIGN> 保持 <RELATIVE_DIRECTION>。",
-                "5": "保持 <RELATIVE_DIRECTION> 走出口 <NUMBER_SIGN> 朝 <TOWARD_SIGN>。",
-                "6": "保持 <RELATIVE_DIRECTION> 走 <STREET_NAMES> 朝 <TOWARD_SIGN>。",
-                "7": "保持 <RELATIVE_DIRECTION> 走出口 <NUMBER_SIGN> 上 <STREET_NAMES> 朝 <TOWARD_SIGN>。"
-            },
-            "empty_street_name_labels": [
-                "步道",
-                "自行車道",
-                "山地自行車道",
-                "人行橫道",
-                "樓梯",
-                "橋",
-                "隧道"
-            ],
-            "relative_directions": [
-                "左",
-                "直行",
-                "右"
-            ],
-            "example_phrases": {
-                "0": [
-                    "在分叉處保持左。",
-                    "在分叉處保持直行。",
-                    "在分叉處保持右。"
-                ],
-                "1": [
-                    "保持右走出口 62。"
-                ],
-                "2": [
-                    "保持右走 I 895 南。"
-                ],
-                "3": [
-                    "保持右走出口 62 上 I 895 南。"
-                ],
-                "4": [
-                    "朝 Annapolis 保持右。"
-                ],
-                "5": [
-                    "保持右走出口 62 朝 Annapolis。"
-                ],
-                "6": [
-                    "保持右走 I 895 南朝 Annapolis。"
-                ],
-                "7": [
-                    "保持右走出口 62 上 I 895 南朝 Annapolis。"
-                ]
-            }
-        },
-        "keep_to_stay_on": {
-            "phrases": {
-                "0": "保持 <RELATIVE_DIRECTION> 以繼續在 <STREET_NAMES>。",
-                "1": "保持 <RELATIVE_DIRECTION> 走出口 <NUMBER_SIGN> 以繼續在 <STREET_NAMES>。",
-                "2": "保持 <RELATIVE_DIRECTION> 繼續在 <STREET_NAMES> 朝 <TOWARD_SIGN>。",
-                "3": "保持 <RELATIVE_DIRECTION> 走出口 <NUMBER_SIGN> 繼續在 <STREET_NAMES> 朝 <TOWARD_SIGN>。"
-            },
-            "empty_street_name_labels": [
-                "步道",
-                "自行車道",
-                "山地自行車道",
-                "人行橫道",
-                "樓梯",
-                "橋",
-                "隧道"
-            ],
-            "relative_directions": [
-                "左",
-                "直行",
-                "右"
-            ],
-            "example_phrases": {
-                "0": [
-                    "保持左以繼續在 I 95 南。",
-                    "保持直行以繼續在 I 95 南。",
-                    "保持右以繼續在 I 95 南。"
-                ],
-                "1": [
-                    "保持左走出口 62 以繼續在 I 95 南。"
-                ],
-                "2": [
-                    "保持左繼續在 I 95 南朝巴爾的摩。"
-                ],
-                "3": [
-                    "保持左走出口 62 以繼續在 I 95 南朝巴爾的摩。"
-                ]
-            }
-        },
-        "keep_to_stay_on_verbal": {
-            "phrases": {
-                "0": "保持 <RELATIVE_DIRECTION> 以繼續在 <STREET_NAMES>。",
-                "1": "保持 <RELATIVE_DIRECTION> 走出口 <NUMBER_SIGN> 以繼續在 <STREET_NAMES>。",
-                "2": "保持 <RELATIVE_DIRECTION> 繼續在 <STREET_NAMES> 朝 <TOWARD_SIGN>。",
-                "3": "保持 <RELATIVE_DIRECTION> 走出口 <NUMBER_SIGN> 繼續在 <STREET_NAMES> 朝 <TOWARD_SIGN>。"
-            },
-            "empty_street_name_labels": [
-                "步道",
-                "自行車道",
-                "山地自行車道",
-                "人行橫道",
-                "樓梯",
-                "橋",
-                "隧道"
-            ],
-            "relative_directions": [
-                "左",
-                "直行",
-                "右"
-            ],
-            "example_phrases": {
-                "0": [
-                    "保持左以繼續在 Interstate 95 南。",
-                    "保持直行以繼續在 Interstate 95 南。",
-                    "保持右以繼續在 Interstate 95 南。"
-                ],
-                "1": [
-                    "保持左走出口 62 以繼續在 Interstate 95 南。"
-                ],
-                "2": [
-                    "保持左繼續在 I 95 南朝巴爾的摩。"
-                ],
-                "3": [
-                    "保持左走出口 62 以繼續在 Interstate 95 南朝巴爾的摩。"
-                ]
-            }
-        },
-        "keep_verbal": {
-            "phrases": {
-                "0": "在分叉處保持 <RELATIVE_DIRECTION>。",
-                "1": "保持 <RELATIVE_DIRECTION> 走出口 <NUMBER_SIGN>。",
-                "2": "保持 <RELATIVE_DIRECTION> 走 <STREET_NAMES>。",
-                "3": "保持 <RELATIVE_DIRECTION> 走出口 <NUMBER_SIGN> 上 <STREET_NAMES>。",
-                "4": "朝 <TOWARD_SIGN> 保持 <RELATIVE_DIRECTION>。",
-                "5": "保持 <RELATIVE_DIRECTION> 走出口 <NUMBER_SIGN> 朝 <TOWARD_SIGN>。",
-                "6": "保持 <RELATIVE_DIRECTION> 走 <STREET_NAMES> 朝 <TOWARD_SIGN>。",
-                "7": "保持 <RELATIVE_DIRECTION> 走出口 <NUMBER_SIGN> 上 <STREET_NAMES> 朝 <TOWARD_SIGN>。"
-            },
-            "empty_street_name_labels": [
-                "步道",
-                "自行車道",
-                "山地自行車道",
-                "人行橫道",
-                "樓梯",
-                "橋",
-                "隧道"
-            ],
-            "relative_directions": [
-                "左",
-                "直行",
-                "右"
-            ],
-            "example_phrases": {
-                "0": [
-                    "在分叉處保持左。",
-                    "在分叉處保持直行。",
-                    "在分叉處保持右。"
-                ],
-                "1": [
-                    "保持右走出口 62。"
-                ],
-                "2": [
-                    "保持右走 Interstate 8 95 南。"
-                ],
-                "3": [
-                    "保持右走出口 62 上 Interstate 8 95 南。"
-                ],
-                "4": [
-                    "朝 Annapolis 保持右。"
-                ],
-                "5": [
-                    "保持右走出口 62 朝 Annapolis。"
-                ],
-                "6": [
-                    "保持右走 Interstate 8 95 南朝 Annapolis。"
-                ],
-                "7": [
-                    "保持右走出口 62 上 Interstate 8 95 南朝 Annapolis。"
-                ]
-            }
-        },
-        "merge": {
-            "phrases": {
-                "0": "合併。",
-                "1": "向 <RELATIVE_DIRECTION> 合併。",
-                "2": "合併上 <STREET_NAMES>。",
-                "3": "向 <RELATIVE_DIRECTION> 合併上 <STREET_NAMES>。",
-                "4": "合併朝 <TOWARD_SIGN>。",
-                "5": "向 <RELATIVE_DIRECTION> 合併朝 <TOWARD_SIGN>。"
-            },
-            "relative_directions": [
-                "左",
-                "右"
-            ],
-            "empty_street_name_labels": [
-                "步道",
-                "自行車道",
-                "山地自行車道",
-                "人行橫道",
-                "樓梯",
-                "橋",
-                "隧道"
-            ],
-            "example_phrases": {
-                "0": [
-                    "合併。"
-                ],
-                "1": [
-                    "向左合併。"
-                ],
-                "2": [
-                    "合併上 I 76 西/賓夕法尼亞收費公路。"
-                ],
-                "3": [
-                    "向右合併上 I 83 南。"
-                ],
-                "4": [
-                    "合併朝巴爾的摩。"
-                ],
-                "5": [
-                    "向右合併朝巴爾的摩。"
-                ]
-            }
-        },
-        "merge_verbal": {
-            "phrases": {
-                "0": "合併。",
-                "1": "向 <RELATIVE_DIRECTION> 合併。",
-                "2": "合併上 <STREET_NAMES>。",
-                "3": "向 <RELATIVE_DIRECTION> 合併上 <STREET_NAMES>。",
-                "4": "合併朝 <TOWARD_SIGN>。",
-                "5": "向 <RELATIVE_DIRECTION> 合併朝 <TOWARD_SIGN>。"
-            },
-            "relative_directions": [
-                "左",
-                "右"
-            ],
-            "empty_street_name_labels": [
-                "步道",
-                "自行車道",
-                "山地自行車道",
-                "人行橫道",
-                "樓梯",
-                "橋",
-                "隧道"
-            ],
-            "example_phrases": {
-                "0": [
-                    "合併。"
-                ],
-                "1": [
-                    "向左合併。"
-                ],
-                "2": [
-                    "合併上 I 76 西/賓夕法尼亞收費公路。"
-                ],
-                "3": [
-                    "向右合併上 I 83 南。"
-                ],
-                "4": [
-                    "合併朝巴爾的摩。"
-                ],
-                "5": [
-                    "向右合併朝巴爾的摩。"
-                ]
-            }
-        },
-        "post_transition_transit_verbal": {
-            "phrases": {
-                "0": "行駛 <TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>。"
-            },
-            "transit_stop_count_labels": {
-                "one": "站",
-                "other": "站"
-            },
-            "example_phrases": {
-                "0": [
-                    "行駛 1 站。",
-                    "行駛 3 站。"
-                ]
-            }
-        },
-        "post_transition_verbal": {
-            "phrases": {
-                "0": "繼續行駛 <LENGTH>。",
-                "1": "繼續行駛在 <STREET_NAMES>。"
-            },
-            "empty_street_name_labels": [
-                "步道",
-                "自行車道",
-                "山地自行車道",
-                "人行橫道",
-                "樓梯",
-                "橋",
-                "隧道"
-            ],
-            "metric_lengths": [
-                "<KILOMETERS> 公里",
-                "1 公里",
-                "<METERS> 米",
-                "不到 10 米"
-            ],
-            "us_customary_lengths": [
-                "<MILES> 英里",
-                "1 英里",
-                "半英里",
-                "四分之一英里",
-                "<FEET> 英尺",
-                "不到 10 英尺"
-            ],
-            "example_phrases": {
-                "0": [
-                    "繼續行駛 300 英尺。",
-                    "繼續行駛 9 英里。"
-                ],
-                "1": [
-                    "繼續行駛在 Pennsylvania 7 43 6.2 英里。",
-                    "繼續行駛在 Main 街，Vermont 30 0.1 英里。"
-                ]
-            }
-        },
-        "ramp": {
-            "phrases": {
-                "0": "從 <RELATIVE_DIRECTION> 走匝道。",
-                "1": "從 <RELATIVE_DIRECTION> 走 <BRANCH_SIGN> 匝道。",
-                "2": "從 <RELATIVE_DIRECTION> 走匝道朝 <TOWARD_SIGN>。",
-                "3": "從 <RELATIVE_DIRECTION> 走 <BRANCH_SIGN> 匝道朝 <TOWARD_SIGN>。",
-                "4": "從 <RELATIVE_DIRECTION> 走 <NAME_SIGN> 匝道。",
-                "5": "向 <RELATIVE_DIRECTION> 轉以走匝道。",
-                "6": "向 <RELATIVE_DIRECTION> 轉以走 <BRANCH_SIGN> 匝道。",
-                "7": "向 <RELATIVE_DIRECTION> 轉以走匝道朝 <TOWARD_SIGN>。",
-                "8": "向 <RELATIVE_DIRECTION> 轉以走 <BRANCH_SIGN> 匝道朝 <TOWARD_SIGN>。",
-                "9": "向 <RELATIVE_DIRECTION> 轉以走 <NAME_SIGN> 匝道。",
-                "10": "走匝道。",
-                "11": "走 <BRANCH_SIGN> 匝道。",
-                "12": "走匝道朝 <TOWARD_SIGN>。",
-                "13": "走 <BRANCH_SIGN> 匝道朝 <TOWARD_SIGN>。",
-                "14": "走 <NAME_SIGN> 匝道。"
-            },
-            "relative_directions": [
-                "左",
-                "右"
-            ],
-            "example_phrases": {
-                "0": [
-                    "從左走匝道。",
-                    "從右走匝道。"
-                ],
-                "1": [
-                    "從右走 I 95 匝道。"
-                ],
-                "2": [
-                    "從左走匝道朝 JFK。"
-                ],
-                "3": [
-                    "從左走 South Conduit Avenue 匝道朝 JFK。"
-                ],
-                "4": [
-                    "從右走 Gettysburg Pike 匝道。"
-                ],
-                "5": [
-                    "向左轉以走匝道。",
-                    "向右轉以走匝道。"
-                ],
-                "6": [
-                    "向左轉以走 PA 283 西匝道。"
-                ],
-                "7": [
-                    "向左轉以走匝道朝 Harrisburg/Harrisburg 國際機場。"
-                ],
-                "8": [
-                    "向左轉以走 PA 283 西匝道朝 Harrisburg/Harrisburg 國際機場。"
-                ],
-                "9": [
-                    "向右轉以走 Gettysburg Pike 匝道。"
-                ],
-                "10": [
-                    "走匝道。"
-                ],
-                "11": [
-                    "走 I 95 匝道。"
-                ],
-                "12": [
-                    "走匝道朝 JFK。"
-                ],
-                "13": [
-                    "走 South Conduit Avenue 匝道朝 JFK。"
-                ],
-                "14": [
-                    "走 Gettysburg 匝道。"
-                ]
-            }
-        },
-        "ramp_straight": {
-            "phrases": {
-                "0": "直行以走匝道。",
-                "1": "直行以走 <BRANCH_SIGN> 匝道。",
-                "2": "直行以走匝道朝 <TOWARD_SIGN>。",
-                "3": "直行以走 <BRANCH_SIGN> 匝道朝 <TOWARD_SIGN>。",
-                "4": "直行以走 <NAME_SIGN> 匝道。"
-            },
-            "example_phrases": {
-                "0": [
-                    "直行以走匝道。"
-                ],
-                "1": [
-                    "直行以走 US 322 東匝道。"
-                ],
-                "2": [
-                    "直行以走匝道朝 Hershey。"
-                ],
-                "3": [
-                    "直行以走 US 322 東/US 422 東/US 522 東/US 622 東匝道朝 Hershey/Palmdale/Palmyra/Campbelltown。"
-                ],
-                "4": [
-                    "直行以走 Gettysburg Pike 匝道。"
-                ]
-            }
-        },
-        "ramp_straight_verbal": {
-            "phrases": {
-                "0": "直行以走匝道。",
-                "1": "直行以走 <BRANCH_SIGN> 匝道。",
-                "2": "直行以走匝道朝 <TOWARD_SIGN>。",
-                "3": "直行以走 <BRANCH_SIGN> 匝道朝 <TOWARD_SIGN>。",
-                "4": "直行以走 <NAME_SIGN> 匝道。"
-            },
-            "example_phrases": {
-                "0": [
-                    "直行以走匝道。"
-                ],
-                "1": [
-                    "直行以走 U.S. 3 22 東匝道。"
-                ],
-                "2": [
-                    "直行以走匝道朝 Hershey。"
-                ],
-                "3": [
-                    "直行以走 U.S. 3 22 東，U.S. 4 22 東匝道朝 Hershey，Palmdale。"
-                ],
-                "4": [
-                    "直行以走 Gettysburg Pike 匝道。"
-                ]
-            }
-        },
-        "ramp_verbal": {
-            "phrases": {
-                "0": "從 <RELATIVE_DIRECTION> 走匝道。",
-                "1": "從 <RELATIVE_DIRECTION> 走 <BRANCH_SIGN> 匝道。",
-                "2": "從 <RELATIVE_DIRECTION> 走匝道朝 <TOWARD_SIGN>。",
-                "3": "從 <RELATIVE_DIRECTION> 走 <BRANCH_SIGN> 匝道朝 <TOWARD_SIGN>。",
-                "4": "從 <RELATIVE_DIRECTION> 走 <NAME_SIGN> 匝道。",
-                "5": "向 <RELATIVE_DIRECTION> 轉以走匝道。",
-                "6": "向 <RELATIVE_DIRECTION> 轉以走 <BRANCH_SIGN> 匝道。",
-                "7": "向 <RELATIVE_DIRECTION> 轉以走匝道朝 <TOWARD_SIGN>。",
-                "8": "向 <RELATIVE_DIRECTION> 轉以走 <BRANCH_SIGN> 匝道朝 <TOWARD_SIGN>。",
-                "9": "向 <RELATIVE_DIRECTION> 轉以走 <NAME_SIGN> 匝道。",
-                "10": "走匝道。",
-                "11": "走 <BRANCH_SIGN> 匝道。",
-                "12": "走匝道朝 <TOWARD_SIGN>。",
-                "13": "走 <BRANCH_SIGN> 匝道朝 <TOWARD_SIGN>。",
-                "14": "走 <NAME_SIGN> 匝道。"
-            },
-            "relative_directions": [
-                "左",
-                "右"
-            ],
-            "example_phrases": {
-                "0": [
-                    "從左走匝道。",
-                    "從右走匝道。"
-                ],
-                "1": [
-                    "從右走 Interstate 95 匝道。"
-                ],
-                "2": [
-                    "從左走匝道朝 JFK。"
-                ],
-                "3": [
-                    "從左走 South Conduit Avenue 匝道朝 JFK。"
-                ],
-                "4": [
-                    "從右走 Gettysburg Pike 匝道。"
-                ],
-                "5": [
-                    "向左轉以走匝道。",
-                    "向右轉以走匝道。"
-                ],
-                "6": [
-                    "向左轉以走 Pennsylvania 2 83 西匝道。"
-                ],
-                "7": [
-                    "向左轉以走匝道朝 Harrisburg/Harrisburg 國際機場。"
-                ],
-                "8": [
-                    "向左轉以走 Pennsylvania 2 83 西匝道朝 Harrisburg，Harrisburg 國際機場。"
-                ],
-                "9": [
-                    "向右轉以走 Gettysburg Pike 匝道。"
-                ],
-                "10": [
-                    "走匝道。"
-                ],
-                "11": [
-                    "走 Interstate 95 匝道。"
-                ],
-                "12": [
-                    "走匝道朝 JFK。"
-                ],
-                "13": [
-                    "走 South Conduit Avenue 匝道朝 JFK。"
-                ],
-                "14": [
-                    "走 Gettysburg Pike 匝道。"
-                ]
-            }
-        },
-        "sharp": {
-            "phrases": {
-                "0": "急轉 <RELATIVE_DIRECTION>。",
-                "1": "急轉 <RELATIVE_DIRECTION> 上 <STREET_NAMES>。",
-                "2": "急轉 <RELATIVE_DIRECTION> 上 <BEGIN_STREET_NAMES>。繼續在 <STREET_NAMES>。",
-                "3": "急轉 <RELATIVE_DIRECTION> 以繼續在 <STREET_NAMES>。",
-                "4": "在 <JUNCTION_NAME> 急轉 <RELATIVE_DIRECTION>。",
-                "5": "急轉 <RELATIVE_DIRECTION> 朝 <TOWARD_SIGN>。"
-            },
-            "empty_street_name_labels": [
-                "步道",
-                "自行車道",
-                "山地自行車道",
-                "人行橫道",
-                "樓梯",
-                "橋",
-                "隧道"
-            ],
-            "relative_directions": [
-                "左",
-                "右"
-            ],
-            "example_phrases": {
-                "0": [
-                    "急轉左。"
-                ],
-                "1": [
-                    "急轉右上 Flatbush Avenue。"
-                ],
-                "2": [
-                    "急轉左上 North Bond Street/US 1 Business/MD 924。繼續在 MD 924。"
-                ],
-                "3": [
-                    "急轉右以繼續在 Sunstone Drive。"
-                ],
-                "4": [
-                    "在 Mannenbashi 東急轉右。"
-                ],
-                "5": [
-                    "急轉左朝巴爾的摩。"
-                ]
-            }
-        },
-        "sharp_verbal": {
-            "phrases": {
-                "0": "急轉 <RELATIVE_DIRECTION>。",
-                "1": "急轉 <RELATIVE_DIRECTION> 上 <STREET_NAMES>。",
-                "2": "急轉 <RELATIVE_DIRECTION> 上 <BEGIN_STREET_NAMES>。",
-                "3": "急轉 <RELATIVE_DIRECTION> 以繼續在 <STREET_NAMES>。",
-                "4": "在 <JUNCTION_NAME> 急轉 <RELATIVE_DIRECTION>。",
-                "5": "急轉 <RELATIVE_DIRECTION> 朝 <TOWARD_SIGN>。"
-            },
-            "empty_street_name_labels": [
-                "步道",
-                "自行車道",
-                "山地自行車道",
-                "人行橫道",
-                "樓梯",
-                "橋",
-                "隧道"
-            ],
-            "relative_directions": [
-                "左",
-                "右"
-            ],
-            "example_phrases": {
-                "0": [
-                    "急轉左。"
-                ],
-                "1": [
-                    "急轉右上 Flatbush Avenue。"
-                ],
-                "2": [
-                    "急轉左上 North Bond Street，U.S. 1 Business。"
-                ],
-                "3": [
-                    "急轉右以繼續在 Sunstone Drive。"
-                ],
-                "4": [
-                    "在 Mannenbashi 東急轉右。"
-                ],
-                "5": [
-                    "急轉左朝巴爾的摩。"
-                ]
-            }
-        },
-        "start": {
-            "phrases": {
-                "0": "向 <CARDINAL_DIRECTION> 方向前進。",
-                "1": "向 <CARDINAL_DIRECTION> 方向在 <STREET_NAMES> 上前進。",
-                "2": "向 <CARDINAL_DIRECTION> 方向在 <BEGIN_STREET_NAMES> 上前進。繼續在 <STREET_NAMES>。",
-                "4": "向 <CARDINAL_DIRECTION> 駕駛。",
-                "5": "向 <CARDINAL_DIRECTION> 方向在 <STREET_NAMES> 上駕駛。",
-                "6": "向 <CARDINAL_DIRECTION> 方向在 <BEGIN_STREET_NAMES> 上駕駛。繼續在 <STREET_NAMES>。",
-                "8": "向 <CARDINAL_DIRECTION> 步行。",
-                "9": "向 <CARDINAL_DIRECTION> 方向在 <STREET_NAMES> 上步行。",
-                "10": "向 <CARDINAL_DIRECTION> 方向在 <BEGIN_STREET_NAMES> 上步行。繼續在 <STREET_NAMES>。",
-                "16": "向 <CARDINAL_DIRECTION> 騎行。",
-                "17": "向 <CARDINAL_DIRECTION> 方向在 <STREET_NAMES> 上騎行。",
-                "18": "向 <CARDINAL_DIRECTION> 方向在 <BEGIN_STREET_NAMES> 上騎行。繼續在 <STREET_NAMES>。"
-            },
-            "cardinal_directions": [
-                "北",
-                "東北",
-                "東",
-                "東南",
-                "南",
-                "西南",
-                "西",
-                "西北"
-            ],
-            "empty_street_name_labels": [
-                "步道",
-                "自行車道",
-                "山地自行車道",
-                "人行橫道",
-                "樓梯",
-                "橋",
-                "隧道"
-            ],
-            "example_phrases": {
-                "0": [
-                    "向東前進。",
-                    "向北前進。"
-                ],
-                "1": [
-                    "向西南方向前進在 5th Avenue 上。",
-                    "向西方向前進在步道上",
-                    "向東方向前進在自行車道上",
-                    "向北方向前進在山地自行車道上"
-                ],
-                "2": [
-                    "向南方向前進在 North Prince Street/US 222/PA 272 上。繼續在 US 222/PA 272。"
-                ],
-                "4": [
-                    "向東駕駛。",
-                    "向北駕駛。"
-                ],
-                "5": [
-                    "向西南方向駕駛在 5th Avenue 上。"
-                ],
-                "6": [
-                    "向南方向駕駛在 North Prince Street/US 222/PA 272 上。繼續在 US 222/PA 272。"
-                ],
-                "8": [
-                    "向東步行。",
-                    "向北步行。"
-                ],
-                "9": [
-                    "向西南方向步行在 5th Avenue 上。",
-                    "向西方向步行在步道上"
-                ],
-                "10": [
-                    "向南方向步行在 North Prince Street/US 222/PA 272 上。繼續在 US 222/PA 272。"
-                ],
-                "16": [
-                    "向東騎行。",
-                    "向北騎行。"
-                ],
-                "17": [
-                    "向西南方向騎行在 5th Avenue 上。",
-                    "向東方向騎行在自行車道上",
-                    "向北方向騎行在山地自行車道上"
-                ],
-                "18": [
-                    "向南方向騎行在 North Prince Street/US 222/PA 272 上。繼續在 US 222/PA 272。"
-                ]
-            }
-        },
-        "start_verbal": {
-            "phrases": {
-                "0": "向 <CARDINAL_DIRECTION> 方向前進。",
-                "1": "向 <CARDINAL_DIRECTION> 方向行駛 <LENGTH>。",
-                "2": "向 <CARDINAL_DIRECTION> 方向在 <STREET_NAMES> 上前進。",
-                "3": "向 <CARDINAL_DIRECTION> 方向在 <STREET_NAMES> 上行駛 <LENGTH>。",
-                "4": "向 <CARDINAL_DIRECTION> 方向在 <BEGIN_STREET_NAMES> 上前進。",
-                "5": "向 <CARDINAL_DIRECTION> 駕駛。",
-                "6": "向 <CARDINAL_DIRECTION> 行駛 <LENGTH>。",
-                "7": "向 <CARDINAL_DIRECTION> 方向在 <STREET_NAMES> 上駕駛。",
-                "8": "向 <CARDINAL_DIRECTION> 方向在 <STREET_NAMES> 上行駛 <LENGTH>。",
-                "9": "向 <CARDINAL_DIRECTION> 方向在 <BEGIN_STREET_NAMES> 上駕駛。",
-                "10": "向 <CARDINAL_DIRECTION> 步行。",
-                "11": "向 <CARDINAL_DIRECTION> 行駛 <LENGTH>。",
-                "12": "向 <CARDINAL_DIRECTION> 方向在 <STREET_NAMES> 上步行。",
-                "13": "向 <CARDINAL_DIRECTION> 方向在 <STREET_NAMES> 上行駛 <LENGTH>。",
-                "14": "向 <CARDINAL_DIRECTION> 方向在 <BEGIN_STREET_NAMES> 上步行。",
-                "15": "向 <CARDINAL_DIRECTION> 騎行。",
-                "16": "向 <CARDINAL_DIRECTION> 行駛 <LENGTH>。",
-                "17": "向 <CARDINAL_DIRECTION> 方向在 <STREET_NAMES> 上騎行。",
-                "18": "向 <CARDINAL_DIRECTION> 方向在 <STREET_NAMES> 上行駛 <LENGTH>。",
-                "19": "向 <CARDINAL_DIRECTION> 方向在 <BEGIN_STREET_NAMES> 上騎行。"
-            },
-            "cardinal_directions": [
-                "北",
-                "東北",
-                "東",
-                "東南",
-                "南",
-                "西南",
-                "西",
-                "西北"
-            ],
-            "empty_street_name_labels": [
-                "步道",
-                "自行車道",
-                "山地自行車道",
-                "人行橫道",
-                "樓梯",
-                "橋",
-                "隧道"
-            ],
-            "metric_lengths": [
-                "<KILOMETERS> 公里",
-                "1 公里",
-                "<METERS> 米",
-                "不到 10 米"
-            ],
-            "us_customary_lengths": [
-                "<MILES> 英里",
-                "1 英里",
-                "半英里",
-                "四分之一英里",
-                "<FEET> 英尺",
-                "不到 10 英尺"
-            ],
-            "example_phrases": {
-                "0": [
-                    "向東前進。",
-                    "向北前進。"
-                ],
-                "1": [
-                    "向東行駛半英里。",
-                    "向北行駛 1 公里。"
-                ],
-                "2": [
-                    "向西南方向在 5th Avenue 上前進。"
-                ],
-                "3": [
-                    "向西南方向在 5th Avenue 上行駛 0.1 英里。"
-                ],
-                "4": [
-                    "向南方向在 North Prince Street，U.S. 2 22 上前進。"
-                ],
-                "5": [
-                    "向東駕駛。",
-                    "向北駕駛。"
-                ],
-                "6": [
-                    "向東行駛半英里。",
-                    "向北行駛 1 公里。"
-                ],
-                "7": [
-                    "向西南方向在 5th Avenue 上駕駛。"
-                ],
-                "8": [
-                    "向西南方向在 5th Avenue 上行駛 0.1 英里。"
-                ],
-                "9": [
-                    "向南方向在 North Prince Street，U.S. 2 22 上駕駛。"
-                ],
-                "10": [
-                    "向東步行。",
-                    "向北步行。"
-                ],
-                "11": [
-                    "向東行駛半英里。",
-                    "向北行駛 1 公里。"
-                ],
-                "12": [
-                    "向西南方向在 5th Avenue 上步行。"
-                ],
-                "13": [
-                    "向西南方向在 5th Avenue 上行駛 0.1 英里。"
-                ],
-                "14": [
-                    "向南方向在 North Prince Street，U.S. 2 22 上步行。"
-                ],
-                "15": [
-                    "向東騎行。",
-                    "向北騎行。"
-                ],
-                "16": [
-                    "向東行駛半英里。",
-                    "向北行駛 1 公里。"
-                ],
-                "17": [
-                    "向西南方向在 5th Avenue 上騎行。"
-                ],
-                "18": [
-                    "向西南方向在 5th Avenue 上行駛 0.1 英里。"
-                ],
-                "19": [
-                    "向南方向在 North Prince Street，U.S. 2 22 上騎行。"
-                ]
-            }
-        },
-        "transit": {
-            "phrases": {
-                "0": "乘坐 <TRANSIT_NAME>。 (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)",
-                "1": "乘坐 <TRANSIT_NAME> 朝 <TRANSIT_HEADSIGN>。 (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)"
-            },
-            "empty_transit_name_labels": [
-                "電車",
-                "地鐵",
-                "火車",
-                "公車",
-                "渡輪",
-                "纜車",
-                "纜椅",
-                "登山鐵道"
-            ],
-            "transit_stop_count_labels": {
-                "one": "站",
-                "other": "站"
-            },
-            "example_phrases": {
-                "0": [
-                    "乘坐 New Haven。 (1 站)",
-                    "乘坐地鐵。 (2 站)",
-                    "乘坐公車。 (12 站)"
-                ],
-                "1": [
-                    "乘坐 F 朝 JAMAICA - 179 ST。 (10 站)",
-                    "乘坐渡輪朝 Staten Island。 (1 站)"
-                ]
-            }
-        },
-        "transit_connection_destination": {
-            "phrases": {
-                "0": "離開車站。",
-                "1": "離開 <TRANSIT_STOP>。",
-                "2": "離開 <TRANSIT_STOP> <STATION_LABEL>。"
-            },
-            "station_label": "站",
-            "example_phrases": {
-                "0": [
-                    "離開車站。"
-                ],
-                "1": [
-                    "離開 Embarcadero 站。"
-                ],
-                "2": [
-                    "離開 8 St - NYU 站。"
-                ]
-            }
-        },
-        "transit_connection_destination_verbal": {
-            "phrases": {
-                "0": "離開車站。",
-                "1": "離開 <TRANSIT_STOP>。",
-                "2": "離開 <TRANSIT_STOP> <STATION_LABEL>。"
-            },
-            "station_label": "站",
-            "example_phrases": {
-                "0": [
-                    "離開車站。"
-                ],
-                "1": [
-                    "離開 Embarcadero 站。"
-                ],
-                "2": [
-                    "離開 8 St - NYU 站。"
-                ]
-            }
-        },
-        "transit_connection_start": {
-            "phrases": {
-                "0": "進入車站。",
-                "1": "進入 <TRANSIT_STOP>。",
-                "2": "進入 <TRANSIT_STOP> <STATION_LABEL>。"
-            },
-            "station_label": "站",
-            "example_phrases": {
-                "0": [
-                    "進入車站。"
-                ],
-                "1": [
-                    "進入 Embarcadero 站。"
-                ],
-                "2": [
-                    "進入 8 St - NYU 站。"
-                ]
-            }
-        },
-        "transit_connection_start_verbal": {
-            "phrases": {
-                "0": "進入車站。",
-                "1": "進入 <TRANSIT_STOP>。",
-                "2": "進入 <TRANSIT_STOP> <STATION_LABEL>。"
-            },
-            "station_label": "站",
-            "example_phrases": {
-                "0": [
-                    "進入車站。"
-                ],
-                "1": [
-                    "進入 Embarcadero 站。"
-                ],
-                "2": [
-                    "進入 8 St - NYU 站。"
-                ]
-            }
-        },
-        "transit_connection_transfer": {
-            "phrases": {
-                "0": "在車站轉乘。",
-                "1": "在 <TRANSIT_STOP> 轉乘。",
-                "2": "在 <TRANSIT_STOP> <STATION_LABEL> 轉乘。"
-            },
-            "station_label": "站",
-            "example_phrases": {
-                "0": [
-                    "在車站轉乘。"
-                ],
-                "1": [
-                    "在 Embarcadero 站轉乘。"
-                ],
-                "2": [
-                    "在 8 St - NYU 站轉乘。"
-                ]
-            }
-        },
-        "transit_connection_transfer_verbal": {
-            "phrases": {
-                "0": "在車站轉乘。",
-                "1": "在 <TRANSIT_STOP> 轉乘。",
-                "2": "在 <TRANSIT_STOP> <STATION_LABEL> 轉乘。"
-            },
-            "station_label": "站",
-            "example_phrases": {
-                "0": [
-                    "在車站轉乘。"
-                ],
-                "1": [
-                    "在 Embarcadero 站轉乘。"
-                ],
-                "2": [
-                    "在 8 St - NYU 站轉乘。"
-                ]
-            }
-        },
-        "transit_remain_on": {
-            "phrases": {
-                "0": "繼續乘坐 <TRANSIT_NAME>。 (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)",
-                "1": "繼續乘坐 <TRANSIT_NAME> 朝 <TRANSIT_HEADSIGN>。 (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)"
-            },
-            "empty_transit_name_labels": [
-                "電車",
-                "地鐵",
-                "火車",
-                "公車",
-                "渡輪",
-                "纜車",
-                "纜椅",
-                "登山鐵道"
-            ],
-            "transit_stop_count_labels": {
-                "one": "站",
-                "other": "站"
-            },
-            "example_phrases": {
-                "0": [
-                    "繼續乘坐 New Haven。 (1 站)",
-                    "繼續乘坐火車。 (3 站)"
-                ],
-                "1": [
-                    "繼續乘坐 F 朝 JAMAICA - 179 ST。 (10 站)"
-                ]
-            }
-        },
-        "transit_remain_on_verbal": {
-            "phrases": {
-                "0": "繼續乘坐 <TRANSIT_NAME>。",
-                "1": "繼續乘坐 <TRANSIT_NAME> 朝 <TRANSIT_HEADSIGN>。"
-            },
-            "empty_transit_name_labels": [
-                "電車",
-                "地鐵",
-                "火車",
-                "公車",
-                "渡輪",
-                "纜車",
-                "纜椅",
-                "登山鐵道"
-            ],
-            "example_phrases": {
-                "0": [
-                    "繼續乘坐 New Haven。"
-                ],
-                "1": [
-                    "繼續乘坐 F 朝 JAMAICA - 179 ST。"
-                ]
-            }
-        },
-        "transit_transfer": {
-            "phrases": {
-                "0": "轉乘 <TRANSIT_NAME>。 (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)",
-                "1": "轉乘 <TRANSIT_NAME> 朝 <TRANSIT_HEADSIGN>。 (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)"
-            },
-            "empty_transit_name_labels": [
-                "電車",
-                "地鐵",
-                "火車",
-                "公車",
-                "渡輪",
-                "纜車",
-                "纜椅",
-                "登山鐵道"
-            ],
-            "transit_stop_count_labels": {
-                "one": "站",
-                "other": "站"
-            },
-            "example_phrases": {
-                "0": [
-                    "轉乘 New Haven。 (1 站)",
-                    "轉乘電車。 (4 站)"
-                ],
-                "1": [
-                    "轉乘 F 朝 JAMAICA - 179 ST。 (10 站)"
-                ]
-            }
-        },
-        "transit_transfer_verbal": {
-            "phrases": {
-                "0": "轉乘 <TRANSIT_NAME>。",
-                "1": "轉乘 <TRANSIT_NAME> 朝 <TRANSIT_HEADSIGN>。"
-            },
-            "empty_transit_name_labels": [
-                "電車",
-                "地鐵",
-                "火車",
-                "公車",
-                "渡輪",
-                "纜車",
-                "纜椅",
-                "登山鐵道"
-            ],
-            "example_phrases": {
-                "0": [
-                    "轉乘 New Haven。"
-                ],
-                "1": [
-                    "轉乘 F 朝 JAMAICA - 179 ST。"
-                ]
-            }
-        },
-        "transit_verbal": {
-            "phrases": {
-                "0": "乘坐 <TRANSIT_NAME>。",
-                "1": "乘坐 <TRANSIT_NAME> 朝 <TRANSIT_HEADSIGN>。"
-            },
-            "empty_transit_name_labels": [
-                "電車",
-                "地鐵",
-                "火車",
-                "公車",
-                "渡輪",
-                "纜車",
-                "纜椅",
-                "登山鐵道"
-            ],
-            "example_phrases": {
-                "0": [
-                    "乘坐 New Haven。"
-                ],
-                "1": [
-                    "乘坐 F 朝 JAMAICA - 179 ST。"
-                ]
-            }
-        },
-        "turn": {
-            "phrases": {
-                "0": "向 <RELATIVE_DIRECTION> 轉。",
-                "1": "向 <RELATIVE_DIRECTION> 轉上 <STREET_NAMES>。",
-                "2": "向 <RELATIVE_DIRECTION> 轉上 <BEGIN_STREET_NAMES>。繼續在 <STREET_NAMES>。",
-                "3": "向 <RELATIVE_DIRECTION> 轉以繼續在 <STREET_NAMES>。",
-                "4": "在 <JUNCTION_NAME> 向 <RELATIVE_DIRECTION> 轉。",
-                "5": "向 <RELATIVE_DIRECTION> 轉朝 <TOWARD_SIGN>。"
-            },
-            "empty_street_name_labels": [
-                "步道",
-                "自行車道",
-                "山地自行車道",
-                "人行橫道",
-                "樓梯",
-                "橋",
-                "隧道"
-            ],
-            "relative_directions": [
-                "左",
-                "右"
-            ],
-            "example_phrases": {
-                "0": [
-                    "向左轉。"
-                ],
-                "1": [
-                    "向右轉上 Flatbush Avenue。"
-                ],
-                "2": [
-                    "向左轉上 North Bond Street/US 1 Business/MD 924。繼續在 MD 924。"
-                ],
-                "3": [
-                    "向右轉以繼續在 Sunstone Drive。"
-                ],
-                "4": [
-                    "在 Mannenbashi 東向右轉。"
-                ],
-                "5": [
-                    "向左轉朝巴爾的摩。"
-                ]
-            }
-        },
-        "turn_verbal": {
-            "phrases": {
-                "0": "向 <RELATIVE_DIRECTION> 轉。",
-                "1": "向 <RELATIVE_DIRECTION> 轉上 <STREET_NAMES>。",
-                "2": "向 <RELATIVE_DIRECTION> 轉上 <BEGIN_STREET_NAMES>。",
-                "3": "向 <RELATIVE_DIRECTION> 轉以繼續在 <STREET_NAMES>。",
-                "4": "在 <JUNCTION_NAME> 向 <RELATIVE_DIRECTION> 轉。",
-                "5": "向 <RELATIVE_DIRECTION> 轉朝 <TOWARD_SIGN>。"
-            },
-            "empty_street_name_labels": [
-                "步道",
-                "自行車道",
-                "山地自行車道",
-                "人行橫道",
-                "樓梯",
-                "橋",
-                "隧道"
-            ],
-            "relative_directions": [
-                "左",
-                "右"
-            ],
-            "example_phrases": {
-                "0": [
-                    "向左轉。"
-                ],
-                "1": [
-                    "向右轉上 Flatbush Avenue。"
-                ],
-                "2": [
-                    "向左轉上 North Bond Street，U.S. 1 Business。"
-                ],
-                "3": [
-                    "向右轉以繼續在 Sunstone Drive。"
-                ],
-                "4": [
-                    "在 Mannenbashi 東向右轉。"
-                ],
-                "5": [
-                    "向左轉朝巴爾的摩。"
-                ]
-            }
-        },
-        "uturn": {
-            "phrases": {
-                "0": "向 <RELATIVE_DIRECTION> 掉頭。",
-                "1": "向 <RELATIVE_DIRECTION> 掉頭上 <STREET_NAMES>。",
-                "2": "向 <RELATIVE_DIRECTION> 掉頭以繼續在 <STREET_NAMES>。",
-                "3": "在 <CROSS_STREET_NAMES> 向 <RELATIVE_DIRECTION> 掉頭。",
-                "4": "在 <CROSS_STREET_NAMES> 向 <RELATIVE_DIRECTION> 掉頭上 <STREET_NAMES>。",
-                "5": "在 <CROSS_STREET_NAMES> 向 <RELATIVE_DIRECTION> 掉頭以繼續在 <STREET_NAMES>。",
-                "6": "在 <JUNCTION_NAME> 向 <RELATIVE_DIRECTION> 掉頭。",
-                "7": "向 <RELATIVE_DIRECTION> 掉頭朝 <TOWARD_SIGN>。"
-            },
-            "empty_street_name_labels": [
-                "步道",
-                "自行車道",
-                "山地自行車道",
-                "人行橫道",
-                "樓梯",
-                "橋",
-                "隧道"
-            ],
-            "relative_directions": [
-                "左",
-                "右"
-            ],
-            "example_phrases": {
-                "0": [
-                    "向左掉頭。"
-                ],
-                "1": [
-                    "向右掉頭上 Bunker Hill Road。"
-                ],
-                "2": [
-                    "向左掉頭以繼續在 Bunker Hill Road。"
-                ],
-                "3": [
-                    "在 Devonshire Road 向左掉頭。"
-                ],
-                "4": [
-                    "在 Devonshire Road 向左掉頭上 Jonestown Road/US 22。"
-                ],
-                "5": [
-                    "在 Devonshire Road 向左掉頭以繼續在 Jonestown Road/US 22。"
-                ],
-                "6": [
-                    "在 Mannenbashi 東向右掉頭。"
-                ],
-                "7": [
-                    "向左掉頭朝巴爾的摩。"
-                ]
-            }
-        },
-        "uturn_verbal": {
-            "phrases": {
-                "0": "向 <RELATIVE_DIRECTION> 掉頭。",
-                "1": "向 <RELATIVE_DIRECTION> 掉頭上 <STREET_NAMES>。",
-                "2": "向 <RELATIVE_DIRECTION> 掉頭以繼續在 <STREET_NAMES>。",
-                "3": "在 <CROSS_STREET_NAMES> 向 <RELATIVE_DIRECTION> 掉頭。",
-                "4": "在 <CROSS_STREET_NAMES> 向 <RELATIVE_DIRECTION> 掉頭上 <STREET_NAMES>。",
-                "5": "在 <CROSS_STREET_NAMES> 向 <RELATIVE_DIRECTION> 掉頭以繼續在 <STREET_NAMES>。",
-                "6": "在 <JUNCTION_NAME> 向 <RELATIVE_DIRECTION> 掉頭。",
-                "7": "向 <RELATIVE_DIRECTION> 掉頭朝 <TOWARD_SIGN>。"
-            },
-            "empty_street_name_labels": [
-                "步道",
-                "自行車道",
-                "山地自行車道",
-                "人行橫道",
-                "樓梯",
-                "橋",
-                "隧道"
-            ],
-            "relative_directions": [
-                "左",
-                "右"
-            ],
-            "example_phrases": {
-                "0": [
-                    "向左掉頭。"
-                ],
-                "1": [
-                    "向右掉頭上 Bunker Hill Road。"
-                ],
-                "2": [
-                    "向左掉頭以繼續在 Bunker Hill Road。"
-                ],
-                "3": [
-                    "在 Devonshire Road 向左掉頭。"
-                ],
-                "4": [
-                    "在 Devonshire Road 向左掉頭上 Jonestown Road，U.S. 22。"
-                ],
-                "5": [
-                    "在 Devonshire Road 向左掉頭以繼續在 Jonestown Road，U.S. 22。"
-                ],
-                "6": [
-                    "在 Mannenbashi 東向右掉頭。"
-                ],
-                "7": [
-                    "向左掉頭朝巴爾的摩。"
-                ]
-            }
-        },
-        "verbal_multi_cue": {
-            "phrases": {
-                "0": "<CURRENT_VERBAL_CUE> 然後 <NEXT_VERBAL_CUE>",
-                "1": "<CURRENT_VERBAL_CUE> 然後，在 <LENGTH>，<NEXT_VERBAL_CUE>"
-            },
-            "metric_lengths": [
-                "<KILOMETERS> 公里",
-                "1 公里",
-                "<METERS> 米",
-                "不到 10 米"
-            ],
-            "us_customary_lengths": [
-                "<MILES> 英里",
-                "1 英里",
-                "半英里",
-                "四分之一英里",
-                "<FEET> 英尺",
-                "不到 10 英尺"
-            ],
-            "example_phrases": {
-                "0": [
-                    "向右轉上 East Fayette 街。然後 向右轉上 North Gay 街。"
-                ],
-                "1": [
-                    "向右轉上 East Fayette 街。然後，在 500 英尺，向右轉上 North Gay 街。"
-                ]
-            }
-        },
-        "approach_verbal_alert": {
-            "phrases": {
-                "0": "在 <LENGTH>，<CURRENT_VERBAL_CUE>"
-            },
-            "metric_lengths": [
-                "<KILOMETERS> 公里",
-                "1 公里",
-                "<METERS> 米",
-                "不到 10 米"
-            ],
-            "us_customary_lengths": [
-                "<MILES> 英里",
-                "1 英里",
-                "半英里",
-                "四分之一英里",
-                "<FEET> 英尺",
-                "不到 10 英尺"
-            ],
-            "example_phrases": {
-                "0": [
-                    "在四分之一英里，向右轉上 North Gay 街。"
-                ]
-            }
-        },
-        "pass": {
-            "phrases": {
-                "0": "經過 <OBJECT_LABEL>。",
-                "1": "經過交通信號燈在 <OBJECT_LABEL>。"
-            },
-            "object_labels": [
-                "大門",
-                "柵欄",
-                "交叉路口"
-            ],
-            "example_phrases": {
-                "0": [
-                    "經過大門。"
-                ]
-            }
-        },
-        "elevator": {
-            "phrases": {
-                "0": "搭乘電梯。",
-                "1": "搭乘電梯到 <LEVEL>。"
-            },
-            "example_phrases": {
-                "0": [
-                    "搭乘電梯。"
-                ],
-                "1": [
-                    "搭乘電梯到 1 樓。"
-                ]
-            }
-        },
-        "steps": {
-            "phrases": {
-                "0": "走樓梯。",
-                "1": "走樓梯到 <LEVEL>。"
-            },
-            "example_phrases": {
-                "0": [
-                    "走樓梯。"
-                ],
-                "1": [
-                    "走樓梯到 2 樓。"
-                ]
-            }
-        },
-        "escalator": {
-            "phrases": {
-                "0": "搭乘手扶梯。",
-                "1": "搭乘手扶梯到 <LEVEL>。"
-            },
-            "example_phrases": {
-                "0": [
-                    "搭乘手扶梯。"
-                ],
-                "1": [
-                    "搭乘手扶梯到 3 樓。"
-                ]
-            }
-        },
-        "enter_building": {
-            "phrases": {
-                "0": "進入建築物。",
-                "1": "進入建築物，然後繼續在 <STREET_NAMES>。"
-            },
-            "empty_street_name_labels": [
-                "步道",
-                "自行車道",
-                "山地自行車道",
-                "人行橫道"
-            ],
-            "example_phrases": {
-                "0": [
-                    "進入建築物。"
-                ],
-                "1": [
-                    "進入建築物，然後繼續在步道上。"
-                ]
-            }
-        },
-        "exit_building": {
-            "phrases": {
-                "0": "離開建築物。",
-                "1": "離開建築物，然後繼續在 <STREET_NAMES>。"
-            },
-            "empty_street_name_labels": [
-                "步道",
-                "自行車道",
-                "山地自行車道",
-                "人行橫道"
-            ],
-            "example_phrases": {
-                "0": [
-                    "離開建築物。"
-                ],
-                "1": [
-                    "離開建築物，然後繼續在步道上。"
-                ]
-            }
-        }
+  "posix_locale": "zh_TW.UTF-8",
+ "aliases": [],
+  "instructions": {
+    "arrive": {
+      "phrases": {
+        "0": "到達：<TIME>。",
+        "1": "到達：<TIME> 在 <TRANSIT_STOP>。"
+      },
+      "example_phrases": {
+        "0": [
+          "到達：8:02 AM。"
+        ],
+        "1": [
+          "到達：8:02 AM 在 8 St - NYU。"
+        ]
+      }
+    },
+    "arrive_verbal": {
+      "phrases": {
+        "0": "到達 <TIME>。",
+        "1": "到達 <TIME> 在 <TRANSIT_STOP>。"
+      },
+      "example_phrases": {
+        "0": [
+          "到達 8:02 AM。"
+        ],
+        "1": [
+          "到達 8:02 AM 在 8 St - NYU。"
+        ]
+      }
+    },
+    "bear": {
+      "phrases": {
+        "0": "向 <RELATIVE_DIRECTION>。",
+        "1": "向 <RELATIVE_DIRECTION> 上 <STREET_NAMES>。",
+        "2": "向 <RELATIVE_DIRECTION> 上 <BEGIN_STREET_NAMES>。繼續在 <STREET_NAMES>。",
+        "3": "向 <RELATIVE_DIRECTION> 保持在 <STREET_NAMES>。",
+        "4": "在 <JUNCTION_NAME> 向 <RELATIVE_DIRECTION>。",
+        "5": "朝 <TOWARD_SIGN> 向 <RELATIVE_DIRECTION>。"
+      },
+      "empty_street_name_labels": [
+        "步道",
+        "自行車道",
+        "山地自行車道",
+        "人行橫道",
+        "樓梯",
+        "橋",
+        "隧道"
+      ],
+      "relative_directions": [
+        "左",
+        "右"
+      ],
+      "example_phrases": {
+        "0": [
+          "向右。"
+        ],
+        "1": [
+          "向左上 Arlen 路。"
+        ],
+        "2": [
+          "向右上 Belair 路/US 1 商業道。繼續在 US 1 商業道。"
+        ],
+        "3": [
+          "向左保持在 US 15 南。"
+        ],
+        "4": [
+          "在 Mannenbashi 東向右。"
+        ],
+        "5": [
+          "朝巴爾的摩向左。"
+        ]
+      }
+    },
+    "bear_verbal": {
+      "phrases": {
+        "0": "向 <RELATIVE_DIRECTION>。",
+        "1": "向 <RELATIVE_DIRECTION> 上 <STREET_NAMES>。",
+        "2": "向 <RELATIVE_DIRECTION> 上 <BEGIN_STREET_NAMES>。",
+        "3": "向 <RELATIVE_DIRECTION> 保持在 <STREET_NAMES>。",
+        "4": "在 <JUNCTION_NAME> 向 <RELATIVE_DIRECTION>。",
+        "5": "朝 <TOWARD_SIGN> 向 <RELATIVE_DIRECTION>。"
+      },
+      "empty_street_name_labels": [
+        "步道",
+        "自行車道",
+        "山地自行車道",
+        "人行橫道",
+        "樓梯",
+        "橋",
+        "隧道"
+      ],
+      "relative_directions": [
+        "左",
+        "右"
+      ],
+      "example_phrases": {
+        "0": [
+          "向右。"
+        ],
+        "1": [
+          "向左上 Arlen 路。"
+        ],
+        "2": [
+          "向右上 Belair 路，U.S. 1 商業道。"
+        ],
+        "3": [
+          "向左保持在 U.S. 15 南。"
+        ],
+        "4": [
+          "在 Mannenbashi 東向右。"
+        ],
+        "5": [
+          "朝巴爾的摩向左。"
+        ]
+      }
+    },
+    "becomes": {
+      "phrases": {
+        "0": "<PREVIOUS_STREET_NAMES> 變成 <STREET_NAMES>。"
+      },
+      "example_phrases": {
+        "0": [
+          "Vine 街變成 Middletown 路。"
+        ]
+      }
+    },
+    "becomes_verbal": {
+      "phrases": {
+        "0": "<PREVIOUS_STREET_NAMES> 變成 <STREET_NAMES>。"
+      },
+      "example_phrases": {
+        "0": [
+          "Vine 街變成 Middletown 路。"
+        ]
+      }
+    },
+    "continue": {
+      "phrases": {
+        "0": "繼續。",
+        "1": "繼續在 <STREET_NAMES>。",
+        "2": "在 <JUNCTION_NAME> 繼續。",
+        "3": "朝 <TOWARD_SIGN> 繼續。"
+      },
+      "empty_street_name_labels": [
+        "步道",
+        "自行車道",
+        "山地自行車道",
+        "人行橫道",
+        "樓梯",
+        "橋",
+        "隧道"
+      ],
+      "example_phrases": {
+        "0": [
+          "繼續。"
+        ],
+        "1": [
+          "繼續在 10th 大道。"
+        ],
+        "2": [
+          "在 Mannenbashi 東繼續。"
+        ],
+        "3": [
+          "朝巴爾的摩繼續。"
+        ]
+      }
+    },
+    "continue_verbal": {
+      "phrases": {
+        "0": "繼續。",
+        "1": "繼續走 <LENGTH>。",
+        "2": "繼續在 <STREET_NAMES>。",
+        "3": "繼續在 <STREET_NAMES> 走 <LENGTH>。",
+        "4": "在 <JUNCTION_NAME> 繼續。",
+        "5": "在 <JUNCTION_NAME> 走 <LENGTH> 繼續。",
+        "6": "朝 <TOWARD_SIGN> 繼續。",
+        "7": "朝 <TOWARD_SIGN> 走 <LENGTH> 繼續。"
+      },
+      "empty_street_name_labels": [
+        "步道",
+        "自行車道",
+        "山地自行車道",
+        "人行橫道",
+        "樓梯",
+        "橋",
+        "隧道"
+      ],
+      "metric_lengths": [
+        "<KILOMETERS> 公里",
+        "1 公里",
+        "<METERS> 公尺",
+        "少於 10 公尺"
+      ],
+      "us_customary_lengths": [
+        "<MILES> 英里",
+        "1 英里",
+        "半英里",
+        "四分之一英里",
+        "<FEET> 英尺",
+        "少於 10 英尺"
+      ],
+      "example_phrases": {
+        "0": [
+          "繼續。"
+        ],
+        "1": [
+          "繼續走 300 英尺。"
+        ],
+        "2": [
+          "繼續在 10th 大道。"
+        ],
+        "3": [
+          "繼續在 10th 大道走 3 英里。"
+        ],
+        "4": [
+          "在 Mannenbashi 東繼續。"
+        ],
+        "5": [
+          "在 Mannenbashi 東走 2 英里繼續。"
+        ],
+        "6": [
+          "朝巴爾的摩繼續。"
+        ],
+        "7": [
+          "朝巴爾的摩走 5 英里繼續。"
+        ]
+      }
+    },
+    "continue_verbal_alert": {
+      "phrases": {
+        "0": "繼續。",
+        "1": "繼續在 <STREET_NAMES>。",
+        "2": "在 <JUNCTION_NAME> 繼續。",
+        "3": "朝 <TOWARD_SIGN> 繼續。"
+      },
+      "empty_street_name_labels": [
+        "步道",
+        "自行車道",
+        "山地自行車道",
+        "人行橫道",
+        "樓梯",
+        "橋",
+        "隧道"
+      ],
+      "example_phrases": {
+        "0": [
+          "繼續。"
+        ],
+        "1": [
+          "繼續在 10th 大道。"
+        ],
+        "2": [
+          "在 Mannenbashi 東繼續。"
+        ],
+        "3": [
+          "朝巴爾的摩繼續。"
+        ]
+      }
+    },
+    "depart": {
+      "phrases": {
+        "0": "出發：<TIME>。",
+        "1": "出發：<TIME> 從 <TRANSIT_STOP>。"
+      },
+      "example_phrases": {
+        "0": [
+          "出發：8:02 AM。"
+        ],
+        "1": [
+          "出發：8:02 AM 從 8 St - NYU。"
+        ]
+      }
+    },
+    "depart_verbal": {
+      "phrases": {
+        "0": "出發於 <TIME>。",
+        "1": "出發於 <TIME> 從 <TRANSIT_STOP>。"
+      },
+      "example_phrases": {
+        "0": [
+          "出發於 8:02 AM。"
+        ],
+        "1": [
+          "出發於 8:02 AM 從 8 St - NYU。"
+        ]
+      }
+    },
+    "destination": {
+      "phrases": {
+        "0": "您已到達目的地。",
+        "1": "您已到達 <DESTINATION>。",
+        "2": "您的目的地在 <RELATIVE_DIRECTION>。",
+        "3": "<DESTINATION> 在 <RELATIVE_DIRECTION>。"
+      },
+      "relative_directions": [
+        "左",
+        "右"
+      ],
+      "example_phrases": {
+        "0": [
+          "您已到達目的地。"
+        ],
+        "1": [
+          "您已到達 3206 Powelton 大道。"
+        ],
+        "2": [
+          "您的目的地在左邊。",
+          "您的目的地在右邊。"
+        ],
+        "3": [
+          "Lancaster Brewing Company 在左邊。"
+        ]
+      }
+    },
+    "destination_verbal": {
+      "phrases": {
+        "0": "您已到達目的地。",
+        "1": "您已到達 <DESTINATION>。",
+        "2": "您的目的地在 <RELATIVE_DIRECTION>。",
+        "3": "<DESTINATION> 在 <RELATIVE_DIRECTION>。"
+      },
+      "relative_directions": [
+        "左",
+        "右"
+      ],
+      "example_phrases": {
+        "0": [
+          "您已到達目的地。"
+        ],
+        "1": [
+          "您已到達 3206 Powelton 大道。"
+        ],
+        "2": [
+          "您的目的地在左邊。",
+          "您的目的地在右邊。"
+        ],
+        "3": [
+          "Lancaster Brewing Company 在左邊。"
+        ]
+      }
+    },
+    "destination_verbal_alert": {
+      "phrases": {
+        "0": "您將到達目的地。",
+        "1": "您將到達 <DESTINATION>。",
+        "2": "您的目的地將在 <RELATIVE_DIRECTION>。",
+        "3": "<DESTINATION> 將在 <RELATIVE_DIRECTION>。"
+      },
+      "relative_directions": [
+        "左",
+        "右"
+      ],
+      "example_phrases": {
+        "0": [
+          "您將到達目的地。"
+        ],
+        "1": [
+          "您將到達 3206 Powelton 大道。"
+        ],
+        "2": [
+          "您的目的地將在左邊。",
+          "您的目的地將在右邊。"
+        ],
+        "3": [
+          "Lancaster Brewing Company 將在左邊。"
+        ]
+      }
+    },
+    "enter_ferry": {
+      "phrases": {
+        "0": "乘坐渡輪。",
+        "1": "乘坐 <STREET_NAMES>。",
+        "2": "乘坐 <STREET_NAMES> <FERRY_LABEL>。",
+        "3": "乘坐渡輪朝 <TOWARD_SIGN>。"
+      },
+      "empty_street_name_labels": [
+        "步道",
+        "自行車道",
+        "山地自行車道",
+        "人行橫道",
+        "樓梯",
+        "橋",
+        "隧道"
+      ],
+      "ferry_label": "渡輪",
+      "example_phrases": {
+        "0": [
+          "乘坐渡輪。"
+        ],
+        "1": [
+          "乘坐 Millersburg 渡輪。"
+        ],
+        "2": [
+          "乘坐 Bridgeport - Port Jefferson 渡輪。"
+        ],
+        "3": [
+          "乘坐渡輪朝 Cape May。"
+        ]
+      }
+    },
+    "enter_ferry_verbal": {
+      "phrases": {
+        "0": "乘坐渡輪。",
+        "1": "乘坐 <STREET_NAMES>。",
+        "2": "乘坐 <STREET_NAMES> <FERRY_LABEL>。",
+        "3": "乘坐渡輪朝 <TOWARD_SIGN>。"
+      },
+      "empty_street_name_labels": [
+        "步道",
+        "自行車道",
+        "山地自行車道",
+        "人行橫道",
+        "樓梯",
+        "橋",
+        "隧道"
+      ],
+      "ferry_label": "渡輪",
+      "example_phrases": {
+        "0": [
+          "乘坐渡輪。"
+        ],
+        "1": [
+          "乘坐 Millersburg 渡輪。"
+        ],
+        "2": [
+          "乘坐 Bridgeport - Port Jefferson 渡輪。"
+        ],
+        "3": [
+          "乘坐渡輪朝 Cape May。"
+        ]
+      }
+    },
+    "enter_roundabout": {
+      "phrases": {
+        "0": "進入圓環。",
+        "1": "進入圓環並走第 <ORDINAL_VALUE> 出口。",
+        "2": "進入圓環並走第 <ORDINAL_VALUE> 出口上 <ROUNDABOUT_EXIT_STREET_NAMES>。",
+        "3": "進入圓環並走第 <ORDINAL_VALUE> 出口上 <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>。繼續在 <ROUNDABOUT_EXIT_STREET_NAMES>。",
+        "4": "進入圓環並走第 <ORDINAL_VALUE> 出口朝 <TOWARD_SIGN>。",
+        "5": "進入圓環並走出口上 <ROUNDABOUT_EXIT_STREET_NAMES>。",
+        "6": "進入圓環並走出口上 <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>。繼續在 <ROUNDABOUT_EXIT_STREET_NAMES>。",
+        "7": "進入圓環並走出口朝 <TOWARD_SIGN>。",
+        "8": "進入 <STREET_NAMES>",
+        "9": "進入 <STREET_NAMES> 並走第 <ORDINAL_VALUE> 出口。",
+        "10": "進入 <STREET_NAMES> 並走第 <ORDINAL_VALUE> 出口上 <ROUNDABOUT_EXIT_STREET_NAMES>。",
+        "11": "進入 <STREET_NAMES> 並走第 <ORDINAL_VALUE> 出口上 <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>。繼續在 <ROUNDABOUT_EXIT_STREET_NAMES>。",
+        "12": "進入 <STREET_NAMES> 並走第 <ORDINAL_VALUE> 出口朝 <TOWARD_SIGN>。",
+        "13": "進入 <STREET_NAMES> 並走出口上 <ROUNDABOUT_EXIT_STREET_NAMES>。",
+        "14": "進入 <STREET_NAMES> 並走出口上 <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>。繼續在 <ROUNDABOUT_EXIT_STREET_NAMES>。",
+        "15": "進入 <STREET_NAMES> 並走出口朝 <TOWARD_SIGN>。"
+      },
+      "ordinal_values": [
+        "第一",
+        "第二",
+        "第三",
+        "第四",
+        "第五",
+        "第六",
+        "第七",
+        "第八",
+        "第九",
+        "第十"
+      ],
+      "empty_street_name_labels": [
+        "步道",
+        "自行車道",
+        "山地自行車道",
+        "人行橫道",
+        "樓梯",
+        "橋",
+        "隧道"
+      ],
+      "example_phrases": {
+        "0": [
+          "進入圓環。"
+        ],
+        "1": [
+          "進入圓環並走第一出口。",
+          "進入圓環並走第二出口。",
+          "進入圓環並走第三出口。",
+          "進入圓環並走第四出口。",
+          "進入圓環並走第五出口。",
+          "進入圓環並走第六出口。",
+          "進入圓環並走第七出口。",
+          "進入圓環並走第八出口。",
+          "進入圓環並走第九出口。",
+          "進入圓環並走第十出口。"
+        ],
+        "2": [
+          "進入圓環並走第三出口上 Main 街。"
+        ],
+        "3": [
+          "進入圓環並走第三出口上 US 322/Main 街。繼續在 US 322。"
+        ],
+        "4": [
+          "進入圓環並走第三出口朝巴爾的摩。"
+        ],
+        "5": [
+          "進入圓環並走出口上 Main 街。"
+        ],
+        "6": [
+          "進入圓環並走出口上 US 322/Main 街。繼續在 US 322。"
+        ],
+        "7": [
+          "進入圓環並走出口朝巴爾的摩。"
+        ],
+        "8": [
+          "進入杜邦環形交叉路口。"
+        ],
+        "9": [
+          "進入杜邦環形交叉路口並走第一出口。"
+        ],
+        "10": [
+          "進入杜邦環形交叉路口並走第三出口上 Main 街。"
+        ],
+        "11": [
+          "進入杜邦環形交叉路口並走第三出口上 US 322/Main 街。繼續在 US 322。"
+        ],
+        "12": [
+          "進入杜邦環形交叉路口並走第三出口朝巴爾的摩。"
+        ],
+        "13": [
+          "進入杜邦環形交叉路口並走出口上 Main 街。"
+        ],
+        "14": [
+          "進入杜邦環形交叉路口並走出口上 US 322/Main 街。繼續在 US 322。"
+        ],
+        "15": [
+          "進入杜邦環形交叉路口並走出口朝巴爾的摩。"
+        ]
+      }
+    },
+    "enter_roundabout_verbal": {
+      "phrases": {
+        "0": "進入圓環。",
+        "1": "進入圓環並走第 <ORDINAL_VALUE> 出口。",
+        "2": "進入圓環並走第 <ORDINAL_VALUE> 出口上 <ROUNDABOUT_EXIT_STREET_NAMES>。",
+        "3": "進入圓環並走第 <ORDINAL_VALUE> 出口上 <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>。",
+        "4": "進入圓環並走第 <ORDINAL_VALUE> 出口朝 <TOWARD_SIGN>。",
+        "5": "進入圓環並走出口上 <ROUNDABOUT_EXIT_STREET_NAMES>。",
+        "6": "進入圓環並走出口上 <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>。",
+        "7": "進入圓環並走出口朝 <TOWARD_SIGN>。",
+        "8": "進入 <STREET_NAMES>",
+        "9": "進入 <STREET_NAMES> 並走第 <ORDINAL_VALUE> 出口。",
+        "10": "進入 <STREET_NAMES> 並走第 <ORDINAL_VALUE> 出口上 <ROUNDABOUT_EXIT_STREET_NAMES>。",
+        "11": "進入 <STREET_NAMES> 並走第 <ORDINAL_VALUE> 出口上 <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>。",
+        "12": "進入 <STREET_NAMES> 並走第 <ORDINAL_VALUE> 出口朝 <TOWARD_SIGN>。",
+        "13": "進入 <STREET_NAMES> 並走出口上 <ROUNDABOUT_EXIT_STREET_NAMES>。",
+        "14": "進入 <STREET_NAMES> 並走出口上 <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>。",
+        "15": "進入 <STREET_NAMES> 並走出口朝 <TOWARD_SIGN>。"
+      },
+      "ordinal_values": [
+        "第一",
+        "第二",
+        "第三",
+        "第四",
+        "第五",
+        "第六",
+        "第七",
+        "第八",
+        "第九",
+        "第十"
+      ],
+      "empty_street_name_labels": [
+        "步道",
+        "自行車道",
+        "山地自行車道",
+        "人行橫道",
+        "樓梯",
+        "橋",
+        "隧道"
+      ],
+      "example_phrases": {
+        "0": [
+          "進入圓環。"
+        ],
+        "1": [
+          "進入圓環並走第一出口。",
+          "進入圓環並走第二出口。",
+          "進入圓環並走第三出口。",
+          "進入圓環並走第四出口。",
+          "進入圓環並走第五出口。",
+          "進入圓環並走第六出口。",
+          "進入圓環並走第七出口。",
+          "進入圓環並走第八出口。",
+          "進入圓環並走第九出口。",
+          "進入圓環並走第十出口。"
+        ],
+        "2": [
+          "進入圓環並走第三出口上 Main 街。"
+        ],
+        "3": [
+          "進入圓環並走第三出口上 U.S. 3 22/Main 街。"
+        ],
+        "4": [
+          "進入圓環並走第三出口朝巴爾的摩。"
+        ],
+        "5": [
+          "進入圓環並走出口上 Main 街。"
+        ],
+        "6": [
+          "進入圓環並走出口上 U.S. 3 22/Main 街。"
+        ],
+        "7": [
+          "進入圓環並走出口朝巴爾的摩。"
+        ],
+        "8": [
+          "進入杜邦環形交叉路口。"
+        ],
+        "9": [
+          "進入杜邦環形交叉路口並走第一出口。"
+        ],
+        "10": [
+          "進入杜邦環形交叉路口並走第三出口上 Main 街。"
+        ],
+        "11": [
+          "進入杜邦環形交叉路口並走第三出口上 U.S. 3 22/Main 街。"
+        ],
+        "12": [
+          "進入杜邦環形交叉路口並走第三出口朝巴爾的摩。"
+        ],
+        "13": [
+          "進入杜邦環形交叉路口並走出口上 Main 街。"
+        ],
+        "14": [
+          "進入杜邦環形交叉路口並走出口上 U.S. 3 22/Main 街。"
+        ],
+        "15": [
+          "進入杜邦環形交叉路口並走出口朝巴爾的摩。"
+        ]
+      }
+    },
+    "exit": {
+      "phrases": {
+        "0": "在 <RELATIVE_DIRECTION> 出口。",
+        "1": "在 <RELATIVE_DIRECTION> 出口 <NUMBER_SIGN>。",
+        "2": "在 <RELATIVE_DIRECTION> 出口 <BRANCH_SIGN>。",
+        "3": "在 <RELATIVE_DIRECTION> 出口 <NUMBER_SIGN> 上 <BRANCH_SIGN>。",
+        "4": "在 <RELATIVE_DIRECTION> 出口朝 <TOWARD_SIGN>。",
+        "5": "在 <RELATIVE_DIRECTION> 出口 <NUMBER_SIGN> 朝 <TOWARD_SIGN>。",
+        "6": "在 <RELATIVE_DIRECTION> 出口 <BRANCH_SIGN> 朝 <TOWARD_SIGN>。",
+        "7": "在 <RELATIVE_DIRECTION> 出口 <NUMBER_SIGN> 上 <BRANCH_SIGN> 朝 <TOWARD_SIGN>。",
+        "8": "在 <RELATIVE_DIRECTION> 出口 <NAME_SIGN>。",
+        "10": "在 <RELATIVE_DIRECTION> 出口 <NAME_SIGN> 上 <BRANCH_SIGN>。",
+        "12": "在 <RELATIVE_DIRECTION> 出口 <NAME_SIGN> 朝 <TOWARD_SIGN>。",
+        "14": "在 <RELATIVE_DIRECTION> 出口 <NAME_SIGN> 上 <BRANCH_SIGN> 朝 <TOWARD_SIGN>。",
+        "15": "在出口。",
+        "16": "在出口 <NUMBER_SIGN>。",
+        "17": "在出口 <BRANCH_SIGN>。",
+        "18": "在出口 <NUMBER_SIGN> 上 <BRANCH_SIGN>。",
+        "19": "在出口朝 <TOWARD_SIGN>。",
+        "20": "在出口 <NUMBER_SIGN> 朝 <TOWARD_SIGN>。",
+        "21": "在出口 <BRANCH_SIGN> 朝 <TOWARD_SIGN>。",
+        "22": "在出口 <NUMBER_SIGN> 上 <BRANCH_SIGN> 朝 <TOWARD_SIGN>。",
+        "23": "在出口 <NAME_SIGN>。",
+        "25": "在出口 <NAME_SIGN> 上 <BRANCH_SIGN>。",
+        "27": "在出口 <NAME_SIGN> 朝 <TOWARD_SIGN>。",
+        "29": "在出口 <NAME_SIGN> 上 <BRANCH_SIGN> 朝 <TOWARD_SIGN>。"
+      },
+      "relative_directions": [
+        "左",
+        "右"
+      ],
+      "example_phrases": {
+        "0": [
+          "在左出口。",
+          "在右出口。"
+        ],
+        "1": [
+          "在右出口 67 B-A。"
+        ],
+        "2": [
+          "在右出口 US 322 西。"
+        ],
+        "3": [
+          "在右出口 67 B-A 上 US 322 西。"
+        ],
+        "4": [
+          "在右出口朝 Lewistown。"
+        ],
+        "5": [
+          "在右出口 67 B-A 朝 Lewistown。"
+        ],
+        "6": [
+          "在右出口 US 322 西朝 Lewistown。"
+        ],
+        "7": [
+          "在右出口 67 B-A 上 US 322 西朝 Lewistown/State College。"
+        ],
+        "8": [
+          "在左出口 White Marsh Boulevard。"
+        ],
+        "10": [
+          "在左出口 White Marsh Boulevard 上 MD 43 東。"
+        ],
+        "12": [
+          "在左出口 White Marsh Boulevard 朝 White Marsh。"
+        ],
+        "14": [
+          "在左出口 White Marsh Boulevard 上 MD 43 東朝 White Marsh。"
+        ],
+        "15": [
+          "在出口。"
+        ],
+        "16": [
+          "在出口 67 B-A。"
+        ],
+        "17": [
+          "在出口 US 322 西。"
+        ],
+        "18": [
+          "在出口 67 B-A 上 US 322 西。"
+        ],
+        "19": [
+          "在出口朝 Lewistown。"
+        ],
+        "20": [
+          "在出口 67 B-A 朝 Lewistown。"
+        ],
+        "21": [
+          "在出口 US 322 西朝 Lewistown。"
+        ],
+        "22": [
+          "在出口 67 B-A 上 US 322 西朝 Lewistown/State College。"
+        ],
+        "23": [
+          "在出口 White Marsh Boulevard。"
+        ],
+        "25": [
+          "在出口 White Marsh Boulevard 上 MD 43 東。"
+        ],
+        "27": [
+          "在出口 White Marsh Boulevard 朝 White Marsh。"
+        ],
+        "29": [
+          "在出口 White Marsh Boulevard 上 MD 43 東朝 White Marsh。"
+        ]
+      }
+    },
+    "exit_roundabout": {
+      "phrases": {
+        "0": "離開圓環。",
+        "1": "離開圓環上 <STREET_NAMES>。",
+        "2": "離開圓環上 <BEGIN_STREET_NAMES>。繼續在 <STREET_NAMES>。",
+        "3": "離開圓環朝 <TOWARD_SIGN>。"
+      },
+      "empty_street_name_labels": [
+        "步道",
+        "自行車道",
+        "山地自行車道",
+        "人行橫道",
+        "樓梯",
+        "橋",
+        "隧道"
+      ],
+      "example_phrases": {
+        "0": [
+          "離開圓環。"
+        ],
+        "1": [
+          "離開圓環上 Philadelphia 路/MD 7。"
+        ],
+        "2": [
+          "離開圓環上 Catoctin Mountain 高速公路/US 15。繼續在 US 15。"
+        ],
+        "3": [
+          "離開圓環朝巴爾的摩。"
+        ]
+      }
+    },
+    "exit_roundabout_verbal": {
+      "phrases": {
+        "0": "離開圓環。",
+        "1": "離開圓環上 <STREET_NAMES>。",
+        "2": "離開圓環上 <BEGIN_STREET_NAMES>。",
+        "3": "離開圓環朝 <TOWARD_SIGN>。"
+      },
+      "empty_street_name_labels": [
+        "步道",
+        "自行車道",
+        "山地自行車道",
+        "人行橫道",
+        "樓梯",
+        "橋",
+        "隧道"
+      ],
+      "example_phrases": {
+        "0": [
+          "離開圓環。"
+        ],
+        "1": [
+          "離開圓環上 Philadelphia 路，馬里蘭 7。"
+        ],
+        "2": [
+          "離開圓環上 Catoctin Mountain 高速公路，U.S. 15。"
+        ],
+        "3": [
+          "離開圓環朝巴爾的摩。"
+        ]
+      }
+    },
+    "exit_verbal": {
+      "phrases": {
+        "0": "在 <RELATIVE_DIRECTION> 出口。",
+        "1": "在 <RELATIVE_DIRECTION> 出口 <NUMBER_SIGN>。",
+        "2": "在 <RELATIVE_DIRECTION> 出口 <BRANCH_SIGN>。",
+        "3": "在 <RELATIVE_DIRECTION> 出口 <NUMBER_SIGN> 上 <BRANCH_SIGN>。",
+        "4": "在 <RELATIVE_DIRECTION> 出口朝 <TOWARD_SIGN>。",
+        "5": "在 <RELATIVE_DIRECTION> 出口 <NUMBER_SIGN> 朝 <TOWARD_SIGN>。",
+        "6": "在 <RELATIVE_DIRECTION> 出口 <BRANCH_SIGN> 朝 <TOWARD_SIGN>。",
+        "7": "在 <RELATIVE_DIRECTION> 出口 <NUMBER_SIGN> 上 <BRANCH_SIGN> 朝 <TOWARD_SIGN>。",
+        "8": "在 <RELATIVE_DIRECTION> 出口 <NAME_SIGN>。",
+        "10": "在 <RELATIVE_DIRECTION> 出口 <NAME_SIGN> 上 <BRANCH_SIGN>。",
+        "12": "在 <RELATIVE_DIRECTION> 出口 <NAME_SIGN> 朝 <TOWARD_SIGN>。",
+        "14": "在 <RELATIVE_DIRECTION> 出口 <NAME_SIGN> 上 <BRANCH_SIGN> 朝 <TOWARD_SIGN>。",
+        "15": "在出口。",
+        "16": "在出口 <NUMBER_SIGN>。",
+        "17": "在出口 <BRANCH_SIGN>。",
+        "18": "在出口 <NUMBER_SIGN> 上 <BRANCH_SIGN>。",
+        "19": "在出口朝 <TOWARD_SIGN>。",
+        "20": "在出口 <NUMBER_SIGN> 朝 <TOWARD_SIGN>。",
+        "21": "在出口 <BRANCH_SIGN> 朝 <TOWARD_SIGN>。",
+        "22": "在出口 <NUMBER_SIGN> 上 <BRANCH_SIGN> 朝 <TOWARD_SIGN>。",
+        "23": "在出口 <NAME_SIGN>。",
+        "25": "在出口 <NAME_SIGN> 上 <BRANCH_SIGN>。",
+        "27": "在出口 <NAME_SIGN> 朝 <TOWARD_SIGN>。",
+        "29": "在出口 <NAME_SIGN> 上 <BRANCH_SIGN> 朝 <TOWARD_SIGN>。"
+      },
+      "relative_directions": [
+        "左",
+        "右"
+      ],
+      "example_phrases": {
+        "0": [
+          "在左出口。",
+          "在右出口。"
+        ],
+        "1": [
+          "在右出口 67 B-A。"
+        ],
+        "2": [
+          "在右出口 U.S. 3 22 西。"
+        ],
+        "3": [
+          "在右出口 67 B-A 上 U.S. 3 22 西。"
+        ],
+        "4": [
+          "在右出口朝 Lewistown。"
+        ],
+        "5": [
+          "在右出口 67 B-A 朝 Lewistown。"
+        ],
+        "6": [
+          "在右出口 U.S. 3 22 西朝 Lewistown。"
+        ],
+        "7": [
+          "在右出口 67 B-A 上 U.S. 3 22 西朝 Lewistown，State College。"
+        ],
+        "8": [
+          "在左出口 White Marsh Boulevard。"
+        ],
+        "10": [
+          "在左出口 White Marsh Boulevard 上馬里蘭 43 東。"
+        ],
+        "12": [
+          "在左出口 White Marsh Boulevard 朝 White Marsh。"
+        ],
+        "14": [
+          "在左出口 White Marsh Boulevard 上馬里蘭 43 東朝 White Marsh。"
+        ],
+        "15": [
+          "在出口。"
+        ],
+        "16": [
+          "在出口 67 B-A。"
+        ],
+        "17": [
+          "在出口 U.S. 3 22 西。"
+        ],
+        "18": [
+          "在出口 67 B-A 上 U.S. 3 22 西。"
+        ],
+        "19": [
+          "在出口朝 Lewistown。"
+        ],
+        "20": [
+          "在出口 67 B-A 朝 Lewistown。"
+        ],
+        "21": [
+          "在出口 U.S. 3 22 西朝 Lewistown。"
+        ],
+        "22": [
+          "在出口 67 B-A 上 U.S. 3 22 西朝 Lewistown，State College。"
+        ],
+        "23": [
+          "在出口 White Marsh Boulevard。"
+        ],
+        "25": [
+          "在出口 White Marsh Boulevard 上馬里蘭 43 東。"
+        ],
+        "27": [
+          "在出口 White Marsh Boulevard 朝 White Marsh。"
+        ],
+        "29": [
+          "在出口 White Marsh Boulevard 上馬里蘭 43 東朝 White Marsh。"
+        ]
+      }
+    },
+    "exit_visual": {
+      "phrases": {
+        "0": "出口 <EXIT_NUMBERS>"
+      },
+      "example_phrases": {
+        "0": [
+          "出口 1A"
+        ]
+      }
+    },
+    "keep": {
+      "phrases": {
+        "0": "在分叉處保持 <RELATIVE_DIRECTION>。",
+        "1": "保持 <RELATIVE_DIRECTION> 走出口 <NUMBER_SIGN>。",
+        "2": "保持 <RELATIVE_DIRECTION> 走 <STREET_NAMES>。",
+        "3": "保持 <RELATIVE_DIRECTION> 走出口 <NUMBER_SIGN> 上 <STREET_NAMES>。",
+        "4": "朝 <TOWARD_SIGN> 保持 <RELATIVE_DIRECTION>。",
+        "5": "保持 <RELATIVE_DIRECTION> 走出口 <NUMBER_SIGN> 朝 <TOWARD_SIGN>。",
+        "6": "保持 <RELATIVE_DIRECTION> 走 <STREET_NAMES> 朝 <TOWARD_SIGN>。",
+        "7": "保持 <RELATIVE_DIRECTION> 走出口 <NUMBER_SIGN> 上 <STREET_NAMES> 朝 <TOWARD_SIGN>。"
+      },
+      "empty_street_name_labels": [
+        "步道",
+        "自行車道",
+        "山地自行車道",
+        "人行橫道",
+        "樓梯",
+        "橋",
+        "隧道"
+      ],
+      "relative_directions": [
+        "左",
+        "直行",
+        "右"
+      ],
+      "example_phrases": {
+        "0": [
+          "在分叉處保持左。",
+          "在分叉處保持直行。",
+          "在分叉處保持右。"
+        ],
+        "1": [
+          "保持右走出口 62。"
+        ],
+        "2": [
+          "保持右走 I 895 南。"
+        ],
+        "3": [
+          "保持右走出口 62 上 I 895 南。"
+        ],
+        "4": [
+          "朝 Annapolis 保持右。"
+        ],
+        "5": [
+          "保持右走出口 62 朝 Annapolis。"
+        ],
+        "6": [
+          "保持右走 I 895 南朝 Annapolis。"
+        ],
+        "7": [
+          "保持右走出口 62 上 I 895 南朝 Annapolis。"
+        ]
+      }
+    },
+    "keep_to_stay_on": {
+      "phrases": {
+        "0": "保持 <RELATIVE_DIRECTION> 以繼續在 <STREET_NAMES>。",
+        "1": "保持 <RELATIVE_DIRECTION> 走出口 <NUMBER_SIGN> 以繼續在 <STREET_NAMES>。",
+        "2": "保持 <RELATIVE_DIRECTION> 繼續在 <STREET_NAMES> 朝 <TOWARD_SIGN>。",
+        "3": "保持 <RELATIVE_DIRECTION> 走出口 <NUMBER_SIGN> 繼續在 <STREET_NAMES> 朝 <TOWARD_SIGN>。"
+      },
+      "empty_street_name_labels": [
+        "步道",
+        "自行車道",
+        "山地自行車道",
+        "人行橫道",
+        "樓梯",
+        "橋",
+        "隧道"
+      ],
+      "relative_directions": [
+        "左",
+        "直行",
+        "右"
+      ],
+      "example_phrases": {
+        "0": [
+          "保持左以繼續在 I 95 南。",
+          "保持直行以繼續在 I 95 南。",
+          "保持右以繼續在 I 95 南。"
+        ],
+        "1": [
+          "保持左走出口 62 以繼續在 I 95 南。"
+        ],
+        "2": [
+          "保持左繼續在 I 95 南朝巴爾的摩。"
+        ],
+        "3": [
+          "保持左走出口 62 以繼續在 I 95 南朝巴爾的摩。"
+        ]
+      }
+    },
+    "keep_to_stay_on_verbal": {
+      "phrases": {
+        "0": "保持 <RELATIVE_DIRECTION> 以繼續在 <STREET_NAMES>。",
+        "1": "保持 <RELATIVE_DIRECTION> 走出口 <NUMBER_SIGN> 以繼續在 <STREET_NAMES>。",
+        "2": "保持 <RELATIVE_DIRECTION> 繼續在 <STREET_NAMES> 朝 <TOWARD_SIGN>。",
+        "3": "保持 <RELATIVE_DIRECTION> 走出口 <NUMBER_SIGN> 繼續在 <STREET_NAMES> 朝 <TOWARD_SIGN>。"
+      },
+      "empty_street_name_labels": [
+        "步道",
+        "自行車道",
+        "山地自行車道",
+        "人行橫道",
+        "樓梯",
+        "橋",
+        "隧道"
+      ],
+      "relative_directions": [
+        "左",
+        "直行",
+        "右"
+      ],
+      "example_phrases": {
+        "0": [
+          "保持左以繼續在 Interstate 95 南。",
+          "保持直行以繼續在 Interstate 95 南。",
+          "保持右以繼續在 Interstate 95 南。"
+        ],
+        "1": [
+          "保持左走出口 62 以繼續在 Interstate 95 南。"
+        ],
+        "2": [
+          "保持左繼續在 I 95 南朝巴爾的摩。"
+        ],
+        "3": [
+          "保持左走出口 62 以繼續在 Interstate 95 南朝巴爾的摩。"
+        ]
+      }
+    },
+    "keep_verbal": {
+      "phrases": {
+        "0": "在分叉處保持 <RELATIVE_DIRECTION>。",
+        "1": "保持 <RELATIVE_DIRECTION> 走出口 <NUMBER_SIGN>。",
+        "2": "保持 <RELATIVE_DIRECTION> 走 <STREET_NAMES>。",
+        "3": "保持 <RELATIVE_DIRECTION> 走出口 <NUMBER_SIGN> 上 <STREET_NAMES>。",
+        "4": "朝 <TOWARD_SIGN> 保持 <RELATIVE_DIRECTION>。",
+        "5": "保持 <RELATIVE_DIRECTION> 走出口 <NUMBER_SIGN> 朝 <TOWARD_SIGN>。",
+        "6": "保持 <RELATIVE_DIRECTION> 走 <STREET_NAMES> 朝 <TOWARD_SIGN>。",
+        "7": "保持 <RELATIVE_DIRECTION> 走出口 <NUMBER_SIGN> 上 <STREET_NAMES> 朝 <TOWARD_SIGN>。"
+      },
+      "empty_street_name_labels": [
+        "步道",
+        "自行車道",
+        "山地自行車道",
+        "人行橫道",
+        "樓梯",
+        "橋",
+        "隧道"
+      ],
+      "relative_directions": [
+        "左",
+        "直行",
+        "右"
+      ],
+      "example_phrases": {
+        "0": [
+          "在分叉處保持左。",
+          "在分叉處保持直行。",
+          "在分叉處保持右。"
+        ],
+        "1": [
+          "保持右走出口 62。"
+        ],
+        "2": [
+          "保持右走 Interstate 8 95 南。"
+        ],
+        "3": [
+          "保持右走出口 62 上 Interstate 8 95 南。"
+        ],
+        "4": [
+          "朝 Annapolis 保持右。"
+        ],
+        "5": [
+          "保持右走出口 62 朝 Annapolis。"
+        ],
+        "6": [
+          "保持右走 Interstate 8 95 南朝 Annapolis。"
+        ],
+        "7": [
+          "保持右走出口 62 上 Interstate 8 95 南朝 Annapolis。"
+        ]
+      }
+    },
+    "merge": {
+      "phrases": {
+        "0": "合併。",
+        "1": "向 <RELATIVE_DIRECTION> 合併。",
+        "2": "合併上 <STREET_NAMES>。",
+        "3": "向 <RELATIVE_DIRECTION> 合併上 <STREET_NAMES>。",
+        "4": "合併朝 <TOWARD_SIGN>。",
+        "5": "向 <RELATIVE_DIRECTION> 合併朝 <TOWARD_SIGN>。"
+      },
+      "relative_directions": [
+        "左",
+        "右"
+      ],
+      "empty_street_name_labels": [
+        "步道",
+        "自行車道",
+        "山地自行車道",
+        "人行橫道",
+        "樓梯",
+        "橋",
+        "隧道"
+      ],
+      "example_phrases": {
+        "0": [
+          "合併。"
+        ],
+        "1": [
+          "向左合併。"
+        ],
+        "2": [
+          "合併上 I 76 西/賓夕法尼亞收費公路。"
+        ],
+        "3": [
+          "向右合併上 I 83 南。"
+        ],
+        "4": [
+          "合併朝巴爾的摩。"
+        ],
+        "5": [
+          "向右合併朝巴爾的摩。"
+        ]
+      }
+    },
+    "merge_verbal": {
+      "phrases": {
+        "0": "合併。",
+        "1": "向 <RELATIVE_DIRECTION> 合併。",
+        "2": "合併上 <STREET_NAMES>。",
+        "3": "向 <RELATIVE_DIRECTION> 合併上 <STREET_NAMES>。",
+        "4": "合併朝 <TOWARD_SIGN>。",
+        "5": "向 <RELATIVE_DIRECTION> 合併朝 <TOWARD_SIGN>。"
+      },
+      "relative_directions": [
+        "左",
+        "右"
+      ],
+      "empty_street_name_labels": [
+        "步道",
+        "自行車道",
+        "山地自行車道",
+        "人行橫道",
+        "樓梯",
+        "橋",
+        "隧道"
+      ],
+      "example_phrases": {
+        "0": [
+          "合併。"
+        ],
+        "1": [
+          "向左合併。"
+        ],
+        "2": [
+          "合併上 I 76 西/賓夕法尼亞收費公路。"
+        ],
+        "3": [
+          "向右合併上 I 83 南。"
+        ],
+        "4": [
+          "合併朝巴爾的摩。"
+        ],
+        "5": [
+          "向右合併朝巴爾的摩。"
+        ]
+      }
+    },
+    "post_transition_transit_verbal": {
+      "phrases": {
+        "0": "行駛 <TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>。"
+      },
+      "transit_stop_count_labels": {
+        "one": "站",
+        "other": "站"
+      },
+      "example_phrases": {
+        "0": [
+          "行駛 1 站。",
+          "行駛 3 站。"
+        ]
+      }
+    },
+    "post_transition_verbal": {
+      "phrases": {
+        "0": "繼續行駛 <LENGTH>。",
+        "1": "繼續行駛在 <STREET_NAMES>。"
+      },
+      "empty_street_name_labels": [
+        "步道",
+        "自行車道",
+        "山地自行車道",
+        "人行橫道",
+        "樓梯",
+        "橋",
+        "隧道"
+      ],
+      "metric_lengths": [
+        "<KILOMETERS> 公里",
+        "1 公里",
+        "<METERS> 米",
+        "不到 10 米"
+      ],
+      "us_customary_lengths": [
+        "<MILES> 英里",
+        "1 英里",
+        "半英里",
+        "四分之一英里",
+        "<FEET> 英尺",
+        "不到 10 英尺"
+      ],
+      "example_phrases": {
+        "0": [
+          "繼續行駛 300 英尺。",
+          "繼續行駛 9 英里。"
+        ],
+        "1": [
+          "繼續行駛在 Pennsylvania 7 43 6.2 英里。",
+          "繼續行駛在 Main 街，Vermont 30 0.1 英里。"
+        ]
+      }
+    },
+    "ramp": {
+      "phrases": {
+        "0": "從 <RELATIVE_DIRECTION> 走匝道。",
+        "1": "從 <RELATIVE_DIRECTION> 走 <BRANCH_SIGN> 匝道。",
+        "2": "從 <RELATIVE_DIRECTION> 走匝道朝 <TOWARD_SIGN>。",
+        "3": "從 <RELATIVE_DIRECTION> 走 <BRANCH_SIGN> 匝道朝 <TOWARD_SIGN>。",
+        "4": "從 <RELATIVE_DIRECTION> 走 <NAME_SIGN> 匝道。",
+        "5": "向 <RELATIVE_DIRECTION> 轉以走匝道。",
+        "6": "向 <RELATIVE_DIRECTION> 轉以走 <BRANCH_SIGN> 匝道。",
+        "7": "向 <RELATIVE_DIRECTION> 轉以走匝道朝 <TOWARD_SIGN>。",
+        "8": "向 <RELATIVE_DIRECTION> 轉以走 <BRANCH_SIGN> 匝道朝 <TOWARD_SIGN>。",
+        "9": "向 <RELATIVE_DIRECTION> 轉以走 <NAME_SIGN> 匝道。",
+        "10": "走匝道。",
+        "11": "走 <BRANCH_SIGN> 匝道。",
+        "12": "走匝道朝 <TOWARD_SIGN>。",
+        "13": "走 <BRANCH_SIGN> 匝道朝 <TOWARD_SIGN>。",
+        "14": "走 <NAME_SIGN> 匝道。"
+      },
+      "relative_directions": [
+        "左",
+        "右"
+      ],
+      "example_phrases": {
+        "0": [
+          "從左走匝道。",
+          "從右走匝道。"
+        ],
+        "1": [
+          "從右走 I 95 匝道。"
+        ],
+        "2": [
+          "從左走匝道朝 JFK。"
+        ],
+        "3": [
+          "從左走 South Conduit Avenue 匝道朝 JFK。"
+        ],
+        "4": [
+          "從右走 Gettysburg Pike 匝道。"
+        ],
+        "5": [
+          "向左轉以走匝道。",
+          "向右轉以走匝道。"
+        ],
+        "6": [
+          "向左轉以走 PA 283 西匝道。"
+        ],
+        "7": [
+          "向左轉以走匝道朝 Harrisburg/Harrisburg 國際機場。"
+        ],
+        "8": [
+          "向左轉以走 PA 283 西匝道朝 Harrisburg/Harrisburg 國際機場。"
+        ],
+        "9": [
+          "向右轉以走 Gettysburg Pike 匝道。"
+        ],
+        "10": [
+          "走匝道。"
+        ],
+        "11": [
+          "走 I 95 匝道。"
+        ],
+        "12": [
+          "走匝道朝 JFK。"
+        ],
+        "13": [
+          "走 South Conduit Avenue 匝道朝 JFK。"
+        ],
+        "14": [
+          "走 Gettysburg 匝道。"
+        ]
+      }
+    },
+    "ramp_straight": {
+      "phrases": {
+        "0": "直行以走匝道。",
+        "1": "直行以走 <BRANCH_SIGN> 匝道。",
+        "2": "直行以走匝道朝 <TOWARD_SIGN>。",
+        "3": "直行以走 <BRANCH_SIGN> 匝道朝 <TOWARD_SIGN>。",
+        "4": "直行以走 <NAME_SIGN> 匝道。"
+      },
+      "example_phrases": {
+        "0": [
+          "直行以走匝道。"
+        ],
+        "1": [
+          "直行以走 US 322 東匝道。"
+        ],
+        "2": [
+          "直行以走匝道朝 Hershey。"
+        ],
+        "3": [
+          "直行以走 US 322 東/US 422 東/US 522 東/US 622 東匝道朝 Hershey/Palmdale/Palmyra/Campbelltown。"
+        ],
+        "4": [
+          "直行以走 Gettysburg Pike 匝道。"
+        ]
+      }
+    },
+    "ramp_straight_verbal": {
+      "phrases": {
+        "0": "直行以走匝道。",
+        "1": "直行以走 <BRANCH_SIGN> 匝道。",
+        "2": "直行以走匝道朝 <TOWARD_SIGN>。",
+        "3": "直行以走 <BRANCH_SIGN> 匝道朝 <TOWARD_SIGN>。",
+        "4": "直行以走 <NAME_SIGN> 匝道。"
+      },
+      "example_phrases": {
+        "0": [
+          "直行以走匝道。"
+        ],
+        "1": [
+          "直行以走 U.S. 3 22 東匝道。"
+        ],
+        "2": [
+          "直行以走匝道朝 Hershey。"
+        ],
+        "3": [
+          "直行以走 U.S. 3 22 東，U.S. 4 22 東匝道朝 Hershey，Palmdale。"
+        ],
+        "4": [
+          "直行以走 Gettysburg Pike 匝道。"
+        ]
+      }
+    },
+    "ramp_verbal": {
+      "phrases": {
+        "0": "從 <RELATIVE_DIRECTION> 走匝道。",
+        "1": "從 <RELATIVE_DIRECTION> 走 <BRANCH_SIGN> 匝道。",
+        "2": "從 <RELATIVE_DIRECTION> 走匝道朝 <TOWARD_SIGN>。",
+        "3": "從 <RELATIVE_DIRECTION> 走 <BRANCH_SIGN> 匝道朝 <TOWARD_SIGN>。",
+        "4": "從 <RELATIVE_DIRECTION> 走 <NAME_SIGN> 匝道。",
+        "5": "向 <RELATIVE_DIRECTION> 轉以走匝道。",
+        "6": "向 <RELATIVE_DIRECTION> 轉以走 <BRANCH_SIGN> 匝道。",
+        "7": "向 <RELATIVE_DIRECTION> 轉以走匝道朝 <TOWARD_SIGN>。",
+        "8": "向 <RELATIVE_DIRECTION> 轉以走 <BRANCH_SIGN> 匝道朝 <TOWARD_SIGN>。",
+        "9": "向 <RELATIVE_DIRECTION> 轉以走 <NAME_SIGN> 匝道。",
+        "10": "走匝道。",
+        "11": "走 <BRANCH_SIGN> 匝道。",
+        "12": "走匝道朝 <TOWARD_SIGN>。",
+        "13": "走 <BRANCH_SIGN> 匝道朝 <TOWARD_SIGN>。",
+        "14": "走 <NAME_SIGN> 匝道。"
+      },
+      "relative_directions": [
+        "左",
+        "右"
+      ],
+      "example_phrases": {
+        "0": [
+          "從左走匝道。",
+          "從右走匝道。"
+        ],
+        "1": [
+          "從右走 Interstate 95 匝道。"
+        ],
+        "2": [
+          "從左走匝道朝 JFK。"
+        ],
+        "3": [
+          "從左走 South Conduit Avenue 匝道朝 JFK。"
+        ],
+        "4": [
+          "從右走 Gettysburg Pike 匝道。"
+        ],
+        "5": [
+          "向左轉以走匝道。",
+          "向右轉以走匝道。"
+        ],
+        "6": [
+          "向左轉以走 Pennsylvania 2 83 西匝道。"
+        ],
+        "7": [
+          "向左轉以走匝道朝 Harrisburg/Harrisburg 國際機場。"
+        ],
+        "8": [
+          "向左轉以走 Pennsylvania 2 83 西匝道朝 Harrisburg，Harrisburg 國際機場。"
+        ],
+        "9": [
+          "向右轉以走 Gettysburg Pike 匝道。"
+        ],
+        "10": [
+          "走匝道。"
+        ],
+        "11": [
+          "走 Interstate 95 匝道。"
+        ],
+        "12": [
+          "走匝道朝 JFK。"
+        ],
+        "13": [
+          "走 South Conduit Avenue 匝道朝 JFK。"
+        ],
+        "14": [
+          "走 Gettysburg Pike 匝道。"
+        ]
+      }
+    },
+    "sharp": {
+      "phrases": {
+        "0": "急轉 <RELATIVE_DIRECTION>。",
+        "1": "急轉 <RELATIVE_DIRECTION> 上 <STREET_NAMES>。",
+        "2": "急轉 <RELATIVE_DIRECTION> 上 <BEGIN_STREET_NAMES>。繼續在 <STREET_NAMES>。",
+        "3": "急轉 <RELATIVE_DIRECTION> 以繼續在 <STREET_NAMES>。",
+        "4": "在 <JUNCTION_NAME> 急轉 <RELATIVE_DIRECTION>。",
+        "5": "急轉 <RELATIVE_DIRECTION> 朝 <TOWARD_SIGN>。"
+      },
+      "empty_street_name_labels": [
+        "步道",
+        "自行車道",
+        "山地自行車道",
+        "人行橫道",
+        "樓梯",
+        "橋",
+        "隧道"
+      ],
+      "relative_directions": [
+        "左",
+        "右"
+      ],
+      "example_phrases": {
+        "0": [
+          "急轉左。"
+        ],
+        "1": [
+          "急轉右上 Flatbush Avenue。"
+        ],
+        "2": [
+          "急轉左上 North Bond Street/US 1 Business/MD 924。繼續在 MD 924。"
+        ],
+        "3": [
+          "急轉右以繼續在 Sunstone Drive。"
+        ],
+        "4": [
+          "在 Mannenbashi 東急轉右。"
+        ],
+        "5": [
+          "急轉左朝巴爾的摩。"
+        ]
+      }
+    },
+    "sharp_verbal": {
+      "phrases": {
+        "0": "急轉 <RELATIVE_DIRECTION>。",
+        "1": "急轉 <RELATIVE_DIRECTION> 上 <STREET_NAMES>。",
+        "2": "急轉 <RELATIVE_DIRECTION> 上 <BEGIN_STREET_NAMES>。",
+        "3": "急轉 <RELATIVE_DIRECTION> 以繼續在 <STREET_NAMES>。",
+        "4": "在 <JUNCTION_NAME> 急轉 <RELATIVE_DIRECTION>。",
+        "5": "急轉 <RELATIVE_DIRECTION> 朝 <TOWARD_SIGN>。"
+      },
+      "empty_street_name_labels": [
+        "步道",
+        "自行車道",
+        "山地自行車道",
+        "人行橫道",
+        "樓梯",
+        "橋",
+        "隧道"
+      ],
+      "relative_directions": [
+        "左",
+        "右"
+      ],
+      "example_phrases": {
+        "0": [
+          "急轉左。"
+        ],
+        "1": [
+          "急轉右上 Flatbush Avenue。"
+        ],
+        "2": [
+          "急轉左上 North Bond Street，U.S. 1 Business。"
+        ],
+        "3": [
+          "急轉右以繼續在 Sunstone Drive。"
+        ],
+        "4": [
+          "在 Mannenbashi 東急轉右。"
+        ],
+        "5": [
+          "急轉左朝巴爾的摩。"
+        ]
+      }
+    },
+    "start": {
+      "phrases": {
+        "0": "向 <CARDINAL_DIRECTION> 方向前進。",
+        "1": "向 <CARDINAL_DIRECTION> 方向在 <STREET_NAMES> 上前進。",
+        "2": "向 <CARDINAL_DIRECTION> 方向在 <BEGIN_STREET_NAMES> 上前進。繼續在 <STREET_NAMES>。",
+        "4": "向 <CARDINAL_DIRECTION> 駕駛。",
+        "5": "向 <CARDINAL_DIRECTION> 方向在 <STREET_NAMES> 上駕駛。",
+        "6": "向 <CARDINAL_DIRECTION> 方向在 <BEGIN_STREET_NAMES> 上駕駛。繼續在 <STREET_NAMES>。",
+        "8": "向 <CARDINAL_DIRECTION> 步行。",
+        "9": "向 <CARDINAL_DIRECTION> 方向在 <STREET_NAMES> 上步行。",
+        "10": "向 <CARDINAL_DIRECTION> 方向在 <BEGIN_STREET_NAMES> 上步行。繼續在 <STREET_NAMES>。",
+        "16": "向 <CARDINAL_DIRECTION> 騎行。",
+        "17": "向 <CARDINAL_DIRECTION> 方向在 <STREET_NAMES> 上騎行。",
+        "18": "向 <CARDINAL_DIRECTION> 方向在 <BEGIN_STREET_NAMES> 上騎行。繼續在 <STREET_NAMES>。"
+      },
+      "cardinal_directions": [
+        "北",
+        "東北",
+        "東",
+        "東南",
+        "南",
+        "西南",
+        "西",
+        "西北"
+      ],
+      "empty_street_name_labels": [
+        "步道",
+        "自行車道",
+        "山地自行車道",
+        "人行橫道",
+        "樓梯",
+        "橋",
+        "隧道"
+      ],
+      "example_phrases": {
+        "0": [
+          "向東前進。",
+          "向北前進。"
+        ],
+        "1": [
+          "向西南方向前進在 5th Avenue 上。",
+          "向西方向前進在步道上",
+          "向東方向前進在自行車道上",
+          "向北方向前進在山地自行車道上"
+        ],
+        "2": [
+          "向南方向前進在 North Prince Street/US 222/PA 272 上。繼續在 US 222/PA 272。"
+        ],
+        "4": [
+          "向東駕駛。",
+          "向北駕駛。"
+        ],
+        "5": [
+          "向西南方向駕駛在 5th Avenue 上。"
+        ],
+        "6": [
+          "向南方向駕駛在 North Prince Street/US 222/PA 272 上。繼續在 US 222/PA 272。"
+        ],
+        "8": [
+          "向東步行。",
+          "向北步行。"
+        ],
+        "9": [
+          "向西南方向步行在 5th Avenue 上。",
+          "向西方向步行在步道上"
+        ],
+        "10": [
+          "向南方向步行在 North Prince Street/US 222/PA 272 上。繼續在 US 222/PA 272。"
+        ],
+        "16": [
+          "向東騎行。",
+          "向北騎行。"
+        ],
+        "17": [
+          "向西南方向騎行在 5th Avenue 上。",
+          "向東方向騎行在自行車道上",
+          "向北方向騎行在山地自行車道上"
+        ],
+        "18": [
+          "向南方向騎行在 North Prince Street/US 222/PA 272 上。繼續在 US 222/PA 272。"
+        ]
+      }
+    },
+    "start_verbal": {
+      "phrases": {
+        "0": "向 <CARDINAL_DIRECTION> 方向前進。",
+        "1": "向 <CARDINAL_DIRECTION> 方向行駛 <LENGTH>。",
+        "2": "向 <CARDINAL_DIRECTION> 方向在 <STREET_NAMES> 上前進。",
+        "3": "向 <CARDINAL_DIRECTION> 方向在 <STREET_NAMES> 上行駛 <LENGTH>。",
+        "4": "向 <CARDINAL_DIRECTION> 方向在 <BEGIN_STREET_NAMES> 上前進。",
+        "5": "向 <CARDINAL_DIRECTION> 駕駛。",
+        "6": "向 <CARDINAL_DIRECTION> 行駛 <LENGTH>。",
+        "7": "向 <CARDINAL_DIRECTION> 方向在 <STREET_NAMES> 上駕駛。",
+        "8": "向 <CARDINAL_DIRECTION> 方向在 <STREET_NAMES> 上行駛 <LENGTH>。",
+        "9": "向 <CARDINAL_DIRECTION> 方向在 <BEGIN_STREET_NAMES> 上駕駛。",
+        "10": "向 <CARDINAL_DIRECTION> 步行。",
+        "11": "向 <CARDINAL_DIRECTION> 行駛 <LENGTH>。",
+        "12": "向 <CARDINAL_DIRECTION> 方向在 <STREET_NAMES> 上步行。",
+        "13": "向 <CARDINAL_DIRECTION> 方向在 <STREET_NAMES> 上行駛 <LENGTH>。",
+        "14": "向 <CARDINAL_DIRECTION> 方向在 <BEGIN_STREET_NAMES> 上步行。",
+        "15": "向 <CARDINAL_DIRECTION> 騎行。",
+        "16": "向 <CARDINAL_DIRECTION> 行駛 <LENGTH>。",
+        "17": "向 <CARDINAL_DIRECTION> 方向在 <STREET_NAMES> 上騎行。",
+        "18": "向 <CARDINAL_DIRECTION> 方向在 <STREET_NAMES> 上行駛 <LENGTH>。",
+        "19": "向 <CARDINAL_DIRECTION> 方向在 <BEGIN_STREET_NAMES> 上騎行。"
+      },
+      "cardinal_directions": [
+        "北",
+        "東北",
+        "東",
+        "東南",
+        "南",
+        "西南",
+        "西",
+        "西北"
+      ],
+      "empty_street_name_labels": [
+        "步道",
+        "自行車道",
+        "山地自行車道",
+        "人行橫道",
+        "樓梯",
+        "橋",
+        "隧道"
+      ],
+      "metric_lengths": [
+        "<KILOMETERS> 公里",
+        "1 公里",
+        "<METERS> 米",
+        "不到 10 米"
+      ],
+      "us_customary_lengths": [
+        "<MILES> 英里",
+        "1 英里",
+        "半英里",
+        "四分之一英里",
+        "<FEET> 英尺",
+        "不到 10 英尺"
+      ],
+      "example_phrases": {
+        "0": [
+          "向東前進。",
+          "向北前進。"
+        ],
+        "1": [
+          "向東行駛半英里。",
+          "向北行駛 1 公里。"
+        ],
+        "2": [
+          "向西南方向在 5th Avenue 上前進。"
+        ],
+        "3": [
+          "向西南方向在 5th Avenue 上行駛 0.1 英里。"
+        ],
+        "4": [
+          "向南方向在 North Prince Street，U.S. 2 22 上前進。"
+        ],
+        "5": [
+          "向東駕駛。",
+          "向北駕駛。"
+        ],
+        "6": [
+          "向東行駛半英里。",
+          "向北行駛 1 公里。"
+        ],
+        "7": [
+          "向西南方向在 5th Avenue 上駕駛。"
+        ],
+        "8": [
+          "向西南方向在 5th Avenue 上行駛 0.1 英里。"
+        ],
+        "9": [
+          "向南方向在 North Prince Street，U.S. 2 22 上駕駛。"
+        ],
+        "10": [
+          "向東步行。",
+          "向北步行。"
+        ],
+        "11": [
+          "向東行駛半英里。",
+          "向北行駛 1 公里。"
+        ],
+        "12": [
+          "向西南方向在 5th Avenue 上步行。"
+        ],
+        "13": [
+          "向西南方向在 5th Avenue 上行駛 0.1 英里。"
+        ],
+        "14": [
+          "向南方向在 North Prince Street，U.S. 2 22 上步行。"
+        ],
+        "15": [
+          "向東騎行。",
+          "向北騎行。"
+        ],
+        "16": [
+          "向東行駛半英里。",
+          "向北行駛 1 公里。"
+        ],
+        "17": [
+          "向西南方向在 5th Avenue 上騎行。"
+        ],
+        "18": [
+          "向西南方向在 5th Avenue 上行駛 0.1 英里。"
+        ],
+        "19": [
+          "向南方向在 North Prince Street，U.S. 2 22 上騎行。"
+        ]
+      }
+    },
+    "transit": {
+      "phrases": {
+        "0": "乘坐 <TRANSIT_NAME>。 (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)",
+        "1": "乘坐 <TRANSIT_NAME> 朝 <TRANSIT_HEADSIGN>。 (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)"
+      },
+      "empty_transit_name_labels": [
+        "電車",
+        "地鐵",
+        "火車",
+        "公車",
+        "渡輪",
+        "纜車",
+        "纜椅",
+        "登山鐵道"
+      ],
+      "transit_stop_count_labels": {
+        "one": "站",
+        "other": "站"
+      },
+      "example_phrases": {
+        "0": [
+          "乘坐 New Haven。 (1 站)",
+          "乘坐地鐵。 (2 站)",
+          "乘坐公車。 (12 站)"
+        ],
+        "1": [
+          "乘坐 F 朝 JAMAICA - 179 ST。 (10 站)",
+          "乘坐渡輪朝 Staten Island。 (1 站)"
+        ]
+      }
+    },
+    "transit_connection_destination": {
+      "phrases": {
+        "0": "離開車站。",
+        "1": "離開 <TRANSIT_STOP>。",
+        "2": "離開 <TRANSIT_STOP> <STATION_LABEL>。"
+      },
+      "station_label": "站",
+      "example_phrases": {
+        "0": [
+          "離開車站。"
+        ],
+        "1": [
+          "離開 Embarcadero 站。"
+        ],
+        "2": [
+          "離開 8 St - NYU 站。"
+        ]
+      }
+    },
+    "transit_connection_destination_verbal": {
+      "phrases": {
+        "0": "離開車站。",
+        "1": "離開 <TRANSIT_STOP>。",
+        "2": "離開 <TRANSIT_STOP> <STATION_LABEL>。"
+      },
+      "station_label": "站",
+      "example_phrases": {
+        "0": [
+          "離開車站。"
+        ],
+        "1": [
+          "離開 Embarcadero 站。"
+        ],
+        "2": [
+          "離開 8 St - NYU 站。"
+        ]
+      }
+    },
+    "transit_connection_start": {
+      "phrases": {
+        "0": "進入車站。",
+        "1": "進入 <TRANSIT_STOP>。",
+        "2": "進入 <TRANSIT_STOP> <STATION_LABEL>。"
+      },
+      "station_label": "站",
+      "example_phrases": {
+        "0": [
+          "進入車站。"
+        ],
+        "1": [
+          "進入 Embarcadero 站。"
+        ],
+        "2": [
+          "進入 8 St - NYU 站。"
+        ]
+      }
+    },
+    "transit_connection_start_verbal": {
+      "phrases": {
+        "0": "進入車站。",
+        "1": "進入 <TRANSIT_STOP>。",
+        "2": "進入 <TRANSIT_STOP> <STATION_LABEL>。"
+      },
+      "station_label": "站",
+      "example_phrases": {
+        "0": [
+          "進入車站。"
+        ],
+        "1": [
+          "進入 Embarcadero 站。"
+        ],
+        "2": [
+          "進入 8 St - NYU 站。"
+        ]
+      }
+    },
+    "transit_connection_transfer": {
+      "phrases": {
+        "0": "在車站轉乘。",
+        "1": "在 <TRANSIT_STOP> 轉乘。",
+        "2": "在 <TRANSIT_STOP> <STATION_LABEL> 轉乘。"
+      },
+      "station_label": "站",
+      "example_phrases": {
+        "0": [
+          "在車站轉乘。"
+        ],
+        "1": [
+          "在 Embarcadero 站轉乘。"
+        ],
+        "2": [
+          "在 8 St - NYU 站轉乘。"
+        ]
+      }
+    },
+    "transit_connection_transfer_verbal": {
+      "phrases": {
+        "0": "在車站轉乘。",
+        "1": "在 <TRANSIT_STOP> 轉乘。",
+        "2": "在 <TRANSIT_STOP> <STATION_LABEL> 轉乘。"
+      },
+      "station_label": "站",
+      "example_phrases": {
+        "0": [
+          "在車站轉乘。"
+        ],
+        "1": [
+          "在 Embarcadero 站轉乘。"
+        ],
+        "2": [
+          "在 8 St - NYU 站轉乘。"
+        ]
+      }
+    },
+    "transit_remain_on": {
+      "phrases": {
+        "0": "繼續乘坐 <TRANSIT_NAME>。 (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)",
+        "1": "繼續乘坐 <TRANSIT_NAME> 朝 <TRANSIT_HEADSIGN>。 (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)"
+      },
+      "empty_transit_name_labels": [
+        "電車",
+        "地鐵",
+        "火車",
+        "公車",
+        "渡輪",
+        "纜車",
+        "纜椅",
+        "登山鐵道"
+      ],
+      "transit_stop_count_labels": {
+        "one": "站",
+        "other": "站"
+      },
+      "example_phrases": {
+        "0": [
+          "繼續乘坐 New Haven。 (1 站)",
+          "繼續乘坐火車。 (3 站)"
+        ],
+        "1": [
+          "繼續乘坐 F 朝 JAMAICA - 179 ST。 (10 站)"
+        ]
+      }
+    },
+    "transit_remain_on_verbal": {
+      "phrases": {
+        "0": "繼續乘坐 <TRANSIT_NAME>。",
+        "1": "繼續乘坐 <TRANSIT_NAME> 朝 <TRANSIT_HEADSIGN>。"
+      },
+      "empty_transit_name_labels": [
+        "電車",
+        "地鐵",
+        "火車",
+        "公車",
+        "渡輪",
+        "纜車",
+        "纜椅",
+        "登山鐵道"
+      ],
+      "example_phrases": {
+        "0": [
+          "繼續乘坐 New Haven。"
+        ],
+        "1": [
+          "繼續乘坐 F 朝 JAMAICA - 179 ST。"
+        ]
+      }
+    },
+    "transit_transfer": {
+      "phrases": {
+        "0": "轉乘 <TRANSIT_NAME>。 (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)",
+        "1": "轉乘 <TRANSIT_NAME> 朝 <TRANSIT_HEADSIGN>。 (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)"
+      },
+      "empty_transit_name_labels": [
+        "電車",
+        "地鐵",
+        "火車",
+        "公車",
+        "渡輪",
+        "纜車",
+        "纜椅",
+        "登山鐵道"
+      ],
+      "transit_stop_count_labels": {
+        "one": "站",
+        "other": "站"
+      },
+      "example_phrases": {
+        "0": [
+          "轉乘 New Haven。 (1 站)",
+          "轉乘電車。 (4 站)"
+        ],
+        "1": [
+          "轉乘 F 朝 JAMAICA - 179 ST。 (10 站)"
+        ]
+      }
+    },
+    "transit_transfer_verbal": {
+      "phrases": {
+        "0": "轉乘 <TRANSIT_NAME>。",
+        "1": "轉乘 <TRANSIT_NAME> 朝 <TRANSIT_HEADSIGN>。"
+      },
+      "empty_transit_name_labels": [
+        "電車",
+        "地鐵",
+        "火車",
+        "公車",
+        "渡輪",
+        "纜車",
+        "纜椅",
+        "登山鐵道"
+      ],
+      "example_phrases": {
+        "0": [
+          "轉乘 New Haven。"
+        ],
+        "1": [
+          "轉乘 F 朝 JAMAICA - 179 ST。"
+        ]
+      }
+    },
+    "transit_verbal": {
+      "phrases": {
+        "0": "乘坐 <TRANSIT_NAME>。",
+        "1": "乘坐 <TRANSIT_NAME> 朝 <TRANSIT_HEADSIGN>。"
+      },
+      "empty_transit_name_labels": [
+        "電車",
+        "地鐵",
+        "火車",
+        "公車",
+        "渡輪",
+        "纜車",
+        "纜椅",
+        "登山鐵道"
+      ],
+      "example_phrases": {
+        "0": [
+          "乘坐 New Haven。"
+        ],
+        "1": [
+          "乘坐 F 朝 JAMAICA - 179 ST。"
+        ]
+      }
+    },
+    "turn": {
+      "phrases": {
+        "0": "向 <RELATIVE_DIRECTION> 轉。",
+        "1": "向 <RELATIVE_DIRECTION> 轉上 <STREET_NAMES>。",
+        "2": "向 <RELATIVE_DIRECTION> 轉上 <BEGIN_STREET_NAMES>。繼續在 <STREET_NAMES>。",
+        "3": "向 <RELATIVE_DIRECTION> 轉以繼續在 <STREET_NAMES>。",
+        "4": "在 <JUNCTION_NAME> 向 <RELATIVE_DIRECTION> 轉。",
+        "5": "向 <RELATIVE_DIRECTION> 轉朝 <TOWARD_SIGN>。"
+      },
+      "empty_street_name_labels": [
+        "步道",
+        "自行車道",
+        "山地自行車道",
+        "人行橫道",
+        "樓梯",
+        "橋",
+        "隧道"
+      ],
+      "relative_directions": [
+        "左",
+        "右"
+      ],
+      "example_phrases": {
+        "0": [
+          "向左轉。"
+        ],
+        "1": [
+          "向右轉上 Flatbush Avenue。"
+        ],
+        "2": [
+          "向左轉上 North Bond Street/US 1 Business/MD 924。繼續在 MD 924。"
+        ],
+        "3": [
+          "向右轉以繼續在 Sunstone Drive。"
+        ],
+        "4": [
+          "在 Mannenbashi 東向右轉。"
+        ],
+        "5": [
+          "向左轉朝巴爾的摩。"
+        ]
+      }
+    },
+    "turn_verbal": {
+      "phrases": {
+        "0": "向 <RELATIVE_DIRECTION> 轉。",
+        "1": "向 <RELATIVE_DIRECTION> 轉上 <STREET_NAMES>。",
+        "2": "向 <RELATIVE_DIRECTION> 轉上 <BEGIN_STREET_NAMES>。",
+        "3": "向 <RELATIVE_DIRECTION> 轉以繼續在 <STREET_NAMES>。",
+        "4": "在 <JUNCTION_NAME> 向 <RELATIVE_DIRECTION> 轉。",
+        "5": "向 <RELATIVE_DIRECTION> 轉朝 <TOWARD_SIGN>。"
+      },
+      "empty_street_name_labels": [
+        "步道",
+        "自行車道",
+        "山地自行車道",
+        "人行橫道",
+        "樓梯",
+        "橋",
+        "隧道"
+      ],
+      "relative_directions": [
+        "左",
+        "右"
+      ],
+      "example_phrases": {
+        "0": [
+          "向左轉。"
+        ],
+        "1": [
+          "向右轉上 Flatbush Avenue。"
+        ],
+        "2": [
+          "向左轉上 North Bond Street，U.S. 1 Business。"
+        ],
+        "3": [
+          "向右轉以繼續在 Sunstone Drive。"
+        ],
+        "4": [
+          "在 Mannenbashi 東向右轉。"
+        ],
+        "5": [
+          "向左轉朝巴爾的摩。"
+        ]
+      }
+    },
+    "uturn": {
+      "phrases": {
+        "0": "向 <RELATIVE_DIRECTION> 掉頭。",
+        "1": "向 <RELATIVE_DIRECTION> 掉頭上 <STREET_NAMES>。",
+        "2": "向 <RELATIVE_DIRECTION> 掉頭以繼續在 <STREET_NAMES>。",
+        "3": "在 <CROSS_STREET_NAMES> 向 <RELATIVE_DIRECTION> 掉頭。",
+        "4": "在 <CROSS_STREET_NAMES> 向 <RELATIVE_DIRECTION> 掉頭上 <STREET_NAMES>。",
+        "5": "在 <CROSS_STREET_NAMES> 向 <RELATIVE_DIRECTION> 掉頭以繼續在 <STREET_NAMES>。",
+        "6": "在 <JUNCTION_NAME> 向 <RELATIVE_DIRECTION> 掉頭。",
+        "7": "向 <RELATIVE_DIRECTION> 掉頭朝 <TOWARD_SIGN>。"
+      },
+      "empty_street_name_labels": [
+        "步道",
+        "自行車道",
+        "山地自行車道",
+        "人行橫道",
+        "樓梯",
+        "橋",
+        "隧道"
+      ],
+      "relative_directions": [
+        "左",
+        "右"
+      ],
+      "example_phrases": {
+        "0": [
+          "向左掉頭。"
+        ],
+        "1": [
+          "向右掉頭上 Bunker Hill Road。"
+        ],
+        "2": [
+          "向左掉頭以繼續在 Bunker Hill Road。"
+        ],
+        "3": [
+          "在 Devonshire Road 向左掉頭。"
+        ],
+        "4": [
+          "在 Devonshire Road 向左掉頭上 Jonestown Road/US 22。"
+        ],
+        "5": [
+          "在 Devonshire Road 向左掉頭以繼續在 Jonestown Road/US 22。"
+        ],
+        "6": [
+          "在 Mannenbashi 東向右掉頭。"
+        ],
+        "7": [
+          "向左掉頭朝巴爾的摩。"
+        ]
+      }
+    },
+    "uturn_verbal": {
+      "phrases": {
+        "0": "向 <RELATIVE_DIRECTION> 掉頭。",
+        "1": "向 <RELATIVE_DIRECTION> 掉頭上 <STREET_NAMES>。",
+        "2": "向 <RELATIVE_DIRECTION> 掉頭以繼續在 <STREET_NAMES>。",
+        "3": "在 <CROSS_STREET_NAMES> 向 <RELATIVE_DIRECTION> 掉頭。",
+        "4": "在 <CROSS_STREET_NAMES> 向 <RELATIVE_DIRECTION> 掉頭上 <STREET_NAMES>。",
+        "5": "在 <CROSS_STREET_NAMES> 向 <RELATIVE_DIRECTION> 掉頭以繼續在 <STREET_NAMES>。",
+        "6": "在 <JUNCTION_NAME> 向 <RELATIVE_DIRECTION> 掉頭。",
+        "7": "向 <RELATIVE_DIRECTION> 掉頭朝 <TOWARD_SIGN>。"
+      },
+      "empty_street_name_labels": [
+        "步道",
+        "自行車道",
+        "山地自行車道",
+        "人行橫道",
+        "樓梯",
+        "橋",
+        "隧道"
+      ],
+      "relative_directions": [
+        "左",
+        "右"
+      ],
+      "example_phrases": {
+        "0": [
+          "向左掉頭。"
+        ],
+        "1": [
+          "向右掉頭上 Bunker Hill Road。"
+        ],
+        "2": [
+          "向左掉頭以繼續在 Bunker Hill Road。"
+        ],
+        "3": [
+          "在 Devonshire Road 向左掉頭。"
+        ],
+        "4": [
+          "在 Devonshire Road 向左掉頭上 Jonestown Road，U.S. 22。"
+        ],
+        "5": [
+          "在 Devonshire Road 向左掉頭以繼續在 Jonestown Road，U.S. 22。"
+        ],
+        "6": [
+          "在 Mannenbashi 東向右掉頭。"
+        ],
+        "7": [
+          "向左掉頭朝巴爾的摩。"
+        ]
+      }
+    },
+    "verbal_multi_cue": {
+      "phrases": {
+        "0": "<CURRENT_VERBAL_CUE> 然後 <NEXT_VERBAL_CUE>",
+        "1": "<CURRENT_VERBAL_CUE> 然後，在 <LENGTH>，<NEXT_VERBAL_CUE>"
+      },
+      "metric_lengths": [
+        "<KILOMETERS> 公里",
+        "1 公里",
+        "<METERS> 米",
+        "不到 10 米"
+      ],
+      "us_customary_lengths": [
+        "<MILES> 英里",
+        "1 英里",
+        "半英里",
+        "四分之一英里",
+        "<FEET> 英尺",
+        "不到 10 英尺"
+      ],
+      "example_phrases": {
+        "0": [
+          "向右轉上 East Fayette 街。然後 向右轉上 North Gay 街。"
+        ],
+        "1": [
+          "向右轉上 East Fayette 街。然後，在 500 英尺，向右轉上 North Gay 街。"
+        ]
+      }
+    },
+    "approach_verbal_alert": {
+      "phrases": {
+        "0": "在 <LENGTH>，<CURRENT_VERBAL_CUE>"
+      },
+      "metric_lengths": [
+        "<KILOMETERS> 公里",
+        "1 公里",
+        "<METERS> 米",
+        "不到 10 米"
+      ],
+      "us_customary_lengths": [
+        "<MILES> 英里",
+        "1 英里",
+        "半英里",
+        "四分之一英里",
+        "<FEET> 英尺",
+        "不到 10 英尺"
+      ],
+      "example_phrases": {
+        "0": [
+          "在四分之一英里，向右轉上 North Gay 街。"
+        ]
+      }
+    },
+    "pass": {
+      "phrases": {
+        "0": "經過 <OBJECT_LABEL>。",
+        "1": "經過交通信號燈在 <OBJECT_LABEL>。"
+      },
+      "object_labels": [
+        "大門",
+        "柵欄",
+        "交叉路口"
+      ],
+      "example_phrases": {
+        "0": [
+          "經過大門。"
+        ]
+      }
+    },
+    "elevator": {
+      "phrases": {
+        "0": "搭乘電梯。",
+        "1": "搭乘電梯到 <LEVEL>。"
+      },
+      "example_phrases": {
+        "0": [
+          "搭乘電梯。"
+        ],
+        "1": [
+          "搭乘電梯到 1 樓。"
+        ]
+      }
+    },
+    "steps": {
+      "phrases": {
+        "0": "走樓梯。",
+        "1": "走樓梯到 <LEVEL>。"
+      },
+      "example_phrases": {
+        "0": [
+          "走樓梯。"
+        ],
+        "1": [
+          "走樓梯到 2 樓。"
+        ]
+      }
+    },
+    "escalator": {
+      "phrases": {
+        "0": "搭乘手扶梯。",
+        "1": "搭乘手扶梯到 <LEVEL>。"
+      },
+      "example_phrases": {
+        "0": [
+          "搭乘手扶梯。"
+        ],
+        "1": [
+          "搭乘手扶梯到 3 樓。"
+        ]
+      }
+    },
+    "level_change": {
+      "phrases": {
+        "0": "Continue to <LEVEL>."
+      },
+      "example_phrases": {
+        "0": [
+          "Continue to Level 2."
+        ]
+      }
+    },
+    "enter_building": {
+      "phrases": {
+        "0": "進入建築物。",
+        "1": "進入建築物，然後繼續在 <STREET_NAMES>。"
+      },
+      "empty_street_name_labels": [
+        "步道",
+        "自行車道",
+        "山地自行車道",
+        "人行橫道"
+      ],
+      "example_phrases": {
+        "0": [
+          "進入建築物。"
+        ],
+        "1": [
+          "進入建築物，然後繼續在步道上。"
+        ]
+      }
+    },
+    "exit_building": {
+      "phrases": {
+        "0": "離開建築物。",
+        "1": "離開建築物，然後繼續在 <STREET_NAMES>。"
+      },
+      "empty_street_name_labels": [
+        "步道",
+        "自行車道",
+        "山地自行車道",
+        "人行橫道"
+      ],
+      "example_phrases": {
+        "0": [
+          "離開建築物。"
+        ],
+        "1": [
+          "離開建築物，然後繼續在步道上。"
+        ]
+      }
     }
+  }
 }

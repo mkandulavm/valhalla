@@ -1,2353 +1,2363 @@
 {
-    "posix_locale": "no_NO.UTF-8",
-    "aliases": [
-        "no"
-    ],
-    "instructions": {
-        "arrive": {
-            "phrases": {
-                "0": "Ankomst: <TIME>.",
-                "1": "Ankomst: <TIME> ved <TRANSIT_STOP>."
-            },
-            "example_phrases": {
-                "0": [
-                    "Ankomst: 08:02."
-                ],
-                "1": [
-                    "Ankomst: 08:02 på 8 St - NYU."
-                ]
-            }
-        },
-        "arrive_verbal": {
-            "phrases": {
-                "0": "Ankomst <TIME>.",
-                "1": "Ankomst kl. <TIME> kl. <TRANSIT_STOP>."
-            },
-            "example_phrases": {
-                "0": [
-                    "Ankom på 08:02 AM."
-                ],
-                "1": [
-                    "Ankom på 08:02 AM på 8 St - NYU."
-                ]
-            }
-        },
-        "bear": {
-            "phrases": {
-                "0": "Ta <RELATIVE_DIRECTION>.",
-                "1": "Ta <RELATIVE_DIRECTION> inn på <STREET_NAMES>.",
-                "2": "Ta <RELATIVE_DIRECTION> inn på <BEGIN_STREET_NAMES>. Fortsett på <STREET_NAMES>.",
-                "3": "Ta <RELATIVE_DIRECTION> for å forbli på <STREET_NAMES>.",
-                "4": "Ta <RELATIVE_DIRECTION> ved <JUNCTION_NAME>.",
-                "5": "Ta <RELATIVE_DIRECTION> mot <TOWARD_SIGN>."
-            },
-            "empty_street_name_labels": [
-                "gangveien",
-                "sykkelveien",
-                "terrengsykkelløypa",
-                "krysset",
-                "trappene",
-                "broen",
-                "tunellen"
-            ],
-            "relative_directions": [
-                "venstre",
-                "høyre"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Ta til høyre."
-                ],
-                "1": [
-                    "Ta til venstre inn på Arlen Road."
-                ],
-                "2": [
-                    "Ta til høyre inn på Belair Road/US 1 Business. Fortsett på US 1 Business."
-                ],
-                "3": [
-                    "Ta til venstre for å forbli på US 15 South."
-                ],
-                "4": [
-                    "Ta til høyre ved Mannenbashi East."
-                ],
-                "5": [
-                    "Ta til venstre mot Baltimore."
-                ]
-            }
-        },
-        "bear_verbal": {
-            "phrases": {
-                "0": "Bjørn <RELATIVE_DIRECTION>.",
-                "1": "Hold <RELATIVE_DIRECTION> til <STREET_NAMES>.",
-                "2": "Hold <RELATIVE_DIRECTION> inn på <BEGIN_STREET_NAMES>.",
-                "3": "Bær <RELATIVE_DIRECTION> for å bli på <STREET_NAMES>.",
-                "4": "Bjørn <RELATIVE_DIRECTION> ved <JUNCTION_NAME>.",
-                "5": "Hold <RELATIVE_DIRECTION> mot <TOWARD_SIGN>."
-            },
-            "empty_street_name_labels": [
-                "gangveien",
-                "sykkelveien",
-                "terrengsykkelløypa",
-                "krysset",
-                "trappene",
-                "broen",
-                "tunellen"
-            ],
-            "relative_directions": [
-                "venstre",
-                "høyre"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Følg til høyre."
-                ],
-                "1": [
-                    "Følg til venstre inn på Arlen Road."
-                ],
-                "2": [
-                    "Følg til høyre inn på Belair Road, U.S. 1 Business."
-                ],
-                "3": [
-                    "Følg til venstre for å forbli på U.S. 15 South."
-                ],
-                "4": [
-                    "Følg til høyre ved Mannenbashi East."
-                ],
-                "5": [
-                    "Følg til venstre mot Baltimore."
-                ]
-            }
-        },
-        "becomes": {
-            "phrases": {
-                "0": "<PREVIOUS_STREET_NAMES> blir <STREET_NAMES>."
-            },
-            "example_phrases": {
-                "0": [
-                    "Vine Street blir Middletown Road."
-                ]
-            }
-        },
-        "becomes_verbal": {
-            "phrases": {
-                "0": "<PREVIOUS_STREET_NAMES> blir <STREET_NAMES>."
-            },
-            "example_phrases": {
-                "0": [
-                    "Vine Street blir Middletown Road."
-                ]
-            }
-        },
-        "continue": {
-            "phrases": {
-                "0": "Fortsette.",
-                "1": "Fortsett på <STREET_NAMES>.",
-                "2": "Fortsett ved <JUNCTION_NAME>.",
-                "3": "Fortsett mot <TOWARD_SIGN>."
-            },
-            "empty_street_name_labels": [
-                "gangveien",
-                "sykkelveien",
-                "terrengsykkelløypa",
-                "krysset",
-                "trappene",
-                "broen",
-                "tunellen"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Fortsette."
-                ],
-                "1": [
-                    "Fortsett på 10th Avenue."
-                ],
-                "2": [
-                    "Fortsett ved Mannenbashi øst."
-                ],
-                "3": [
-                    "Fortsett mot Baltimore."
-                ]
-            }
-        },
-        "continue_verbal": {
-            "phrases": {
-                "0": "Fortsette.",
-                "1": "Fortsett i <LENGTH>.",
-                "2": "Fortsett på <STREET_NAMES>.",
-                "3": "Fortsett på <STREET_NAMES> i <LENGTH>.",
-                "4": "Fortsett ved <JUNCTION_NAME>.",
-                "5": "Fortsett ved <JUNCTION_NAME> i <LENGTH>.",
-                "6": "Fortsett mot <TOWARD_SIGN>.",
-                "7": "Fortsett mot <TOWARD_SIGN> i <LENGTH>."
-            },
-            "empty_street_name_labels": [
-                "gangveien",
-                "sykkelveien",
-                "terrengsykkelløypa",
-                "krysset",
-                "trappene",
-                "broen",
-                "tunellen"
-            ],
-            "metric_lengths": [
-                "<KILOMETERS> kilometer",
-                "1 kilometer",
-                "<METERS> meter",
-                "mindre enn 10 meter"
-            ],
-            "us_customary_lengths": [
-                "<MILES> miles",
-                "1 mil",
-                "en halv mil",
-                "en kvart mil",
-                "<FEET> fot",
-                "mindre enn 10 fot"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Fortsett."
-                ],
-                "1": [
-                    "Fortsett i 300 feet."
-                ],
-                "2": [
-                    "Fortsett på 10th Avenue."
-                ],
-                "3": [
-                    "Fortsett på 10th Avenue i 3 miles."
-                ],
-                "4": [
-                    "Fortsett ved Mannenbashi East."
-                ],
-                "5": [
-                    "Fortsett ved Mannenbashi East i 2 miles."
-                ],
-                "6": [
-                    "Fortsett mot Baltimore."
-                ],
-                "7": [
-                    "Fortsett mot Baltimore i 5 miles."
-                ]
-            }
-        },
-        "continue_verbal_alert": {
-            "phrases": {
-                "0": "Fortsett.",
-                "1": "Fortsett på <STREET_NAMES>.",
-                "2": "Fortsett ved <JUNCTION_NAME>.",
-                "3": "Fortsett mot <TOWARD_SIGN>."
-            },
-            "empty_street_name_labels": [
-                "gangveien",
-                "sykkelveien",
-                "terrengsykkelløypa",
-                "krysset",
-                "trappene",
-                "broen",
-                "tunellen"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Fortsett."
-                ],
-                "1": [
-                    "Fortsett på 10th Avenue."
-                ],
-                "2": [
-                    "Fortsett ved Mannenbashi East."
-                ],
-                "3": [
-                    "Fortsett mot Baltimore."
-                ]
-            }
-        },
-        "depart": {
-            "phrases": {
-                "0": "Avreise: <TIME>.",
-                "1": "Avreise: <TIME> fra <TRANSIT_STOP>."
-            },
-            "example_phrases": {
-                "0": [
-                    "Avreise: 08:02 AM."
-                ],
-                "1": [
-                    "Avreise: 08:02 AM fra 8 St - NYU."
-                ]
-            }
-        },
-        "depart_verbal": {
-            "phrases": {
-                "0": "Avreise kl. <TIME>.",
-                "1": "Avgang <TIME> fra <TRANSIT_STOP>."
-            },
-            "example_phrases": {
-                "0": [
-                    "Avreise klokken 08:02 AM."
-                ],
-                "1": [
-                    "Avreise klokken 08:02 AM fra 8 St - NYU."
-                ]
-            }
-        },
-        "destination": {
-            "phrases": {
-                "0": "Du har kommet til destinasjonen.",
-                "1": "Du har ankommet <DESTINATION>.",
-                "2": "Destinasjonen din er på <RELATIVE_DIRECTION>.",
-                "3": "<DESTINATION> er på <RELATIVE_DIRECTION>."
-            },
-            "relative_directions": [
-                "venstre",
-                "høyre"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Du har ankommet destinasjonen din."
-                ],
-                "1": [
-                    "Du har ankommet 3206 Powelton Avenue."
-                ],
-                "2": [
-                    "Destinasjonen din er på venstre side.",
-                    "Destinasjonen din er på høyre side."
-                ],
-                "3": [
-                    "Lancaster Brewing Company er på venstre side."
-                ]
-            }
-        },
-        "destination_verbal": {
-            "phrases": {
-                "0": "Du har kommet til destinasjonen.",
-                "1": "Du har ankommet <DESTINATION>.",
-                "2": "Destinasjonen din er på <RELATIVE_DIRECTION>.",
-                "3": "<DESTINATION> er på <RELATIVE_DIRECTION>."
-            },
-            "relative_directions": [
-                "venstre",
-                "høyre"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Du har ankommet destinasjonen din."
-                ],
-                "1": [
-                    "Du har ankommet 32 o6 Powelton Avenue."
-                ],
-                "2": [
-                    "Destinasjonen din er på venstre side.",
-                    "Destinasjonen din er på høyre side."
-                ],
-                "3": [
-                    "Lancaster Brewing Company er på venstre side."
-                ]
-            }
-        },
-        "destination_verbal_alert": {
-            "phrases": {
-                "0": "Du kommer til reisemålet ditt.",
-                "1": "Du kommer til <DESTINATION>.",
-                "2": "Destinasjonen din vil være på <RELATIVE_DIRECTION>.",
-                "3": "<DESTINATION> vil være på <RELATIVE_DIRECTION>."
-            },
-            "relative_directions": [
-                "venstre",
-                "høyre"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Du vil ankomme destinasjonen din."
-                ],
-                "1": [
-                    "Du vil ankomme 32 o6 Powelton Avenue."
-                ],
-                "2": [
-                    "Destinasjonen din vil være på venstre side.",
-                    "Destinasjonen din vil være på høyre side."
-                ],
-                "3": [
-                    "Lancaster Brewing Company vil være på venstre side."
-                ]
-            }
-        },
-        "enter_ferry": {
-            "phrases": {
-                "0": "Ta fergen.",
-                "1": "Ta <STREET_NAMES>.",
-                "2": "Ta <STREET_NAMES> <FERRY_LABEL>.",
-                "3": "Ta fergen mot <TOWARD_SIGN>."
-            },
-            "empty_street_name_labels": [
-                "gangveien",
-                "sykkelveien",
-                "terrengsykkelløypa",
-                "krysset",
-                "trappene",
-                "broen",
-                "tunellen"
-            ],
-            "ferry_label": "Ferje",
-            "example_phrases": {
-                "0": [
-                    "Ta fergen."
-                ],
-                "1": [
-                    "Ta Millersburg-fergen."
-                ],
-                "2": [
-                    "Ta Bridgeport - Port Jefferson-fergen."
-                ],
-                "3": [
-                    "Ta fergen mot Cape May."
-                ]
-            }
-        },
-        "enter_ferry_verbal": {
-            "phrases": {
-                "0": "Ta fergen.",
-                "1": "Ta <STREET_NAMES>.",
-                "2": "Ta <STREET_NAMES> <FERRY_LABEL>.",
-                "3": "Ta fergen mot <TOWARD_SIGN>."
-            },
-            "empty_street_name_labels": [
-                "gangveien",
-                "sykkelveien",
-                "terrengsykkelløypa",
-                "krysset",
-                "trappene",
-                "broen",
-                "tunellen"
-            ],
-            "ferry_label": "Ferje",
-            "example_phrases": {
-                "0": [
-                    "Ta fergen."
-                ],
-                "1": [
-                    "Ta Millersburg-fergen."
-                ],
-                "2": [
-                    "Ta Bridgeport - Port Jefferson-fergen."
-                ],
-                "3": [
-                    "Ta fergen mot Cape May."
-                ]
-            }
-        },
-        "enter_roundabout": {
-            "phrases": {
-                "0": "Kjør inn i rundkjøringen.",
-                "1": "Kjør inn i rundkjøringen og ta <ORDINAL_VALUE> avkjørsel.",
-                "2": "Kjør inn i rundkjøringen og ta <ORDINAL_VALUE> avkjørsel inn på <ROUNDABOUT_EXIT_STREET_NAMES>.",
-                "3": "Kjør inn i rundkjøringen og ta <ORDINAL_VALUE> avkjørsel inn på <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>. Fortsett på <ROUNDABOUT_EXIT_STREET_NAMES>.",
-                "4": "Kjør inn i rundkjøringen og ta <ORDINAL_VALUE> avkjørsel mot <TOWARD_SIGN>.",
-                "5": "Kjør inn i rundkjøringen og ta avkjørselen inn på <ROUNDABOUT_EXIT_STREET_NAMES>.",
-                "6": "Kjør inn i rundkjøringen og ta avkjørselen inn på <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>. Fortsett på <ROUNDABOUT_EXIT_STREET_NAMES>.",
-                "7": "Kjør inn i rundkjøringen og ta avkjørselen mot <TOWARD_SIGN>.",
-                "8": "Kjør inn på <STREET_NAMES>.",
-                "9": "Kjør inn på <STREET_NAMES> og ta <ORDINAL_VALUE> avkjørsel.",
-                "10": "Kjør inn på <STREET_NAMES> og ta <ORDINAL_VALUE> avkjørsel inn på <ROUNDABOUT_EXIT_STREET_NAMES>.",
-                "11": "Kjør inn på <STREET_NAMES> og ta <ORDINAL_VALUE> avkjørsel inn på <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>. Fortsett på <ROUNDABOUT_EXIT_STREET_NAMES>.",
-                "12": "Kjør inn på <STREET_NAMES> og ta <ORDINAL_VALUE> avkjørsel mot <TOWARD_SIGN>.",
-                "13": "Kjør inn på <STREET_NAMES> og ta avkjørselen inn på <ROUNDABOUT_EXIT_STREET_NAMES>.",
-                "14": "Kjør inn på <STREET_NAMES> og ta avkjørselen inn på <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>. Fortsett på <ROUNDABOUT_EXIT_STREET_NAMES>.",
-                "15": "Kjør inn på <STREET_NAMES> og ta avkjørselen mot <TOWARD_SIGN>."
-            },
-            "ordinal_values": [
-                "1.",
-                "2.",
-                "3.",
-                "4.",
-                "5.",
-                "6.",
-                "7.",
-                "8.",
-                "9.",
-                "10."
-            ],
-            "empty_street_name_labels": [
-                "gangveien",
-                "sykkelveien",
-                "terrengsykkelløypa",
-                "krysset",
-                "trappene",
-                "broen",
-                "tunellen"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Gå inn i rundkjøringen."
-                ],
-                "1": [
-                    "Gå inn i rundkjøringen og ta første avkjørsel.",
-                    "Gå inn i rundkjøringen og ta andre avkjørsel.",
-                    "Gå inn i rundkjøringen og ta 3. avkjørsel.",
-                    "Gå inn i rundkjøringen og ta 4. avkjørsel.",
-                    "Gå inn i rundkjøringen og ta 5. avkjøring.",
-                    "Gå inn i rundkjøringen og ta den 6. avkjøringen.",
-                    "Gå inn i rundkjøringen og ta 7. avkjørsel.",
-                    "Gå inn i rundkjøringen og ta 8. avkjørsel.",
-                    "Gå inn i rundkjøringen og ta 9. avkjørsel.",
-                    "Gå inn i rundkjøringen og ta 10. avkjøring."
-                ],
-                "2": [
-                    "Gå inn i rundkjøringen og ta 3. avkjørsel inn på Main Street."
-                ],
-                "3": [
-                    "Gå inn i rundkjøringen og ta 3. avkjørsel inn på US 322/Main Street. Fortsett på US 322."
-                ],
-                "4": [
-                    "Gå inn i rundkjøringen og ta tredje avkjørsel mot Baltimore."
-                ],
-                "5": [
-                    "Gå inn i rundkjøringen og ta avkjørselen til Main Street."
-                ],
-                "6": [
-                    "Gå inn i rundkjøringen og ta avkjørselen til US 322/Main Street. Fortsett på US 322."
-                ],
-                "7": [
-                    "Gå inn i rundkjøringen og ta avkjøringen mot Baltimore."
-                ],
-                "8": [
-                    "Gå inn i Dupont Circle."
-                ],
-                "9": [
-                    "Gå inn i Dupont Circle og ta første avkjørsel."
-                ],
-                "10": [
-                    "Gå inn i Dupont Circle og ta 3. avkjørsel inn på Main Street."
-                ],
-                "11": [
-                    "Gå inn i Dupont Circle og ta tredje avkjørsel inn på US 322/Main Street. Fortsett på US 322."
-                ],
-                "12": [
-                    "Gå inn i Dupont Circle og ta den tredje avkjørselen mot Baltimore."
-                ],
-                "13": [
-                    "Gå inn i Dupont Circle og ta avkjørselen til Main Street."
-                ],
-                "14": [
-                    "Gå inn i Dupont Circle og ta avkjørselen til US 322/Main Street. Fortsett på US 322."
-                ],
-                "15": [
-                    "Gå inn i Dupont Circle og ta avkjørselen mot Baltimore."
-                ]
-            }
-        },
-        "enter_roundabout_verbal": {
-            "phrases": {
-                "0": "Kjør inn i rundkjøringen.",
-                "1": "Kjør inn i rundkjøringen og ta <ORDINAL_VALUE> avkjørsel.",
-                "2": "Kjør inn i rundkjøringen og ta <ORDINAL_VALUE> avkjørsel inn på <ROUNDABOUT_EXIT_STREET_NAMES>.",
-                "3": "Kjør inn i rundkjøringen og ta <ORDINAL_VALUE> avkjørsel inn på <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>.",
-                "4": "Kjør inn i rundkjøringen og ta <ORDINAL_VALUE> avkjørsel mot <TOWARD_SIGN>.",
-                "5": "Kjør inn i rundkjøringen og ta avkjørselen inn på <ROUNDABOUT_EXIT_STREET_NAMES>.",
-                "6": "Kjør inn i rundkjøringen og ta avkjørselen inn på <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>.",
-                "7": "Kjør inn i rundkjøringen og ta avkjørselen mot <TOWARD_SIGN>.",
-                "8": "Gå inn på <STREET_NAMES>.",
-                "9": "Gå inn på <STREET_NAMES> og ta <ORDINAL_VALUE> avkjørsel.",
-                "10": "Gå inn på <STREET_NAMES> og ta <ORDINAL_VALUE> avkjørsel inn på <ROUNDABOUT_EXIT_STREET_NAMES>.",
-                "11": "Gå inn på <STREET_NAMES> og ta <ORDINAL_VALUE> avkjørsel inn på <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>.",
-                "12": "Gå inn på <STREET_NAMES> og ta <ORDINAL_VALUE> avkjørsel mot <TOWARD_SIGN>.",
-                "13": "Gå inn på <STREET_NAMES> og ta avkjørselen inn på <ROUNDABOUT_EXIT_STREET_NAMES>.",
-                "14": "Gå inn på <STREET_NAMES> og ta avkjørselen inn på <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>.",
-                "15": "Gå inn på <STREET_NAMES> og ta avkjørselen mot <TOWARD_SIGN>."
-            },
-            "ordinal_values": [
-                "1.",
-                "2.",
-                "3.",
-                "4.",
-                "5.",
-                "6.",
-                "7.",
-                "8.",
-                "9.",
-                "10."
-            ],
-            "empty_street_name_labels": [
-                "gangveien",
-                "sykkelveien",
-                "terrengsykkelløypa",
-                "krysset",
-                "trappene",
-                "broen",
-                "tunellen"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Gå inn i rundkjøringen."
-                ],
-                "1": [
-                    "Gå inn i rundkjøringen og ta 1. avkjørsel.",
-                    "Gå inn i rundkjøringen og ta 2. avkjørsel.",
-                    "Gå inn i rundkjøringen og ta 3. avkjørsel.",
-                    "Gå inn i rundkjøringen og ta 4. avkjørsel.",
-                    "Gå inn i rundkjøringen og ta 5. avkjørsel.",
-                    "Gå inn i rundkjøringen og ta 6. avkjørsel.",
-                    "Gå inn i rundkjøringen og ta 7. avkjørsel.",
-                    "Gå inn i rundkjøringen og ta 8. avkjørsel.",
-                    "Gå inn i rundkjøringen og ta 9. avkjørsel.",
-                    "Gå inn i rundkjøringen og ta 10. avkjørsel."
-                ],
-                "2": [
-                    "Kjør inn i rundkjøringen og ta 3. avkjørsel inn på Main Street."
-                ],
-                "3": [
-                    "Kjør inn i rundkjøringen og ta 3. avkjørsel inn på U.S. 3 22/Main Street."
-                ],
-                "4": [
-                    "Kjør inn i rundkjøringen og ta 3. avkjørsel mot Baltimore."
-                ],
-                "5": [
-                    "Kjør inn i rundkjøringen og ta avkjørselen inn på Main Street."
-                ],
-                "6": [
-                    "Kjør inn i rundkjøringen og ta avkjørselen inn på U.S. 3 22/Main Street."
-                ],
-                "7": [
-                    "Kjør inn i rundkjøringen og ta avkjørselen mot Baltimore."
-                ],
-                "8": [
-                    "Gå inn i Dupont Circle."
-                ],
-                "9": [
-                    "Gå inn i Dupont Circle og ta 1. avkjørsel."
-                ],
-                "10": [
-                    "Gå inn i Dupont Circle og ta 3. avkjørsel inn på Main Street."
-                ],
-                "11": [
-                    "Gå inn i Dupont Circle og ta 3. avkjørsel inn på U.S. 3 22/Main Street."
-                ],
-                "12": [
-                    "Gå inn i Dupont Circle og ta 3. avkjørsel mot Baltimore."
-                ],
-                "13": [
-                    "Gå inn i Dupont Circle og ta avkjørselen inn på Main Street."
-                ],
-                "14": [
-                    "Gå inn i Dupont Circle og ta avkjørselen inn på U.S. 3 22/Main Street."
-                ],
-                "15": [
-                    "Gå inn i Dupont Circle og ta avkjørselen mot Baltimore."
-                ]
-            }
-        },
-        "exit": {
-            "phrases": {
-                "0": "Ta avkjørselen på <RELATIVE_DIRECTION>.",
-                "1": "Ta avkjørsel <NUMBER_SIGN> på <RELATIVE_DIRECTION>.",
-                "2": "Ta <BRANCH_SIGN>-avkjørselen på <RELATIVE_DIRECTION>.",
-                "3": "Ta avkjørsel <NUMBER_SIGN> på <RELATIVE_DIRECTION> ut på <BRANCH_SIGN>.",
-                "4": "Ta avkjørselen på <RELATIVE_DIRECTION> mot <TOWARD_SIGN>.",
-                "5": "Ta avkjørsel <NUMBER_SIGN> på <RELATIVE_DIRECTION> mot <TOWARD_SIGN>.",
-                "6": "Ta <BRANCH_SIGN>-avkjørselen på <RELATIVE_DIRECTION> mot <TOWARD_SIGN>.",
-                "7": "Ta avkjørsel <NUMBER_SIGN> på <RELATIVE_DIRECTION> ut på <BRANCH_SIGN> mot <TOWARD_SIGN>.",
-                "8": "Ta avkjørselen <NAME_SIGN> på <RELATIVE_DIRECTION>.",
-                "10": "Ta <NAME_SIGN>-avkjørselen på <RELATIVE_DIRECTION> ut på <BRANCH_SIGN>.",
-                "12": "Ta avkjørselen <NAME_SIGN> på <RELATIVE_DIRECTION> mot <TOWARD_SIGN>.",
-                "14": "Ta <NAME_SIGN>-avkjørselen på <RELATIVE_DIRECTION> inn på <BRANCH_SIGN> mot <TOWARD_SIGN>.",
-                "15": "Ta avkjørselen.",
-                "16": "Ta avkjøringen <NUMBER_SIGN>.",
-                "17": "Ta avkjørselen <BRANCH_SIGN>.",
-                "18": "Ta avkjørsel <NUMBER_SIGN> ut på <BRANCH_SIGN>.",
-                "19": "Ta avkjørselen mot <TOWARD_SIGN>.",
-                "20": "Ta avkjørsel <NUMBER_SIGN> mot <TOWARD_SIGN>.",
-                "21": "Ta avkjørselen <BRANCH_SIGN> mot <TOWARD_SIGN>.",
-                "22": "Ta avkjørsel <NUMBER_SIGN> ut på <BRANCH_SIGN> mot <TOWARD_SIGN>.",
-                "23": "Ta avkjørselen <NAME_SIGN>.",
-                "25": "Ta <NAME_SIGN>-avkjørselen inn på <BRANCH_SIGN>.",
-                "27": "Ta avkjørselen <NAME_SIGN> mot <TOWARD_SIGN>.",
-                "29": "Ta <NAME_SIGN>-avkjørselen inn på <BRANCH_SIGN> mot <TOWARD_SIGN>."
-            },
-            "relative_directions": [
-                "venstre",
-                "høyre"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Ta avkjørselen til venstre.",
-                    "Ta avkjørselen til høyre."
-                ],
-                "1": [
-                    "Ta avkjørsel 67 B-A til høyre."
-                ],
-                "2": [
-                    "Ta avkjørselen til høyre for US 322 West."
-                ],
-                "3": [
-                    "Ta avkjørsel 67 B-A til høyre inn på US 322 West."
-                ],
-                "4": [
-                    "Ta avkjørselen til høyre mot Lewistown."
-                ],
-                "5": [
-                    "Ta avkjørsel 67 B-A til høyre mot Lewistown."
-                ],
-                "6": [
-                    "Ta avkjørselen til høyre for US 322 West mot Lewistown."
-                ],
-                "7": [
-                    "Ta avkjørsel 67 B-A til høyre inn på US 322 West mot Lewistown/State College."
-                ],
-                "8": [
-                    "Ta avkjørselen til venstre for White Marsh Boulevard."
-                ],
-                "10": [
-                    "Ta avkjørselen til venstre inn på MD 43 East."
-                ],
-                "12": [
-                    "Ta avkjørselen til venstre mot White Marsh."
-                ],
-                "14": [
-                    "Ta avkjørselen til venstre inn på MD 43 East mot White Marsh."
-                ],
-                "15": [
-                    "Ta avkjørselen."
-                ],
-                "16": [
-                    "Ta avkjørsel 67 B-A."
-                ],
-                "17": [
-                    "Ta avkjørselen for US 322 West."
-                ],
-                "18": [
-                    "Ta avkjørsel 67 B-A inn på US 322 West."
-                ],
-                "19": [
-                    "Ta avkjørselen mot Lewistown."
-                ],
-                "20": [
-                    "Ta avkjørsel 67 B-A mot Lewistown."
-                ],
-                "21": [
-                    "Ta avkjørselen for US 322 West mot Lewistown."
-                ],
-                "22": [
-                    "Ta avkjørsel 67 B-A inn på US 322 West mot Lewistown/State College."
-                ],
-                "23": [
-                    "Ta avkjørselen for White Marsh Boulevard."
-                ],
-                "25": [
-                    "Ta avkjørselen til White Marsh Boulevard og fortsett på MD 43 East."
-                ],
-                "27": [
-                    "Ta avkjørselen til White Marsh Boulevard mot White Marsh."
-                ],
-                "29": [
-                    "Ta avkjørselen til White Marsh Boulevard inn på MD 43 East mot White Marsh."
-                ]
-            }
-        },
-        "exit_roundabout": {
-            "phrases": {
-                "0": "Gå ut av rundkjøringen.",
-                "1": "Gå ut av rundkjøringen ut på <STREET_NAMES>.",
-                "2": "Gå ut av rundkjøringen ut på <BEGIN_STREET_NAMES>. Fortsett på <STREET_NAMES>.",
-                "3": "Gå ut av rundkjøringen mot <TOWARD_SIGN>."
-            },
-            "empty_street_name_labels": [
-                "gangveien",
-                "sykkelveien",
-                "terrengsykkelløypa",
-                "krysset",
-                "trappene",
-                "broen",
-                "tunellen"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Forlat rundkjøringen."
-                ],
-                "1": [
-                    "Forlat rundkjøringen inn på Philadelphia Road/MD 7."
-                ],
-                "2": [
-                    "Forlat rundkjøringen inn på Catoctin Mountain Highway/US 15. Fortsett på US 15."
-                ],
-                "3": [
-                    "Forlat rundkjøringen mot Baltimore."
-                ]
-            }
-        },
-        "exit_roundabout_verbal": {
-            "phrases": {
-                "0": "Gå ut av rundkjøringen.",
-                "1": "Gå ut av rundkjøringen ut på <STREET_NAMES>.",
-                "2": "Gå ut av rundkjøringen ut på <BEGIN_STREET_NAMES>.",
-                "3": "Gå ut av rundkjøringen mot <TOWARD_SIGN>."
-            },
-            "empty_street_name_labels": [
-                "gangveien",
-                "sykkelveien",
-                "terrengsykkelløypa",
-                "krysset",
-                "trappene",
-                "broen",
-                "tunellen"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Gå ut av rundkjøringen."
-                ],
-                "1": [
-                    "Gå ut av rundkjøringen til Philadelphia Road, Maryland 7."
-                ],
-                "2": [
-                    "Gå ut av rundkjøringen på Catoctin Mountain Highway, U.S. 15."
-                ],
-                "3": [
-                    "Gå ut av rundkjøringen mot Baltimore."
-                ]
-            }
-        },
-        "exit_verbal": {
-            "phrases": {
-                "0": "Ta avkjørselen på <RELATIVE_DIRECTION>.",
-                "1": "Ta avkjørsel <NUMBER_SIGN> på <RELATIVE_DIRECTION>.",
-                "2": "Ta <BRANCH_SIGN>-avkjørselen på <RELATIVE_DIRECTION>.",
-                "3": "Ta avkjørsel <NUMBER_SIGN> på <RELATIVE_DIRECTION> ut på <BRANCH_SIGN>.",
-                "4": "Ta avkjørselen på <RELATIVE_DIRECTION> mot <TOWARD_SIGN>.",
-                "5": "Ta avkjørsel <NUMBER_SIGN> på <RELATIVE_DIRECTION> mot <TOWARD_SIGN>.",
-                "6": "Ta <BRANCH_SIGN>-avkjørselen på <RELATIVE_DIRECTION> mot <TOWARD_SIGN>.",
-                "7": "Ta avkjørsel <NUMBER_SIGN> på <RELATIVE_DIRECTION> ut på <BRANCH_SIGN> mot <TOWARD_SIGN>.",
-                "8": "Ta avkjørselen <NAME_SIGN> på <RELATIVE_DIRECTION>.",
-                "10": "Ta <NAME_SIGN>-avkjørselen på <RELATIVE_DIRECTION> ut på <BRANCH_SIGN>.",
-                "12": "Ta avkjørselen <NAME_SIGN> på <RELATIVE_DIRECTION> mot <TOWARD_SIGN>.",
-                "14": "Ta <NAME_SIGN>-avkjørselen på <RELATIVE_DIRECTION> inn på <BRANCH_SIGN> mot <TOWARD_SIGN>.",
-                "15": "Ta avkjørselen.",
-                "16": "Ta avkjøringen <NUMBER_SIGN>.",
-                "17": "Ta avkjørselen <BRANCH_SIGN>.",
-                "18": "Ta avkjørsel <NUMBER_SIGN> ut på <BRANCH_SIGN>.",
-                "19": "Ta avkjørselen mot <TOWARD_SIGN>.",
-                "20": "Ta avkjørsel <NUMBER_SIGN> mot <TOWARD_SIGN>.",
-                "21": "Ta avkjørselen <BRANCH_SIGN> mot <TOWARD_SIGN>.",
-                "22": "Ta avkjørsel <NUMBER_SIGN> ut på <BRANCH_SIGN> mot <TOWARD_SIGN>.",
-                "23": "Ta avkjørselen <NAME_SIGN>.",
-                "25": "Ta <NAME_SIGN>-avkjørselen inn på <BRANCH_SIGN>.",
-                "27": "Ta avkjørselen <NAME_SIGN> mot <TOWARD_SIGN>.",
-                "29": "Ta <NAME_SIGN>-avkjørselen inn på <BRANCH_SIGN> mot <TOWARD_SIGN>."
-            },
-            "relative_directions": [
-                "venstre",
-                "høyre"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Ta avkjørselen til venstre.",
-                    "Ta avkjørselen til høyre."
-                ],
-                "1": [
-                    "Ta avkjørsel 67 B-A til høyre."
-                ],
-                "2": [
-                    "Ta avkjørselen til U.S. 3 22 West til høyre."
-                ],
-                "3": [
-                    "Ta avkjørsel 67 B-A til høyre inn på U.S. 3 22 West."
-                ],
-                "4": [
-                    "Ta avkjørselen til høyre mot Lewistown."
-                ],
-                "5": [
-                    "Ta avkjørsel 67 B-A til høyre mot Lewistown."
-                ],
-                "6": [
-                    "Ta avkjørselen til U.S. 3 22 West til høyre mot Lewistown."
-                ],
-                "7": [
-                    "Ta avkjørsel 67 B-A til høyre inn på U.S. 3 22 West mot Lewistown, State College."
-                ],
-                "8": [
-                    "Ta avkjørselen til venstre for White Marsh Boulevard."
-                ],
-                "10": [
-                    "Ta avkjørselen til venstre for White Marsh Boulevard inn på Maryland 43 East."
-                ],
-                "12": [
-                    "Ta avkjørselen til venstre for White Marsh Boulevard mot White Marsh."
-                ],
-                "14": [
-                    "Ta avkjørselen til venstre for White Marsh Boulevard inn på Maryland 43 East mot White Marsh."
-                ],
-                "15": [
-                    "Ta avkjørselen."
-                ],
-                "16": [
-                    "Ta avkjørsel 67 B-A."
-                ],
-                "17": [
-                    "Ta avkjørselen for US 322 West."
-                ],
-                "18": [
-                    "Ta avkjørsel 67 B-A inn på US 322 West."
-                ],
-                "19": [
-                    "Ta avkjørselen mot Lewistown."
-                ],
-                "20": [
-                    "Ta avkjørsel 67 B-A mot Lewistown."
-                ],
-                "21": [
-                    "Ta avkjørselen for US 322 West mot Lewistown."
-                ],
-                "22": [
-                    "Ta avkjørsel 67 B-A inn på US 322 West mot Lewistown/State College."
-                ],
-                "23": [
-                    "Ta avkjørselen for White Marsh Boulevard."
-                ],
-                "25": [
-                    "Ta avkjørselen for White Marsh Boulevard inn på MD 43 East."
-                ],
-                "27": [
-                    "Ta avkjørselen for White Marsh Boulevard mot White Marsh."
-                ],
-                "29": [
-                    "Ta avkjørselen for White Marsh Boulevard inn på MD 43 East mot White Marsh."
-                ]
-            }
-        },
-        "exit_visual": {
-            "phrases": {
-                "0": "Avslutt <EXIT_NUMBERS>"
-            },
-            "example_phrases": {
-                "0": [
-                    "Avkjørsel 1A"
-                ]
-            }
-        },
-        "keep": {
-            "phrases": {
-                "0": "Hold <RELATIVE_DIRECTION> ved veiskillet.",
-                "1": "Behold <RELATIVE_DIRECTION> for å ta avkjørsel <NUMBER_SIGN>.",
-                "2": "Behold <RELATIVE_DIRECTION> for å ta <STREET_NAMES>.",
-                "3": "Behold <RELATIVE_DIRECTION> for å ta avkjørsel <NUMBER_SIGN> ut på <STREET_NAMES>.",
-                "4": "Hold <RELATIVE_DIRECTION> mot <TOWARD_SIGN>.",
-                "5": "Behold <RELATIVE_DIRECTION> for å ta avkjørsel <NUMBER_SIGN> mot <TOWARD_SIGN>.",
-                "6": "Behold <RELATIVE_DIRECTION> for å ta <STREET_NAMES> mot <TOWARD_SIGN>.",
-                "7": "Behold <RELATIVE_DIRECTION> for å ta avkjørsel <NUMBER_SIGN> inn på <STREET_NAMES> mot <TOWARD_SIGN>."
-            },
-            "empty_street_name_labels": [
-                "gangveien",
-                "sykkelveien",
-                "terrengsykkelstien",
-                "overgangen",
-                "trappene",
-                "broen",
-                "tunellen"
-            ],
-            "relative_directions": [
-                "venstre",
-                "rett",
-                "høyre"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Hold til venstre ved veiskillet.",
-                    "Hold rett ved veiskillet.",
-                    "Hold rett ved veiskillet."
-                ],
-                "1": [
-                    "Hold til høyre for å ta avkjørsel 62."
-                ],
-                "2": [
-                    "Hold til høyre for å ta I 895 Sør."
-                ],
-                "3": [
-                    "Hold til høyre for å ta avkjørsel 62 inn på I 895 South."
-                ],
-                "4": [
-                    "Hold til høyre mot Annapolis."
-                ],
-                "5": [
-                    "Hold til høyre for å ta avkjørsel 62 mot Annapolis."
-                ],
-                "6": [
-                    "Hold til høyre for å ta I 895 Sør mot Annapolis."
-                ],
-                "7": [
-                    "Hold til høyre for å ta avkjørsel 62 inn på I 895 South mot Annapolis."
-                ]
-            }
-        },
-        "keep_to_stay_on": {
-            "phrases": {
-                "0": "Hold <RELATIVE_DIRECTION> for å bli på <STREET_NAMES>.",
-                "1": "Hold <RELATIVE_DIRECTION> for å ta avkjørsel <NUMBER_SIGN> for å holde deg på <STREET_NAMES>.",
-                "2": "Hold <RELATIVE_DIRECTION> for å holde deg på <STREET_NAMES> mot <TOWARD_SIGN>.",
-                "3": "Hold <RELATIVE_DIRECTION> for å ta avkjørsel <NUMBER_SIGN> for å holde deg på <STREET_NAMES> mot <TOWARD_SIGN>."
-            },
-            "empty_street_name_labels": [
-                "gangveien",
-                "sykkelveien",
-                "terrengsykkelløypa",
-                "krysset",
-                "trappene",
-                "broen",
-                "tunellen"
-            ],
-            "relative_directions": [
-                "venstre",
-                "rett",
-                "høyre"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Hold venstre for å bli på I 95 Sør.",
-                    "Hold rett for å bli på I 95 South.",
-                    "Hold høyre å bo på I 95 Sør."
-                ],
-                "1": [
-                    "Hold til venstre for å ta avkjørsel 62 for å holde deg på I 95 Sør."
-                ],
-                "2": [
-                    "Hold til venstre for å holde deg på I 95 South mot Baltimore."
-                ],
-                "3": [
-                    "Hold til venstre for å ta avkjørsel 62 for å holde deg på I 95 South mot Baltimore."
-                ]
-            }
-        },
-        "keep_to_stay_on_verbal": {
-            "phrases": {
-                "0": "Hold <RELATIVE_DIRECTION> for å bli på <STREET_NAMES>.",
-                "1": "Hold <RELATIVE_DIRECTION> for å ta avkjørsel <NUMBER_SIGN> for å holde deg på <STREET_NAMES>.",
-                "2": "Hold <RELATIVE_DIRECTION> for å holde deg på <STREET_NAMES> mot <TOWARD_SIGN>.",
-                "3": "Hold <RELATIVE_DIRECTION> for å ta avkjørsel <NUMBER_SIGN> for å holde deg på <STREET_NAMES> mot <TOWARD_SIGN>."
-            },
-            "empty_street_name_labels": [
-                "gangveien",
-                "sykkelveien",
-                "terrengsykkelløypa",
-                "krysset",
-                "trappene",
-                "broen",
-                "tunellen"
-            ],
-            "relative_directions": [
-                "venstre",
-                "rett fram",
-                "høyre"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Hold til venstre for å holde deg på Interstate 95 South.",
-                    "Hold rett for å holde deg på Interstate 95 South.",
-                    "Hold høyre for å bli på Interstate 95 South."
-                ],
-                "1": [
-                    "Hold til venstre for å ta avkjørsel 62 for å holde deg på Interstate 95 South."
-                ],
-                "2": [
-                    "Hold til venstre for å holde deg på I 95 South mot Baltimore."
-                ],
-                "3": [
-                    "Hold til venstre for å ta avkjørsel 62 for å holde deg på Interstate 95 South mot Baltimore."
-                ]
-            }
-        },
-        "keep_verbal": {
-            "phrases": {
-                "0": "Hold <RELATIVE_DIRECTION> ved veiskillet.",
-                "1": "Hold <RELATIVE_DIRECTION> for å ta avkjøringen <NUMBER_SIGN>.",
-                "2": "Hold <RELATIVE_DIRECTION> for å ta <STREET_NAMES>.",
-                "3": "Hold <RELATIVE_DIRECTION> for å ta avkjørsel <NUMBER_SIGN> ut på <STREET_NAMES>.",
-                "4": "Hold <RELATIVE_DIRECTION> mot <TOWARD_SIGN>.",
-                "5": "Hold <RELATIVE_DIRECTION> for å ta avkjørsel <NUMBER_SIGN> mot <TOWARD_SIGN>.",
-                "6": "Hold <RELATIVE_DIRECTION> for å ta <STREET_NAMES> mot <TOWARD_SIGN>.",
-                "7": "Hold <RELATIVE_DIRECTION> for å ta avkjørsel <NUMBER_SIGN> ut på <STREET_NAMES> mot <TOWARD_SIGN>."
-            },
-            "empty_street_name_labels": [
-                "gangveien",
-                "sykkelveien",
-                "terrengsykkelløypa",
-                "krysset",
-                "trappene",
-                "broen",
-                "tunellen"
-            ],
-            "relative_directions": [
-                "venstre",
-                "rett fram",
-                "høyre"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Hold til venstre ved forgreningen.",
-                    "Fortsett rett fram ved forgreningen.",
-                    "Hold til høyre ved forgreningen."
-                ],
-                "1": [
-                    "Hold til høyre for å ta avkjøring 62."
-                ],
-                "2": [
-                    "Hold til høyre for å ta Interstate 8 95 Sør."
-                ],
-                "3": [
-                    "Hold til høyre for å ta avkjøring 62 mot Interstate 8 95 Sør."
-                ],
-                "4": [
-                    "Hold til høyre mot Annapolis."
-                ],
-                "5": [
-                    "Hold til høyre for å ta avkjøring 62 mot Annapolis."
-                ],
-                "6": [
-                    "Hold til høyre for å ta Interstate 8 95 Sør mot Annapolis."
-                ],
-                "7": [
-                    "Hold til høyre for å ta avkjøring 62 mot Interstate 8 95 Sør mot Annapolis."
-                ]
-            }
-        },
-        "merge": {
-            "phrases": {
-                "0": "Slå sammen.",
-                "1": "Slå sammen <RELATIVE_DIRECTION>.",
-                "2": "Flett inn på <STREET_NAMES>.",
-                "3": "Slå sammen <RELATIVE_DIRECTION> med <STREET_NAMES>.",
-                "4": "Slå sammen mot <TOWARD_SIGN>.",
-                "5": "Slå sammen <RELATIVE_DIRECTION> mot <TOWARD_SIGN>."
-            },
-            "relative_directions": [
-                "venstre",
-                "høyre"
-            ],
-            "empty_street_name_labels": [
-                "gangveien",
-                "sykkelveien",
-                "terrengsykkelløypa",
-                "krysset",
-                "trappene",
-                "broen",
-                "tunellen"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Slå sammen."
-                ],
-                "1": [
-                    "Slå sammen venstre."
-                ],
-                "2": [
-                    "Slå sammen med I 76 West/Pennsylvania Turnpike."
-                ],
-                "3": [
-                    "Slå sammen høyre med I 83 Sør."
-                ],
-                "4": [
-                    "Slå sammen mot Baltimore."
-                ],
-                "5": [
-                    "Slå sammen høyre mot Baltimore."
-                ]
-            }
-        },
-        "merge_verbal": {
-            "phrases": {
-                "0": "Slå sammen.",
-                "1": "Slå sammen <RELATIVE_DIRECTION>.",
-                "2": "Flett inn på <STREET_NAMES>.",
-                "3": "Slå sammen <RELATIVE_DIRECTION> med <STREET_NAMES>.",
-                "4": "Slå sammen mot <TOWARD_SIGN>.",
-                "5": "Slå sammen <RELATIVE_DIRECTION> mot <TOWARD_SIGN>."
-            },
-            "relative_directions": [
-                "venstre",
-                "høyre"
-            ],
-            "empty_street_name_labels": [
-                "gangveien",
-                "sykkelveien",
-                "terrengsykkelløypa",
-                "krysset",
-                "trappene",
-                "broen",
-                "tunellen"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Flett."
-                ],
-                "1": [
-                    "Flett venstre."
-                ],
-                "2": [
-                    "Flett inn på I 76 West/Pennsylvania Turnpike."
-                ],
-                "3": [
-                    "Flett høyre inn på I 83 Sør."
-                ],
-                "4": [
-                    "Flett mot Baltimore."
-                ],
-                "5": [
-                    "Flett høyre mot Baltimore."
-                ]
-            }
-        },
-        "post_transition_transit_verbal": {
-            "phrases": {
-                "0": "Reis <TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>."
-            },
-            "transit_stop_count_labels": {
-                "one": "Stoppe",
-                "other": "stopper"
-            },
-            "example_phrases": {
-                "0": [
-                    "Reis 1 stopp.",
-                    "Reis 3 stopp."
-                ]
-            }
-        },
-        "post_transition_verbal": {
-            "phrases": {
-                "0": "Fortsett i <LENGTH>.",
-                "1": "Fortsett på <STREET_NAMES> i <LENGTH>."
-            },
-            "empty_street_name_labels": [
-                "gangveien",
-                "sykkelveien",
-                "terrengsykkelløypa",
-                "krysset",
-                "trappene",
-                "broen",
-                "tunellen"
-            ],
-            "metric_lengths": [
-                "<KILOMETERS> kilometer",
-                "1 kilometer",
-                "<METERS> meter",
-                "mindre enn 10 meter"
-            ],
-            "us_customary_lengths": [
-                "<MILES> miles",
-                "1 mil",
-                "en halv mil",
-                "en kvart mil",
-                "<FEET> fot",
-                "mindre enn 10 fot"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Fortsett i 300 fot.",
-                    "Fortsett i 9 miles."
-                ],
-                "1": [
-                    "Fortsett på Pennsylvania 7 43 i 6,2 miles.",
-                    "Fortsett på Main Street, Vermont 30 i 1 tiendedel av en mil."
-                ]
-            }
-        },
-        "ramp": {
-            "phrases": {
-                "0": "Ta rampen på <RELATIVE_DIRECTION>.",
-                "1": "Ta <BRANCH_SIGN>-rampen på <RELATIVE_DIRECTION>.",
-                "2": "Ta rampen på <RELATIVE_DIRECTION> mot <TOWARD_SIGN>.",
-                "3": "Ta <BRANCH_SIGN>-rampen på <RELATIVE_DIRECTION> mot <TOWARD_SIGN>.",
-                "4": "Ta <NAME_SIGN>-rampen på <RELATIVE_DIRECTION>.",
-                "5": "Sving <RELATIVE_DIRECTION> for å ta rampen.",
-                "6": "Sving <RELATIVE_DIRECTION> for å ta <BRANCH_SIGN>-rampen.",
-                "7": "Sving <RELATIVE_DIRECTION> for å ta rampen mot <TOWARD_SIGN>.",
-                "8": "Sving <RELATIVE_DIRECTION> for å ta <BRANCH_SIGN>-rampen mot <TOWARD_SIGN>.",
-                "9": "Sving <RELATIVE_DIRECTION> for å ta <NAME_SIGN>-rampen.",
-                "10": "Ta rampen.",
-                "11": "Ta <BRANCH_SIGN>-rampen.",
-                "12": "Ta rampen mot <TOWARD_SIGN>.",
-                "13": "Ta <BRANCH_SIGN>-rampen mot <TOWARD_SIGN>.",
-                "14": "Ta <NAME_SIGN>-rampen."
-            },
-            "relative_directions": [
-                "venstre",
-                "høyre"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Ta avkjørselen på venstre.",
-                    "Ta avkjørselen på høyre."
-                ],
-                "1": [
-                    "Ta I 95-avkjørselen på høyre."
-                ],
-                "2": [
-                    "Ta avkjørselen på venstre mot JFK."
-                ],
-                "3": [
-                    "Ta South Conduit Avenue-avkjørselen på venstre mot JFK."
-                ],
-                "4": [
-                    "Ta Gettysburg Pike-avkjørselen på høyre."
-                ],
-                "5": [
-                    "Sving venstre for å ta avkjørselen.",
-                    "Sving høyre for å ta avkjørselen."
-                ],
-                "6": [
-                    "Sving venstre for å ta PA 283 West-avkjørselen."
-                ],
-                "7": [
-                    "Sving venstre for å ta avkjørselen mot Harrisburg/Harrisburg International Airport."
-                ],
-                "8": [
-                    "Sving venstre for å ta PA 283 West-avkjørselen mot Harrisburg/Harrisburg International Airport."
-                ],
-                "9": [
-                    "Sving høyre for å ta Gettysburg Pike-avkjørselen."
-                ],
-                "10": [
-                    "Ta avkjørselen."
-                ],
-                "11": [
-                    "Ta I 95-avkjørselen."
-                ],
-                "12": [
-                    "Ta avkjørselen mot JFK."
-                ],
-                "13": [
-                    "Ta South Conduit Avenue-avkjørselen mot JFK."
-                ],
-                "14": [
-                    "Ta Gettysburg-avkjørselen."
-                ]
-            }
-        },
-        "ramp_straight": {
-            "phrases": {
-                "0": "Hold deg rett for å ta rampen.",
-                "1": "Hold deg rett for å ta <BRANCH_SIGN>-rampen.",
-                "2": "Hold deg rett for å ta rampen mot <TOWARD_SIGN>.",
-                "3": "Hold deg rett for å ta <BRANCH_SIGN>-rampen mot <TOWARD_SIGN>.",
-                "4": "Hold deg rett for å ta <NAME_SIGN>-rampen."
-            },
-            "example_phrases": {
-                "0": [
-                    "Hold deg rett for å ta rampen."
-                ],
-                "1": [
-                    "Hold deg rett for å ta US 322 East-rampen."
-                ],
-                "2": [
-                    "Hold deg rett for å ta rampen mot Hershey."
-                ],
-                "3": [
-                    "Hold deg rett for å ta US 322 East/US 422 East/US 522 East/US 622 East rampen mot Hershey/Palmdale/Palmyra/Campbelltown."
-                ],
-                "4": [
-                    "Hold deg rett for å ta Gettysburg Pike-rampen."
-                ]
-            }
-        },
-        "ramp_straight_verbal": {
-            "phrases": {
-                "0": "Hold deg rett for å ta rampen.",
-                "1": "Hold deg rett for å ta <BRANCH_SIGN>-rampen.",
-                "2": "Hold deg rett for å ta rampen mot <TOWARD_SIGN>.",
-                "3": "Hold deg rett for å ta <BRANCH_SIGN>-rampen mot <TOWARD_SIGN>.",
-                "4": "Hold deg rett for å ta <NAME_SIGN>-rampen."
-            },
-            "example_phrases": {
-                "0": [
-                    "Hold deg rett for å ta rampen."
-                ],
-                "1": [
-                    "Hold deg rett for å ta US 3 22 East-rampen."
-                ],
-                "2": [
-                    "Hold deg rett for å ta rampen mot Hershey."
-                ],
-                "3": [
-                    "Hold deg rett for å ta rampen U.S. 3 22 East, U.S. 4 22 East mot Hershey, Palmdale."
-                ],
-                "4": [
-                    "Hold deg rett for å ta Gettysburg Pike-rampen."
-                ]
-            }
-        },
-        "ramp_verbal": {
-            "phrases": {
-                "0": "Ta rampen på <RELATIVE_DIRECTION>.",
-                "1": "Ta <BRANCH_SIGN>-rampen på <RELATIVE_DIRECTION>.",
-                "2": "Ta rampen på <RELATIVE_DIRECTION> mot <TOWARD_SIGN>.",
-                "3": "Ta <BRANCH_SIGN>-rampen på <RELATIVE_DIRECTION> mot <TOWARD_SIGN>.",
-                "4": "Ta <NAME_SIGN>-rampen på <RELATIVE_DIRECTION>.",
-                "5": "Sving <RELATIVE_DIRECTION> for å ta rampen.",
-                "6": "Sving <RELATIVE_DIRECTION> for å ta <BRANCH_SIGN>-rampen.",
-                "7": "Sving <RELATIVE_DIRECTION> for å ta rampen mot <TOWARD_SIGN>.",
-                "8": "Sving <RELATIVE_DIRECTION> for å ta <BRANCH_SIGN>-rampen mot <TOWARD_SIGN>.",
-                "9": "Sving <RELATIVE_DIRECTION> for å ta <NAME_SIGN>-rampen.",
-                "10": "Ta rampen.",
-                "11": "Ta <BRANCH_SIGN>-rampen.",
-                "12": "Ta rampen mot <TOWARD_SIGN>.",
-                "13": "Ta <BRANCH_SIGN>-rampen mot <TOWARD_SIGN>.",
-                "14": "Ta <NAME_SIGN>-rampen."
-            },
-            "relative_directions": [
-                "venstre",
-                "høyre"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Ta avkjørselen til venstre.",
-                    "Ta avkjørselen til høyre."
-                ],
-                "1": [
-                    "Ta Interstate 95-avkjørselen til høyre."
-                ],
-                "2": [
-                    "Ta avkjørselen til venstre mot JFK."
-                ],
-                "3": [
-                    "Ta South Conduit Avenue-avkjørselen til venstre mot JFK."
-                ],
-                "4": [
-                    "Ta Gettysburg Pike-avkjørselen til høyre."
-                ],
-                "5": [
-                    "Sving til venstre for å ta avkjørselen.",
-                    "Sving til høyre for å ta avkjørselen."
-                ],
-                "6": [
-                    "Sving til venstre for å ta Pennsylvania 2 83 Vest-avkjørselen."
-                ],
-                "7": [
-                    "Sving til venstre for å ta avkjørselen mot Harrisburg/Harrisburg International Airport."
-                ],
-                "8": [
-                    "Sving til venstre for å ta Pennsylvania 2 83 Vest-avkjørselen mot Harrisburg, Harrisburg International Airport."
-                ],
-                "9": [
-                    "Sving til høyre for å ta Gettysburg Pike-avkjørselen."
-                ],
-                "10": [
-                    "Ta avkjørselen."
-                ],
-                "11": [
-                    "Ta Interstate 95-avkjørselen."
-                ],
-                "12": [
-                    "Ta avkjørselen mot JFK."
-                ],
-                "13": [
-                    "Ta South Conduit Avenue-avkjørselen mot JFK."
-                ],
-                "14": [
-                    "Ta Gettysburg Pike-avkjørselen."
-                ]
-            }
-        },
-        "sharp": {
-            "phrases": {
-                "0": "Lag en skarp <RELATIVE_DIRECTION>.",
-                "1": "Ta en skarp <RELATIVE_DIRECTION> inn på <STREET_NAMES>.",
-                "2": "Ta en skarp <RELATIVE_DIRECTION> inn på <BEGIN_STREET_NAMES>. Fortsett på <STREET_NAMES>.",
-                "3": "Ta en skarp <RELATIVE_DIRECTION> for å holde deg på <STREET_NAMES>.",
-                "4": "Ta en skarp <RELATIVE_DIRECTION> ved <JUNCTION_NAME>.",
-                "5": "Ta en skarp <RELATIVE_DIRECTION> mot <TOWARD_SIGN>."
-            },
-            "empty_street_name_labels": [
-                "gangveien",
-                "sykkelveien",
-                "terrengsykkelløypa",
-                "krysset",
-                "trappene",
-                "broen",
-                "tunellen"
-            ],
-            "relative_directions": [
-                "venstre",
-                "høyre"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Gjør en skarp venstresving."
-                ],
-                "1": [
-                    "Gjør en skarp høyresving inn på Flatbush Avenue."
-                ],
-                "2": [
-                    "Gjør en skarp venstresving inn på North Bond Street/US 1 Business/MD 924. Fortsett på MD 924."
-                ],
-                "3": [
-                    "Gjør en skarp høyresving for å forbli på Sunstone Drive."
-                ],
-                "4": [
-                    "Gjør en skarp høyresving ved Mannenbashi Øst."
-                ],
-                "5": [
-                    "Gjør en skarp venstresving mot Baltimore."
-                ]
-            }
-        },
-        "sharp_verbal": {
-            "phrases": {
-                "0": "Gjør en skarp <RELATIVE_DIRECTION>.",
-                "1": "Gjør en skarp <RELATIVE_DIRECTION> inn på <STREET_NAMES>.",
-                "2": "Gjør en skarp <RELATIVE_DIRECTION> inn på <BEGIN_STREET_NAMES>.",
-                "3": "Gjør en skarp <RELATIVE_DIRECTION> for å forbli på <STREET_NAMES>.",
-                "4": "Gjør en skarp <RELATIVE_DIRECTION> ved <JUNCTION_NAME>.",
-                "5": "Gjør en skarp <RELATIVE_DIRECTION> mot <TOWARD_SIGN>."
-            },
-            "empty_street_name_labels": [
-                "gangveien",
-                "sykkelveien",
-                "terrengsykkelløypa",
-                "krysset",
-                "trappene",
-                "broen",
-                "tunellen"
-            ],
-            "relative_directions": [
-                "venstre",
-                "høyre"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Gjør en skarp venstresving."
-                ],
-                "1": [
-                    "Gjør en skarp høyresving inn på Flatbush Avenue."
-                ],
-                "2": [
-                    "Gjør en skarp venstresving inn på North Bond Street, U.S. 1 Business."
-                ],
-                "3": [
-                    "Gjør en skarp høyresving for å forbli på Sunstone Drive."
-                ],
-                "4": [
-                    "Gjør en skarp høyresving ved Mannenbashi Øst."
-                ],
-                "5": [
-                    "Gjør en skarp venstresving mot Baltimore."
-                ]
-            }
-        },
-        "start": {
-            "phrases": {
-                "0": "Gå til <CARDINAL_DIRECTION>.",
-                "1": "Gå <CARDINAL_DIRECTION> på <STREET_NAMES>.",
-                "2": "Gå <CARDINAL_DIRECTION> på <BEGIN_STREET_NAMES>. Fortsett på <STREET_NAMES>.",
-                "4": "Kjør <CARDINAL_DIRECTION>.",
-                "5": "Kjør <CARDINAL_DIRECTION> på <STREET_NAMES>.",
-                "6": "Kjør <CARDINAL_DIRECTION> på <BEGIN_STREET_NAMES>. Fortsett på <STREET_NAMES>.",
-                "8": "Gå <CARDINAL_DIRECTION>.",
-                "9": "Gå <CARDINAL_DIRECTION> på <STREET_NAMES>.",
-                "10": "Gå <CARDINAL_DIRECTION> på <BEGIN_STREET_NAMES>. Fortsett på <STREET_NAMES>.",
-                "16": "Sykkel <CARDINAL_DIRECTION>.",
-                "17": "Sykle <CARDINAL_DIRECTION> på <STREET_NAMES>.",
-                "18": "Sykle <CARDINAL_DIRECTION> på <BEGIN_STREET_NAMES>. Fortsett på <STREET_NAMES>."
-            },
-            "cardinal_directions": [
-                "Nord",
-                "nordøst",
-                "øst",
-                "sørøst",
-                "sør",
-                "sørvest",
-                "vest",
-                "nordvest"
-            ],
-            "empty_street_name_labels": [
-                "gangveien",
-                "sykkelveien",
-                "terrengsykkelløypa",
-                "krysset",
-                "trappene",
-                "broen",
-                "tunellen"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Gå østover.",
-                    "Gå nordover."
-                ],
-                "1": [
-                    "Gå sørvestover på 5th Avenue.",
-                    "Gå vestover på gangveien",
-                    "Gå østover på sykkelveien",
-                    "Gå nordover på terrengsykkelstien"
-                ],
-                "2": [
-                    "Gå sørover på North Prince Street/US 222/PA 272. Fortsett på US 222/PA 272."
-                ],
-                "4": [
-                    "Kjør østover.",
-                    "Kjør nordover."
-                ],
-                "5": [
-                    "Kjør sørvestover på 5th Avenue."
-                ],
-                "6": [
-                    "Kjør sørover på North Prince Street/US 222/PA 272. Fortsett på US 222/PA 272."
-                ],
-                "8": [
-                    "Gå østover.",
-                    "Gå nordover."
-                ],
-                "9": [
-                    "Gå sørvestover på 5th Avenue.",
-                    "Gå vestover på gangveien"
-                ],
-                "10": [
-                    "Gå sørover på North Prince Street/US 222/PA 272. Fortsett på US 222/PA 272."
-                ],
-                "16": [
-                    "Sykle østover.",
-                    "Sykle nordover."
-                ],
-                "17": [
-                    "Sykle sørvestover på 5th Avenue.",
-                    "Sykle østover på sykkelveien",
-                    "Sykle nordover på terrengsykkelstien"
-                ],
-                "18": [
-                    "Sykle sørover på North Prince Street/US 222/PA 272. Fortsett på US 222/PA 272."
-                ]
-            }
-        },
-        "start_verbal": {
-            "phrases": {
-                "0": "Gå til <CARDINAL_DIRECTION>.",
-                "1": "Hold <CARDINAL_DIRECTION> i <LENGTH>.",
-                "2": "Gå <CARDINAL_DIRECTION> på <STREET_NAMES>.",
-                "3": "Kjør <CARDINAL_DIRECTION> på <STREET_NAMES> i <LENGTH>.",
-                "4": "Gå <CARDINAL_DIRECTION> på <BEGIN_STREET_NAMES>.",
-                "5": "Kjør <CARDINAL_DIRECTION>.",
-                "6": "Kjør <CARDINAL_DIRECTION> i <LENGTH>.",
-                "7": "Kjør <CARDINAL_DIRECTION> på <STREET_NAMES>.",
-                "8": "Kjør <CARDINAL_DIRECTION> på <STREET_NAMES> i <LENGTH>.",
-                "9": "Kjør <CARDINAL_DIRECTION> på <BEGIN_STREET_NAMES>.",
-                "10": "Gå <CARDINAL_DIRECTION>.",
-                "11": "Gå <CARDINAL_DIRECTION> i <LENGTH>.",
-                "12": "Gå <CARDINAL_DIRECTION> på <STREET_NAMES>.",
-                "13": "Gå <CARDINAL_DIRECTION> på <STREET_NAMES> i <LENGTH>.",
-                "14": "Gå <CARDINAL_DIRECTION> på <BEGIN_STREET_NAMES>.",
-                "15": "Sykkel <CARDINAL_DIRECTION>.",
-                "16": "Sykkel <CARDINAL_DIRECTION> i <LENGTH>.",
-                "17": "Sykle <CARDINAL_DIRECTION> på <STREET_NAMES>.",
-                "18": "Sykle <CARDINAL_DIRECTION> på <STREET_NAMES> i <LENGTH>.",
-                "19": "Sykle <CARDINAL_DIRECTION> på <BEGIN_STREET_NAMES>."
-            },
-            "cardinal_directions": [
-                "Nord",
-                "nordøst",
-                "øst",
-                "sørøst",
-                "sør",
-                "sørvest",
-                "vest",
-                "nordvest"
-            ],
-            "empty_street_name_labels": [
-                "gangveien",
-                "sykkelveien",
-                "terrengsykkelløypa",
-                "krysset",
-                "trappene",
-                "broen",
-                "tunellen"
-            ],
-            "metric_lengths": [
-                "<KILOMETERS> kilometer",
-                "1 kilometer",
-                "<METERS> meter",
-                "mindre enn 10 meter"
-            ],
-            "us_customary_lengths": [
-                "<MILES> miles",
-                "1 mil",
-                "en halv mil",
-                "en kvart mil",
-                "<FEET> fot",
-                "mindre enn 10 fot"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Gå østover.",
-                    "Gå nordover."
-                ],
-                "1": [
-                    "Gå østover en halv mil.",
-                    "Gå nordover i 1 kilometer."
-                ],
-                "2": [
-                    "Gå sørvestover på 5th Avenue."
-                ],
-                "3": [
-                    "Gå sørvestover på 5th Avenue i en tiendedel av en mil."
-                ],
-                "4": [
-                    "Gå sørover på North Prince Street, U.S.A. 2 22."
-                ],
-                "5": [
-                    "Kjør østover.",
-                    "Kjør nordover."
-                ],
-                "6": [
-                    "Kjør østover en halv mil.",
-                    "Kjør nordover i 1 kilometer."
-                ],
-                "7": [
-                    "Kjør sørvestover på 5th Avenue."
-                ],
-                "8": [
-                    "Kjør sørvestover på 5th Avenue i 1 tiendedel av en mil."
-                ],
-                "9": [
-                    "Kjør sørover på North Prince Street, U.S.A. 2 22."
-                ],
-                "10": [
-                    "Gå østover.",
-                    "Gå nordover."
-                ],
-                "11": [
-                    "Gå østover en halv mil.",
-                    "Gå nordover i 1 kilometer."
-                ],
-                "12": [
-                    "Gå sørvestover på 5th Avenue."
-                ],
-                "13": [
-                    "Gå sørvestover på 5th Avenue i en tiendedel av en mil."
-                ],
-                "14": [
-                    "Gå sørover på North Prince Street, USA 2 22."
-                ],
-                "15": [
-                    "Sykle østover.",
-                    "Sykle nordover."
-                ],
-                "16": [
-                    "Sykle østover en halv mil.",
-                    "Sykle nordover i 1 kilometer."
-                ],
-                "17": [
-                    "Sykle sørvestover på 5th Avenue."
-                ],
-                "18": [
-                    "Sykle sørvestover på 5th Avenue i 1 tiendedel av en mil."
-                ],
-                "19": [
-                    "Sykle sørover på North Prince Street, USA 2 22."
-                ]
-            }
-        },
-        "transit": {
-            "phrases": {
-                "0": "Ta <TRANSIT_NAME>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)",
-                "1": "Ta <TRANSIT_NAME> mot <TRANSIT_HEADSIGN>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)"
-            },
-            "empty_transit_name_labels": [
-                "trikk",
-                "metro",
-                "tog",
-                "buss",
-                "ferje",
-                "taubane",
-                "gondol",
-                "taubane"
-            ],
-            "transit_stop_count_labels": {
-                "one": "Stoppe",
-                "other": "stopper"
-            },
-            "example_phrases": {
-                "0": [
-                    "Ta New Haven. (1 stopp)",
-                    "Ta metroen. (2 stopp)",
-                    "Ta bussen. (12 stopp)"
-                ],
-                "1": [
-                    "Ta F mot JAMAICA - 179 ST. (10 stopp)",
-                    "Ta fergen mot Staten Island. (1 stopp)"
-                ]
-            }
-        },
-        "transit_connection_destination": {
-            "phrases": {
-                "0": "Gå ut av stasjonen.",
-                "1": "Gå ut av <TRANSIT_STOP>.",
-                "2": "Gå ut av <TRANSIT_STOP> <STATION_LABEL>."
-            },
-            "station_label": "Stasjon",
-            "example_phrases": {
-                "0": [
-                    "Gå ut av stasjonen."
-                ],
-                "1": [
-                    "Gå ut av Embarcadero stasjon."
-                ],
-                "2": [
-                    "Gå ut av 8 St - NYU Station."
-                ]
-            }
-        },
-        "transit_connection_destination_verbal": {
-            "phrases": {
-                "0": "Gå ut av stasjonen.",
-                "1": "Gå ut av <TRANSIT_STOP>.",
-                "2": "Gå ut av <TRANSIT_STOP> <STATION_LABEL>."
-            },
-            "station_label": "Stasjon",
-            "example_phrases": {
-                "0": [
-                    "Gå ut av stasjonen."
-                ],
-                "1": [
-                    "Gå ut av Embarcadero stasjon."
-                ],
-                "2": [
-                    "Gå ut av 8 St - NYU Station."
-                ]
-            }
-        },
-        "transit_connection_start": {
-            "phrases": {
-                "0": "Gå inn på stasjonen.",
-                "1": "Skriv inn <TRANSIT_STOP>.",
-                "2": "Skriv inn <TRANSIT_STOP> <STATION_LABEL>."
-            },
-            "station_label": "Stasjon",
-            "example_phrases": {
-                "0": [
-                    "Gå inn på stasjonen."
-                ],
-                "1": [
-                    "Gå inn på Embarcadero-stasjonen."
-                ],
-                "2": [
-                    "Gå inn på 8 St - NYU Station."
-                ]
-            }
-        },
-        "transit_connection_start_verbal": {
-            "phrases": {
-                "0": "Gå inn på stasjonen.",
-                "1": "Skriv inn <TRANSIT_STOP>.",
-                "2": "Skriv inn <TRANSIT_STOP> <STATION_LABEL>."
-            },
-            "station_label": "Stasjon",
-            "example_phrases": {
-                "0": [
-                    "Gå inn på stasjonen."
-                ],
-                "1": [
-                    "Gå inn på Embarcadero-stasjonen."
-                ],
-                "2": [
-                    "Gå inn på 8 St - NYU Station."
-                ]
-            }
-        },
-        "transit_connection_transfer": {
-            "phrases": {
-                "0": "Bytt ved stasjonen.",
-                "1": "Bytt ved <TRANSIT_STOP>.",
-                "2": "Bytt ved <TRANSIT_STOP> <STATION_LABEL>."
-            },
-            "station_label": "Stasjon",
-            "example_phrases": {
-                "0": [
-                    "Bytt ved stasjonen."
-                ],
-                "1": [
-                    "Bytt ved Embarcadero-stasjonen."
-                ],
-                "2": [
-                    "Bytt ved 8 St - NYU-stasjonen."
-                ]
-            }
-        },
-        "transit_connection_transfer_verbal": {
-            "phrases": {
-                "0": "Bytt ved stasjonen.",
-                "1": "Bytt ved <TRANSIT_STOP>.",
-                "2": "Bytt ved <TRANSIT_STOP> <STATION_LABEL>."
-            },
-            "station_label": "Stasjon",
-            "example_phrases": {
-                "0": [
-                    "Bytt ved stasjonen."
-                ],
-                "1": [
-                    "Bytt ved Embarcadero-stasjonen."
-                ],
-                "2": [
-                    "Bytt ved 8 St - NYU-stasjonen."
-                ]
-            }
-        },
-        "transit_remain_on": {
-            "phrases": {
-                "0": "Forbli på <TRANSIT_NAME>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)",
-                "1": "Forbli på <TRANSIT_NAME> mot <TRANSIT_HEADSIGN>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)"
-            },
-            "empty_transit_name_labels": [
-                "trikk",
-                "metro",
-                "tog",
-                "buss",
-                "ferje",
-                "taubane",
-                "gondol",
-                "taubane"
-            ],
-            "transit_stop_count_labels": {
-                "one": "Stoppe",
-                "other": "stopper"
-            },
-            "example_phrases": {
-                "0": [
-                    "Forbli på New Haven. (1 stopp)",
-                    "Bli på toget. (3 stopp)"
-                ],
-                "1": [
-                    "Hold deg på F mot JAMAICA - 179 ST. (10 stopp)"
-                ]
-            }
-        },
-        "transit_remain_on_verbal": {
-            "phrases": {
-                "0": "Forbli på <TRANSIT_NAME>.",
-                "1": "Forbli på <TRANSIT_NAME> mot <TRANSIT_HEADSIGN>."
-            },
-            "empty_transit_name_labels": [
-                "trikk",
-                "metro",
-                "tog",
-                "buss",
-                "ferje",
-                "taubane",
-                "gondol",
-                "taubane"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Forbli på New Haven."
-                ],
-                "1": [
-                    "Hold deg på F mot JAMAICA - 179 ST."
-                ]
-            }
-        },
-        "transit_transfer": {
-            "phrases": {
-                "0": "Bytt for å ta <TRANSIT_NAME>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)",
-                "1": "Bytt for å ta <TRANSIT_NAME> mot <TRANSIT_HEADSIGN>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)"
-            },
-            "empty_transit_name_labels": [
-                "trikk",
-                "metro",
-                "tog",
-                "buss",
-                "ferje",
-                "taubane",
-                "gondol",
-                "taubane"
-            ],
-            "transit_stop_count_labels": {
-                "one": "Stoppe",
-                "other": "stopper"
-            },
-            "example_phrases": {
-                "0": [
-                    "Bytt for å ta New Haven. (1 stopp)",
-                    "Bytt for å ta trikken. (4 stopper)"
-                ],
-                "1": [
-                    "Bytt for å ta F mot JAMAICA - 179 ST. (10 stopper)"
-                ]
-            }
-        },
-        "transit_transfer_verbal": {
-            "phrases": {
-                "0": "Bytt for å ta <TRANSIT_NAME>.",
-                "1": "Bytt for å ta <TRANSIT_NAME> mot <TRANSIT_HEADSIGN>."
-            },
-            "empty_transit_name_labels": [
-                "trikk",
-                "metro",
-                "tog",
-                "buss",
-                "ferje",
-                "taubane",
-                "gondol",
-                "taubane"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Bytt for å ta New Haven."
-                ],
-                "1": [
-                    "Bytt for å ta F mot JAMAICA - 179 ST."
-                ]
-            }
-        },
-        "transit_verbal": {
-            "phrases": {
-                "0": "Ta <TRANSIT_NAME>.",
-                "1": "Ta <TRANSIT_NAME> mot <TRANSIT_HEADSIGN>."
-            },
-            "empty_transit_name_labels": [
-                "trikk",
-                "metro",
-                "tog",
-                "buss",
-                "ferje",
-                "taubane",
-                "gondol",
-                "taubane"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Ta New Haven."
-                ],
-                "1": [
-                    "Ta F mot JAMAICA - 179 ST."
-                ]
-            }
-        },
-        "turn": {
-            "phrases": {
-                "0": "Snu <RELATIVE_DIRECTION>.",
-                "1": "Sving <RELATIVE_DIRECTION> inn på <STREET_NAMES>.",
-                "2": "Sving <RELATIVE_DIRECTION> inn på <BEGIN_STREET_NAMES>. Fortsett på <STREET_NAMES>.",
-                "3": "Sving <RELATIVE_DIRECTION> for å holde deg på <STREET_NAMES>.",
-                "4": "Sving til <RELATIVE_DIRECTION> ved <JUNCTION_NAME>.",
-                "5": "Sving <RELATIVE_DIRECTION> mot <TOWARD_SIGN>."
-            },
-            "empty_street_name_labels": [
-                "gangveien",
-                "sykkelveien",
-                "terrengsykkelløypa",
-                "krysset",
-                "trappene",
-                "broen",
-                "tunellen"
-            ],
-            "relative_directions": [
-                "venstre",
-                "høyre"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Snu til venstre."
-                ],
-                "1": [
-                    "Snu til høyre på Flatbush Avenue."
-                ],
-                "2": [
-                    "Snu til venstre på North Bond Street/US 1 Business/MD 924. Fortsett på MD 924."
-                ],
-                "3": [
-                    "Snu til høyre for å bli på Sunstone Drive."
-                ],
-                "4": [
-                    "Snu til høyre ved Mannenbashi Øst."
-                ],
-                "5": [
-                    "Snu til venstre mot Baltimore."
-                ]
-            }
-        },
-        "turn_verbal": {
-            "phrases": {
-                "0": "Snu <RELATIVE_DIRECTION>.",
-                "1": "Sving <RELATIVE_DIRECTION> inn på <STREET_NAMES>.",
-                "2": "Sving <RELATIVE_DIRECTION> inn på <BEGIN_STREET_NAMES>.",
-                "3": "Sving <RELATIVE_DIRECTION> for å holde deg på <STREET_NAMES>.",
-                "4": "Sving til <RELATIVE_DIRECTION> ved <JUNCTION_NAME>.",
-                "5": "Sving <RELATIVE_DIRECTION> mot <TOWARD_SIGN>."
-            },
-            "empty_street_name_labels": [
-                "gangveien",
-                "sykkelveien",
-                "terrengsykkelløypa",
-                "krysset",
-                "trappene",
-                "broen",
-                "tunellen"
-            ],
-            "relative_directions": [
-                "venstre",
-                "høyre"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Snu til venstre."
-                ],
-                "1": [
-                    "Snu til høyre på Flatbush Avenue."
-                ],
-                "2": [
-                    "Snu til venstre på North Bond Street, U.S. 1 Business."
-                ],
-                "3": [
-                    "Snu til høyre for å bli på Sunstone Drive."
-                ],
-                "4": [
-                    "Snu til høyre ved Mannenbashi Øst."
-                ],
-                "5": [
-                    "Snu til venstre mot Baltimore."
-                ]
-            }
-        },
-        "uturn": {
-            "phrases": {
-                "0": "Gjør en <RELATIVE_DIRECTION> U-sving.",
-                "1": "Ta en <RELATIVE_DIRECTION> U-sving inn på <STREET_NAMES>.",
-                "2": "Ta en <RELATIVE_DIRECTION> U-sving for å holde deg på <STREET_NAMES>.",
-                "3": "Ta en <RELATIVE_DIRECTION> U-sving ved <CROSS_STREET_NAMES>.",
-                "4": "Ta en <RELATIVE_DIRECTION> U-sving ved <CROSS_STREET_NAMES> inn på <STREET_NAMES>.",
-                "5": "Ta en <RELATIVE_DIRECTION> U-sving ved <CROSS_STREET_NAMES> for å holde deg på <STREET_NAMES>.",
-                "6": "Ta en <RELATIVE_DIRECTION> U-sving ved <JUNCTION_NAME>.",
-                "7": "Gjør en <RELATIVE_DIRECTION> U-sving mot <TOWARD_SIGN>."
-            },
-            "empty_street_name_labels": [
-                "gangveien",
-                "sykkelveien",
-                "terrengsykkelløypa",
-                "krysset",
-                "trappene",
-                "broen",
-                "tunellen"
-            ],
-            "relative_directions": [
-                "venstre",
-                "høyre"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Gjør en venstre U-sving."
-                ],
-                "1": [
-                    "Gjør en høyre U-sving på Bunker Hill Road."
-                ],
-                "2": [
-                    "Gjør en venstre U-sving for å bli på Bunker Hill Road."
-                ],
-                "3": [
-                    "Gjør en venstre U-sving ved Devonshire Road."
-                ],
-                "4": [
-                    "Gjør en venstre U-sving ved Devonshire Road inn på Jonestown Road/US 22."
-                ],
-                "5": [
-                    "Gjør en venstre U-sving ved Devonshire Road for å bli på Jonestown Road/US 22."
-                ],
-                "6": [
-                    "Gjør en høyre U-sving ved Mannenbashi Øst."
-                ],
-                "7": [
-                    "Gjør en venstre U-sving mot Baltimore."
-                ]
-            }
-        },
-        "uturn_verbal": {
-            "phrases": {
-                "0": "Gjør en <RELATIVE_DIRECTION> U-sving.",
-                "1": "Ta en <RELATIVE_DIRECTION> U-sving inn på <STREET_NAMES>.",
-                "2": "Ta en <RELATIVE_DIRECTION> U-sving for å holde deg på <STREET_NAMES>.",
-                "3": "Ta en <RELATIVE_DIRECTION> U-sving ved <CROSS_STREET_NAMES>.",
-                "4": "Ta en <RELATIVE_DIRECTION> U-sving ved <CROSS_STREET_NAMES> inn på <STREET_NAMES>.",
-                "5": "Ta en <RELATIVE_DIRECTION> U-sving ved <CROSS_STREET_NAMES> for å holde deg på <STREET_NAMES>.",
-                "6": "Ta en <RELATIVE_DIRECTION> U-sving ved <JUNCTION_NAME>.",
-                "7": "Gjør en <RELATIVE_DIRECTION> U-sving mot <TOWARD_SIGN>."
-            },
-            "empty_street_name_labels": [
-                "gangveien",
-                "sykkelveien",
-                "terrengsykkelløypa",
-                "krysset",
-                "trappene",
-                "broen",
-                "tunellen"
-            ],
-            "relative_directions": [
-                "venstre",
-                "høyre"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Gjør en venstre U-sving."
-                ],
-                "1": [
-                    "Gjør en høyre U-sving inn på Bunker Hill Road."
-                ],
-                "2": [
-                    "Gjør en venstre U-sving for å bli på Bunker Hill Road."
-                ],
-                "3": [
-                    "Gjør en venstre U-sving ved Devonshire Road."
-                ],
-                "4": [
-                    "Gjør en venstre U-sving ved Devonshire Road inn på Jonestown Road, U.S. 22."
-                ],
-                "5": [
-                    "Gjør en venstre U-sving ved Devonshire Road for å bli på Jonestown Road, U.S. 22."
-                ],
-                "6": [
-                    "Gjør en høyre U-sving ved Mannenbashi Øst."
-                ],
-                "7": [
-                    "Gjør en venstre U-sving mot Baltimore."
-                ]
-            }
-        },
-        "verbal_multi_cue": {
-            "phrases": {
-                "0": "<CURRENT_VERBAL_CUE> Deretter <NEXT_VERBAL_CUE>",
-                "1": "<CURRENT_VERBAL_CUE> Deretter, om <LENGTH>, <NEXT_VERBAL_CUE>"
-            },
-            "metric_lengths": [
-                "<KILOMETERS> kilometer",
-                "1 kilometer",
-                "<METERS> meter",
-                "mindre enn 10 meter"
-            ],
-            "us_customary_lengths": [
-                "<MILES> miles",
-                "1 mil",
-                "en halv mil",
-                "en kvart mil",
-                "<FEET> fot",
-                "mindre enn 10 fot"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Sving litt til høyre inn på East Fayette Street. Deretter sving til høyre inn på North Gay Street."
-                ],
-                "1": [
-                    "Sving litt til høyre inn på East Fayette Street. Deretter, om 500 fot, sving til høyre inn på North Gay Street."
-                ]
-            }
-        },
-        "approach_verbal_alert": {
-            "phrases": {
-                "0": "I <LENGTH>, <CURRENT_VERBAL_CUE>"
-            },
-            "metric_lengths": [
-                "<KILOMETERS> kilometer",
-                "1 kilometer",
-                "<METERS> meter",
-                "mindre enn 10 meter"
-            ],
-            "us_customary_lengths": [
-                "<MILES> miles",
-                "1 mil",
-                "en halv mil",
-                "en kvart mil",
-                "<FEET> fot",
-                "mindre enn 10 fot"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Om et kvartal mile, sving til høyre inn på North Gay Street."
-                ]
-            }
-        },
-        "pass": {
-            "phrases": {
-                "0": "Bestått <OBJECT_LABEL>.",
-                "1": "Passer trafikksignaler på <OBJECT_LABEL>."
-            },
-            "object_labels": [
-                "porten",
-                "pullertene",
-                "veikryss"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Passer porten."
-                ]
-            }
-        },
-        "elevator": {
-            "phrases": {
-                "0": "Ta heisen.",
-                "1": "Ta heisen til <LEVEL>."
-            },
-            "example_phrases": {
-                "0": [
-                    "Ta heisen."
-                ],
-                "1": [
-                    "Ta heisen til nivå 1."
-                ]
-            }
-        },
-        "steps": {
-            "phrases": {
-                "0": "Ta trappene.",
-                "1": "Ta trappene til <LEVEL>."
-            },
-            "example_phrases": {
-                "0": [
-                    "Ta trappene."
-                ],
-                "1": [
-                    "Ta trappene til nivå 2."
-                ]
-            }
-        },
-        "escalator": {
-            "phrases": {
-                "0": "Ta rulletrappen.",
-                "1": "Ta rulletrappen til <LEVEL>."
-            },
-            "example_phrases": {
-                "0": [
-                    "Ta rulletrappen."
-                ],
-                "1": [
-                    "Ta rulletrappen til nivå 3."
-                ]
-            }
-        },
-        "enter_building": {
-            "phrases": {
-                "0": "Gå inn i bygningen.",
-                "1": "Gå inn i bygningen og fortsett på <STREET_NAMES>."
-            },
-            "empty_street_name_labels": [
-                "gangveien",
-                "sykkelveien",
-                "terrengsykkelløypa",
-                "krysset"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Gå inn i bygningen."
-                ],
-                "1": [
-                    "Gå inn i bygget, og fortsett på gangveien."
-                ]
-            }
-        },
-        "exit_building": {
-            "phrases": {
-                "0": "Gå ut av bygningen.",
-                "1": "Gå ut av bygningen og fortsett på <STREET_NAMES>."
-            },
-            "empty_street_name_labels": [
-                "gangveien",
-                "sykkelveien",
-                "terrengsykkelløypa",
-                "krysset"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Gå ut av bygningen."
-                ],
-                "1": [
-                    "Gå ut av bygningen og fortsett på gangveien."
-                ]
-            }
-        }
+  "posix_locale": "no_NO.UTF-8",
+  "aliases": [
+    "no"
+  ],
+  "instructions": {
+    "arrive": {
+      "phrases": {
+        "0": "Ankomst: <TIME>.",
+        "1": "Ankomst: <TIME> ved <TRANSIT_STOP>."
+      },
+      "example_phrases": {
+        "0": [
+          "Ankomst: 08:02."
+        ],
+        "1": [
+          "Ankomst: 08:02 på 8 St - NYU."
+        ]
+      }
+    },
+    "arrive_verbal": {
+      "phrases": {
+        "0": "Ankomst <TIME>.",
+        "1": "Ankomst kl. <TIME> kl. <TRANSIT_STOP>."
+      },
+      "example_phrases": {
+        "0": [
+          "Ankom på 08:02 AM."
+        ],
+        "1": [
+          "Ankom på 08:02 AM på 8 St - NYU."
+        ]
+      }
+    },
+    "bear": {
+      "phrases": {
+        "0": "Ta <RELATIVE_DIRECTION>.",
+        "1": "Ta <RELATIVE_DIRECTION> inn på <STREET_NAMES>.",
+        "2": "Ta <RELATIVE_DIRECTION> inn på <BEGIN_STREET_NAMES>. Fortsett på <STREET_NAMES>.",
+        "3": "Ta <RELATIVE_DIRECTION> for å forbli på <STREET_NAMES>.",
+        "4": "Ta <RELATIVE_DIRECTION> ved <JUNCTION_NAME>.",
+        "5": "Ta <RELATIVE_DIRECTION> mot <TOWARD_SIGN>."
+      },
+      "empty_street_name_labels": [
+        "gangveien",
+        "sykkelveien",
+        "terrengsykkelløypa",
+        "krysset",
+        "trappene",
+        "broen",
+        "tunellen"
+      ],
+      "relative_directions": [
+        "venstre",
+        "høyre"
+      ],
+      "example_phrases": {
+        "0": [
+          "Ta til høyre."
+        ],
+        "1": [
+          "Ta til venstre inn på Arlen Road."
+        ],
+        "2": [
+          "Ta til høyre inn på Belair Road/US 1 Business. Fortsett på US 1 Business."
+        ],
+        "3": [
+          "Ta til venstre for å forbli på US 15 South."
+        ],
+        "4": [
+          "Ta til høyre ved Mannenbashi East."
+        ],
+        "5": [
+          "Ta til venstre mot Baltimore."
+        ]
+      }
+    },
+    "bear_verbal": {
+      "phrases": {
+        "0": "Bjørn <RELATIVE_DIRECTION>.",
+        "1": "Hold <RELATIVE_DIRECTION> til <STREET_NAMES>.",
+        "2": "Hold <RELATIVE_DIRECTION> inn på <BEGIN_STREET_NAMES>.",
+        "3": "Bær <RELATIVE_DIRECTION> for å bli på <STREET_NAMES>.",
+        "4": "Bjørn <RELATIVE_DIRECTION> ved <JUNCTION_NAME>.",
+        "5": "Hold <RELATIVE_DIRECTION> mot <TOWARD_SIGN>."
+      },
+      "empty_street_name_labels": [
+        "gangveien",
+        "sykkelveien",
+        "terrengsykkelløypa",
+        "krysset",
+        "trappene",
+        "broen",
+        "tunellen"
+      ],
+      "relative_directions": [
+        "venstre",
+        "høyre"
+      ],
+      "example_phrases": {
+        "0": [
+          "Følg til høyre."
+        ],
+        "1": [
+          "Følg til venstre inn på Arlen Road."
+        ],
+        "2": [
+          "Følg til høyre inn på Belair Road, U.S. 1 Business."
+        ],
+        "3": [
+          "Følg til venstre for å forbli på U.S. 15 South."
+        ],
+        "4": [
+          "Følg til høyre ved Mannenbashi East."
+        ],
+        "5": [
+          "Følg til venstre mot Baltimore."
+        ]
+      }
+    },
+    "becomes": {
+      "phrases": {
+        "0": "<PREVIOUS_STREET_NAMES> blir <STREET_NAMES>."
+      },
+      "example_phrases": {
+        "0": [
+          "Vine Street blir Middletown Road."
+        ]
+      }
+    },
+    "becomes_verbal": {
+      "phrases": {
+        "0": "<PREVIOUS_STREET_NAMES> blir <STREET_NAMES>."
+      },
+      "example_phrases": {
+        "0": [
+          "Vine Street blir Middletown Road."
+        ]
+      }
+    },
+    "continue": {
+      "phrases": {
+        "0": "Fortsette.",
+        "1": "Fortsett på <STREET_NAMES>.",
+        "2": "Fortsett ved <JUNCTION_NAME>.",
+        "3": "Fortsett mot <TOWARD_SIGN>."
+      },
+      "empty_street_name_labels": [
+        "gangveien",
+        "sykkelveien",
+        "terrengsykkelløypa",
+        "krysset",
+        "trappene",
+        "broen",
+        "tunellen"
+      ],
+      "example_phrases": {
+        "0": [
+          "Fortsette."
+        ],
+        "1": [
+          "Fortsett på 10th Avenue."
+        ],
+        "2": [
+          "Fortsett ved Mannenbashi øst."
+        ],
+        "3": [
+          "Fortsett mot Baltimore."
+        ]
+      }
+    },
+    "continue_verbal": {
+      "phrases": {
+        "0": "Fortsette.",
+        "1": "Fortsett i <LENGTH>.",
+        "2": "Fortsett på <STREET_NAMES>.",
+        "3": "Fortsett på <STREET_NAMES> i <LENGTH>.",
+        "4": "Fortsett ved <JUNCTION_NAME>.",
+        "5": "Fortsett ved <JUNCTION_NAME> i <LENGTH>.",
+        "6": "Fortsett mot <TOWARD_SIGN>.",
+        "7": "Fortsett mot <TOWARD_SIGN> i <LENGTH>."
+      },
+      "empty_street_name_labels": [
+        "gangveien",
+        "sykkelveien",
+        "terrengsykkelløypa",
+        "krysset",
+        "trappene",
+        "broen",
+        "tunellen"
+      ],
+      "metric_lengths": [
+        "<KILOMETERS> kilometer",
+        "1 kilometer",
+        "<METERS> meter",
+        "mindre enn 10 meter"
+      ],
+      "us_customary_lengths": [
+        "<MILES> miles",
+        "1 mil",
+        "en halv mil",
+        "en kvart mil",
+        "<FEET> fot",
+        "mindre enn 10 fot"
+      ],
+      "example_phrases": {
+        "0": [
+          "Fortsett."
+        ],
+        "1": [
+          "Fortsett i 300 feet."
+        ],
+        "2": [
+          "Fortsett på 10th Avenue."
+        ],
+        "3": [
+          "Fortsett på 10th Avenue i 3 miles."
+        ],
+        "4": [
+          "Fortsett ved Mannenbashi East."
+        ],
+        "5": [
+          "Fortsett ved Mannenbashi East i 2 miles."
+        ],
+        "6": [
+          "Fortsett mot Baltimore."
+        ],
+        "7": [
+          "Fortsett mot Baltimore i 5 miles."
+        ]
+      }
+    },
+    "continue_verbal_alert": {
+      "phrases": {
+        "0": "Fortsett.",
+        "1": "Fortsett på <STREET_NAMES>.",
+        "2": "Fortsett ved <JUNCTION_NAME>.",
+        "3": "Fortsett mot <TOWARD_SIGN>."
+      },
+      "empty_street_name_labels": [
+        "gangveien",
+        "sykkelveien",
+        "terrengsykkelløypa",
+        "krysset",
+        "trappene",
+        "broen",
+        "tunellen"
+      ],
+      "example_phrases": {
+        "0": [
+          "Fortsett."
+        ],
+        "1": [
+          "Fortsett på 10th Avenue."
+        ],
+        "2": [
+          "Fortsett ved Mannenbashi East."
+        ],
+        "3": [
+          "Fortsett mot Baltimore."
+        ]
+      }
+    },
+    "depart": {
+      "phrases": {
+        "0": "Avreise: <TIME>.",
+        "1": "Avreise: <TIME> fra <TRANSIT_STOP>."
+      },
+      "example_phrases": {
+        "0": [
+          "Avreise: 08:02 AM."
+        ],
+        "1": [
+          "Avreise: 08:02 AM fra 8 St - NYU."
+        ]
+      }
+    },
+    "depart_verbal": {
+      "phrases": {
+        "0": "Avreise kl. <TIME>.",
+        "1": "Avgang <TIME> fra <TRANSIT_STOP>."
+      },
+      "example_phrases": {
+        "0": [
+          "Avreise klokken 08:02 AM."
+        ],
+        "1": [
+          "Avreise klokken 08:02 AM fra 8 St - NYU."
+        ]
+      }
+    },
+    "destination": {
+      "phrases": {
+        "0": "Du har kommet til destinasjonen.",
+        "1": "Du har ankommet <DESTINATION>.",
+        "2": "Destinasjonen din er på <RELATIVE_DIRECTION>.",
+        "3": "<DESTINATION> er på <RELATIVE_DIRECTION>."
+      },
+      "relative_directions": [
+        "venstre",
+        "høyre"
+      ],
+      "example_phrases": {
+        "0": [
+          "Du har ankommet destinasjonen din."
+        ],
+        "1": [
+          "Du har ankommet 3206 Powelton Avenue."
+        ],
+        "2": [
+          "Destinasjonen din er på venstre side.",
+          "Destinasjonen din er på høyre side."
+        ],
+        "3": [
+          "Lancaster Brewing Company er på venstre side."
+        ]
+      }
+    },
+    "destination_verbal": {
+      "phrases": {
+        "0": "Du har kommet til destinasjonen.",
+        "1": "Du har ankommet <DESTINATION>.",
+        "2": "Destinasjonen din er på <RELATIVE_DIRECTION>.",
+        "3": "<DESTINATION> er på <RELATIVE_DIRECTION>."
+      },
+      "relative_directions": [
+        "venstre",
+        "høyre"
+      ],
+      "example_phrases": {
+        "0": [
+          "Du har ankommet destinasjonen din."
+        ],
+        "1": [
+          "Du har ankommet 32 o6 Powelton Avenue."
+        ],
+        "2": [
+          "Destinasjonen din er på venstre side.",
+          "Destinasjonen din er på høyre side."
+        ],
+        "3": [
+          "Lancaster Brewing Company er på venstre side."
+        ]
+      }
+    },
+    "destination_verbal_alert": {
+      "phrases": {
+        "0": "Du kommer til reisemålet ditt.",
+        "1": "Du kommer til <DESTINATION>.",
+        "2": "Destinasjonen din vil være på <RELATIVE_DIRECTION>.",
+        "3": "<DESTINATION> vil være på <RELATIVE_DIRECTION>."
+      },
+      "relative_directions": [
+        "venstre",
+        "høyre"
+      ],
+      "example_phrases": {
+        "0": [
+          "Du vil ankomme destinasjonen din."
+        ],
+        "1": [
+          "Du vil ankomme 32 o6 Powelton Avenue."
+        ],
+        "2": [
+          "Destinasjonen din vil være på venstre side.",
+          "Destinasjonen din vil være på høyre side."
+        ],
+        "3": [
+          "Lancaster Brewing Company vil være på venstre side."
+        ]
+      }
+    },
+    "enter_ferry": {
+      "phrases": {
+        "0": "Ta fergen.",
+        "1": "Ta <STREET_NAMES>.",
+        "2": "Ta <STREET_NAMES> <FERRY_LABEL>.",
+        "3": "Ta fergen mot <TOWARD_SIGN>."
+      },
+      "empty_street_name_labels": [
+        "gangveien",
+        "sykkelveien",
+        "terrengsykkelløypa",
+        "krysset",
+        "trappene",
+        "broen",
+        "tunellen"
+      ],
+      "ferry_label": "Ferje",
+      "example_phrases": {
+        "0": [
+          "Ta fergen."
+        ],
+        "1": [
+          "Ta Millersburg-fergen."
+        ],
+        "2": [
+          "Ta Bridgeport - Port Jefferson-fergen."
+        ],
+        "3": [
+          "Ta fergen mot Cape May."
+        ]
+      }
+    },
+    "enter_ferry_verbal": {
+      "phrases": {
+        "0": "Ta fergen.",
+        "1": "Ta <STREET_NAMES>.",
+        "2": "Ta <STREET_NAMES> <FERRY_LABEL>.",
+        "3": "Ta fergen mot <TOWARD_SIGN>."
+      },
+      "empty_street_name_labels": [
+        "gangveien",
+        "sykkelveien",
+        "terrengsykkelløypa",
+        "krysset",
+        "trappene",
+        "broen",
+        "tunellen"
+      ],
+      "ferry_label": "Ferje",
+      "example_phrases": {
+        "0": [
+          "Ta fergen."
+        ],
+        "1": [
+          "Ta Millersburg-fergen."
+        ],
+        "2": [
+          "Ta Bridgeport - Port Jefferson-fergen."
+        ],
+        "3": [
+          "Ta fergen mot Cape May."
+        ]
+      }
+    },
+    "enter_roundabout": {
+      "phrases": {
+        "0": "Kjør inn i rundkjøringen.",
+        "1": "Kjør inn i rundkjøringen og ta <ORDINAL_VALUE> avkjørsel.",
+        "2": "Kjør inn i rundkjøringen og ta <ORDINAL_VALUE> avkjørsel inn på <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "3": "Kjør inn i rundkjøringen og ta <ORDINAL_VALUE> avkjørsel inn på <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>. Fortsett på <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "4": "Kjør inn i rundkjøringen og ta <ORDINAL_VALUE> avkjørsel mot <TOWARD_SIGN>.",
+        "5": "Kjør inn i rundkjøringen og ta avkjørselen inn på <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "6": "Kjør inn i rundkjøringen og ta avkjørselen inn på <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>. Fortsett på <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "7": "Kjør inn i rundkjøringen og ta avkjørselen mot <TOWARD_SIGN>.",
+        "8": "Kjør inn på <STREET_NAMES>.",
+        "9": "Kjør inn på <STREET_NAMES> og ta <ORDINAL_VALUE> avkjørsel.",
+        "10": "Kjør inn på <STREET_NAMES> og ta <ORDINAL_VALUE> avkjørsel inn på <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "11": "Kjør inn på <STREET_NAMES> og ta <ORDINAL_VALUE> avkjørsel inn på <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>. Fortsett på <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "12": "Kjør inn på <STREET_NAMES> og ta <ORDINAL_VALUE> avkjørsel mot <TOWARD_SIGN>.",
+        "13": "Kjør inn på <STREET_NAMES> og ta avkjørselen inn på <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "14": "Kjør inn på <STREET_NAMES> og ta avkjørselen inn på <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>. Fortsett på <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "15": "Kjør inn på <STREET_NAMES> og ta avkjørselen mot <TOWARD_SIGN>."
+      },
+      "ordinal_values": [
+        "1.",
+        "2.",
+        "3.",
+        "4.",
+        "5.",
+        "6.",
+        "7.",
+        "8.",
+        "9.",
+        "10."
+      ],
+      "empty_street_name_labels": [
+        "gangveien",
+        "sykkelveien",
+        "terrengsykkelløypa",
+        "krysset",
+        "trappene",
+        "broen",
+        "tunellen"
+      ],
+      "example_phrases": {
+        "0": [
+          "Gå inn i rundkjøringen."
+        ],
+        "1": [
+          "Gå inn i rundkjøringen og ta første avkjørsel.",
+          "Gå inn i rundkjøringen og ta andre avkjørsel.",
+          "Gå inn i rundkjøringen og ta 3. avkjørsel.",
+          "Gå inn i rundkjøringen og ta 4. avkjørsel.",
+          "Gå inn i rundkjøringen og ta 5. avkjøring.",
+          "Gå inn i rundkjøringen og ta den 6. avkjøringen.",
+          "Gå inn i rundkjøringen og ta 7. avkjørsel.",
+          "Gå inn i rundkjøringen og ta 8. avkjørsel.",
+          "Gå inn i rundkjøringen og ta 9. avkjørsel.",
+          "Gå inn i rundkjøringen og ta 10. avkjøring."
+        ],
+        "2": [
+          "Gå inn i rundkjøringen og ta 3. avkjørsel inn på Main Street."
+        ],
+        "3": [
+          "Gå inn i rundkjøringen og ta 3. avkjørsel inn på US 322/Main Street. Fortsett på US 322."
+        ],
+        "4": [
+          "Gå inn i rundkjøringen og ta tredje avkjørsel mot Baltimore."
+        ],
+        "5": [
+          "Gå inn i rundkjøringen og ta avkjørselen til Main Street."
+        ],
+        "6": [
+          "Gå inn i rundkjøringen og ta avkjørselen til US 322/Main Street. Fortsett på US 322."
+        ],
+        "7": [
+          "Gå inn i rundkjøringen og ta avkjøringen mot Baltimore."
+        ],
+        "8": [
+          "Gå inn i Dupont Circle."
+        ],
+        "9": [
+          "Gå inn i Dupont Circle og ta første avkjørsel."
+        ],
+        "10": [
+          "Gå inn i Dupont Circle og ta 3. avkjørsel inn på Main Street."
+        ],
+        "11": [
+          "Gå inn i Dupont Circle og ta tredje avkjørsel inn på US 322/Main Street. Fortsett på US 322."
+        ],
+        "12": [
+          "Gå inn i Dupont Circle og ta den tredje avkjørselen mot Baltimore."
+        ],
+        "13": [
+          "Gå inn i Dupont Circle og ta avkjørselen til Main Street."
+        ],
+        "14": [
+          "Gå inn i Dupont Circle og ta avkjørselen til US 322/Main Street. Fortsett på US 322."
+        ],
+        "15": [
+          "Gå inn i Dupont Circle og ta avkjørselen mot Baltimore."
+        ]
+      }
+    },
+    "enter_roundabout_verbal": {
+      "phrases": {
+        "0": "Kjør inn i rundkjøringen.",
+        "1": "Kjør inn i rundkjøringen og ta <ORDINAL_VALUE> avkjørsel.",
+        "2": "Kjør inn i rundkjøringen og ta <ORDINAL_VALUE> avkjørsel inn på <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "3": "Kjør inn i rundkjøringen og ta <ORDINAL_VALUE> avkjørsel inn på <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>.",
+        "4": "Kjør inn i rundkjøringen og ta <ORDINAL_VALUE> avkjørsel mot <TOWARD_SIGN>.",
+        "5": "Kjør inn i rundkjøringen og ta avkjørselen inn på <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "6": "Kjør inn i rundkjøringen og ta avkjørselen inn på <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>.",
+        "7": "Kjør inn i rundkjøringen og ta avkjørselen mot <TOWARD_SIGN>.",
+        "8": "Gå inn på <STREET_NAMES>.",
+        "9": "Gå inn på <STREET_NAMES> og ta <ORDINAL_VALUE> avkjørsel.",
+        "10": "Gå inn på <STREET_NAMES> og ta <ORDINAL_VALUE> avkjørsel inn på <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "11": "Gå inn på <STREET_NAMES> og ta <ORDINAL_VALUE> avkjørsel inn på <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>.",
+        "12": "Gå inn på <STREET_NAMES> og ta <ORDINAL_VALUE> avkjørsel mot <TOWARD_SIGN>.",
+        "13": "Gå inn på <STREET_NAMES> og ta avkjørselen inn på <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "14": "Gå inn på <STREET_NAMES> og ta avkjørselen inn på <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>.",
+        "15": "Gå inn på <STREET_NAMES> og ta avkjørselen mot <TOWARD_SIGN>."
+      },
+      "ordinal_values": [
+        "1.",
+        "2.",
+        "3.",
+        "4.",
+        "5.",
+        "6.",
+        "7.",
+        "8.",
+        "9.",
+        "10."
+      ],
+      "empty_street_name_labels": [
+        "gangveien",
+        "sykkelveien",
+        "terrengsykkelløypa",
+        "krysset",
+        "trappene",
+        "broen",
+        "tunellen"
+      ],
+      "example_phrases": {
+        "0": [
+          "Gå inn i rundkjøringen."
+        ],
+        "1": [
+          "Gå inn i rundkjøringen og ta 1. avkjørsel.",
+          "Gå inn i rundkjøringen og ta 2. avkjørsel.",
+          "Gå inn i rundkjøringen og ta 3. avkjørsel.",
+          "Gå inn i rundkjøringen og ta 4. avkjørsel.",
+          "Gå inn i rundkjøringen og ta 5. avkjørsel.",
+          "Gå inn i rundkjøringen og ta 6. avkjørsel.",
+          "Gå inn i rundkjøringen og ta 7. avkjørsel.",
+          "Gå inn i rundkjøringen og ta 8. avkjørsel.",
+          "Gå inn i rundkjøringen og ta 9. avkjørsel.",
+          "Gå inn i rundkjøringen og ta 10. avkjørsel."
+        ],
+        "2": [
+          "Kjør inn i rundkjøringen og ta 3. avkjørsel inn på Main Street."
+        ],
+        "3": [
+          "Kjør inn i rundkjøringen og ta 3. avkjørsel inn på U.S. 3 22/Main Street."
+        ],
+        "4": [
+          "Kjør inn i rundkjøringen og ta 3. avkjørsel mot Baltimore."
+        ],
+        "5": [
+          "Kjør inn i rundkjøringen og ta avkjørselen inn på Main Street."
+        ],
+        "6": [
+          "Kjør inn i rundkjøringen og ta avkjørselen inn på U.S. 3 22/Main Street."
+        ],
+        "7": [
+          "Kjør inn i rundkjøringen og ta avkjørselen mot Baltimore."
+        ],
+        "8": [
+          "Gå inn i Dupont Circle."
+        ],
+        "9": [
+          "Gå inn i Dupont Circle og ta 1. avkjørsel."
+        ],
+        "10": [
+          "Gå inn i Dupont Circle og ta 3. avkjørsel inn på Main Street."
+        ],
+        "11": [
+          "Gå inn i Dupont Circle og ta 3. avkjørsel inn på U.S. 3 22/Main Street."
+        ],
+        "12": [
+          "Gå inn i Dupont Circle og ta 3. avkjørsel mot Baltimore."
+        ],
+        "13": [
+          "Gå inn i Dupont Circle og ta avkjørselen inn på Main Street."
+        ],
+        "14": [
+          "Gå inn i Dupont Circle og ta avkjørselen inn på U.S. 3 22/Main Street."
+        ],
+        "15": [
+          "Gå inn i Dupont Circle og ta avkjørselen mot Baltimore."
+        ]
+      }
+    },
+    "exit": {
+      "phrases": {
+        "0": "Ta avkjørselen på <RELATIVE_DIRECTION>.",
+        "1": "Ta avkjørsel <NUMBER_SIGN> på <RELATIVE_DIRECTION>.",
+        "2": "Ta <BRANCH_SIGN>-avkjørselen på <RELATIVE_DIRECTION>.",
+        "3": "Ta avkjørsel <NUMBER_SIGN> på <RELATIVE_DIRECTION> ut på <BRANCH_SIGN>.",
+        "4": "Ta avkjørselen på <RELATIVE_DIRECTION> mot <TOWARD_SIGN>.",
+        "5": "Ta avkjørsel <NUMBER_SIGN> på <RELATIVE_DIRECTION> mot <TOWARD_SIGN>.",
+        "6": "Ta <BRANCH_SIGN>-avkjørselen på <RELATIVE_DIRECTION> mot <TOWARD_SIGN>.",
+        "7": "Ta avkjørsel <NUMBER_SIGN> på <RELATIVE_DIRECTION> ut på <BRANCH_SIGN> mot <TOWARD_SIGN>.",
+        "8": "Ta avkjørselen <NAME_SIGN> på <RELATIVE_DIRECTION>.",
+        "10": "Ta <NAME_SIGN>-avkjørselen på <RELATIVE_DIRECTION> ut på <BRANCH_SIGN>.",
+        "12": "Ta avkjørselen <NAME_SIGN> på <RELATIVE_DIRECTION> mot <TOWARD_SIGN>.",
+        "14": "Ta <NAME_SIGN>-avkjørselen på <RELATIVE_DIRECTION> inn på <BRANCH_SIGN> mot <TOWARD_SIGN>.",
+        "15": "Ta avkjørselen.",
+        "16": "Ta avkjøringen <NUMBER_SIGN>.",
+        "17": "Ta avkjørselen <BRANCH_SIGN>.",
+        "18": "Ta avkjørsel <NUMBER_SIGN> ut på <BRANCH_SIGN>.",
+        "19": "Ta avkjørselen mot <TOWARD_SIGN>.",
+        "20": "Ta avkjørsel <NUMBER_SIGN> mot <TOWARD_SIGN>.",
+        "21": "Ta avkjørselen <BRANCH_SIGN> mot <TOWARD_SIGN>.",
+        "22": "Ta avkjørsel <NUMBER_SIGN> ut på <BRANCH_SIGN> mot <TOWARD_SIGN>.",
+        "23": "Ta avkjørselen <NAME_SIGN>.",
+        "25": "Ta <NAME_SIGN>-avkjørselen inn på <BRANCH_SIGN>.",
+        "27": "Ta avkjørselen <NAME_SIGN> mot <TOWARD_SIGN>.",
+        "29": "Ta <NAME_SIGN>-avkjørselen inn på <BRANCH_SIGN> mot <TOWARD_SIGN>."
+      },
+      "relative_directions": [
+        "venstre",
+        "høyre"
+      ],
+      "example_phrases": {
+        "0": [
+          "Ta avkjørselen til venstre.",
+          "Ta avkjørselen til høyre."
+        ],
+        "1": [
+          "Ta avkjørsel 67 B-A til høyre."
+        ],
+        "2": [
+          "Ta avkjørselen til høyre for US 322 West."
+        ],
+        "3": [
+          "Ta avkjørsel 67 B-A til høyre inn på US 322 West."
+        ],
+        "4": [
+          "Ta avkjørselen til høyre mot Lewistown."
+        ],
+        "5": [
+          "Ta avkjørsel 67 B-A til høyre mot Lewistown."
+        ],
+        "6": [
+          "Ta avkjørselen til høyre for US 322 West mot Lewistown."
+        ],
+        "7": [
+          "Ta avkjørsel 67 B-A til høyre inn på US 322 West mot Lewistown/State College."
+        ],
+        "8": [
+          "Ta avkjørselen til venstre for White Marsh Boulevard."
+        ],
+        "10": [
+          "Ta avkjørselen til venstre inn på MD 43 East."
+        ],
+        "12": [
+          "Ta avkjørselen til venstre mot White Marsh."
+        ],
+        "14": [
+          "Ta avkjørselen til venstre inn på MD 43 East mot White Marsh."
+        ],
+        "15": [
+          "Ta avkjørselen."
+        ],
+        "16": [
+          "Ta avkjørsel 67 B-A."
+        ],
+        "17": [
+          "Ta avkjørselen for US 322 West."
+        ],
+        "18": [
+          "Ta avkjørsel 67 B-A inn på US 322 West."
+        ],
+        "19": [
+          "Ta avkjørselen mot Lewistown."
+        ],
+        "20": [
+          "Ta avkjørsel 67 B-A mot Lewistown."
+        ],
+        "21": [
+          "Ta avkjørselen for US 322 West mot Lewistown."
+        ],
+        "22": [
+          "Ta avkjørsel 67 B-A inn på US 322 West mot Lewistown/State College."
+        ],
+        "23": [
+          "Ta avkjørselen for White Marsh Boulevard."
+        ],
+        "25": [
+          "Ta avkjørselen til White Marsh Boulevard og fortsett på MD 43 East."
+        ],
+        "27": [
+          "Ta avkjørselen til White Marsh Boulevard mot White Marsh."
+        ],
+        "29": [
+          "Ta avkjørselen til White Marsh Boulevard inn på MD 43 East mot White Marsh."
+        ]
+      }
+    },
+    "exit_roundabout": {
+      "phrases": {
+        "0": "Gå ut av rundkjøringen.",
+        "1": "Gå ut av rundkjøringen ut på <STREET_NAMES>.",
+        "2": "Gå ut av rundkjøringen ut på <BEGIN_STREET_NAMES>. Fortsett på <STREET_NAMES>.",
+        "3": "Gå ut av rundkjøringen mot <TOWARD_SIGN>."
+      },
+      "empty_street_name_labels": [
+        "gangveien",
+        "sykkelveien",
+        "terrengsykkelløypa",
+        "krysset",
+        "trappene",
+        "broen",
+        "tunellen"
+      ],
+      "example_phrases": {
+        "0": [
+          "Forlat rundkjøringen."
+        ],
+        "1": [
+          "Forlat rundkjøringen inn på Philadelphia Road/MD 7."
+        ],
+        "2": [
+          "Forlat rundkjøringen inn på Catoctin Mountain Highway/US 15. Fortsett på US 15."
+        ],
+        "3": [
+          "Forlat rundkjøringen mot Baltimore."
+        ]
+      }
+    },
+    "exit_roundabout_verbal": {
+      "phrases": {
+        "0": "Gå ut av rundkjøringen.",
+        "1": "Gå ut av rundkjøringen ut på <STREET_NAMES>.",
+        "2": "Gå ut av rundkjøringen ut på <BEGIN_STREET_NAMES>.",
+        "3": "Gå ut av rundkjøringen mot <TOWARD_SIGN>."
+      },
+      "empty_street_name_labels": [
+        "gangveien",
+        "sykkelveien",
+        "terrengsykkelløypa",
+        "krysset",
+        "trappene",
+        "broen",
+        "tunellen"
+      ],
+      "example_phrases": {
+        "0": [
+          "Gå ut av rundkjøringen."
+        ],
+        "1": [
+          "Gå ut av rundkjøringen til Philadelphia Road, Maryland 7."
+        ],
+        "2": [
+          "Gå ut av rundkjøringen på Catoctin Mountain Highway, U.S. 15."
+        ],
+        "3": [
+          "Gå ut av rundkjøringen mot Baltimore."
+        ]
+      }
+    },
+    "exit_verbal": {
+      "phrases": {
+        "0": "Ta avkjørselen på <RELATIVE_DIRECTION>.",
+        "1": "Ta avkjørsel <NUMBER_SIGN> på <RELATIVE_DIRECTION>.",
+        "2": "Ta <BRANCH_SIGN>-avkjørselen på <RELATIVE_DIRECTION>.",
+        "3": "Ta avkjørsel <NUMBER_SIGN> på <RELATIVE_DIRECTION> ut på <BRANCH_SIGN>.",
+        "4": "Ta avkjørselen på <RELATIVE_DIRECTION> mot <TOWARD_SIGN>.",
+        "5": "Ta avkjørsel <NUMBER_SIGN> på <RELATIVE_DIRECTION> mot <TOWARD_SIGN>.",
+        "6": "Ta <BRANCH_SIGN>-avkjørselen på <RELATIVE_DIRECTION> mot <TOWARD_SIGN>.",
+        "7": "Ta avkjørsel <NUMBER_SIGN> på <RELATIVE_DIRECTION> ut på <BRANCH_SIGN> mot <TOWARD_SIGN>.",
+        "8": "Ta avkjørselen <NAME_SIGN> på <RELATIVE_DIRECTION>.",
+        "10": "Ta <NAME_SIGN>-avkjørselen på <RELATIVE_DIRECTION> ut på <BRANCH_SIGN>.",
+        "12": "Ta avkjørselen <NAME_SIGN> på <RELATIVE_DIRECTION> mot <TOWARD_SIGN>.",
+        "14": "Ta <NAME_SIGN>-avkjørselen på <RELATIVE_DIRECTION> inn på <BRANCH_SIGN> mot <TOWARD_SIGN>.",
+        "15": "Ta avkjørselen.",
+        "16": "Ta avkjøringen <NUMBER_SIGN>.",
+        "17": "Ta avkjørselen <BRANCH_SIGN>.",
+        "18": "Ta avkjørsel <NUMBER_SIGN> ut på <BRANCH_SIGN>.",
+        "19": "Ta avkjørselen mot <TOWARD_SIGN>.",
+        "20": "Ta avkjørsel <NUMBER_SIGN> mot <TOWARD_SIGN>.",
+        "21": "Ta avkjørselen <BRANCH_SIGN> mot <TOWARD_SIGN>.",
+        "22": "Ta avkjørsel <NUMBER_SIGN> ut på <BRANCH_SIGN> mot <TOWARD_SIGN>.",
+        "23": "Ta avkjørselen <NAME_SIGN>.",
+        "25": "Ta <NAME_SIGN>-avkjørselen inn på <BRANCH_SIGN>.",
+        "27": "Ta avkjørselen <NAME_SIGN> mot <TOWARD_SIGN>.",
+        "29": "Ta <NAME_SIGN>-avkjørselen inn på <BRANCH_SIGN> mot <TOWARD_SIGN>."
+      },
+      "relative_directions": [
+        "venstre",
+        "høyre"
+      ],
+      "example_phrases": {
+        "0": [
+          "Ta avkjørselen til venstre.",
+          "Ta avkjørselen til høyre."
+        ],
+        "1": [
+          "Ta avkjørsel 67 B-A til høyre."
+        ],
+        "2": [
+          "Ta avkjørselen til U.S. 3 22 West til høyre."
+        ],
+        "3": [
+          "Ta avkjørsel 67 B-A til høyre inn på U.S. 3 22 West."
+        ],
+        "4": [
+          "Ta avkjørselen til høyre mot Lewistown."
+        ],
+        "5": [
+          "Ta avkjørsel 67 B-A til høyre mot Lewistown."
+        ],
+        "6": [
+          "Ta avkjørselen til U.S. 3 22 West til høyre mot Lewistown."
+        ],
+        "7": [
+          "Ta avkjørsel 67 B-A til høyre inn på U.S. 3 22 West mot Lewistown, State College."
+        ],
+        "8": [
+          "Ta avkjørselen til venstre for White Marsh Boulevard."
+        ],
+        "10": [
+          "Ta avkjørselen til venstre for White Marsh Boulevard inn på Maryland 43 East."
+        ],
+        "12": [
+          "Ta avkjørselen til venstre for White Marsh Boulevard mot White Marsh."
+        ],
+        "14": [
+          "Ta avkjørselen til venstre for White Marsh Boulevard inn på Maryland 43 East mot White Marsh."
+        ],
+        "15": [
+          "Ta avkjørselen."
+        ],
+        "16": [
+          "Ta avkjørsel 67 B-A."
+        ],
+        "17": [
+          "Ta avkjørselen for US 322 West."
+        ],
+        "18": [
+          "Ta avkjørsel 67 B-A inn på US 322 West."
+        ],
+        "19": [
+          "Ta avkjørselen mot Lewistown."
+        ],
+        "20": [
+          "Ta avkjørsel 67 B-A mot Lewistown."
+        ],
+        "21": [
+          "Ta avkjørselen for US 322 West mot Lewistown."
+        ],
+        "22": [
+          "Ta avkjørsel 67 B-A inn på US 322 West mot Lewistown/State College."
+        ],
+        "23": [
+          "Ta avkjørselen for White Marsh Boulevard."
+        ],
+        "25": [
+          "Ta avkjørselen for White Marsh Boulevard inn på MD 43 East."
+        ],
+        "27": [
+          "Ta avkjørselen for White Marsh Boulevard mot White Marsh."
+        ],
+        "29": [
+          "Ta avkjørselen for White Marsh Boulevard inn på MD 43 East mot White Marsh."
+        ]
+      }
+    },
+    "exit_visual": {
+      "phrases": {
+        "0": "Avslutt <EXIT_NUMBERS>"
+      },
+      "example_phrases": {
+        "0": [
+          "Avkjørsel 1A"
+        ]
+      }
+    },
+    "keep": {
+      "phrases": {
+        "0": "Hold <RELATIVE_DIRECTION> ved veiskillet.",
+        "1": "Behold <RELATIVE_DIRECTION> for å ta avkjørsel <NUMBER_SIGN>.",
+        "2": "Behold <RELATIVE_DIRECTION> for å ta <STREET_NAMES>.",
+        "3": "Behold <RELATIVE_DIRECTION> for å ta avkjørsel <NUMBER_SIGN> ut på <STREET_NAMES>.",
+        "4": "Hold <RELATIVE_DIRECTION> mot <TOWARD_SIGN>.",
+        "5": "Behold <RELATIVE_DIRECTION> for å ta avkjørsel <NUMBER_SIGN> mot <TOWARD_SIGN>.",
+        "6": "Behold <RELATIVE_DIRECTION> for å ta <STREET_NAMES> mot <TOWARD_SIGN>.",
+        "7": "Behold <RELATIVE_DIRECTION> for å ta avkjørsel <NUMBER_SIGN> inn på <STREET_NAMES> mot <TOWARD_SIGN>."
+      },
+      "empty_street_name_labels": [
+        "gangveien",
+        "sykkelveien",
+        "terrengsykkelstien",
+        "overgangen",
+        "trappene",
+        "broen",
+        "tunellen"
+      ],
+      "relative_directions": [
+        "venstre",
+        "rett",
+        "høyre"
+      ],
+      "example_phrases": {
+        "0": [
+          "Hold til venstre ved veiskillet.",
+          "Hold rett ved veiskillet.",
+          "Hold rett ved veiskillet."
+        ],
+        "1": [
+          "Hold til høyre for å ta avkjørsel 62."
+        ],
+        "2": [
+          "Hold til høyre for å ta I 895 Sør."
+        ],
+        "3": [
+          "Hold til høyre for å ta avkjørsel 62 inn på I 895 South."
+        ],
+        "4": [
+          "Hold til høyre mot Annapolis."
+        ],
+        "5": [
+          "Hold til høyre for å ta avkjørsel 62 mot Annapolis."
+        ],
+        "6": [
+          "Hold til høyre for å ta I 895 Sør mot Annapolis."
+        ],
+        "7": [
+          "Hold til høyre for å ta avkjørsel 62 inn på I 895 South mot Annapolis."
+        ]
+      }
+    },
+    "keep_to_stay_on": {
+      "phrases": {
+        "0": "Hold <RELATIVE_DIRECTION> for å bli på <STREET_NAMES>.",
+        "1": "Hold <RELATIVE_DIRECTION> for å ta avkjørsel <NUMBER_SIGN> for å holde deg på <STREET_NAMES>.",
+        "2": "Hold <RELATIVE_DIRECTION> for å holde deg på <STREET_NAMES> mot <TOWARD_SIGN>.",
+        "3": "Hold <RELATIVE_DIRECTION> for å ta avkjørsel <NUMBER_SIGN> for å holde deg på <STREET_NAMES> mot <TOWARD_SIGN>."
+      },
+      "empty_street_name_labels": [
+        "gangveien",
+        "sykkelveien",
+        "terrengsykkelløypa",
+        "krysset",
+        "trappene",
+        "broen",
+        "tunellen"
+      ],
+      "relative_directions": [
+        "venstre",
+        "rett",
+        "høyre"
+      ],
+      "example_phrases": {
+        "0": [
+          "Hold venstre for å bli på I 95 Sør.",
+          "Hold rett for å bli på I 95 South.",
+          "Hold høyre å bo på I 95 Sør."
+        ],
+        "1": [
+          "Hold til venstre for å ta avkjørsel 62 for å holde deg på I 95 Sør."
+        ],
+        "2": [
+          "Hold til venstre for å holde deg på I 95 South mot Baltimore."
+        ],
+        "3": [
+          "Hold til venstre for å ta avkjørsel 62 for å holde deg på I 95 South mot Baltimore."
+        ]
+      }
+    },
+    "keep_to_stay_on_verbal": {
+      "phrases": {
+        "0": "Hold <RELATIVE_DIRECTION> for å bli på <STREET_NAMES>.",
+        "1": "Hold <RELATIVE_DIRECTION> for å ta avkjørsel <NUMBER_SIGN> for å holde deg på <STREET_NAMES>.",
+        "2": "Hold <RELATIVE_DIRECTION> for å holde deg på <STREET_NAMES> mot <TOWARD_SIGN>.",
+        "3": "Hold <RELATIVE_DIRECTION> for å ta avkjørsel <NUMBER_SIGN> for å holde deg på <STREET_NAMES> mot <TOWARD_SIGN>."
+      },
+      "empty_street_name_labels": [
+        "gangveien",
+        "sykkelveien",
+        "terrengsykkelløypa",
+        "krysset",
+        "trappene",
+        "broen",
+        "tunellen"
+      ],
+      "relative_directions": [
+        "venstre",
+        "rett fram",
+        "høyre"
+      ],
+      "example_phrases": {
+        "0": [
+          "Hold til venstre for å holde deg på Interstate 95 South.",
+          "Hold rett for å holde deg på Interstate 95 South.",
+          "Hold høyre for å bli på Interstate 95 South."
+        ],
+        "1": [
+          "Hold til venstre for å ta avkjørsel 62 for å holde deg på Interstate 95 South."
+        ],
+        "2": [
+          "Hold til venstre for å holde deg på I 95 South mot Baltimore."
+        ],
+        "3": [
+          "Hold til venstre for å ta avkjørsel 62 for å holde deg på Interstate 95 South mot Baltimore."
+        ]
+      }
+    },
+    "keep_verbal": {
+      "phrases": {
+        "0": "Hold <RELATIVE_DIRECTION> ved veiskillet.",
+        "1": "Hold <RELATIVE_DIRECTION> for å ta avkjøringen <NUMBER_SIGN>.",
+        "2": "Hold <RELATIVE_DIRECTION> for å ta <STREET_NAMES>.",
+        "3": "Hold <RELATIVE_DIRECTION> for å ta avkjørsel <NUMBER_SIGN> ut på <STREET_NAMES>.",
+        "4": "Hold <RELATIVE_DIRECTION> mot <TOWARD_SIGN>.",
+        "5": "Hold <RELATIVE_DIRECTION> for å ta avkjørsel <NUMBER_SIGN> mot <TOWARD_SIGN>.",
+        "6": "Hold <RELATIVE_DIRECTION> for å ta <STREET_NAMES> mot <TOWARD_SIGN>.",
+        "7": "Hold <RELATIVE_DIRECTION> for å ta avkjørsel <NUMBER_SIGN> ut på <STREET_NAMES> mot <TOWARD_SIGN>."
+      },
+      "empty_street_name_labels": [
+        "gangveien",
+        "sykkelveien",
+        "terrengsykkelløypa",
+        "krysset",
+        "trappene",
+        "broen",
+        "tunellen"
+      ],
+      "relative_directions": [
+        "venstre",
+        "rett fram",
+        "høyre"
+      ],
+      "example_phrases": {
+        "0": [
+          "Hold til venstre ved forgreningen.",
+          "Fortsett rett fram ved forgreningen.",
+          "Hold til høyre ved forgreningen."
+        ],
+        "1": [
+          "Hold til høyre for å ta avkjøring 62."
+        ],
+        "2": [
+          "Hold til høyre for å ta Interstate 8 95 Sør."
+        ],
+        "3": [
+          "Hold til høyre for å ta avkjøring 62 mot Interstate 8 95 Sør."
+        ],
+        "4": [
+          "Hold til høyre mot Annapolis."
+        ],
+        "5": [
+          "Hold til høyre for å ta avkjøring 62 mot Annapolis."
+        ],
+        "6": [
+          "Hold til høyre for å ta Interstate 8 95 Sør mot Annapolis."
+        ],
+        "7": [
+          "Hold til høyre for å ta avkjøring 62 mot Interstate 8 95 Sør mot Annapolis."
+        ]
+      }
+    },
+    "merge": {
+      "phrases": {
+        "0": "Slå sammen.",
+        "1": "Slå sammen <RELATIVE_DIRECTION>.",
+        "2": "Flett inn på <STREET_NAMES>.",
+        "3": "Slå sammen <RELATIVE_DIRECTION> med <STREET_NAMES>.",
+        "4": "Slå sammen mot <TOWARD_SIGN>.",
+        "5": "Slå sammen <RELATIVE_DIRECTION> mot <TOWARD_SIGN>."
+      },
+      "relative_directions": [
+        "venstre",
+        "høyre"
+      ],
+      "empty_street_name_labels": [
+        "gangveien",
+        "sykkelveien",
+        "terrengsykkelløypa",
+        "krysset",
+        "trappene",
+        "broen",
+        "tunellen"
+      ],
+      "example_phrases": {
+        "0": [
+          "Slå sammen."
+        ],
+        "1": [
+          "Slå sammen venstre."
+        ],
+        "2": [
+          "Slå sammen med I 76 West/Pennsylvania Turnpike."
+        ],
+        "3": [
+          "Slå sammen høyre med I 83 Sør."
+        ],
+        "4": [
+          "Slå sammen mot Baltimore."
+        ],
+        "5": [
+          "Slå sammen høyre mot Baltimore."
+        ]
+      }
+    },
+    "merge_verbal": {
+      "phrases": {
+        "0": "Slå sammen.",
+        "1": "Slå sammen <RELATIVE_DIRECTION>.",
+        "2": "Flett inn på <STREET_NAMES>.",
+        "3": "Slå sammen <RELATIVE_DIRECTION> med <STREET_NAMES>.",
+        "4": "Slå sammen mot <TOWARD_SIGN>.",
+        "5": "Slå sammen <RELATIVE_DIRECTION> mot <TOWARD_SIGN>."
+      },
+      "relative_directions": [
+        "venstre",
+        "høyre"
+      ],
+      "empty_street_name_labels": [
+        "gangveien",
+        "sykkelveien",
+        "terrengsykkelløypa",
+        "krysset",
+        "trappene",
+        "broen",
+        "tunellen"
+      ],
+      "example_phrases": {
+        "0": [
+          "Flett."
+        ],
+        "1": [
+          "Flett venstre."
+        ],
+        "2": [
+          "Flett inn på I 76 West/Pennsylvania Turnpike."
+        ],
+        "3": [
+          "Flett høyre inn på I 83 Sør."
+        ],
+        "4": [
+          "Flett mot Baltimore."
+        ],
+        "5": [
+          "Flett høyre mot Baltimore."
+        ]
+      }
+    },
+    "post_transition_transit_verbal": {
+      "phrases": {
+        "0": "Reis <TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>."
+      },
+      "transit_stop_count_labels": {
+        "one": "Stoppe",
+        "other": "stopper"
+      },
+      "example_phrases": {
+        "0": [
+          "Reis 1 stopp.",
+          "Reis 3 stopp."
+        ]
+      }
+    },
+    "post_transition_verbal": {
+      "phrases": {
+        "0": "Fortsett i <LENGTH>.",
+        "1": "Fortsett på <STREET_NAMES> i <LENGTH>."
+      },
+      "empty_street_name_labels": [
+        "gangveien",
+        "sykkelveien",
+        "terrengsykkelløypa",
+        "krysset",
+        "trappene",
+        "broen",
+        "tunellen"
+      ],
+      "metric_lengths": [
+        "<KILOMETERS> kilometer",
+        "1 kilometer",
+        "<METERS> meter",
+        "mindre enn 10 meter"
+      ],
+      "us_customary_lengths": [
+        "<MILES> miles",
+        "1 mil",
+        "en halv mil",
+        "en kvart mil",
+        "<FEET> fot",
+        "mindre enn 10 fot"
+      ],
+      "example_phrases": {
+        "0": [
+          "Fortsett i 300 fot.",
+          "Fortsett i 9 miles."
+        ],
+        "1": [
+          "Fortsett på Pennsylvania 7 43 i 6,2 miles.",
+          "Fortsett på Main Street, Vermont 30 i 1 tiendedel av en mil."
+        ]
+      }
+    },
+    "ramp": {
+      "phrases": {
+        "0": "Ta rampen på <RELATIVE_DIRECTION>.",
+        "1": "Ta <BRANCH_SIGN>-rampen på <RELATIVE_DIRECTION>.",
+        "2": "Ta rampen på <RELATIVE_DIRECTION> mot <TOWARD_SIGN>.",
+        "3": "Ta <BRANCH_SIGN>-rampen på <RELATIVE_DIRECTION> mot <TOWARD_SIGN>.",
+        "4": "Ta <NAME_SIGN>-rampen på <RELATIVE_DIRECTION>.",
+        "5": "Sving <RELATIVE_DIRECTION> for å ta rampen.",
+        "6": "Sving <RELATIVE_DIRECTION> for å ta <BRANCH_SIGN>-rampen.",
+        "7": "Sving <RELATIVE_DIRECTION> for å ta rampen mot <TOWARD_SIGN>.",
+        "8": "Sving <RELATIVE_DIRECTION> for å ta <BRANCH_SIGN>-rampen mot <TOWARD_SIGN>.",
+        "9": "Sving <RELATIVE_DIRECTION> for å ta <NAME_SIGN>-rampen.",
+        "10": "Ta rampen.",
+        "11": "Ta <BRANCH_SIGN>-rampen.",
+        "12": "Ta rampen mot <TOWARD_SIGN>.",
+        "13": "Ta <BRANCH_SIGN>-rampen mot <TOWARD_SIGN>.",
+        "14": "Ta <NAME_SIGN>-rampen."
+      },
+      "relative_directions": [
+        "venstre",
+        "høyre"
+      ],
+      "example_phrases": {
+        "0": [
+          "Ta avkjørselen på venstre.",
+          "Ta avkjørselen på høyre."
+        ],
+        "1": [
+          "Ta I 95-avkjørselen på høyre."
+        ],
+        "2": [
+          "Ta avkjørselen på venstre mot JFK."
+        ],
+        "3": [
+          "Ta South Conduit Avenue-avkjørselen på venstre mot JFK."
+        ],
+        "4": [
+          "Ta Gettysburg Pike-avkjørselen på høyre."
+        ],
+        "5": [
+          "Sving venstre for å ta avkjørselen.",
+          "Sving høyre for å ta avkjørselen."
+        ],
+        "6": [
+          "Sving venstre for å ta PA 283 West-avkjørselen."
+        ],
+        "7": [
+          "Sving venstre for å ta avkjørselen mot Harrisburg/Harrisburg International Airport."
+        ],
+        "8": [
+          "Sving venstre for å ta PA 283 West-avkjørselen mot Harrisburg/Harrisburg International Airport."
+        ],
+        "9": [
+          "Sving høyre for å ta Gettysburg Pike-avkjørselen."
+        ],
+        "10": [
+          "Ta avkjørselen."
+        ],
+        "11": [
+          "Ta I 95-avkjørselen."
+        ],
+        "12": [
+          "Ta avkjørselen mot JFK."
+        ],
+        "13": [
+          "Ta South Conduit Avenue-avkjørselen mot JFK."
+        ],
+        "14": [
+          "Ta Gettysburg-avkjørselen."
+        ]
+      }
+    },
+    "ramp_straight": {
+      "phrases": {
+        "0": "Hold deg rett for å ta rampen.",
+        "1": "Hold deg rett for å ta <BRANCH_SIGN>-rampen.",
+        "2": "Hold deg rett for å ta rampen mot <TOWARD_SIGN>.",
+        "3": "Hold deg rett for å ta <BRANCH_SIGN>-rampen mot <TOWARD_SIGN>.",
+        "4": "Hold deg rett for å ta <NAME_SIGN>-rampen."
+      },
+      "example_phrases": {
+        "0": [
+          "Hold deg rett for å ta rampen."
+        ],
+        "1": [
+          "Hold deg rett for å ta US 322 East-rampen."
+        ],
+        "2": [
+          "Hold deg rett for å ta rampen mot Hershey."
+        ],
+        "3": [
+          "Hold deg rett for å ta US 322 East/US 422 East/US 522 East/US 622 East rampen mot Hershey/Palmdale/Palmyra/Campbelltown."
+        ],
+        "4": [
+          "Hold deg rett for å ta Gettysburg Pike-rampen."
+        ]
+      }
+    },
+    "ramp_straight_verbal": {
+      "phrases": {
+        "0": "Hold deg rett for å ta rampen.",
+        "1": "Hold deg rett for å ta <BRANCH_SIGN>-rampen.",
+        "2": "Hold deg rett for å ta rampen mot <TOWARD_SIGN>.",
+        "3": "Hold deg rett for å ta <BRANCH_SIGN>-rampen mot <TOWARD_SIGN>.",
+        "4": "Hold deg rett for å ta <NAME_SIGN>-rampen."
+      },
+      "example_phrases": {
+        "0": [
+          "Hold deg rett for å ta rampen."
+        ],
+        "1": [
+          "Hold deg rett for å ta US 3 22 East-rampen."
+        ],
+        "2": [
+          "Hold deg rett for å ta rampen mot Hershey."
+        ],
+        "3": [
+          "Hold deg rett for å ta rampen U.S. 3 22 East, U.S. 4 22 East mot Hershey, Palmdale."
+        ],
+        "4": [
+          "Hold deg rett for å ta Gettysburg Pike-rampen."
+        ]
+      }
+    },
+    "ramp_verbal": {
+      "phrases": {
+        "0": "Ta rampen på <RELATIVE_DIRECTION>.",
+        "1": "Ta <BRANCH_SIGN>-rampen på <RELATIVE_DIRECTION>.",
+        "2": "Ta rampen på <RELATIVE_DIRECTION> mot <TOWARD_SIGN>.",
+        "3": "Ta <BRANCH_SIGN>-rampen på <RELATIVE_DIRECTION> mot <TOWARD_SIGN>.",
+        "4": "Ta <NAME_SIGN>-rampen på <RELATIVE_DIRECTION>.",
+        "5": "Sving <RELATIVE_DIRECTION> for å ta rampen.",
+        "6": "Sving <RELATIVE_DIRECTION> for å ta <BRANCH_SIGN>-rampen.",
+        "7": "Sving <RELATIVE_DIRECTION> for å ta rampen mot <TOWARD_SIGN>.",
+        "8": "Sving <RELATIVE_DIRECTION> for å ta <BRANCH_SIGN>-rampen mot <TOWARD_SIGN>.",
+        "9": "Sving <RELATIVE_DIRECTION> for å ta <NAME_SIGN>-rampen.",
+        "10": "Ta rampen.",
+        "11": "Ta <BRANCH_SIGN>-rampen.",
+        "12": "Ta rampen mot <TOWARD_SIGN>.",
+        "13": "Ta <BRANCH_SIGN>-rampen mot <TOWARD_SIGN>.",
+        "14": "Ta <NAME_SIGN>-rampen."
+      },
+      "relative_directions": [
+        "venstre",
+        "høyre"
+      ],
+      "example_phrases": {
+        "0": [
+          "Ta avkjørselen til venstre.",
+          "Ta avkjørselen til høyre."
+        ],
+        "1": [
+          "Ta Interstate 95-avkjørselen til høyre."
+        ],
+        "2": [
+          "Ta avkjørselen til venstre mot JFK."
+        ],
+        "3": [
+          "Ta South Conduit Avenue-avkjørselen til venstre mot JFK."
+        ],
+        "4": [
+          "Ta Gettysburg Pike-avkjørselen til høyre."
+        ],
+        "5": [
+          "Sving til venstre for å ta avkjørselen.",
+          "Sving til høyre for å ta avkjørselen."
+        ],
+        "6": [
+          "Sving til venstre for å ta Pennsylvania 2 83 Vest-avkjørselen."
+        ],
+        "7": [
+          "Sving til venstre for å ta avkjørselen mot Harrisburg/Harrisburg International Airport."
+        ],
+        "8": [
+          "Sving til venstre for å ta Pennsylvania 2 83 Vest-avkjørselen mot Harrisburg, Harrisburg International Airport."
+        ],
+        "9": [
+          "Sving til høyre for å ta Gettysburg Pike-avkjørselen."
+        ],
+        "10": [
+          "Ta avkjørselen."
+        ],
+        "11": [
+          "Ta Interstate 95-avkjørselen."
+        ],
+        "12": [
+          "Ta avkjørselen mot JFK."
+        ],
+        "13": [
+          "Ta South Conduit Avenue-avkjørselen mot JFK."
+        ],
+        "14": [
+          "Ta Gettysburg Pike-avkjørselen."
+        ]
+      }
+    },
+    "sharp": {
+      "phrases": {
+        "0": "Lag en skarp <RELATIVE_DIRECTION>.",
+        "1": "Ta en skarp <RELATIVE_DIRECTION> inn på <STREET_NAMES>.",
+        "2": "Ta en skarp <RELATIVE_DIRECTION> inn på <BEGIN_STREET_NAMES>. Fortsett på <STREET_NAMES>.",
+        "3": "Ta en skarp <RELATIVE_DIRECTION> for å holde deg på <STREET_NAMES>.",
+        "4": "Ta en skarp <RELATIVE_DIRECTION> ved <JUNCTION_NAME>.",
+        "5": "Ta en skarp <RELATIVE_DIRECTION> mot <TOWARD_SIGN>."
+      },
+      "empty_street_name_labels": [
+        "gangveien",
+        "sykkelveien",
+        "terrengsykkelløypa",
+        "krysset",
+        "trappene",
+        "broen",
+        "tunellen"
+      ],
+      "relative_directions": [
+        "venstre",
+        "høyre"
+      ],
+      "example_phrases": {
+        "0": [
+          "Gjør en skarp venstresving."
+        ],
+        "1": [
+          "Gjør en skarp høyresving inn på Flatbush Avenue."
+        ],
+        "2": [
+          "Gjør en skarp venstresving inn på North Bond Street/US 1 Business/MD 924. Fortsett på MD 924."
+        ],
+        "3": [
+          "Gjør en skarp høyresving for å forbli på Sunstone Drive."
+        ],
+        "4": [
+          "Gjør en skarp høyresving ved Mannenbashi Øst."
+        ],
+        "5": [
+          "Gjør en skarp venstresving mot Baltimore."
+        ]
+      }
+    },
+    "sharp_verbal": {
+      "phrases": {
+        "0": "Gjør en skarp <RELATIVE_DIRECTION>.",
+        "1": "Gjør en skarp <RELATIVE_DIRECTION> inn på <STREET_NAMES>.",
+        "2": "Gjør en skarp <RELATIVE_DIRECTION> inn på <BEGIN_STREET_NAMES>.",
+        "3": "Gjør en skarp <RELATIVE_DIRECTION> for å forbli på <STREET_NAMES>.",
+        "4": "Gjør en skarp <RELATIVE_DIRECTION> ved <JUNCTION_NAME>.",
+        "5": "Gjør en skarp <RELATIVE_DIRECTION> mot <TOWARD_SIGN>."
+      },
+      "empty_street_name_labels": [
+        "gangveien",
+        "sykkelveien",
+        "terrengsykkelløypa",
+        "krysset",
+        "trappene",
+        "broen",
+        "tunellen"
+      ],
+      "relative_directions": [
+        "venstre",
+        "høyre"
+      ],
+      "example_phrases": {
+        "0": [
+          "Gjør en skarp venstresving."
+        ],
+        "1": [
+          "Gjør en skarp høyresving inn på Flatbush Avenue."
+        ],
+        "2": [
+          "Gjør en skarp venstresving inn på North Bond Street, U.S. 1 Business."
+        ],
+        "3": [
+          "Gjør en skarp høyresving for å forbli på Sunstone Drive."
+        ],
+        "4": [
+          "Gjør en skarp høyresving ved Mannenbashi Øst."
+        ],
+        "5": [
+          "Gjør en skarp venstresving mot Baltimore."
+        ]
+      }
+    },
+    "start": {
+      "phrases": {
+        "0": "Gå til <CARDINAL_DIRECTION>.",
+        "1": "Gå <CARDINAL_DIRECTION> på <STREET_NAMES>.",
+        "2": "Gå <CARDINAL_DIRECTION> på <BEGIN_STREET_NAMES>. Fortsett på <STREET_NAMES>.",
+        "4": "Kjør <CARDINAL_DIRECTION>.",
+        "5": "Kjør <CARDINAL_DIRECTION> på <STREET_NAMES>.",
+        "6": "Kjør <CARDINAL_DIRECTION> på <BEGIN_STREET_NAMES>. Fortsett på <STREET_NAMES>.",
+        "8": "Gå <CARDINAL_DIRECTION>.",
+        "9": "Gå <CARDINAL_DIRECTION> på <STREET_NAMES>.",
+        "10": "Gå <CARDINAL_DIRECTION> på <BEGIN_STREET_NAMES>. Fortsett på <STREET_NAMES>.",
+        "16": "Sykkel <CARDINAL_DIRECTION>.",
+        "17": "Sykle <CARDINAL_DIRECTION> på <STREET_NAMES>.",
+        "18": "Sykle <CARDINAL_DIRECTION> på <BEGIN_STREET_NAMES>. Fortsett på <STREET_NAMES>."
+      },
+      "cardinal_directions": [
+        "Nord",
+        "nordøst",
+        "øst",
+        "sørøst",
+        "sør",
+        "sørvest",
+        "vest",
+        "nordvest"
+      ],
+      "empty_street_name_labels": [
+        "gangveien",
+        "sykkelveien",
+        "terrengsykkelløypa",
+        "krysset",
+        "trappene",
+        "broen",
+        "tunellen"
+      ],
+      "example_phrases": {
+        "0": [
+          "Gå østover.",
+          "Gå nordover."
+        ],
+        "1": [
+          "Gå sørvestover på 5th Avenue.",
+          "Gå vestover på gangveien",
+          "Gå østover på sykkelveien",
+          "Gå nordover på terrengsykkelstien"
+        ],
+        "2": [
+          "Gå sørover på North Prince Street/US 222/PA 272. Fortsett på US 222/PA 272."
+        ],
+        "4": [
+          "Kjør østover.",
+          "Kjør nordover."
+        ],
+        "5": [
+          "Kjør sørvestover på 5th Avenue."
+        ],
+        "6": [
+          "Kjør sørover på North Prince Street/US 222/PA 272. Fortsett på US 222/PA 272."
+        ],
+        "8": [
+          "Gå østover.",
+          "Gå nordover."
+        ],
+        "9": [
+          "Gå sørvestover på 5th Avenue.",
+          "Gå vestover på gangveien"
+        ],
+        "10": [
+          "Gå sørover på North Prince Street/US 222/PA 272. Fortsett på US 222/PA 272."
+        ],
+        "16": [
+          "Sykle østover.",
+          "Sykle nordover."
+        ],
+        "17": [
+          "Sykle sørvestover på 5th Avenue.",
+          "Sykle østover på sykkelveien",
+          "Sykle nordover på terrengsykkelstien"
+        ],
+        "18": [
+          "Sykle sørover på North Prince Street/US 222/PA 272. Fortsett på US 222/PA 272."
+        ]
+      }
+    },
+    "start_verbal": {
+      "phrases": {
+        "0": "Gå til <CARDINAL_DIRECTION>.",
+        "1": "Hold <CARDINAL_DIRECTION> i <LENGTH>.",
+        "2": "Gå <CARDINAL_DIRECTION> på <STREET_NAMES>.",
+        "3": "Kjør <CARDINAL_DIRECTION> på <STREET_NAMES> i <LENGTH>.",
+        "4": "Gå <CARDINAL_DIRECTION> på <BEGIN_STREET_NAMES>.",
+        "5": "Kjør <CARDINAL_DIRECTION>.",
+        "6": "Kjør <CARDINAL_DIRECTION> i <LENGTH>.",
+        "7": "Kjør <CARDINAL_DIRECTION> på <STREET_NAMES>.",
+        "8": "Kjør <CARDINAL_DIRECTION> på <STREET_NAMES> i <LENGTH>.",
+        "9": "Kjør <CARDINAL_DIRECTION> på <BEGIN_STREET_NAMES>.",
+        "10": "Gå <CARDINAL_DIRECTION>.",
+        "11": "Gå <CARDINAL_DIRECTION> i <LENGTH>.",
+        "12": "Gå <CARDINAL_DIRECTION> på <STREET_NAMES>.",
+        "13": "Gå <CARDINAL_DIRECTION> på <STREET_NAMES> i <LENGTH>.",
+        "14": "Gå <CARDINAL_DIRECTION> på <BEGIN_STREET_NAMES>.",
+        "15": "Sykkel <CARDINAL_DIRECTION>.",
+        "16": "Sykkel <CARDINAL_DIRECTION> i <LENGTH>.",
+        "17": "Sykle <CARDINAL_DIRECTION> på <STREET_NAMES>.",
+        "18": "Sykle <CARDINAL_DIRECTION> på <STREET_NAMES> i <LENGTH>.",
+        "19": "Sykle <CARDINAL_DIRECTION> på <BEGIN_STREET_NAMES>."
+      },
+      "cardinal_directions": [
+        "Nord",
+        "nordøst",
+        "øst",
+        "sørøst",
+        "sør",
+        "sørvest",
+        "vest",
+        "nordvest"
+      ],
+      "empty_street_name_labels": [
+        "gangveien",
+        "sykkelveien",
+        "terrengsykkelløypa",
+        "krysset",
+        "trappene",
+        "broen",
+        "tunellen"
+      ],
+      "metric_lengths": [
+        "<KILOMETERS> kilometer",
+        "1 kilometer",
+        "<METERS> meter",
+        "mindre enn 10 meter"
+      ],
+      "us_customary_lengths": [
+        "<MILES> miles",
+        "1 mil",
+        "en halv mil",
+        "en kvart mil",
+        "<FEET> fot",
+        "mindre enn 10 fot"
+      ],
+      "example_phrases": {
+        "0": [
+          "Gå østover.",
+          "Gå nordover."
+        ],
+        "1": [
+          "Gå østover en halv mil.",
+          "Gå nordover i 1 kilometer."
+        ],
+        "2": [
+          "Gå sørvestover på 5th Avenue."
+        ],
+        "3": [
+          "Gå sørvestover på 5th Avenue i en tiendedel av en mil."
+        ],
+        "4": [
+          "Gå sørover på North Prince Street, U.S.A. 2 22."
+        ],
+        "5": [
+          "Kjør østover.",
+          "Kjør nordover."
+        ],
+        "6": [
+          "Kjør østover en halv mil.",
+          "Kjør nordover i 1 kilometer."
+        ],
+        "7": [
+          "Kjør sørvestover på 5th Avenue."
+        ],
+        "8": [
+          "Kjør sørvestover på 5th Avenue i 1 tiendedel av en mil."
+        ],
+        "9": [
+          "Kjør sørover på North Prince Street, U.S.A. 2 22."
+        ],
+        "10": [
+          "Gå østover.",
+          "Gå nordover."
+        ],
+        "11": [
+          "Gå østover en halv mil.",
+          "Gå nordover i 1 kilometer."
+        ],
+        "12": [
+          "Gå sørvestover på 5th Avenue."
+        ],
+        "13": [
+          "Gå sørvestover på 5th Avenue i en tiendedel av en mil."
+        ],
+        "14": [
+          "Gå sørover på North Prince Street, USA 2 22."
+        ],
+        "15": [
+          "Sykle østover.",
+          "Sykle nordover."
+        ],
+        "16": [
+          "Sykle østover en halv mil.",
+          "Sykle nordover i 1 kilometer."
+        ],
+        "17": [
+          "Sykle sørvestover på 5th Avenue."
+        ],
+        "18": [
+          "Sykle sørvestover på 5th Avenue i 1 tiendedel av en mil."
+        ],
+        "19": [
+          "Sykle sørover på North Prince Street, USA 2 22."
+        ]
+      }
+    },
+    "transit": {
+      "phrases": {
+        "0": "Ta <TRANSIT_NAME>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)",
+        "1": "Ta <TRANSIT_NAME> mot <TRANSIT_HEADSIGN>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)"
+      },
+      "empty_transit_name_labels": [
+        "trikk",
+        "metro",
+        "tog",
+        "buss",
+        "ferje",
+        "taubane",
+        "gondol",
+        "taubane"
+      ],
+      "transit_stop_count_labels": {
+        "one": "Stoppe",
+        "other": "stopper"
+      },
+      "example_phrases": {
+        "0": [
+          "Ta New Haven. (1 stopp)",
+          "Ta metroen. (2 stopp)",
+          "Ta bussen. (12 stopp)"
+        ],
+        "1": [
+          "Ta F mot JAMAICA - 179 ST. (10 stopp)",
+          "Ta fergen mot Staten Island. (1 stopp)"
+        ]
+      }
+    },
+    "transit_connection_destination": {
+      "phrases": {
+        "0": "Gå ut av stasjonen.",
+        "1": "Gå ut av <TRANSIT_STOP>.",
+        "2": "Gå ut av <TRANSIT_STOP> <STATION_LABEL>."
+      },
+      "station_label": "Stasjon",
+      "example_phrases": {
+        "0": [
+          "Gå ut av stasjonen."
+        ],
+        "1": [
+          "Gå ut av Embarcadero stasjon."
+        ],
+        "2": [
+          "Gå ut av 8 St - NYU Station."
+        ]
+      }
+    },
+    "transit_connection_destination_verbal": {
+      "phrases": {
+        "0": "Gå ut av stasjonen.",
+        "1": "Gå ut av <TRANSIT_STOP>.",
+        "2": "Gå ut av <TRANSIT_STOP> <STATION_LABEL>."
+      },
+      "station_label": "Stasjon",
+      "example_phrases": {
+        "0": [
+          "Gå ut av stasjonen."
+        ],
+        "1": [
+          "Gå ut av Embarcadero stasjon."
+        ],
+        "2": [
+          "Gå ut av 8 St - NYU Station."
+        ]
+      }
+    },
+    "transit_connection_start": {
+      "phrases": {
+        "0": "Gå inn på stasjonen.",
+        "1": "Skriv inn <TRANSIT_STOP>.",
+        "2": "Skriv inn <TRANSIT_STOP> <STATION_LABEL>."
+      },
+      "station_label": "Stasjon",
+      "example_phrases": {
+        "0": [
+          "Gå inn på stasjonen."
+        ],
+        "1": [
+          "Gå inn på Embarcadero-stasjonen."
+        ],
+        "2": [
+          "Gå inn på 8 St - NYU Station."
+        ]
+      }
+    },
+    "transit_connection_start_verbal": {
+      "phrases": {
+        "0": "Gå inn på stasjonen.",
+        "1": "Skriv inn <TRANSIT_STOP>.",
+        "2": "Skriv inn <TRANSIT_STOP> <STATION_LABEL>."
+      },
+      "station_label": "Stasjon",
+      "example_phrases": {
+        "0": [
+          "Gå inn på stasjonen."
+        ],
+        "1": [
+          "Gå inn på Embarcadero-stasjonen."
+        ],
+        "2": [
+          "Gå inn på 8 St - NYU Station."
+        ]
+      }
+    },
+    "transit_connection_transfer": {
+      "phrases": {
+        "0": "Bytt ved stasjonen.",
+        "1": "Bytt ved <TRANSIT_STOP>.",
+        "2": "Bytt ved <TRANSIT_STOP> <STATION_LABEL>."
+      },
+      "station_label": "Stasjon",
+      "example_phrases": {
+        "0": [
+          "Bytt ved stasjonen."
+        ],
+        "1": [
+          "Bytt ved Embarcadero-stasjonen."
+        ],
+        "2": [
+          "Bytt ved 8 St - NYU-stasjonen."
+        ]
+      }
+    },
+    "transit_connection_transfer_verbal": {
+      "phrases": {
+        "0": "Bytt ved stasjonen.",
+        "1": "Bytt ved <TRANSIT_STOP>.",
+        "2": "Bytt ved <TRANSIT_STOP> <STATION_LABEL>."
+      },
+      "station_label": "Stasjon",
+      "example_phrases": {
+        "0": [
+          "Bytt ved stasjonen."
+        ],
+        "1": [
+          "Bytt ved Embarcadero-stasjonen."
+        ],
+        "2": [
+          "Bytt ved 8 St - NYU-stasjonen."
+        ]
+      }
+    },
+    "transit_remain_on": {
+      "phrases": {
+        "0": "Forbli på <TRANSIT_NAME>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)",
+        "1": "Forbli på <TRANSIT_NAME> mot <TRANSIT_HEADSIGN>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)"
+      },
+      "empty_transit_name_labels": [
+        "trikk",
+        "metro",
+        "tog",
+        "buss",
+        "ferje",
+        "taubane",
+        "gondol",
+        "taubane"
+      ],
+      "transit_stop_count_labels": {
+        "one": "Stoppe",
+        "other": "stopper"
+      },
+      "example_phrases": {
+        "0": [
+          "Forbli på New Haven. (1 stopp)",
+          "Bli på toget. (3 stopp)"
+        ],
+        "1": [
+          "Hold deg på F mot JAMAICA - 179 ST. (10 stopp)"
+        ]
+      }
+    },
+    "transit_remain_on_verbal": {
+      "phrases": {
+        "0": "Forbli på <TRANSIT_NAME>.",
+        "1": "Forbli på <TRANSIT_NAME> mot <TRANSIT_HEADSIGN>."
+      },
+      "empty_transit_name_labels": [
+        "trikk",
+        "metro",
+        "tog",
+        "buss",
+        "ferje",
+        "taubane",
+        "gondol",
+        "taubane"
+      ],
+      "example_phrases": {
+        "0": [
+          "Forbli på New Haven."
+        ],
+        "1": [
+          "Hold deg på F mot JAMAICA - 179 ST."
+        ]
+      }
+    },
+    "transit_transfer": {
+      "phrases": {
+        "0": "Bytt for å ta <TRANSIT_NAME>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)",
+        "1": "Bytt for å ta <TRANSIT_NAME> mot <TRANSIT_HEADSIGN>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)"
+      },
+      "empty_transit_name_labels": [
+        "trikk",
+        "metro",
+        "tog",
+        "buss",
+        "ferje",
+        "taubane",
+        "gondol",
+        "taubane"
+      ],
+      "transit_stop_count_labels": {
+        "one": "Stoppe",
+        "other": "stopper"
+      },
+      "example_phrases": {
+        "0": [
+          "Bytt for å ta New Haven. (1 stopp)",
+          "Bytt for å ta trikken. (4 stopper)"
+        ],
+        "1": [
+          "Bytt for å ta F mot JAMAICA - 179 ST. (10 stopper)"
+        ]
+      }
+    },
+    "transit_transfer_verbal": {
+      "phrases": {
+        "0": "Bytt for å ta <TRANSIT_NAME>.",
+        "1": "Bytt for å ta <TRANSIT_NAME> mot <TRANSIT_HEADSIGN>."
+      },
+      "empty_transit_name_labels": [
+        "trikk",
+        "metro",
+        "tog",
+        "buss",
+        "ferje",
+        "taubane",
+        "gondol",
+        "taubane"
+      ],
+      "example_phrases": {
+        "0": [
+          "Bytt for å ta New Haven."
+        ],
+        "1": [
+          "Bytt for å ta F mot JAMAICA - 179 ST."
+        ]
+      }
+    },
+    "transit_verbal": {
+      "phrases": {
+        "0": "Ta <TRANSIT_NAME>.",
+        "1": "Ta <TRANSIT_NAME> mot <TRANSIT_HEADSIGN>."
+      },
+      "empty_transit_name_labels": [
+        "trikk",
+        "metro",
+        "tog",
+        "buss",
+        "ferje",
+        "taubane",
+        "gondol",
+        "taubane"
+      ],
+      "example_phrases": {
+        "0": [
+          "Ta New Haven."
+        ],
+        "1": [
+          "Ta F mot JAMAICA - 179 ST."
+        ]
+      }
+    },
+    "turn": {
+      "phrases": {
+        "0": "Snu <RELATIVE_DIRECTION>.",
+        "1": "Sving <RELATIVE_DIRECTION> inn på <STREET_NAMES>.",
+        "2": "Sving <RELATIVE_DIRECTION> inn på <BEGIN_STREET_NAMES>. Fortsett på <STREET_NAMES>.",
+        "3": "Sving <RELATIVE_DIRECTION> for å holde deg på <STREET_NAMES>.",
+        "4": "Sving til <RELATIVE_DIRECTION> ved <JUNCTION_NAME>.",
+        "5": "Sving <RELATIVE_DIRECTION> mot <TOWARD_SIGN>."
+      },
+      "empty_street_name_labels": [
+        "gangveien",
+        "sykkelveien",
+        "terrengsykkelløypa",
+        "krysset",
+        "trappene",
+        "broen",
+        "tunellen"
+      ],
+      "relative_directions": [
+        "venstre",
+        "høyre"
+      ],
+      "example_phrases": {
+        "0": [
+          "Snu til venstre."
+        ],
+        "1": [
+          "Snu til høyre på Flatbush Avenue."
+        ],
+        "2": [
+          "Snu til venstre på North Bond Street/US 1 Business/MD 924. Fortsett på MD 924."
+        ],
+        "3": [
+          "Snu til høyre for å bli på Sunstone Drive."
+        ],
+        "4": [
+          "Snu til høyre ved Mannenbashi Øst."
+        ],
+        "5": [
+          "Snu til venstre mot Baltimore."
+        ]
+      }
+    },
+    "turn_verbal": {
+      "phrases": {
+        "0": "Snu <RELATIVE_DIRECTION>.",
+        "1": "Sving <RELATIVE_DIRECTION> inn på <STREET_NAMES>.",
+        "2": "Sving <RELATIVE_DIRECTION> inn på <BEGIN_STREET_NAMES>.",
+        "3": "Sving <RELATIVE_DIRECTION> for å holde deg på <STREET_NAMES>.",
+        "4": "Sving til <RELATIVE_DIRECTION> ved <JUNCTION_NAME>.",
+        "5": "Sving <RELATIVE_DIRECTION> mot <TOWARD_SIGN>."
+      },
+      "empty_street_name_labels": [
+        "gangveien",
+        "sykkelveien",
+        "terrengsykkelløypa",
+        "krysset",
+        "trappene",
+        "broen",
+        "tunellen"
+      ],
+      "relative_directions": [
+        "venstre",
+        "høyre"
+      ],
+      "example_phrases": {
+        "0": [
+          "Snu til venstre."
+        ],
+        "1": [
+          "Snu til høyre på Flatbush Avenue."
+        ],
+        "2": [
+          "Snu til venstre på North Bond Street, U.S. 1 Business."
+        ],
+        "3": [
+          "Snu til høyre for å bli på Sunstone Drive."
+        ],
+        "4": [
+          "Snu til høyre ved Mannenbashi Øst."
+        ],
+        "5": [
+          "Snu til venstre mot Baltimore."
+        ]
+      }
+    },
+    "uturn": {
+      "phrases": {
+        "0": "Gjør en <RELATIVE_DIRECTION> U-sving.",
+        "1": "Ta en <RELATIVE_DIRECTION> U-sving inn på <STREET_NAMES>.",
+        "2": "Ta en <RELATIVE_DIRECTION> U-sving for å holde deg på <STREET_NAMES>.",
+        "3": "Ta en <RELATIVE_DIRECTION> U-sving ved <CROSS_STREET_NAMES>.",
+        "4": "Ta en <RELATIVE_DIRECTION> U-sving ved <CROSS_STREET_NAMES> inn på <STREET_NAMES>.",
+        "5": "Ta en <RELATIVE_DIRECTION> U-sving ved <CROSS_STREET_NAMES> for å holde deg på <STREET_NAMES>.",
+        "6": "Ta en <RELATIVE_DIRECTION> U-sving ved <JUNCTION_NAME>.",
+        "7": "Gjør en <RELATIVE_DIRECTION> U-sving mot <TOWARD_SIGN>."
+      },
+      "empty_street_name_labels": [
+        "gangveien",
+        "sykkelveien",
+        "terrengsykkelløypa",
+        "krysset",
+        "trappene",
+        "broen",
+        "tunellen"
+      ],
+      "relative_directions": [
+        "venstre",
+        "høyre"
+      ],
+      "example_phrases": {
+        "0": [
+          "Gjør en venstre U-sving."
+        ],
+        "1": [
+          "Gjør en høyre U-sving på Bunker Hill Road."
+        ],
+        "2": [
+          "Gjør en venstre U-sving for å bli på Bunker Hill Road."
+        ],
+        "3": [
+          "Gjør en venstre U-sving ved Devonshire Road."
+        ],
+        "4": [
+          "Gjør en venstre U-sving ved Devonshire Road inn på Jonestown Road/US 22."
+        ],
+        "5": [
+          "Gjør en venstre U-sving ved Devonshire Road for å bli på Jonestown Road/US 22."
+        ],
+        "6": [
+          "Gjør en høyre U-sving ved Mannenbashi Øst."
+        ],
+        "7": [
+          "Gjør en venstre U-sving mot Baltimore."
+        ]
+      }
+    },
+    "uturn_verbal": {
+      "phrases": {
+        "0": "Gjør en <RELATIVE_DIRECTION> U-sving.",
+        "1": "Ta en <RELATIVE_DIRECTION> U-sving inn på <STREET_NAMES>.",
+        "2": "Ta en <RELATIVE_DIRECTION> U-sving for å holde deg på <STREET_NAMES>.",
+        "3": "Ta en <RELATIVE_DIRECTION> U-sving ved <CROSS_STREET_NAMES>.",
+        "4": "Ta en <RELATIVE_DIRECTION> U-sving ved <CROSS_STREET_NAMES> inn på <STREET_NAMES>.",
+        "5": "Ta en <RELATIVE_DIRECTION> U-sving ved <CROSS_STREET_NAMES> for å holde deg på <STREET_NAMES>.",
+        "6": "Ta en <RELATIVE_DIRECTION> U-sving ved <JUNCTION_NAME>.",
+        "7": "Gjør en <RELATIVE_DIRECTION> U-sving mot <TOWARD_SIGN>."
+      },
+      "empty_street_name_labels": [
+        "gangveien",
+        "sykkelveien",
+        "terrengsykkelløypa",
+        "krysset",
+        "trappene",
+        "broen",
+        "tunellen"
+      ],
+      "relative_directions": [
+        "venstre",
+        "høyre"
+      ],
+      "example_phrases": {
+        "0": [
+          "Gjør en venstre U-sving."
+        ],
+        "1": [
+          "Gjør en høyre U-sving inn på Bunker Hill Road."
+        ],
+        "2": [
+          "Gjør en venstre U-sving for å bli på Bunker Hill Road."
+        ],
+        "3": [
+          "Gjør en venstre U-sving ved Devonshire Road."
+        ],
+        "4": [
+          "Gjør en venstre U-sving ved Devonshire Road inn på Jonestown Road, U.S. 22."
+        ],
+        "5": [
+          "Gjør en venstre U-sving ved Devonshire Road for å bli på Jonestown Road, U.S. 22."
+        ],
+        "6": [
+          "Gjør en høyre U-sving ved Mannenbashi Øst."
+        ],
+        "7": [
+          "Gjør en venstre U-sving mot Baltimore."
+        ]
+      }
+    },
+    "verbal_multi_cue": {
+      "phrases": {
+        "0": "<CURRENT_VERBAL_CUE> Deretter <NEXT_VERBAL_CUE>",
+        "1": "<CURRENT_VERBAL_CUE> Deretter, om <LENGTH>, <NEXT_VERBAL_CUE>"
+      },
+      "metric_lengths": [
+        "<KILOMETERS> kilometer",
+        "1 kilometer",
+        "<METERS> meter",
+        "mindre enn 10 meter"
+      ],
+      "us_customary_lengths": [
+        "<MILES> miles",
+        "1 mil",
+        "en halv mil",
+        "en kvart mil",
+        "<FEET> fot",
+        "mindre enn 10 fot"
+      ],
+      "example_phrases": {
+        "0": [
+          "Sving litt til høyre inn på East Fayette Street. Deretter sving til høyre inn på North Gay Street."
+        ],
+        "1": [
+          "Sving litt til høyre inn på East Fayette Street. Deretter, om 500 fot, sving til høyre inn på North Gay Street."
+        ]
+      }
+    },
+    "approach_verbal_alert": {
+      "phrases": {
+        "0": "I <LENGTH>, <CURRENT_VERBAL_CUE>"
+      },
+      "metric_lengths": [
+        "<KILOMETERS> kilometer",
+        "1 kilometer",
+        "<METERS> meter",
+        "mindre enn 10 meter"
+      ],
+      "us_customary_lengths": [
+        "<MILES> miles",
+        "1 mil",
+        "en halv mil",
+        "en kvart mil",
+        "<FEET> fot",
+        "mindre enn 10 fot"
+      ],
+      "example_phrases": {
+        "0": [
+          "Om et kvartal mile, sving til høyre inn på North Gay Street."
+        ]
+      }
+    },
+    "pass": {
+      "phrases": {
+        "0": "Bestått <OBJECT_LABEL>.",
+        "1": "Passer trafikksignaler på <OBJECT_LABEL>."
+      },
+      "object_labels": [
+        "porten",
+        "pullertene",
+        "veikryss"
+      ],
+      "example_phrases": {
+        "0": [
+          "Passer porten."
+        ]
+      }
+    },
+    "elevator": {
+      "phrases": {
+        "0": "Ta heisen.",
+        "1": "Ta heisen til <LEVEL>."
+      },
+      "example_phrases": {
+        "0": [
+          "Ta heisen."
+        ],
+        "1": [
+          "Ta heisen til nivå 1."
+        ]
+      }
+    },
+    "steps": {
+      "phrases": {
+        "0": "Ta trappene.",
+        "1": "Ta trappene til <LEVEL>."
+      },
+      "example_phrases": {
+        "0": [
+          "Ta trappene."
+        ],
+        "1": [
+          "Ta trappene til nivå 2."
+        ]
+      }
+    },
+    "escalator": {
+      "phrases": {
+        "0": "Ta rulletrappen.",
+        "1": "Ta rulletrappen til <LEVEL>."
+      },
+      "example_phrases": {
+        "0": [
+          "Ta rulletrappen."
+        ],
+        "1": [
+          "Ta rulletrappen til nivå 3."
+        ]
+      }
+    },
+    "level_change": {
+      "phrases": {
+        "0": "Continue to <LEVEL>."
+      },
+      "example_phrases": {
+        "0": [
+          "Continue to Level 2."
+        ]
+      }
+    },
+    "enter_building": {
+      "phrases": {
+        "0": "Gå inn i bygningen.",
+        "1": "Gå inn i bygningen og fortsett på <STREET_NAMES>."
+      },
+      "empty_street_name_labels": [
+        "gangveien",
+        "sykkelveien",
+        "terrengsykkelløypa",
+        "krysset"
+      ],
+      "example_phrases": {
+        "0": [
+          "Gå inn i bygningen."
+        ],
+        "1": [
+          "Gå inn i bygget, og fortsett på gangveien."
+        ]
+      }
+    },
+    "exit_building": {
+      "phrases": {
+        "0": "Gå ut av bygningen.",
+        "1": "Gå ut av bygningen og fortsett på <STREET_NAMES>."
+      },
+      "empty_street_name_labels": [
+        "gangveien",
+        "sykkelveien",
+        "terrengsykkelløypa",
+        "krysset"
+      ],
+      "example_phrases": {
+        "0": [
+          "Gå ut av bygningen."
+        ],
+        "1": [
+          "Gå ut av bygningen og fortsett på gangveien."
+        ]
+      }
     }
+  }
 }

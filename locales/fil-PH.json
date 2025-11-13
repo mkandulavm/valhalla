@@ -1,2353 +1,2363 @@
 {
-    "posix_locale": "fil_PH.UTF-8",
-    "aliases": [
-        "fil"
-    ],
-    "instructions": {
-        "arrive": {
-            "phrases": {
-                "0": "Daratíng: <TIME>.",
-                "1": "Daratíng: <TIME> sa <TRANSIT_STOP>."
-            },
-            "example_phrases": {
-                "0": [
-                    "Daratíng: 8:02 AM."
-                ],
-                "1": [
-                    "Daratíng: 8:02 AM sa 8 St - NYU."
-                ]
-            }
-        },
-        "arrive_verbal": {
-            "phrases": {
-                "0": "Daratíng sa <TIME>.",
-                "1": "Daratíng sa <TIME> sa <TRANSIT_STOP>."
-            },
-            "example_phrases": {
-                "0": [
-                    "Daratíng sa 8:02 AM."
-                ],
-                "1": [
-                    "Daratíng sa 8:02 AM sa 8 St - NYU."
-                ]
-            }
-        },
-        "bear": {
-            "phrases": {
-                "0": "Kumiling sa <RELATIVE_DIRECTION>.",
-                "1": "Kumiling sa <RELATIVE_DIRECTION> patungo sa <STREET_NAMES>.",
-                "2": "Kumiling sa <RELATIVE_DIRECTION> patungo sa <BEGIN_STREET_NAMES>. Ituloy sa <STREET_NAMES>.",
-                "3": "Kumiling sa <RELATIVE_DIRECTION> para manatili sa <STREET_NAMES>.",
-                "4": "Kumiling sa <RELATIVE_DIRECTION> sa <JUNCTION_NAME>.",
-                "5": "Kumiling sa <RELATIVE_DIRECTION> patungo sa <TOWARD_SIGN>."
-            },
-            "empty_street_name_labels": [
-                "ang daanan",
-                "ang bike lane",
-                "ang landas ng mountain bike",
-                "ang tawiran",
-                "ang hagdan",
-                "ang tulay",
-                "ang lagusan"
-            ],
-            "relative_directions": [
-                "kaliwa",
-                "kanan"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Pumihit ng kanan."
-                ],
-                "1": [
-                    "Pumihit ng kaliwa sa Arlen Road."
-                ],
-                "2": [
-                    "Pumihit ng kanan sa Belair Road/US 1 Business. Magpatuloy sa US 1 Business."
-                ],
-                "3": [
-                    "Pumihit ng kaliwa upang manatili sa US 15 South."
-                ],
-                "4": [
-                    "Pumihit ng kanan sa Mannenbashi East."
-                ],
-                "5": [
-                    "Pumihit ng kaliwa patungo sa Baltimore."
-                ]
-            }
-        },
-        "bear_verbal": {
-            "phrases": {
-                "0": "Kumiling sa <RELATIVE_DIRECTION>.",
-                "1": "Kumiling sa <RELATIVE_DIRECTION> patungo sa <STREET_NAMES>.",
-                "2": "Kumiling sa <RELATIVE_DIRECTION> patungo sa <BEGIN_STREET_NAMES>.",
-                "3": "Kumiling sa <RELATIVE_DIRECTION> para manatili sa <STREET_NAMES>.",
-                "4": "Kumiling sa <RELATIVE_DIRECTION> sa <JUNCTION_NAME>.",
-                "5": "Kumiling sa <RELATIVE_DIRECTION> patungo sa <TOWARD_SIGN>."
-            },
-            "empty_street_name_labels": [
-                "ang daanan",
-                "ang bike lane",
-                "ang landas ng mountain bike",
-                "ang tawiran",
-                "ang hagdan",
-                "ang tulay",
-                "ang lagusan"
-            ],
-            "relative_directions": [
-                "kaliwa",
-                "kanan"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Kumiling sa kanan."
-                ],
-                "1": [
-                    "Kumiling sa kaliwa patungo sa Arlen Road."
-                ],
-                "2": [
-                    "Kumiling sa kanan patungo sa Belair Road, U.S. 1 Business."
-                ],
-                "3": [
-                    "Kumiling sa kaliwa para manatili sa U.S. 15 South."
-                ],
-                "4": [
-                    "Kumiling sa kanan sa Mannenbashi East."
-                ],
-                "5": [
-                    "Kumiling sa kaliwa patungo sa Baltimore."
-                ]
-            }
-        },
-        "becomes": {
-            "phrases": {
-                "0": "<PREVIOUS_STREET_NAMES> ay nagiging <STREET_NAMES>."
-            },
-            "example_phrases": {
-                "0": [
-                    "Vine Street ay nagiging Middletown Road."
-                ]
-            }
-        },
-        "becomes_verbal": {
-            "phrases": {
-                "0": "<PREVIOUS_STREET_NAMES> ay nagiging <STREET_NAMES>."
-            },
-            "example_phrases": {
-                "0": [
-                    "Vine Street ay nagiging Middletown Road."
-                ]
-            }
-        },
-        "continue": {
-            "phrases": {
-                "0": "Ituloy.",
-                "1": "Ituloy sa <STREET_NAMES>.",
-                "2": "Ituloy sa <JUNCTION_NAME>.",
-                "3": "Ituloy patungo sa <TOWARD_SIGN>."
-            },
-            "empty_street_name_labels": [
-                "ang daanan",
-                "ang bike lane",
-                "ang landas ng mountain bike",
-                "ang tawiran",
-                "ang hagdan",
-                "ang tulay",
-                "ang lagusan"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Ituloy."
-                ],
-                "1": [
-                    "Ituloy sa 10th Avenue."
-                ],
-                "2": [
-                    "Ituloy sa Mannenbashi East."
-                ],
-                "3": [
-                    "Ituloy patungo sa Baltimore."
-                ]
-            }
-        },
-        "continue_verbal": {
-            "phrases": {
-                "0": "Ituloy.",
-                "1": "Ituloy para sa <LENGTH>.",
-                "2": "Ituloy sa <STREET_NAMES>.",
-                "3": "Ituloy sa <STREET_NAMES> para sa <LENGTH>.",
-                "4": "Ituloy sa <JUNCTION_NAME>.",
-                "5": "Ituloy sa <JUNCTION_NAME> para sa <LENGTH>.",
-                "6": "Ituloy patungo sa <TOWARD_SIGN>.",
-                "7": "Ituloy patungo sa <TOWARD_SIGN> para sa <LENGTH>."
-            },
-            "empty_street_name_labels": [
-                "ang daanan",
-                "ang bike lane",
-                "ang landas ng mountain bike",
-                "ang tawiran",
-                "ang hagdan",
-                "ang tulay",
-                "ang lagusan"
-            ],
-            "metric_lengths": [
-                "<KILOMETERS> kilometro",
-                "1 kilometro",
-                "<METERS> metro",
-                "mas mababa sa 10 metro"
-            ],
-            "us_customary_lengths": [
-                "<MILES> milya",
-                "1 milya",
-                "kalahating milya",
-                "isang kapat na milya",
-                "<FEET> talampakan",
-                "mas mababa sa 10 talampakan"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Magpatuloy."
-                ],
-                "1": [
-                    "Magpatuloy ng 300 talampakan."
-                ],
-                "2": [
-                    "Magpatuloy sa 10th Avenue."
-                ],
-                "3": [
-                    "Magpatuloy sa 10th Avenue ng 3 milya."
-                ],
-                "4": [
-                    "Magpatuloy sa Mannenbashi East."
-                ],
-                "5": [
-                    "Magpatuloy sa Mannenbashi East ng 2 milya."
-                ],
-                "6": [
-                    "Magpatuloy patungo sa Baltimore."
-                ],
-                "7": [
-                    "Magpatuloy patungo sa Baltimore ng 5 milya."
-                ]
-            }
-        },
-        "continue_verbal_alert": {
-            "phrases": {
-                "0": "Ituloy.",
-                "1": "Ituloy sa <STREET_NAMES>.",
-                "2": "Ituloy sa <JUNCTION_NAME>.",
-                "3": "Ituloy patungo sa <TOWARD_SIGN>."
-            },
-            "empty_street_name_labels": [
-                "ang daanan",
-                "ang bike lane",
-                "ang landas ng mountain bike",
-                "ang tawiran",
-                "ang hagdan",
-                "ang tulay",
-                "ang lagusan"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Ituloy."
-                ],
-                "1": [
-                    "Ituloy sa 10th Avenue."
-                ],
-                "2": [
-                    "Ituloy sa Mannenbashi East."
-                ],
-                "3": [
-                    "Ituloy patungo sa Baltimore."
-                ]
-            }
-        },
-        "depart": {
-            "phrases": {
-                "0": "Umalis: <TIME>.",
-                "1": "Umalis: <TIME> mula sa <TRANSIT_STOP>."
-            },
-            "example_phrases": {
-                "0": [
-                    "Umalis: 8:02 AM."
-                ],
-                "1": [
-                    "Umalis: 8:02 AM mula sa 8 St - NYU."
-                ]
-            }
-        },
-        "depart_verbal": {
-            "phrases": {
-                "0": "Umalis ng <TIME>.",
-                "1": "Umalis ng <TIME> mula sa <TRANSIT_STOP>."
-            },
-            "example_phrases": {
-                "0": [
-                    "Umalis ng 8:02 AM."
-                ],
-                "1": [
-                    "Umalis ng 8:02 AM mula sa 8 St - NYU."
-                ]
-            }
-        },
-        "destination": {
-            "phrases": {
-                "0": "Nakarating ka na sa iyong destinasyon.",
-                "1": "Nakarating ka na sa <DESTINATION>.",
-                "2": "Ang iyong destinasyon ay nasa <RELATIVE_DIRECTION>.",
-                "3": "Ang <DESTINATION> ay nasa <RELATIVE_DIRECTION>."
-            },
-            "relative_directions": [
-                "kaliwa",
-                "kanan"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Nakarating ka na sa iyong destinasyon."
-                ],
-                "1": [
-                    "Nakarating ka na sa 3206 Powelton Avenue."
-                ],
-                "2": [
-                    "Ang iyong destinasyon ay nasa kaliwa.",
-                    "Ang iyong destinasyon ay nasa kanan."
-                ],
-                "3": [
-                    "Ang Lancaster Brewing Company ay nasa kaliwa."
-                ]
-            }
-        },
-        "destination_verbal": {
-            "phrases": {
-                "0": "Nakarating ka na sa iyong destinasyon.",
-                "1": "Nakarating ka na sa <DESTINATION>.",
-                "2": "Ang iyong destinasyon ay nasa <RELATIVE_DIRECTION>.",
-                "3": "Ang <DESTINATION> ay nasa <RELATIVE_DIRECTION>."
-            },
-            "relative_directions": [
-                "kaliwa",
-                "kanan"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Nakarating ka na sa iyong destinasyon."
-                ],
-                "1": [
-                    "Nakarating ka na sa 32 o6 Powelton Avenue."
-                ],
-                "2": [
-                    "Ang iyong destinasyon ay nasa kaliwa.",
-                    "Ang iyong destinasyon ay nasa kanan."
-                ],
-                "3": [
-                    "Ang Lancaster Brewing Company ay nasa kaliwa."
-                ]
-            }
-        },
-        "destination_verbal_alert": {
-            "phrases": {
-                "0": "Malapit ka na sa iyong destinasyon.",
-                "1": "Malapit ka na sa <DESTINATION>.",
-                "2": "Ang iyong destinasyon ay nasa <RELATIVE_DIRECTION>.",
-                "3": "Ang <DESTINATION> ay nasa <RELATIVE_DIRECTION>."
-            },
-            "relative_directions": [
-                "kaliwa",
-                "kanan"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Malapit ka na sa iyong destinasyon."
-                ],
-                "1": [
-                    "Malapit ka na sa 32 o6 Powelton Avenue."
-                ],
-                "2": [
-                    "Ang iyong destinasyon ay nasa kaliwa.",
-                    "Ang iyong destinasyon ay nasa kanan."
-                ],
-                "3": [
-                    "Ang Lancaster Brewing Company ay nasa kaliwa."
-                ]
-            }
-        },
-        "enter_ferry": {
-            "phrases": {
-                "0": "Sumakay ng Ferry.",
-                "1": "Sumakay ng <STREET_NAMES>.",
-                "2": "Sumakay ng <STREET_NAMES> <FERRY_LABEL>.",
-                "3": "Sumakay ng ferry patungo sa <TOWARD_SIGN>."
-            },
-            "empty_street_name_labels": [
-                "ang daanan",
-                "ang bike lane",
-                "ang landas ng mountain bike",
-                "ang tawiran",
-                "ang hagdan",
-                "ang tulay",
-                "ang lagusan"
-            ],
-            "ferry_label": "Ferry",
-            "example_phrases": {
-                "0": [
-                    "Sumakay ng Ferry."
-                ],
-                "1": [
-                    "Sumakay ng Millersburg Ferry."
-                ],
-                "2": [
-                    "Sumakay ng Bridgeport - Port Jefferson Ferry."
-                ],
-                "3": [
-                    "Sumakay ng ferry patungo sa Cape May."
-                ]
-            }
-        },
-        "enter_ferry_verbal": {
-            "phrases": {
-                "0": "Sumakay ng Ferry.",
-                "1": "Sumakay ng <STREET_NAMES>.",
-                "2": "Sumakay ng <STREET_NAMES> <FERRY_LABEL>.",
-                "3": "Sumakay ng ferry patungo sa <TOWARD_SIGN>."
-            },
-            "empty_street_name_labels": [
-                "ang daanan",
-                "ang bike lane",
-                "ang landas ng mountain bike",
-                "ang tawiran",
-                "ang hagdan",
-                "ang tulay",
-                "ang lagusan"
-            ],
-            "ferry_label": "Ferry",
-            "example_phrases": {
-                "0": [
-                    "Sumakay ng Ferry."
-                ],
-                "1": [
-                    "Sumakay ng Millersburg Ferry."
-                ],
-                "2": [
-                    "Sumakay ng Bridgeport - Port Jefferson Ferry."
-                ],
-                "3": [
-                    "Sumakay ng ferry patungo sa Cape May."
-                ]
-            }
-        },
-        "enter_roundabout": {
-            "phrases": {
-                "0": "Pumasok sa roundabout.",
-                "1": "Pumasok sa roundabout at lumabas sa <ORDINAL_VALUE> exit.",
-                "2": "Pumasok sa roundabout at lumabas sa <ORDINAL_VALUE> exit sa <ROUNDABOUT_EXIT_STREET_NAMES>.",
-                "3": "Pumasok sa roundabout at lumabas sa <ORDINAL_VALUE> exit sa <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>. Magpatuloy sa <ROUNDABOUT_EXIT_STREET_NAMES>.",
-                "4": "Pumasok sa roundabout at lumabas sa <ORDINAL_VALUE> exit patungo sa <TOWARD_SIGN>.",
-                "5": "Pumasok sa roundabout at lumabas sa exit sa <ROUNDABOUT_EXIT_STREET_NAMES>.",
-                "6": "Pumasok sa roundabout at lumabas sa exit sa <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>. Magpatuloy sa <ROUNDABOUT_EXIT_STREET_NAMES>.",
-                "7": "Pumasok sa roundabout at lumabas sa exit patungo sa <TOWARD_SIGN>.",
-                "8": "Pumasok sa <STREET_NAMES>",
-                "9": "Pumasok sa <STREET_NAMES> at lumabas sa <ORDINAL_VALUE> exit.",
-                "10": "Pumasok sa <STREET_NAMES> at lumabas sa <ORDINAL_VALUE> exit sa <ROUNDABOUT_EXIT_STREET_NAMES>.",
-                "11": "Pumasok sa <STREET_NAMES> at lumabas sa <ORDINAL_VALUE> exit sa <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>. Magpatuloy sa <ROUNDABOUT_EXIT_STREET_NAMES>.",
-                "12": "Pumasok sa <STREET_NAMES> at lumabas sa <ORDINAL_VALUE> exit patungo sa <TOWARD_SIGN>.",
-                "13": "Pumasok sa <STREET_NAMES> at lumabas sa exit sa <ROUNDABOUT_EXIT_STREET_NAMES>.",
-                "14": "Pumasok sa <STREET_NAMES> at lumabas sa exit sa <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>. Magpatuloy sa <ROUNDABOUT_EXIT_STREET_NAMES>.",
-                "15": "Pumasok sa <STREET_NAMES> at lumabas sa exit patungo sa <TOWARD_SIGN>."
-            },
-            "ordinal_values": [
-                "unang",
-                "ikalawang",
-                "ikatlong",
-                "ika-apat",
-                "ika-lima",
-                "ika-anim",
-                "ika-pito",
-                "ika-walo",
-                "ika-siyam",
-                "ika-sampu"
-            ],
-            "empty_street_name_labels": [
-                "ang daanan",
-                "ang bike lane",
-                "ang landas ng mountain bike",
-                "ang tawiran",
-                "ang hagdan",
-                "ang tulay",
-                "ang lagusan"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Pumasok sa roundabout."
-                ],
-                "1": [
-                    "Pumasok sa roundabout at lumabas sa unang exit.",
-                    "Pumasok sa roundabout at lumabas sa ikalawang exit.",
-                    "Pumasok sa roundabout at lumabas sa ikatlong exit.",
-                    "Pumasok sa roundabout at lumabas sa ika-apat na exit.",
-                    "Pumasok sa roundabout at lumabas sa ika-limang exit.",
-                    "Pumasok sa roundabout at lumabas sa ika-anim na exit.",
-                    "Pumasok sa roundabout at lumabas sa ika-pitong exit.",
-                    "Pumasok sa roundabout at lumabas sa ika-walong exit.",
-                    "Pumasok sa roundabout at lumabas sa ika-siyam na exit.",
-                    "Pumasok sa roundabout at lumabas sa ika-sampung exit."
-                ],
-                "2": [
-                    "Pumasok sa roundabout at lumabas sa ikatlong exit sa Main Street."
-                ],
-                "3": [
-                    "Pumasok sa roundabout at lumabas sa ikatlong exit sa US 322/Main Street. Magpatuloy sa US 322."
-                ],
-                "4": [
-                    "Pumasok sa roundabout at lumabas sa ikatlong exit patungo sa Baltimore."
-                ],
-                "5": [
-                    "Pumasok sa roundabout at lumabas sa exit sa Main Street."
-                ],
-                "6": [
-                    "Pumasok sa roundabout at lumabas sa exit sa US 322/Main Street. Magpatuloy sa US 322."
-                ],
-                "7": [
-                    "Pumasok sa roundabout at lumabas sa exit patungo sa Baltimore."
-                ],
-                "8": [
-                    "Pumasok sa Dupont Circle."
-                ],
-                "9": [
-                    "Pumasok sa Dupont Circle at lumabas sa unang exit."
-                ],
-                "10": [
-                    "Pumasok sa Dupont Circle at lumabas sa ikatlong exit sa Main Street."
-                ],
-                "11": [
-                    "Pumasok sa Dupont Circle at lumabas sa ikatlong exit sa US 322/Main Street. Magpatuloy sa US 322."
-                ],
-                "12": [
-                    "Pumasok sa Dupont Circle at lumabas sa ikatlong exit patungo sa Baltimore."
-                ],
-                "13": [
-                    "Pumasok sa Dupont Circle at lumabas sa exit sa Main Street."
-                ],
-                "14": [
-                    "Pumasok sa Dupont Circle at lumabas sa exit sa US 322/Main Street. Magpatuloy sa US 322."
-                ],
-                "15": [
-                    "Pumasok sa Dupont Circle at lumabas sa exit patungo sa Baltimore."
-                ]
-            }
-        },
-        "enter_roundabout_verbal": {
-            "phrases": {
-                "0": "Pumasok sa roundabout.",
-                "1": "Pumasok sa roundabout at lumabas sa <ORDINAL_VALUE> exit.",
-                "2": "Pumasok sa roundabout at lumabas sa <ORDINAL_VALUE> exit sa <ROUNDABOUT_EXIT_STREET_NAMES>.",
-                "3": "Pumasok sa roundabout at lumabas sa <ORDINAL_VALUE> exit sa <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>.",
-                "4": "Pumasok sa roundabout at lumabas sa <ORDINAL_VALUE> exit patungo sa <TOWARD_SIGN>.",
-                "5": "Pumasok sa roundabout at lumabas sa exit sa <ROUNDABOUT_EXIT_STREET_NAMES>.",
-                "6": "Pumasok sa roundabout at lumabas sa exit sa <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>.",
-                "7": "Pumasok sa roundabout at lumabas sa exit patungo sa <TOWARD_SIGN>.",
-                "8": "Pumasok sa <STREET_NAMES>",
-                "9": "Pumasok sa <STREET_NAMES> at lumabas sa <ORDINAL_VALUE> exit.",
-                "10": "Pumasok sa <STREET_NAMES> at lumabas sa <ORDINAL_VALUE> exit sa <ROUNDABOUT_EXIT_STREET_NAMES>.",
-                "11": "Pumasok sa <STREET_NAMES> at lumabas sa <ORDINAL_VALUE> exit sa <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>.",
-                "12": "Pumasok sa <STREET_NAMES> at lumabas sa <ORDINAL_VALUE> exit patungo sa <TOWARD_SIGN>.",
-                "13": "Pumasok sa <STREET_NAMES> at lumabas sa exit sa <ROUNDABOUT_EXIT_STREET_NAMES>.",
-                "14": "Pumasok sa <STREET_NAMES> at lumabas sa exit sa <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>.",
-                "15": "Pumasok sa <STREET_NAMES> at lumabas sa exit patungo sa <TOWARD_SIGN>."
-            },
-            "ordinal_values": [
-                "unang",
-                "ikalawang",
-                "ikatlong",
-                "ika-apat",
-                "ika-lima",
-                "ika-anim",
-                "ika-pito",
-                "ika-walo",
-                "ika-siyam",
-                "ika-sampu"
-            ],
-            "empty_street_name_labels": [
-                "ang daanan",
-                "ang bike lane",
-                "ang landas ng mountain bike",
-                "ang tawiran",
-                "ang hagdan",
-                "ang tulay",
-                "ang lagusan"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Pumasok sa roundabout."
-                ],
-                "1": [
-                    "Pumasok sa roundabout at lumabas sa unang exit.",
-                    "Pumasok sa roundabout at lumabas sa ikalawang exit.",
-                    "Pumasok sa roundabout at lumabas sa ikatlong exit.",
-                    "Pumasok sa roundabout at lumabas sa ika-apat na exit.",
-                    "Pumasok sa roundabout at lumabas sa ika-limang exit.",
-                    "Pumasok sa roundabout at lumabas sa ika-anim na exit.",
-                    "Pumasok sa roundabout at lumabas sa ika-pitong exit.",
-                    "Pumasok sa roundabout at lumabas sa ika-walong exit.",
-                    "Pumasok sa roundabout at lumabas sa ika-siyam na exit.",
-                    "Pumasok sa roundabout at lumabas sa ika-sampung exit."
-                ],
-                "2": [
-                    "Pumasok sa roundabout at lumabas sa ikatlong exit sa Main Street."
-                ],
-                "3": [
-                    "Pumasok sa roundabout at lumabas sa ikatlong exit sa U.S. 3 22/Main Street."
-                ],
-                "4": [
-                    "Pumasok sa roundabout at lumabas sa ikatlong exit patungo sa Baltimore."
-                ],
-                "5": [
-                    "Pumasok sa roundabout at lumabas sa exit sa Main Street."
-                ],
-                "6": [
-                    "Pumasok sa roundabout at lumabas sa exit sa U.S. 3 22/Main Street."
-                ],
-                "7": [
-                    "Pumasok sa roundabout at lumabas sa exit patungo sa Baltimore."
-                ],
-                "8": [
-                    "Pumasok sa Dupont Circle."
-                ],
-                "9": [
-                    "Pumasok sa Dupont Circle at lumabas sa unang exit."
-                ],
-                "10": [
-                    "Pumasok sa Dupont Circle at lumabas sa ikatlong exit sa Main Street."
-                ],
-                "11": [
-                    "Pumasok sa Dupont Circle at lumabas sa ikatlong exit sa U.S. 3 22/Main Street."
-                ],
-                "12": [
-                    "Pumasok sa Dupont Circle at lumabas sa ikatlong exit patungo sa Baltimore."
-                ],
-                "13": [
-                    "Pumasok sa Dupont Circle at lumabas sa exit sa Main Street."
-                ],
-                "14": [
-                    "Pumasok sa Dupont Circle at lumabas sa exit sa U.S. 3 22/Main Street."
-                ],
-                "15": [
-                    "Pumasok sa Dupont Circle at lumabas sa exit patungo sa Baltimore."
-                ]
-            }
-        },
-        "exit": {
-            "phrases": {
-                "0": "Lumabas sa exit sa <RELATIVE_DIRECTION>.",
-                "1": "Lumabas sa exit <NUMBER_SIGN> sa <RELATIVE_DIRECTION>.",
-                "2": "Lumabas sa <BRANCH_SIGN> exit sa <RELATIVE_DIRECTION>.",
-                "3": "Lumabas sa exit <NUMBER_SIGN> sa <RELATIVE_DIRECTION> sa <BRANCH_SIGN>.",
-                "4": "Lumabas sa exit sa <RELATIVE_DIRECTION> patungo sa <TOWARD_SIGN>.",
-                "5": "Lumabas sa exit <NUMBER_SIGN> sa <RELATIVE_DIRECTION> patungo sa <TOWARD_SIGN>.",
-                "6": "Lumabas sa <BRANCH_SIGN> exit sa <RELATIVE_DIRECTION> patungo sa <TOWARD_SIGN>.",
-                "7": "Lumabas sa exit <NUMBER_SIGN> sa <RELATIVE_DIRECTION> sa <BRANCH_SIGN> patungo sa <TOWARD_SIGN>.",
-                "8": "Lumabas sa <NAME_SIGN> exit sa <RELATIVE_DIRECTION>.",
-                "10": "Lumabas sa <NAME_SIGN> exit sa <RELATIVE_DIRECTION> sa <BRANCH_SIGN>.",
-                "12": "Lumabas sa <NAME_SIGN> exit sa <RELATIVE_DIRECTION> patungo sa <TOWARD_SIGN>.",
-                "14": "Lumabas sa <NAME_SIGN> exit sa <RELATIVE_DIRECTION> sa <BRANCH_SIGN> patungo sa <TOWARD_SIGN>.",
-                "15": "Lumabas sa exit.",
-                "16": "Lumabas sa exit <NUMBER_SIGN>.",
-                "17": "Lumabas sa <BRANCH_SIGN> exit.",
-                "18": "Lumabas sa exit <NUMBER_SIGN> sa <BRANCH_SIGN>.",
-                "19": "Lumabas sa exit patungo sa <TOWARD_SIGN>.",
-                "20": "Lumabas sa exit <NUMBER_SIGN> patungo sa <TOWARD_SIGN>.",
-                "21": "Lumabas sa <BRANCH_SIGN> exit patungo sa <TOWARD_SIGN>.",
-                "22": "Lumabas sa exit <NUMBER_SIGN> sa <BRANCH_SIGN> patungo sa <TOWARD_SIGN>.",
-                "23": "Lumabas sa <NAME_SIGN> exit.",
-                "25": "Lumabas sa <NAME_SIGN> exit sa <BRANCH_SIGN>.",
-                "27": "Lumabas sa <NAME_SIGN> exit patungo sa <TOWARD_SIGN>.",
-                "29": "Lumabas sa <NAME_SIGN> exit sa <BRANCH_SIGN> patungo sa <TOWARD_SIGN>."
-            },
-            "relative_directions": [
-                "kaliwa",
-                "kanan"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Lumabas sa exit sa kaliwa.",
-                    "Lumabas sa exit sa kanan."
-                ],
-                "1": [
-                    "Lumabas sa exit 67 B-A sa kanan."
-                ],
-                "2": [
-                    "Lumabas sa US 322 West exit sa kanan."
-                ],
-                "3": [
-                    "Lumabas sa exit 67 B-A sa kanan sa US 322 West."
-                ],
-                "4": [
-                    "Lumabas sa exit sa kanan patungo sa Lewistown."
-                ],
-                "5": [
-                    "Lumabas sa exit 67 B-A sa kanan patungo sa Lewistown."
-                ],
-                "6": [
-                    "Lumabas sa US 322 West exit sa kanan patungo sa Lewistown."
-                ],
-                "7": [
-                    "Lumabas sa exit 67 B-A sa kanan sa US 322 West patungo sa Lewistown/State College."
-                ],
-                "8": [
-                    "Lumabas sa White Marsh Boulevard exit sa kaliwa."
-                ],
-                "10": [
-                    "Lumabas sa White Marsh Boulevard exit sa kaliwa sa MD 43 East."
-                ],
-                "12": [
-                    "Lumabas sa White Marsh Boulevard exit sa kaliwa patungo sa White Marsh."
-                ],
-                "14": [
-                    "Lumabas sa White Marsh Boulevard exit sa kaliwa sa MD 43 East patungo sa White Marsh."
-                ],
-                "15": [
-                    "Lumabas sa exit."
-                ],
-                "16": [
-                    "Lumabas sa exit 67 B-A."
-                ],
-                "17": [
-                    "Lumabas sa US 322 West exit."
-                ],
-                "18": [
-                    "Lumabas sa exit 67 B-A sa US 322 West."
-                ],
-                "19": [
-                    "Lumabas sa exit patungo sa Lewistown."
-                ],
-                "20": [
-                    "Lumabas sa exit 67 B-A patungo sa Lewistown."
-                ],
-                "21": [
-                    "Lumabas sa US 322 West exit patungo sa Lewistown."
-                ],
-                "22": [
-                    "Lumabas sa exit 67 B-A sa US 322 West patungo sa Lewistown/State College."
-                ],
-                "23": [
-                    "Lumabas sa White Marsh Boulevard exit."
-                ],
-                "25": [
-                    "Lumabas sa White Marsh Boulevard exit sa MD 43 East."
-                ],
-                "27": [
-                    "Lumabas sa White Marsh Boulevard exit patungo sa White Marsh."
-                ],
-                "29": [
-                    "Lumabas sa White Marsh Boulevard exit sa MD 43 East patungo sa White Marsh."
-                ]
-            }
-        },
-        "exit_roundabout": {
-            "phrases": {
-                "0": "Lumabas sa roundabout.",
-                "1": "Lumabas sa roundabout sa <STREET_NAMES>.",
-                "2": "Lumabas sa roundabout sa <BEGIN_STREET_NAMES>. Magpatuloy sa <STREET_NAMES>.",
-                "3": "Lumabas sa roundabout patungo sa <TOWARD_SIGN>."
-            },
-            "empty_street_name_labels": [
-                "ang daanan",
-                "ang bike lane",
-                "ang landas ng mountain bike",
-                "ang tawiran",
-                "ang hagdan",
-                "ang tulay",
-                "ang lagusan"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Lumabas sa roundabout."
-                ],
-                "1": [
-                    "Lumabas sa roundabout sa Philadelphia Road/MD 7."
-                ],
-                "2": [
-                    "Lumabas sa roundabout sa Catoctin Mountain Highway/US 15. Magpatuloy sa US 15."
-                ],
-                "3": [
-                    "Lumabas sa roundabout patungo sa Baltimore."
-                ]
-            }
-        },
-        "exit_roundabout_verbal": {
-            "phrases": {
-                "0": "Lumabas sa roundabout.",
-                "1": "Lumabas sa roundabout sa <STREET_NAMES>.",
-                "2": "Lumabas sa roundabout sa <BEGIN_STREET_NAMES>.",
-                "3": "Lumabas sa roundabout patungo sa <TOWARD_SIGN>."
-            },
-            "empty_street_name_labels": [
-                "ang daanan",
-                "ang bike lane",
-                "ang landas ng mountain bike",
-                "ang tawiran",
-                "ang hagdan",
-                "ang tulay",
-                "ang lagusan"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Lumabas sa roundabout."
-                ],
-                "1": [
-                    "Lumabas sa roundabout sa Philadelphia Road, Maryland 7."
-                ],
-                "2": [
-                    "Lumabas sa roundabout sa Catoctin Mountain Highway, U.S. 15."
-                ],
-                "3": [
-                    "Lumabas sa roundabout patungo sa Baltimore."
-                ]
-            }
-        },
-        "exit_verbal": {
-            "phrases": {
-                "0": "Lumabas sa exit sa <RELATIVE_DIRECTION>.",
-                "1": "Lumabas sa exit <NUMBER_SIGN> sa <RELATIVE_DIRECTION>.",
-                "2": "Lumabas sa <BRANCH_SIGN> exit sa <RELATIVE_DIRECTION>.",
-                "3": "Lumabas sa exit <NUMBER_SIGN> sa <RELATIVE_DIRECTION> sa <BRANCH_SIGN>.",
-                "4": "Lumabas sa exit sa <RELATIVE_DIRECTION> patungo sa <TOWARD_SIGN>.",
-                "5": "Lumabas sa exit <NUMBER_SIGN> sa <RELATIVE_DIRECTION> patungo sa <TOWARD_SIGN>.",
-                "6": "Lumabas sa <BRANCH_SIGN> exit sa <RELATIVE_DIRECTION> patungo sa <TOWARD_SIGN>.",
-                "7": "Lumabas sa exit <NUMBER_SIGN> sa <RELATIVE_DIRECTION> sa <BRANCH_SIGN> patungo sa <TOWARD_SIGN>.",
-                "8": "Lumabas sa <NAME_SIGN> exit sa <RELATIVE_DIRECTION>.",
-                "10": "Lumabas sa <NAME_SIGN> exit sa <RELATIVE_DIRECTION> sa <BRANCH_SIGN>.",
-                "12": "Lumabas sa <NAME_SIGN> exit sa <RELATIVE_DIRECTION> patungo sa <TOWARD_SIGN>.",
-                "14": "Lumabas sa <NAME_SIGN> exit sa <RELATIVE_DIRECTION> sa <BRANCH_SIGN> patungo sa <TOWARD_SIGN>.",
-                "15": "Lumabas sa exit.",
-                "16": "Lumabas sa exit <NUMBER_SIGN>.",
-                "17": "Lumabas sa <BRANCH_SIGN> exit.",
-                "18": "Lumabas sa exit <NUMBER_SIGN> sa <BRANCH_SIGN>.",
-                "19": "Lumabas sa exit patungo sa <TOWARD_SIGN>.",
-                "20": "Lumabas sa exit <NUMBER_SIGN> patungo sa <TOWARD_SIGN>.",
-                "21": "Lumabas sa <BRANCH_SIGN> exit patungo sa <TOWARD_SIGN>.",
-                "22": "Lumabas sa exit <NUMBER_SIGN> sa <BRANCH_SIGN> patungo sa <TOWARD_SIGN>.",
-                "23": "Lumabas sa <NAME_SIGN> exit.",
-                "25": "Lumabas sa <NAME_SIGN> exit sa <BRANCH_SIGN>.",
-                "27": "Lumabas sa <NAME_SIGN> exit patungo sa <TOWARD_SIGN>.",
-                "29": "Lumabas sa <NAME_SIGN> exit sa <BRANCH_SIGN> patungo sa <TOWARD_SIGN>."
-            },
-            "relative_directions": [
-                "kaliwa",
-                "kanan"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Lumabas sa exit sa kaliwa.",
-                    "Lumabas sa exit sa kanan."
-                ],
-                "1": [
-                    "Lumabas sa exit 67 B-A sa kanan."
-                ],
-                "2": [
-                    "Lumabas sa U.S. 3 22 West exit sa kanan."
-                ],
-                "3": [
-                    "Lumabas sa exit 67 B-A sa kanan sa U.S. 3 22 West."
-                ],
-                "4": [
-                    "Lumabas sa exit sa kanan patungo sa Lewistown."
-                ],
-                "5": [
-                    "Lumabas sa exit 67 B-A sa kanan patungo sa Lewistown."
-                ],
-                "6": [
-                    "Lumabas sa U.S. 3 22 West exit sa kanan patungo sa Lewistown."
-                ],
-                "7": [
-                    "Lumabas sa exit 67 B-A sa kanan sa U.S. 3 22 West patungo sa Lewistown, State College."
-                ],
-                "8": [
-                    "Lumabas sa White Marsh Boulevard exit sa kaliwa."
-                ],
-                "10": [
-                    "Lumabas sa White Marsh Boulevard exit sa kaliwa sa Maryland 43 East."
-                ],
-                "12": [
-                    "Lumabas sa White Marsh Boulevard exit sa kaliwa patungo sa White Marsh."
-                ],
-                "14": [
-                    "Lumabas sa White Marsh Boulevard exit sa kaliwa sa Maryland 43 East patungo sa White Marsh."
-                ],
-                "15": [
-                    "Lumabas sa exit."
-                ],
-                "16": [
-                    "Lumabas sa exit 67 B-A."
-                ],
-                "17": [
-                    "Lumabas sa Interstate 95 exit."
-                ],
-                "18": [
-                    "Lumabas sa exit 67 B-A sa Interstate 95."
-                ],
-                "19": [
-                    "Lumabas sa exit patungo sa Lewistown."
-                ],
-                "20": [
-                    "Lumabas sa exit 67 B-A patungo sa Lewistown."
-                ],
-                "21": [
-                    "Lumabas sa U.S. 3 22 West exit patungo sa Lewistown."
-                ],
-                "22": [
-                    "Lumabas sa exit 67 B-A sa U.S. 3 22 West patungo sa Lewistown, State College."
-                ],
-                "23": [
-                    "Lumabas sa White Marsh Boulevard exit."
-                ],
-                "25": [
-                    "Lumabas sa White Marsh Boulevard exit sa Maryland 43 East."
-                ],
-                "27": [
-                    "Lumabas sa White Marsh Boulevard exit patungo sa White Marsh."
-                ],
-                "29": [
-                    "Lumabas sa White Marsh Boulevard exit sa Maryland 43 East patungo sa White Marsh."
-                ]
-            }
-        },
-        "exit_visual": {
-            "phrases": {
-                "0": "Lumabas sa <EXIT_NUMBERS>"
-            },
-            "example_phrases": {
-                "0": [
-                    "Lumabas sa 1A"
-                ]
-            }
-        },
-        "keep": {
-            "phrases": {
-                "0": "Manatili sa <RELATIVE_DIRECTION> sa sangang-daan.",
-                "1": "Manatili sa <RELATIVE_DIRECTION> upang kunin ang exit <NUMBER_SIGN>.",
-                "2": "Manatili sa <RELATIVE_DIRECTION> upang kunin ang <STREET_NAMES>.",
-                "3": "Manatili sa <RELATIVE_DIRECTION> upang kunin ang exit <NUMBER_SIGN> sa <STREET_NAMES>.",
-                "4": "Manatili sa <RELATIVE_DIRECTION> patungo sa <TOWARD_SIGN>.",
-                "5": "Manatili sa <RELATIVE_DIRECTION> upang kunin ang exit <NUMBER_SIGN> patungo sa <TOWARD_SIGN>.",
-                "6": "Manatili sa <RELATIVE_DIRECTION> upang kunin ang <STREET_NAMES> patungo sa <TOWARD_SIGN>.",
-                "7": "Manatili sa <RELATIVE_DIRECTION> upang kunin ang exit <NUMBER_SIGN> sa <STREET_NAMES> patungo sa <TOWARD_SIGN>."
-            },
-            "empty_street_name_labels": [
-                "ang daanan",
-                "ang bike lane",
-                "ang landas ng mountain bike",
-                "ang tawiran",
-                "ang hagdan",
-                "ang tulay",
-                "ang lagusan"
-            ],
-            "relative_directions": [
-                "kaliwa",
-                "derecho",
-                "kanan"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Manatili sa kaliwa sa sangang-daan.",
-                    "Manatili sa derecho sa sangang-daan.",
-                    "Manatili sa kanan sa sangang-daan."
-                ],
-                "1": [
-                    "Manatili sa kanan upang kunin ang exit 62."
-                ],
-                "2": [
-                    "Manatili sa kanan upang kunin ang I 895 South."
-                ],
-                "3": [
-                    "Manatili sa kanan upang kunin ang exit 62 sa I 895 South."
-                ],
-                "4": [
-                    "Manatili sa kanan patungo sa Annapolis."
-                ],
-                "5": [
-                    "Manatili sa kanan upang kunin ang exit 62 patungo sa Annapolis."
-                ],
-                "6": [
-                    "Manatili sa kanan upang kunin ang I 895 South patungo sa Annapolis."
-                ],
-                "7": [
-                    "Manatili sa kanan upang kunin ang exit 62 sa I 895 South patungo sa Annapolis."
-                ]
-            }
-        },
-        "keep_to_stay_on": {
-            "phrases": {
-                "0": "Manatili sa <RELATIVE_DIRECTION> upang manatili sa <STREET_NAMES>.",
-                "1": "Manatili sa <RELATIVE_DIRECTION> upang kunin ang exit <NUMBER_SIGN> upang manatili sa <STREET_NAMES>.",
-                "2": "Manatili sa <RELATIVE_DIRECTION> upang manatili sa <STREET_NAMES> patungo sa <TOWARD_SIGN>.",
-                "3": "Manatili sa <RELATIVE_DIRECTION> upang kunin ang exit <NUMBER_SIGN> upang manatili sa <STREET_NAMES> patungo sa <TOWARD_SIGN>."
-            },
-            "empty_street_name_labels": [
-                "ang daanan",
-                "ang bike lane",
-                "ang landas ng mountain bike",
-                "ang tawiran",
-                "ang hagdan",
-                "ang tulay",
-                "ang lagusan"
-            ],
-            "relative_directions": [
-                "kaliwa",
-                "derecho",
-                "kanan"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Manatili sa kaliwa upang manatili sa I 95 South.",
-                    "Manatili sa derecho upang manatili sa I 95 South.",
-                    "Manatili sa kanan upang manatili sa I 95 South."
-                ],
-                "1": [
-                    "Manatili sa kaliwa upang kunin ang exit 62 upang manatili sa I 95 South."
-                ],
-                "2": [
-                    "Manatili sa kaliwa upang manatili sa I 95 South patungo sa Baltimore."
-                ],
-                "3": [
-                    "Manatili sa kaliwa upang kunin ang exit 62 upang manatili sa I 95 South patungo sa Baltimore."
-                ]
-            }
-        },
-        "keep_to_stay_on_verbal": {
-            "phrases": {
-                "0": "Manatili sa <RELATIVE_DIRECTION> upang manatili sa <STREET_NAMES>.",
-                "1": "Manatili sa <RELATIVE_DIRECTION> upang kunin ang exit <NUMBER_SIGN> upang manatili sa <STREET_NAMES>.",
-                "2": "Manatili sa <RELATIVE_DIRECTION> upang manatili sa <STREET_NAMES> patungo sa <TOWARD_SIGN>.",
-                "3": "Manatili sa <RELATIVE_DIRECTION> upang kunin ang exit <NUMBER_SIGN> upang manatili sa <STREET_NAMES> patungo sa <TOWARD_SIGN>."
-            },
-            "empty_street_name_labels": [
-                "ang daanan",
-                "ang bike lane",
-                "ang landas ng mountain bike",
-                "ang tawiran",
-                "ang hagdan",
-                "ang tulay",
-                "ang lagusan"
-            ],
-            "relative_directions": [
-                "kaliwa",
-                "derecho",
-                "kanan"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Manatili sa kaliwa upang manatili sa Interstate 95 South.",
-                    "Manatili sa derecho upang manatili sa Interstate 95 South.",
-                    "Manatili sa kanan upang manatili sa Interstate 95 South."
-                ],
-                "1": [
-                    "Manatili sa kaliwa upang kunin ang exit 62 upang manatili sa Interstate 95 South."
-                ],
-                "2": [
-                    "Manatili sa kaliwa upang manatili sa I 95 South patungo sa Baltimore."
-                ],
-                "3": [
-                    "Manatili sa kaliwa upang kunin ang exit 62 upang manatili sa Interstate 95 South patungo sa Baltimore."
-                ]
-            }
-        },
-        "keep_verbal": {
-            "phrases": {
-                "0": "Manatili sa <RELATIVE_DIRECTION> sa sangang-daan.",
-                "1": "Manatili sa <RELATIVE_DIRECTION> upang kunin ang exit <NUMBER_SIGN>.",
-                "2": "Manatili sa <RELATIVE_DIRECTION> upang kunin ang <STREET_NAMES>.",
-                "3": "Manatili sa <RELATIVE_DIRECTION> upang kunin ang exit <NUMBER_SIGN> sa <STREET_NAMES>.",
-                "4": "Manatili sa <RELATIVE_DIRECTION> patungo sa <TOWARD_SIGN>.",
-                "5": "Manatili sa <RELATIVE_DIRECTION> upang kunin ang exit <NUMBER_SIGN> patungo sa <TOWARD_SIGN>.",
-                "6": "Manatili sa <RELATIVE_DIRECTION> upang kunin ang <STREET_NAMES> patungo sa <TOWARD_SIGN>.",
-                "7": "Manatili sa <RELATIVE_DIRECTION> upang kunin ang exit <NUMBER_SIGN> sa <STREET_NAMES> patungo sa <TOWARD_SIGN>."
-            },
-            "empty_street_name_labels": [
-                "ang daanan",
-                "ang bike lane",
-                "ang landas ng mountain bike",
-                "ang tawiran",
-                "ang hagdan",
-                "ang tulay",
-                "ang lagusan"
-            ],
-            "relative_directions": [
-                "kaliwa",
-                "derecho",
-                "kanan"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Manatili sa kaliwa sa sangang-daan.",
-                    "Manatili sa derecho sa sangang-daan.",
-                    "Manatili sa kanan sa sangang-daan."
-                ],
-                "1": [
-                    "Manatili sa kanan upang kunin ang exit 62."
-                ],
-                "2": [
-                    "Manatili sa kanan upang kunin ang Interstate 8 95 South."
-                ],
-                "3": [
-                    "Manatili sa kanan upang kunin ang exit 62 sa Interstate 8 95 South."
-                ],
-                "4": [
-                    "Manatili sa kanan patungo sa Annapolis."
-                ],
-                "5": [
-                    "Manatili sa kanan upang kunin ang exit 62 patungo sa Annapolis."
-                ],
-                "6": [
-                    "Manatili sa kanan upang kunin ang Interstate 8 95 South patungo sa Annapolis."
-                ],
-                "7": [
-                    "Manatili sa kanan upang kunin ang exit 62 sa Interstate 8 95 South patungo sa Annapolis."
-                ]
-            }
-        },
-        "merge": {
-            "phrases": {
-                "0": "Sumanib.",
-                "1": "Sumanib sa <RELATIVE_DIRECTION>.",
-                "2": "Sumanib sa <STREET_NAMES>.",
-                "3": "Sumanib sa <RELATIVE_DIRECTION> sa <STREET_NAMES>.",
-                "4": "Sumanib patungo sa <TOWARD_SIGN>.",
-                "5": "Sumanib sa <RELATIVE_DIRECTION> patungo sa <TOWARD_SIGN>."
-            },
-            "relative_directions": [
-                "kaliwa",
-                "kanan"
-            ],
-            "empty_street_name_labels": [
-                "ang daanan",
-                "ang bike lane",
-                "ang landas ng mountain bike",
-                "ang tawiran",
-                "ang hagdan",
-                "ang tulay",
-                "ang lagusan"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Sumanib."
-                ],
-                "1": [
-                    "Sumanib sa kaliwa."
-                ],
-                "2": [
-                    "Sumanib sa I 76 West/Pennsylvania Turnpike."
-                ],
-                "3": [
-                    "Sumanib sa kanan sa I 83 South."
-                ],
-                "4": [
-                    "Sumanib patungo sa Baltimore."
-                ],
-                "5": [
-                    "Sumanib sa kanan patungo sa Baltimore."
-                ]
-            }
-        },
-        "merge_verbal": {
-            "phrases": {
-                "0": "Sumanib.",
-                "1": "Sumanib sa <RELATIVE_DIRECTION>.",
-                "2": "Sumanib sa <STREET_NAMES>.",
-                "3": "Sumanib sa <RELATIVE_DIRECTION> sa <STREET_NAMES>.",
-                "4": "Sumanib patungo sa <TOWARD_SIGN>.",
-                "5": "Sumanib sa <RELATIVE_DIRECTION> patungo sa <TOWARD_SIGN>."
-            },
-            "relative_directions": [
-                "kaliwa",
-                "kanan"
-            ],
-            "empty_street_name_labels": [
-                "ang daanan",
-                "ang bike lane",
-                "ang landas ng mountain bike",
-                "ang tawiran",
-                "ang hagdan",
-                "ang tulay",
-                "ang lagusan"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Sumanib."
-                ],
-                "1": [
-                    "Sumanib sa kaliwa."
-                ],
-                "2": [
-                    "Sumanib sa I 76 West/Pennsylvania Turnpike."
-                ],
-                "3": [
-                    "Sumanib sa kanan sa I 83 South."
-                ],
-                "4": [
-                    "Sumanib patungo sa Baltimore."
-                ],
-                "5": [
-                    "Sumanib sa kanan patungo sa Baltimore."
-                ]
-            }
-        },
-        "post_transition_transit_verbal": {
-            "phrases": {
-                "0": "Magbiyahe ng <TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>."
-            },
-            "transit_stop_count_labels": {
-                "one": "hintuan",
-                "other": "mga hintuan"
-            },
-            "example_phrases": {
-                "0": [
-                    "Magbiyahe ng 1 hintuan.",
-                    "Magbiyahe ng 3 mga hintuan."
-                ]
-            }
-        },
-        "post_transition_verbal": {
-            "phrases": {
-                "0": "Magpatuloy ng <LENGTH>.",
-                "1": "Magpatuloy sa <STREET_NAMES> ng <LENGTH>."
-            },
-            "empty_street_name_labels": [
-                "ang daanan",
-                "ang bike lane",
-                "ang landas ng mountain bike",
-                "ang tawiran",
-                "ang hagdan",
-                "ang tulay",
-                "ang lagusan"
-            ],
-            "metric_lengths": [
-                "<KILOMETERS> kilometro",
-                "1 kilometro",
-                "<METERS> metro",
-                "mas mababa sa 10 metro"
-            ],
-            "us_customary_lengths": [
-                "<MILES> milya",
-                "1 milya",
-                "kalahating milya",
-                "isang-kapat na milya",
-                "<FEET> paa",
-                "mas mababa sa 10 paa"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Magpatuloy ng 300 paa.",
-                    "Magpatuloy ng 9 milya."
-                ],
-                "1": [
-                    "Magpatuloy sa Pennsylvania 7 43 ng 6.2 milya.",
-                    "Magpatuloy sa Main Street, Vermont 30 ng 1 ikasampung bahagi ng milya."
-                ]
-            }
-        },
-        "ramp": {
-            "phrases": {
-                "0": "Kunin ang rampa sa <RELATIVE_DIRECTION>.",
-                "1": "Kunin ang <BRANCH_SIGN> rampa sa <RELATIVE_DIRECTION>.",
-                "2": "Kunin ang rampa sa <RELATIVE_DIRECTION> patungo sa <TOWARD_SIGN>.",
-                "3": "Kunin ang <BRANCH_SIGN> rampa sa <RELATIVE_DIRECTION> patungo sa <TOWARD_SIGN>.",
-                "4": "Kunin ang <NAME_SIGN> rampa sa <RELATIVE_DIRECTION>.",
-                "5": "Lumiko sa <RELATIVE_DIRECTION> upang kunin ang rampa.",
-                "6": "Lumiko sa <RELATIVE_DIRECTION> upang kunin ang <BRANCH_SIGN> rampa.",
-                "7": "Lumiko sa <RELATIVE_DIRECTION> upang kunin ang rampa patungo sa <TOWARD_SIGN>.",
-                "8": "Lumiko sa <RELATIVE_DIRECTION> upang kunin ang <BRANCH_SIGN> rampa patungo sa <TOWARD_SIGN>.",
-                "9": "Lumiko sa <RELATIVE_DIRECTION> upang kunin ang <NAME_SIGN> rampa.",
-                "10": "Kunin ang rampa.",
-                "11": "Kunin ang <BRANCH_SIGN> rampa.",
-                "12": "Kunin ang rampa patungo sa <TOWARD_SIGN>.",
-                "13": "Kunin ang <BRANCH_SIGN> rampa patungo sa <TOWARD_SIGN>.",
-                "14": "Kunin ang <NAME_SIGN> rampa."
-            },
-            "relative_directions": [
-                "kaliwa",
-                "kanan"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Kunin ang rampa sa kaliwa.",
-                    "Kunin ang rampa sa kanan."
-                ],
-                "1": [
-                    "Kunin ang I 95 rampa sa kanan."
-                ],
-                "2": [
-                    "Kunin ang rampa sa kaliwa patungo sa JFK."
-                ],
-                "3": [
-                    "Kunin ang South Conduit Avenue rampa sa kaliwa patungo sa JFK."
-                ],
-                "4": [
-                    "Kunin ang Gettysburg Pike rampa sa kanan."
-                ],
-                "5": [
-                    "Lumiko sa kaliwa upang kunin ang rampa.",
-                    "Lumiko sa kanan upang kunin ang rampa."
-                ],
-                "6": [
-                    "Lumiko sa kaliwa upang kunin ang PA 283 West rampa."
-                ],
-                "7": [
-                    "Lumiko sa kaliwa upang kunin ang rampa patungo sa Harrisburg/Harrisburg International Airport."
-                ],
-                "8": [
-                    "Lumiko sa kaliwa upang kunin ang PA 283 West rampa patungo sa Harrisburg/Harrisburg International Airport."
-                ],
-                "9": [
-                    "Lumiko sa kanan upang kunin ang Gettysburg Pike rampa."
-                ],
-                "10": [
-                    "Kunin ang rampa."
-                ],
-                "11": [
-                    "Kunin ang I 95 rampa."
-                ],
-                "12": [
-                    "Kunin ang rampa patungo sa JFK."
-                ],
-                "13": [
-                    "Kunin ang South Conduit Avenue rampa patungo sa JFK."
-                ],
-                "14": [
-                    "Kunin ang Gettysburg rampa."
-                ]
-            }
-        },
-        "ramp_straight": {
-            "phrases": {
-                "0": "Dumiretso upang kunin ang rampa.",
-                "1": "Dumiretso upang kunin ang <BRANCH_SIGN> rampa.",
-                "2": "Dumiretso upang kunin ang rampa patungo sa <TOWARD_SIGN>.",
-                "3": "Dumiretso upang kunin ang <BRANCH_SIGN> rampa patungo sa <TOWARD_SIGN>.",
-                "4": "Dumiretso upang kunin ang <NAME_SIGN> rampa."
-            },
-            "example_phrases": {
-                "0": [
-                    "Dumiretso upang kunin ang rampa."
-                ],
-                "1": [
-                    "Dumiretso upang kunin ang US 322 East rampa."
-                ],
-                "2": [
-                    "Dumiretso upang kunin ang rampa patungo sa Hershey."
-                ],
-                "3": [
-                    "Dumiretso upang kunin ang US 322 East/US 422 East/US 522 East/US 622 East rampa patungo sa Hershey/Palmdale/Palmyra/Campbelltown."
-                ],
-                "4": [
-                    "Dumiretso upang kunin ang Gettysburg Pike rampa."
-                ]
-            }
-        },
-        "ramp_straight_verbal": {
-            "phrases": {
-                "0": "Dumiretso upang kunin ang rampa.",
-                "1": "Dumiretso upang kunin ang <BRANCH_SIGN> rampa.",
-                "2": "Dumiretso upang kunin ang rampa patungo sa <TOWARD_SIGN>.",
-                "3": "Dumiretso upang kunin ang <BRANCH_SIGN> rampa patungo sa <TOWARD_SIGN>.",
-                "4": "Dumiretso upang kunin ang <NAME_SIGN> rampa."
-            },
-            "example_phrases": {
-                "0": [
-                    "Dumiretso upang kunin ang rampa."
-                ],
-                "1": [
-                    "Dumiretso upang kunin ang U.S. 3 22 East rampa."
-                ],
-                "2": [
-                    "Dumiretso upang kunin ang rampa patungo sa Hershey."
-                ],
-                "3": [
-                    "Dumiretso upang kunin ang U.S. 3 22 East, U.S. 4 22 East rampa patungo sa Hershey, Palmdale."
-                ],
-                "4": [
-                    "Dumiretso upang kunin ang Gettysburg Pike rampa."
-                ]
-            }
-        },
-        "ramp_verbal": {
-            "phrases": {
-                "0": "Kunin ang rampa sa <RELATIVE_DIRECTION>.",
-                "1": "Kunin ang <BRANCH_SIGN> rampa sa <RELATIVE_DIRECTION>.",
-                "2": "Kunin ang rampa sa <RELATIVE_DIRECTION> patungo sa <TOWARD_SIGN>.",
-                "3": "Kunin ang <BRANCH_SIGN> rampa sa <RELATIVE_DIRECTION> patungo sa <TOWARD_SIGN>.",
-                "4": "Kunin ang <NAME_SIGN> rampa sa <RELATIVE_DIRECTION>.",
-                "5": "Lumiko sa <RELATIVE_DIRECTION> upang kunin ang rampa.",
-                "6": "Lumiko sa <RELATIVE_DIRECTION> upang kunin ang <BRANCH_SIGN> rampa.",
-                "7": "Lumiko sa <RELATIVE_DIRECTION> upang kunin ang rampa patungo sa <TOWARD_SIGN>.",
-                "8": "Lumiko sa <RELATIVE_DIRECTION> upang kunin ang <BRANCH_SIGN> rampa patungo sa <TOWARD_SIGN>.",
-                "9": "Lumiko sa <RELATIVE_DIRECTION> upang kunin ang <NAME_SIGN> rampa.",
-                "10": "Kunin ang rampa.",
-                "11": "Kunin ang <BRANCH_SIGN> rampa.",
-                "12": "Kunin ang rampa patungo sa <TOWARD_SIGN>.",
-                "13": "Kunin ang <BRANCH_SIGN> rampa patungo sa <TOWARD_SIGN>.",
-                "14": "Kunin ang <NAME_SIGN> rampa."
-            },
-            "relative_directions": [
-                "kaliwa",
-                "kanan"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Kunin ang rampa sa kaliwa.",
-                    "Kunin ang rampa sa kanan."
-                ],
-                "1": [
-                    "Kunin ang Interstate 95 rampa sa kanan."
-                ],
-                "2": [
-                    "Kunin ang rampa sa kaliwa patungo sa JFK."
-                ],
-                "3": [
-                    "Kunin ang South Conduit Avenue rampa sa kaliwa patungo sa JFK."
-                ],
-                "4": [
-                    "Kunin ang Gettysburg Pike rampa sa kanan."
-                ],
-                "5": [
-                    "Lumiko sa kaliwa upang kunin ang rampa.",
-                    "Lumiko sa kanan upang kunin ang rampa."
-                ],
-                "6": [
-                    "Lumiko sa kaliwa upang kunin ang Pennsylvania 2 83 West rampa."
-                ],
-                "7": [
-                    "Lumiko sa kaliwa upang kunin ang rampa patungo sa Harrisburg/Harrisburg International Airport."
-                ],
-                "8": [
-                    "Lumiko sa kaliwa upang kunin ang Pennsylvania 2 83 West rampa patungo sa Harrisburg, Harrisburg International Airport."
-                ],
-                "9": [
-                    "Lumiko sa kanan upang kunin ang Gettysburg Pike rampa."
-                ],
-                "10": [
-                    "Kunin ang rampa."
-                ],
-                "11": [
-                    "Kunin ang Interstate 95 rampa."
-                ],
-                "12": [
-                    "Kunin ang rampa patungo sa JFK."
-                ],
-                "13": [
-                    "Kunin ang South Conduit Avenue rampa patungo sa JFK."
-                ],
-                "14": [
-                    "Kunin ang Gettysburg Pike rampa."
-                ]
-            }
-        },
-        "sharp": {
-            "phrases": {
-                "0": "Lumiko ng matalim sa <RELATIVE_DIRECTION>.",
-                "1": "Lumiko ng matalim sa <RELATIVE_DIRECTION> sa <STREET_NAMES>.",
-                "2": "Lumiko ng matalim sa <RELATIVE_DIRECTION> sa <BEGIN_STREET_NAMES>. Magpatuloy sa <STREET_NAMES>.",
-                "3": "Lumiko ng matalim sa <RELATIVE_DIRECTION> upang manatili sa <STREET_NAMES>.",
-                "4": "Lumiko ng matalim sa <RELATIVE_DIRECTION> sa <JUNCTION_NAME>.",
-                "5": "Lumiko ng matalim sa <RELATIVE_DIRECTION> patungo sa <TOWARD_SIGN>."
-            },
-            "empty_street_name_labels": [
-                "ang daanan",
-                "ang bike lane",
-                "ang landas ng mountain bike",
-                "ang tawiran",
-                "ang hagdan",
-                "ang tulay",
-                "ang lagusan"
-            ],
-            "relative_directions": [
-                "kaliwa",
-                "kanan"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Lumiko ng matalim sa kaliwa."
-                ],
-                "1": [
-                    "Lumiko ng matalim sa kanan sa Flatbush Avenue."
-                ],
-                "2": [
-                    "Lumiko ng matalim sa kaliwa sa North Bond Street/US 1 Business/MD 924. Magpatuloy sa MD 924."
-                ],
-                "3": [
-                    "Lumiko ng matalim sa kanan upang manatili sa Sunstone Drive."
-                ],
-                "4": [
-                    "Lumiko ng matalim sa kanan sa Mannenbashi East."
-                ],
-                "5": [
-                    "Lumiko ng matalim sa kaliwa patungo sa Baltimore."
-                ]
-            }
-        },
-        "sharp_verbal": {
-            "phrases": {
-                "0": "Lumiko ng matalim sa <RELATIVE_DIRECTION>.",
-                "1": "Lumiko ng matalim sa <RELATIVE_DIRECTION> sa <STREET_NAMES>.",
-                "2": "Lumiko ng matalim sa <RELATIVE_DIRECTION> sa <BEGIN_STREET_NAMES>.",
-                "3": "Lumiko ng matalim sa <RELATIVE_DIRECTION> upang manatili sa <STREET_NAMES>.",
-                "4": "Lumiko ng matalim sa <RELATIVE_DIRECTION> sa <JUNCTION_NAME>.",
-                "5": "Lumiko ng matalim sa <RELATIVE_DIRECTION> patungo sa <TOWARD_SIGN>."
-            },
-            "empty_street_name_labels": [
-                "ang daanan",
-                "ang bike lane",
-                "ang landas ng mountain bike",
-                "ang tawiran",
-                "ang hagdan",
-                "ang tulay",
-                "ang lagusan"
-            ],
-            "relative_directions": [
-                "kaliwa",
-                "kanan"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Lumiko ng matalim sa kaliwa."
-                ],
-                "1": [
-                    "Lumiko ng matalim sa kanan sa Flatbush Avenue."
-                ],
-                "2": [
-                    "Lumiko ng matalim sa kaliwa sa North Bond Street, U.S. 1 Business."
-                ],
-                "3": [
-                    "Lumiko ng matalim sa kanan upang manatili sa Sunstone Drive."
-                ],
-                "4": [
-                    "Lumiko ng matalim sa kanan sa Mannenbashi East."
-                ],
-                "5": [
-                    "Lumiko ng matalim sa kaliwa patungo sa Baltimore."
-                ]
-            }
-        },
-        "start": {
-            "phrases": {
-                "0": "Tumungo sa <CARDINAL_DIRECTION>.",
-                "1": "Tumungo sa <CARDINAL_DIRECTION> sa <STREET_NAMES>.",
-                "2": "Tumungo sa <CARDINAL_DIRECTION> sa <BEGIN_STREET_NAMES>. Magpatuloy sa <STREET_NAMES>.",
-                "4": "Magmaneho sa <CARDINAL_DIRECTION>.",
-                "5": "Magmaneho sa <CARDINAL_DIRECTION> sa <STREET_NAMES>.",
-                "6": "Magmaneho sa <CARDINAL_DIRECTION> sa <BEGIN_STREET_NAMES>. Magpatuloy sa <STREET_NAMES>.",
-                "8": "Maglakad sa <CARDINAL_DIRECTION>.",
-                "9": "Maglakad sa <CARDINAL_DIRECTION> sa <STREET_NAMES>.",
-                "10": "Maglakad sa <CARDINAL_DIRECTION> sa <BEGIN_STREET_NAMES>. Magpatuloy sa <STREET_NAMES>.",
-                "16": "Magbisikleta sa <CARDINAL_DIRECTION>.",
-                "17": "Magbisikleta sa <CARDINAL_DIRECTION> sa <STREET_NAMES>.",
-                "18": "Magbisikleta sa <CARDINAL_DIRECTION> sa <BEGIN_STREET_NAMES>. Magpatuloy sa <STREET_NAMES>."
-            },
-            "cardinal_directions": [
-                "hilaga",
-                "hilagang-silangan",
-                "silangan",
-                "timog-silangan",
-                "timog",
-                "timog-kanluran",
-                "kanluran",
-                "hilagang-kanluran"
-            ],
-            "empty_street_name_labels": [
-                "ang daanan",
-                "ang bike lane",
-                "ang landas ng mountain bike",
-                "ang tawiran",
-                "ang hagdan",
-                "ang tulay",
-                "ang lagusan"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Tumungo sa silangan.",
-                    "Tumungo sa hilaga."
-                ],
-                "1": [
-                    "Tumungo sa timog-kanluran sa 5th Avenue.",
-                    "Tumungo sa kanluran sa walkway",
-                    "Tumungo sa silangan sa cycleway",
-                    "Tumungo sa hilaga sa mountain bike trail"
-                ],
-                "2": [
-                    "Tumungo sa timog sa North Prince Street/US 222/PA 272. Magpatuloy sa US 222/PA 272."
-                ],
-                "4": [
-                    "Magmaneho sa silangan.",
-                    "Magmaneho sa hilaga."
-                ],
-                "5": [
-                    "Magmaneho sa timog-kanluran sa 5th Avenue."
-                ],
-                "6": [
-                    "Magmaneho sa timog sa North Prince Street/US 222/PA 272. Magpatuloy sa US 222/PA 272."
-                ],
-                "8": [
-                    "Maglakad sa silangan.",
-                    "Maglakad sa hilaga."
-                ],
-                "9": [
-                    "Maglakad sa timog-kanluran sa 5th Avenue.",
-                    "Maglakad sa kanluran sa walkway"
-                ],
-                "10": [
-                    "Maglakad sa timog sa North Prince Street/US 222/PA 272. Magpatuloy sa US 222/PA 272."
-                ],
-                "16": [
-                    "Magbisikleta sa silangan.",
-                    "Magbisikleta sa hilaga."
-                ],
-                "17": [
-                    "Magbisikleta sa timog-kanluran sa 5th Avenue.",
-                    "Magbisikleta sa silangan sa cycleway",
-                    "Magbisikleta sa hilaga sa mountain bike trail"
-                ],
-                "18": [
-                    "Magbisikleta sa timog sa North Prince Street/US 222/PA 272. Magpatuloy sa US 222/PA 272."
-                ]
-            }
-        },
-        "start_verbal": {
-            "phrases": {
-                "0": "Tumungo sa <CARDINAL_DIRECTION>.",
-                "1": "Tumungo sa <CARDINAL_DIRECTION> ng <LENGTH>.",
-                "2": "Tumungo sa <CARDINAL_DIRECTION> sa <STREET_NAMES>.",
-                "3": "Tumungo sa <CARDINAL_DIRECTION> sa <STREET_NAMES> ng <LENGTH>.",
-                "4": "Tumungo sa <CARDINAL_DIRECTION> sa <BEGIN_STREET_NAMES>.",
-                "5": "Magmaneho sa <CARDINAL_DIRECTION>.",
-                "6": "Magmaneho sa <CARDINAL_DIRECTION> ng <LENGTH>.",
-                "7": "Magmaneho sa <CARDINAL_DIRECTION> sa <STREET_NAMES>.",
-                "8": "Magmaneho sa <CARDINAL_DIRECTION> sa <STREET_NAMES> ng <LENGTH>.",
-                "9": "Magmaneho sa <CARDINAL_DIRECTION> sa <BEGIN_STREET_NAMES>.",
-                "10": "Maglakad sa <CARDINAL_DIRECTION>.",
-                "11": "Maglakad sa <CARDINAL_DIRECTION> ng <LENGTH>.",
-                "12": "Maglakad sa <CARDINAL_DIRECTION> sa <STREET_NAMES>.",
-                "13": "Maglakad sa <CARDINAL_DIRECTION> sa <STREET_NAMES> ng <LENGTH>.",
-                "14": "Maglakad sa <CARDINAL_DIRECTION> sa <BEGIN_STREET_NAMES>.",
-                "15": "Magbisikleta sa <CARDINAL_DIRECTION>.",
-                "16": "Magbisikleta sa <CARDINAL_DIRECTION> ng <LENGTH>.",
-                "17": "Magbisikleta sa <CARDINAL_DIRECTION> sa <STREET_NAMES>.",
-                "18": "Magbisikleta sa <CARDINAL_DIRECTION> sa <STREET_NAMES> ng <LENGTH>.",
-                "19": "Magbisikleta sa <CARDINAL_DIRECTION> sa <BEGIN_STREET_NAMES>."
-            },
-            "cardinal_directions": [
-                "hilaga",
-                "hilagang-silangan",
-                "silangan",
-                "timog-silangan",
-                "timog",
-                "timog-kanluran",
-                "kanluran",
-                "hilagang-kanluran"
-            ],
-            "empty_street_name_labels": [
-                "ang daanan",
-                "ang bike lane",
-                "ang landas ng mountain bike",
-                "ang tawiran",
-                "ang hagdan",
-                "ang tulay",
-                "ang lagusan"
-            ],
-            "metric_lengths": [
-                "<KILOMETERS> kilometro",
-                "1 kilometro",
-                "<METERS> metro",
-                "mas mababa sa 10 metro"
-            ],
-            "us_customary_lengths": [
-                "<MILES> milya",
-                "1 milya",
-                "kalahating milya",
-                "isang-kapat na milya",
-                "<FEET> paa",
-                "mas mababa sa 10 paa"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Tumungo sa silangan.",
-                    "Tumungo sa hilaga."
-                ],
-                "1": [
-                    "Tumungo sa silangan ng kalahating milya.",
-                    "Tumungo sa hilaga ng 1 kilometro."
-                ],
-                "2": [
-                    "Tumungo sa timog-kanluran sa 5th Avenue."
-                ],
-                "3": [
-                    "Tumungo sa timog-kanluran sa 5th Avenue ng 1 ikasampung bahagi ng milya."
-                ],
-                "4": [
-                    "Tumungo sa timog sa North Prince Street, U.S. 2 22."
-                ],
-                "5": [
-                    "Magmaneho sa silangan.",
-                    "Magmaneho sa hilaga."
-                ],
-                "6": [
-                    "Magmaneho sa silangan ng kalahating milya.",
-                    "Magmaneho sa hilaga ng 1 kilometro."
-                ],
-                "7": [
-                    "Magmaneho sa timog-kanluran sa 5th Avenue."
-                ],
-                "8": [
-                    "Magmaneho sa timog-kanluran sa 5th Avenue ng 1 ikasampung bahagi ng milya."
-                ],
-                "9": [
-                    "Magmaneho sa timog sa North Prince Street, U.S. 2 22."
-                ],
-                "10": [
-                    "Maglakad sa silangan.",
-                    "Maglakad sa hilaga."
-                ],
-                "11": [
-                    "Maglakad sa silangan ng kalahating milya.",
-                    "Maglakad sa hilaga ng 1 kilometro."
-                ],
-                "12": [
-                    "Maglakad sa timog-kanluran sa 5th Avenue."
-                ],
-                "13": [
-                    "Maglakad sa timog-kanluran sa 5th Avenue ng 1 ikasampung bahagi ng milya."
-                ],
-                "14": [
-                    "Maglakad sa timog sa North Prince Street, U.S. 2 22."
-                ],
-                "15": [
-                    "Magbisikleta sa silangan.",
-                    "Magbisikleta sa hilaga."
-                ],
-                "16": [
-                    "Magbisikleta sa silangan ng kalahating milya.",
-                    "Magbisikleta sa hilaga ng 1 kilometro."
-                ],
-                "17": [
-                    "Magbisikleta sa timog-kanluran sa 5th Avenue."
-                ],
-                "18": [
-                    "Magbisikleta sa timog-kanluran sa 5th Avenue ng 1 ikasampung bahagi ng milya."
-                ],
-                "19": [
-                    "Magbisikleta sa timog sa North Prince Street, U.S. 2 22."
-                ]
-            }
-        },
-        "transit": {
-            "phrases": {
-                "0": "Sakay sa <TRANSIT_NAME>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)",
-                "1": "Sakay sa <TRANSIT_NAME> patungo sa <TRANSIT_HEADSIGN>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)"
-            },
-            "empty_transit_name_labels": [
-                "tram",
-                "metro",
-                "tren",
-                "bus",
-                "ferry",
-                "cable car",
-                "gondola",
-                "funicular"
-            ],
-            "transit_stop_count_labels": {
-                "one": "hintuan",
-                "other": "mga hintuan"
-            },
-            "example_phrases": {
-                "0": [
-                    "Sakay sa New Haven. (1 hintuan)",
-                    "Sakay sa metro. (2 mga hintuan)",
-                    "Sakay sa bus. (12 mga hintuan)"
-                ],
-                "1": [
-                    "Sakay sa F patungo sa JAMAICA - 179 ST. (10 mga hintuan)",
-                    "Sakay sa ferry patungo sa Staten Island. (1 hintuan)"
-                ]
-            }
-        },
-        "transit_connection_destination": {
-            "phrases": {
-                "0": "Lumabas sa istasyon.",
-                "1": "Lumabas sa <TRANSIT_STOP>.",
-                "2": "Lumabas sa <TRANSIT_STOP> <STATION_LABEL>."
-            },
-            "station_label": "Istasyon",
-            "example_phrases": {
-                "0": [
-                    "Lumabas sa istasyon."
-                ],
-                "1": [
-                    "Lumabas sa Embarcadero Istasyon."
-                ],
-                "2": [
-                    "Lumabas sa 8 St - NYU Istasyon."
-                ]
-            }
-        },
-        "transit_connection_destination_verbal": {
-            "phrases": {
-                "0": "Lumabas sa istasyon.",
-                "1": "Lumabas sa <TRANSIT_STOP>.",
-                "2": "Lumabas sa <TRANSIT_STOP> <STATION_LABEL>."
-            },
-            "station_label": "Istasyon",
-            "example_phrases": {
-                "0": [
-                    "Lumabas sa istasyon."
-                ],
-                "1": [
-                    "Lumabas sa Embarcadero Istasyon."
-                ],
-                "2": [
-                    "Lumabas sa 8 St - NYU Istasyon."
-                ]
-            }
-        },
-        "transit_connection_start": {
-            "phrases": {
-                "0": "Pumasok sa istasyon.",
-                "1": "Pumasok sa <TRANSIT_STOP>.",
-                "2": "Pumasok sa <TRANSIT_STOP> <STATION_LABEL>."
-            },
-            "station_label": "Istasyon",
-            "example_phrases": {
-                "0": [
-                    "Pumasok sa istasyon."
-                ],
-                "1": [
-                    "Pumasok sa Embarcadero Istasyon."
-                ],
-                "2": [
-                    "Pumasok sa 8 St - NYU Istasyon."
-                ]
-            }
-        },
-        "transit_connection_start_verbal": {
-            "phrases": {
-                "0": "Pumasok sa istasyon.",
-                "1": "Pumasok sa <TRANSIT_STOP>.",
-                "2": "Pumasok sa <TRANSIT_STOP> <STATION_LABEL>."
-            },
-            "station_label": "Istasyon",
-            "example_phrases": {
-                "0": [
-                    "Pumasok sa istasyon."
-                ],
-                "1": [
-                    "Pumasok sa Embarcadero Istasyon."
-                ],
-                "2": [
-                    "Pumasok sa 8 St - NYU Istasyon."
-                ]
-            }
-        },
-        "transit_connection_transfer": {
-            "phrases": {
-                "0": "Lumipat sa istasyon.",
-                "1": "Lumipat sa <TRANSIT_STOP>.",
-                "2": "Lumipat sa <TRANSIT_STOP> <STATION_LABEL>."
-            },
-            "station_label": "Istasyon",
-            "example_phrases": {
-                "0": [
-                    "Lumipat sa istasyon."
-                ],
-                "1": [
-                    "Lumipat sa Embarcadero Istasyon."
-                ],
-                "2": [
-                    "Lumipat sa 8 St - NYU Istasyon."
-                ]
-            }
-        },
-        "transit_connection_transfer_verbal": {
-            "phrases": {
-                "0": "Lumipat sa istasyon.",
-                "1": "Lumipat sa <TRANSIT_STOP>.",
-                "2": "Lumipat sa <TRANSIT_STOP> <STATION_LABEL>."
-            },
-            "station_label": "Istasyon",
-            "example_phrases": {
-                "0": [
-                    "Lumipat sa istasyon."
-                ],
-                "1": [
-                    "Lumipat sa Embarcadero Istasyon."
-                ],
-                "2": [
-                    "Lumipat sa 8 St - NYU Istasyon."
-                ]
-            }
-        },
-        "transit_remain_on": {
-            "phrases": {
-                "0": "Manatili sa <TRANSIT_NAME>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)",
-                "1": "Manatili sa <TRANSIT_NAME> patungo sa <TRANSIT_HEADSIGN>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)"
-            },
-            "empty_transit_name_labels": [
-                "tram",
-                "metro",
-                "tren",
-                "bus",
-                "ferry",
-                "cable car",
-                "gondola",
-                "funicular"
-            ],
-            "transit_stop_count_labels": {
-                "one": "hintuan",
-                "other": "mga hintuan"
-            },
-            "example_phrases": {
-                "0": [
-                    "Manatili sa New Haven. (1 hintuan)",
-                    "Manatili sa tren. (3 mga hintuan)"
-                ],
-                "1": [
-                    "Manatili sa F patungo sa JAMAICA - 179 ST. (10 mga hintuan)"
-                ]
-            }
-        },
-        "transit_remain_on_verbal": {
-            "phrases": {
-                "0": "Manatili sa <TRANSIT_NAME>.",
-                "1": "Manatili sa <TRANSIT_NAME> patungo sa <TRANSIT_HEADSIGN>."
-            },
-            "empty_transit_name_labels": [
-                "tram",
-                "metro",
-                "tren",
-                "bus",
-                "ferry",
-                "cable car",
-                "gondola",
-                "funicular"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Manatili sa New Haven."
-                ],
-                "1": [
-                    "Manatili sa F patungo sa JAMAICA - 179 ST."
-                ]
-            }
-        },
-        "transit_transfer": {
-            "phrases": {
-                "0": "Lumipat upang sakay sa <TRANSIT_NAME>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)",
-                "1": "Lumipat upang sakay sa <TRANSIT_NAME> patungo sa <TRANSIT_HEADSIGN>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)"
-            },
-            "empty_transit_name_labels": [
-                "tram",
-                "metro",
-                "tren",
-                "bus",
-                "ferry",
-                "cable car",
-                "gondola",
-                "funicular"
-            ],
-            "transit_stop_count_labels": {
-                "one": "hintuan",
-                "other": "mga hintuan"
-            },
-            "example_phrases": {
-                "0": [
-                    "Lumipat upang sakay sa New Haven. (1 hintuan)",
-                    "Lumipat upang sakay sa tram. (4 mga hintuan)"
-                ],
-                "1": [
-                    "Lumipat upang sakay sa F patungo sa JAMAICA - 179 ST. (10 mga hintuan)"
-                ]
-            }
-        },
-        "transit_transfer_verbal": {
-            "phrases": {
-                "0": "Lumipat upang sakay sa <TRANSIT_NAME>.",
-                "1": "Lumipat upang sakay sa <TRANSIT_NAME> patungo sa <TRANSIT_HEADSIGN>."
-            },
-            "empty_transit_name_labels": [
-                "tram",
-                "metro",
-                "tren",
-                "bus",
-                "ferry",
-                "cable car",
-                "gondola",
-                "funicular"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Lumipat upang sakay sa New Haven."
-                ],
-                "1": [
-                    "Lumipat upang sakay sa F patungo sa JAMAICA - 179 ST."
-                ]
-            }
-        },
-        "transit_verbal": {
-            "phrases": {
-                "0": "Sakay sa <TRANSIT_NAME>.",
-                "1": "Sakay sa <TRANSIT_NAME> patungo sa <TRANSIT_HEADSIGN>."
-            },
-            "empty_transit_name_labels": [
-                "tram",
-                "metro",
-                "tren",
-                "bus",
-                "ferry",
-                "cable car",
-                "gondola",
-                "funicular"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Sakay sa New Haven."
-                ],
-                "1": [
-                    "Sakay sa F patungo sa JAMAICA - 179 ST."
-                ]
-            }
-        },
-        "turn": {
-            "phrases": {
-                "0": "Kumaliwa <RELATIVE_DIRECTION>.",
-                "1": "Kumaliwa <RELATIVE_DIRECTION> papunta sa <STREET_NAMES>.",
-                "2": "Kumaliwa <RELATIVE_DIRECTION> upang ituloy sa <STREET_NAMES>.",
-                "3": "Kumaliwa <RELATIVE_DIRECTION> upang manatili sa <STREET_NAMES>.",
-                "4": "Kumaliwa <RELATIVE_DIRECTION> sa <JUNCTION_NAME>.",
-                "5": "Kumaliwa <RELATIVE_DIRECTION> patungong <TOWARD_SIGN>."
-            },
-            "empty_street_name_labels": [
-                "ang daanan",
-                "ang bike lane",
-                "ang landas ng mountain bike",
-                "ang tawiran",
-                "ang hagdan",
-                "ang tulay",
-                "ang lagusan"
-            ],
-            "relative_directions": [
-                "kaliwa",
-                "kanan"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Lumiko sa kaliwa."
-                ],
-                "1": [
-                    "Lumiko sa kanan sa Flatbush Avenue."
-                ],
-                "2": [
-                    "Lumiko sa kaliwa sa North Bond Street/US 1 Business/MD 924. Magpatuloy sa MD 924."
-                ],
-                "3": [
-                    "Lumiko sa kanan upang manatili sa Sunstone Drive."
-                ],
-                "4": [
-                    "Lumiko sa kanan sa Mannenbashi East."
-                ],
-                "5": [
-                    "Lumiko sa kaliwa patungo sa Baltimore."
-                ]
-            }
-        },
-        "turn_verbal": {
-            "phrases": {
-                "0": "Lumiko sa <RELATIVE_DIRECTION>.",
-                "1": "Lumiko sa <RELATIVE_DIRECTION> sa <STREET_NAMES>.",
-                "2": "Lumiko sa <RELATIVE_DIRECTION> sa <BEGIN_STREET_NAMES>.",
-                "3": "Lumiko sa <RELATIVE_DIRECTION> upang manatili sa <STREET_NAMES>.",
-                "4": "Lumiko sa <RELATIVE_DIRECTION> sa <JUNCTION_NAME>.",
-                "5": "Lumiko sa <RELATIVE_DIRECTION> patungo sa <TOWARD_SIGN>."
-            },
-            "empty_street_name_labels": [
-                "ang daanan",
-                "ang bike lane",
-                "ang landas ng mountain bike",
-                "ang tawiran",
-                "ang hagdan",
-                "ang tulay",
-                "ang lagusan"
-            ],
-            "relative_directions": [
-                "kaliwa",
-                "kanan"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Lumiko sa kaliwa."
-                ],
-                "1": [
-                    "Lumiko sa kanan sa Flatbush Avenue."
-                ],
-                "2": [
-                    "Lumiko sa kaliwa sa North Bond Street, U.S. 1 Business."
-                ],
-                "3": [
-                    "Lumiko sa kanan upang manatili sa Sunstone Drive."
-                ],
-                "4": [
-                    "Lumiko sa kanan sa Mannenbashi East."
-                ],
-                "5": [
-                    "Lumiko sa kaliwa patungo sa Baltimore."
-                ]
-            }
-        },
-        "uturn": {
-            "phrases": {
-                "0": "Lumiko ng U-turn sa <RELATIVE_DIRECTION>.",
-                "1": "Lumiko ng U-turn sa <RELATIVE_DIRECTION> sa <STREET_NAMES>.",
-                "2": "Lumiko ng U-turn sa <RELATIVE_DIRECTION> upang manatili sa <STREET_NAMES>.",
-                "3": "Lumiko ng U-turn sa <RELATIVE_DIRECTION> sa <CROSS_STREET_NAMES>.",
-                "4": "Lumiko ng U-turn sa <RELATIVE_DIRECTION> sa <CROSS_STREET_NAMES> sa <STREET_NAMES>.",
-                "5": "Lumiko ng U-turn sa <RELATIVE_DIRECTION> sa <CROSS_STREET_NAMES> upang manatili sa <STREET_NAMES>.",
-                "6": "Lumiko ng U-turn sa <RELATIVE_DIRECTION> sa <JUNCTION_NAME>.",
-                "7": "Lumiko ng U-turn sa <RELATIVE_DIRECTION> patungo sa <TOWARD_SIGN>."
-            },
-            "empty_street_name_labels": [
-                "ang daanan",
-                "ang bike lane",
-                "ang landas ng mountain bike",
-                "ang tawiran",
-                "ang hagdan",
-                "ang tulay",
-                "ang lagusan"
-            ],
-            "relative_directions": [
-                "kaliwa",
-                "kanan"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Lumiko ng U-turn sa kaliwa."
-                ],
-                "1": [
-                    "Lumiko ng U-turn sa kanan sa Bunker Hill Road."
-                ],
-                "2": [
-                    "Lumiko ng U-turn sa kaliwa upang manatili sa Bunker Hill Road."
-                ],
-                "3": [
-                    "Lumiko ng U-turn sa kaliwa sa Devonshire Road."
-                ],
-                "4": [
-                    "Lumiko ng U-turn sa kaliwa sa Devonshire Road sa Jonestown Road/US 22."
-                ],
-                "5": [
-                    "Lumiko ng U-turn sa kaliwa sa Devonshire Road upang manatili sa Jonestown Road/US 22."
-                ],
-                "6": [
-                    "Lumiko ng U-turn sa kanan sa Mannenbashi East."
-                ],
-                "7": [
-                    "Lumiko ng U-turn sa kaliwa patungo sa Baltimore."
-                ]
-            }
-        },
-        "uturn_verbal": {
-            "phrases": {
-                "0": "Lumiko ng U-turn sa <RELATIVE_DIRECTION>.",
-                "1": "Lumiko ng U-turn sa <RELATIVE_DIRECTION> sa <STREET_NAMES>.",
-                "2": "Lumiko ng U-turn sa <RELATIVE_DIRECTION> upang manatili sa <STREET_NAMES>.",
-                "3": "Lumiko ng U-turn sa <RELATIVE_DIRECTION> sa <CROSS_STREET_NAMES>.",
-                "4": "Lumiko ng U-turn sa <RELATIVE_DIRECTION> sa <CROSS_STREET_NAMES> sa <STREET_NAMES>.",
-                "5": "Lumiko ng U-turn sa <RELATIVE_DIRECTION> sa <CROSS_STREET_NAMES> upang manatili sa <STREET_NAMES>.",
-                "6": "Lumiko ng U-turn sa <RELATIVE_DIRECTION> sa <JUNCTION_NAME>.",
-                "7": "Lumiko ng U-turn sa <RELATIVE_DIRECTION> patungo sa <TOWARD_SIGN>."
-            },
-            "empty_street_name_labels": [
-                "ang daanan",
-                "ang bike lane",
-                "ang landas ng mountain bike",
-                "ang tawiran",
-                "ang hagdan",
-                "ang tulay",
-                "ang lagusan"
-            ],
-            "relative_directions": [
-                "kaliwa",
-                "kanan"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Lumiko ng U-turn sa kaliwa."
-                ],
-                "1": [
-                    "Lumiko ng U-turn sa kanan sa Bunker Hill Road."
-                ],
-                "2": [
-                    "Lumiko ng U-turn sa kaliwa upang manatili sa Bunker Hill Road."
-                ],
-                "3": [
-                    "Lumiko ng U-turn sa kaliwa sa Devonshire Road."
-                ],
-                "4": [
-                    "Lumiko ng U-turn sa kaliwa sa Devonshire Road sa Jonestown Road, U.S. 22."
-                ],
-                "5": [
-                    "Lumiko ng U-turn sa kaliwa sa Devonshire Road upang manatili sa Jonestown Road, U.S. 22."
-                ],
-                "6": [
-                    "Lumiko ng U-turn sa kanan sa Mannenbashi East."
-                ],
-                "7": [
-                    "Lumiko ng U-turn sa kaliwa patungo sa Baltimore."
-                ]
-            }
-        },
-        "verbal_multi_cue": {
-            "phrases": {
-                "0": "<CURRENT_VERBAL_CUE> Pagkatapos <NEXT_VERBAL_CUE>",
-                "1": "<CURRENT_VERBAL_CUE> Pagkatapos, sa <LENGTH>, <NEXT_VERBAL_CUE>"
-            },
-            "metric_lengths": [
-                "<KILOMETERS> kilometro",
-                "1 kilometro",
-                "<METERS> metro",
-                "mas mababa sa 10 metro"
-            ],
-            "us_customary_lengths": [
-                "<MILES> milya",
-                "1 milya",
-                "kalahating milya",
-                "isang-kapat na milya",
-                "<FEET> paa",
-                "mas mababa sa 10 paa"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Lumiko sa kanan sa East Fayette Street. Pagkatapos Lumiko sa kanan sa North Gay Street."
-                ],
-                "1": [
-                    "Lumiko sa kanan sa East Fayette Street. Pagkatapos, sa 500 paa, Lumiko sa kanan sa North Gay Street."
-                ]
-            }
-        },
-        "approach_verbal_alert": {
-            "phrases": {
-                "0": "Sa <LENGTH>, <CURRENT_VERBAL_CUE>"
-            },
-            "metric_lengths": [
-                "<KILOMETERS> kilometro",
-                "1 kilometro",
-                "<METERS> metro",
-                "mas mababa sa 10 metro"
-            ],
-            "us_customary_lengths": [
-                "<MILES> milya",
-                "1 milya",
-                "kalahating milya",
-                "isang-kapat na milya",
-                "<FEET> paa",
-                "mas mababa sa 10 paa"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Sa isang-kapat na milya, Lumiko sa kanan sa North Gay Street."
-                ]
-            }
-        },
-        "pass": {
-            "phrases": {
-                "0": "Lampasan ang <OBJECT_LABEL>.",
-                "1": "Lampasan ang traffic signals sa <OBJECT_LABEL>."
-            },
-            "object_labels": [
-                "gate",
-                "mga bollards",
-                "ways intersection"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Lampasan ang gate."
-                ]
-            }
-        },
-        "elevator": {
-            "phrases": {
-                "0": "Kunin ang elevator.",
-                "1": "Kunin ang elevator sa <LEVEL>."
-            },
-            "example_phrases": {
-                "0": [
-                    "Kunin ang elevator."
-                ],
-                "1": [
-                    "Kunin ang elevator sa Level 1."
-                ]
-            }
-        },
-        "steps": {
-            "phrases": {
-                "0": "Kunin ang hagdan.",
-                "1": "Kunin ang hagdan sa <LEVEL>."
-            },
-            "example_phrases": {
-                "0": [
-                    "Kunin ang hagdan."
-                ],
-                "1": [
-                    "Kunin ang hagdan sa Level 2."
-                ]
-            }
-        },
-        "escalator": {
-            "phrases": {
-                "0": "Kunin ang escalator.",
-                "1": "Kunin ang escalator sa <LEVEL>."
-            },
-            "example_phrases": {
-                "0": [
-                    "Kunin ang escalator."
-                ],
-                "1": [
-                    "Kunin ang escalator sa Level 3."
-                ]
-            }
-        },
-        "enter_building": {
-            "phrases": {
-                "0": "Pumasok sa gusali.",
-                "1": "Pumasok sa gusali, at magpatuloy sa <STREET_NAMES>."
-            },
-            "empty_street_name_labels": [
-                "daanang pampasahero",
-                "daanang pampadyak",
-                "landas para sa bisikletang pangbundok",
-                "tawiran"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Pumasok sa gusali."
-                ],
-                "1": [
-                    "Pumasok sa gusali, at magpatuloy sa walkway."
-                ]
-            }
-        },
-        "exit_building": {
-            "phrases": {
-                "0": "Lumabas sa gusali.",
-                "1": "Lumabas sa gusali, at magpatuloy sa <STREET_NAMES>."
-            },
-            "empty_street_name_labels": [
-                "daanang pampasahero",
-                "daanang pampadyak",
-                "landas para sa bisikletang pangbundok",
-                "tawiran"
-            ],
-            "example_phrases": {
-                "0": [
-                    "Lumabas sa gusali."
-                ],
-                "1": [
-                    "Lumabas sa gusali, at magpatuloy sa walkway."
-                ]
-            }
-        }
+  "posix_locale": "fil_PH.UTF-8",
+  "aliases": [
+    "fil"
+  ],
+  "instructions": {
+    "arrive": {
+      "phrases": {
+        "0": "Daratíng: <TIME>.",
+        "1": "Daratíng: <TIME> sa <TRANSIT_STOP>."
+      },
+      "example_phrases": {
+        "0": [
+          "Daratíng: 8:02 AM."
+        ],
+        "1": [
+          "Daratíng: 8:02 AM sa 8 St - NYU."
+        ]
+      }
+    },
+    "arrive_verbal": {
+      "phrases": {
+        "0": "Daratíng sa <TIME>.",
+        "1": "Daratíng sa <TIME> sa <TRANSIT_STOP>."
+      },
+      "example_phrases": {
+        "0": [
+          "Daratíng sa 8:02 AM."
+        ],
+        "1": [
+          "Daratíng sa 8:02 AM sa 8 St - NYU."
+        ]
+      }
+    },
+    "bear": {
+      "phrases": {
+        "0": "Kumiling sa <RELATIVE_DIRECTION>.",
+        "1": "Kumiling sa <RELATIVE_DIRECTION> patungo sa <STREET_NAMES>.",
+        "2": "Kumiling sa <RELATIVE_DIRECTION> patungo sa <BEGIN_STREET_NAMES>. Ituloy sa <STREET_NAMES>.",
+        "3": "Kumiling sa <RELATIVE_DIRECTION> para manatili sa <STREET_NAMES>.",
+        "4": "Kumiling sa <RELATIVE_DIRECTION> sa <JUNCTION_NAME>.",
+        "5": "Kumiling sa <RELATIVE_DIRECTION> patungo sa <TOWARD_SIGN>."
+      },
+      "empty_street_name_labels": [
+        "ang daanan",
+        "ang bike lane",
+        "ang landas ng mountain bike",
+        "ang tawiran",
+        "ang hagdan",
+        "ang tulay",
+        "ang lagusan"
+      ],
+      "relative_directions": [
+        "kaliwa",
+        "kanan"
+      ],
+      "example_phrases": {
+        "0": [
+          "Pumihit ng kanan."
+        ],
+        "1": [
+          "Pumihit ng kaliwa sa Arlen Road."
+        ],
+        "2": [
+          "Pumihit ng kanan sa Belair Road/US 1 Business. Magpatuloy sa US 1 Business."
+        ],
+        "3": [
+          "Pumihit ng kaliwa upang manatili sa US 15 South."
+        ],
+        "4": [
+          "Pumihit ng kanan sa Mannenbashi East."
+        ],
+        "5": [
+          "Pumihit ng kaliwa patungo sa Baltimore."
+        ]
+      }
+    },
+    "bear_verbal": {
+      "phrases": {
+        "0": "Kumiling sa <RELATIVE_DIRECTION>.",
+        "1": "Kumiling sa <RELATIVE_DIRECTION> patungo sa <STREET_NAMES>.",
+        "2": "Kumiling sa <RELATIVE_DIRECTION> patungo sa <BEGIN_STREET_NAMES>.",
+        "3": "Kumiling sa <RELATIVE_DIRECTION> para manatili sa <STREET_NAMES>.",
+        "4": "Kumiling sa <RELATIVE_DIRECTION> sa <JUNCTION_NAME>.",
+        "5": "Kumiling sa <RELATIVE_DIRECTION> patungo sa <TOWARD_SIGN>."
+      },
+      "empty_street_name_labels": [
+        "ang daanan",
+        "ang bike lane",
+        "ang landas ng mountain bike",
+        "ang tawiran",
+        "ang hagdan",
+        "ang tulay",
+        "ang lagusan"
+      ],
+      "relative_directions": [
+        "kaliwa",
+        "kanan"
+      ],
+      "example_phrases": {
+        "0": [
+          "Kumiling sa kanan."
+        ],
+        "1": [
+          "Kumiling sa kaliwa patungo sa Arlen Road."
+        ],
+        "2": [
+          "Kumiling sa kanan patungo sa Belair Road, U.S. 1 Business."
+        ],
+        "3": [
+          "Kumiling sa kaliwa para manatili sa U.S. 15 South."
+        ],
+        "4": [
+          "Kumiling sa kanan sa Mannenbashi East."
+        ],
+        "5": [
+          "Kumiling sa kaliwa patungo sa Baltimore."
+        ]
+      }
+    },
+    "becomes": {
+      "phrases": {
+        "0": "<PREVIOUS_STREET_NAMES> ay nagiging <STREET_NAMES>."
+      },
+      "example_phrases": {
+        "0": [
+          "Vine Street ay nagiging Middletown Road."
+        ]
+      }
+    },
+    "becomes_verbal": {
+      "phrases": {
+        "0": "<PREVIOUS_STREET_NAMES> ay nagiging <STREET_NAMES>."
+      },
+      "example_phrases": {
+        "0": [
+          "Vine Street ay nagiging Middletown Road."
+        ]
+      }
+    },
+    "continue": {
+      "phrases": {
+        "0": "Ituloy.",
+        "1": "Ituloy sa <STREET_NAMES>.",
+        "2": "Ituloy sa <JUNCTION_NAME>.",
+        "3": "Ituloy patungo sa <TOWARD_SIGN>."
+      },
+      "empty_street_name_labels": [
+        "ang daanan",
+        "ang bike lane",
+        "ang landas ng mountain bike",
+        "ang tawiran",
+        "ang hagdan",
+        "ang tulay",
+        "ang lagusan"
+      ],
+      "example_phrases": {
+        "0": [
+          "Ituloy."
+        ],
+        "1": [
+          "Ituloy sa 10th Avenue."
+        ],
+        "2": [
+          "Ituloy sa Mannenbashi East."
+        ],
+        "3": [
+          "Ituloy patungo sa Baltimore."
+        ]
+      }
+    },
+    "continue_verbal": {
+      "phrases": {
+        "0": "Ituloy.",
+        "1": "Ituloy para sa <LENGTH>.",
+        "2": "Ituloy sa <STREET_NAMES>.",
+        "3": "Ituloy sa <STREET_NAMES> para sa <LENGTH>.",
+        "4": "Ituloy sa <JUNCTION_NAME>.",
+        "5": "Ituloy sa <JUNCTION_NAME> para sa <LENGTH>.",
+        "6": "Ituloy patungo sa <TOWARD_SIGN>.",
+        "7": "Ituloy patungo sa <TOWARD_SIGN> para sa <LENGTH>."
+      },
+      "empty_street_name_labels": [
+        "ang daanan",
+        "ang bike lane",
+        "ang landas ng mountain bike",
+        "ang tawiran",
+        "ang hagdan",
+        "ang tulay",
+        "ang lagusan"
+      ],
+      "metric_lengths": [
+        "<KILOMETERS> kilometro",
+        "1 kilometro",
+        "<METERS> metro",
+        "mas mababa sa 10 metro"
+      ],
+      "us_customary_lengths": [
+        "<MILES> milya",
+        "1 milya",
+        "kalahating milya",
+        "isang kapat na milya",
+        "<FEET> talampakan",
+        "mas mababa sa 10 talampakan"
+      ],
+      "example_phrases": {
+        "0": [
+          "Magpatuloy."
+        ],
+        "1": [
+          "Magpatuloy ng 300 talampakan."
+        ],
+        "2": [
+          "Magpatuloy sa 10th Avenue."
+        ],
+        "3": [
+          "Magpatuloy sa 10th Avenue ng 3 milya."
+        ],
+        "4": [
+          "Magpatuloy sa Mannenbashi East."
+        ],
+        "5": [
+          "Magpatuloy sa Mannenbashi East ng 2 milya."
+        ],
+        "6": [
+          "Magpatuloy patungo sa Baltimore."
+        ],
+        "7": [
+          "Magpatuloy patungo sa Baltimore ng 5 milya."
+        ]
+      }
+    },
+    "continue_verbal_alert": {
+      "phrases": {
+        "0": "Ituloy.",
+        "1": "Ituloy sa <STREET_NAMES>.",
+        "2": "Ituloy sa <JUNCTION_NAME>.",
+        "3": "Ituloy patungo sa <TOWARD_SIGN>."
+      },
+      "empty_street_name_labels": [
+        "ang daanan",
+        "ang bike lane",
+        "ang landas ng mountain bike",
+        "ang tawiran",
+        "ang hagdan",
+        "ang tulay",
+        "ang lagusan"
+      ],
+      "example_phrases": {
+        "0": [
+          "Ituloy."
+        ],
+        "1": [
+          "Ituloy sa 10th Avenue."
+        ],
+        "2": [
+          "Ituloy sa Mannenbashi East."
+        ],
+        "3": [
+          "Ituloy patungo sa Baltimore."
+        ]
+      }
+    },
+    "depart": {
+      "phrases": {
+        "0": "Umalis: <TIME>.",
+        "1": "Umalis: <TIME> mula sa <TRANSIT_STOP>."
+      },
+      "example_phrases": {
+        "0": [
+          "Umalis: 8:02 AM."
+        ],
+        "1": [
+          "Umalis: 8:02 AM mula sa 8 St - NYU."
+        ]
+      }
+    },
+    "depart_verbal": {
+      "phrases": {
+        "0": "Umalis ng <TIME>.",
+        "1": "Umalis ng <TIME> mula sa <TRANSIT_STOP>."
+      },
+      "example_phrases": {
+        "0": [
+          "Umalis ng 8:02 AM."
+        ],
+        "1": [
+          "Umalis ng 8:02 AM mula sa 8 St - NYU."
+        ]
+      }
+    },
+    "destination": {
+      "phrases": {
+        "0": "Nakarating ka na sa iyong destinasyon.",
+        "1": "Nakarating ka na sa <DESTINATION>.",
+        "2": "Ang iyong destinasyon ay nasa <RELATIVE_DIRECTION>.",
+        "3": "Ang <DESTINATION> ay nasa <RELATIVE_DIRECTION>."
+      },
+      "relative_directions": [
+        "kaliwa",
+        "kanan"
+      ],
+      "example_phrases": {
+        "0": [
+          "Nakarating ka na sa iyong destinasyon."
+        ],
+        "1": [
+          "Nakarating ka na sa 3206 Powelton Avenue."
+        ],
+        "2": [
+          "Ang iyong destinasyon ay nasa kaliwa.",
+          "Ang iyong destinasyon ay nasa kanan."
+        ],
+        "3": [
+          "Ang Lancaster Brewing Company ay nasa kaliwa."
+        ]
+      }
+    },
+    "destination_verbal": {
+      "phrases": {
+        "0": "Nakarating ka na sa iyong destinasyon.",
+        "1": "Nakarating ka na sa <DESTINATION>.",
+        "2": "Ang iyong destinasyon ay nasa <RELATIVE_DIRECTION>.",
+        "3": "Ang <DESTINATION> ay nasa <RELATIVE_DIRECTION>."
+      },
+      "relative_directions": [
+        "kaliwa",
+        "kanan"
+      ],
+      "example_phrases": {
+        "0": [
+          "Nakarating ka na sa iyong destinasyon."
+        ],
+        "1": [
+          "Nakarating ka na sa 32 o6 Powelton Avenue."
+        ],
+        "2": [
+          "Ang iyong destinasyon ay nasa kaliwa.",
+          "Ang iyong destinasyon ay nasa kanan."
+        ],
+        "3": [
+          "Ang Lancaster Brewing Company ay nasa kaliwa."
+        ]
+      }
+    },
+    "destination_verbal_alert": {
+      "phrases": {
+        "0": "Malapit ka na sa iyong destinasyon.",
+        "1": "Malapit ka na sa <DESTINATION>.",
+        "2": "Ang iyong destinasyon ay nasa <RELATIVE_DIRECTION>.",
+        "3": "Ang <DESTINATION> ay nasa <RELATIVE_DIRECTION>."
+      },
+      "relative_directions": [
+        "kaliwa",
+        "kanan"
+      ],
+      "example_phrases": {
+        "0": [
+          "Malapit ka na sa iyong destinasyon."
+        ],
+        "1": [
+          "Malapit ka na sa 32 o6 Powelton Avenue."
+        ],
+        "2": [
+          "Ang iyong destinasyon ay nasa kaliwa.",
+          "Ang iyong destinasyon ay nasa kanan."
+        ],
+        "3": [
+          "Ang Lancaster Brewing Company ay nasa kaliwa."
+        ]
+      }
+    },
+    "enter_ferry": {
+      "phrases": {
+        "0": "Sumakay ng Ferry.",
+        "1": "Sumakay ng <STREET_NAMES>.",
+        "2": "Sumakay ng <STREET_NAMES> <FERRY_LABEL>.",
+        "3": "Sumakay ng ferry patungo sa <TOWARD_SIGN>."
+      },
+      "empty_street_name_labels": [
+        "ang daanan",
+        "ang bike lane",
+        "ang landas ng mountain bike",
+        "ang tawiran",
+        "ang hagdan",
+        "ang tulay",
+        "ang lagusan"
+      ],
+      "ferry_label": "Ferry",
+      "example_phrases": {
+        "0": [
+          "Sumakay ng Ferry."
+        ],
+        "1": [
+          "Sumakay ng Millersburg Ferry."
+        ],
+        "2": [
+          "Sumakay ng Bridgeport - Port Jefferson Ferry."
+        ],
+        "3": [
+          "Sumakay ng ferry patungo sa Cape May."
+        ]
+      }
+    },
+    "enter_ferry_verbal": {
+      "phrases": {
+        "0": "Sumakay ng Ferry.",
+        "1": "Sumakay ng <STREET_NAMES>.",
+        "2": "Sumakay ng <STREET_NAMES> <FERRY_LABEL>.",
+        "3": "Sumakay ng ferry patungo sa <TOWARD_SIGN>."
+      },
+      "empty_street_name_labels": [
+        "ang daanan",
+        "ang bike lane",
+        "ang landas ng mountain bike",
+        "ang tawiran",
+        "ang hagdan",
+        "ang tulay",
+        "ang lagusan"
+      ],
+      "ferry_label": "Ferry",
+      "example_phrases": {
+        "0": [
+          "Sumakay ng Ferry."
+        ],
+        "1": [
+          "Sumakay ng Millersburg Ferry."
+        ],
+        "2": [
+          "Sumakay ng Bridgeport - Port Jefferson Ferry."
+        ],
+        "3": [
+          "Sumakay ng ferry patungo sa Cape May."
+        ]
+      }
+    },
+    "enter_roundabout": {
+      "phrases": {
+        "0": "Pumasok sa roundabout.",
+        "1": "Pumasok sa roundabout at lumabas sa <ORDINAL_VALUE> exit.",
+        "2": "Pumasok sa roundabout at lumabas sa <ORDINAL_VALUE> exit sa <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "3": "Pumasok sa roundabout at lumabas sa <ORDINAL_VALUE> exit sa <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>. Magpatuloy sa <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "4": "Pumasok sa roundabout at lumabas sa <ORDINAL_VALUE> exit patungo sa <TOWARD_SIGN>.",
+        "5": "Pumasok sa roundabout at lumabas sa exit sa <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "6": "Pumasok sa roundabout at lumabas sa exit sa <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>. Magpatuloy sa <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "7": "Pumasok sa roundabout at lumabas sa exit patungo sa <TOWARD_SIGN>.",
+        "8": "Pumasok sa <STREET_NAMES>",
+        "9": "Pumasok sa <STREET_NAMES> at lumabas sa <ORDINAL_VALUE> exit.",
+        "10": "Pumasok sa <STREET_NAMES> at lumabas sa <ORDINAL_VALUE> exit sa <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "11": "Pumasok sa <STREET_NAMES> at lumabas sa <ORDINAL_VALUE> exit sa <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>. Magpatuloy sa <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "12": "Pumasok sa <STREET_NAMES> at lumabas sa <ORDINAL_VALUE> exit patungo sa <TOWARD_SIGN>.",
+        "13": "Pumasok sa <STREET_NAMES> at lumabas sa exit sa <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "14": "Pumasok sa <STREET_NAMES> at lumabas sa exit sa <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>. Magpatuloy sa <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "15": "Pumasok sa <STREET_NAMES> at lumabas sa exit patungo sa <TOWARD_SIGN>."
+      },
+      "ordinal_values": [
+        "unang",
+        "ikalawang",
+        "ikatlong",
+        "ika-apat",
+        "ika-lima",
+        "ika-anim",
+        "ika-pito",
+        "ika-walo",
+        "ika-siyam",
+        "ika-sampu"
+      ],
+      "empty_street_name_labels": [
+        "ang daanan",
+        "ang bike lane",
+        "ang landas ng mountain bike",
+        "ang tawiran",
+        "ang hagdan",
+        "ang tulay",
+        "ang lagusan"
+      ],
+      "example_phrases": {
+        "0": [
+          "Pumasok sa roundabout."
+        ],
+        "1": [
+          "Pumasok sa roundabout at lumabas sa unang exit.",
+          "Pumasok sa roundabout at lumabas sa ikalawang exit.",
+          "Pumasok sa roundabout at lumabas sa ikatlong exit.",
+          "Pumasok sa roundabout at lumabas sa ika-apat na exit.",
+          "Pumasok sa roundabout at lumabas sa ika-limang exit.",
+          "Pumasok sa roundabout at lumabas sa ika-anim na exit.",
+          "Pumasok sa roundabout at lumabas sa ika-pitong exit.",
+          "Pumasok sa roundabout at lumabas sa ika-walong exit.",
+          "Pumasok sa roundabout at lumabas sa ika-siyam na exit.",
+          "Pumasok sa roundabout at lumabas sa ika-sampung exit."
+        ],
+        "2": [
+          "Pumasok sa roundabout at lumabas sa ikatlong exit sa Main Street."
+        ],
+        "3": [
+          "Pumasok sa roundabout at lumabas sa ikatlong exit sa US 322/Main Street. Magpatuloy sa US 322."
+        ],
+        "4": [
+          "Pumasok sa roundabout at lumabas sa ikatlong exit patungo sa Baltimore."
+        ],
+        "5": [
+          "Pumasok sa roundabout at lumabas sa exit sa Main Street."
+        ],
+        "6": [
+          "Pumasok sa roundabout at lumabas sa exit sa US 322/Main Street. Magpatuloy sa US 322."
+        ],
+        "7": [
+          "Pumasok sa roundabout at lumabas sa exit patungo sa Baltimore."
+        ],
+        "8": [
+          "Pumasok sa Dupont Circle."
+        ],
+        "9": [
+          "Pumasok sa Dupont Circle at lumabas sa unang exit."
+        ],
+        "10": [
+          "Pumasok sa Dupont Circle at lumabas sa ikatlong exit sa Main Street."
+        ],
+        "11": [
+          "Pumasok sa Dupont Circle at lumabas sa ikatlong exit sa US 322/Main Street. Magpatuloy sa US 322."
+        ],
+        "12": [
+          "Pumasok sa Dupont Circle at lumabas sa ikatlong exit patungo sa Baltimore."
+        ],
+        "13": [
+          "Pumasok sa Dupont Circle at lumabas sa exit sa Main Street."
+        ],
+        "14": [
+          "Pumasok sa Dupont Circle at lumabas sa exit sa US 322/Main Street. Magpatuloy sa US 322."
+        ],
+        "15": [
+          "Pumasok sa Dupont Circle at lumabas sa exit patungo sa Baltimore."
+        ]
+      }
+    },
+    "enter_roundabout_verbal": {
+      "phrases": {
+        "0": "Pumasok sa roundabout.",
+        "1": "Pumasok sa roundabout at lumabas sa <ORDINAL_VALUE> exit.",
+        "2": "Pumasok sa roundabout at lumabas sa <ORDINAL_VALUE> exit sa <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "3": "Pumasok sa roundabout at lumabas sa <ORDINAL_VALUE> exit sa <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>.",
+        "4": "Pumasok sa roundabout at lumabas sa <ORDINAL_VALUE> exit patungo sa <TOWARD_SIGN>.",
+        "5": "Pumasok sa roundabout at lumabas sa exit sa <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "6": "Pumasok sa roundabout at lumabas sa exit sa <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>.",
+        "7": "Pumasok sa roundabout at lumabas sa exit patungo sa <TOWARD_SIGN>.",
+        "8": "Pumasok sa <STREET_NAMES>",
+        "9": "Pumasok sa <STREET_NAMES> at lumabas sa <ORDINAL_VALUE> exit.",
+        "10": "Pumasok sa <STREET_NAMES> at lumabas sa <ORDINAL_VALUE> exit sa <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "11": "Pumasok sa <STREET_NAMES> at lumabas sa <ORDINAL_VALUE> exit sa <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>.",
+        "12": "Pumasok sa <STREET_NAMES> at lumabas sa <ORDINAL_VALUE> exit patungo sa <TOWARD_SIGN>.",
+        "13": "Pumasok sa <STREET_NAMES> at lumabas sa exit sa <ROUNDABOUT_EXIT_STREET_NAMES>.",
+        "14": "Pumasok sa <STREET_NAMES> at lumabas sa exit sa <ROUNDABOUT_EXIT_BEGIN_STREET_NAMES>.",
+        "15": "Pumasok sa <STREET_NAMES> at lumabas sa exit patungo sa <TOWARD_SIGN>."
+      },
+      "ordinal_values": [
+        "unang",
+        "ikalawang",
+        "ikatlong",
+        "ika-apat",
+        "ika-lima",
+        "ika-anim",
+        "ika-pito",
+        "ika-walo",
+        "ika-siyam",
+        "ika-sampu"
+      ],
+      "empty_street_name_labels": [
+        "ang daanan",
+        "ang bike lane",
+        "ang landas ng mountain bike",
+        "ang tawiran",
+        "ang hagdan",
+        "ang tulay",
+        "ang lagusan"
+      ],
+      "example_phrases": {
+        "0": [
+          "Pumasok sa roundabout."
+        ],
+        "1": [
+          "Pumasok sa roundabout at lumabas sa unang exit.",
+          "Pumasok sa roundabout at lumabas sa ikalawang exit.",
+          "Pumasok sa roundabout at lumabas sa ikatlong exit.",
+          "Pumasok sa roundabout at lumabas sa ika-apat na exit.",
+          "Pumasok sa roundabout at lumabas sa ika-limang exit.",
+          "Pumasok sa roundabout at lumabas sa ika-anim na exit.",
+          "Pumasok sa roundabout at lumabas sa ika-pitong exit.",
+          "Pumasok sa roundabout at lumabas sa ika-walong exit.",
+          "Pumasok sa roundabout at lumabas sa ika-siyam na exit.",
+          "Pumasok sa roundabout at lumabas sa ika-sampung exit."
+        ],
+        "2": [
+          "Pumasok sa roundabout at lumabas sa ikatlong exit sa Main Street."
+        ],
+        "3": [
+          "Pumasok sa roundabout at lumabas sa ikatlong exit sa U.S. 3 22/Main Street."
+        ],
+        "4": [
+          "Pumasok sa roundabout at lumabas sa ikatlong exit patungo sa Baltimore."
+        ],
+        "5": [
+          "Pumasok sa roundabout at lumabas sa exit sa Main Street."
+        ],
+        "6": [
+          "Pumasok sa roundabout at lumabas sa exit sa U.S. 3 22/Main Street."
+        ],
+        "7": [
+          "Pumasok sa roundabout at lumabas sa exit patungo sa Baltimore."
+        ],
+        "8": [
+          "Pumasok sa Dupont Circle."
+        ],
+        "9": [
+          "Pumasok sa Dupont Circle at lumabas sa unang exit."
+        ],
+        "10": [
+          "Pumasok sa Dupont Circle at lumabas sa ikatlong exit sa Main Street."
+        ],
+        "11": [
+          "Pumasok sa Dupont Circle at lumabas sa ikatlong exit sa U.S. 3 22/Main Street."
+        ],
+        "12": [
+          "Pumasok sa Dupont Circle at lumabas sa ikatlong exit patungo sa Baltimore."
+        ],
+        "13": [
+          "Pumasok sa Dupont Circle at lumabas sa exit sa Main Street."
+        ],
+        "14": [
+          "Pumasok sa Dupont Circle at lumabas sa exit sa U.S. 3 22/Main Street."
+        ],
+        "15": [
+          "Pumasok sa Dupont Circle at lumabas sa exit patungo sa Baltimore."
+        ]
+      }
+    },
+    "exit": {
+      "phrases": {
+        "0": "Lumabas sa exit sa <RELATIVE_DIRECTION>.",
+        "1": "Lumabas sa exit <NUMBER_SIGN> sa <RELATIVE_DIRECTION>.",
+        "2": "Lumabas sa <BRANCH_SIGN> exit sa <RELATIVE_DIRECTION>.",
+        "3": "Lumabas sa exit <NUMBER_SIGN> sa <RELATIVE_DIRECTION> sa <BRANCH_SIGN>.",
+        "4": "Lumabas sa exit sa <RELATIVE_DIRECTION> patungo sa <TOWARD_SIGN>.",
+        "5": "Lumabas sa exit <NUMBER_SIGN> sa <RELATIVE_DIRECTION> patungo sa <TOWARD_SIGN>.",
+        "6": "Lumabas sa <BRANCH_SIGN> exit sa <RELATIVE_DIRECTION> patungo sa <TOWARD_SIGN>.",
+        "7": "Lumabas sa exit <NUMBER_SIGN> sa <RELATIVE_DIRECTION> sa <BRANCH_SIGN> patungo sa <TOWARD_SIGN>.",
+        "8": "Lumabas sa <NAME_SIGN> exit sa <RELATIVE_DIRECTION>.",
+        "10": "Lumabas sa <NAME_SIGN> exit sa <RELATIVE_DIRECTION> sa <BRANCH_SIGN>.",
+        "12": "Lumabas sa <NAME_SIGN> exit sa <RELATIVE_DIRECTION> patungo sa <TOWARD_SIGN>.",
+        "14": "Lumabas sa <NAME_SIGN> exit sa <RELATIVE_DIRECTION> sa <BRANCH_SIGN> patungo sa <TOWARD_SIGN>.",
+        "15": "Lumabas sa exit.",
+        "16": "Lumabas sa exit <NUMBER_SIGN>.",
+        "17": "Lumabas sa <BRANCH_SIGN> exit.",
+        "18": "Lumabas sa exit <NUMBER_SIGN> sa <BRANCH_SIGN>.",
+        "19": "Lumabas sa exit patungo sa <TOWARD_SIGN>.",
+        "20": "Lumabas sa exit <NUMBER_SIGN> patungo sa <TOWARD_SIGN>.",
+        "21": "Lumabas sa <BRANCH_SIGN> exit patungo sa <TOWARD_SIGN>.",
+        "22": "Lumabas sa exit <NUMBER_SIGN> sa <BRANCH_SIGN> patungo sa <TOWARD_SIGN>.",
+        "23": "Lumabas sa <NAME_SIGN> exit.",
+        "25": "Lumabas sa <NAME_SIGN> exit sa <BRANCH_SIGN>.",
+        "27": "Lumabas sa <NAME_SIGN> exit patungo sa <TOWARD_SIGN>.",
+        "29": "Lumabas sa <NAME_SIGN> exit sa <BRANCH_SIGN> patungo sa <TOWARD_SIGN>."
+      },
+      "relative_directions": [
+        "kaliwa",
+        "kanan"
+      ],
+      "example_phrases": {
+        "0": [
+          "Lumabas sa exit sa kaliwa.",
+          "Lumabas sa exit sa kanan."
+        ],
+        "1": [
+          "Lumabas sa exit 67 B-A sa kanan."
+        ],
+        "2": [
+          "Lumabas sa US 322 West exit sa kanan."
+        ],
+        "3": [
+          "Lumabas sa exit 67 B-A sa kanan sa US 322 West."
+        ],
+        "4": [
+          "Lumabas sa exit sa kanan patungo sa Lewistown."
+        ],
+        "5": [
+          "Lumabas sa exit 67 B-A sa kanan patungo sa Lewistown."
+        ],
+        "6": [
+          "Lumabas sa US 322 West exit sa kanan patungo sa Lewistown."
+        ],
+        "7": [
+          "Lumabas sa exit 67 B-A sa kanan sa US 322 West patungo sa Lewistown/State College."
+        ],
+        "8": [
+          "Lumabas sa White Marsh Boulevard exit sa kaliwa."
+        ],
+        "10": [
+          "Lumabas sa White Marsh Boulevard exit sa kaliwa sa MD 43 East."
+        ],
+        "12": [
+          "Lumabas sa White Marsh Boulevard exit sa kaliwa patungo sa White Marsh."
+        ],
+        "14": [
+          "Lumabas sa White Marsh Boulevard exit sa kaliwa sa MD 43 East patungo sa White Marsh."
+        ],
+        "15": [
+          "Lumabas sa exit."
+        ],
+        "16": [
+          "Lumabas sa exit 67 B-A."
+        ],
+        "17": [
+          "Lumabas sa US 322 West exit."
+        ],
+        "18": [
+          "Lumabas sa exit 67 B-A sa US 322 West."
+        ],
+        "19": [
+          "Lumabas sa exit patungo sa Lewistown."
+        ],
+        "20": [
+          "Lumabas sa exit 67 B-A patungo sa Lewistown."
+        ],
+        "21": [
+          "Lumabas sa US 322 West exit patungo sa Lewistown."
+        ],
+        "22": [
+          "Lumabas sa exit 67 B-A sa US 322 West patungo sa Lewistown/State College."
+        ],
+        "23": [
+          "Lumabas sa White Marsh Boulevard exit."
+        ],
+        "25": [
+          "Lumabas sa White Marsh Boulevard exit sa MD 43 East."
+        ],
+        "27": [
+          "Lumabas sa White Marsh Boulevard exit patungo sa White Marsh."
+        ],
+        "29": [
+          "Lumabas sa White Marsh Boulevard exit sa MD 43 East patungo sa White Marsh."
+        ]
+      }
+    },
+    "exit_roundabout": {
+      "phrases": {
+        "0": "Lumabas sa roundabout.",
+        "1": "Lumabas sa roundabout sa <STREET_NAMES>.",
+        "2": "Lumabas sa roundabout sa <BEGIN_STREET_NAMES>. Magpatuloy sa <STREET_NAMES>.",
+        "3": "Lumabas sa roundabout patungo sa <TOWARD_SIGN>."
+      },
+      "empty_street_name_labels": [
+        "ang daanan",
+        "ang bike lane",
+        "ang landas ng mountain bike",
+        "ang tawiran",
+        "ang hagdan",
+        "ang tulay",
+        "ang lagusan"
+      ],
+      "example_phrases": {
+        "0": [
+          "Lumabas sa roundabout."
+        ],
+        "1": [
+          "Lumabas sa roundabout sa Philadelphia Road/MD 7."
+        ],
+        "2": [
+          "Lumabas sa roundabout sa Catoctin Mountain Highway/US 15. Magpatuloy sa US 15."
+        ],
+        "3": [
+          "Lumabas sa roundabout patungo sa Baltimore."
+        ]
+      }
+    },
+    "exit_roundabout_verbal": {
+      "phrases": {
+        "0": "Lumabas sa roundabout.",
+        "1": "Lumabas sa roundabout sa <STREET_NAMES>.",
+        "2": "Lumabas sa roundabout sa <BEGIN_STREET_NAMES>.",
+        "3": "Lumabas sa roundabout patungo sa <TOWARD_SIGN>."
+      },
+      "empty_street_name_labels": [
+        "ang daanan",
+        "ang bike lane",
+        "ang landas ng mountain bike",
+        "ang tawiran",
+        "ang hagdan",
+        "ang tulay",
+        "ang lagusan"
+      ],
+      "example_phrases": {
+        "0": [
+          "Lumabas sa roundabout."
+        ],
+        "1": [
+          "Lumabas sa roundabout sa Philadelphia Road, Maryland 7."
+        ],
+        "2": [
+          "Lumabas sa roundabout sa Catoctin Mountain Highway, U.S. 15."
+        ],
+        "3": [
+          "Lumabas sa roundabout patungo sa Baltimore."
+        ]
+      }
+    },
+    "exit_verbal": {
+      "phrases": {
+        "0": "Lumabas sa exit sa <RELATIVE_DIRECTION>.",
+        "1": "Lumabas sa exit <NUMBER_SIGN> sa <RELATIVE_DIRECTION>.",
+        "2": "Lumabas sa <BRANCH_SIGN> exit sa <RELATIVE_DIRECTION>.",
+        "3": "Lumabas sa exit <NUMBER_SIGN> sa <RELATIVE_DIRECTION> sa <BRANCH_SIGN>.",
+        "4": "Lumabas sa exit sa <RELATIVE_DIRECTION> patungo sa <TOWARD_SIGN>.",
+        "5": "Lumabas sa exit <NUMBER_SIGN> sa <RELATIVE_DIRECTION> patungo sa <TOWARD_SIGN>.",
+        "6": "Lumabas sa <BRANCH_SIGN> exit sa <RELATIVE_DIRECTION> patungo sa <TOWARD_SIGN>.",
+        "7": "Lumabas sa exit <NUMBER_SIGN> sa <RELATIVE_DIRECTION> sa <BRANCH_SIGN> patungo sa <TOWARD_SIGN>.",
+        "8": "Lumabas sa <NAME_SIGN> exit sa <RELATIVE_DIRECTION>.",
+        "10": "Lumabas sa <NAME_SIGN> exit sa <RELATIVE_DIRECTION> sa <BRANCH_SIGN>.",
+        "12": "Lumabas sa <NAME_SIGN> exit sa <RELATIVE_DIRECTION> patungo sa <TOWARD_SIGN>.",
+        "14": "Lumabas sa <NAME_SIGN> exit sa <RELATIVE_DIRECTION> sa <BRANCH_SIGN> patungo sa <TOWARD_SIGN>.",
+        "15": "Lumabas sa exit.",
+        "16": "Lumabas sa exit <NUMBER_SIGN>.",
+        "17": "Lumabas sa <BRANCH_SIGN> exit.",
+        "18": "Lumabas sa exit <NUMBER_SIGN> sa <BRANCH_SIGN>.",
+        "19": "Lumabas sa exit patungo sa <TOWARD_SIGN>.",
+        "20": "Lumabas sa exit <NUMBER_SIGN> patungo sa <TOWARD_SIGN>.",
+        "21": "Lumabas sa <BRANCH_SIGN> exit patungo sa <TOWARD_SIGN>.",
+        "22": "Lumabas sa exit <NUMBER_SIGN> sa <BRANCH_SIGN> patungo sa <TOWARD_SIGN>.",
+        "23": "Lumabas sa <NAME_SIGN> exit.",
+        "25": "Lumabas sa <NAME_SIGN> exit sa <BRANCH_SIGN>.",
+        "27": "Lumabas sa <NAME_SIGN> exit patungo sa <TOWARD_SIGN>.",
+        "29": "Lumabas sa <NAME_SIGN> exit sa <BRANCH_SIGN> patungo sa <TOWARD_SIGN>."
+      },
+      "relative_directions": [
+        "kaliwa",
+        "kanan"
+      ],
+      "example_phrases": {
+        "0": [
+          "Lumabas sa exit sa kaliwa.",
+          "Lumabas sa exit sa kanan."
+        ],
+        "1": [
+          "Lumabas sa exit 67 B-A sa kanan."
+        ],
+        "2": [
+          "Lumabas sa U.S. 3 22 West exit sa kanan."
+        ],
+        "3": [
+          "Lumabas sa exit 67 B-A sa kanan sa U.S. 3 22 West."
+        ],
+        "4": [
+          "Lumabas sa exit sa kanan patungo sa Lewistown."
+        ],
+        "5": [
+          "Lumabas sa exit 67 B-A sa kanan patungo sa Lewistown."
+        ],
+        "6": [
+          "Lumabas sa U.S. 3 22 West exit sa kanan patungo sa Lewistown."
+        ],
+        "7": [
+          "Lumabas sa exit 67 B-A sa kanan sa U.S. 3 22 West patungo sa Lewistown, State College."
+        ],
+        "8": [
+          "Lumabas sa White Marsh Boulevard exit sa kaliwa."
+        ],
+        "10": [
+          "Lumabas sa White Marsh Boulevard exit sa kaliwa sa Maryland 43 East."
+        ],
+        "12": [
+          "Lumabas sa White Marsh Boulevard exit sa kaliwa patungo sa White Marsh."
+        ],
+        "14": [
+          "Lumabas sa White Marsh Boulevard exit sa kaliwa sa Maryland 43 East patungo sa White Marsh."
+        ],
+        "15": [
+          "Lumabas sa exit."
+        ],
+        "16": [
+          "Lumabas sa exit 67 B-A."
+        ],
+        "17": [
+          "Lumabas sa Interstate 95 exit."
+        ],
+        "18": [
+          "Lumabas sa exit 67 B-A sa Interstate 95."
+        ],
+        "19": [
+          "Lumabas sa exit patungo sa Lewistown."
+        ],
+        "20": [
+          "Lumabas sa exit 67 B-A patungo sa Lewistown."
+        ],
+        "21": [
+          "Lumabas sa U.S. 3 22 West exit patungo sa Lewistown."
+        ],
+        "22": [
+          "Lumabas sa exit 67 B-A sa U.S. 3 22 West patungo sa Lewistown, State College."
+        ],
+        "23": [
+          "Lumabas sa White Marsh Boulevard exit."
+        ],
+        "25": [
+          "Lumabas sa White Marsh Boulevard exit sa Maryland 43 East."
+        ],
+        "27": [
+          "Lumabas sa White Marsh Boulevard exit patungo sa White Marsh."
+        ],
+        "29": [
+          "Lumabas sa White Marsh Boulevard exit sa Maryland 43 East patungo sa White Marsh."
+        ]
+      }
+    },
+    "exit_visual": {
+      "phrases": {
+        "0": "Lumabas sa <EXIT_NUMBERS>"
+      },
+      "example_phrases": {
+        "0": [
+          "Lumabas sa 1A"
+        ]
+      }
+    },
+    "keep": {
+      "phrases": {
+        "0": "Manatili sa <RELATIVE_DIRECTION> sa sangang-daan.",
+        "1": "Manatili sa <RELATIVE_DIRECTION> upang kunin ang exit <NUMBER_SIGN>.",
+        "2": "Manatili sa <RELATIVE_DIRECTION> upang kunin ang <STREET_NAMES>.",
+        "3": "Manatili sa <RELATIVE_DIRECTION> upang kunin ang exit <NUMBER_SIGN> sa <STREET_NAMES>.",
+        "4": "Manatili sa <RELATIVE_DIRECTION> patungo sa <TOWARD_SIGN>.",
+        "5": "Manatili sa <RELATIVE_DIRECTION> upang kunin ang exit <NUMBER_SIGN> patungo sa <TOWARD_SIGN>.",
+        "6": "Manatili sa <RELATIVE_DIRECTION> upang kunin ang <STREET_NAMES> patungo sa <TOWARD_SIGN>.",
+        "7": "Manatili sa <RELATIVE_DIRECTION> upang kunin ang exit <NUMBER_SIGN> sa <STREET_NAMES> patungo sa <TOWARD_SIGN>."
+      },
+      "empty_street_name_labels": [
+        "ang daanan",
+        "ang bike lane",
+        "ang landas ng mountain bike",
+        "ang tawiran",
+        "ang hagdan",
+        "ang tulay",
+        "ang lagusan"
+      ],
+      "relative_directions": [
+        "kaliwa",
+        "derecho",
+        "kanan"
+      ],
+      "example_phrases": {
+        "0": [
+          "Manatili sa kaliwa sa sangang-daan.",
+          "Manatili sa derecho sa sangang-daan.",
+          "Manatili sa kanan sa sangang-daan."
+        ],
+        "1": [
+          "Manatili sa kanan upang kunin ang exit 62."
+        ],
+        "2": [
+          "Manatili sa kanan upang kunin ang I 895 South."
+        ],
+        "3": [
+          "Manatili sa kanan upang kunin ang exit 62 sa I 895 South."
+        ],
+        "4": [
+          "Manatili sa kanan patungo sa Annapolis."
+        ],
+        "5": [
+          "Manatili sa kanan upang kunin ang exit 62 patungo sa Annapolis."
+        ],
+        "6": [
+          "Manatili sa kanan upang kunin ang I 895 South patungo sa Annapolis."
+        ],
+        "7": [
+          "Manatili sa kanan upang kunin ang exit 62 sa I 895 South patungo sa Annapolis."
+        ]
+      }
+    },
+    "keep_to_stay_on": {
+      "phrases": {
+        "0": "Manatili sa <RELATIVE_DIRECTION> upang manatili sa <STREET_NAMES>.",
+        "1": "Manatili sa <RELATIVE_DIRECTION> upang kunin ang exit <NUMBER_SIGN> upang manatili sa <STREET_NAMES>.",
+        "2": "Manatili sa <RELATIVE_DIRECTION> upang manatili sa <STREET_NAMES> patungo sa <TOWARD_SIGN>.",
+        "3": "Manatili sa <RELATIVE_DIRECTION> upang kunin ang exit <NUMBER_SIGN> upang manatili sa <STREET_NAMES> patungo sa <TOWARD_SIGN>."
+      },
+      "empty_street_name_labels": [
+        "ang daanan",
+        "ang bike lane",
+        "ang landas ng mountain bike",
+        "ang tawiran",
+        "ang hagdan",
+        "ang tulay",
+        "ang lagusan"
+      ],
+      "relative_directions": [
+        "kaliwa",
+        "derecho",
+        "kanan"
+      ],
+      "example_phrases": {
+        "0": [
+          "Manatili sa kaliwa upang manatili sa I 95 South.",
+          "Manatili sa derecho upang manatili sa I 95 South.",
+          "Manatili sa kanan upang manatili sa I 95 South."
+        ],
+        "1": [
+          "Manatili sa kaliwa upang kunin ang exit 62 upang manatili sa I 95 South."
+        ],
+        "2": [
+          "Manatili sa kaliwa upang manatili sa I 95 South patungo sa Baltimore."
+        ],
+        "3": [
+          "Manatili sa kaliwa upang kunin ang exit 62 upang manatili sa I 95 South patungo sa Baltimore."
+        ]
+      }
+    },
+    "keep_to_stay_on_verbal": {
+      "phrases": {
+        "0": "Manatili sa <RELATIVE_DIRECTION> upang manatili sa <STREET_NAMES>.",
+        "1": "Manatili sa <RELATIVE_DIRECTION> upang kunin ang exit <NUMBER_SIGN> upang manatili sa <STREET_NAMES>.",
+        "2": "Manatili sa <RELATIVE_DIRECTION> upang manatili sa <STREET_NAMES> patungo sa <TOWARD_SIGN>.",
+        "3": "Manatili sa <RELATIVE_DIRECTION> upang kunin ang exit <NUMBER_SIGN> upang manatili sa <STREET_NAMES> patungo sa <TOWARD_SIGN>."
+      },
+      "empty_street_name_labels": [
+        "ang daanan",
+        "ang bike lane",
+        "ang landas ng mountain bike",
+        "ang tawiran",
+        "ang hagdan",
+        "ang tulay",
+        "ang lagusan"
+      ],
+      "relative_directions": [
+        "kaliwa",
+        "derecho",
+        "kanan"
+      ],
+      "example_phrases": {
+        "0": [
+          "Manatili sa kaliwa upang manatili sa Interstate 95 South.",
+          "Manatili sa derecho upang manatili sa Interstate 95 South.",
+          "Manatili sa kanan upang manatili sa Interstate 95 South."
+        ],
+        "1": [
+          "Manatili sa kaliwa upang kunin ang exit 62 upang manatili sa Interstate 95 South."
+        ],
+        "2": [
+          "Manatili sa kaliwa upang manatili sa I 95 South patungo sa Baltimore."
+        ],
+        "3": [
+          "Manatili sa kaliwa upang kunin ang exit 62 upang manatili sa Interstate 95 South patungo sa Baltimore."
+        ]
+      }
+    },
+    "keep_verbal": {
+      "phrases": {
+        "0": "Manatili sa <RELATIVE_DIRECTION> sa sangang-daan.",
+        "1": "Manatili sa <RELATIVE_DIRECTION> upang kunin ang exit <NUMBER_SIGN>.",
+        "2": "Manatili sa <RELATIVE_DIRECTION> upang kunin ang <STREET_NAMES>.",
+        "3": "Manatili sa <RELATIVE_DIRECTION> upang kunin ang exit <NUMBER_SIGN> sa <STREET_NAMES>.",
+        "4": "Manatili sa <RELATIVE_DIRECTION> patungo sa <TOWARD_SIGN>.",
+        "5": "Manatili sa <RELATIVE_DIRECTION> upang kunin ang exit <NUMBER_SIGN> patungo sa <TOWARD_SIGN>.",
+        "6": "Manatili sa <RELATIVE_DIRECTION> upang kunin ang <STREET_NAMES> patungo sa <TOWARD_SIGN>.",
+        "7": "Manatili sa <RELATIVE_DIRECTION> upang kunin ang exit <NUMBER_SIGN> sa <STREET_NAMES> patungo sa <TOWARD_SIGN>."
+      },
+      "empty_street_name_labels": [
+        "ang daanan",
+        "ang bike lane",
+        "ang landas ng mountain bike",
+        "ang tawiran",
+        "ang hagdan",
+        "ang tulay",
+        "ang lagusan"
+      ],
+      "relative_directions": [
+        "kaliwa",
+        "derecho",
+        "kanan"
+      ],
+      "example_phrases": {
+        "0": [
+          "Manatili sa kaliwa sa sangang-daan.",
+          "Manatili sa derecho sa sangang-daan.",
+          "Manatili sa kanan sa sangang-daan."
+        ],
+        "1": [
+          "Manatili sa kanan upang kunin ang exit 62."
+        ],
+        "2": [
+          "Manatili sa kanan upang kunin ang Interstate 8 95 South."
+        ],
+        "3": [
+          "Manatili sa kanan upang kunin ang exit 62 sa Interstate 8 95 South."
+        ],
+        "4": [
+          "Manatili sa kanan patungo sa Annapolis."
+        ],
+        "5": [
+          "Manatili sa kanan upang kunin ang exit 62 patungo sa Annapolis."
+        ],
+        "6": [
+          "Manatili sa kanan upang kunin ang Interstate 8 95 South patungo sa Annapolis."
+        ],
+        "7": [
+          "Manatili sa kanan upang kunin ang exit 62 sa Interstate 8 95 South patungo sa Annapolis."
+        ]
+      }
+    },
+    "merge": {
+      "phrases": {
+        "0": "Sumanib.",
+        "1": "Sumanib sa <RELATIVE_DIRECTION>.",
+        "2": "Sumanib sa <STREET_NAMES>.",
+        "3": "Sumanib sa <RELATIVE_DIRECTION> sa <STREET_NAMES>.",
+        "4": "Sumanib patungo sa <TOWARD_SIGN>.",
+        "5": "Sumanib sa <RELATIVE_DIRECTION> patungo sa <TOWARD_SIGN>."
+      },
+      "relative_directions": [
+        "kaliwa",
+        "kanan"
+      ],
+      "empty_street_name_labels": [
+        "ang daanan",
+        "ang bike lane",
+        "ang landas ng mountain bike",
+        "ang tawiran",
+        "ang hagdan",
+        "ang tulay",
+        "ang lagusan"
+      ],
+      "example_phrases": {
+        "0": [
+          "Sumanib."
+        ],
+        "1": [
+          "Sumanib sa kaliwa."
+        ],
+        "2": [
+          "Sumanib sa I 76 West/Pennsylvania Turnpike."
+        ],
+        "3": [
+          "Sumanib sa kanan sa I 83 South."
+        ],
+        "4": [
+          "Sumanib patungo sa Baltimore."
+        ],
+        "5": [
+          "Sumanib sa kanan patungo sa Baltimore."
+        ]
+      }
+    },
+    "merge_verbal": {
+      "phrases": {
+        "0": "Sumanib.",
+        "1": "Sumanib sa <RELATIVE_DIRECTION>.",
+        "2": "Sumanib sa <STREET_NAMES>.",
+        "3": "Sumanib sa <RELATIVE_DIRECTION> sa <STREET_NAMES>.",
+        "4": "Sumanib patungo sa <TOWARD_SIGN>.",
+        "5": "Sumanib sa <RELATIVE_DIRECTION> patungo sa <TOWARD_SIGN>."
+      },
+      "relative_directions": [
+        "kaliwa",
+        "kanan"
+      ],
+      "empty_street_name_labels": [
+        "ang daanan",
+        "ang bike lane",
+        "ang landas ng mountain bike",
+        "ang tawiran",
+        "ang hagdan",
+        "ang tulay",
+        "ang lagusan"
+      ],
+      "example_phrases": {
+        "0": [
+          "Sumanib."
+        ],
+        "1": [
+          "Sumanib sa kaliwa."
+        ],
+        "2": [
+          "Sumanib sa I 76 West/Pennsylvania Turnpike."
+        ],
+        "3": [
+          "Sumanib sa kanan sa I 83 South."
+        ],
+        "4": [
+          "Sumanib patungo sa Baltimore."
+        ],
+        "5": [
+          "Sumanib sa kanan patungo sa Baltimore."
+        ]
+      }
+    },
+    "post_transition_transit_verbal": {
+      "phrases": {
+        "0": "Magbiyahe ng <TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>."
+      },
+      "transit_stop_count_labels": {
+        "one": "hintuan",
+        "other": "mga hintuan"
+      },
+      "example_phrases": {
+        "0": [
+          "Magbiyahe ng 1 hintuan.",
+          "Magbiyahe ng 3 mga hintuan."
+        ]
+      }
+    },
+    "post_transition_verbal": {
+      "phrases": {
+        "0": "Magpatuloy ng <LENGTH>.",
+        "1": "Magpatuloy sa <STREET_NAMES> ng <LENGTH>."
+      },
+      "empty_street_name_labels": [
+        "ang daanan",
+        "ang bike lane",
+        "ang landas ng mountain bike",
+        "ang tawiran",
+        "ang hagdan",
+        "ang tulay",
+        "ang lagusan"
+      ],
+      "metric_lengths": [
+        "<KILOMETERS> kilometro",
+        "1 kilometro",
+        "<METERS> metro",
+        "mas mababa sa 10 metro"
+      ],
+      "us_customary_lengths": [
+        "<MILES> milya",
+        "1 milya",
+        "kalahating milya",
+        "isang-kapat na milya",
+        "<FEET> paa",
+        "mas mababa sa 10 paa"
+      ],
+      "example_phrases": {
+        "0": [
+          "Magpatuloy ng 300 paa.",
+          "Magpatuloy ng 9 milya."
+        ],
+        "1": [
+          "Magpatuloy sa Pennsylvania 7 43 ng 6.2 milya.",
+          "Magpatuloy sa Main Street, Vermont 30 ng 1 ikasampung bahagi ng milya."
+        ]
+      }
+    },
+    "ramp": {
+      "phrases": {
+        "0": "Kunin ang rampa sa <RELATIVE_DIRECTION>.",
+        "1": "Kunin ang <BRANCH_SIGN> rampa sa <RELATIVE_DIRECTION>.",
+        "2": "Kunin ang rampa sa <RELATIVE_DIRECTION> patungo sa <TOWARD_SIGN>.",
+        "3": "Kunin ang <BRANCH_SIGN> rampa sa <RELATIVE_DIRECTION> patungo sa <TOWARD_SIGN>.",
+        "4": "Kunin ang <NAME_SIGN> rampa sa <RELATIVE_DIRECTION>.",
+        "5": "Lumiko sa <RELATIVE_DIRECTION> upang kunin ang rampa.",
+        "6": "Lumiko sa <RELATIVE_DIRECTION> upang kunin ang <BRANCH_SIGN> rampa.",
+        "7": "Lumiko sa <RELATIVE_DIRECTION> upang kunin ang rampa patungo sa <TOWARD_SIGN>.",
+        "8": "Lumiko sa <RELATIVE_DIRECTION> upang kunin ang <BRANCH_SIGN> rampa patungo sa <TOWARD_SIGN>.",
+        "9": "Lumiko sa <RELATIVE_DIRECTION> upang kunin ang <NAME_SIGN> rampa.",
+        "10": "Kunin ang rampa.",
+        "11": "Kunin ang <BRANCH_SIGN> rampa.",
+        "12": "Kunin ang rampa patungo sa <TOWARD_SIGN>.",
+        "13": "Kunin ang <BRANCH_SIGN> rampa patungo sa <TOWARD_SIGN>.",
+        "14": "Kunin ang <NAME_SIGN> rampa."
+      },
+      "relative_directions": [
+        "kaliwa",
+        "kanan"
+      ],
+      "example_phrases": {
+        "0": [
+          "Kunin ang rampa sa kaliwa.",
+          "Kunin ang rampa sa kanan."
+        ],
+        "1": [
+          "Kunin ang I 95 rampa sa kanan."
+        ],
+        "2": [
+          "Kunin ang rampa sa kaliwa patungo sa JFK."
+        ],
+        "3": [
+          "Kunin ang South Conduit Avenue rampa sa kaliwa patungo sa JFK."
+        ],
+        "4": [
+          "Kunin ang Gettysburg Pike rampa sa kanan."
+        ],
+        "5": [
+          "Lumiko sa kaliwa upang kunin ang rampa.",
+          "Lumiko sa kanan upang kunin ang rampa."
+        ],
+        "6": [
+          "Lumiko sa kaliwa upang kunin ang PA 283 West rampa."
+        ],
+        "7": [
+          "Lumiko sa kaliwa upang kunin ang rampa patungo sa Harrisburg/Harrisburg International Airport."
+        ],
+        "8": [
+          "Lumiko sa kaliwa upang kunin ang PA 283 West rampa patungo sa Harrisburg/Harrisburg International Airport."
+        ],
+        "9": [
+          "Lumiko sa kanan upang kunin ang Gettysburg Pike rampa."
+        ],
+        "10": [
+          "Kunin ang rampa."
+        ],
+        "11": [
+          "Kunin ang I 95 rampa."
+        ],
+        "12": [
+          "Kunin ang rampa patungo sa JFK."
+        ],
+        "13": [
+          "Kunin ang South Conduit Avenue rampa patungo sa JFK."
+        ],
+        "14": [
+          "Kunin ang Gettysburg rampa."
+        ]
+      }
+    },
+    "ramp_straight": {
+      "phrases": {
+        "0": "Dumiretso upang kunin ang rampa.",
+        "1": "Dumiretso upang kunin ang <BRANCH_SIGN> rampa.",
+        "2": "Dumiretso upang kunin ang rampa patungo sa <TOWARD_SIGN>.",
+        "3": "Dumiretso upang kunin ang <BRANCH_SIGN> rampa patungo sa <TOWARD_SIGN>.",
+        "4": "Dumiretso upang kunin ang <NAME_SIGN> rampa."
+      },
+      "example_phrases": {
+        "0": [
+          "Dumiretso upang kunin ang rampa."
+        ],
+        "1": [
+          "Dumiretso upang kunin ang US 322 East rampa."
+        ],
+        "2": [
+          "Dumiretso upang kunin ang rampa patungo sa Hershey."
+        ],
+        "3": [
+          "Dumiretso upang kunin ang US 322 East/US 422 East/US 522 East/US 622 East rampa patungo sa Hershey/Palmdale/Palmyra/Campbelltown."
+        ],
+        "4": [
+          "Dumiretso upang kunin ang Gettysburg Pike rampa."
+        ]
+      }
+    },
+    "ramp_straight_verbal": {
+      "phrases": {
+        "0": "Dumiretso upang kunin ang rampa.",
+        "1": "Dumiretso upang kunin ang <BRANCH_SIGN> rampa.",
+        "2": "Dumiretso upang kunin ang rampa patungo sa <TOWARD_SIGN>.",
+        "3": "Dumiretso upang kunin ang <BRANCH_SIGN> rampa patungo sa <TOWARD_SIGN>.",
+        "4": "Dumiretso upang kunin ang <NAME_SIGN> rampa."
+      },
+      "example_phrases": {
+        "0": [
+          "Dumiretso upang kunin ang rampa."
+        ],
+        "1": [
+          "Dumiretso upang kunin ang U.S. 3 22 East rampa."
+        ],
+        "2": [
+          "Dumiretso upang kunin ang rampa patungo sa Hershey."
+        ],
+        "3": [
+          "Dumiretso upang kunin ang U.S. 3 22 East, U.S. 4 22 East rampa patungo sa Hershey, Palmdale."
+        ],
+        "4": [
+          "Dumiretso upang kunin ang Gettysburg Pike rampa."
+        ]
+      }
+    },
+    "ramp_verbal": {
+      "phrases": {
+        "0": "Kunin ang rampa sa <RELATIVE_DIRECTION>.",
+        "1": "Kunin ang <BRANCH_SIGN> rampa sa <RELATIVE_DIRECTION>.",
+        "2": "Kunin ang rampa sa <RELATIVE_DIRECTION> patungo sa <TOWARD_SIGN>.",
+        "3": "Kunin ang <BRANCH_SIGN> rampa sa <RELATIVE_DIRECTION> patungo sa <TOWARD_SIGN>.",
+        "4": "Kunin ang <NAME_SIGN> rampa sa <RELATIVE_DIRECTION>.",
+        "5": "Lumiko sa <RELATIVE_DIRECTION> upang kunin ang rampa.",
+        "6": "Lumiko sa <RELATIVE_DIRECTION> upang kunin ang <BRANCH_SIGN> rampa.",
+        "7": "Lumiko sa <RELATIVE_DIRECTION> upang kunin ang rampa patungo sa <TOWARD_SIGN>.",
+        "8": "Lumiko sa <RELATIVE_DIRECTION> upang kunin ang <BRANCH_SIGN> rampa patungo sa <TOWARD_SIGN>.",
+        "9": "Lumiko sa <RELATIVE_DIRECTION> upang kunin ang <NAME_SIGN> rampa.",
+        "10": "Kunin ang rampa.",
+        "11": "Kunin ang <BRANCH_SIGN> rampa.",
+        "12": "Kunin ang rampa patungo sa <TOWARD_SIGN>.",
+        "13": "Kunin ang <BRANCH_SIGN> rampa patungo sa <TOWARD_SIGN>.",
+        "14": "Kunin ang <NAME_SIGN> rampa."
+      },
+      "relative_directions": [
+        "kaliwa",
+        "kanan"
+      ],
+      "example_phrases": {
+        "0": [
+          "Kunin ang rampa sa kaliwa.",
+          "Kunin ang rampa sa kanan."
+        ],
+        "1": [
+          "Kunin ang Interstate 95 rampa sa kanan."
+        ],
+        "2": [
+          "Kunin ang rampa sa kaliwa patungo sa JFK."
+        ],
+        "3": [
+          "Kunin ang South Conduit Avenue rampa sa kaliwa patungo sa JFK."
+        ],
+        "4": [
+          "Kunin ang Gettysburg Pike rampa sa kanan."
+        ],
+        "5": [
+          "Lumiko sa kaliwa upang kunin ang rampa.",
+          "Lumiko sa kanan upang kunin ang rampa."
+        ],
+        "6": [
+          "Lumiko sa kaliwa upang kunin ang Pennsylvania 2 83 West rampa."
+        ],
+        "7": [
+          "Lumiko sa kaliwa upang kunin ang rampa patungo sa Harrisburg/Harrisburg International Airport."
+        ],
+        "8": [
+          "Lumiko sa kaliwa upang kunin ang Pennsylvania 2 83 West rampa patungo sa Harrisburg, Harrisburg International Airport."
+        ],
+        "9": [
+          "Lumiko sa kanan upang kunin ang Gettysburg Pike rampa."
+        ],
+        "10": [
+          "Kunin ang rampa."
+        ],
+        "11": [
+          "Kunin ang Interstate 95 rampa."
+        ],
+        "12": [
+          "Kunin ang rampa patungo sa JFK."
+        ],
+        "13": [
+          "Kunin ang South Conduit Avenue rampa patungo sa JFK."
+        ],
+        "14": [
+          "Kunin ang Gettysburg Pike rampa."
+        ]
+      }
+    },
+    "sharp": {
+      "phrases": {
+        "0": "Lumiko ng matalim sa <RELATIVE_DIRECTION>.",
+        "1": "Lumiko ng matalim sa <RELATIVE_DIRECTION> sa <STREET_NAMES>.",
+        "2": "Lumiko ng matalim sa <RELATIVE_DIRECTION> sa <BEGIN_STREET_NAMES>. Magpatuloy sa <STREET_NAMES>.",
+        "3": "Lumiko ng matalim sa <RELATIVE_DIRECTION> upang manatili sa <STREET_NAMES>.",
+        "4": "Lumiko ng matalim sa <RELATIVE_DIRECTION> sa <JUNCTION_NAME>.",
+        "5": "Lumiko ng matalim sa <RELATIVE_DIRECTION> patungo sa <TOWARD_SIGN>."
+      },
+      "empty_street_name_labels": [
+        "ang daanan",
+        "ang bike lane",
+        "ang landas ng mountain bike",
+        "ang tawiran",
+        "ang hagdan",
+        "ang tulay",
+        "ang lagusan"
+      ],
+      "relative_directions": [
+        "kaliwa",
+        "kanan"
+      ],
+      "example_phrases": {
+        "0": [
+          "Lumiko ng matalim sa kaliwa."
+        ],
+        "1": [
+          "Lumiko ng matalim sa kanan sa Flatbush Avenue."
+        ],
+        "2": [
+          "Lumiko ng matalim sa kaliwa sa North Bond Street/US 1 Business/MD 924. Magpatuloy sa MD 924."
+        ],
+        "3": [
+          "Lumiko ng matalim sa kanan upang manatili sa Sunstone Drive."
+        ],
+        "4": [
+          "Lumiko ng matalim sa kanan sa Mannenbashi East."
+        ],
+        "5": [
+          "Lumiko ng matalim sa kaliwa patungo sa Baltimore."
+        ]
+      }
+    },
+    "sharp_verbal": {
+      "phrases": {
+        "0": "Lumiko ng matalim sa <RELATIVE_DIRECTION>.",
+        "1": "Lumiko ng matalim sa <RELATIVE_DIRECTION> sa <STREET_NAMES>.",
+        "2": "Lumiko ng matalim sa <RELATIVE_DIRECTION> sa <BEGIN_STREET_NAMES>.",
+        "3": "Lumiko ng matalim sa <RELATIVE_DIRECTION> upang manatili sa <STREET_NAMES>.",
+        "4": "Lumiko ng matalim sa <RELATIVE_DIRECTION> sa <JUNCTION_NAME>.",
+        "5": "Lumiko ng matalim sa <RELATIVE_DIRECTION> patungo sa <TOWARD_SIGN>."
+      },
+      "empty_street_name_labels": [
+        "ang daanan",
+        "ang bike lane",
+        "ang landas ng mountain bike",
+        "ang tawiran",
+        "ang hagdan",
+        "ang tulay",
+        "ang lagusan"
+      ],
+      "relative_directions": [
+        "kaliwa",
+        "kanan"
+      ],
+      "example_phrases": {
+        "0": [
+          "Lumiko ng matalim sa kaliwa."
+        ],
+        "1": [
+          "Lumiko ng matalim sa kanan sa Flatbush Avenue."
+        ],
+        "2": [
+          "Lumiko ng matalim sa kaliwa sa North Bond Street, U.S. 1 Business."
+        ],
+        "3": [
+          "Lumiko ng matalim sa kanan upang manatili sa Sunstone Drive."
+        ],
+        "4": [
+          "Lumiko ng matalim sa kanan sa Mannenbashi East."
+        ],
+        "5": [
+          "Lumiko ng matalim sa kaliwa patungo sa Baltimore."
+        ]
+      }
+    },
+    "start": {
+      "phrases": {
+        "0": "Tumungo sa <CARDINAL_DIRECTION>.",
+        "1": "Tumungo sa <CARDINAL_DIRECTION> sa <STREET_NAMES>.",
+        "2": "Tumungo sa <CARDINAL_DIRECTION> sa <BEGIN_STREET_NAMES>. Magpatuloy sa <STREET_NAMES>.",
+        "4": "Magmaneho sa <CARDINAL_DIRECTION>.",
+        "5": "Magmaneho sa <CARDINAL_DIRECTION> sa <STREET_NAMES>.",
+        "6": "Magmaneho sa <CARDINAL_DIRECTION> sa <BEGIN_STREET_NAMES>. Magpatuloy sa <STREET_NAMES>.",
+        "8": "Maglakad sa <CARDINAL_DIRECTION>.",
+        "9": "Maglakad sa <CARDINAL_DIRECTION> sa <STREET_NAMES>.",
+        "10": "Maglakad sa <CARDINAL_DIRECTION> sa <BEGIN_STREET_NAMES>. Magpatuloy sa <STREET_NAMES>.",
+        "16": "Magbisikleta sa <CARDINAL_DIRECTION>.",
+        "17": "Magbisikleta sa <CARDINAL_DIRECTION> sa <STREET_NAMES>.",
+        "18": "Magbisikleta sa <CARDINAL_DIRECTION> sa <BEGIN_STREET_NAMES>. Magpatuloy sa <STREET_NAMES>."
+      },
+      "cardinal_directions": [
+        "hilaga",
+        "hilagang-silangan",
+        "silangan",
+        "timog-silangan",
+        "timog",
+        "timog-kanluran",
+        "kanluran",
+        "hilagang-kanluran"
+      ],
+      "empty_street_name_labels": [
+        "ang daanan",
+        "ang bike lane",
+        "ang landas ng mountain bike",
+        "ang tawiran",
+        "ang hagdan",
+        "ang tulay",
+        "ang lagusan"
+      ],
+      "example_phrases": {
+        "0": [
+          "Tumungo sa silangan.",
+          "Tumungo sa hilaga."
+        ],
+        "1": [
+          "Tumungo sa timog-kanluran sa 5th Avenue.",
+          "Tumungo sa kanluran sa walkway",
+          "Tumungo sa silangan sa cycleway",
+          "Tumungo sa hilaga sa mountain bike trail"
+        ],
+        "2": [
+          "Tumungo sa timog sa North Prince Street/US 222/PA 272. Magpatuloy sa US 222/PA 272."
+        ],
+        "4": [
+          "Magmaneho sa silangan.",
+          "Magmaneho sa hilaga."
+        ],
+        "5": [
+          "Magmaneho sa timog-kanluran sa 5th Avenue."
+        ],
+        "6": [
+          "Magmaneho sa timog sa North Prince Street/US 222/PA 272. Magpatuloy sa US 222/PA 272."
+        ],
+        "8": [
+          "Maglakad sa silangan.",
+          "Maglakad sa hilaga."
+        ],
+        "9": [
+          "Maglakad sa timog-kanluran sa 5th Avenue.",
+          "Maglakad sa kanluran sa walkway"
+        ],
+        "10": [
+          "Maglakad sa timog sa North Prince Street/US 222/PA 272. Magpatuloy sa US 222/PA 272."
+        ],
+        "16": [
+          "Magbisikleta sa silangan.",
+          "Magbisikleta sa hilaga."
+        ],
+        "17": [
+          "Magbisikleta sa timog-kanluran sa 5th Avenue.",
+          "Magbisikleta sa silangan sa cycleway",
+          "Magbisikleta sa hilaga sa mountain bike trail"
+        ],
+        "18": [
+          "Magbisikleta sa timog sa North Prince Street/US 222/PA 272. Magpatuloy sa US 222/PA 272."
+        ]
+      }
+    },
+    "start_verbal": {
+      "phrases": {
+        "0": "Tumungo sa <CARDINAL_DIRECTION>.",
+        "1": "Tumungo sa <CARDINAL_DIRECTION> ng <LENGTH>.",
+        "2": "Tumungo sa <CARDINAL_DIRECTION> sa <STREET_NAMES>.",
+        "3": "Tumungo sa <CARDINAL_DIRECTION> sa <STREET_NAMES> ng <LENGTH>.",
+        "4": "Tumungo sa <CARDINAL_DIRECTION> sa <BEGIN_STREET_NAMES>.",
+        "5": "Magmaneho sa <CARDINAL_DIRECTION>.",
+        "6": "Magmaneho sa <CARDINAL_DIRECTION> ng <LENGTH>.",
+        "7": "Magmaneho sa <CARDINAL_DIRECTION> sa <STREET_NAMES>.",
+        "8": "Magmaneho sa <CARDINAL_DIRECTION> sa <STREET_NAMES> ng <LENGTH>.",
+        "9": "Magmaneho sa <CARDINAL_DIRECTION> sa <BEGIN_STREET_NAMES>.",
+        "10": "Maglakad sa <CARDINAL_DIRECTION>.",
+        "11": "Maglakad sa <CARDINAL_DIRECTION> ng <LENGTH>.",
+        "12": "Maglakad sa <CARDINAL_DIRECTION> sa <STREET_NAMES>.",
+        "13": "Maglakad sa <CARDINAL_DIRECTION> sa <STREET_NAMES> ng <LENGTH>.",
+        "14": "Maglakad sa <CARDINAL_DIRECTION> sa <BEGIN_STREET_NAMES>.",
+        "15": "Magbisikleta sa <CARDINAL_DIRECTION>.",
+        "16": "Magbisikleta sa <CARDINAL_DIRECTION> ng <LENGTH>.",
+        "17": "Magbisikleta sa <CARDINAL_DIRECTION> sa <STREET_NAMES>.",
+        "18": "Magbisikleta sa <CARDINAL_DIRECTION> sa <STREET_NAMES> ng <LENGTH>.",
+        "19": "Magbisikleta sa <CARDINAL_DIRECTION> sa <BEGIN_STREET_NAMES>."
+      },
+      "cardinal_directions": [
+        "hilaga",
+        "hilagang-silangan",
+        "silangan",
+        "timog-silangan",
+        "timog",
+        "timog-kanluran",
+        "kanluran",
+        "hilagang-kanluran"
+      ],
+      "empty_street_name_labels": [
+        "ang daanan",
+        "ang bike lane",
+        "ang landas ng mountain bike",
+        "ang tawiran",
+        "ang hagdan",
+        "ang tulay",
+        "ang lagusan"
+      ],
+      "metric_lengths": [
+        "<KILOMETERS> kilometro",
+        "1 kilometro",
+        "<METERS> metro",
+        "mas mababa sa 10 metro"
+      ],
+      "us_customary_lengths": [
+        "<MILES> milya",
+        "1 milya",
+        "kalahating milya",
+        "isang-kapat na milya",
+        "<FEET> paa",
+        "mas mababa sa 10 paa"
+      ],
+      "example_phrases": {
+        "0": [
+          "Tumungo sa silangan.",
+          "Tumungo sa hilaga."
+        ],
+        "1": [
+          "Tumungo sa silangan ng kalahating milya.",
+          "Tumungo sa hilaga ng 1 kilometro."
+        ],
+        "2": [
+          "Tumungo sa timog-kanluran sa 5th Avenue."
+        ],
+        "3": [
+          "Tumungo sa timog-kanluran sa 5th Avenue ng 1 ikasampung bahagi ng milya."
+        ],
+        "4": [
+          "Tumungo sa timog sa North Prince Street, U.S. 2 22."
+        ],
+        "5": [
+          "Magmaneho sa silangan.",
+          "Magmaneho sa hilaga."
+        ],
+        "6": [
+          "Magmaneho sa silangan ng kalahating milya.",
+          "Magmaneho sa hilaga ng 1 kilometro."
+        ],
+        "7": [
+          "Magmaneho sa timog-kanluran sa 5th Avenue."
+        ],
+        "8": [
+          "Magmaneho sa timog-kanluran sa 5th Avenue ng 1 ikasampung bahagi ng milya."
+        ],
+        "9": [
+          "Magmaneho sa timog sa North Prince Street, U.S. 2 22."
+        ],
+        "10": [
+          "Maglakad sa silangan.",
+          "Maglakad sa hilaga."
+        ],
+        "11": [
+          "Maglakad sa silangan ng kalahating milya.",
+          "Maglakad sa hilaga ng 1 kilometro."
+        ],
+        "12": [
+          "Maglakad sa timog-kanluran sa 5th Avenue."
+        ],
+        "13": [
+          "Maglakad sa timog-kanluran sa 5th Avenue ng 1 ikasampung bahagi ng milya."
+        ],
+        "14": [
+          "Maglakad sa timog sa North Prince Street, U.S. 2 22."
+        ],
+        "15": [
+          "Magbisikleta sa silangan.",
+          "Magbisikleta sa hilaga."
+        ],
+        "16": [
+          "Magbisikleta sa silangan ng kalahating milya.",
+          "Magbisikleta sa hilaga ng 1 kilometro."
+        ],
+        "17": [
+          "Magbisikleta sa timog-kanluran sa 5th Avenue."
+        ],
+        "18": [
+          "Magbisikleta sa timog-kanluran sa 5th Avenue ng 1 ikasampung bahagi ng milya."
+        ],
+        "19": [
+          "Magbisikleta sa timog sa North Prince Street, U.S. 2 22."
+        ]
+      }
+    },
+    "transit": {
+      "phrases": {
+        "0": "Sakay sa <TRANSIT_NAME>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)",
+        "1": "Sakay sa <TRANSIT_NAME> patungo sa <TRANSIT_HEADSIGN>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)"
+      },
+      "empty_transit_name_labels": [
+        "tram",
+        "metro",
+        "tren",
+        "bus",
+        "ferry",
+        "cable car",
+        "gondola",
+        "funicular"
+      ],
+      "transit_stop_count_labels": {
+        "one": "hintuan",
+        "other": "mga hintuan"
+      },
+      "example_phrases": {
+        "0": [
+          "Sakay sa New Haven. (1 hintuan)",
+          "Sakay sa metro. (2 mga hintuan)",
+          "Sakay sa bus. (12 mga hintuan)"
+        ],
+        "1": [
+          "Sakay sa F patungo sa JAMAICA - 179 ST. (10 mga hintuan)",
+          "Sakay sa ferry patungo sa Staten Island. (1 hintuan)"
+        ]
+      }
+    },
+    "transit_connection_destination": {
+      "phrases": {
+        "0": "Lumabas sa istasyon.",
+        "1": "Lumabas sa <TRANSIT_STOP>.",
+        "2": "Lumabas sa <TRANSIT_STOP> <STATION_LABEL>."
+      },
+      "station_label": "Istasyon",
+      "example_phrases": {
+        "0": [
+          "Lumabas sa istasyon."
+        ],
+        "1": [
+          "Lumabas sa Embarcadero Istasyon."
+        ],
+        "2": [
+          "Lumabas sa 8 St - NYU Istasyon."
+        ]
+      }
+    },
+    "transit_connection_destination_verbal": {
+      "phrases": {
+        "0": "Lumabas sa istasyon.",
+        "1": "Lumabas sa <TRANSIT_STOP>.",
+        "2": "Lumabas sa <TRANSIT_STOP> <STATION_LABEL>."
+      },
+      "station_label": "Istasyon",
+      "example_phrases": {
+        "0": [
+          "Lumabas sa istasyon."
+        ],
+        "1": [
+          "Lumabas sa Embarcadero Istasyon."
+        ],
+        "2": [
+          "Lumabas sa 8 St - NYU Istasyon."
+        ]
+      }
+    },
+    "transit_connection_start": {
+      "phrases": {
+        "0": "Pumasok sa istasyon.",
+        "1": "Pumasok sa <TRANSIT_STOP>.",
+        "2": "Pumasok sa <TRANSIT_STOP> <STATION_LABEL>."
+      },
+      "station_label": "Istasyon",
+      "example_phrases": {
+        "0": [
+          "Pumasok sa istasyon."
+        ],
+        "1": [
+          "Pumasok sa Embarcadero Istasyon."
+        ],
+        "2": [
+          "Pumasok sa 8 St - NYU Istasyon."
+        ]
+      }
+    },
+    "transit_connection_start_verbal": {
+      "phrases": {
+        "0": "Pumasok sa istasyon.",
+        "1": "Pumasok sa <TRANSIT_STOP>.",
+        "2": "Pumasok sa <TRANSIT_STOP> <STATION_LABEL>."
+      },
+      "station_label": "Istasyon",
+      "example_phrases": {
+        "0": [
+          "Pumasok sa istasyon."
+        ],
+        "1": [
+          "Pumasok sa Embarcadero Istasyon."
+        ],
+        "2": [
+          "Pumasok sa 8 St - NYU Istasyon."
+        ]
+      }
+    },
+    "transit_connection_transfer": {
+      "phrases": {
+        "0": "Lumipat sa istasyon.",
+        "1": "Lumipat sa <TRANSIT_STOP>.",
+        "2": "Lumipat sa <TRANSIT_STOP> <STATION_LABEL>."
+      },
+      "station_label": "Istasyon",
+      "example_phrases": {
+        "0": [
+          "Lumipat sa istasyon."
+        ],
+        "1": [
+          "Lumipat sa Embarcadero Istasyon."
+        ],
+        "2": [
+          "Lumipat sa 8 St - NYU Istasyon."
+        ]
+      }
+    },
+    "transit_connection_transfer_verbal": {
+      "phrases": {
+        "0": "Lumipat sa istasyon.",
+        "1": "Lumipat sa <TRANSIT_STOP>.",
+        "2": "Lumipat sa <TRANSIT_STOP> <STATION_LABEL>."
+      },
+      "station_label": "Istasyon",
+      "example_phrases": {
+        "0": [
+          "Lumipat sa istasyon."
+        ],
+        "1": [
+          "Lumipat sa Embarcadero Istasyon."
+        ],
+        "2": [
+          "Lumipat sa 8 St - NYU Istasyon."
+        ]
+      }
+    },
+    "transit_remain_on": {
+      "phrases": {
+        "0": "Manatili sa <TRANSIT_NAME>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)",
+        "1": "Manatili sa <TRANSIT_NAME> patungo sa <TRANSIT_HEADSIGN>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)"
+      },
+      "empty_transit_name_labels": [
+        "tram",
+        "metro",
+        "tren",
+        "bus",
+        "ferry",
+        "cable car",
+        "gondola",
+        "funicular"
+      ],
+      "transit_stop_count_labels": {
+        "one": "hintuan",
+        "other": "mga hintuan"
+      },
+      "example_phrases": {
+        "0": [
+          "Manatili sa New Haven. (1 hintuan)",
+          "Manatili sa tren. (3 mga hintuan)"
+        ],
+        "1": [
+          "Manatili sa F patungo sa JAMAICA - 179 ST. (10 mga hintuan)"
+        ]
+      }
+    },
+    "transit_remain_on_verbal": {
+      "phrases": {
+        "0": "Manatili sa <TRANSIT_NAME>.",
+        "1": "Manatili sa <TRANSIT_NAME> patungo sa <TRANSIT_HEADSIGN>."
+      },
+      "empty_transit_name_labels": [
+        "tram",
+        "metro",
+        "tren",
+        "bus",
+        "ferry",
+        "cable car",
+        "gondola",
+        "funicular"
+      ],
+      "example_phrases": {
+        "0": [
+          "Manatili sa New Haven."
+        ],
+        "1": [
+          "Manatili sa F patungo sa JAMAICA - 179 ST."
+        ]
+      }
+    },
+    "transit_transfer": {
+      "phrases": {
+        "0": "Lumipat upang sakay sa <TRANSIT_NAME>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)",
+        "1": "Lumipat upang sakay sa <TRANSIT_NAME> patungo sa <TRANSIT_HEADSIGN>. (<TRANSIT_STOP_COUNT> <TRANSIT_STOP_COUNT_LABEL>)"
+      },
+      "empty_transit_name_labels": [
+        "tram",
+        "metro",
+        "tren",
+        "bus",
+        "ferry",
+        "cable car",
+        "gondola",
+        "funicular"
+      ],
+      "transit_stop_count_labels": {
+        "one": "hintuan",
+        "other": "mga hintuan"
+      },
+      "example_phrases": {
+        "0": [
+          "Lumipat upang sakay sa New Haven. (1 hintuan)",
+          "Lumipat upang sakay sa tram. (4 mga hintuan)"
+        ],
+        "1": [
+          "Lumipat upang sakay sa F patungo sa JAMAICA - 179 ST. (10 mga hintuan)"
+        ]
+      }
+    },
+    "transit_transfer_verbal": {
+      "phrases": {
+        "0": "Lumipat upang sakay sa <TRANSIT_NAME>.",
+        "1": "Lumipat upang sakay sa <TRANSIT_NAME> patungo sa <TRANSIT_HEADSIGN>."
+      },
+      "empty_transit_name_labels": [
+        "tram",
+        "metro",
+        "tren",
+        "bus",
+        "ferry",
+        "cable car",
+        "gondola",
+        "funicular"
+      ],
+      "example_phrases": {
+        "0": [
+          "Lumipat upang sakay sa New Haven."
+        ],
+        "1": [
+          "Lumipat upang sakay sa F patungo sa JAMAICA - 179 ST."
+        ]
+      }
+    },
+    "transit_verbal": {
+      "phrases": {
+        "0": "Sakay sa <TRANSIT_NAME>.",
+        "1": "Sakay sa <TRANSIT_NAME> patungo sa <TRANSIT_HEADSIGN>."
+      },
+      "empty_transit_name_labels": [
+        "tram",
+        "metro",
+        "tren",
+        "bus",
+        "ferry",
+        "cable car",
+        "gondola",
+        "funicular"
+      ],
+      "example_phrases": {
+        "0": [
+          "Sakay sa New Haven."
+        ],
+        "1": [
+          "Sakay sa F patungo sa JAMAICA - 179 ST."
+        ]
+      }
+    },
+    "turn": {
+      "phrases": {
+        "0": "Kumaliwa <RELATIVE_DIRECTION>.",
+        "1": "Kumaliwa <RELATIVE_DIRECTION> papunta sa <STREET_NAMES>.",
+        "2": "Kumaliwa <RELATIVE_DIRECTION> upang ituloy sa <STREET_NAMES>.",
+        "3": "Kumaliwa <RELATIVE_DIRECTION> upang manatili sa <STREET_NAMES>.",
+        "4": "Kumaliwa <RELATIVE_DIRECTION> sa <JUNCTION_NAME>.",
+        "5": "Kumaliwa <RELATIVE_DIRECTION> patungong <TOWARD_SIGN>."
+      },
+      "empty_street_name_labels": [
+        "ang daanan",
+        "ang bike lane",
+        "ang landas ng mountain bike",
+        "ang tawiran",
+        "ang hagdan",
+        "ang tulay",
+        "ang lagusan"
+      ],
+      "relative_directions": [
+        "kaliwa",
+        "kanan"
+      ],
+      "example_phrases": {
+        "0": [
+          "Lumiko sa kaliwa."
+        ],
+        "1": [
+          "Lumiko sa kanan sa Flatbush Avenue."
+        ],
+        "2": [
+          "Lumiko sa kaliwa sa North Bond Street/US 1 Business/MD 924. Magpatuloy sa MD 924."
+        ],
+        "3": [
+          "Lumiko sa kanan upang manatili sa Sunstone Drive."
+        ],
+        "4": [
+          "Lumiko sa kanan sa Mannenbashi East."
+        ],
+        "5": [
+          "Lumiko sa kaliwa patungo sa Baltimore."
+        ]
+      }
+    },
+    "turn_verbal": {
+      "phrases": {
+        "0": "Lumiko sa <RELATIVE_DIRECTION>.",
+        "1": "Lumiko sa <RELATIVE_DIRECTION> sa <STREET_NAMES>.",
+        "2": "Lumiko sa <RELATIVE_DIRECTION> sa <BEGIN_STREET_NAMES>.",
+        "3": "Lumiko sa <RELATIVE_DIRECTION> upang manatili sa <STREET_NAMES>.",
+        "4": "Lumiko sa <RELATIVE_DIRECTION> sa <JUNCTION_NAME>.",
+        "5": "Lumiko sa <RELATIVE_DIRECTION> patungo sa <TOWARD_SIGN>."
+      },
+      "empty_street_name_labels": [
+        "ang daanan",
+        "ang bike lane",
+        "ang landas ng mountain bike",
+        "ang tawiran",
+        "ang hagdan",
+        "ang tulay",
+        "ang lagusan"
+      ],
+      "relative_directions": [
+        "kaliwa",
+        "kanan"
+      ],
+      "example_phrases": {
+        "0": [
+          "Lumiko sa kaliwa."
+        ],
+        "1": [
+          "Lumiko sa kanan sa Flatbush Avenue."
+        ],
+        "2": [
+          "Lumiko sa kaliwa sa North Bond Street, U.S. 1 Business."
+        ],
+        "3": [
+          "Lumiko sa kanan upang manatili sa Sunstone Drive."
+        ],
+        "4": [
+          "Lumiko sa kanan sa Mannenbashi East."
+        ],
+        "5": [
+          "Lumiko sa kaliwa patungo sa Baltimore."
+        ]
+      }
+    },
+    "uturn": {
+      "phrases": {
+        "0": "Lumiko ng U-turn sa <RELATIVE_DIRECTION>.",
+        "1": "Lumiko ng U-turn sa <RELATIVE_DIRECTION> sa <STREET_NAMES>.",
+        "2": "Lumiko ng U-turn sa <RELATIVE_DIRECTION> upang manatili sa <STREET_NAMES>.",
+        "3": "Lumiko ng U-turn sa <RELATIVE_DIRECTION> sa <CROSS_STREET_NAMES>.",
+        "4": "Lumiko ng U-turn sa <RELATIVE_DIRECTION> sa <CROSS_STREET_NAMES> sa <STREET_NAMES>.",
+        "5": "Lumiko ng U-turn sa <RELATIVE_DIRECTION> sa <CROSS_STREET_NAMES> upang manatili sa <STREET_NAMES>.",
+        "6": "Lumiko ng U-turn sa <RELATIVE_DIRECTION> sa <JUNCTION_NAME>.",
+        "7": "Lumiko ng U-turn sa <RELATIVE_DIRECTION> patungo sa <TOWARD_SIGN>."
+      },
+      "empty_street_name_labels": [
+        "ang daanan",
+        "ang bike lane",
+        "ang landas ng mountain bike",
+        "ang tawiran",
+        "ang hagdan",
+        "ang tulay",
+        "ang lagusan"
+      ],
+      "relative_directions": [
+        "kaliwa",
+        "kanan"
+      ],
+      "example_phrases": {
+        "0": [
+          "Lumiko ng U-turn sa kaliwa."
+        ],
+        "1": [
+          "Lumiko ng U-turn sa kanan sa Bunker Hill Road."
+        ],
+        "2": [
+          "Lumiko ng U-turn sa kaliwa upang manatili sa Bunker Hill Road."
+        ],
+        "3": [
+          "Lumiko ng U-turn sa kaliwa sa Devonshire Road."
+        ],
+        "4": [
+          "Lumiko ng U-turn sa kaliwa sa Devonshire Road sa Jonestown Road/US 22."
+        ],
+        "5": [
+          "Lumiko ng U-turn sa kaliwa sa Devonshire Road upang manatili sa Jonestown Road/US 22."
+        ],
+        "6": [
+          "Lumiko ng U-turn sa kanan sa Mannenbashi East."
+        ],
+        "7": [
+          "Lumiko ng U-turn sa kaliwa patungo sa Baltimore."
+        ]
+      }
+    },
+    "uturn_verbal": {
+      "phrases": {
+        "0": "Lumiko ng U-turn sa <RELATIVE_DIRECTION>.",
+        "1": "Lumiko ng U-turn sa <RELATIVE_DIRECTION> sa <STREET_NAMES>.",
+        "2": "Lumiko ng U-turn sa <RELATIVE_DIRECTION> upang manatili sa <STREET_NAMES>.",
+        "3": "Lumiko ng U-turn sa <RELATIVE_DIRECTION> sa <CROSS_STREET_NAMES>.",
+        "4": "Lumiko ng U-turn sa <RELATIVE_DIRECTION> sa <CROSS_STREET_NAMES> sa <STREET_NAMES>.",
+        "5": "Lumiko ng U-turn sa <RELATIVE_DIRECTION> sa <CROSS_STREET_NAMES> upang manatili sa <STREET_NAMES>.",
+        "6": "Lumiko ng U-turn sa <RELATIVE_DIRECTION> sa <JUNCTION_NAME>.",
+        "7": "Lumiko ng U-turn sa <RELATIVE_DIRECTION> patungo sa <TOWARD_SIGN>."
+      },
+      "empty_street_name_labels": [
+        "ang daanan",
+        "ang bike lane",
+        "ang landas ng mountain bike",
+        "ang tawiran",
+        "ang hagdan",
+        "ang tulay",
+        "ang lagusan"
+      ],
+      "relative_directions": [
+        "kaliwa",
+        "kanan"
+      ],
+      "example_phrases": {
+        "0": [
+          "Lumiko ng U-turn sa kaliwa."
+        ],
+        "1": [
+          "Lumiko ng U-turn sa kanan sa Bunker Hill Road."
+        ],
+        "2": [
+          "Lumiko ng U-turn sa kaliwa upang manatili sa Bunker Hill Road."
+        ],
+        "3": [
+          "Lumiko ng U-turn sa kaliwa sa Devonshire Road."
+        ],
+        "4": [
+          "Lumiko ng U-turn sa kaliwa sa Devonshire Road sa Jonestown Road, U.S. 22."
+        ],
+        "5": [
+          "Lumiko ng U-turn sa kaliwa sa Devonshire Road upang manatili sa Jonestown Road, U.S. 22."
+        ],
+        "6": [
+          "Lumiko ng U-turn sa kanan sa Mannenbashi East."
+        ],
+        "7": [
+          "Lumiko ng U-turn sa kaliwa patungo sa Baltimore."
+        ]
+      }
+    },
+    "verbal_multi_cue": {
+      "phrases": {
+        "0": "<CURRENT_VERBAL_CUE> Pagkatapos <NEXT_VERBAL_CUE>",
+        "1": "<CURRENT_VERBAL_CUE> Pagkatapos, sa <LENGTH>, <NEXT_VERBAL_CUE>"
+      },
+      "metric_lengths": [
+        "<KILOMETERS> kilometro",
+        "1 kilometro",
+        "<METERS> metro",
+        "mas mababa sa 10 metro"
+      ],
+      "us_customary_lengths": [
+        "<MILES> milya",
+        "1 milya",
+        "kalahating milya",
+        "isang-kapat na milya",
+        "<FEET> paa",
+        "mas mababa sa 10 paa"
+      ],
+      "example_phrases": {
+        "0": [
+          "Lumiko sa kanan sa East Fayette Street. Pagkatapos Lumiko sa kanan sa North Gay Street."
+        ],
+        "1": [
+          "Lumiko sa kanan sa East Fayette Street. Pagkatapos, sa 500 paa, Lumiko sa kanan sa North Gay Street."
+        ]
+      }
+    },
+    "approach_verbal_alert": {
+      "phrases": {
+        "0": "Sa <LENGTH>, <CURRENT_VERBAL_CUE>"
+      },
+      "metric_lengths": [
+        "<KILOMETERS> kilometro",
+        "1 kilometro",
+        "<METERS> metro",
+        "mas mababa sa 10 metro"
+      ],
+      "us_customary_lengths": [
+        "<MILES> milya",
+        "1 milya",
+        "kalahating milya",
+        "isang-kapat na milya",
+        "<FEET> paa",
+        "mas mababa sa 10 paa"
+      ],
+      "example_phrases": {
+        "0": [
+          "Sa isang-kapat na milya, Lumiko sa kanan sa North Gay Street."
+        ]
+      }
+    },
+    "pass": {
+      "phrases": {
+        "0": "Lampasan ang <OBJECT_LABEL>.",
+        "1": "Lampasan ang traffic signals sa <OBJECT_LABEL>."
+      },
+      "object_labels": [
+        "gate",
+        "mga bollards",
+        "ways intersection"
+      ],
+      "example_phrases": {
+        "0": [
+          "Lampasan ang gate."
+        ]
+      }
+    },
+    "elevator": {
+      "phrases": {
+        "0": "Kunin ang elevator.",
+        "1": "Kunin ang elevator sa <LEVEL>."
+      },
+      "example_phrases": {
+        "0": [
+          "Kunin ang elevator."
+        ],
+        "1": [
+          "Kunin ang elevator sa Level 1."
+        ]
+      }
+    },
+    "steps": {
+      "phrases": {
+        "0": "Kunin ang hagdan.",
+        "1": "Kunin ang hagdan sa <LEVEL>."
+      },
+      "example_phrases": {
+        "0": [
+          "Kunin ang hagdan."
+        ],
+        "1": [
+          "Kunin ang hagdan sa Level 2."
+        ]
+      }
+    },
+    "escalator": {
+      "phrases": {
+        "0": "Kunin ang escalator.",
+        "1": "Kunin ang escalator sa <LEVEL>."
+      },
+      "example_phrases": {
+        "0": [
+          "Kunin ang escalator."
+        ],
+        "1": [
+          "Kunin ang escalator sa Level 3."
+        ]
+      }
+    },
+    "level_change": {
+      "phrases": {
+        "0": "Continue to <LEVEL>."
+      },
+      "example_phrases": {
+        "0": [
+          "Continue to Level 2."
+        ]
+      }
+    },
+    "enter_building": {
+      "phrases": {
+        "0": "Pumasok sa gusali.",
+        "1": "Pumasok sa gusali, at magpatuloy sa <STREET_NAMES>."
+      },
+      "empty_street_name_labels": [
+        "daanang pampasahero",
+        "daanang pampadyak",
+        "landas para sa bisikletang pangbundok",
+        "tawiran"
+      ],
+      "example_phrases": {
+        "0": [
+          "Pumasok sa gusali."
+        ],
+        "1": [
+          "Pumasok sa gusali, at magpatuloy sa walkway."
+        ]
+      }
+    },
+    "exit_building": {
+      "phrases": {
+        "0": "Lumabas sa gusali.",
+        "1": "Lumabas sa gusali, at magpatuloy sa <STREET_NAMES>."
+      },
+      "empty_street_name_labels": [
+        "daanang pampasahero",
+        "daanang pampadyak",
+        "landas para sa bisikletang pangbundok",
+        "tawiran"
+      ],
+      "example_phrases": {
+        "0": [
+          "Lumabas sa gusali."
+        ],
+        "1": [
+          "Lumabas sa gusali, at magpatuloy sa walkway."
+        ]
+      }
     }
+  }
 }
