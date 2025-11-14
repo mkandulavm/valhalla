@@ -1,6 +1,6 @@
 # editor temporary / backup files
 *~
-
+scripts/world_tiles.txt
 genfiles/
 locales/*.UTF-8
 !locales/merge-en.sh
