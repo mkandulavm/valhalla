@@ -137,7 +137,6 @@
 #include <tuple>
 #include <vector>
 #include <sys/stat.h>
-#include <date/date.h>
 // unistd.h is used on some platforms as part of the the means to get
 // the current time zone. On Win32 windows.h provides a means to do it.
 // gcc/mingw supports unistd.h on Win32 but MSVC does not.
@@ -2618,16 +2617,9 @@ operator<<(std::ostream& os, const time_zone& z)
         os.width(8);
         os << s.format_ << "   ";
         os << s.until_year_ << ' ' << s.until_date_;
-        
-        #if defined(__ANDROID__)
-          os << "   " << date::format("%F %T", s.until_utc_) << " UTC";
-          os << "   " << date::format("%F %T", s.until_std_) << " STD";
-          os << "   " << date::format("%F %T", s.until_loc_);
-        #else
-          os << "   " << s.until_utc_ << " UTC";
-          os << "   " << s.until_std_ << " STD";
-          os << "   " << s.until_loc_;
-        #endif
+        os << "   " << s.until_utc_ << " UTC";
+        os << "   " << s.until_std_ << " STD";
+        os << "   " << s.until_loc_;
         os << "   " << make_time(s.initial_save_);
         os << "   " << s.initial_abbrev_;
         if (s.first_rule_.first != nullptr)
@@ -2652,12 +2644,8 @@ operator<<(std::ostream& os, const time_zone& z)
 std::ostream&
 operator<<(std::ostream& os, const leap_second& x)
 {
-    using namespace date;
-    #if defined(__ANDROID__)
-    return os << date::format("%F %T", x.date_) << "  +";
-    #else
-    return os << x.date_ << "  +";
-    #endif
+    using namespace date;    
+    return os << x.date_ << "  +";    
 }
 
 #endif  // !MISSING_LEAP_SECONDS
