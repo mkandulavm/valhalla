@@ -130,6 +130,9 @@ void summary(const valhalla::Api& api, int route_index, rapidjson::writer_wrappe
     has_ferry = has_ferry || leg.summary().has_ferry();
   }
 
+  //get nevh_version from options
+  auto nevh_version = (uint32_t)api.options().nevh_version();
+
   writer.start_object("summary");
   writer("has_time_restrictions", has_time_restrictions);
   writer("has_toll", has_toll);
@@ -146,6 +149,8 @@ void summary(const valhalla::Api& api, int route_index, rapidjson::writer_wrappe
   writer("length", route_length);
   writer.set_precision(tyr::kDefaultPrecision);
   writer("cost", route_cost);
+  writer("nevh_version", nevh_version);
+
   auto recost_itr = api.options().recostings().begin();
   for (auto recost : recost_times) {
     if (recost < 0)
@@ -660,6 +665,11 @@ void legs(valhalla::Api& api, int route_index, rapidjson::writer_wrapper_t& writ
     writer("length", directions_leg.summary().length());
     writer.set_precision(tyr::kDefaultPrecision);
     writer("cost", trip_leg_itr->node().rbegin()->cost().elapsed_cost().cost());
+    //get nevh_version from options
+    auto nevh_version = (uint32_t)api.options().nevh_version();
+    //writer("nevh_version", nevh_version); //we write to trip summary..not here, this is for each leg
+
+    
     auto recost_itr = api.options().recostings().begin();
     for (const auto& recost : trip_leg_itr->node().rbegin()->recosts()) {
       if (recost.has_elapsed_cost())
@@ -676,36 +686,61 @@ void legs(valhalla::Api& api, int route_index, rapidjson::writer_wrapper_t& writ
     //nevh//////
     //write speed_limits as a int array
 
-    if(directions_leg.speed_limits_size() > 0) {
-      writer.start_array("speed_limits_lanes");
-      int writeSpeedC = 0;
-      for(int s = 0; s < directions_leg.speed_limits_size(); ++s){
-        //int v = directions_leg.speed_limits(s);
-        if(writeSpeedC == 2) {
-          if(valhalla::Options_Units_Enum_Name(api.options().units()) == "miles") {
-            // convert from km/h to mph
-            //round number to nearest integer multiple of 5
-            auto speed_limit = static_cast<uint64_t>(directions_leg.speed_limits(s) * 0.621371);
-            speed_limit = (speed_limit + 2) / 5 * 5; // round to nearest 5
-            writer(speed_limit);
-          } else {
-            // keep as km/h
+
+    if(nevh_version == 0) {
+      if(directions_leg.speed_limits_size() > 0) {
+        writer.start_array("speed_limits_lanes");
+        int writeSpeedC = 0;
+        for(int s = 0; s < directions_leg.speed_limits_size(); ++s){
+          if(writeSpeedC == 2 || writeSpeedC == 4) {
+            writeSpeedC++;
+            continue;
+          }          
+          else if(writeSpeedC == 3) {
+            // write null for the second lane
             writer(static_cast<uint64_t>(directions_leg.speed_limits(s)));
+            writeSpeedC = 0; // reset counter
           }
-          writeSpeedC++;
+          else {
+            writer(static_cast<uint64_t>(directions_leg.speed_limits(s)));
+            writeSpeedC++;
+          }
         }
-        else if(writeSpeedC == 3) {
-          // write null for the second lane
-          writer(static_cast<uint64_t>(directions_leg.speed_limits(s)));
-          writeSpeedC = 0; // reset counter
-        }
-        else {
-          writer(static_cast<uint64_t>(directions_leg.speed_limits(s)));
-          writeSpeedC++;
-        }
+        writer.end_array();
       }
-      writer.end_array();
-    }    
+    }
+    else if(nevh_version == 1) {    
+      if(directions_leg.speed_limits_size() > 0) {
+        writer.start_array("speed_limits_lanes");
+        int writeSpeedC = 0;
+        for(int s = 0; s < directions_leg.speed_limits_size(); ++s){
+          //int v = directions_leg.speed_limits(s);
+          if(writeSpeedC == 2) {
+            if(valhalla::Options_Units_Enum_Name(api.options().units()) == "miles") {
+              // convert from km/h to mph
+              //round number to nearest integer multiple of 5
+              auto speed_limit = static_cast<uint64_t>(directions_leg.speed_limits(s) * 0.621371);
+              speed_limit = (speed_limit + 2) / 5 * 5; // round to nearest 5
+              writer(speed_limit);
+            } else {
+              // keep as km/h
+              writer(static_cast<uint64_t>(directions_leg.speed_limits(s)));
+            }
+            writeSpeedC++;
+          }
+          else if(writeSpeedC == 3) {
+            // write null for the second lane
+            writer(static_cast<uint64_t>(directions_leg.speed_limits(s)));
+            writeSpeedC = 0; // reset counter
+          }
+          else {
+            writer(static_cast<uint64_t>(directions_leg.speed_limits(s)));
+            writeSpeedC++;
+          }
+        }
+        writer.end_array();
+      }    
+    }
     if(directions_leg.speed_cameras_size() > 0) {
       writer.start_array("speed_cameras");
       for(int s = 0; s < directions_leg.speed_cameras_size(); ++s){

@@ -487,4 +487,5 @@ message Options {
                                                                    // ensuring that each edge appears in the output only once. [default = false]
   bool admin_crossings = 59;                                       // Include administrative boundary crossings
   bool turn_lanes = 60;                                            // Include turn lane information into Valhalla serializer response.
+  uint32 nevh_version = 61;                                          // nevh version to detect and then respond
 }

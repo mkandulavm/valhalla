@@ -912,6 +912,16 @@ void from_json(rapidjson::Document& doc, Options::Action action, Api& api) {
     options.set_height_precision(*height_precision);
   }
 
+  //nevh
+  // check nevh_version is sent in the request, then set it, otherwise set 0
+  auto nevh_version = rapidjson::get_optional<uint32_t>(doc, "/nevh_version");
+  if (nevh_version) {
+    options.set_nevh_version(*nevh_version);
+  } else {
+    options.set_nevh_version(0);
+  }
+  //nevh
+
   // matrix can be slimmed down but shouldn't by default for backwards-compatibility reasons
   if (options.action() == Options::sources_to_targets) {
     options.set_verbose(
