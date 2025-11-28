@@ -686,7 +686,10 @@ void legs(valhalla::Api& api, int route_index, rapidjson::writer_wrapper_t& writ
     //nevh//////
     //write speed_limits as a int array
 
-
+    for(int s = 0; s < directions_leg.speed_limits_size(); ++s){
+      std::cout << s%6 << ":" << directions_leg.speed_limits(s) << " ";
+    }
+    std::cout << std::endl;
     if(nevh_version == 0) {
       if(directions_leg.speed_limits_size() > 0) {
         writer.start_array("speed_limits_lanes");
@@ -697,7 +700,19 @@ void legs(valhalla::Api& api, int route_index, rapidjson::writer_wrapper_t& writ
             continue;
           }          
           else if(writeSpeedC == 3) {
-            // write null for the second lane
+            if(valhalla::Options_Units_Enum_Name(api.options().units()) == "miles") {
+              // convert from km/h to mph
+              //round number to nearest integer multiple of 5
+              auto speed_limit = static_cast<uint64_t>(directions_leg.speed_limits(s) * 0.621371);
+              speed_limit = (speed_limit + 2) / 5 * 5; // round to nearest 5
+              writer(speed_limit);
+            } else {
+              // keep as km/h
+              writer(static_cast<uint64_t>(directions_leg.speed_limits(s)));
+            }
+            writeSpeedC++;
+          }          
+          else if(writeSpeedC == 5) {            
             writer(static_cast<uint64_t>(directions_leg.speed_limits(s)));
             writeSpeedC = 0; // reset counter
           }
@@ -713,9 +728,10 @@ void legs(valhalla::Api& api, int route_index, rapidjson::writer_wrapper_t& writ
       if(directions_leg.speed_limits_size() > 0) {
         writer.start_array("speed_limits_lanes");
         int writeSpeedC = 0;
+        
         for(int s = 0; s < directions_leg.speed_limits_size(); ++s){
           //int v = directions_leg.speed_limits(s);
-          if(writeSpeedC == 2) {
+          if(writeSpeedC == 3) {
             if(valhalla::Options_Units_Enum_Name(api.options().units()) == "miles") {
               // convert from km/h to mph
               //round number to nearest integer multiple of 5
@@ -728,8 +744,7 @@ void legs(valhalla::Api& api, int route_index, rapidjson::writer_wrapper_t& writ
             }
             writeSpeedC++;
           }
-          else if(writeSpeedC == 3) {
-            // write null for the second lane
+          else if(writeSpeedC == 5) {            
             writer(static_cast<uint64_t>(directions_leg.speed_limits(s)));
             writeSpeedC = 0; // reset counter
           }
