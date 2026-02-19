@@ -41,14 +41,23 @@ nanobind_add_module(_valhalla
   STABLE_ABI
   LTO
   ${CMAKE_CURRENT_SOURCE_DIR}/src/_valhalla.cc)
-nanobind_add_module(graph_utils
+# Note: LTO disabled for _graph_utils to work around GCC 14 ICE on ARM64
+# The graph_id.cc file includes heavy baldr/graphreader.h templates that
+# trigger "lto1: internal compiler error: in get_token" during LTO phase.
+# See: https://github.com/actions/runner/issues/2508
+# See: https://www.mail-archive.com/ptxdist@pengutronix.de/msg24413.html
+nanobind_add_module(_graph_utils
+  NB_STATIC
+  STABLE_ABI
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/graph_utils.cc
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/graph_id.cc)
+nanobind_add_module(predicted_speeds
   NB_STATIC
   STABLE_ABI
   LTO
-  ${CMAKE_CURRENT_SOURCE_DIR}/src/graph_utils.cc
-  ${CMAKE_CURRENT_SOURCE_DIR}/src/graph_id.cc)
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/predicted_speeds.cc)
 
-foreach(tgt IN ITEMS _valhalla graph_utils)
+foreach(tgt IN ITEMS _valhalla _graph_utils predicted_speeds)
   # force abi3.so extension
   nanobind_extension_abi3(${tgt})
 
@@ -60,38 +69,44 @@ endforeach()
 
 if(APPLE)
   set_target_properties(_valhalla PROPERTIES INSTALL_RPATH "@loader_path")
-  set_target_properties(graph_utils PROPERTIES INSTALL_RPATH "@loader_path")
+  set_target_properties(_graph_utils PROPERTIES INSTALL_RPATH "@loader_path")
+  set_target_properties(predicted_speeds PROPERTIES INSTALL_RPATH "@loader_path")
 elseif(UNIX AND NOT APPLE)
   set_target_properties(_valhalla PROPERTIES INSTALL_RPATH "\$ORIGIN")
-  set_target_properties(graph_utils PROPERTIES INSTALL_RPATH "\$ORIGIN")
+  set_target_properties(_graph_utils PROPERTIES INSTALL_RPATH "\$ORIGIN")
+  set_target_properties(predicted_speeds PROPERTIES INSTALL_RPATH "\$ORIGIN")
 endif()
 
 set_target_properties(_valhalla PROPERTIES LIBRARY_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/valhalla)
-set_target_properties(graph_utils PROPERTIES LIBRARY_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/valhalla/utils)
+set_target_properties(_graph_utils PROPERTIES LIBRARY_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/valhalla/utils)
+set_target_properties(predicted_speeds PROPERTIES LIBRARY_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/valhalla/utils)
 set_target_properties(valhalla PROPERTIES POSITION_INDEPENDENT_CODE ON)
 
-# the package we're building, pyvalhalla or pyvalhalla-weekly
-if(NOT VALHALLA_PYTHON_PACKAGE)
-  set(VALHALLA_PYTHON_PACKAGE "pyvalhalla-weekly")
-endif()
-target_compile_definitions(_valhalla PRIVATE -DVALHALLA_PYTHON_PACKAGE=${VALHALLA_PYTHON_PACKAGE})
+# # the package we're building, pyvalhalla or pyvalhalla-weekly
+# if(NOT VALHALLA_PYTHON_PACKAGE)
+#   set(VALHALLA_PYTHON_PACKAGE "pyvalhalla-weekly")
+# endif()
+# target_compile_definitions(_valhalla PRIVATE -DVALHALLA_PYTHON_PACKAGE=${VALHALLA_PYTHON_PACKAGE})
 
-message(STATUS "Installing python modules to ${NEVH_Python_SITEARCH}")
-# install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/valhalla
-# DESTINATION "${NEVH_Python_SITEARCH}"
-# COMPONENT runtime
-# FILES_MATCHING PATTERN "*.py")
-# install(TARGETS python_valhalla
-# DESTINATION "${NEVH_Python_SITEARCH}/valhalla"
-# COMPONENT runtime)
-# copy valhalla python sources from src to build
-set(py_srcs 
+# message(STATUS "Installing python modules to ${NEVH_Python_SITEARCH}")
+# # install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/valhalla
+# # DESTINATION "${NEVH_Python_SITEARCH}"
+# # COMPONENT runtime
+# # FILES_MATCHING PATTERN "*.py")
+# # install(TARGETS python_valhalla
+# # DESTINATION "${NEVH_Python_SITEARCH}/valhalla"
+# # COMPONENT runtime)
+# # copy valhalla python sources from src to build
+# set(py_srcs 
+set(py_srcs
   valhalla/__init__.py
   valhalla/__version__.py
   valhalla/config.py
   valhalla/actor.py
   valhalla/utils/__init__.py
-  valhalla/utils/graph_utils.pyi
+  valhalla/utils/graph_utils.py
+  valhalla/utils/_graph_utils.pyi
+  valhalla/utils/predicted_speeds.pyi
   valhalla/utils/decode_polyline.py)
 
 # scikit-build-core does a different build than CMake
@@ -148,16 +163,30 @@ endforeach()
 add_custom_target(generate_incidents_pb2 ALL DEPENDS ${PYTHON_PROTO_OUT_DIR}/incidents_pb2.py)
 
 install(TARGETS _valhalla
-  DESTINATION "${NEVH_Python_SITEARCH}"
-  COMPONENT runtime)
-install(TARGETS graph_utils
-  DESTINATION "${NEVH_Python_SITEARCH}/utils"
-  COMPONENT runtime)
-install(FILES ${PYTHON_PROTO_OUT_DIR}/incidents_pb2.py
-  DESTINATION "${NEVH_Python_SITEARCH}/valhalla"
-  COMPONENT runtime)
+#   DESTINATION "${NEVH_Python_SITEARCH}"
+#   COMPONENT runtime)
+# install(TARGETS graph_utils
+#   DESTINATION "${NEVH_Python_SITEARCH}/utils"
+#   COMPONENT runtime)
+# install(FILES ${PYTHON_PROTO_OUT_DIR}/incidents_pb2.py
+#   DESTINATION "${NEVH_Python_SITEARCH}/valhalla"
+#   COMPONENT runtime)
 
-install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/valhalla ${CMAKE_CURRENT_BINARY_DIR}/valhalla/utils
-  DESTINATION "${NEVH_Python_SITEARCH}"
-  COMPONENT runtime
-  FILES_MATCHING PATTERN "*.py*")
+# install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/valhalla ${CMAKE_CURRENT_BINARY_DIR}/valhalla/utils
+#   DESTINATION "${NEVH_Python_SITEARCH}"
+#   COMPONENT runtime
+#   FILES_MATCHING PATTERN "*.py*")
+  DESTINATION "${VALHALLA_INSTALL_PYDIR}/valhalla"
+  COMPONENT python)
+install(TARGETS _graph_utils
+  DESTINATION "${VALHALLA_INSTALL_PYDIR}/valhalla/utils"
+  COMPONENT python)
+install(TARGETS predicted_speeds
+  DESTINATION "${VALHALLA_INSTALL_PYDIR}/valhalla/utils"
+  COMPONENT python)
+install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/valhalla
+  DESTINATION "${VALHALLA_INSTALL_PYDIR}"
+  COMPONENT python
+  FILES_MATCHING
+    PATTERN "*.py*"
+    PATTERN "__pycache__" EXCLUDE)

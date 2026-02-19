@@ -30,7 +30,10 @@ message(STATUS "Using Node.js headers version ${NODE_VERSION}")
 message(STATUS "Node.js include directory: ${NODE_INCLUDE_DIR}")
 
 
-add_library(valhalla_node SHARED ${CMAKE_CURRENT_SOURCE_DIR}/src/valhalla.cc)
+add_library(valhalla_node SHARED
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/valhalla.cc
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/graph_id.cc
+)
 
 
 set_target_properties(valhalla_node PROPERTIES
@@ -63,5 +66,17 @@ set_target_properties(valhalla_node PROPERTIES
   LIBRARY_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/lib
   RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/lib
 )
+
+# Copy proto files to the nodejs bindings directory for npm distribution
+file(GLOB PROTO_FILES "${CMAKE_SOURCE_DIR}/proto/*.proto")
+file(MAKE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/proto)
+foreach(PROTO_FILE ${PROTO_FILES})
+  get_filename_component(PROTO_FILENAME ${PROTO_FILE} NAME)
+  configure_file(
+    ${PROTO_FILE}
+    ${CMAKE_CURRENT_BINARY_DIR}/proto/${PROTO_FILENAME}
+    COPYONLY
+  )
+endforeach()
 
 message(STATUS "Node.js bindings configured successfully")

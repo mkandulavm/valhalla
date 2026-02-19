@@ -2618,15 +2618,17 @@ operator<<(std::ostream& os, const time_zone& z)
         os.width(8);
         os << s.format_ << "   ";
         os << s.until_year_ << ' ' << s.until_date_;
-        #if defined(__ANDROID__)
-          os << "   " << date::format("%F %T", s.until_utc_) << " UTC";
-          os << "   " << date::format("%F %T", s.until_std_) << " STD";
-          os << "   " << date::format("%F %T", s.until_loc_);
-        #else
-        os << "   " << s.until_utc_ << " UTC";
-        os << "   " << s.until_std_ << " STD";
+        // #if defined(__ANDROID__)
+        //   os << "   " << date::format("%F %T", s.until_utc_) << " UTC";
+        //   os << "   " << date::format("%F %T", s.until_std_) << " STD";
+        //   os << "   " << date::format("%F %T", s.until_loc_);
+        // #else
+        // os << "   " << s.until_utc_ << " UTC";
+        // os << "   " << s.until_std_ << " STD";
+        date::operator<<(os << "   ", s.until_utc_) << " UTC";
+        date::operator<<(os << "   ", s.until_std_) << " STD";
         os << "   " << s.until_loc_;
-        #endif
+        //#endif
         os << "   " << make_time(s.initial_save_);
         os << "   " << s.initial_abbrev_;
         if (s.first_rule_.first != nullptr)
@@ -2651,12 +2653,14 @@ operator<<(std::ostream& os, const time_zone& z)
 std::ostream&
 operator<<(std::ostream& os, const leap_second& x)
 {
-    using namespace date;    
-    #if defined(__ANDROID__)
-    return os << date::format("%F %T", x.date_) << "  +";
-    #else
-    return os << x.date_ << "  +";
-    #endif
+    // using namespace date;    
+    // #if defined(__ANDROID__)
+    // return os << date::format("%F %T", x.date_) << "  +";
+    // #else
+    // return os << x.date_ << "  +";
+    // #endif
+    using namespace date;
+    return date::operator<<(os, x.date_) << "  +";
 }
 
 #endif  // !MISSING_LEAP_SECONDS

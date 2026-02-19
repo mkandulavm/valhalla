@@ -38,6 +38,8 @@ valhalla_module(NAME tyr
       ${system_includes}
     PRIVATE
       ${rapidjson_include_dir}
+      ${vtzero_include_dir}
+      ${VALHALLA_SOURCE_DIR}/third_party/protozero/include
   DEPENDS
     valhalla::loki
     valhalla::thor
@@ -45,5 +47,5 @@ valhalla_module(NAME tyr
     valhalla::proto
     ${valhalla_protobuf_targets}
     Boost::boost
-    ${GDAL_TARGET}
+    ${GTIFF_TARGETS}
     )

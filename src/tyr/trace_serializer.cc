@@ -237,6 +237,9 @@ void serialize_edges(const AttributesController& controller,
       if (controller(kEdgeTrafficSignal)) {
         writer("traffic_signal", edge.traffic_signal());
       }
+      if (controller(kEdgeHovType)) {
+        writer("hov_type", to_string(static_cast<baldr::HOVEdgeType>(edge.hov_type())));
+      }
       if (controller(kEdgeLevels)) {
         if (edge.levels_size()) {
           writer.start_array("levels");
@@ -457,7 +460,7 @@ void serialize_matched_points(const AttributesController& controller,
     // TODO: need to keep track of the index of the edge in the global set of edges a given
     // TODO: match result belongs/correlated to
     // Process matched point edge index
-    if (controller(kMatchedEdgeIndex) && match_result.edgeid.Is_Valid()) {
+    if (controller(kMatchedEdgeIndex) && match_result.edgeid.is_valid()) {
       writer("edge_index", static_cast<uint64_t>(match_result.edge_index));
     }
 
@@ -515,6 +518,31 @@ void serialize_shape_attributes(const AttributesController& controller,
     for (const auto& speed : trip_path.shape_attributes().speed()) {
       // dm/s to km/h
       writer(speed * kDecimeterPerSectoKPH);
+    }
+    writer.end_array();
+  }
+  if (controller(kShapeAttributesCongestion)) {
+    writer.start_array("congestion");
+    for (const auto& congestion : trip_path.shape_attributes().congestion()) {
+      writer(congestion);
+    }
+    writer.end_array();
+  }
+  if (controller(kShapeAttributesClosure)) {
+    writer.start_array("closure");
+    for (const auto& closure : trip_path.closures()) {
+      writer.start_object();
+      writer("begin_shape_index", static_cast<uint64_t>(closure.begin_shape_index()));
+      writer("end_shape_index", static_cast<uint64_t>(closure.end_shape_index()));
+      writer.end_object();
+    }
+    writer.end_array();
+  }
+  if (controller(kShapeAttributesSpeedLimit)) {
+    writer.start_array("speed_limit");
+    for (const auto& speed_limit : trip_path.shape_attributes().speed_limit()) {
+      // already in kph
+      writer(speed_limit);
     }
     writer.end_array();
   }
