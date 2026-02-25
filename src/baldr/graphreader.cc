@@ -1,9 +1,14 @@
+#include <algorithm>
 #include <filesystem>
 #include <fstream>
+#include <iomanip>
 #include <iostream>
+#include <sstream>
 #include <string>
 #include <sys/stat.h>
 #include <utility>
+
+#include <boost/format.hpp>
 
 #include "baldr/connectivity_map.h"
 #include "baldr/curl_tilegetter.h"
@@ -29,6 +34,28 @@ namespace {
 constexpr size_t DEFAULT_MAX_CACHE_SIZE = 1073741824; // 1 gig
 constexpr size_t AVERAGE_TILE_SIZE = 2097152;         // 2 megs
 constexpr size_t AVERAGE_MM_TILE_SIZE = 1024;         // 1k
+
+// Small hex preview of a buffer (first N bytes)
+static std::string hex_preview(const void* p, size_t n, size_t max_bytes = 16) {
+  const auto* b = static_cast<const unsigned char*>(p);
+  size_t m = std::min(n, max_bytes);
+  std::ostringstream ss;
+  ss << std::hex << std::setfill('0');
+  for (size_t i = 0; i < m; ++i) {
+    ss << std::setw(2) << (unsigned)b[i];
+    if (i + 1 < m)
+      ss << " ";
+  }
+  if (n > m)
+    ss << " ...";
+  return ss.str();
+}
+
+[[maybe_unused]] static std::string str_preview(const std::string& s, size_t max_chars = 80) {
+  if (s.size() <= max_chars)
+    return s;
+  return s.substr(0, max_chars) + "...";
+}
 
 struct tile_index_entry {
   uint64_t offset;  // byte offset from the beginning of the tar
@@ -87,101 +114,73 @@ GraphReader::tile_extract_t::tile_extract_t(const boost::property_tree::ptree& p
     return contents;
   };
 
-  bool scan_tar = pt.get<bool>("data_processing.scan_tar", false);  
-  //nevh
+  bool scan_tar = pt.get<bool>("data_processing.scan_tar", false);
+
   std::string tileDirToUse;
-  //if the tile_extract has .zip extension, then we will load it as a zip file
-  if (pt.get_optional<std::string>("tile_dir")) 
-  {
-    auto te = pt.get<std::string>("tile_dir");
-    //rmove any trailing slashes
-    if (te.back() == '/' || te.back() == '\\') {
+  if (auto tile_dir_opt = pt.get_optional<std::string>("tile_dir")) {
+    std::string te = *tile_dir_opt;
+    if (!te.empty() && (te.back() == '/' || te.back() == '\\')) {
       te.pop_back();
     }
-    te += ".zip"; // append .zip to the tile_dir    
-    //check if the file exists
-    std::cout << "checking if " << te << " exists..." << std::endl;
-    if (std::filesystem::exists(te.c_str())) {      
+    te += ".zip";
+    if (std::filesystem::exists(te)) {
       tileDirToUse = te;
-      std::cout<< "found " << te << ", using it as tile_extract" << std::endl;
     }
   }
-  if (pt.get_optional<std::string>("root")) 
-  {    
-    auto root = pt.get<std::string>("root");      
-    auto te = root + "/valhalla_tiles.zip";
-    if(te != tileDirToUse) {     
-      std::cout << "using tile_extract from root: " << te << ". This is used for reading routing tiles." << std::endl;  
+  if (auto root_opt = pt.get_optional<std::string>("root")) {
+    std::string te = *root_opt + "/valhalla_tiles.zip";
+    if (std::filesystem::exists(te)) {
+      tileDirToUse = te;
     }
-    tileDirToUse = te;
-  }  
-  {
-    try {      
-      auto te = tileDirToUse;
-      std::cout << "trying to load " << te << std::endl;
-      //check if te file exists
-      bool zipFileExists = std::filesystem::exists(te.c_str());    
+  }
 
-      if(zipFileExists) {        
-        zipArchive = std::make_unique<NENative::ZipArchive>();
-        bool b = zipArchive->loadFromMMapFile(te);
-        if(b == false) {
-          std::cout << te << " Failed to load zip file" << std::endl;
-          zipFileExists = false;          
-        } 
-        else {
-          isZip = true;
-        }
-
-        auto &entries = zipArchive->entries();
-        std::cout <<"adding to zipTileIDToPathMap..." << std::endl;
-        for(auto &e : entries) {
+  if (!tileDirToUse.empty()) {
+    try {
+      zipArchive = std::make_unique<NENative::ZipArchive>();
+      if (zipArchive->loadFromMMapFile(tileDirToUse)) {
+        isZip = true;
+        auto& entries = zipArchive->entries();
+        for (auto& e : entries) {
           auto path = e.path;
           auto id = GraphTile::GetTileId(path);
           zipTileIDToPathMap.insert(std::make_pair(id, path));
-          //std::cout << id << " : " << path << std::endl;
-
-        }        
+        }
+      } else {
+        zipArchive.reset();
       }
-      else {
-        std::cout << te << " file does not exist" << std::endl;
-        //throw std::runtime_error(te + " file does not exist");
-      }
+    } catch (const std::exception& e) {
+      LOG_WARN(e.what());
+      zipArchive.reset();
+    }
+  }
 
-      //auto zipArchive = std::make_unique<zip_t>(te);
-      if (isZip == false) {
-        //nevh
-        archive.reset(new midgard::tar(pt.get<std::string>("tile_extract"), true, true, index_loader));
-        // map files to graph ids
-        if (tiles.empty()) {
-          for (const auto& c : archive->contents) {
-            try {
-              auto id = GraphTile::GetTileId(c.first);
-              tiles[id] = std::make_pair(const_cast<char*>(c.second.first), c.second.second);
-            } catch (...) {
-              // It's possible to put non-tile files inside the tarfile.  As we're only
-              // parsing the file *name* as a GraphId here, we will just silently skip
-              // any file paths that can't be parsed by GraphId::GetTileId()
-              // If we end up with *no* recognizable tile files in the tarball at all,
-              // checks lower down will warn on that.
-            }
-          }
-        } else if (scan_tar) {
-          checksum = 0;
-          for (const auto& kv : tiles) {
-            checksum += *const_cast<char*>(kv.second.first);
+  auto te_opt = pt.get_optional<std::string>("tile_extract");
+  if (!isZip && te_opt) {
+    try {
+      archive.reset(new midgard::tar(*te_opt, true, true, index_loader));
+      if (tiles.empty()) {
+        for (const auto& c : archive->contents) {
+          try {
+            auto id = GraphTile::GetTileId(c.first);
+            tiles[id] = std::make_pair(const_cast<char*>(c.second.first), c.second.second);
+          } catch (...) {
           }
         }
-        // couldn't load it
-        if (tiles.empty()) {
-          LOG_WARN("Tile extract contained no usable tiles");
-          archive.reset();
-        } // loaded ok but with possibly bad blocks
-        else {
-          LOG_INFO("Tile extract successfully loaded with tile count: " + std::to_string(tiles.size()));
-          if (archive->corrupt_blocks) {
-            LOG_WARN("Tile extract had " + std::to_string(archive->corrupt_blocks) + " corrupt blocks");
-          }
+      } else if (scan_tar) {
+        checksum = 0;
+        for (const auto& kv : tiles) {
+          checksum += *const_cast<char*>(kv.second.first);
+        }
+      }
+      if (tiles.empty()) {
+        LOG_WARN("Tile extract contained no usable tiles");
+        archive.reset();
+      } else {
+        LOG_INFO("Tile extract successfully loaded with tile count: " +
+                 std::to_string(tiles.size()));
+        if (archive->corrupt_blocks) {
+          LOG_WARN("Tile extract had " + std::to_string(archive->corrupt_blocks) +
+                   " corrupt blocks");
         }
       }
     } catch (const std::exception& e) {
@@ -579,7 +578,7 @@ GraphReader::GraphReader(const boost::property_tree::ptree& pt,
                          bool traffic_readonly)
     : tile_extract_(new tile_extract_t(pt, traffic_readonly)),
     //nevh
-      tile_dir_( (!tile_extract_->isZip || tile_extract_->tiles.empty()) ? pt.get<std::string>("tile_dir", "") : ""),
+      tile_dir_( (!tile_extract_->isZip && tile_extract_->tiles.empty()) ? pt.get<std::string>("tile_dir", "") : ""),
       //nevh
       tile_getter_(std::move(tile_getter)),
       max_concurrent_users_(pt.get<size_t>("max_concurrent_reader_users", 1)),
@@ -697,9 +696,9 @@ private:
 //nevh
 class ZipGraphMemory final : public GraphMemory {
 public:
-  ZipGraphMemory(std::vector<char> &unzippedDataIn)
+  ZipGraphMemory(std::vector<char>&& unzippedDataIn)
       : unzippedData(std::move(unzippedDataIn)) {
-    data = &unzippedData[0];
+    data = unzippedData.data();
     size = unzippedData.size();
   }
 private:
@@ -734,6 +733,11 @@ graph_tile_ptr GraphReader::GetGraphTile(const GraphId& graphid) {
       LOG_ERROR("Couldn't find graph tile in zip " + GraphTile::FileSuffix(base));
       return nullptr;
     }
+
+    LOG_INFO((boost::format("ZIP tile load: base=%1% path='%2%' uncomp=%3%") %
+              GraphTile::FileSuffix(base) % path->second % e->uncompressedSize)
+                 .str());
+
     std::vector<char> unzippedData;
     unzippedData.resize(e->uncompressedSize);            
     bool decompressedOK = tile_extract_->zipArchive->decompressEntry(e, &unzippedData[0]);
@@ -742,8 +746,14 @@ graph_tile_ptr GraphReader::GetGraphTile(const GraphId& graphid) {
       return nullptr;
     }
 
-    auto sz = unzippedData.size();
-    auto memory = std::make_unique<ZipGraphMemory>(unzippedData);
+    LOG_INFO((boost::format("ZIP tile bytes: base=%1% buf=%2% first16=[%3%]") %
+              GraphTile::FileSuffix(base) % unzippedData.size() %
+              hex_preview(unzippedData.data(), unzippedData.size(), 16))
+                 .str());
+
+    const size_t buf_sz = unzippedData.size();
+
+    auto memory = std::make_unique<ZipGraphMemory>(std::move(unzippedData));
 
     auto traffic_ptr = tile_extract_->traffic_tiles.find(base);
     auto traffic_memory = traffic_ptr != tile_extract_->traffic_tiles.end()
@@ -753,8 +763,33 @@ graph_tile_ptr GraphReader::GetGraphTile(const GraphId& graphid) {
 
     // This initializes the tile from mmap
     auto tile = GraphTile::Create(base, std::move(memory), std::move(traffic_memory));
-    if (!tile) {
-      LOG_ERROR("Couldn't load graph tile from zip " + GraphTile::FileSuffix(base));
+    if (!tile || !tile->header()) {
+      LOG_ERROR("ZIP: GraphTile::Create failed " + GraphTile::FileSuffix(base));
+      return nullptr;
+    }
+
+    const auto end_off = tile->header()->end_offset();
+    LOG_INFO((boost::format("ZIP tile header: base=%1% end_offset=%2%") %
+              GraphTile::FileSuffix(base) % end_off)
+                 .str());
+
+#ifdef HAS_TILE_HEADER_VERSION_ACCESSOR
+    LOG_INFO((boost::format("ZIP tile header: base=%1% version=%2%") %
+              GraphTile::FileSuffix(base) % tile->header()->version())
+                 .str());
+#endif
+
+    if (end_off == 0) {
+      LOG_ERROR((boost::format("ZIP tile INVALID: end_offset=0 base=%1%") %
+                 GraphTile::FileSuffix(base))
+                    .str());
+      return nullptr;
+    }
+
+    if (end_off > buf_sz) {
+      LOG_ERROR((boost::format("ZIP tile INVALID: end_offset(%1%) > buffer(%2%) base=%3% (WRONG TILE BYTES OR VERSION MISMATCH)") %
+                 end_off % buf_sz % GraphTile::FileSuffix(base))
+                    .str());
       return nullptr;
     }
     // //run thru the tile directedEdges
@@ -766,7 +801,7 @@ graph_tile_ptr GraphReader::GetGraphTile(const GraphId& graphid) {
     //     }
     //   }
      // Keep a copy in the cache and return it
-    const size_t size = AVERAGE_MM_TILE_SIZE; // tile.end_offset();  // TODO what size??
+    const size_t size = end_off;
     // Keep a copy in the cache and return it
     return cache_->Put(base, std::move(tile), size);
   }
@@ -797,7 +832,7 @@ graph_tile_ptr GraphReader::GetGraphTile(const GraphId& graphid) {
       // LOG_DEBUG("Memory map cache hit " + GraphTile::FileSuffix(base));
 
       // Keep a copy in the cache and return it
-      const size_t size = AVERAGE_MM_TILE_SIZE; // tile.end_offset();  // TODO what size??
+      const size_t size = tile->header()->end_offset();
       return cache_->Put(base, std::move(tile), size);
     } // Try getting it from flat file
     else {
