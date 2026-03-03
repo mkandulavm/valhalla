@@ -734,9 +734,9 @@ graph_tile_ptr GraphReader::GetGraphTile(const GraphId& graphid) {
       return nullptr;
     }
 
-    LOG_INFO((boost::format("ZIP tile load: base=%1% path='%2%' uncomp=%3%") %
-              GraphTile::FileSuffix(base) % path->second % e->uncompressedSize)
-                 .str());
+    // LOG_INFO((boost::format("ZIP tile load: base=%1% path='%2%' uncomp=%3%") %
+    //           GraphTile::FileSuffix(base) % path->second % e->uncompressedSize)
+    //              .str());
 
     std::vector<char> unzippedData;
     unzippedData.resize(e->uncompressedSize);            
@@ -746,10 +746,10 @@ graph_tile_ptr GraphReader::GetGraphTile(const GraphId& graphid) {
       return nullptr;
     }
 
-    LOG_INFO((boost::format("ZIP tile bytes: base=%1% buf=%2% first16=[%3%]") %
-              GraphTile::FileSuffix(base) % unzippedData.size() %
-              hex_preview(unzippedData.data(), unzippedData.size(), 16))
-                 .str());
+    // LOG_INFO((boost::format("ZIP tile bytes: base=%1% buf=%2% first16=[%3%]") %
+    //           GraphTile::FileSuffix(base) % unzippedData.size() %
+    //           hex_preview(unzippedData.data(), unzippedData.size(), 16))
+    //              .str());
 
     const size_t buf_sz = unzippedData.size();
 
@@ -769,14 +769,14 @@ graph_tile_ptr GraphReader::GetGraphTile(const GraphId& graphid) {
     }
 
     const auto end_off = tile->header()->end_offset();
-    LOG_INFO((boost::format("ZIP tile header: base=%1% end_offset=%2%") %
-              GraphTile::FileSuffix(base) % end_off)
-                 .str());
+    // LOG_INFO((boost::format("ZIP tile header: base=%1% end_offset=%2%") %
+    //           GraphTile::FileSuffix(base) % end_off)
+    //              .str());
 
 #ifdef HAS_TILE_HEADER_VERSION_ACCESSOR
-    LOG_INFO((boost::format("ZIP tile header: base=%1% version=%2%") %
-              GraphTile::FileSuffix(base) % tile->header()->version())
-                 .str());
+    // LOG_INFO((boost::format("ZIP tile header: base=%1% version=%2%") %
+    //           GraphTile::FileSuffix(base) % tile->header()->version())
+    //              .str());
 #endif
 
     if (end_off == 0) {

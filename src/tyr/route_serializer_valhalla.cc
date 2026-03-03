@@ -686,10 +686,10 @@ void legs(valhalla::Api& api, int route_index, rapidjson::writer_wrapper_t& writ
     //nevh//////
     //write speed_limits as a int array
 
-    for(int s = 0; s < directions_leg.speed_limits_size(); ++s){
-      std::cout << s%6 << ":" << directions_leg.speed_limits(s) << " ";
-    }
-    std::cout << std::endl;
+    // for(int s = 0; s < directions_leg.speed_limits_size(); ++s){
+    //   std::cout << s%6 << ":" << directions_leg.speed_limits(s) << " ";
+    // }
+    // std::cout << std::endl;
     if(nevh_version == 0) {
       if(directions_leg.speed_limits_size() > 0) {
         writer.start_array("speed_limits_lanes");

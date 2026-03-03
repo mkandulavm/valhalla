@@ -52,6 +52,7 @@ inline bool graphid_less(GraphId a, GraphId b) {
 // Get the GraphId of the opposing edge.
 uint32_t GetOpposingEdgeIndex(const GraphId& startnode,
                               DirectedEdge& edge,
+                              const DirectedEdge* tile_edge,
                               uint64_t wayid,
                               const graph_tile_ptr& tile,
                               const graph_tile_ptr& end_tile,
@@ -65,6 +66,14 @@ uint32_t GetOpposingEdgeIndex(const GraphId& startnode,
   }
   // Get the tile at the end node and get the node info
   GraphId endnode = edge.endnode();
+  if (endnode.id() >= end_tile->header()->nodecount()) {
+    LOG_ERROR("End node index out of bounds tile=" +
+              GraphTile::FileSuffix(end_tile->header()->graphid()) + " endnode=" +
+              std::to_string(endnode) + " nodecount=" +
+              std::to_string(end_tile->header()->nodecount()) + " startnode=" +
+              std::to_string(startnode));
+    return kMaxEdgesPerNode;
+  }
   const NodeInfo* nodeinfo = end_tile->node(endnode.id());
   bool sametile = (startnode.tileid() == endnode.tileid());
 
@@ -77,8 +86,32 @@ uint32_t GetOpposingEdgeIndex(const GraphId& startnode,
     return kMaxEdgesPerNode;
   }
 
-  // Set the end node iso.  Used for country crossings.
-  endnodeiso = end_tile->admin(nodeinfo->admin_index())->country_iso();
+  // Defensive validity check: malformed node edge ranges can exist in corrupted tiles.
+  const uint32_t end_directededgecount = end_tile->header()->directededgecount();
+  const uint32_t end_edge_index = nodeinfo->edge_index();
+  const uint32_t end_edge_count = nodeinfo->edge_count();
+  if (end_edge_index >= end_directededgecount ||
+      end_edge_index + end_edge_count > end_directededgecount) {
+    LOG_ERROR("Invalid end node edge range tile=" +
+              GraphTile::FileSuffix(end_tile->header()->graphid()) + " endnode=" +
+              std::to_string(endnode) + " edge_index=" + std::to_string(end_edge_index) +
+              " edge_count=" + std::to_string(end_edge_count) +
+              " directededgecount=" + std::to_string(end_directededgecount) +
+              " startnode=" + std::to_string(startnode));
+    return kMaxEdgesPerNode;
+  }
+
+  // Set the end node iso. Used for country crossings.
+  if (nodeinfo->admin_index() < end_tile->header()->admincount()) {
+    endnodeiso = end_tile->admin(nodeinfo->admin_index())->country_iso();
+  } else {
+    endnodeiso.clear();
+    LOG_ERROR("End node admin index out of bounds tile=" +
+              GraphTile::FileSuffix(end_tile->header()->graphid()) + " endnode=" +
+              std::to_string(endnode) + " admin_index=" +
+              std::to_string(nodeinfo->admin_index()) + " admincount=" +
+              std::to_string(end_tile->header()->admincount()));
+  }
 
   // Set the deadend flag on the edge.
   bool deadend = nodeinfo->intersection() == IntersectionType::kDeadEnd;
@@ -89,6 +122,16 @@ uint32_t GetOpposingEdgeIndex(const GraphId& startnode,
   // attributes matches. Check for duplicates
   constexpr uint32_t absurd_index = 777777;
   uint32_t opp_index = absurd_index;
+  bool base_shape_ready = false;
+  std::vector<PointLL> base_shape;
+
+  auto get_base_shape = [&]() -> const std::vector<PointLL>& {
+    if (!base_shape_ready) {
+      base_shape = tile->edgeinfo(tile_edge).shape();
+      base_shape_ready = true;
+    }
+    return base_shape;
+  };
   const DirectedEdge* directededge = end_tile->directededge(nodeinfo->edge_index());
   for (uint32_t i = 0; i < nodeinfo->edge_count(); i++, directededge++) {
     // Reject edge if access does not match or the edge does not point
@@ -110,7 +153,7 @@ uint32_t GetOpposingEdgeIndex(const GraphId& startnode,
     }
     if ((edge.use() == Use::kPlatformConnection && directededge->use() == Use::kPlatformConnection) ||
         (edge.use() == Use::kEgressConnection && directededge->use() == Use::kEgressConnection)) {
-      auto shape1 = tile->edgeinfo(&edge).shape();
+      auto shape1 = tile->edgeinfo(tile_edge).shape();
       auto shape2 = end_tile->edgeinfo(directededge).shape();
       if (shapes_match(shape1, shape2)) {
         opp_index = i;
@@ -155,7 +198,26 @@ uint32_t GetOpposingEdgeIndex(const GraphId& startnode,
           if (sametile && edge.edgeinfo_offset() == directededge->edgeinfo_offset()) {
             match = true;
           } else {
-            auto shape1 = tile->edgeinfo(&edge).shape();
+            auto shape1 = tile->edgeinfo(tile_edge).shape();
+            auto shape2 = end_tile->edgeinfo(directededge).shape();
+            if (shapes_match(shape1, shape2)) {
+              match = true;
+            }
+          }
+        } else {
+          const bool attrs_align = (directededge->use() == edge.use()) &&
+                                   (directededge->classification() == edge.classification()) &&
+                                   (directededge->link() == edge.link());
+          // Some datasets can hold opposite directions as different wayids even when they are
+          // the same logical edge. Use structural fallback based on aligned attributes and shape.
+          if (sametile && attrs_align) {
+            const auto& shape1 = get_base_shape();
+            auto shape2 = end_tile->edgeinfo(directededge).shape();
+            if (shapes_match(shape1, shape2)) {
+              match = true;
+            }
+          } else if (attrs_align) {
+            const auto& shape1 = get_base_shape();
             auto shape2 = end_tile->edgeinfo(directededge).shape();
             if (shapes_match(shape1, shape2)) {
               match = true;
@@ -169,7 +231,7 @@ uint32_t GetOpposingEdgeIndex(const GraphId& startnode,
         // Check if multiple edges match - log any duplicates
         if (opp_index != absurd_index && startnode.level() != transit_level) {
           if (edge.is_shortcut()) {
-            std::vector<std::string> names = tile->edgeinfo(&edge).GetNames();
+            std::vector<std::string> names = tile->edgeinfo(tile_edge).GetNames();
             std::string name = (names.size() > 0) ? names[0] : "unnamed";
             LOG_DEBUG("Duplicate shortcut for " + name +
                       " at LL = " + std::to_string(tile->get_node_ll(endnode).lat()) + "," +
@@ -196,6 +258,16 @@ uint32_t GetOpposingEdgeIndex(const GraphId& startnode,
 
   // No matching opposing edge found - log error cases
   if (opp_index == absurd_index) {
+    if (edge.is_shortcut() && startnode.level() != transit_level) {
+#ifdef LOGGING_LEVEL_DEBUG
+      PointLL ll = end_tile->get_node_ll(endnode);
+      LOG_DEBUG((boost::format("No opposing shortcut (allowed) at LL=%1%,%2% Length=%3% Startnode %4% EndNode %5%") %
+                 ll.lat() % ll.lng() % edge.length() % startnode % edge.endnode())
+                    .str());
+#endif
+      return kMaxEdgesPerNode;
+    }
+
     if (edge.use() == Use::kTransitConnection || edge.use() == Use::kEgressConnection ||
         edge.use() == Use::kPlatformConnection) {
       // Log error - no opposing edge for a transit connection
@@ -303,19 +375,50 @@ void validate(
     std::vector<DirectedEdge> directededges;
 
     // Get this tile
+    graph_reader.Clear();
     lock.lock();
     graph_tile_ptr tile = graph_reader.GetGraphTile(tile_id);
     lock.unlock();
+    if (!tile) {
+      LOG_ERROR("Failed to load tile for validation: " + GraphTile::FileSuffix(tile_id));
+      continue;
+    }
 
+    const uint32_t directededgecount = tile->header()->directededgecount();
+    const uint32_t builder_directededgecount = tilebuilder.header()->directededgecount();
+    if (directededgecount != builder_directededgecount) {
+      LOG_ERROR("Directed edge count mismatch in validator tile=" +
+                GraphTile::FileSuffix(tile_id) + " builder_directededgecount=" +
+                std::to_string(builder_directededgecount) + " tile_directededgecount=" +
+                std::to_string(directededgecount));
+    }
+
+    const uint32_t tile_nodecount = tile->header()->nodecount();
+    nodes.reserve(tile_nodecount);
+    for (uint32_t node_index = 0; node_index < tile_nodecount; ++node_index) {
+      nodes.emplace_back(*tile->node(node_index));
+    }
+
+    directededges.reserve(directededgecount);
+    for (uint32_t edge_index = 0; edge_index < directededgecount; ++edge_index) {
+      directededges.emplace_back(*tile->directededge(edge_index));
+    }
     // Iterate through the nodes and the directed edges
     uint32_t dupcount = 0;
     float roadlength = 0.0f;
+    bool invalid_tile_edges = false;
     uint32_t nodecount = tilebuilder.header()->nodecount();
+    if (tile_nodecount != nodecount) {
+      LOG_ERROR("Node count mismatch in validator tile=" + GraphTile::FileSuffix(tile_id) +
+                " builder_nodecount=" + std::to_string(nodecount) +
+                " tile_nodecount=" + std::to_string(tile_nodecount));
+      nodecount = std::min(nodecount, tile_nodecount);
+    }
     GraphId node = tile_id;
     for (uint32_t i = 0; i < nodecount; i++, ++node) {
       // The node we will modify
-      NodeInfo nodeinfo = tilebuilder.node(i);
       auto ni = tile->node(i);
+      NodeInfo nodeinfo = *ni;
 
       // Validate signs
       if (ni->named_intersection()) {
@@ -324,12 +427,40 @@ void validate(
         }
       }
 
-      std::string begin_node_iso = tile->admin(nodeinfo.admin_index())->country_iso();
+      std::string begin_node_iso;
+      if (nodeinfo.admin_index() < tile->header()->admincount()) {
+        begin_node_iso = tile->admin(nodeinfo.admin_index())->country_iso();
+      } else {
+        LOG_ERROR("Begin node admin index out of bounds tile=" + GraphTile::FileSuffix(tile_id) +
+                  " node=" + std::to_string(node) + " admin_index=" +
+                  std::to_string(nodeinfo.admin_index()) + " admincount=" +
+                  std::to_string(tile->header()->admincount()));
+      }
 
       // Go through directed edges and validate/update data
-      uint32_t idx = ni->edge_index();
+      uint32_t idx = nodeinfo.edge_index();
+      uint32_t edge_count = nodeinfo.edge_count();
+      if (idx >= directededgecount) {
+        LOG_ERROR("Invalid source node edge_index tile=" + GraphTile::FileSuffix(tile_id) +
+                  " node=" + std::to_string(node) + " edge_index=" + std::to_string(idx) +
+                  " directededgecount=" + std::to_string(directededgecount));
+        invalid_tile_edges = true;
+        nodeinfo.set_edge_count(0);
+        nodes[i] = std::move(nodeinfo);
+        continue;
+      }
+      if (idx + edge_count > directededgecount) {
+        const uint32_t clamped = directededgecount - idx;
+        LOG_ERROR("Clamping source node edge_count tile=" + GraphTile::FileSuffix(tile_id) +
+                  " node=" + std::to_string(node) + " edge_index=" + std::to_string(idx) +
+                  " edge_count=" + std::to_string(edge_count) + " clamped_to=" +
+                  std::to_string(clamped) + " directededgecount=" +
+                  std::to_string(directededgecount));
+        edge_count = clamped;
+        nodeinfo.set_edge_count(edge_count);
+      }
       GraphId edgeid(node.tileid(), node.level(), idx);
-      for (uint32_t j = 0, n = nodeinfo.edge_count(); j < n; j++, idx++, ++edgeid) {
+      for (uint32_t j = 0; j < edge_count; j++, idx++, ++edgeid) {
         auto de = tile->directededge(idx);
 
         // Validate signs
@@ -367,7 +498,7 @@ void validate(
         }
 
         // The edge we will modify
-        DirectedEdge& directededge = tilebuilder.directededge(nodeinfo.edge_index() + j);
+        DirectedEdge& directededge = directededges[nodeinfo.edge_index() + j];
 
         // Road Length and some variables for statistics
         if (!directededge.shortcut()) {
@@ -392,9 +523,9 @@ void validate(
         // node. Set the deadend flag and internal flag (if the opposing
         // edge is internal then make sure this edge is as well)
         std::string end_node_iso;
-        uint64_t wayid = tile->edgeinfo(&directededge).wayid();
+        uint64_t wayid = tile->edgeinfo(de).wayid();
         uint32_t opp_index =
-            GetOpposingEdgeIndex(node, directededge, wayid, tile, endnode_tile, problem_ways,
+            GetOpposingEdgeIndex(node, directededge, de, wayid, tile, endnode_tile, problem_ways,
                                  dupcount, end_node_iso, transit_level);
         directededge.set_opp_index(opp_index);
         if (directededge.use() == Use::kTransitConnection ||
@@ -432,12 +563,17 @@ void validate(
           directededge.set_start_restriction(modes);
         }
 
-        // Add the directed edge to the local list
-        directededges.emplace_back(std::move(directededge));
+        directededges[nodeinfo.edge_index() + j] = directededge;
       }
 
-      // Add the node to the list
-      nodes.emplace_back(std::move(nodeinfo));
+      // Update the node in-place
+      nodes[i] = std::move(nodeinfo);
+    }
+
+    if (invalid_tile_edges) {
+      LOG_ERROR("Skipping tile update due to invalid node edge ranges in tile " +
+                GraphTile::FileSuffix(tile_id));
+      continue;
     }
 
     // Add density to return class. Approximate the tile area square km
@@ -461,6 +597,17 @@ void validate(
 
     // Bin the edges
     auto bins = GraphTileBuilder::BinEdges(tile, tweeners);
+
+    const uint32_t expected_nodecount = tilebuilder.header()->nodecount();
+    const uint32_t expected_directededgecount = tilebuilder.header()->directededgecount();
+    if (nodes.size() != expected_nodecount || directededges.size() != expected_directededgecount) {
+      LOG_ERROR("Skipping tile update due to size mismatch tile=" + GraphTile::FileSuffix(tile_id) +
+                " nodes_prepared=" + std::to_string(nodes.size()) +
+                " expected_nodes=" + std::to_string(expected_nodecount) +
+                " edges_prepared=" + std::to_string(directededges.size()) +
+                " expected_edges=" + std::to_string(expected_directededgecount));
+      continue;
+    }
 
     // Write the new tile
     lock.lock();
