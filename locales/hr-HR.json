@@ -2358,6 +2358,16 @@
           "Izađite iz zgrade i nastavite na stazi za hodanje."
         ]
       }
+    },
+    "park_vehicle": {
+      "phrases": {
+        "0": "Parkirajte svoje vozilo"
+      },
+      "example_phrases": {
+        "0": [
+          "Parkirajte svoje vozilo."
+        ]
+      }
     }
   }
 }

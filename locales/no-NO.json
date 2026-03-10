@@ -2358,6 +2358,16 @@
           "Gå ut av bygningen og fortsett på gangveien."
         ]
       }
+    },
+    "park_vehicle": {
+      "phrases": {
+        "0": "Parker kjøretøyet ditt"
+      },
+      "example_phrases": {
+        "0": [
+          "Parker kjøretøyet ditt."
+        ]
+      }
     }
   }
 }

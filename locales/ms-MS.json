@@ -2358,6 +2358,16 @@
           "Keluar dari bangunan, dan teruskan di laluan pejalan kaki."
         ]
       }
+    },
+    "park_vehicle": {
+      "phrases": {
+        "0": "Parkir kenderaan anda"
+      },
+      "example_phrases": {
+        "0": [
+          "Parkir kenderaan anda."
+        ]
+      }
     }
   }
 }

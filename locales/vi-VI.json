@@ -2358,6 +2358,16 @@
           "Ra khỏi tòa nhà và tiếp tục đi bộ."
         ]
       }
+    },
+    "park_vehicle": {
+      "phrases": {
+        "0": "Đỗ xe của bạn"
+      },
+      "example_phrases": {
+        "0": [
+          "Đỗ xe của bạn."
+        ]
+      }
     }
   }
 }

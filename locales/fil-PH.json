@@ -2358,6 +2358,16 @@
           "Lumabas sa gusali, at magpatuloy sa walkway."
         ]
       }
+    },
+    "park_vehicle": {
+      "phrases": {
+        "0": "Iparada ang iyong sasakyan"
+      },
+      "example_phrases": {
+        "0": [
+          "Iparada ang iyong sasakyan."
+        ]
+      }
     }
   }
 }
