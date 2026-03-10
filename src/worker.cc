@@ -45,7 +45,8 @@ namespace {
 // Parses exclude_layers from JSON and adds them to the request's tile options
 void parse_exclude_layers(const boost::optional<rapidjson::Value&>& exclude_layers, Api& request) {
   static const std::unordered_set<std::string_view> kSupportedLayers = {valhalla::kEdgeLayerName,
-                                                                        valhalla::kNodeLayerName};
+                                                                        valhalla::kNodeLayerName,
+                                                                        valhalla::kShortcutLayerName};
 
   if (exclude_layers.has_value() && exclude_layers->IsArray()) {
     for (const auto& lyr : exclude_layers->GetArray()) {
@@ -682,9 +683,6 @@ void from_json(rapidjson::Document& doc, Options::Action action, Api& api) {
   if (options.action() == Options::tile) {
     parse_xyz(doc, options);
     parse_exclude_layers(get_child_optional(doc, "/tile_options/exclude_layers"), api);
-    options.mutable_tile_options()->set_return_shortcuts(
-        rapidjson::get<bool>(doc, "/tile_options/return_shortcuts",
-                             options.tile_options().return_shortcuts()));
     options.set_format(Options::mvt); // set explicitly for MIME type
     return;
   }
@@ -1614,11 +1612,15 @@ worker_t::result_t serialize_error(const valhalla_exception_t& exception,
 }
 
 worker_t::result_t
-to_response(const std::string& data, http_request_info_t& request_info, const Api& request) {
+to_response(const std::string& data,
+            http_request_info_t& request_info,
+            const Api& request,
+            const std::vector<std::pair<std::string, std::string>>& additional_headers) {
   // try to get all the proper headers
   auto fmt = request.options().format();
 
   headers_t headers{CORS, fmt_to_mime(fmt)};
+  headers.insert(additional_headers.begin(), additional_headers.end());
   if (fmt == Options::gpx)
     headers.insert(ATTACHMENT);
 
