@@ -55,12 +55,28 @@ void loki_worker_t::route(Api& request) {
   init_route(request);
   auto& options = *request.mutable_options();
   const auto& costing_name = Costing_Enum_Name(options.costing_type());
+  if (costing_name.empty()) {
+    throw valhalla_exception_t{125, "'unknown'"};
+  }
+
+  auto max_locations_itr = max_locations.find(costing_name);
+  auto max_distance_itr = max_distance.find(costing_name);
+  if ((max_locations_itr == max_locations.end() || max_distance_itr == max_distance.end()) &&
+      options.costing_type() == Costing::truck_permit) {
+    // Backward-compatible fallback so truck_permit can run with existing truck service limits.
+    max_locations_itr = max_locations.find("truck");
+    max_distance_itr = max_distance.find("truck");
+  }
+  if (max_locations_itr == max_locations.end() || max_distance_itr == max_distance.end()) {
+    throw valhalla_exception_t{125, "'" + costing_name + "'"};
+  }
+
   if (request.options().action() == Options::centroid) {
     check_locations(options.locations_size(), max_locations.find("centroid")->second);
     check_distance(options.locations(), max_distance.find("centroid")->second, true);
   } else {
-    check_locations(options.locations_size(), max_locations.find(costing_name)->second);
-    check_distance(options.locations(), max_distance.find(costing_name)->second, false);
+    check_locations(options.locations_size(), max_locations_itr->second);
+    check_distance(options.locations(), max_distance_itr->second, false);
   }
 
   // check distance for hierarchy pruning

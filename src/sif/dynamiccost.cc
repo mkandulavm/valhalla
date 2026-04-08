@@ -201,7 +201,8 @@ DynamicCost::DynamicCost(const Costing& costing,
       ignore_construction_(costing.options().ignore_construction()),
       top_speed_(costing.options().top_speed()), fixed_speed_(costing.options().fixed_speed()),
       filter_closures_(ignore_closures_ ? false : costing.filter_closures()),
-      penalize_uturns_(penalize_uturns), is_hgv_(costing.type() == Costing::truck),
+      penalize_uturns_(penalize_uturns),
+      is_hgv_(costing.type() == Costing::truck || costing.type() == Costing::truck_permit),
       min_linear_cost_factor_(1.) {
 
   // set user supplied hierarchy limits if present, fill the other
@@ -689,6 +690,12 @@ void ParseCosting(const rapidjson::Document& doc,
     }
     case Costing::truck: {
       sif::ParseTruckCostOptions(doc, key, costing);
+      break;
+    }
+    case Costing::truck_permit: {
+      sif::ParseTruckCostOptions(doc, key, costing);
+      // Keep the request/response profile name distinct from stock truck.
+      costing->set_name(Costing_Enum_Name(Costing::truck_permit));
       break;
     }
     case Costing::motorcycle: {

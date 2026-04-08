@@ -1368,14 +1368,29 @@ TripLeg_Edge* AddTripEdge(const AttributesController& controller,
     }
   }
 
-  if (directededge->access_restriction() && edge_itr->restriction_index != kInvalidRestriction) {
-    auto restriction = graphtile->GetAccessRestrictionAtIndex(edge.id(), costing->access_mode(),
-                                                              edge_itr->restriction_index);
-    assert(restriction != nullptr);
-    trip_edge->mutable_restriction()->set_type(static_cast<uint32_t>(restriction->type()));
+  bool has_timed_restrictions = false;
+  if (directededge->access_restriction()) {
+    size_t restriction_index = 0;
+    for (const auto& restriction :
+         graphtile->GetAccessRestrictions(edge.id(), costing->access_mode())) {
+      auto* trip_restriction = trip_edge->add_restrictions();
+      trip_restriction->set_type(static_cast<uint32_t>(restriction.type()));
+      trip_restriction->set_value(restriction.value());
+
+      if (restriction_index == edge_itr->restriction_index) {
+        trip_edge->mutable_restriction()->set_type(static_cast<uint32_t>(restriction.type()));
+        trip_edge->mutable_restriction()->set_value(restriction.value());
+      }
+
+      has_timed_restrictions = has_timed_restrictions ||
+                               restriction.type() == AccessType::kTimedDenied ||
+                               restriction.type() == AccessType::kTimedAllowed ||
+                               restriction.type() == AccessType::kDestinationAllowed;
+      ++restriction_index;
+    }
   }
 
-  trip_edge->set_has_time_restrictions(edge_itr->restriction_index != kInvalidRestriction);
+  trip_edge->set_has_time_restrictions(has_timed_restrictions);
 
   // Set the trip path use based on directed edge use if requested
   if (controller(kEdgeUse)) {

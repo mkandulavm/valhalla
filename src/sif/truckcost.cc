@@ -7,6 +7,8 @@
 #include "proto_conversions.h"
 #include "sif/osrm_car_duration.h"
 
+#include <cmath>
+
 #ifdef INLINE_TEST
 #include "test.h"
 #include "worker.h"
@@ -115,6 +117,63 @@ BaseCostingOptionsConfig GetBaseCostOptsConfig() {
 
 const BaseCostingOptionsConfig kBaseCostOptsConfig = GetBaseCostOptsConfig();
 
+inline bool is_timed_access_type(const AccessType access_type) {
+  return access_type == AccessType::kTimedDenied || access_type == AccessType::kTimedAllowed ||
+         access_type == AccessType::kDestinationAllowed;
+}
+
+inline uint64_t find_next_condition_state(const uint64_t restriction_value,
+                                          const uint64_t start_epoch,
+                                          const uint32_t tz_index,
+                                          const bool desired_active_state) {
+  constexpr uint64_t kSampleStepSecs = 60;
+  constexpr uint64_t kSearchHorizonSecs = 7 * 24 * 60 * 60;
+
+  const uint64_t end_epoch = start_epoch + kSearchHorizonSecs;
+  for (uint64_t t = start_epoch + kSampleStepSecs; t <= end_epoch; t += kSampleStepSecs) {
+    if (DynamicCost::IsConditionalActive(restriction_value, t, tz_index) == desired_active_state) {
+      return t;
+    }
+  }
+  return 0;
+}
+
+inline bool is_condition_active_any(const uint64_t restriction_value,
+                                    const uint64_t start_time,
+                                    const uint64_t end_time,
+                                    const uint32_t tz_index) {
+  if (DynamicCost::IsConditionalActive(restriction_value, start_time, tz_index) ||
+      DynamicCost::IsConditionalActive(restriction_value, end_time, tz_index)) {
+    return true;
+  }
+
+  constexpr uint64_t kSampleStepSecs = 60;
+  for (uint64_t t = start_time + kSampleStepSecs; t < end_time; t += kSampleStepSecs) {
+    if (DynamicCost::IsConditionalActive(restriction_value, t, tz_index)) {
+      return true;
+    }
+  }
+  return false;
+}
+
+inline bool is_condition_active_all(const uint64_t restriction_value,
+                                    const uint64_t start_time,
+                                    const uint64_t end_time,
+                                    const uint32_t tz_index) {
+  if (!DynamicCost::IsConditionalActive(restriction_value, start_time, tz_index) ||
+      !DynamicCost::IsConditionalActive(restriction_value, end_time, tz_index)) {
+    return false;
+  }
+
+  constexpr uint64_t kSampleStepSecs = 60;
+  for (uint64_t t = start_time + kSampleStepSecs; t < end_time; t += kSampleStepSecs) {
+    if (!DynamicCost::IsConditionalActive(restriction_value, t, tz_index)) {
+      return false;
+    }
+  }
+  return true;
+}
+
 } // namespace
 
 /**
@@ -207,10 +266,47 @@ public:
                               uint8_t& restriction_idx,
                               uint8_t& destonly_access_restr_mask) const override;
 
+  virtual void ResetRestrictionFailureInfo() override;
+
+  virtual bool GetRestrictionFailureInfo(restriction_failure_info_t& info) const override;
+
+  virtual void FinalizeRestrictionFailureInfo(baldr::GraphReader& reader,
+                                              restriction_failure_info_t& info) const override;
+
   /**
    * Callback for Allowed doing mode  specific restriction checks
    */
   virtual bool ModeSpecificAllowed(const baldr::AccessRestriction& restriction) const override;
+
+  // Conservative check to avoid entering edges whose timed access state can
+  // flip during traversal.
+  bool HasMidEdgeTimedAccessChange(const baldr::DirectedEdge* edge,
+                                   const graph_tile_ptr& tile,
+                                   const baldr::GraphId& edgeid,
+                                   const bool is_dest,
+                                   const uint64_t current_time,
+                                   const uint32_t tz_index) const;
+
+  bool IsTimedBlockedNow(const baldr::DirectedEdge* edge,
+                        const graph_tile_ptr& tile,
+                        const baldr::GraphId& edgeid,
+                        const bool is_dest,
+                        const uint64_t current_time,
+                        const uint32_t tz_index) const;
+
+  std::string NextTimedEdgeDeparture(const baldr::DirectedEdge* edge,
+                                     const graph_tile_ptr& tile,
+                                     const baldr::GraphId& edgeid,
+                                     const bool is_dest,
+                                     const uint64_t current_time,
+                                     const uint32_t tz_index) const;
+
+  void RecordRestrictionFailure(const bool permit_issue, const bool timed_issue) const;
+
+  void RecordTimedFailureContext(const baldr::GraphId& edgeid,
+                                 const uint64_t current_time,
+                                 const uint32_t tz_index,
+                                 const bool is_dest) const;
 
   /**
    * Only transit costings are valid for this method call, hence we throw
@@ -332,6 +428,17 @@ public:
 
   // determine if we should allow hgv=no edges and penalize them instead
   float no_hgv_access_penalty_;
+
+  // Permit gating used by truck_permit profile.
+  bool has_permit_;
+  bool enforce_hgv_permit_;
+
+  mutable restriction_failure_info_t restriction_failure_info_;
+  mutable bool has_timed_failure_context_ = false;
+  mutable baldr::GraphId timed_failure_edgeid_;
+  mutable uint64_t timed_failure_current_time_ = 0;
+  mutable uint32_t timed_failure_tz_index_ = 0;
+  mutable bool timed_failure_is_dest_ = false;
 };
 
 // Constructor
@@ -387,6 +494,9 @@ TruckCost::TruckCost(const Costing& costing)
   no_hgv_access_penalty_ = no_hgv_access_penalty_active * costing_options.hgv_no_access_penalty();
   // set the access mask to both car & truck if that penalty is active
   access_mask_ = no_hgv_access_penalty_active ? (kAutoAccess | kTruckAccess) : kTruckAccess;
+
+  has_permit_ = costing_options.has_permit();
+  enforce_hgv_permit_ = costing.type() == Costing::truck_permit;
 }
 
 // Destructor
@@ -402,6 +512,214 @@ bool TruckCost::AllowTransitions() const {
 // limits).
 bool TruckCost::AllowMultiPass() const {
   return true;
+}
+
+void TruckCost::ResetRestrictionFailureInfo() {
+  restriction_failure_info_ = {};
+  has_timed_failure_context_ = false;
+  timed_failure_edgeid_ = {};
+  timed_failure_current_time_ = 0;
+  timed_failure_tz_index_ = 0;
+  timed_failure_is_dest_ = false;
+}
+
+bool TruckCost::GetRestrictionFailureInfo(restriction_failure_info_t& info) const {
+  if (!restriction_failure_info_.has_value) {
+    return false;
+  }
+  info = restriction_failure_info_;
+  return true;
+}
+
+void TruckCost::FinalizeRestrictionFailureInfo(baldr::GraphReader& reader,
+                                               restriction_failure_info_t& info) const {
+  if (!info.timed_issue || !info.next_departure_time.empty() || !has_timed_failure_context_) {
+    return;
+  }
+
+  auto tile = reader.GetGraphTile(timed_failure_edgeid_);
+  if (!tile) {
+    return;
+  }
+
+  const auto* edge = tile->directededge(timed_failure_edgeid_);
+  if (!edge) {
+    return;
+  }
+
+  info.next_departure_time = NextTimedEdgeDeparture(edge, tile, timed_failure_edgeid_,
+                                                    timed_failure_is_dest_,
+                                                    timed_failure_current_time_,
+                                                    timed_failure_tz_index_);
+}
+
+void TruckCost::RecordRestrictionFailure(const bool permit_issue, const bool timed_issue) const {
+  if (!permit_issue && !timed_issue) {
+    return;
+  }
+
+  restriction_failure_info_.has_value = true;
+  restriction_failure_info_.permit_issue = restriction_failure_info_.permit_issue || permit_issue;
+  restriction_failure_info_.timed_issue = restriction_failure_info_.timed_issue || timed_issue;
+  restriction_failure_info_.combined_issue_same_edge =
+      restriction_failure_info_.combined_issue_same_edge || (permit_issue && timed_issue);
+}
+
+void TruckCost::RecordTimedFailureContext(const baldr::GraphId& edgeid,
+                                          const uint64_t current_time,
+                                          const uint32_t tz_index,
+                                          const bool is_dest) const {
+  if (has_timed_failure_context_) {
+    return;
+  }
+
+  has_timed_failure_context_ = true;
+  timed_failure_edgeid_ = edgeid;
+  timed_failure_current_time_ = current_time;
+  timed_failure_tz_index_ = tz_index;
+  timed_failure_is_dest_ = is_dest;
+}
+
+bool TruckCost::IsTimedBlockedNow(const baldr::DirectedEdge* edge,
+                                 const graph_tile_ptr& tile,
+                                 const baldr::GraphId& edgeid,
+                                 const bool is_dest,
+                                 const uint64_t current_time,
+                                 const uint32_t tz_index) const {
+  if (current_time == 0 || !(edge->access_restriction() & access_mask_)) {
+    return false;
+  }
+
+  auto restrictions = tile->GetAccessRestrictions(edgeid.id(), access_mask_);
+
+  bool has_timed_allowed = false;
+  bool timed_allowed_active = false;
+  for (const auto& restriction : restrictions) {
+    const auto access_type = restriction.type();
+    if (!is_timed_access_type(access_type)) {
+      continue;
+    }
+
+    const bool active_now = IsConditionalActive(restriction.value(), current_time, tz_index);
+    if (access_type == AccessType::kTimedAllowed) {
+      has_timed_allowed = true;
+      timed_allowed_active = timed_allowed_active || active_now;
+      continue;
+    }
+
+    if (access_type == AccessType::kDestinationAllowed) {
+      if (active_now && !(allow_conditional_destination_ || is_dest)) {
+        return true;
+      }
+      continue;
+    }
+
+    if (active_now) {
+      return true;
+    }
+  }
+
+  return has_timed_allowed && !timed_allowed_active;
+}
+
+std::string TruckCost::NextTimedEdgeDeparture(const baldr::DirectedEdge* edge,
+                                              const graph_tile_ptr& tile,
+                                              const baldr::GraphId& edgeid,
+                                              const bool is_dest,
+                                              const uint64_t current_time,
+                                              const uint32_t tz_index) const {
+  if (current_time == 0 || !(edge->access_restriction() & access_mask_)) {
+    return "";
+  }
+
+  const auto max_speed = std::max<uint32_t>(1u, top_speed_);
+  const auto edge_speed = edge->truck_speed() ? std::min<uint32_t>(edge->truck_speed(), max_speed)
+                                               : std::min<uint32_t>(edge->speed(), max_speed);
+  if (edge_speed == 0) {
+    return "";
+  }
+
+  const uint64_t travel_secs =
+      std::max<uint64_t>(1, static_cast<uint64_t>(std::ceil(edge->length() * kSpeedFactor[edge_speed])));
+  const uint64_t exit_time = current_time + travel_secs;
+
+  auto restrictions = tile->GetAccessRestrictions(edgeid.id(), access_mask_);
+
+  uint64_t edge_ready_epoch = current_time;
+  bool has_timed = false;
+  bool has_timed_allowed = false;
+
+  for (const auto& restriction : restrictions) {
+    const auto access_type = restriction.type();
+    if (!is_timed_access_type(access_type)) {
+      continue;
+    }
+
+    has_timed = true;
+    const bool active_now = IsConditionalActive(restriction.value(), current_time, tz_index);
+
+    if (access_type == AccessType::kTimedAllowed) {
+      has_timed_allowed = true;
+      if (!active_now) {
+        const uint64_t next_allowed =
+            find_next_condition_state(restriction.value(), current_time, tz_index, true);
+        if (next_allowed == 0) {
+          return "";
+        }
+        edge_ready_epoch = std::max(edge_ready_epoch, next_allowed);
+      }
+      if (!is_condition_active_all(restriction.value(), current_time, exit_time, tz_index)) {
+        const uint64_t next_allowed =
+            find_next_condition_state(restriction.value(), current_time, tz_index, true);
+        if (next_allowed == 0) {
+          return "";
+        }
+        edge_ready_epoch = std::max(edge_ready_epoch, next_allowed);
+      }
+      continue;
+    }
+
+    if (access_type == AccessType::kDestinationAllowed) {
+      if (active_now && !(allow_conditional_destination_ || is_dest)) {
+        const uint64_t next_inactive =
+            find_next_condition_state(restriction.value(), current_time, tz_index, false);
+        if (next_inactive == 0) {
+          return "";
+        }
+        edge_ready_epoch = std::max(edge_ready_epoch, next_inactive);
+      }
+      if (is_condition_active_any(restriction.value(), current_time, exit_time, tz_index) &&
+          !(allow_conditional_destination_ || is_dest)) {
+        const uint64_t next_inactive =
+            find_next_condition_state(restriction.value(), current_time, tz_index, false);
+        if (next_inactive == 0) {
+          return "";
+        }
+        edge_ready_epoch = std::max(edge_ready_epoch, next_inactive);
+      }
+      continue;
+    }
+
+    if (active_now || is_condition_active_any(restriction.value(), current_time, exit_time,
+                                              tz_index)) {
+      const uint64_t next_inactive =
+          find_next_condition_state(restriction.value(), current_time, tz_index, false);
+      if (next_inactive == 0) {
+        return "";
+      }
+      edge_ready_epoch = std::max(edge_ready_epoch, next_inactive);
+    }
+  }
+
+  if (!has_timed || edge_ready_epoch <= current_time) {
+    return "";
+  }
+
+  const auto* tz = baldr::DateTime::get_tz_db().from_index(tz_index);
+  if (!tz) {
+    return "";
+  }
+  return baldr::DateTime::seconds_to_date(edge_ready_epoch, tz, false);
 }
 
 bool TruckCost::ModeSpecificAllowed(const baldr::AccessRestriction& restriction) const {
@@ -447,6 +765,66 @@ bool TruckCost::ModeSpecificAllowed(const baldr::AccessRestriction& restriction)
   return true;
 }
 
+bool TruckCost::HasMidEdgeTimedAccessChange(const baldr::DirectedEdge* edge,
+                                            const graph_tile_ptr& tile,
+                                            const baldr::GraphId& edgeid,
+                                            const bool is_dest,
+                                            const uint64_t current_time,
+                                            const uint32_t tz_index) const {
+  if (current_time == 0 || !(edge->access_restriction() & access_mask_)) {
+    return false;
+  }
+
+  // Approximate traversal duration using static speed to catch restrictions
+  // that become active before the vehicle exits the edge.
+  const auto max_speed = std::max<uint32_t>(1u, top_speed_);
+  const auto edge_speed = edge->truck_speed() ? std::min<uint32_t>(edge->truck_speed(), max_speed)
+                                               : std::min<uint32_t>(edge->speed(), max_speed);
+  if (edge_speed == 0) {
+    return false;
+  }
+
+  const uint64_t travel_secs =
+      std::max<uint64_t>(1, static_cast<uint64_t>(std::ceil(edge->length() * kSpeedFactor[edge_speed])));
+  const uint64_t exit_time = current_time + travel_secs;
+
+  auto restrictions = tile->GetAccessRestrictions(edgeid.id(), access_mask_);
+  bool has_timed_allowed = false;
+  bool timed_allowed_covers_window = false;
+
+  for (const auto& restriction : restrictions) {
+    const auto access_type = restriction.type();
+    if (access_type != AccessType::kTimedAllowed && access_type != AccessType::kTimedDenied &&
+        access_type != AccessType::kDestinationAllowed) {
+      continue;
+    }
+
+    const bool active_any =
+      is_condition_active_any(restriction.value(), current_time, exit_time, tz_index);
+
+    if (access_type == AccessType::kTimedDenied) {
+      if (active_any) {
+        return true;
+      }
+      continue;
+    }
+
+    if (access_type == AccessType::kDestinationAllowed) {
+      if (active_any && !(allow_conditional_destination_ || is_dest)) {
+        return true;
+      }
+      continue;
+    }
+
+    has_timed_allowed = true;
+    if (is_condition_active_all(restriction.value(), current_time, exit_time, tz_index)) {
+      timed_allowed_covers_window = true;
+    }
+  }
+
+  return has_timed_allowed && !timed_allowed_covers_window;
+}
+
 // Check if access is allowed on the specified edge.
 inline bool TruckCost::Allowed(const baldr::DirectedEdge* edge,
                                const bool is_dest,
@@ -467,8 +845,39 @@ inline bool TruckCost::Allowed(const baldr::DirectedEdge* edge,
     return false;
   }
 
-  return DynamicCost::EvaluateRestrictions(access_mask_, edge, is_dest, tile, edgeid, current_time,
-                                           tz_index, restriction_idx, destonly_access_restr_mask);
+  if (enforce_hgv_permit_ && !has_permit_ && (edge->access_restriction() & kTruckAccess)) {
+    auto restrictions = tile->GetAccessRestrictions(edgeid.id(), kTruckAccess);
+    for (const auto& restriction : restrictions) {
+      if (restriction.type() == AccessType::kPermitRequired) {
+        bool timed_issue_same_edge = false;
+        if (current_time != 0) {
+          timed_issue_same_edge =
+              HasMidEdgeTimedAccessChange(edge, tile, edgeid, is_dest, current_time, tz_index) ||
+              IsTimedBlockedNow(edge, tile, edgeid, is_dest, current_time, tz_index);
+          if (timed_issue_same_edge) {
+            RecordTimedFailureContext(edgeid, current_time, tz_index, is_dest);
+          }
+        }
+        RecordRestrictionFailure(true, timed_issue_same_edge);
+        return false;
+      }
+    }
+  }
+
+  if (HasMidEdgeTimedAccessChange(edge, tile, edgeid, is_dest, current_time, tz_index)) {
+    RecordTimedFailureContext(edgeid, current_time, tz_index, is_dest);
+    RecordRestrictionFailure(false, true);
+    return false;
+  }
+
+  const bool allowed = DynamicCost::EvaluateRestrictions(access_mask_, edge, is_dest, tile, edgeid,
+                                                         current_time, tz_index, restriction_idx,
+                                                         destonly_access_restr_mask);
+  if (!allowed && IsTimedBlockedNow(edge, tile, edgeid, is_dest, current_time, tz_index)) {
+    RecordTimedFailureContext(edgeid, current_time, tz_index, is_dest);
+    RecordRestrictionFailure(false, true);
+  }
+  return allowed;
 }
 
 // Checks if access is allowed for an edge on the reverse path (from
@@ -493,9 +902,41 @@ bool TruckCost::AllowedReverse(const baldr::DirectedEdge* edge,
     return false;
   }
 
-  return DynamicCost::EvaluateRestrictions(access_mask_, opp_edge, false, tile, opp_edgeid,
-                                           current_time, tz_index, restriction_idx,
-                                           destonly_access_restr_mask);
+  if (enforce_hgv_permit_ && !has_permit_ && (opp_edge->access_restriction() & kTruckAccess)) {
+    auto restrictions = tile->GetAccessRestrictions(opp_edgeid.id(), kTruckAccess);
+    for (const auto& restriction : restrictions) {
+      if (restriction.type() == AccessType::kPermitRequired) {
+        bool timed_issue_same_edge = false;
+        if (current_time != 0) {
+          timed_issue_same_edge =
+              HasMidEdgeTimedAccessChange(opp_edge, tile, opp_edgeid, false, current_time,
+                                          tz_index) ||
+              IsTimedBlockedNow(opp_edge, tile, opp_edgeid, false, current_time, tz_index);
+          if (timed_issue_same_edge) {
+            RecordTimedFailureContext(opp_edgeid, current_time, tz_index, false);
+          }
+        }
+        RecordRestrictionFailure(true, timed_issue_same_edge);
+        return false;
+      }
+    }
+  }
+
+  if (HasMidEdgeTimedAccessChange(opp_edge, tile, opp_edgeid, false, current_time, tz_index)) {
+    RecordTimedFailureContext(opp_edgeid, current_time, tz_index, false);
+    RecordRestrictionFailure(false, true);
+    return false;
+  }
+
+  const bool allowed = DynamicCost::EvaluateRestrictions(access_mask_, opp_edge, false, tile,
+                                                         opp_edgeid, current_time, tz_index,
+                                                         restriction_idx,
+                                                         destonly_access_restr_mask);
+  if (!allowed && IsTimedBlockedNow(opp_edge, tile, opp_edgeid, false, current_time, tz_index)) {
+    RecordTimedFailureContext(opp_edgeid, current_time, tz_index, false);
+    RecordRestrictionFailure(false, true);
+  }
+  return allowed;
 }
 
 // Get the cost to traverse the edge in seconds
@@ -748,6 +1189,7 @@ void ParseTruckCostOptions(const rapidjson::Document& doc,
   JSON_PBF_RANGED_DEFAULT(co, kHGVNoAccessRange, json, "/hgv_no_access_penalty",
                           hgv_no_access_penalty);
   JSON_PBF_RANGED_DEFAULT_V2(co, kUseTruckRouteRange, json, "/use_truck_route", use_truck_route);
+  JSON_PBF_DEFAULT_V2(co, false, json, "/has_permit", has_permit);
 }
 
 cost_ptr_t CreateTruckCost(const Costing& costing_options) {

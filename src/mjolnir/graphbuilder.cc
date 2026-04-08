@@ -27,6 +27,7 @@
 #include <filesystem>
 #include <future>
 #include <memory>
+#include <atomic>
 #include <thread>
 #include <utility>
 
@@ -35,6 +36,10 @@ using namespace valhalla::baldr;
 using namespace valhalla::mjolnir;
 
 namespace {
+
+std::atomic<uint64_t> permit_restriction_candidates{0};
+std::atomic<uint64_t> permit_restriction_added{0};
+std::atomic<uint64_t> permit_restriction_direction_filtered{0};
 
 /**
  * we need the nodes to be sorted by graphid and then by osmid to make a set of tiles
@@ -386,6 +391,9 @@ uint32_t AddAccessRestrictions(const uint32_t edgeid,
 
   uint32_t modes = 0;
   for (auto r = res.first; r != res.second; ++r) {
+    if (r->second.type() == AccessType::kPermitRequired) {
+      ++permit_restriction_candidates;
+    }
     auto direction = r->second.direction();
 
     if ((direction == AccessRestrictionDirection::kBoth) ||
@@ -395,6 +403,11 @@ uint32_t AddAccessRestrictions(const uint32_t edgeid,
                                            r->second.value(), r->second.except_destination());
       graphtile.AddAccessRestriction(access_restriction);
       modes |= r->second.modes();
+      if (r->second.type() == AccessType::kPermitRequired) {
+        ++permit_restriction_added;
+      }
+    } else if (r->second.type() == AccessType::kPermitRequired) {
+      ++permit_restriction_direction_filtered;
     }
   }
   return modes;
@@ -1569,6 +1582,10 @@ void GraphBuilder::Build(const boost::property_tree::ptree& pt,
   BuildLocalTiles(threads, osmdata, ways_file, way_nodes_file, nodes_file, edges_file,
                   complex_from_restriction_file, complex_to_restriction_file, linguistic_node_file,
                   tiles, tile_dir, stats, pt);
+  LOG_INFO("Permit diagnostics (GraphBuilder): candidates=" +
+           std::to_string(permit_restriction_candidates.load()) +
+           ", added=" + std::to_string(permit_restriction_added.load()) +
+           ", direction-filtered=" + std::to_string(permit_restriction_direction_filtered.load()));
   stats.LogStatistics();
 }
 

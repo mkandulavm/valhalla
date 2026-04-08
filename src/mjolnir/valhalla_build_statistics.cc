@@ -444,6 +444,9 @@ void build(const boost::property_tree::ptree& pt,
                   case AccessType::kMaxWidth:
                     hgv.width = true;
                     break;
+                  case AccessType::kPermitRequired:
+                    // Permit-required edges are truck legal restrictions too.
+                    break;
                   default:
                     break;
                 }

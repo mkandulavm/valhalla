@@ -1337,27 +1337,116 @@ namespace valhalla {
 std::string serialize_error(const valhalla_exception_t& exception, Api& request) {
   // get the http status
   std::stringstream body;
+  const bool is_truck_permit = request.options().costing_type() == Costing::truck_permit;
+
+  const std::string& raw_error = exception.message;
+  std::string clean_error = raw_error;
+
+  auto token_value = [&raw_error](const std::string& key) {
+    auto pos = raw_error.find(key);
+    if (pos == std::string::npos) {
+      return std::string{};
+    }
+    auto start = pos + key.size();
+    auto end = raw_error.find(',', start);
+    if (end == std::string::npos) {
+      end = raw_error.size();
+    }
+    return raw_error.substr(start, end - start);
+  };
+
+  const std::string reason_code_text = token_value("reason_code=");
+  std::string failed_conditions_text = token_value("failed_conditions=");
+  std::string next_departure_time = token_value("next_departure_time=");
+  if (!is_truck_permit) {
+    failed_conditions_text.clear();
+    next_departure_time.clear();
+  }
+
+  auto failed_conditions = baldr::json::array({});
+  if (!failed_conditions_text.empty()) {
+    size_t start = 0;
+    while (start < failed_conditions_text.size()) {
+      auto end = failed_conditions_text.find('|', start);
+      if (end == std::string::npos) {
+        end = failed_conditions_text.size();
+      }
+      auto condition = failed_conditions_text.substr(start, end - start);
+      if (!condition.empty()) {
+        failed_conditions->emplace_back(condition);
+      }
+      start = end + 1;
+    }
+  }
+
+  auto first_meta = clean_error.find("reason_code=");
+  if (first_meta == std::string::npos) {
+    first_meta = clean_error.find("failed_conditions=");
+  }
+  if (first_meta == std::string::npos) {
+    first_meta = clean_error.find("next_departure_time=");
+  }
+  if (first_meta != std::string::npos) {
+    clean_error.erase(first_meta);
+    while (!clean_error.empty() &&
+           (clean_error.back() == ':' || clean_error.back() == ' ' || clean_error.back() == ',')) {
+      clean_error.pop_back();
+    }
+  }
+
+  uint64_t response_error_code = exception.code;
+  if (!reason_code_text.empty()) {
+    try {
+      response_error_code = static_cast<uint64_t>(std::stoul(reason_code_text));
+    } catch (...) {
+      response_error_code = exception.code;
+    }
+  }
 
   // overwrite with osrm error response
   if (request.options().format() == Options::osrm) {
-    body << (request.options().has_jsonp_case() ? request.options().jsonp() + "(" : "")
-         << exception.osrm_error << (request.options().has_jsonp_case() ? ")" : "");
+    if (!next_departure_time.empty() || !failed_conditions_text.empty()) {
+      auto json_error = baldr::json::map({});
+      json_error->emplace("code", std::string("NoRoute"));
+      json_error->emplace("message", std::string("Impossible route between points"));
+      if (!next_departure_time.empty()) {
+        json_error->emplace("next_departure_time", next_departure_time);
+      }
+      if (!failed_conditions_text.empty()) {
+        json_error->emplace("failed_conditions", failed_conditions);
+      }
+      body << (request.options().has_jsonp_case() ? request.options().jsonp() + "(" : "")
+           << *json_error << (request.options().has_jsonp_case() ? ")" : "");
+    } else {
+      body << (request.options().has_jsonp_case() ? request.options().jsonp() + "(" : "")
+           << exception.osrm_error << (request.options().has_jsonp_case() ? ")" : "");
+    }
   } // valhalla json error response
   else if (request.options().format() != Options::pbf) {
     // build up the json map
     auto json_error = baldr::json::map({});
     json_error->emplace("status", exception.http_message);
     json_error->emplace("status_code", static_cast<uint64_t>(exception.http_code));
-    json_error->emplace("error", std::string(exception.message));
-    json_error->emplace("error_code", static_cast<uint64_t>(exception.code));
+    json_error->emplace("error", clean_error);
+    json_error->emplace("error_code", response_error_code);
+    // Compatibility aliases for offline/mobile clients expecting route-prefixed fields.
+    json_error->emplace("routeError", clean_error);
+    json_error->emplace("routeErrorCode", response_error_code);
+    if (!next_departure_time.empty()) {
+      json_error->emplace("next_departure_time", next_departure_time);
+    }
+    if (!failed_conditions_text.empty()) {
+      json_error->emplace("failed_conditions", failed_conditions);
+      json_error->emplace("failedConditions", failed_conditions);
+    }
     body << (request.options().has_jsonp_case() ? request.options().jsonp() + "(" : "") << *json_error
          << (request.options().has_jsonp_case() ? ")" : "");
   }
 
   // keep track of what the error was
   auto* err = request.mutable_info()->mutable_errors()->Add();
-  err->set_description(exception.message);
-  err->set_code(exception.code);
+  err->set_description(clean_error);
+  err->set_code(static_cast<uint32_t>(response_error_code));
 
   // write a few stats about the error
   auto worker = exception.code < 200 || (exception.code >= 300 && exception.code < 400)

@@ -1,11 +1,18 @@
 #include "route_serializer_valhalla.h"
 #include "baldr/rapidjson_utils.h"
+#include "baldr/timedomain.h"
 #include "midgard/aabb2.h"
 #include "midgard/logging.h"
 #include "odin/enhancedtrippath.h"
 #include "proto_conversions.h"
 #include "tyr/serializers.h"
 
+#include <algorithm>
+#include <array>
+#include <map>
+#include <sstream>
+#include <string>
+#include <unordered_map>
 #include <vector>
 
 using namespace valhalla;
@@ -14,6 +21,213 @@ using namespace valhalla::odin;
 using namespace valhalla::baldr;
 
 namespace {
+
+struct ManeuverTruckPermitDetails {
+  bool has_permit = false;
+  bool has_timed = false;
+  std::vector<std::string> timed_windows;
+};
+
+struct LegTruckPermitIndex {
+  std::vector<uint32_t> permit_prefix;
+  std::vector<uint32_t> timed_prefix;
+  std::unordered_map<uint64_t, std::vector<uint32_t>> timed_value_positions;
+};
+
+std::string format_two_digits(uint32_t value) {
+  return value < 10 ? "0" + std::to_string(value) : std::to_string(value);
+}
+
+std::string format_ampm_time(uint8_t hours, uint8_t mins) {
+  uint32_t normalized_hours = hours % 24;
+  const char* am_pm = normalized_hours >= 12 ? "PM" : "AM";
+  uint32_t hour12 = normalized_hours % 12;
+  if (hour12 == 0) {
+    hour12 = 12;
+  }
+
+  return std::to_string(hour12) + ":" + format_two_digits(mins) + am_pm;
+}
+
+std::string format_ampm_range(const baldr::TimeDomain& td) {
+  return format_ampm_time(td.begin_hrs(), td.begin_mins()) + "-" +
+         format_ampm_time(td.end_hrs(), td.end_mins());
+}
+
+std::string dow_label(uint8_t dow_mask) {
+  static const std::array<const char*, 7> day_names = {
+      "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
+  static const std::array<const char*, 7> day_short = {"Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"};
+
+  if (dow_mask == 0 || dow_mask == 0b1111111) {
+    return "Time Ban";
+  }
+
+  int bit_count = 0;
+  int first_bit = -1;
+  int last_bit = -1;
+  for (int i = 0; i < 7; ++i) {
+    if (dow_mask & (1 << i)) {
+      ++bit_count;
+      if (first_bit == -1) {
+        first_bit = i;
+      }
+      last_bit = i;
+    }
+  }
+
+  if (bit_count == 1) {
+    return std::string(day_names[first_bit]) + " Ban";
+  }
+
+  const uint8_t contiguous_mask = static_cast<uint8_t>(((1 << (last_bit - first_bit + 1)) - 1) << first_bit);
+  if (contiguous_mask == dow_mask) {
+    return std::string(day_short[first_bit]) + "-" + day_short[last_bit] + " Ban";
+  }
+
+  std::stringstream ss;
+  bool first = true;
+  for (int i = 0; i < 7; ++i) {
+    if (dow_mask & (1 << i)) {
+      if (!first) {
+        ss << ",";
+      }
+      ss << day_short[i];
+      first = false;
+    }
+  }
+  ss << " Ban";
+  return ss.str();
+}
+
+std::vector<std::string> format_timed_windows(const std::vector<uint64_t>& timed_values) {
+  std::map<uint8_t, std::vector<std::pair<uint32_t, std::string>>> grouped_ranges;
+
+  for (const auto value : timed_values) {
+    const baldr::TimeDomain td(value);
+    uint32_t start_minutes = static_cast<uint32_t>(td.begin_hrs()) * 60 + td.begin_mins();
+    grouped_ranges[td.dow()].emplace_back(start_minutes, format_ampm_range(td));
+  }
+
+  std::vector<std::string> formatted;
+  for (auto& group : grouped_ranges) {
+    auto& ranges = group.second;
+    std::sort(ranges.begin(), ranges.end(), [](const auto& lhs, const auto& rhs) {
+      if (lhs.first != rhs.first) {
+        return lhs.first < rhs.first;
+      }
+      return lhs.second < rhs.second;
+    });
+
+    std::vector<std::string> unique_ranges;
+    unique_ranges.reserve(ranges.size());
+    for (const auto& entry : ranges) {
+      if (unique_ranges.empty() || unique_ranges.back() != entry.second) {
+        unique_ranges.emplace_back(entry.second);
+      }
+    }
+
+    std::stringstream ss;
+    ss << dow_label(group.first) << ": ";
+    for (size_t i = 0; i < unique_ranges.size(); ++i) {
+      if (i > 0) {
+        ss << " & ";
+      }
+      ss << unique_ranges[i];
+    }
+    formatted.emplace_back(ss.str());
+  }
+
+  return formatted;
+}
+
+LegTruckPermitIndex build_truck_permit_index(const TripLeg& leg) {
+  LegTruckPermitIndex index;
+  const size_t node_count = leg.node_size();
+  index.permit_prefix.resize(node_count + 1, 0);
+  index.timed_prefix.resize(node_count + 1, 0);
+
+  for (uint32_t path_index = 0; path_index < node_count; ++path_index) {
+    const auto& edge = leg.node(path_index).edge();
+    bool is_permit = false;
+    bool is_timed = false;
+
+    auto process_restriction = [&](uint32_t restriction_type, uint64_t restriction_value) {
+      if (restriction_type == static_cast<uint32_t>(AccessType::kPermitRequired)) {
+        is_permit = true;
+        return;
+      }
+
+      if (restriction_type == static_cast<uint32_t>(AccessType::kTimedDenied) ||
+          restriction_type == static_cast<uint32_t>(AccessType::kTimedAllowed) ||
+          restriction_type == static_cast<uint32_t>(AccessType::kDestinationAllowed)) {
+        is_timed = true;
+        if (restriction_value != 0) {
+          index.timed_value_positions[restriction_value].push_back(path_index);
+        }
+      }
+    };
+
+    if (edge.restrictions_size() > 0) {
+      for (const auto& restriction : edge.restrictions()) {
+        process_restriction(restriction.type(), restriction.value());
+      }
+    } else {
+      process_restriction(edge.restriction().type(), edge.restriction().value());
+    }
+
+    index.permit_prefix[path_index + 1] = index.permit_prefix[path_index] + (is_permit ? 1 : 0);
+    index.timed_prefix[path_index + 1] = index.timed_prefix[path_index] + (is_timed ? 1 : 0);
+  }
+
+  return index;
+}
+
+ManeuverTruckPermitDetails collect_truck_permit_details(const LegTruckPermitIndex& index,
+                                                        const DirectionsLeg_Maneuver& maneuver,
+                                                        const size_t node_count) {
+  ManeuverTruckPermitDetails details;
+  const auto begin_path = maneuver.begin_path_index();
+  const auto end_path = maneuver.end_path_index();
+
+  if (begin_path >= node_count || end_path > node_count || begin_path >= end_path) {
+    return details;
+  }
+
+  details.has_permit = index.permit_prefix[end_path] > index.permit_prefix[begin_path];
+  details.has_timed = index.timed_prefix[end_path] > index.timed_prefix[begin_path];
+
+  if (!details.has_timed) {
+    return details;
+  }
+
+  std::vector<uint64_t> timed_values;
+  timed_values.reserve(index.timed_value_positions.size());
+  for (const auto& timed_entry : index.timed_value_positions) {
+    const auto& positions = timed_entry.second;
+    const auto it = std::lower_bound(positions.begin(), positions.end(), begin_path);
+    if (it != positions.end() && *it < end_path) {
+      timed_values.push_back(timed_entry.first);
+    }
+  }
+
+  details.timed_windows = format_timed_windows(timed_values);
+  return details;
+}
+
+const char* restriction_category(const ManeuverTruckPermitDetails& details) {
+  if (details.has_permit && details.has_timed) {
+    return "permit_with_timed_ban";
+  }
+  if (details.has_permit) {
+    return "permit_only";
+  }
+  if (details.has_timed) {
+    return "timed_ban";
+  }
+  return "no_time_ban";
+}
+
 /*
 valhalla output looks like this:
 {
@@ -262,10 +476,13 @@ void turn_lanes(const TripLeg& leg,
 void legs(valhalla::Api& api, int route_index, rapidjson::writer_wrapper_t& writer) {
   writer.start_array("legs");
   const auto& directions_legs = api.directions().routes(route_index).legs();
+  const bool is_truck_permit = api.options().costing_type() == Costing::truck_permit;
   unsigned int length_prec = api.options().units() == Options::miles ? 4 : 3;
   auto trip_leg_itr = api.mutable_trip()->mutable_routes(route_index)->mutable_legs()->begin();
   for (const auto& directions_leg : directions_legs) {
     valhalla::odin::EnhancedTripLeg etp(*trip_leg_itr);
+    const auto truck_permit_index = is_truck_permit ? build_truck_permit_index(*trip_leg_itr)
+                                                    : LegTruckPermitIndex{};
     writer.start_object(); // leg
     bool has_time_restrictions = false;
     bool has_toll = false;
@@ -562,6 +779,17 @@ void legs(valhalla::Api& api, int route_index, rapidjson::writer_wrapper_t& writ
 
       // Travel type
       writer("travel_type", mode_type.second);
+
+      if (is_truck_permit) {
+        const auto details =
+            collect_truck_permit_details(truck_permit_index, maneuver, trip_leg_itr->node_size());
+        writer("truck_permit_restriction_type", restriction_category(details));
+        writer.start_array("truck_permit_ban_timings");
+        for (const auto& window : details.timed_windows) {
+          writer(window);
+        }
+        writer.end_array();
+      }
 
       //  man->emplace("hasGate", maneuver.);
       //  man->emplace("hasFerry", maneuver.);

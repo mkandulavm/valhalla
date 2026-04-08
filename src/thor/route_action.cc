@@ -6,6 +6,10 @@
 #include "thor/worker.h"
 
 #include <cstdint>
+#include <ctime>
+#include <iomanip>
+#include <limits>
+#include <sstream>
 
 using namespace valhalla;
 using namespace valhalla::midgard;
@@ -20,6 +24,145 @@ namespace {
 // which can lead to irregular paths. Running a second pass with less aggressive
 // A* can take excessive time for longer paths - so exclude them to protect the service.
 constexpr float kPedestrianMultipassThreshold = 50000.0f; // 50km
+constexpr unsigned kTruckPermitPermitTimedWarning = 403;
+constexpr unsigned kTruckPermitNoPathPermitError = 447;
+constexpr unsigned kTruckPermitNoPathTimedError = 448;
+constexpr unsigned kTruckPermitNoPathPermitTimedError = 449;
+
+inline bool is_truck_permit_profile(const Options& options) {
+  return options.costing_type() == Costing::truck_permit;
+}
+
+inline bool has_permit_disabled(const Options& options) {
+  auto itr = options.costings().find(options.costing_type());
+  if (itr == options.costings().end()) {
+    return false;
+  }
+  return !itr->second.options().has_permit();
+}
+
+inline bool is_time_dependent_request(const Options& options) {
+  if (options.has_date_time_case()) {
+    if (options.date_time_type() == Options::invariant) {
+      return false;
+    }
+    if (options.date_time_type() == Options::current ||
+        options.date_time_type() == Options::depart_at ||
+        options.date_time_type() == Options::arrive_by) {
+      return true;
+    }
+  }
+
+  if (options.date_time_type() == Options::invariant) {
+    return false;
+  }
+
+  for (const auto& loc : options.locations()) {
+    if (!loc.date_time().empty()) {
+      return true;
+    }
+  }
+  return false;
+}
+
+inline std::string make_hint_extra(const std::string& next_departure_time) {
+  if (next_departure_time.empty()) {
+    return "";
+  }
+  return "next_departure_time=" + next_departure_time;
+}
+
+struct restriction_reason_t {
+  bool permit_issue;
+  bool timed_issue;
+};
+
+inline std::string failed_conditions_extra(const restriction_reason_t& reason) {
+  if (reason.permit_issue && reason.timed_issue) {
+    return "failed_conditions=permit_required|timed_restriction_active";
+  }
+  if (reason.permit_issue) {
+    return "failed_conditions=permit_required";
+  }
+  if (reason.timed_issue) {
+    return "failed_conditions=timed_restriction_active";
+  }
+  return "failed_conditions=unclassified";
+}
+
+inline std::string make_reason_extra(const unsigned reason_code,
+                                     const restriction_reason_t& reason,
+                                     const std::string& next_departure_time = "") {
+  std::string extra = "reason_code=" + std::to_string(reason_code);
+  extra += ", " + failed_conditions_extra(reason);
+  if (!next_departure_time.empty()) {
+    extra += ", " + make_hint_extra(next_departure_time);
+  }
+  return extra;
+}
+
+inline restriction_reason_t restriction_reason(
+    const Options& options,
+    const DynamicCost::restriction_failure_info_t& failure_info) {
+  return {has_permit_disabled(options) && failure_info.permit_issue,
+          is_time_dependent_request(options) && failure_info.timed_issue};
+}
+
+inline void add_truck_permit_warning(Api& api, const cost_ptr_t& costing) {
+  if (!is_truck_permit_profile(api.options())) {
+    return;
+  }
+
+  if (!costing) {
+    return;
+  }
+
+  DynamicCost::restriction_failure_info_t failure_info;
+  if (!costing->GetRestrictionFailureInfo(failure_info)) {
+    return;
+  }
+
+  const auto reason = restriction_reason(api.options(), failure_info);
+  // Only emit warning for successful routes when multiple restriction causes apply.
+  // Single-cause detours are intentionally suppressed per product requirement.
+  if (reason.permit_issue && reason.timed_issue && failure_info.combined_issue_same_edge) {
+    add_warning(api, kTruckPermitPermitTimedWarning);
+  }
+}
+
+inline void throw_no_path(const Options& options,
+                          baldr::GraphReader& reader,
+                          const cost_ptr_t& costing) {
+  if (!is_truck_permit_profile(options)) {
+    throw valhalla_exception_t{442};
+  }
+
+  DynamicCost::restriction_failure_info_t failure_info;
+  if (!costing || !costing->GetRestrictionFailureInfo(failure_info)) {
+    throw valhalla_exception_t{442};
+  }
+
+  costing->FinalizeRestrictionFailureInfo(reader, failure_info);
+
+  const auto reason = restriction_reason(options, failure_info);
+  const auto& next_time = failure_info.next_departure_time;
+
+  if (reason.permit_issue && reason.timed_issue) {
+    throw valhalla_exception_t{kTruckPermitNoPathPermitTimedError,
+                               make_reason_extra(kTruckPermitNoPathPermitTimedError, reason,
+                                                 next_time)};
+  }
+  if (reason.permit_issue) {
+    throw valhalla_exception_t{kTruckPermitNoPathPermitError,
+                               make_reason_extra(kTruckPermitNoPathPermitError, reason)};
+  }
+  if (reason.timed_issue) {
+    throw valhalla_exception_t{kTruckPermitNoPathTimedError,
+                               make_reason_extra(kTruckPermitNoPathTimedError, reason, next_time)};
+  }
+
+  throw valhalla_exception_t{442, make_reason_extra(442, reason)};
+}
 
 /**
  * Check if the paths meet at opposing edges (but not at a node). If so, add an intermediate location
@@ -370,6 +513,8 @@ void thor_worker_t::route(Api& request) {
   } else {
     path_depart_at(request, costing);
   }
+
+  add_truck_permit_warning(request, mode_costing[static_cast<uint32_t>(mode)]);
 }
 
 thor::PathAlgorithm* thor_worker_t::get_path_algorithm(const std::string& routetype,
@@ -456,6 +601,7 @@ std::vector<std::vector<thor::PathInfo>> thor_worker_t::get_path(PathAlgorithm* 
   cost->set_allow_destination_only(path_algorithm == &bidir_astar ? false : true);
 
   cost->set_pass(0);
+  cost->ResetRestrictionFailureInfo();
   auto paths = path_algorithm->GetBestPath(origin, destination, *reader, mode_costing, mode, options);
 
   // Check if we should run a second pass pedestrian route with different A*
@@ -487,6 +633,7 @@ std::vector<std::vector<thor::PathInfo>> thor_worker_t::get_path(PathAlgorithm* 
     cost->set_allow_destination_only(true);
     cost->set_allow_conditional_destination(true);
     path_algorithm->set_not_thru_pruning(false);
+    cost->ResetRestrictionFailureInfo();
     // Get the best path. Return if not empty (else return the original path)
     auto relaxed_paths =
         path_algorithm->GetBestPath(origin, destination, *reader, mode_costing, mode, options);
@@ -696,7 +843,7 @@ void thor_worker_t::path_arrive_by(Api& api, const std::string& costing) {
           // it doesn't make sense to continue if there are no more path edges
           if (loc->correlation().edges_size() == 0)
             // no route found
-            throw valhalla_exception_t{442};
+              throw_no_path(options, *reader, mode_costing[static_cast<uint32_t>(mode)]);
         }
         // resets the entire state of all the legs of the route and starts completely
         // over from the beginning doing all the legs over
@@ -710,7 +857,7 @@ void thor_worker_t::path_arrive_by(Api& api, const std::string& costing) {
         continue;
       }
       // no route found
-      throw valhalla_exception_t{442};
+      throw_no_path(options, *reader, mode_costing[static_cast<uint32_t>(mode)]);
     }
     ++origin;
   }
@@ -893,7 +1040,7 @@ void thor_worker_t::path_depart_at(Api& api, const std::string& costing) {
           // it doesn't make sense to continue if there are no more path edges
           if (loc->correlation().edges_size() == 0)
             // no route found
-            throw valhalla_exception_t{442};
+              throw_no_path(options, *reader, mode_costing[static_cast<uint32_t>(mode)]);
         }
         // resets the entire state of all the legs of the route and starts completely
         // over from the beginning doing all the legs over
@@ -907,7 +1054,7 @@ void thor_worker_t::path_depart_at(Api& api, const std::string& costing) {
         continue;
       }
       // no route found
-      throw valhalla_exception_t{442};
+      throw_no_path(options, *reader, mode_costing[static_cast<uint32_t>(mode)]);
     }
     ++destination;
   }

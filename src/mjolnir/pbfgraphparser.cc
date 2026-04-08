@@ -1190,6 +1190,40 @@ struct graph_parser {
       osmdata_.access_restrictions.insert(
           AccessRestrictionsMultiMap::value_type(osmid_, restriction));
     };
+    tag_handlers_["hgv_permit"] = [this]() {
+      ++permit_tags_seen_;
+      std::string permit_value = tag_.second;
+      boost::algorithm::to_lower(permit_value);
+      if (permit_value != "yes" && permit_value != "true" && permit_value != "designated" &&
+          permit_value != "1") {
+        ++permit_values_rejected_;
+        return;
+      }
+      OSMAccessRestriction restriction;
+      restriction.set_type(AccessType::kPermitRequired);
+      restriction.set_modes(kTruckAccess);
+      restriction.set_value(1);
+      osmdata_.access_restrictions.insert(
+          AccessRestrictionsMultiMap::value_type(osmid_, restriction));
+      ++permit_restrictions_added_;
+    };
+    tag_handlers_["hgv:permit"] = [this]() {
+      ++permit_tags_seen_;
+      std::string permit_value = tag_.second;
+      boost::algorithm::to_lower(permit_value);
+      if (permit_value != "yes" && permit_value != "true" && permit_value != "designated" &&
+          permit_value != "1") {
+        ++permit_values_rejected_;
+        return;
+      }
+      OSMAccessRestriction restriction;
+      restriction.set_type(AccessType::kPermitRequired);
+      restriction.set_modes(kTruckAccess);
+      restriction.set_value(1);
+      osmdata_.access_restrictions.insert(
+          AccessRestrictionsMultiMap::value_type(osmid_, restriction));
+      ++permit_restrictions_added_;
+    };
     tag_handlers_["hov_type"] = [this]() {
       // If this tag is set then the way is either HOV-2 or HOV-3.
       // There are no other real-world hov levels.
@@ -5068,6 +5102,11 @@ struct graph_parser {
   // nodes during the parsing phase or to get the admin info from the admin db
   bool use_admin_db_;
 
+  // Diagnostics for permit restriction parsing.
+  uint64_t permit_tags_seen_ = 0;
+  uint64_t permit_restrictions_added_ = 0;
+  uint64_t permit_values_rejected_ = 0;
+
   // Road class assignment needs to be set to the highway cutoff for ferries and auto trains.
   RoadClass highway_cutoff_rc_;
 
@@ -5239,6 +5278,10 @@ OSMData PBFGraphParser::ParseWays(const boost::property_tree::ptree& pt,
 
   LOG_INFO("Finished with " + std::to_string(osmdata.osm_way_count) + " routable ways containing " +
            std::to_string(osmdata.osm_way_node_count) + " nodes");
+  LOG_INFO("Permit diagnostics (ParseWays): permit tags seen=" +
+           std::to_string(parser.permit_tags_seen_) +
+           ", restrictions added=" + std::to_string(parser.permit_restrictions_added_) +
+           ", rejected values=" + std::to_string(parser.permit_values_rejected_));
   parser.reset(nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr);
 
   // we need to sort the access tags so that we can easily find them.

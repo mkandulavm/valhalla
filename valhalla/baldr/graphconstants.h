@@ -757,6 +757,7 @@ enum class AccessType : uint8_t {
   kTimedDenied = 7,
   kDestinationAllowed = 8,
   kMaxAxles = 9,
+  kPermitRequired = 10,
 };
 
 constexpr unsigned int kHazmatMask = 1;
@@ -766,6 +767,7 @@ constexpr unsigned int kMaxLengthMask = 8;
 constexpr unsigned int kMaxWeightMask = 16;
 constexpr unsigned int kMaxAxleLoadMask = 32;
 constexpr unsigned int kMaxAxlesMask = 64;
+constexpr unsigned int kPermitRequiredMask = 128;
 
 // convert between the enum value and the corresponding mask
 constexpr std::array<uint8_t, 32> populate_access_restriction_masks() {
@@ -781,6 +783,7 @@ constexpr std::array<uint8_t, 32> populate_access_restriction_masks() {
   masks[4] = kMaxWeightMask;
   masks[5] = kMaxAxleLoadMask;
   masks[9] = kMaxAxlesMask;
+  masks[10] = kPermitRequiredMask;
 
   return masks;
 }

@@ -120,6 +120,27 @@ const std::unordered_map<unsigned, valhalla::valhalla_exception_t> error_codes{
     {444, {444, "Map Match algorithm failed to find path", 400, HTTP_400, OSRM_NO_SEGMENT, "map_match_failed"}},
     {445, {445, "Shape match algorithm specification in api request is incorrect. Please see documentation for valid shape_match input.", 400, HTTP_400, OSRM_INVALID_URL, "wrong_match_type"}},
     {446, {446, "Remote tar file has changed, service is unavailable", 500, HTTP_500, OSRM_SERVER_ERROR, "remote_tar_changed"}},
+    {447,
+     {447,
+      "[447] No path found: permit-required truck road restrictions blocked all candidate paths (has_permit=false).",
+      400,
+      HTTP_400,
+      OSRM_NO_ROUTE,
+      "no_path_truck_permit_permit"}},
+    {448,
+     {448,
+      "[448] No path found: time-based truck restriction active for requested date_time. Conservative entry/exit policy blocked one or more edges because estimated travel on those edges overlaps the ban window (even if edge entry happens before ban start).",
+      400,
+      HTTP_400,
+      OSRM_NO_ROUTE,
+      "no_path_truck_permit_timed"}},
+    {449,
+     {449,
+      "[449] No path found: both permit-required and time-based truck restrictions blocked all candidate paths. Conservative entry/exit policy was applied for timed restrictions.",
+      400,
+      HTTP_400,
+      OSRM_NO_ROUTE,
+      "no_path_truck_permit_permit_timed"}},
     {499, {499, "Unknown", 500, HTTP_500, OSRM_INVALID_URL, "unknown"}},
     {503, {503, "Leg count mismatch", 400, HTTP_400, OSRM_INVALID_URL, "wrong_number_of_legs"}},
     {504, {504, "This service does not support GeoTIFF serialization.", 400, HTTP_400, OSRM_INVALID_VALUE, "unknown"}},
@@ -154,7 +175,13 @@ const std::unordered_map<int, std::string> warning_codes = {
   {302, R"("search_filter.level" was specified without a custom "search_cutoff", setting default default cutoff to )"},
   {303, R"("search_cutoff" exceeds maximum allowed value due to "search_filter.level" being specified, clamping cutoff to )"},
   // 4xx is used when we do sneaky important things the user should be aware of
-  {400, R"(CostMatrix turned off destination-only on a second pass for connections: )"}
+  {400, R"(CostMatrix turned off destination-only on a second pass for connections: )"},
+  {401,
+   R"(Used longer route as there is restriction in road and permit is required to use that road.)"},
+  {402,
+   R"(Used longer route as there is time-based truck restriction active on shorter road at requested date_time.)"},
+  {403,
+   R"(Used longer route as shorter road has both permit-required and time-based truck restrictions.)"}
 };
 // clang-format on
 

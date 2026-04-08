@@ -123,7 +123,11 @@ void loki_worker_t::parse_costing(Api& api, bool allow_none) {
   if (options.exclude_polygons_size()) {
     const auto edges = edges_in_rings(options, *reader, mode_costing[static_cast<size_t>(mode)],
                                       max_exclude_polygons_length);
-    auto& co = *options.mutable_costings()->find(options.costing_type())->second.mutable_options();
+    auto costing_itr = options.mutable_costings()->find(options.costing_type());
+    if (costing_itr == options.mutable_costings()->end()) {
+      throw valhalla_exception_t{125, "'" + Costing_Enum_Name(options.costing_type()) + "'"};
+    }
+    auto& co = *costing_itr->second.mutable_options();
     for (const auto& edge_id : edges) {
       auto* avoid = co.add_exclude_edges();
       avoid->set_id(edge_id);
@@ -142,7 +146,11 @@ void loki_worker_t::parse_costing(Api& api, bool allow_none) {
       auto exclude_locations = PathLocation::fromPBF(options.exclude_locations());
       auto results = search_.search(exclude_locations, mode_costing[static_cast<size_t>(mode)]);
       std::unordered_set<uint64_t> avoids;
-      auto& co = *options.mutable_costings()->find(options.costing_type())->second.mutable_options();
+      auto costing_itr = options.mutable_costings()->find(options.costing_type());
+      if (costing_itr == options.mutable_costings()->end()) {
+        throw valhalla_exception_t{125, "'" + Costing_Enum_Name(options.costing_type()) + "'"};
+      }
+      auto& co = *costing_itr->second.mutable_options();
       for (const auto& result : results) {
         for (const auto& edge : result.second.edges) {
           auto inserted = avoids.insert(edge.id);
@@ -366,6 +374,9 @@ void loki_worker_t::check_hierarchy_distance(Api& request) {
 
   // If disable_hierarchy_pruning is not true, skip the rest.
   auto costing_options = options.mutable_costings()->find(options.costing_type());
+  if (costing_options == options.mutable_costings()->end()) {
+    throw valhalla_exception_t{125, "'" + Costing_Enum_Name(options.costing_type()) + "'"};
+  }
   if (!costing_options->second.options().disable_hierarchy_pruning()) {
     return;
   }

@@ -4,9 +4,10 @@
 #include <string>
 
 namespace {
-constexpr std::array<const char*, 10> kTypeToString = {
+constexpr std::array<const char*, 11> kTypeToString = {
     "hazmat",        "max_height",    "max_width",    "max_length",          "max_weight",
-    "max_axle_load", "timed_allowed", "timed_denied", "destination_allowed", "max_axles",
+  "max_axle_load", "timed_allowed", "timed_denied", "destination_allowed", "max_axles",
+  "permit_required",
 };
 }
 
@@ -63,7 +64,7 @@ void AccessRestriction::set_value(const uint64_t v) {
 
 void AccessRestriction::json(rapidjson::writer_wrapper_t& writer) const {
   std::string restriction_type = "unsupported";
-  if (static_cast<size_t>(type()) < 10) {
+  if (static_cast<size_t>(type()) < kTypeToString.size()) {
     restriction_type = kTypeToString[static_cast<size_t>(type())];
   }
 

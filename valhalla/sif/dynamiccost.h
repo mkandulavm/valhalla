@@ -6,6 +6,7 @@
 #include <valhalla/baldr/directededge.h>
 #include <valhalla/baldr/graphconstants.h>
 #include <valhalla/baldr/graphid.h>
+#include <valhalla/baldr/graphreader.h>
 #include <valhalla/baldr/graphtile.h>
 #include <valhalla/baldr/graphtileptr.h>
 #include <valhalla/baldr/nodeinfo.h>
@@ -23,6 +24,7 @@
 
 #include <cstdint>
 #include <memory>
+#include <string>
 #include <unordered_map>
 
 // macros aren't great but writing these out for every option is an abomination worse than this macro
@@ -147,6 +149,7 @@ const std::unordered_map<Costing::Type, std::vector<Costing::Type>> kCostingType
     {Costing::pedestrian, {Costing::pedestrian}},
     {Costing::transit, {Costing::transit, Costing::pedestrian}},
     {Costing::truck, {Costing::truck}},
+    {Costing::truck_permit, {Costing::truck_permit}},
     {Costing::motorcycle, {Costing::motorcycle}},
     {Costing::taxi, {Costing::taxi}},
     {Costing::auto_, {Costing::auto_}},
@@ -228,6 +231,14 @@ constexpr std::array<float, 16> kTransDensityFactor = {1.0f, 1.0f, 1.0f, 1.0f, 1
  */
 class DynamicCost {
 public:
+  struct restriction_failure_info_t {
+    bool has_value = false;
+    bool permit_issue = false;
+    bool timed_issue = false;
+    bool combined_issue_same_edge = false;
+    std::string next_departure_time;
+  };
+
   /**
    * Constructor.
    * @param  options Request options in a pbf
@@ -289,6 +300,19 @@ public:
    */
   virtual uint32_t access_mode() const {
     return access_mask_;
+  }
+
+  // Optional hook for costing models to expose the most recent edge restriction
+  // reason encountered during expansion.
+  virtual void ResetRestrictionFailureInfo() {
+  }
+
+  virtual bool GetRestrictionFailureInfo(restriction_failure_info_t&) const {
+    return false;
+  }
+
+  virtual void FinalizeRestrictionFailureInfo(baldr::GraphReader&,
+                                              restriction_failure_info_t&) const {
   }
 
   /**

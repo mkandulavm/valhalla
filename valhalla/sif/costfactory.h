@@ -43,6 +43,7 @@ public:
     Register(Costing::motorcycle, CreateMotorcycleCost);
     Register(Costing::pedestrian, CreatePedestrianCost);
     Register(Costing::truck, CreateTruckCost);
+    Register(Costing::truck_permit, CreateTruckCost);
     Register(Costing::transit, CreateTransitCost);
     Register(Costing::multimodal, CreateNoCost); // dummy so it behaves like the rest
     Register(Costing::none_, CreateNoCost);
