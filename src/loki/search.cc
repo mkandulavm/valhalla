@@ -26,6 +26,10 @@ bool search_filter(const DirectedEdge* edge,
                    const DynamicCost& costing,
                    const graph_tile_ptr& tile,
                    const vb::Location::SearchFilter& filter) {
+  if (costing.avoid_hgv_destination_for_search() && edge->destonly_hgv()) {
+    return true;
+  }
+
   // check if this edge matches any of the exclusion filters
   uint32_t road_class = static_cast<uint32_t>(edge->classification());
   uint32_t min_road_class = static_cast<uint32_t>(filter.min_road_class_);

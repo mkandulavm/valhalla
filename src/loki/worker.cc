@@ -120,6 +120,12 @@ void loki_worker_t::parse_costing(Api& api, bool allow_none) {
     }
   } catch (const std::runtime_error&) { throw valhalla_exception_t{125, "'" + costing_str + "'"}; }
 
+  for (const auto& costing : mode_costing) {
+    if (costing) {
+      costing->SetGraphReader(reader.get());
+    }
+  }
+
   if (options.exclude_polygons_size()) {
     const auto edges = edges_in_rings(options, *reader, mode_costing[static_cast<size_t>(mode)],
                                       max_exclude_polygons_length);

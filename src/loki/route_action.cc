@@ -2,10 +2,27 @@
 #include "loki/search.h"
 #include "loki/worker.h"
 
+#include <algorithm>
+
 using namespace valhalla;
 using namespace valhalla::baldr;
 
 namespace {
+
+constexpr float kTruckPermitExtendedSearchCutoffMeters = 10000.0f;
+
+inline bool avoid_hgv_destination_internal_roads(const valhalla::Options& options) {
+  if (options.costing_type() != Costing::truck_permit) {
+    return false;
+  }
+
+  const auto itr = options.costings().find(options.costing_type());
+  if (itr == options.costings().end()) {
+    return false;
+  }
+
+  return itr->second.options().use_living_streets() <= 0.0f;
+}
 
 void check_locations(const size_t location_count, const size_t max_locations) {
   // check that location size does not exceed max.
@@ -128,6 +145,14 @@ void loki_worker_t::route(Api& request) {
     auto locations = PathLocation::fromPBF(options.locations(), true);
     size_t locations_end = locations.size();
 
+    const bool avoid_hgv_destination = avoid_hgv_destination_internal_roads(options);
+    if (avoid_hgv_destination) {
+      for (size_t i = 0; i < locations_end; ++i) {
+        locations[i].search_cutoff_ =
+            std::max(locations[i].search_cutoff_, kTruckPermitExtendedSearchCutoffMeters);
+      }
+    }
+
     // maybe squeeze in the first and last locations of each user specified feature for cost factor
     // lines as we'll need those for edge walking
     for (const auto& line : options.cost_factor_lines()) {
@@ -163,6 +188,7 @@ void loki_worker_t::route(Api& request) {
     } else {
       projections = search_.search(locations, mode_costing[static_cast<size_t>(mode)]);
     }
+
     for (size_t i = 0; i < locations_end; ++i) {
       const auto& correlated = projections.at(locations[i]);
       PathLocation::toPBF(correlated, options.mutable_locations(i), *reader);

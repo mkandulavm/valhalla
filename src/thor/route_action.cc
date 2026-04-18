@@ -28,6 +28,7 @@ constexpr unsigned kTruckPermitPermitTimedWarning = 403;
 constexpr unsigned kTruckPermitNoPathPermitError = 447;
 constexpr unsigned kTruckPermitNoPathTimedError = 448;
 constexpr unsigned kTruckPermitNoPathPermitTimedError = 449;
+constexpr unsigned kTruckPermitNoPathHgvDestinationAvoidedError = 450;
 
 inline bool is_truck_permit_profile(const Options& options) {
   return options.costing_type() == Costing::truck_permit;
@@ -39,6 +40,17 @@ inline bool has_permit_disabled(const Options& options) {
     return false;
   }
   return !itr->second.options().has_permit();
+}
+
+inline bool avoid_hgv_destination_internal_roads(const Options& options) {
+  if (!is_truck_permit_profile(options)) {
+    return false;
+  }
+  auto itr = options.costings().find(options.costing_type());
+  if (itr == options.costings().end()) {
+    return false;
+  }
+  return itr->second.options().use_living_streets() <= 0.0f;
 }
 
 inline bool is_time_dependent_request(const Options& options) {
@@ -75,19 +87,32 @@ inline std::string make_hint_extra(const std::string& next_departure_time) {
 struct restriction_reason_t {
   bool permit_issue;
   bool timed_issue;
+  bool hgv_destination_avoided_issue;
 };
 
 inline std::string failed_conditions_extra(const restriction_reason_t& reason) {
-  if (reason.permit_issue && reason.timed_issue) {
-    return "failed_conditions=permit_required|timed_restriction_active";
-  }
+  std::string failed_conditions;
+  auto append_condition = [&failed_conditions](const std::string& condition) {
+    if (!failed_conditions.empty()) {
+      failed_conditions += "|";
+    }
+    failed_conditions += condition;
+  };
+
   if (reason.permit_issue) {
-    return "failed_conditions=permit_required";
+    append_condition("permit_required");
   }
   if (reason.timed_issue) {
-    return "failed_conditions=timed_restriction_active";
+    append_condition("timed_restriction_active");
   }
-  return "failed_conditions=unclassified";
+  if (reason.hgv_destination_avoided_issue) {
+    append_condition("internal_road_hgv_destination_avoided");
+  }
+
+  if (failed_conditions.empty()) {
+    failed_conditions = "unclassified";
+  }
+  return "failed_conditions=" + failed_conditions;
 }
 
 inline std::string make_reason_extra(const unsigned reason_code,
@@ -105,7 +130,9 @@ inline restriction_reason_t restriction_reason(
     const Options& options,
     const DynamicCost::restriction_failure_info_t& failure_info) {
   return {has_permit_disabled(options) && failure_info.permit_issue,
-          is_time_dependent_request(options) && failure_info.timed_issue};
+          is_time_dependent_request(options) && failure_info.timed_issue,
+          avoid_hgv_destination_internal_roads(options) &&
+              failure_info.hgv_destination_avoided_issue};
 }
 
 inline void add_truck_permit_warning(Api& api, const cost_ptr_t& costing) {
@@ -151,6 +178,11 @@ inline void throw_no_path(const Options& options,
     throw valhalla_exception_t{kTruckPermitNoPathPermitTimedError,
                                make_reason_extra(kTruckPermitNoPathPermitTimedError, reason,
                                                  next_time)};
+  }
+  if (reason.hgv_destination_avoided_issue && !reason.permit_issue && !reason.timed_issue) {
+    throw valhalla_exception_t{kTruckPermitNoPathHgvDestinationAvoidedError,
+                               make_reason_extra(kTruckPermitNoPathHgvDestinationAvoidedError,
+                                                 reason)};
   }
   if (reason.permit_issue) {
     throw valhalla_exception_t{kTruckPermitNoPathPermitError,
@@ -262,6 +294,35 @@ template <typename Predicate> inline void remove_path_edges(valhalla::Location& 
   loc.mutable_correlation()
       ->mutable_filtered_edges()
       ->DeleteSubrange(start_idx, loc.correlation().filtered_edges_size() - start_idx);
+}
+
+inline bool is_hgv_destination_edge(baldr::GraphReader& reader, const valhalla::PathEdge& edge) {
+  const auto edge_id = GraphId(edge.graph_id());
+  auto tile = reader.GetGraphTile(edge_id);
+  if (!tile) {
+    return false;
+  }
+  const auto* directed_edge = tile->directededge(edge_id);
+  return directed_edge && directed_edge->destonly_hgv();
+}
+
+inline bool retry_with_nearby_non_hgv_destination_edges(
+    google::protobuf::RepeatedPtrField<valhalla::Location>& correlated,
+    baldr::GraphReader& reader) {
+  bool changed = false;
+  for (auto& loc : correlated) {
+    // Bring in heading-filtered candidates first so nearby alternatives are considered.
+    loc.mutable_correlation()->mutable_edges()->MergeFrom(loc.correlation().filtered_edges());
+
+    const int before = loc.correlation().edges_size();
+    remove_path_edges(loc, [&reader](const auto& edge) { return is_hgv_destination_edge(reader, edge); });
+
+    if (loc.correlation().edges_size() == 0) {
+      return false;
+    }
+    changed = changed || (loc.correlation().edges_size() < before);
+  }
+  return changed;
 }
 
 /**
@@ -822,12 +883,34 @@ void thor_worker_t::path_arrive_by(Api& api, const std::string& costing) {
 
   auto correlated = options.locations();
   bool allow_retry = true;
+  bool allow_hgv_destination_retry = true;
 
   // For each pair of locations
   auto origin = ++correlated.rbegin();
   while (origin != correlated.rend()) {
     auto destination = std::prev(origin);
     if (!route_two_locations(origin, destination)) {
+      if (allow_hgv_destination_retry && avoid_hgv_destination_internal_roads(options)) {
+        allow_hgv_destination_retry = false;
+        correlated = options.locations();
+        const bool retry_ready = retry_with_nearby_non_hgv_destination_edges(correlated, *reader);
+        if (retry_ready) {
+          // Reset all route-building state and retry from the first leg.
+          route = nullptr;
+          first_edge = {};
+          edge_trimming.clear();
+          path.clear();
+          algorithms.clear();
+          trip.mutable_routes()->Clear();
+          origin = ++correlated.rbegin();
+          continue;
+        }
+
+        throw valhalla_exception_t{kTruckPermitNoPathHgvDestinationAvoidedError,
+                                   make_reason_extra(kTruckPermitNoPathHgvDestinationAvoidedError,
+                                                     {false, false, true})};
+      }
+
       // if routing failed because an intermediate waypoint was snapped to the low reachability road
       // (such road lies in a small connectivity component that is not connected to other locations)
       // we should leave only high reachability candidates and try to route again
@@ -1019,12 +1102,34 @@ void thor_worker_t::path_depart_at(Api& api, const std::string& costing) {
 
   auto correlated = options.locations();
   bool allow_retry = true;
+  bool allow_hgv_destination_retry = true;
 
   // For each pair of locations
   auto destination = ++correlated.begin();
   while (destination != correlated.end()) {
     auto origin = std::prev(destination);
     if (!route_two_locations(origin, destination)) {
+      if (allow_hgv_destination_retry && avoid_hgv_destination_internal_roads(options)) {
+        allow_hgv_destination_retry = false;
+        correlated = options.locations();
+        const bool retry_ready = retry_with_nearby_non_hgv_destination_edges(correlated, *reader);
+        if (retry_ready) {
+          // Reset all route-building state and retry from the first leg.
+          route = nullptr;
+          last_edge = {};
+          edge_trimming.clear();
+          path.clear();
+          algorithms.clear();
+          trip.mutable_routes()->Clear();
+          destination = ++correlated.begin();
+          continue;
+        }
+
+        throw valhalla_exception_t{kTruckPermitNoPathHgvDestinationAvoidedError,
+                                   make_reason_extra(kTruckPermitNoPathHgvDestinationAvoidedError,
+                                                     {false, false, true})};
+      }
+
       // if routing failed because an intermediate waypoint was snapped to the low reachability road
       // (such road lies in a small connectivity component that is not connected to other locations)
       // we should leave only high reachability candidates and try to route again

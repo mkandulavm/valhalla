@@ -235,6 +235,12 @@ std::string thor_worker_t::parse_costing(const Api& request) {
   auto costing_str = Costing_Enum_Name(costing);
   mode_costing = factory.CreateModeCosting(options, mode);
 
+  for (const auto& mode_cost : mode_costing) {
+    if (mode_cost) {
+      mode_cost->SetGraphReader(reader.get());
+    }
+  }
+
   return costing_str;
 }
 

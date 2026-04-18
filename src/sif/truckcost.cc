@@ -301,7 +301,9 @@ public:
                                      const uint64_t current_time,
                                      const uint32_t tz_index) const;
 
-  void RecordRestrictionFailure(const bool permit_issue, const bool timed_issue) const;
+  void RecordRestrictionFailure(const bool permit_issue,
+                                const bool timed_issue,
+                                const bool hgv_destination_avoided_issue = false) const;
 
   void RecordTimedFailureContext(const baldr::GraphId& edgeid,
                                  const uint64_t current_time,
@@ -394,6 +396,10 @@ public:
    */
   virtual uint8_t travel_type() const override;
 
+  virtual bool avoid_hgv_destination_for_search() const override {
+    return block_hgv_destination_when_avoiding_living_street_;
+  }
+
   /**
    * Function to be used in location searching which will
    * exclude and allow ranking results from the search by looking at each
@@ -432,6 +438,7 @@ public:
   // Permit gating used by truck_permit profile.
   bool has_permit_;
   bool enforce_hgv_permit_;
+  bool block_hgv_destination_when_avoiding_living_street_;
 
   mutable restriction_failure_info_t restriction_failure_info_;
   mutable bool has_timed_failure_context_ = false;
@@ -497,6 +504,9 @@ TruckCost::TruckCost(const Costing& costing)
 
   has_permit_ = costing_options.has_permit();
   enforce_hgv_permit_ = costing.type() == Costing::truck_permit;
+  // truck_permit-only: with use_living_streets=0, fully avoid hgv=destination edges.
+  block_hgv_destination_when_avoiding_living_street_ =
+      enforce_hgv_permit_ && costing_options.use_living_streets() <= 0.0f;
 }
 
 // Destructor
@@ -553,14 +563,18 @@ void TruckCost::FinalizeRestrictionFailureInfo(baldr::GraphReader& reader,
                                                     timed_failure_tz_index_);
 }
 
-void TruckCost::RecordRestrictionFailure(const bool permit_issue, const bool timed_issue) const {
-  if (!permit_issue && !timed_issue) {
+void TruckCost::RecordRestrictionFailure(const bool permit_issue,
+                                         const bool timed_issue,
+                                         const bool hgv_destination_avoided_issue) const {
+  if (!permit_issue && !timed_issue && !hgv_destination_avoided_issue) {
     return;
   }
 
   restriction_failure_info_.has_value = true;
   restriction_failure_info_.permit_issue = restriction_failure_info_.permit_issue || permit_issue;
   restriction_failure_info_.timed_issue = restriction_failure_info_.timed_issue || timed_issue;
+  restriction_failure_info_.hgv_destination_avoided_issue =
+      restriction_failure_info_.hgv_destination_avoided_issue || hgv_destination_avoided_issue;
   restriction_failure_info_.combined_issue_same_edge =
       restriction_failure_info_.combined_issue_same_edge || (permit_issue && timed_issue);
 }
@@ -845,6 +859,11 @@ inline bool TruckCost::Allowed(const baldr::DirectedEdge* edge,
     return false;
   }
 
+  if (block_hgv_destination_when_avoiding_living_street_ && edge->destonly_hgv()) {
+    RecordRestrictionFailure(false, false, true);
+    return false;
+  }
+
   if (enforce_hgv_permit_ && !has_permit_ && (edge->access_restriction() & kTruckAccess)) {
     auto restrictions = tile->GetAccessRestrictions(edgeid.id(), kTruckAccess);
     for (const auto& restriction : restrictions) {
@@ -899,6 +918,11 @@ bool TruckCost::AllowedReverse(const baldr::DirectedEdge* edge,
       (pred.closure_pruning() && IsClosed(opp_edge, tile)) ||
       (exclude_unpaved_ && !pred.unpaved() && opp_edge->unpaved()) ||
       CheckExclusions(opp_edge, pred)) {
+    return false;
+  }
+
+  if (block_hgv_destination_when_avoiding_living_street_ && opp_edge->destonly_hgv()) {
+    RecordRestrictionFailure(false, false, true);
     return false;
   }
 

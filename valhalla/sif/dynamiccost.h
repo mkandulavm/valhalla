@@ -235,6 +235,7 @@ public:
     bool has_value = false;
     bool permit_issue = false;
     bool timed_issue = false;
+    bool hgv_destination_avoided_issue = false;
     bool combined_issue_same_edge = false;
     std::string next_departure_time;
   };
@@ -989,6 +990,20 @@ public:
    */
   bool is_hgv() const {
     return is_hgv_;
+  }
+
+  /**
+   * Whether search correlation should exclude hgv=destination edges for this costing profile.
+   */
+  virtual bool avoid_hgv_destination_for_search() const {
+    return false;
+  }
+
+  /**
+   * Backward-compatible no-op hook for callers that pass GraphReader context
+   * into costing instances.
+   */
+  virtual void SetGraphReader([[maybe_unused]] baldr::GraphReader* reader) {
   }
 
   /**
