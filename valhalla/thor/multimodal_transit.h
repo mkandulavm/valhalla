@@ -80,6 +80,7 @@ protected:
   bool date_set_;
   bool date_before_tile_;
   bool disable_transit_;
+  bool prefer_earliest_arrival_;
   uint32_t date_;
   uint32_t dow_;
   uint32_t day_;
