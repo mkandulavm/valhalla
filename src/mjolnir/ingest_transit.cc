@@ -238,7 +238,9 @@ select_transit_tiles(const std::filesystem::path& gtfs_path) {
 
           // shapes are optional, don't keep non-existing shapes around
           if (!trip.shape_id.empty()) {
-            tile_info.shapes.insert({{trip.shape_id, feed_name}, tile_info.shapes.size()});
+            // Shape id 0 is reserved as "no shape" in convert_transit, so keep
+            // transit shape ids 1-based in the per-tile transit PBF.
+            tile_info.shapes.insert({{trip.shape_id, feed_name}, tile_info.shapes.size() + 1});
           }
         }
       }
@@ -511,7 +513,7 @@ bool write_stop_pair(
       // test this, but careful, we might have to adjust the test's dist_shape_traveled or whatever
       // for the test shapes to be a bit more realistic with the actual map where it travels much
       // further than the GTFS objects indicate
-      if (currShape.first != currShape.second) {
+      if (currShape.first != currShape.second && pbf_shape_it != tile_info.shapes.end()) {
         stop_pair->set_shape_id(pbf_shape_it->second);
       }
 

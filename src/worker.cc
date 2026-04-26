@@ -1355,12 +1355,13 @@ std::string serialize_error(const valhalla_exception_t& exception, Api& request)
     return raw_error.substr(start, end - start);
   };
 
-  const std::string reason_code_text = token_value("reason_code=");
-  std::string failed_conditions_text = token_value("failed_conditions=");
-  std::string next_departure_time = token_value("next_departure_time=");
-  if (!is_truck_permit) {
-    failed_conditions_text.clear();
-    next_departure_time.clear();
+  std::string reason_code_text;
+  std::string failed_conditions_text;
+  std::string next_departure_time;
+  if (is_truck_permit) {
+    reason_code_text = token_value("reason_code=");
+    failed_conditions_text = token_value("failed_conditions=");
+    next_departure_time = token_value("next_departure_time=");
   }
 
   auto failed_conditions = baldr::json::array({});
@@ -1379,18 +1380,20 @@ std::string serialize_error(const valhalla_exception_t& exception, Api& request)
     }
   }
 
-  auto first_meta = clean_error.find("reason_code=");
-  if (first_meta == std::string::npos) {
-    first_meta = clean_error.find("failed_conditions=");
-  }
-  if (first_meta == std::string::npos) {
-    first_meta = clean_error.find("next_departure_time=");
-  }
-  if (first_meta != std::string::npos) {
-    clean_error.erase(first_meta);
-    while (!clean_error.empty() &&
-           (clean_error.back() == ':' || clean_error.back() == ' ' || clean_error.back() == ',')) {
-      clean_error.pop_back();
+  if (is_truck_permit) {
+    auto first_meta = clean_error.find("reason_code=");
+    if (first_meta == std::string::npos) {
+      first_meta = clean_error.find("failed_conditions=");
+    }
+    if (first_meta == std::string::npos) {
+      first_meta = clean_error.find("next_departure_time=");
+    }
+    if (first_meta != std::string::npos) {
+      clean_error.erase(first_meta);
+      while (!clean_error.empty() &&
+             (clean_error.back() == ':' || clean_error.back() == ' ' || clean_error.back() == ',')) {
+        clean_error.pop_back();
+      }
     }
   }
 
@@ -1429,13 +1432,15 @@ std::string serialize_error(const valhalla_exception_t& exception, Api& request)
     json_error->emplace("status_code", static_cast<uint64_t>(exception.http_code));
     json_error->emplace("error", clean_error);
     json_error->emplace("error_code", response_error_code);
-    // Compatibility aliases for offline/mobile clients expecting route-prefixed fields.
-    json_error->emplace("routeError", clean_error);
-    json_error->emplace("routeErrorCode", response_error_code);
-    if (!next_departure_time.empty()) {
+    if (is_truck_permit) {
+      // Compatibility aliases for offline/mobile clients expecting route-prefixed fields.
+      json_error->emplace("routeError", clean_error);
+      json_error->emplace("routeErrorCode", response_error_code);
+    }
+    if (is_truck_permit && !next_departure_time.empty()) {
       json_error->emplace("next_departure_time", next_departure_time);
     }
-    if (!failed_conditions_text.empty()) {
+    if (is_truck_permit && !failed_conditions_text.empty()) {
       json_error->emplace("failed_conditions", failed_conditions);
       json_error->emplace("failedConditions", failed_conditions);
     }

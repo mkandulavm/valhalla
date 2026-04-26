@@ -4,6 +4,7 @@
 #include "midgard/logging.h"
 
 #include <algorithm>
+#include <unordered_set>
 
 using namespace valhalla::baldr;
 using namespace valhalla::sif;
@@ -16,7 +17,8 @@ MultiModalPathAlgorithm::MultiModalPathAlgorithm(const boost::property_tree::ptr
     : PathAlgorithm(config.get<uint32_t>("max_reserved_labels_count_astar",
                                          kInitialEdgeLabelCountAstar),
                     config.get<bool>("clear_reserved_memory", false)),
-      max_walking_dist_(0), mode_(travel_mode_t::kPedestrian), travel_type_(0) {
+  max_walking_dist_(0), mode_(travel_mode_t::kPedestrian), travel_type_(0),
+  prefer_earliest_arrival_(false) {
 }
 
 // Destructor
@@ -70,6 +72,107 @@ MultiModalPathAlgorithm::GetBestPath(valhalla::Location& origin,
                                      const sif::mode_costing_t& mode_costing,
                                      const travel_mode_t mode,
                                      const Options& options) {
+  struct CandidatePath {
+    std::vector<PathInfo> path;
+    float secs;
+    float cost;
+    uint32_t transfers;
+  };
+
+  uint32_t desired_paths_count = 1;
+  if (options.has_alternates_case() && options.alternates()) {
+    desired_paths_count += options.alternates();
+  }
+  const uint32_t max_paths_to_collect =
+      desired_paths_count == 1 ? 1 : std::max<uint32_t>(desired_paths_count * 6, desired_paths_count + 2);
+
+  // Transit costing does not use shortest today. Reuse it as a strict
+  // earliest-arrival switch for multimodal requests.
+  auto transit_costing = options.costings().find(Costing::transit);
+  prefer_earliest_arrival_ =
+      transit_costing != options.costings().end() && transit_costing->second.options().shortest();
+
+  std::vector<CandidatePath> candidates;
+  candidates.reserve(max_paths_to_collect);
+  std::unordered_set<std::string> path_signatures;
+  std::unordered_set<std::string> transit_signatures;
+  bool primary_path_has_transit = false;
+
+  auto signature_for_path = [](const std::vector<PathInfo>& path) {
+    std::string signature;
+    signature.reserve(path.size() * 24);
+    for (const auto& edge : path) {
+      signature.append(std::to_string(edge.edgeid.value));
+      signature.push_back('|');
+    }
+    return signature;
+  };
+
+  auto transit_signature_for_path = [](const std::vector<PathInfo>& path) {
+    std::string signature;
+    signature.reserve(path.size() * 12);
+    bool has_transit = false;
+    for (const auto& edge : path) {
+      if (edge.trip_id > 0) {
+        has_transit = true;
+        signature.append(std::to_string(edge.trip_id));
+        signature.push_back('|');
+      }
+    }
+    return std::make_pair(signature, has_transit);
+  };
+
+  auto transfer_count_for_path = [](const std::vector<PathInfo>& path) {
+    uint32_t transfers = 0;
+    uint32_t last_trip_id = 0;
+    bool seen_transit = false;
+    for (const auto& edge : path) {
+      if (edge.trip_id == 0) {
+        continue;
+      }
+      if (!seen_transit) {
+        seen_transit = true;
+        last_trip_id = edge.trip_id;
+        continue;
+      }
+      if (edge.trip_id != last_trip_id) {
+        ++transfers;
+        last_trip_id = edge.trip_id;
+      }
+    }
+    return transfers;
+  };
+
+  auto finalize_paths = [&]() {
+    std::stable_sort(candidates.begin(), candidates.end(), [&](const CandidatePath& a, const CandidatePath& b) {
+      if (prefer_earliest_arrival_) {
+        if (a.secs != b.secs) {
+          return a.secs < b.secs;
+        }
+        if (a.transfers != b.transfers) {
+          return a.transfers < b.transfers;
+        }
+        return a.cost < b.cost;
+      }
+
+      if (a.cost != b.cost) {
+        return a.cost < b.cost;
+      }
+      if (a.transfers != b.transfers) {
+        return a.transfers < b.transfers;
+      }
+      return a.secs < b.secs;
+    });
+
+    std::vector<std::vector<PathInfo>> result;
+    const auto count = std::min<size_t>(desired_paths_count, candidates.size());
+    result.reserve(count);
+    for (size_t i = 0; i < count; ++i) {
+      result.emplace_back(std::move(candidates[i].path));
+    }
+    return result;
+  };
+
   // For pedestrian costing - set flag allowing use of transit connections
   // Set pedestrian costing to use max distance. TODO - need for other modes
   const auto& pc = mode_costing[static_cast<uint32_t>(travel_mode_t::kPedestrian)];
@@ -136,7 +239,7 @@ MultiModalPathAlgorithm::GetBestPath(valhalla::Location& origin,
   operators_.clear();
   processed_tiles_.clear();
 
-  // Find shortest path
+  // Find best path(s)
   uint32_t nc = 0; // Count of iterations with no convergence
                    // towards destination
   size_t total_labels = 0;
@@ -153,6 +256,9 @@ MultiModalPathAlgorithm::GetBestPath(valhalla::Location& origin,
     // invalid label indicates there are no edges that can be expanded.
     const uint32_t predindex = adjacencylist_.pop();
     if (predindex == kInvalidLabel) {
+      if (!candidates.empty()) {
+        return finalize_paths();
+      }
       LOG_ERROR("Route failed after iterations = " + std::to_string(edgelabels_.size()));
       return {};
     }
@@ -163,12 +269,41 @@ MultiModalPathAlgorithm::GetBestPath(valhalla::Location& origin,
     if (destinations_.find(pred.edgeid()) != destinations_.end()) {
       // Check if a trivial path. Skip if no predecessor and not
       // trivial (cannot reach destination along this one edge).
+      bool can_form = pred.predecessor() != kInvalidLabel;
       if (pred.predecessor() == kInvalidLabel) {
         if (IsTrivial(pred.edgeid(), origin, destination)) {
-          return {FormPath(predindex)};
+          can_form = true;
         }
-      } else {
-        return {FormPath(predindex)};
+      }
+
+      if (can_form) {
+        auto path = FormPath(predindex);
+        auto signature = signature_for_path(path);
+        if (path_signatures.insert(signature).second) {
+          auto transit_signature = transit_signature_for_path(path);
+
+          // If the primary route uses transit, alternates must vary in their
+          // transit trip sequence to avoid returning walk-only variants.
+          if (candidates.empty()) {
+            primary_path_has_transit = transit_signature.second;
+            if (primary_path_has_transit) {
+              transit_signatures.insert(transit_signature.first);
+            }
+          } else if (primary_path_has_transit) {
+            if (!transit_signature.second ||
+                !transit_signatures.insert(transit_signature.first).second) {
+              continue;
+            }
+          }
+
+          const auto transfers = transfer_count_for_path(path);
+          const auto secs = path.back().elapsed_cost.secs;
+          const auto cost = path.back().elapsed_cost.cost;
+          candidates.push_back({std::move(path), secs, cost, transfers});
+          if (candidates.size() >= max_paths_to_collect) {
+            return finalize_paths();
+          }
+        }
       }
     }
 
@@ -465,8 +600,21 @@ bool MultiModalPathAlgorithm::ExpandForward(GraphReader& graphreader,
     // trip Id and block Id.
     if (es->set() == EdgeSet::kTemporary) {
       MMEdgeLabel& lab = edgelabels_[es->index()];
-      if (newcost.cost < lab.cost().cost) {
-        float newsortcost = lab.sortcost() - (lab.cost().cost - newcost.cost);
+      bool better_label = false;
+      if (prefer_earliest_arrival_) {
+        better_label = newcost.secs < lab.cost().secs ||
+                       (newcost.secs == lab.cost().secs && newcost.cost < lab.cost().cost);
+      } else {
+        better_label = newcost.cost < lab.cost().cost;
+      }
+
+      if (better_label) {
+        float newsortcost = lab.sortcost();
+        if (prefer_earliest_arrival_) {
+          newsortcost -= (lab.cost().secs - newcost.secs);
+        } else {
+          newsortcost -= (lab.cost().cost - newcost.cost);
+        }
         adjacencylist_.decrease(es->index(), newsortcost);
         lab.Update(pred_idx, newcost, newsortcost, path_dist, walking_distance, tripid, blockid,
                    transition_cost, restriction_idx);
@@ -478,7 +626,7 @@ bool MultiModalPathAlgorithm::ExpandForward(GraphReader& graphreader,
     // sort cost (with A* heuristic) is found using the lat,lng at the
     // end node of the directed edge.
     float dist = 0.0f;
-    float sortcost = newcost.cost;
+    float sortcost = prefer_earliest_arrival_ ? newcost.secs : newcost.cost;
     if (!is_dest) {
       // Get the end node, skip if the end node tile is not found
       auto endtile = tile;
