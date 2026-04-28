@@ -135,6 +135,7 @@ message TripLeg {
 
   message Restriction{
     uint32 type = 1;
+    uint64 value = 2;
   }
 
   // represents a single date/time range from https://wiki.openstreetmap.org/wiki/Key:opening_hours
@@ -251,6 +252,7 @@ message TripLeg {
     bool traffic_signal = 66;    
     HovType hov_type = 67;
     bool speed_camera = 68;   //nevh
+    repeated Restriction restrictions = 69;
   }
 
   message IntersectingEdge {
