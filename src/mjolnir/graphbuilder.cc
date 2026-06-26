@@ -1017,17 +1017,11 @@ void BuildTileSet(const std::string& ways_file,
           directededge.set_edgeinfo_offset(found->first);
           directededge.set_curvature(std::get<1>(found->second));
 
-          // if(speed_camera) {        
-          //   directededge.set_speed_camera(true);
-          //   // uint32_t eio;
-          //   // bool gotEIO = graphtile.HasEdgeInfo(edge_pair.second, (*nodes[source]).graph_id,
-          //   //                          (*nodes[target]).graph_id, eio);
-            
-          //   // bool added = graphtile.setSpeedCamera( eio );
-          //   // std::stringstream ss;
-          //   // ss << "Speed camera set on edge with existing edge info..unable to set eio = " << eio;
-          //   // if(!added)  LOG_ERROR(ss.str().c_str());
-          // }
+          // Speed camera: forward the OSMWay flag to DirectedEdge.
+          // OSM tag: highway=speed_camera (on way) or relation:enforcement
+          if (w.speed_camera()) {
+            directededge.set_speed_camera(true);
+          }
 
           // Set use to ramp or turn channel
           if (edge.attributes.turn_channel && use != Use::kConstruction) {

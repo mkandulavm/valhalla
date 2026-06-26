@@ -1363,6 +1363,152 @@ std::vector<uint32_t> ManeuversBuilder::GetSpeedCams(std::list<Maneuver> &maneuv
 }
 //nevh
 
+std::vector<uint32_t> ManeuversBuilder::GetRoadAttributes(std::list<Maneuver>& maneuvers) {
+  std::vector<uint32_t> road_attributes;
+
+  // Track the previous segment's fields for merge comparison.
+  // Merge criteria match GetSpeedLimits: same way_id, speed_limit,
+  // u32edgeSpeed, lane_count and contiguous shape indices.
+  uint32_t last_way_id = 0;
+  uint32_t last_speed_limit = 0;
+  uint32_t last_u32edgeSpeed = 0;
+  uint32_t last_lane_count = 0;
+  uint32_t last_end_shape_index = 0;
+  bool has_last = false;
+
+  for (auto maneuver = maneuvers.begin(); maneuver != maneuvers.end(); ++maneuver) {
+    auto a = maneuver->begin_node_index();
+    auto b = maneuver->end_node_index();
+
+    while (a != b) {
+      auto node = trip_path_->node(a);
+
+      if (node.has_edge()) {
+        const auto& trip_edge = node.edge();
+
+        uint32_t begin_shape_index = node.mutable_edge()->begin_shape_index();
+        uint32_t end_shape_index = node.mutable_edge()->end_shape_index();
+        uint32_t speed_limit = trip_edge.speed_limit();
+        uint32_t lane_count = trip_edge.lane_count();
+        uint32_t way_id = trip_edge.way_id();
+        uint32_t default_speed = (uint32_t)trip_edge.default_speed();
+        uint32_t edgeSpeed = (uint32_t)trip_edge.speed();
+        uint32_t u32edgeSpeed = (edgeSpeed & 0xFFFF) | ((default_speed & 0xFFFF) << 16);
+
+        // --- Pack road attributes into a single uint32_t ---
+        // Bit layout (LSB=0):
+        //   0–2:   RoadClass (3 bits)
+        //   3–8:   Use (6 bits)
+        //   9–12:  RoadAttributeFlag bitmask: bridge|tunnel|roundabout|indoor
+        //   13:    has_level_changes
+        //   14:    toll
+        //   15:    truck_route
+        //   16:    has_time_restrictions
+        //   17:    traffic_signal
+        //   18:    speed_camera
+        //   19:    shoulder
+        //   20:    bicycle_network
+        //   21:    destination_only
+        //   22:    unpaved
+        //   23:    country_crossing
+        //   24–25: sidewalk enum (2 bits)
+        //   26–27: cycle_lane enum (2 bits)
+        //   28–30: surface enum (3 bits)
+        //   31:    spare
+
+        // Build RoadAttributeFlag bitmask from individual booleans.
+        // OSM tags: bridge=yes, tunnel=yes, junction=roundabout, indoor=yes
+        uint8_t infra_flags = 0;
+        if (trip_edge.bridge())
+          infra_flags |= static_cast<uint8_t>(RoadAttributeFlag::kBridge);
+        if (trip_edge.tunnel())
+          infra_flags |= static_cast<uint8_t>(RoadAttributeFlag::kTunnel);
+        if (trip_edge.roundabout())
+          infra_flags |= static_cast<uint8_t>(RoadAttributeFlag::kRoundabout);
+        if (trip_edge.indoor())
+          infra_flags |= static_cast<uint8_t>(RoadAttributeFlag::kIndoor);
+
+        // has_level_changes: true if edge traverses building floors.
+        // OSM tag: level=*  (e.g., level=0;1 for building floors)
+        bool has_lvl = has_level_changes(trip_edge.levels());
+
+        // OSM tag: highway=traffic_signals on node → DirectedEdge::traffic_signal_
+        bool has_traffic_signal = trip_edge.traffic_signal();
+
+        // OSM: highway=speed_camera or relation:enforcement (maxspeed check)
+        bool has_speed_camera = trip_edge.speed_camera();
+
+        // OSM: shoulder=yes/left/right/both
+        bool has_shoulder = trip_edge.shoulder();
+
+        // OSM: ncn=yes, rcn=yes, lcn=yes, mtb=yes
+        bool has_bike_network = trip_edge.bicycle_network();
+
+        // OSM: access=private/destination/customers, motor_vehicle=destination
+        bool is_dest_only = trip_edge.destination_only();
+
+        // Derived: surface >= kCompacted (gravel, dirt, path, impassable)
+        bool is_unpaved = trip_edge.unpaved();
+
+        // Computed: admin boundary crossing (ISO code change start↔end node)
+        bool is_country_crossing = trip_edge.country_crossing();
+
+        // Sidewalk enum: 0=none, 1=left, 2=right, 3=both
+        // OSM: sidewalk=left/right/both/yes
+        uint32_t sidewalk_val = static_cast<uint32_t>(trip_edge.sidewalk());
+
+        // CycleLane enum: 0=none, 1=shared, 2=dedicated, 3=separated
+        // OSM: cycleway=lane/track/shared_lane/opposite*
+        uint32_t cycle_lane_val = static_cast<uint32_t>(trip_edge.cycle_lane());
+
+        // Surface enum: 0=paved_smooth … 7=impassable
+        // OSM: surface=paved/asphalt/concrete/gravel/dirt/earth/sand/grass
+        uint32_t surface_val = static_cast<uint32_t>(trip_edge.surface());
+
+        uint32_t attrs =
+            (static_cast<uint32_t>(trip_edge.road_class()) & 0x7)        // bits 0–2
+            | ((static_cast<uint32_t>(trip_edge.use()) & 0x3F) << 3)     // bits 3–8
+            | ((static_cast<uint32_t>(infra_flags) & 0xF) << 9)          // bits 9–12
+            | ((has_lvl ? 1u : 0u) << 13)                                // bit 13
+            | ((trip_edge.toll() ? 1u : 0u) << 14)                       // bit 14
+            | ((trip_edge.truck_route() ? 1u : 0u) << 15)                // bit 15
+            | ((trip_edge.has_time_restrictions() ? 1u : 0u) << 16)      // bit 16
+            | ((has_traffic_signal ? 1u : 0u) << 17)                     // bit 17
+            | ((has_speed_camera ? 1u : 0u) << 18)                       // bit 18
+            | ((has_shoulder ? 1u : 0u) << 19)                           // bit 19
+            | ((has_bike_network ? 1u : 0u) << 20)                       // bit 20
+            | ((is_dest_only ? 1u : 0u) << 21)                           // bit 21
+            | ((is_unpaved ? 1u : 0u) << 22)                             // bit 22
+            | ((is_country_crossing ? 1u : 0u) << 23)                    // bit 23
+            | ((sidewalk_val & 0x3) << 24)                               // bits 24–25
+            | ((cycle_lane_val & 0x3) << 26)                             // bits 26–27
+            | ((surface_val & 0x7) << 28);                               // bits 28–30
+
+        // Merge check: same criteria as GetSpeedLimits to keep arrays parallel.
+        // Merges consecutive edges with identical way_id, speed_limit,
+        // edgeSpeed/default_speed, lane_count and contiguous shape indices.
+        if (has_last && last_lane_count == lane_count &&
+            last_u32edgeSpeed == u32edgeSpeed && last_speed_limit == speed_limit &&
+            last_way_id == way_id && last_end_shape_index == begin_shape_index) {
+          // Extend the previous segment — update end shape tracker only
+          last_end_shape_index = end_shape_index;
+        } else {
+          // New segment
+          road_attributes.push_back(attrs);
+          last_way_id = way_id;
+          last_speed_limit = speed_limit;
+          last_u32edgeSpeed = u32edgeSpeed;
+          last_lane_count = lane_count;
+          last_end_shape_index = end_shape_index;
+          has_last = true;
+        }
+      }
+      a++;
+    }
+  }
+  return road_attributes;
+}
+
 void ManeuversBuilder::InitializeManeuver(Maneuver& maneuver, int node_index) {
 
   auto prev_edge = trip_path_->GetPrevEdge(node_index);

@@ -147,7 +147,8 @@ message DirectionsLeg {
   string shape = 7;  
   repeated LevelChange level_changes = 8;
   repeated uint32 speed_limits= 9;      //nevh
-  repeated uint32 speed_cameras = 10;       //nevh    
+  repeated uint32 speed_cameras = 10;       //nevh
+  repeated uint32 road_attributes = 11; //nevh — packed road attributes per speed-limit segment
   
 }
 

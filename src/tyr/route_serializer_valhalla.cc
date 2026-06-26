@@ -991,6 +991,13 @@ void legs(valhalla::Api& api, int route_index, rapidjson::writer_wrapper_t& writ
       }
       writer.end_array();
     }
+    if(directions_leg.road_attributes_size() > 0) {
+      writer.start_array("road_attributes");
+      for(int s = 0; s < directions_leg.road_attributes_size(); ++s){
+        writer(static_cast<uint64_t>(directions_leg.road_attributes(s)));
+      }
+      writer.end_array();
+    }
     //nevh//////
 
     writer.end_object(); // leg

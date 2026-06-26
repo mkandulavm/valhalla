@@ -53,3 +53,14 @@ src/bindings/python/valhalla/__version__.py
 **/*.egg-info
 dist
 wheelhouse
+
+# Protobuf build artifacts (installed by cmake --install from third_party/protobuf-3.12.3/)
+third_party/protobuf-3.12.3/include/
+third_party/protobuf-3.12.3/lib/
+third_party/protobuf-3.12.3/bin/
+
+# In-source build directories inside vendored third-party libs
+third_party/*/build*/
+
+# Generated gurka test tile directories (created dynamically by test runs)
+test/data/*/

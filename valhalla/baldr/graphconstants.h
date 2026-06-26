@@ -347,6 +347,24 @@ enum class Use : uint8_t {
   kPlatformConnection = 53, // Connection station <-> platform
   kTransitConnection = 54,  // Connection osm <-> egress
 };
+
+// Bitmask of orthogonal infrastructure attributes that can coexist with any
+// RoadClass + Use combination. These map to the 1-bit boolean fields on
+// DirectedEdge / TripLeg_Edge.
+//
+// OSM tags:
+//   kBridge     — bridge=yes
+//   kTunnel     — tunnel=yes
+//   kRoundabout — junction=roundabout / junction=circular
+//   kIndoor     — indoor=yes
+enum class RoadAttributeFlag : uint8_t {
+  kNone       = 0,
+  kBridge     = 1 << 0,  // 0x1
+  kTunnel     = 1 << 1,  // 0x2
+  kRoundabout = 1 << 2,  // 0x4
+  kIndoor     = 1 << 3,  // 0x8
+};
+
 inline std::string to_string(Use u) {
   static const std::unordered_map<uint8_t, std::string> UseStrings = {
       {static_cast<uint8_t>(Use::kRoad), "road"},

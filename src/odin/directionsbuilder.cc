@@ -47,7 +47,7 @@ void DirectionsBuilder::Build(Api& api, const MarkupFormatter& markup_formatter)
         maneuvers = maneuversBuilder.Build();
         //nevh
         auto speedLimits = maneuversBuilder.GetSpeedLimits(maneuvers);
-        //auto speedCams = maneuversBuilder.GetSpeedCams(maneuvers);
+        auto speedCams = maneuversBuilder.GetSpeedCams(maneuvers);
         maneuversBuilder.GetTurnLanes(maneuvers);
         
         //add speed limits as an array into trip directions
@@ -56,9 +56,16 @@ void DirectionsBuilder::Build(Api& api, const MarkupFormatter& markup_formatter)
           trip_directions.add_speed_limits(speed_limit);
         }
 
-        // for(const auto& speed_cam : speedCams) {
-        //   trip_directions.add_speed_cameras(speed_cam);
-        // }
+        // Add road attributes per speed-limit segment to the proto.
+        // One packed uint32_t per segment, parallel to speed_limits groups.
+        auto roadAttrs = maneuversBuilder.GetRoadAttributes(maneuvers);
+        for (const auto& attr : roadAttrs) {
+          trip_directions.add_road_attributes(attr);
+        }
+
+        for (const auto& speed_cam : speedCams) {
+          trip_directions.add_speed_cameras(speed_cam);
+        }
 
         //nevh
 

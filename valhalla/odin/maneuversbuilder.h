@@ -31,6 +31,7 @@ public:
   void GetTurnLanes(std::list<Maneuver> &maneuvers);
   std::vector<uint32_t> GetSpeedLimits(std::list<Maneuver> &maneuvers);  
   std::vector<uint32_t> GetSpeedCams(std::list<Maneuver> &maneuvers);
+  std::vector<uint32_t> GetRoadAttributes(std::list<Maneuver>& maneuvers);
   //nevh
 
 protected:
